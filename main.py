@@ -104,7 +104,7 @@ async def estimation(req: EstimationRequest):
         },
         "estimation_rachat": {
             "prix_suggere": calc["prix_rachat"],
-            "methode": "Prix moyen marché - 25%",
+            "methode": "Prix moyen marché - 15%",
         },
         "sources": sources_detail,
     }

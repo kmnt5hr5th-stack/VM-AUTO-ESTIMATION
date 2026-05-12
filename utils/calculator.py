@@ -32,8 +32,8 @@ def calculate_estimation(prix_bruts: list[int]) -> dict:
         fourchette_basse = min(prix)
         fourchette_haute = max(prix)
 
-    # Prix de rachat : prix moyen marché - 25%
-    prix_rachat = round(prix_moyen * 0.75)
+    # Prix de rachat : prix moyen marché - 15%
+    prix_rachat = round(prix_moyen * 0.85)
 
     return {
         "nb_annonces": n,
