@@ -69,20 +69,23 @@ def calculate_estimation(
     if not prix:
         prix = sorted(prix_bruts)
 
+    def r100(v: float) -> int:
+        return round(v / 100) * 100
+
     n = len(prix)
-    prix_moyen = round(statistics.mean(prix))
-    prix_median = round(statistics.median(prix))
+    prix_moyen = r100(statistics.mean(prix))
+    prix_median = r100(statistics.median(prix))
 
     if n >= 4:
         quantiles = statistics.quantiles(prix, n=20)
-        fourchette_basse = round(quantiles[2])   # ~15e percentile
-        fourchette_haute = round(quantiles[16])  # ~85e percentile
+        fourchette_basse = r100(quantiles[2])   # ~15e percentile
+        fourchette_haute = r100(quantiles[16])  # ~85e percentile
     else:
-        fourchette_basse = min(prix)
-        fourchette_haute = max(prix)
+        fourchette_basse = r100(min(prix))
+        fourchette_haute = r100(max(prix))
 
     coef, methode = get_discount_rate(marque, modele, motorisation)
-    prix_rachat = round(prix_moyen * coef)
+    prix_rachat = r100(prix_moyen * coef)
 
     return {
         "nb_annonces": n,
