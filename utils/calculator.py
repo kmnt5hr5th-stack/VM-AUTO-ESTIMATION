@@ -1,4 +1,48 @@
 import statistics
+from typing import Optional
+
+# SUV premium : décote -20%
+PREMIUM_SUVS: dict[str, list[str]] = {
+    "BMW":         ["X3", "X4", "X5", "X6", "X7"],
+    "Audi":        ["Q5", "Q7", "Q8"],
+    "Mercedes":    ["GLC", "GLE", "GLS", "EQC"],
+    "Porsche":     ["Cayenne", "Macan"],
+    "Volvo":       ["XC60", "XC90"],
+    "Land Rover":  ["Range Rover", "Discovery", "Defender"],
+    "Jaguar":      ["F-Pace", "E-Pace", "I-Pace"],
+    "Lexus":       ["NX", "RX", "UX", "LX"],
+    "Maserati":    ["Levante"],
+    "Lamborghini": ["Urus"],
+    "Bentley":     ["Bentayga"],
+    "Alfa Romeo":  ["Stelvio"],
+    "DS":          ["DS 7"],
+}
+
+# Moteurs à problèmes connus : décote -35%
+WEAK_ENGINE_KEYWORDS = ["puretech", "pure tech", "ecoboost", "eco boost", "ecoboot"]
+
+
+def get_discount_rate(
+    marque: str,
+    modele: str,
+    motorisation: Optional[str],
+) -> tuple[float, str]:
+    """Retourne (multiplicateur, raison)."""
+    # PureTech / EcoBoost prioritaire
+    if motorisation:
+        m = motorisation.lower().replace("-", " ").replace("_", " ")
+        if any(k in m for k in WEAK_ENGINE_KEYWORDS):
+            return 0.65, "Moteur à risque (PureTech/EcoBoost) - 35%"
+
+    # SUV premium
+    marque_norm = marque.strip().title()
+    modele_up = modele.strip().upper()
+    suvs = PREMIUM_SUVS.get(marque_norm, [])
+    for suv in suvs:
+        if suv.upper() in modele_up or modele_up in suv.upper():
+            return 0.80, f"SUV premium ({marque_norm} {suv}) - 20%"
+
+    return 0.85, "Standard - 15%"
 
 
 def supprimer_outliers(prix: list[int]) -> list[int]:
@@ -13,7 +57,12 @@ def supprimer_outliers(prix: list[int]) -> list[int]:
     return [p for p in prix if borne_basse <= p <= borne_haute]
 
 
-def calculate_estimation(prix_bruts: list[int]) -> dict:
+def calculate_estimation(
+    prix_bruts: list[int],
+    marque: str = "",
+    modele: str = "",
+    motorisation: Optional[str] = None,
+) -> dict:
     prix = supprimer_outliers(sorted(prix_bruts))
 
     if not prix:
@@ -23,7 +72,6 @@ def calculate_estimation(prix_bruts: list[int]) -> dict:
     prix_moyen = round(statistics.mean(prix))
     prix_median = round(statistics.median(prix))
 
-    # Fourchette : percentile 15 → 85 pour refléter le marché réel
     if n >= 4:
         quantiles = statistics.quantiles(prix, n=20)
         fourchette_basse = round(quantiles[2])   # ~15e percentile
@@ -32,8 +80,8 @@ def calculate_estimation(prix_bruts: list[int]) -> dict:
         fourchette_basse = min(prix)
         fourchette_haute = max(prix)
 
-    # Prix de rachat : prix moyen marché - 15%
-    prix_rachat = round(prix_moyen * 0.85)
+    coef, methode = get_discount_rate(marque, modele, motorisation)
+    prix_rachat = round(prix_moyen * coef)
 
     return {
         "nb_annonces": n,
@@ -42,4 +90,5 @@ def calculate_estimation(prix_bruts: list[int]) -> dict:
         "fourchette_basse": fourchette_basse,
         "fourchette_haute": fourchette_haute,
         "prix_rachat": prix_rachat,
+        "methode": methode,
     }

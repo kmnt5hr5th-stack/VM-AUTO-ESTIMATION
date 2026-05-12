@@ -39,6 +39,7 @@ class EstimationRequest(BaseModel):
     annee: int = Field(..., ge=1990, le=2025, example=2020)
     kilometrage: int = Field(..., ge=0, le=500000, example=80000)
     finition: Optional[str] = Field(None, example="S-Line")
+    motorisation: Optional[str] = Field(None, example="1.2 PureTech 130")
 
 
 @app.get("/")
@@ -85,7 +86,7 @@ async def estimation(req: EstimationRequest):
             detail="Aucune annonce trouvée pour ce véhicule. Vérifiez la marque et le modèle.",
         )
 
-    calc = calculate_estimation(all_prices)
+    calc = calculate_estimation(all_prices, req.marque, req.modele, req.motorisation)
 
     return {
         "vehicule": {
@@ -94,6 +95,7 @@ async def estimation(req: EstimationRequest):
             "annee": req.annee,
             "kilometrage": req.kilometrage,
             "finition": req.finition or None,
+            "motorisation": req.motorisation or None,
         },
         "marche": {
             "nb_annonces": calc["nb_annonces"],
@@ -104,7 +106,7 @@ async def estimation(req: EstimationRequest):
         },
         "estimation_rachat": {
             "prix_suggere": calc["prix_rachat"],
-            "methode": "Prix moyen marché - 15%",
+            "methode": calc["methode"],
         },
         "sources": sources_detail,
     }
