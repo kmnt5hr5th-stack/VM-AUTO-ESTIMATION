@@ -1,24 +1,30 @@
 """
 Sélecteur de service de scraping anti-bot.
 
-Priorité : ZENROWS_KEY → SCRAPERAPI_KEY (plan payant) → aucun (source ignorée)
+Priorité : FLARESOLVERR_URL → ZENROWS_KEY → SCRAPERAPI_KEY → aucun
 
-ScraperAPI : https://www.scraperapi.com/  — plan Hobby $29/mois requis pour premium proxies
-ZenRows    : https://www.zenrows.com/     — tier gratuit inclut antibot=true (1000 req/mois)
+FlareSolverr : https://github.com/FlareSolverr/FlareSolverr  — auto-hébergé, gratuit
+ZenRows      : https://www.zenrows.com/     — tier gratuit 1000 req/mois
+ScraperAPI   : https://www.scraperapi.com/  — plan Hobby $29/mois
 """
 import os
 from urllib.parse import quote
 
-SCRAPERAPI_KEY = os.getenv("SCRAPERAPI_KEY", "")
-ZENROWS_KEY    = os.getenv("ZENROWS_KEY", "")
+FLARESOLVERR_URL = os.getenv("FLARESOLVERR_URL", "").rstrip("/")
+SCRAPERAPI_KEY   = os.getenv("SCRAPERAPI_KEY", "")
+ZENROWS_KEY      = os.getenv("ZENROWS_KEY", "")
 
 
 def proxy_available() -> bool:
-    return bool(ZENROWS_KEY or SCRAPERAPI_KEY)
+    return bool(FLARESOLVERR_URL or ZENROWS_KEY or SCRAPERAPI_KEY)
+
+
+def flaresolverr_available() -> bool:
+    return bool(FLARESOLVERR_URL)
 
 
 def build_url(target: str, js_render: bool = True) -> str:
-    """Retourne l'URL finale à appeler selon le service configuré."""
+    """Retourne l'URL finale pour ZenRows ou ScraperAPI (non FlareSolverr)."""
     if ZENROWS_KEY:
         return (
             f"https://api.zenrows.com/v1/"
@@ -27,7 +33,6 @@ def build_url(target: str, js_render: bool = True) -> str:
             + ("&js_render=true&antibot=true&premium_proxy=true" if js_render else "&antibot=true&premium_proxy=true")
         )
     if SCRAPERAPI_KEY:
-        # Nécessite le plan Hobby ($29/mois) ou supérieur
         return (
             f"http://api.scraperapi.com"
             f"?api_key={SCRAPERAPI_KEY}"
@@ -35,10 +40,12 @@ def build_url(target: str, js_render: bool = True) -> str:
             f"&country_code=fr"
             + ("&render=true&ultra_premium=true" if js_render else "&ultra_premium=true")
         )
-    raise RuntimeError("Aucun service proxy configuré (ZENROWS_KEY ou SCRAPERAPI_KEY requis)")
+    raise RuntimeError("Aucun service proxy configuré")
 
 
 def service_name() -> str:
+    if FLARESOLVERR_URL:
+        return "flaresolverr"
     if ZENROWS_KEY:
         return "zenrows"
     if SCRAPERAPI_KEY:

@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup
 from playwright.async_api import BrowserContext
 
 from .base import BaseScraper, extraire_prix_texte
-from ._proxy import proxy_available, build_url, service_name
+from ._proxy import proxy_available, flaresolverr_available, build_url, service_name, FLARESOLVERR_URL
 
 logger = logging.getLogger(__name__)
 
@@ -43,19 +43,22 @@ class LeboncoinScraper(BaseScraper):
             if page_num > 1:
                 target += f"&page={page_num}"
 
-            api_url = build_url(target, js_render=True)
             logger.info(f"[leboncoin] Requête p{page_num}…")
 
             try:
-                async with AsyncSession(impersonate="chrome131") as s:
-                    r = await s.get(api_url, timeout=90)
+                if flaresolverr_available():
+                    html = await self._fetch_flaresolverr(target)
+                else:
+                    api_url = build_url(target, js_render=True)
+                    async with AsyncSession(impersonate="chrome131") as s:
+                        r = await s.get(api_url, timeout=90)
+                    logger.info(f"[leboncoin] p{page_num} status={r.status_code}  len={len(r.text)}")
+                    if r.status_code != 200:
+                        logger.error(f"[leboncoin] Erreur {r.status_code}: {r.text[:300]}")
+                        break
+                    html = r.text
 
-                logger.info(f"[leboncoin] p{page_num} status={r.status_code}  len={len(r.text)}")
-                if r.status_code != 200:
-                    logger.error(f"[leboncoin] Erreur {r.status_code}: {r.text[:300]}")
-                    break
-
-                prix_page = self._parse_html(r.text)
+                prix_page = self._parse_html(html)
                 logger.info(f"[leboncoin] p{page_num} → {len(prix_page)} prix : {prix_page[:5]}")
                 prix.extend(prix_page)
                 if not prix_page:
@@ -66,6 +69,20 @@ class LeboncoinScraper(BaseScraper):
                 break
 
         return prix
+
+    async def _fetch_flaresolverr(self, url: str) -> str:
+        async with AsyncSession(impersonate="chrome131") as s:
+            r = await s.post(
+                f"{FLARESOLVERR_URL}/v1",
+                json={"cmd": "request.get", "url": url, "maxTimeout": 60000},
+                timeout=70,
+            )
+        data = r.json()
+        if data.get("status") != "ok":
+            raise Exception(f"FlareSolverr: {data.get('message', data)}")
+        html = data["solution"]["response"]
+        logger.info(f"[leboncoin] FlareSolverr OK len={len(html)}")
+        return html
 
     def _parse_html(self, html: str) -> list[int]:
         prix: set[int] = set()
