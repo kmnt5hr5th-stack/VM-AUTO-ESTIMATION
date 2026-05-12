@@ -35,12 +35,13 @@ def get_discount_rate(
             return 0.65, "Moteur à risque (PureTech/EcoBoost) - 35%"
 
     # SUV premium
-    marque_norm = marque.strip().title()
+    marque_up = marque.strip().upper()
     modele_up = modele.strip().upper()
-    suvs = PREMIUM_SUVS.get(marque_norm, [])
-    for suv in suvs:
-        if suv.upper() in modele_up or modele_up in suv.upper():
-            return 0.80, f"SUV premium ({marque_norm} {suv}) - 20%"
+    for brand, suvs in PREMIUM_SUVS.items():
+        if brand.upper() == marque_up:
+            for suv in suvs:
+                if suv.upper() in modele_up or modele_up in suv.upper():
+                    return 0.80, f"SUV premium ({brand} {suv}) - 20%"
 
     return 0.85, "Standard - 15%"
 
