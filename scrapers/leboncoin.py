@@ -1,5 +1,6 @@
 import logging
 import re
+from typing import Optional
 from urllib.parse import urlencode, quote_plus
 from curl_cffi.requests import AsyncSession
 from bs4 import BeautifulSoup
@@ -14,10 +15,13 @@ logger = logging.getLogger(__name__)
 class LeboncoinScraper(BaseScraper):
     name = "leboncoin"
 
-    def _build_search_url(self, marque: str, modele: str, annee: int, km: int) -> str:
+    def _build_search_url(self, marque: str, modele: str, annee: int, km: int, finition: Optional[str] = None) -> str:
+        text = f"{marque} {modele}"
+        if finition:
+            text += f" {finition}"
         params = {
             "category": "2",
-            "text": f"{marque} {modele}",
+            "text": text,
             "regdate_min": str(annee - 1),
             "regdate_max": str(annee + 1),
             "mileage_min": str(max(0, km - 20_000)),
@@ -26,7 +30,7 @@ class LeboncoinScraper(BaseScraper):
         }
         return f"https://www.leboncoin.fr/recherche?{urlencode(params, quote_via=quote_plus)}"
 
-    async def get_prices(self, marque, modele, annee, kilometrage, max_pages=2):
+    async def get_prices(self, marque, modele, annee, kilometrage, max_pages=2, finition=None):
         if not proxy_available():
             logger.warning("[leboncoin] Aucun proxy configuré (ZENROWS_KEY ou SCRAPERAPI_KEY) — source ignorée")
             return []
@@ -35,7 +39,7 @@ class LeboncoinScraper(BaseScraper):
         prix: list[int] = []
 
         for page_num in range(1, max_pages + 1):
-            target = self._build_search_url(marque, modele, annee, kilometrage)
+            target = self._build_search_url(marque, modele, annee, kilometrage, finition)
             if page_num > 1:
                 target += f"&page={page_num}"
 

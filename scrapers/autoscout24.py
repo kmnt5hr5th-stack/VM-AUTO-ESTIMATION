@@ -1,4 +1,6 @@
 import logging
+from typing import Optional
+from urllib.parse import quote_plus
 from playwright.async_api import BrowserContext
 
 from .base import BaseScraper, extraire_prix_texte
@@ -9,18 +11,21 @@ logger = logging.getLogger(__name__)
 class AutoScout24Scraper(BaseScraper):
     name = "autoscout24"
 
-    def _build_url(self, marque: str, modele: str, annee: int, kilometrage: int, page: int = 1) -> str:
+    def _build_url(self, marque: str, modele: str, annee: int, kilometrage: int, page: int = 1, finition: Optional[str] = None) -> str:
         m = marque.lower().replace(" ", "-")
         mo = modele.lower().replace(" ", "-")
         km_min = max(0, kilometrage - 20_000)
         km_max = kilometrage + 20_000
-        return (
+        url = (
             f"https://www.autoscout24.fr/lst/{m}/{mo}"
             f"?atype=C&cy=F"
             f"&fregfrom={annee - 1}&fregto={annee + 1}"
             f"&kmfrom={km_min}&kmto={km_max}"
             f"&sort=standard&ustate=N%2CU&page={page}"
         )
+        if finition:
+            url += f"&q={quote_plus(finition)}"
+        return url
 
     async def _scrape(
         self,
@@ -30,13 +35,14 @@ class AutoScout24Scraper(BaseScraper):
         annee: int,
         kilometrage: int,
         max_pages: int,
+        finition: Optional[str] = None,
     ) -> list[int]:
         prix: list[int] = []
 
         page = await context.new_page()
         try:
             for page_num in range(1, max_pages + 1):
-                url = self._build_url(marque, modele, annee, kilometrage, page_num)
+                url = self._build_url(marque, modele, annee, kilometrage, page_num, finition)
                 logger.info(f"[autoscout24] URL p{page_num}: {url}")
 
                 await page.goto(url, wait_until="domcontentloaded", timeout=30_000)

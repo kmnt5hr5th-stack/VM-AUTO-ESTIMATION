@@ -7,6 +7,7 @@ load_dotenv()  # Charge .env en local ; les variables Railway ont priorité en p
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
+from typing import Optional
 
 import os
 from scrapers.leboncoin import LeboncoinScraper
@@ -37,6 +38,7 @@ class EstimationRequest(BaseModel):
     modele: str = Field(..., example="308")
     annee: int = Field(..., ge=1990, le=2025, example=2020)
     kilometrage: int = Field(..., ge=0, le=500000, example=80000)
+    finition: Optional[str] = Field(None, example="S-Line")
 
 
 @app.get("/")
@@ -60,7 +62,7 @@ async def estimation(req: EstimationRequest):
     ]
 
     tasks = [
-        s.get_prices(req.marque, req.modele, req.annee, req.kilometrage)
+        s.get_prices(req.marque, req.modele, req.annee, req.kilometrage, finition=req.finition)
         for s in scrapers
     ]
     results = await asyncio.gather(*tasks, return_exceptions=True)
@@ -91,6 +93,7 @@ async def estimation(req: EstimationRequest):
             "modele": req.modele.upper(),
             "annee": req.annee,
             "kilometrage": req.kilometrage,
+            "finition": req.finition or None,
         },
         "marche": {
             "nb_annonces": calc["nb_annonces"],

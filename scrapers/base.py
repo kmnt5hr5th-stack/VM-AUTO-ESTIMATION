@@ -1,6 +1,7 @@
 import re
 import logging
 from abc import ABC, abstractmethod
+from typing import Optional
 from playwright.async_api import async_playwright, Browser, BrowserContext
 
 logger = logging.getLogger(__name__)
@@ -53,6 +54,7 @@ class BaseScraper(ABC):
         annee: int,
         kilometrage: int,
         max_pages: int = 2,
+        finition: Optional[str] = None,
     ) -> list[int]:
         async with async_playwright() as p:
             browser: Browser = await p.chromium.launch(
@@ -79,7 +81,7 @@ class BaseScraper(ABC):
             )
             try:
                 prices = await self._scrape(
-                    context, marque, modele, annee, kilometrage, max_pages
+                    context, marque, modele, annee, kilometrage, max_pages, finition
                 )
             finally:
                 await browser.close()
@@ -94,5 +96,6 @@ class BaseScraper(ABC):
         annee: int,
         kilometrage: int,
         max_pages: int,
+        finition: Optional[str] = None,
     ) -> list[int]:
         ...
