@@ -14,7 +14,7 @@ class AutoScout24Scraper(BaseScraper):
     def _build_url(self, marque: str, modele: str, annee: int, kilometrage: int, page: int = 1, finition: Optional[str] = None) -> str:
         m = marque.lower().replace(" ", "-")
         mo = modele.lower().replace(" ", "-")
-        km_delta = 10_000
+        km_delta = 20_000
         km_min = max(0, kilometrage - km_delta)
         km_max = kilometrage + km_delta
         url = (

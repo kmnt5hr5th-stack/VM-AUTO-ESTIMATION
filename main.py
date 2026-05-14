@@ -62,7 +62,7 @@ async def estimation(req: EstimationRequest):
         LeboncoinScraper(),
         LaCentraleScraper(),
         AutoScout24Scraper(),
-        ParuVenduScraper(),
+        # ParuVenduScraper(),  # désactivé : filtres km ignorés → prix incorrects
     ]
 
     tasks = [
