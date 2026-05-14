@@ -8,7 +8,7 @@ from bs4 import BeautifulSoup
 from playwright.async_api import BrowserContext
 
 from .base import BaseScraper, extraire_prix_texte
-from ._proxy import proxy_available, flaresolverr_available, build_url, service_name, FLARESOLVERR_URL
+from ._proxy import proxy_available, flaresolverr_available, build_url, service_name, FLARESOLVERR_URL, LBC_PROXY_URL
 
 logger = logging.getLogger(__name__)
 
@@ -90,6 +90,23 @@ class LeboncoinScraper(BaseScraper):
         return prix
 
     async def get_prices(self, marque, modele, annee, kilometrage, max_pages=2, finition=None):
+        # 0) Proxy externe (Fly.io / OVH) si configuré — IP non-blacklistée
+        if LBC_PROXY_URL:
+            logger.info(f"[leboncoin] Via proxy externe: {LBC_PROXY_URL}")
+            try:
+                payload = {"marque": marque, "modele": modele, "annee": annee,
+                           "kilometrage": kilometrage, "finition": finition, "max_pages": max_pages}
+                async with AsyncSession(impersonate="chrome131") as s:
+                    r = await s.post(f"{LBC_PROXY_URL}/leboncoin", json=payload, timeout=90)
+                if r.ok:
+                    data = r.json()
+                    prix = data.get("prix", [])
+                    logger.info(f"[leboncoin] Proxy externe: {len(prix)} prix")
+                    if prix:
+                        return prix
+            except Exception as e:
+                logger.warning(f"[leboncoin] Proxy externe échoué: {e}")
+
         # 1) API mobile LeBonCoin — User-Agent LBC, pas de proxy requis
         logger.info("[leboncoin] Tentative API mobile (User-Agent LBC)...")
         try:

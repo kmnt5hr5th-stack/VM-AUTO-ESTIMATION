@@ -10,7 +10,8 @@ ScraperAPI   : https://www.scraperapi.com/  — plan Hobby $29/mois
 import os
 from urllib.parse import quote
 
-FLARESOLVERR_URL = os.getenv("FLARESOLVERR_URL", "").rstrip("/")
+FLARESOLVERR_URL  = os.getenv("FLARESOLVERR_URL", "").rstrip("/")
+LBC_PROXY_URL     = os.getenv("LBC_PROXY_URL", "").rstrip("/")
 SCRAPERAPI_KEY   = os.getenv("SCRAPERAPI_KEY", "")
 ZENROWS_KEY      = os.getenv("ZENROWS_KEY", "")
 
