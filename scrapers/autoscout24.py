@@ -21,11 +21,15 @@ class AutoScout24Scraper(BaseScraper):
         "electrique": "E", "électrique": "E", "electric": "E",
         "gpl": "L", "gnv": "G",
     }
+    GEAR_MAP = {
+        "mecanique": "M", "mécanique": "M", "manuelle": "M", "bvm": "M", "bm": "M",
+        "automatique": "A", "auto": "A", "bva": "A", "dsg": "A", "edr": "A",
+    }
 
-    def _build_url(self, marque: str, modele: str, annee: int, kilometrage: int, page: int = 1, finition: Optional[str] = None, carburant: Optional[str] = None) -> str:
+    def _build_url(self, marque: str, modele: str, annee: int, kilometrage: int, page: int = 1, finition: Optional[str] = None, carburant: Optional[str] = None, boite: Optional[str] = None) -> str:
         m = marque.lower().replace(" ", "-")
         mo = modele.lower().replace(" ", "-")
-        km_delta = 20_000
+        km_delta = 10_000
         km_min = max(0, kilometrage - km_delta)
         km_max = kilometrage + km_delta
         url = (
@@ -39,6 +43,10 @@ class AutoScout24Scraper(BaseScraper):
             fuel_code = self.FUEL_MAP.get(carburant.lower().strip())
             if fuel_code:
                 url += f"&fuel={fuel_code}"
+        if boite:
+            gear_code = self.GEAR_MAP.get(boite.lower().strip())
+            if gear_code:
+                url += f"&gear={gear_code}"
         if finition:
             url += f"&q={quote_plus(finition)}"
         return url
@@ -52,7 +60,7 @@ class AutoScout24Scraper(BaseScraper):
                 prices.append(v)
         return prices
 
-    async def get_prices(self, marque, modele, annee, kilometrage, max_pages=2, finition=None, carburant=None):
+    async def get_prices(self, marque, modele, annee, kilometrage, max_pages=2, finition=None, carburant=None, boite=None):
         prix: list[int] = []
 
         headers = {
@@ -66,7 +74,7 @@ class AutoScout24Scraper(BaseScraper):
         }
 
         for page_num in range(1, max_pages + 1):
-            url = self._build_url(marque, modele, annee, kilometrage, page_num, finition, carburant)
+            url = self._build_url(marque, modele, annee, kilometrage, page_num, finition, carburant, boite)
             logger.info(f"[autoscout24] URL p{page_num}: {url}")
 
             try:

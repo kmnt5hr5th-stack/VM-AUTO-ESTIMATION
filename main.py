@@ -68,7 +68,7 @@ async def estimation(req: EstimationRequest):
 
     tasks = [
         s.get_prices(req.marque, req.modele, req.annee, req.kilometrage,
-                     finition=req.finition, carburant=req.carburant)
+                     finition=req.finition, carburant=req.carburant, boite=req.boite)
         for s in scrapers
     ]
     results = await asyncio.gather(*tasks, return_exceptions=True)
