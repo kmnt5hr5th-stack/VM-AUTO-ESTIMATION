@@ -13,7 +13,16 @@ logger = logging.getLogger(__name__)
 class AutoScout24Scraper(BaseScraper):
     name = "autoscout24"
 
-    def _build_url(self, marque: str, modele: str, annee: int, kilometrage: int, page: int = 1, finition: Optional[str] = None) -> str:
+    # Mapping carburant → code AutoScout24
+    FUEL_MAP = {
+        "diesel": "D", "gazole": "D",
+        "essence": "B", "petrol": "B", "sp95": "B", "sp98": "B",
+        "hybride": "H", "hybrid": "H",
+        "electrique": "E", "électrique": "E", "electric": "E",
+        "gpl": "L", "gnv": "G",
+    }
+
+    def _build_url(self, marque: str, modele: str, annee: int, kilometrage: int, page: int = 1, finition: Optional[str] = None, carburant: Optional[str] = None) -> str:
         m = marque.lower().replace(" ", "-")
         mo = modele.lower().replace(" ", "-")
         km_delta = 20_000
@@ -26,6 +35,10 @@ class AutoScout24Scraper(BaseScraper):
             f"&kmfrom={km_min}&kmto={km_max}"
             f"&sort=standard&ustate=N%2CU&page={page}"
         )
+        if carburant:
+            fuel_code = self.FUEL_MAP.get(carburant.lower().strip())
+            if fuel_code:
+                url += f"&fuel={fuel_code}"
         if finition:
             url += f"&q={quote_plus(finition)}"
         return url
@@ -39,7 +52,7 @@ class AutoScout24Scraper(BaseScraper):
                 prices.append(v)
         return prices
 
-    async def get_prices(self, marque, modele, annee, kilometrage, max_pages=2, finition=None):
+    async def get_prices(self, marque, modele, annee, kilometrage, max_pages=2, finition=None, carburant=None):
         prix: list[int] = []
 
         headers = {
@@ -53,7 +66,7 @@ class AutoScout24Scraper(BaseScraper):
         }
 
         for page_num in range(1, max_pages + 1):
-            url = self._build_url(marque, modele, annee, kilometrage, page_num, finition)
+            url = self._build_url(marque, modele, annee, kilometrage, page_num, finition, carburant)
             logger.info(f"[autoscout24] URL p{page_num}: {url}")
 
             try:

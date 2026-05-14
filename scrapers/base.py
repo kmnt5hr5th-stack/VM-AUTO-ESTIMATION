@@ -55,6 +55,7 @@ class BaseScraper(ABC):
         kilometrage: int,
         max_pages: int = 2,
         finition: Optional[str] = None,
+        carburant: Optional[str] = None,
     ) -> list[int]:
         async with async_playwright() as p:
             browser: Browser = await p.chromium.launch(
