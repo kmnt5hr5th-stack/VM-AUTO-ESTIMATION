@@ -56,13 +56,13 @@ def get_discount_rate(
     if finition:
         f = finition.lower().strip()
         if any(k in f for k in FLEET_FINITION_KEYWORDS):
-            is_manual = boite and any(w in boite.lower() for w in ["mecanique", "manuelle", "bvm", "bm"])
+            is_manual = boite and any(w in boite.lower() for w in ["mecanique", "mécanique", "manuelle", "bvm", "bm"])
             if is_manual:
                 return 0.70, f"Finition flotte ({finition}) + boîte mécanique - 30%"
             return 0.75, f"Finition flotte ({finition}) - 25%"
 
     # Malus boîte mécanique seul (hors flotte)
-    if boite and any(w in boite.lower() for w in ["mecanique", "manuelle", "bvm", "bm"]):
+    if boite and any(w in boite.lower() for w in ["mecanique", "mécanique", "manuelle", "bvm", "bm"]):
         return 0.82, "Standard + boîte mécanique - 18%"
 
     return 0.85, "Standard - 15%"
