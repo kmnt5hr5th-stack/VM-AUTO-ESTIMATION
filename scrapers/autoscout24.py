@@ -7,6 +7,17 @@ from playwright.async_api import BrowserContext
 
 from .base import BaseScraper, extraire_prix_texte
 
+
+def _extraire_cv(motorisation: str) -> Optional[int]:
+    """Extrait les chevaux depuis '1.6 TDI 105CV', '130 ch', '1.2 PureTech 110'…"""
+    m = re.search(r'(\d{2,4})\s*(?:cv|ch|hp|bhp)', motorisation, re.IGNORECASE)
+    if m:
+        return int(m.group(1))
+    # Dernier nombre si aucune unité (ex: "1.2 PureTech 130")
+    nums = re.findall(r'\b(\d{2,4})\b', motorisation)
+    candidates = [int(n) for n in nums if 50 <= int(n) <= 600]
+    return candidates[-1] if candidates else None
+
 logger = logging.getLogger(__name__)
 
 
@@ -26,7 +37,7 @@ class AutoScout24Scraper(BaseScraper):
         "automatique": "A", "auto": "A", "bva": "A", "dsg": "A", "edr": "A",
     }
 
-    def _build_url(self, marque: str, modele: str, annee: int, kilometrage: int, page: int = 1, finition: Optional[str] = None, carburant: Optional[str] = None, boite: Optional[str] = None) -> str:
+    def _build_url(self, marque: str, modele: str, annee: int, kilometrage: int, page: int = 1, finition: Optional[str] = None, carburant: Optional[str] = None, boite: Optional[str] = None, motorisation: Optional[str] = None) -> str:
         m = marque.lower().replace(" ", "-")
         mo = modele.lower().replace(" ", "-")
         km_delta = 10_000
@@ -47,6 +58,11 @@ class AutoScout24Scraper(BaseScraper):
             gear_code = self.GEAR_MAP.get(boite.lower().strip())
             if gear_code:
                 url += f"&gear={gear_code}"
+        if motorisation:
+            cv = _extraire_cv(motorisation)
+            if cv:
+                kw = round(cv * 0.7355)
+                url += f"&powerFrom={max(1, kw - 11)}&powerTo={kw + 11}"
         if finition:
             url += f"&q={quote_plus(finition)}"
         return url
@@ -60,7 +76,7 @@ class AutoScout24Scraper(BaseScraper):
                 prices.append(v)
         return prices
 
-    async def get_prices(self, marque, modele, annee, kilometrage, max_pages=2, finition=None, carburant=None, boite=None):
+    async def get_prices(self, marque, modele, annee, kilometrage, max_pages=2, finition=None, carburant=None, boite=None, motorisation=None):
         prix: list[int] = []
 
         headers = {
@@ -74,7 +90,7 @@ class AutoScout24Scraper(BaseScraper):
         }
 
         for page_num in range(1, max_pages + 1):
-            url = self._build_url(marque, modele, annee, kilometrage, page_num, finition, carburant, boite)
+            url = self._build_url(marque, modele, annee, kilometrage, page_num, finition, carburant, boite, motorisation)
             logger.info(f"[autoscout24] URL p{page_num}: {url}")
 
             try:
