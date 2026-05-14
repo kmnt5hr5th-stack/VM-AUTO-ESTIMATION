@@ -21,11 +21,20 @@ PREMIUM_SUVS: dict[str, list[str]] = {
 # Moteurs à problèmes connus : décote -35%
 WEAK_ENGINE_KEYWORDS = ["puretech", "pure tech", "ecoboost", "eco boost", "ecoboot"]
 
+# Finitions flotte/entrée de gamme : décote -25% (+ malus boîte mécanique)
+FLEET_FINITION_KEYWORDS = [
+    "france business", "business", "active", "access", "trend",
+    "like", "feel", "edition", "club", "confort", "essential",
+    "expression", "life", "live", "reference", "urban",
+]
+
 
 def get_discount_rate(
     marque: str,
     modele: str,
     motorisation: Optional[str],
+    finition: Optional[str] = None,
+    boite: Optional[str] = None,
 ) -> tuple[float, str]:
     """Retourne (multiplicateur, raison)."""
     # PureTech / EcoBoost prioritaire
@@ -42,6 +51,19 @@ def get_discount_rate(
             for suv in suvs:
                 if suv.upper() in modele_up or modele_up in suv.upper():
                     return 0.80, f"SUV premium ({brand} {suv}) - 20%"
+
+    # Finition flotte/entrée de gamme
+    if finition:
+        f = finition.lower().strip()
+        if any(k in f for k in FLEET_FINITION_KEYWORDS):
+            is_manual = boite and any(w in boite.lower() for w in ["mecanique", "manuelle", "bvm", "bm"])
+            if is_manual:
+                return 0.70, f"Finition flotte ({finition}) + boîte mécanique - 30%"
+            return 0.75, f"Finition flotte ({finition}) - 25%"
+
+    # Malus boîte mécanique seul (hors flotte)
+    if boite and any(w in boite.lower() for w in ["mecanique", "manuelle", "bvm", "bm"]):
+        return 0.82, "Standard + boîte mécanique - 18%"
 
     return 0.85, "Standard - 15%"
 
@@ -63,6 +85,8 @@ def calculate_estimation(
     marque: str = "",
     modele: str = "",
     motorisation: Optional[str] = None,
+    finition: Optional[str] = None,
+    boite: Optional[str] = None,
 ) -> dict:
     prix = supprimer_outliers(sorted(prix_bruts))
 
@@ -84,7 +108,7 @@ def calculate_estimation(
         fourchette_basse = r100(min(prix))
         fourchette_haute = r100(max(prix))
 
-    coef, methode = get_discount_rate(marque, modele, motorisation)
+    coef, methode = get_discount_rate(marque, modele, motorisation, finition, boite)
     prix_rachat = r100(prix_moyen * coef)
 
     return {

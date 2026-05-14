@@ -41,6 +41,7 @@ class EstimationRequest(BaseModel):
     kilometrage: int = Field(..., ge=0, le=500000, example=80000)
     finition: Optional[str] = Field(None, example="S-Line")
     motorisation: Optional[str] = Field(None, example="1.2 PureTech 130")
+    boite: Optional[str] = Field(None, example="mecanique")
 
 
 @app.get("/")
@@ -88,7 +89,7 @@ async def estimation(req: EstimationRequest):
             detail="Aucune annonce trouvée pour ce véhicule. Vérifiez la marque et le modèle.",
         )
 
-    calc = calculate_estimation(all_prices, req.marque, req.modele, req.motorisation)
+    calc = calculate_estimation(all_prices, req.marque, req.modele, req.motorisation, req.finition, req.boite)
 
     return {
         "vehicule": {
@@ -98,6 +99,7 @@ async def estimation(req: EstimationRequest):
             "kilometrage": req.kilometrage,
             "finition": req.finition or None,
             "motorisation": req.motorisation or None,
+            "boite": req.boite or None,
         },
         "marche": {
             "nb_annonces": calc["nb_annonces"],
