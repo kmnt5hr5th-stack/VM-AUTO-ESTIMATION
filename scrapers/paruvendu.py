@@ -17,7 +17,7 @@ class ParuVenduScraper(BaseScraper):
         text = f"{marque} {modele}"
         if finition:
             text += f" {finition}"
-        km_delta = 40_000 if km > 150_000 else 20_000
+        km_delta = 10_000
         params = {
             "q": text,
             "annee_min": annee - 1,

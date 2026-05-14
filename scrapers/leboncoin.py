@@ -42,7 +42,7 @@ class LeboncoinScraper(BaseScraper):
         text = f"{marque} {modele}"
         if finition:
             text += f" {finition}"
-        km_delta = 40_000 if km > 150_000 else 20_000
+        km_delta = 10_000
         return {
             "filters": {
                 "category": {"id": "2"},
@@ -163,7 +163,7 @@ class LeboncoinScraper(BaseScraper):
         text = f"{marque} {modele}"
         if finition:
             text += f" {finition}"
-        km_delta = 40_000 if km > 150_000 else 20_000
+        km_delta = 10_000
         params = {
             "category": "2",
             "text": text,
