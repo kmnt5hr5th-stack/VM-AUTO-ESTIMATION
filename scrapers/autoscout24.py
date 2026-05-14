@@ -1,6 +1,8 @@
 import logging
+import re
 from typing import Optional
 from urllib.parse import quote_plus
+from curl_cffi.requests import AsyncSession
 from playwright.async_api import BrowserContext
 
 from .base import BaseScraper, extraire_prix_texte
@@ -28,72 +30,57 @@ class AutoScout24Scraper(BaseScraper):
             url += f"&q={quote_plus(finition)}"
         return url
 
-    async def _scrape(
-        self,
-        context: BrowserContext,
-        marque: str,
-        modele: str,
-        annee: int,
-        kilometrage: int,
-        max_pages: int,
-        finition: Optional[str] = None,
-    ) -> list[int]:
+    def _parse_data_price(self, html: str) -> list[int]:
+        """Extraction rapide via attribut data-price (SSR AutoScout24)."""
+        prices = []
+        for m in re.findall(r'data-price="(\d+)"', html):
+            v = int(m)
+            if 500 <= v <= 150_000:
+                prices.append(v)
+        return prices
+
+    async def get_prices(self, marque, modele, annee, kilometrage, max_pages=2, finition=None):
         prix: list[int] = []
 
-        page = await context.new_page()
-        try:
-            for page_num in range(1, max_pages + 1):
-                url = self._build_url(marque, modele, annee, kilometrage, page_num, finition)
-                logger.info(f"[autoscout24] URL p{page_num}: {url}")
+        headers = {
+            "User-Agent": (
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                "AppleWebKit/537.36 (KHTML, like Gecko) "
+                "Chrome/124.0.0.0 Safari/537.36"
+            ),
+            "Accept-Language": "fr-FR,fr;q=0.9",
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        }
 
-                await page.goto(url, wait_until="domcontentloaded", timeout=30_000)
+        for page_num in range(1, max_pages + 1):
+            url = self._build_url(marque, modele, annee, kilometrage, page_num, finition)
+            logger.info(f"[autoscout24] URL p{page_num}: {url}")
 
-                # Accepter les cookies (première page seulement)
-                if page_num == 1:
-                    try:
-                        await page.click(
-                            "button[data-testid='as24-cmp-accept-all-button']",
-                            timeout=5_000,
-                        )
-                        logger.info("[autoscout24] Cookies acceptés")
-                    except Exception:
-                        pass
+            try:
+                async with AsyncSession(impersonate="chrome124") as s:
+                    r = await s.get(url, headers=headers, timeout=20)
 
-                # Attendre que les annonces soient rendues
-                try:
-                    await page.wait_for_selector("article", timeout=10_000)
-                except Exception:
-                    logger.warning(f"[autoscout24] Aucun article détecté p{page_num}")
+                if r.status_code != 200:
+                    logger.warning(f"[autoscout24] HTTP {r.status_code} p{page_num}")
                     break
 
-                await page.wait_for_timeout(1_500)
+                prix_page = self._parse_data_price(r.text)
 
-                # Sélecteur principal : prix dans les cartes annonces
-                prix_page: list[int] = []
-                elements = await page.query_selector_all("[data-testid='regular-price']")
-                for el in elements:
-                    texte = await el.inner_text()
-                    prix_page.extend(extraire_prix_texte(texte))
-
-                # Fallback : sélecteurs alternatifs
+                # Fallback extraire_prix_texte si data-price vide
                 if not prix_page:
-                    for sel in ["[class*='Price_price']", "[class*='price__']"]:
-                        elements = await page.query_selector_all(sel)
-                        for el in elements:
-                            texte = await el.inner_text()
-                            prix_page.extend(extraire_prix_texte(texte))
-                        if prix_page:
-                            break
+                    prix_page = extraire_prix_texte(r.text)
 
-                logger.info(f"[autoscout24] Page {page_num} : {len(prix_page)} prix → {prix_page[:5]}")
+                logger.info(f"[autoscout24] p{page_num} → {len(prix_page)} prix : {prix_page[:5]}")
                 prix.extend(prix_page)
 
                 if not prix_page:
                     break
 
-        except Exception as e:
-            logger.error(f"[autoscout24] Erreur : {e}")
-        finally:
-            await page.close()
+            except Exception as e:
+                logger.error(f"[autoscout24] Erreur p{page_num}: {e}")
+                break
 
         return prix
+
+    async def _scrape(self, context: BrowserContext, marque, modele, annee, kilometrage, max_pages, finition=None) -> list[int]:
+        return []
