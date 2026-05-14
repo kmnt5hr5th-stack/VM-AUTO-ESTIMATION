@@ -22,6 +22,7 @@ class ParuVenduScraper(BaseScraper):
             "q": text,
             "annee_min": annee - 1,
             "annee_max": annee + 1,
+            "km_min": max(0, km - km_delta),
             "km_max": km + km_delta,
             "p": page,
         }
