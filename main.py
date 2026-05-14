@@ -13,6 +13,7 @@ import os
 from scrapers.leboncoin import LeboncoinScraper
 from scrapers.lacentrale import LaCentraleScraper
 from scrapers.autoscout24 import AutoScout24Scraper
+from scrapers.paruvendu import ParuVenduScraper
 from utils.calculator import calculate_estimation
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(name)s %(levelname)s %(message)s")
@@ -60,6 +61,7 @@ async def estimation(req: EstimationRequest):
         LeboncoinScraper(),
         LaCentraleScraper(),
         AutoScout24Scraper(),
+        ParuVenduScraper(),
     ]
 
     tasks = [

@@ -25,8 +25,8 @@ class LeboncoinScraper(BaseScraper):
             "text": text,
             "regdate_min": str(annee - 1),
             "regdate_max": str(annee + 1),
-            "mileage_min": str(max(0, km - 20_000)),
-            "mileage_max": str(km + 20_000),
+            "mileage_min": str(max(0, km - (40_000 if km > 150_000 else 20_000))),
+            "mileage_max": str(km + (40_000 if km > 150_000 else 20_000)),
             "price": "500-150000",
         }
         return f"https://www.leboncoin.fr/recherche?{urlencode(params, quote_via=quote_plus)}"
