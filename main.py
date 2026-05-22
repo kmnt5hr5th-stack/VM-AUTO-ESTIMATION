@@ -19,6 +19,53 @@ from utils.calculator import calculate_estimation
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(name)s %(levelname)s %(message)s")
 logger = logging.getLogger(__name__)
 
+# Modèles utilitaires légers courants — détection automatique si type_vehicule non fourni
+_MODELES_UTILITAIRES = {
+    # Toyota
+    "proace", "pro-ace",
+    # Renault
+    "trafic", "master", "kangoo", "express",
+    # Peugeot
+    "partner", "expert", "boxer",
+    # Citroën
+    "berlingo", "jumpy", "jumper", "dispatch",
+    # Ford
+    "transit",
+    # Volkswagen
+    "transporter", "crafter", "caddy",
+    # Mercedes
+    "sprinter", "vito", "citan",
+    # Opel / Vauxhall
+    "vivaro", "movano",
+    # Fiat
+    "ducato", "doblo", "scudo", "fiorino", "qubo",
+    # Nissan
+    "nv200", "nv300", "nv400", "primastar", "interstar",
+    # Iveco
+    "daily",
+    # Dacia
+    "dokker",
+    # Citroën / Peugeot petits utilitaires
+    "nemo", "bipper",
+    # Maxus / LDV
+    "deliver",
+    # Mitsubishi
+    "l200", "l300",
+    # Toyota
+    "hiace", "hilux",
+    # Hyundai
+    "h1", "h350",
+}
+
+
+def _detect_type_vehicule(modele: str) -> str:
+    """Retourne 'utilitaire' si le modèle correspond à un utilitaire connu."""
+    normalized = modele.lower().replace(" ", "").replace("-", "")
+    for kw in _MODELES_UTILITAIRES:
+        if kw.replace("-", "") in normalized:
+            return "utilitaire"
+    return "voiture"
+
 app = FastAPI(
     title="VM Auto Estimation API",
     description="API de rachat de véhicules d'occasion — VM Auto Business (Seine-et-Marne)",
@@ -58,7 +105,8 @@ async def health():
 
 @app.post("/estimation")
 async def estimation(req: EstimationRequest):
-    logger.info(f"Demande reçue : {req.marque} {req.modele} {req.annee} {req.kilometrage} km")
+    type_vehicule = req.type_vehicule or _detect_type_vehicule(req.modele)
+    logger.info(f"Demande reçue : {req.marque} {req.modele} {req.annee} {req.kilometrage} km | type={type_vehicule}")
 
     scrapers = [
         LeboncoinScraper(),
@@ -71,7 +119,7 @@ async def estimation(req: EstimationRequest):
         s.get_prices(req.marque, req.modele, req.annee, req.kilometrage,
                      finition=req.finition, carburant=req.carburant,
                      boite=req.boite, motorisation=req.motorisation,
-                     type_vehicule=req.type_vehicule)
+                     type_vehicule=type_vehicule)
         for s in scrapers
     ]
     results = await asyncio.gather(*tasks, return_exceptions=True)
@@ -106,7 +154,7 @@ async def estimation(req: EstimationRequest):
             "motorisation": req.motorisation or None,
             "boite": req.boite or None,
             "carburant": req.carburant or None,
-            "type_vehicule": req.type_vehicule or None,
+            "type_vehicule": type_vehicule,
         },
         "marche": {
             "nb_annonces": calc["nb_annonces"],
