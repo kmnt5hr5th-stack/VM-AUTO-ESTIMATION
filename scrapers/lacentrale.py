@@ -25,7 +25,7 @@ class LaCentraleScraper(BaseScraper):
         }
         return f"https://www.lacentrale.fr/listing?{urlencode(params, quote_via=quote)}"
 
-    async def get_prices(self, marque, modele, annee, kilometrage, max_pages=2, finition=None, carburant=None, boite=None, motorisation=None):
+    async def get_prices(self, marque, modele, annee, kilometrage, max_pages=2, finition=None, carburant=None, boite=None, motorisation=None, type_vehicule=None):
         if not proxy_available():
             logger.warning("[lacentrale] Aucun proxy configuré (ZENROWS_KEY ou SCRAPERAPI_KEY) — source ignorée")
             return []

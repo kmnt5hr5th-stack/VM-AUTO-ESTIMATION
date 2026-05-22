@@ -58,6 +58,7 @@ class BaseScraper(ABC):
         carburant: Optional[str] = None,
         boite: Optional[str] = None,
         motorisation: Optional[str] = None,
+        type_vehicule: Optional[str] = None,
     ) -> list[int]:
         async with async_playwright() as p:
             browser: Browser = await p.chromium.launch(

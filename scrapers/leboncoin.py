@@ -51,7 +51,7 @@ class LeboncoinScraper(BaseScraper):
         "automatique": "automatic", "auto": "automatic", "bva": "automatic", "dsg": "automatic", "edr": "automatic",
     }
 
-    def _build_payload(self, marque: str, modele: str, annee: int, km: int, page: int = 1, finition: Optional[str] = None, carburant: Optional[str] = None, boite: Optional[str] = None, motorisation: Optional[str] = None) -> dict:
+    def _build_payload(self, marque: str, modele: str, annee: int, km: int, page: int = 1, finition: Optional[str] = None, carburant: Optional[str] = None, boite: Optional[str] = None, motorisation: Optional[str] = None, type_vehicule: Optional[str] = None) -> dict:
         text = f"{marque} {modele}"
         if motorisation:
             text += f" {motorisation}"
@@ -67,9 +67,11 @@ class LeboncoinScraper(BaseScraper):
             gear = self.GEAR_MAP.get(boite.lower().strip())
             if gear:
                 enums["gearbox"] = [gear]
+        is_util = type_vehicule and type_vehicule.lower() in ("utilitaire", "fourgon", "van", "camionnette")
+        cat_id = "3" if is_util else "2"
         return {
             "filters": {
-                "category": {"id": "2"},
+                "category": {"id": cat_id},
                 "enums": enums,
                 "keywords": {"text": text},
                 "ranges": {
@@ -85,7 +87,7 @@ class LeboncoinScraper(BaseScraper):
             "listing_source": "direct-search" if page == 1 else "pagination",
         }
 
-    async def _fetch_mobile_api(self, marque: str, modele: str, annee: int, km: int, page: int, finition: Optional[str], carburant: Optional[str] = None, boite: Optional[str] = None, motorisation: Optional[str] = None) -> list[int]:
+    async def _fetch_mobile_api(self, marque: str, modele: str, annee: int, km: int, page: int, finition: Optional[str], carburant: Optional[str] = None, boite: Optional[str] = None, motorisation: Optional[str] = None, type_vehicule: Optional[str] = None) -> list[int]:
         ua, impersonate = _mobile_ua()
         headers = {
             "User-Agent": ua,
@@ -93,7 +95,7 @@ class LeboncoinScraper(BaseScraper):
             "Sec-Fetch-Mode": "cors",
             "Sec-Fetch-Site": "same-site",
         }
-        payload = self._build_payload(marque, modele, annee, km, page, finition, carburant, boite, motorisation)
+        payload = self._build_payload(marque, modele, annee, km, page, finition, carburant, boite, motorisation, type_vehicule)
 
         async with AsyncSession(impersonate=impersonate) as s:
             await s.get(HOMEPAGE, headers=headers, timeout=15)
@@ -113,14 +115,15 @@ class LeboncoinScraper(BaseScraper):
                 prix.append(int(p))
         return prix
 
-    async def get_prices(self, marque, modele, annee, kilometrage, max_pages=2, finition=None, carburant=None, boite=None, motorisation=None):
+    async def get_prices(self, marque, modele, annee, kilometrage, max_pages=2, finition=None, carburant=None, boite=None, motorisation=None, type_vehicule=None):
         # 0) Proxy externe (Fly.io / OVH) si configuré — IP non-blacklistée
         if LBC_PROXY_URL:
             logger.info(f"[leboncoin] Via proxy externe: {LBC_PROXY_URL}")
             try:
                 payload = {"marque": marque, "modele": modele, "annee": annee,
                            "kilometrage": kilometrage, "finition": finition, "max_pages": max_pages,
-                           "carburant": carburant, "boite": boite, "motorisation": motorisation}
+                           "carburant": carburant, "boite": boite, "motorisation": motorisation,
+                           "type_vehicule": type_vehicule}
                 async with AsyncSession(impersonate="chrome131") as s:
                     r = await s.post(f"{LBC_PROXY_URL}/leboncoin", json=payload, timeout=90)
                 if r.ok:
@@ -137,7 +140,7 @@ class LeboncoinScraper(BaseScraper):
         try:
             prix = []
             for page_num in range(1, max_pages + 1):
-                page_prices = await self._fetch_mobile_api(marque, modele, annee, kilometrage, page_num, finition, carburant, boite, motorisation)
+                page_prices = await self._fetch_mobile_api(marque, modele, annee, kilometrage, page_num, finition, carburant, boite, motorisation, type_vehicule)
                 logger.info(f"[leboncoin] API p{page_num} → {len(page_prices)} prix : {page_prices[:5]}")
                 prix.extend(page_prices)
                 if not page_prices:

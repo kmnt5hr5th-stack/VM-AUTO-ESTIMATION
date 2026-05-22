@@ -43,6 +43,7 @@ class EstimationRequest(BaseModel):
     motorisation: Optional[str] = Field(None, example="1.2 PureTech 130")
     boite: Optional[str] = Field(None, example="mecanique")
     carburant: Optional[str] = Field(None, example="diesel")
+    type_vehicule: Optional[str] = Field(None, example="utilitaire")  # "voiture" ou "utilitaire"
 
 
 @app.get("/")
@@ -69,7 +70,8 @@ async def estimation(req: EstimationRequest):
     tasks = [
         s.get_prices(req.marque, req.modele, req.annee, req.kilometrage,
                      finition=req.finition, carburant=req.carburant,
-                     boite=req.boite, motorisation=req.motorisation)
+                     boite=req.boite, motorisation=req.motorisation,
+                     type_vehicule=req.type_vehicule)
         for s in scrapers
     ]
     results = await asyncio.gather(*tasks, return_exceptions=True)
@@ -104,6 +106,7 @@ async def estimation(req: EstimationRequest):
             "motorisation": req.motorisation or None,
             "boite": req.boite or None,
             "carburant": req.carburant or None,
+            "type_vehicule": req.type_vehicule or None,
         },
         "marche": {
             "nb_annonces": calc["nb_annonces"],
