@@ -70,9 +70,9 @@ class AutoScout24Scraper(BaseScraper):
         return url
 
     def _parse_data_price(self, html: str) -> list[int]:
-        """Extraction rapide via attribut data-price (SSR AutoScout24)."""
+        """Extraction via data-price sur les vraies annonces (data-source=listpage_search-results)."""
         prices = []
-        for m in re.findall(r'data-price="(\d+)"', html):
+        for m in re.findall(r'data-source="listpage_search-results"[^>]*?data-price="(\d+)"', html):
             v = int(m)
             if 500 <= v <= 150_000:
                 prices.append(v)
@@ -104,11 +104,6 @@ class AutoScout24Scraper(BaseScraper):
                     break
 
                 prix_page = self._parse_data_price(r.text)
-
-                # Fallback extraire_prix_texte si data-price vide
-                if not prix_page:
-                    prix_page = extraire_prix_texte(r.text)
-
                 logger.info(f"[autoscout24] p{page_num} → {len(prix_page)} prix : {prix_page[:5]}")
                 prix.extend(prix_page)
 
