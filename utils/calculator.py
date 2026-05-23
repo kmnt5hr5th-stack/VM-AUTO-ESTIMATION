@@ -63,9 +63,9 @@ def get_discount_rate(
 
     # Malus boîte mécanique seul (hors flotte)
     if boite and any(w in boite.lower() for w in ["mecanique", "mécanique", "manuelle", "bvm", "bm"]):
-        return 0.82, "Standard + boîte mécanique - 18%"
+        return 0.78, "Standard + boîte mécanique - 22%"
 
-    return 0.85, "Standard - 15%"
+    return 0.82, "Standard - 18%"
 
 
 def supprimer_outliers(prix: list[int]) -> list[int]:
