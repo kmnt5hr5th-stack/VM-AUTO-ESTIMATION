@@ -68,7 +68,7 @@ class LeboncoinScraper(BaseScraper):
             if gear:
                 enums["gearbox"] = [gear]
         is_util = type_vehicule and type_vehicule.lower() in ("utilitaire", "fourgon", "van", "camionnette")
-        cat_id = "3" if is_util else "2"
+        cat_id = "5" if is_util else "2"
         return {
             "filters": {
                 "category": {"id": cat_id},
@@ -160,7 +160,7 @@ class LeboncoinScraper(BaseScraper):
         prix: list[int] = []
 
         for page_num in range(1, max_pages + 1):
-            target = self._build_search_url(marque, modele, annee, kilometrage, finition)
+            target = self._build_search_url(marque, modele, annee, kilometrage, finition, type_vehicule)
             if page_num > 1:
                 target += f"&page={page_num}"
 
@@ -187,13 +187,15 @@ class LeboncoinScraper(BaseScraper):
 
         return prix
 
-    def _build_search_url(self, marque: str, modele: str, annee: int, km: int, finition: Optional[str] = None) -> str:
+    def _build_search_url(self, marque: str, modele: str, annee: int, km: int, finition: Optional[str] = None, type_vehicule: Optional[str] = None) -> str:
         text = f"{marque} {modele}"
         if finition:
             text += f" {finition}"
         km_delta = 10_000
+        is_util = type_vehicule and type_vehicule.lower() in ("utilitaire", "fourgon", "van", "camionnette")
+        cat_id = "5" if is_util else "2"
         params = {
-            "category": "2",
+            "category": cat_id,
             "text": text,
             "regdate_min": str(annee - 1),
             "regdate_max": str(annee + 1),

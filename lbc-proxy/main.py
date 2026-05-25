@@ -281,7 +281,7 @@ async def leboncoin(req: SearchRequest):
         text += f" {req.finition}"
 
     is_util = req.type_vehicule and req.type_vehicule.lower() in ("utilitaire", "fourgon", "van", "camionnette")
-    cat_id = "3" if is_util else "2"
+    cat_id = "5" if is_util else "2"
 
     enums: dict = {"ad_type": ["offer"]}
     if req.carburant:
