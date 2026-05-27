@@ -16,6 +16,21 @@ app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"], all
 SEARCH_URL = "https://api.leboncoin.fr/finder/search"
 HOMEPAGE   = "https://www.leboncoin.fr/"
 
+WEBSHARE_PASS = "nomkg04o6fsd"
+WEBSHARE_HOST = "p.webshare.io:80"
+WEBSHARE_USERS = [
+    "lmgdmysu-fr-4",
+    "lmgdmysu-de-3",
+    "lmgdmysu-gb-1",
+    "lmgdmysu-nl-6",
+    "lmgdmysu-be-9",
+]
+
+def _webshare_proxies() -> dict:
+    user = random.choice(WEBSHARE_USERS)
+    proxy = f"http://{user}:{WEBSHARE_PASS}@{WEBSHARE_HOST}"
+    return {"http": proxy, "https": proxy}
+
 LBC_VERSIONS_IOS     = ["101.50.0", "101.49.1", "101.48.0", "101.47.2", "101.46.0"]
 LBC_VERSIONS_ANDROID = ["101.50.0", "101.49.1", "101.48.0"]
 IOS_VERSIONS         = ["18.3", "18.4", "17.6", "17.5"]
@@ -82,7 +97,7 @@ def _build_payload(text, annee, km, enums, cat_id, page=1):
             "enums": enums,
             "keywords": {"text": text},
             "ranges": {
-                "regdate": {"min": annee - 1, "max": annee + 1},
+                "regdate": {"min": annee - 1, "max": annee},
                 "mileage": {"min": max(0, km - km_delta), "max": km + km_delta},
             },
         },
@@ -146,7 +161,7 @@ async def _fetch_mobile_api(text, annee, km, enums, cat_id, max_pages=2) -> list
         for page_num in range(1, max_pages + 1):
             payload = _build_payload(text, annee, km, enums, cat_id, page_num)
             try:
-                async with AsyncSession(impersonate=impersonate) as s:
+                async with AsyncSession(impersonate=impersonate, proxies=_webshare_proxies()) as s:
                     await s.get(HOMEPAGE, headers=headers, timeout=15)
                     r = await s.post(SEARCH_URL, json=payload, headers=headers, timeout=30)
 
@@ -186,6 +201,7 @@ async def _fetch_playwright(search_url: str) -> list[int]:
         async with async_playwright() as p:
             browser = await p.chromium.launch(
                 headless=True,
+                proxy={"server": "http://p.webshare.io:80", "username": random.choice(WEBSHARE_USERS), "password": "nomkg04o6fsd"},
                 args=[
                     "--no-sandbox",
                     "--disable-setuid-sandbox",
@@ -238,7 +254,7 @@ def _build_search_url(text, annee, km, carburant=None, boite=None, cat_id="2") -
         "category": cat_id,
         "text": text,
         "regdate_min": str(annee - 1),
-        "regdate_max": str(annee + 1),
+        "regdate_max": str(annee),
         "mileage_min": str(max(0, km - km_delta)),
         "mileage_max": str(km + km_delta),
         "price": "500-150000",
