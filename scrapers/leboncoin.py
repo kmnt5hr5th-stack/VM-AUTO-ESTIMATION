@@ -75,7 +75,7 @@ class LeboncoinScraper(BaseScraper):
                 "enums": enums,
                 "keywords": {"text": text},
                 "ranges": {
-                    "regdate": {"min": annee - 1, "max": annee + 1},
+                    "regdate": {"min": annee - 1, "max": annee},
                     "mileage": {"min": max(0, km - km_delta), "max": km + km_delta},
                 },
             },
@@ -198,7 +198,7 @@ class LeboncoinScraper(BaseScraper):
             "category": cat_id,
             "text": text,
             "regdate_min": str(annee - 1),
-            "regdate_max": str(annee + 1),
+            "regdate_max": str(annee),
             "mileage_min": str(max(0, km - km_delta)),
             "mileage_max": str(km + km_delta),
             "price": "500-150000",
