@@ -180,6 +180,158 @@ def health():
     return {"status": "ok"}
 
 
+# ─── Geo scan ─────────────────────────────────────────────────────────────────
+
+class GeoScanRequest(BaseModel):
+    lat: float = 48.8359857
+    lng: float = 2.5860974
+    radius: int = 20000       # mètres — 20 km autour de Champs-sur-Marne
+    prix_max: int = 25000
+    km_max: int = 180000
+    max_pages: int = 5
+
+
+def _build_geo_payload(lat: float, lng: float, radius: int, prix_max: int, km_max: int, page: int = 1) -> dict:
+    return {
+        "filters": {
+            "category": {"id": "2"},
+            "enums": {"ad_type": ["offer"]},
+            "location": {"area": {"lat": lat, "lng": lng, "radius": radius}},
+            "ranges": {
+                "price": {"max": prix_max},
+                "mileage": {"max": km_max},
+            },
+        },
+        "limit": 100,
+        "limit_alu": 3,
+        "offset": 100 * (page - 1),
+        "disable_total": True,
+        "extend": True,
+        "listing_source": "direct-search" if page == 1 else "pagination",
+    }
+
+
+def _parse_listing(ad: dict) -> dict | None:
+    if ad.get("owner", {}).get("type", "").lower() == "pro":
+        return None
+
+    attrs = {
+        a["key"]: {"v": a.get("value", ""), "l": a.get("value_label", a.get("value", ""))}
+        for a in ad.get("attributes", [])
+    }
+
+    price_raw = ad.get("price", [])
+    price = price_raw[0] if isinstance(price_raw, list) and price_raw else price_raw
+    try:
+        price = int(price) if price else None
+    except (ValueError, TypeError):
+        price = None
+    if not price or not (500 <= price <= 150_000):
+        return None
+
+    marque = attrs.get("brand", {}).get("v", "").upper().strip()
+    modele = attrs.get("model", {}).get("v", "").upper().strip()
+
+    regdate = attrs.get("regdate", {}).get("v", "")
+    try:
+        annee = int(str(regdate)[:4]) if regdate else None
+    except (ValueError, TypeError):
+        annee = None
+
+    mileage = attrs.get("mileage", {}).get("v", "")
+    try:
+        km = int(mileage) if mileage else None
+    except (ValueError, TypeError):
+        km = None
+
+    if not marque or not modele or not annee or km is None:
+        return None
+
+    list_id = ad.get("list_id")
+    location = ad.get("location", {})
+    images = ad.get("images", {})
+    image_urls = images.get("urls_large", images.get("urls", []))
+
+    return {
+        "source": "leboncoin",
+        "external_id": str(list_id),
+        "url_annonce": ad.get("url") or f"https://www.leboncoin.fr/ad/voitures/{list_id}",
+        "titre": ad.get("subject", ""),
+        "marque": marque,
+        "modele": modele,
+        "annee": annee,
+        "kilometrage": km,
+        "prix_annonce": price,
+        "energie": attrs.get("fuel", {}).get("l", ""),
+        "boite": attrs.get("gearbox", {}).get("l", ""),
+        "vendeur_type": "Particulier",
+        "pays": "France",
+        "region": location.get("region_name", ""),
+        "ville": location.get("city", ""),
+        "image_url": image_urls[0] if image_urls else None,
+        "date_publication": ad.get("first_publication_date"),
+    }
+
+
+async def _fetch_geo_listings(params: GeoScanRequest) -> list[dict]:
+    for attempt in range(3):
+        if attempt > 0:
+            await asyncio.sleep(3)
+        ua, impersonate, headers = _mobile_ua()
+        logger.info(f"[geo-scan] Tentative {attempt + 1}")
+        listings: list[dict] = []
+        blocked = False
+
+        for page_num in range(1, params.max_pages + 1):
+            payload = _build_geo_payload(
+                params.lat, params.lng, params.radius,
+                params.prix_max, params.km_max, page_num,
+            )
+            try:
+                async with AsyncSession(impersonate=impersonate, proxies=_webshare_proxies()) as s:
+                    await s.get(HOMEPAGE, headers=headers, timeout=15)
+                    r = await s.post(SEARCH_URL, json=payload, headers=headers, timeout=30)
+
+                if r.status_code == 403:
+                    logger.warning(f"[geo-scan] DataDome 403 (tentative {attempt + 1})")
+                    blocked = True
+                    break
+                if not r.ok:
+                    logger.warning(f"[geo-scan] HTTP {r.status_code}")
+                    blocked = True
+                    break
+
+                ads = r.json().get("ads", [])
+                logger.info(f"[geo-scan] p{page_num}: {len(ads)} annonces brutes")
+                for ad in ads:
+                    parsed = _parse_listing(ad)
+                    if parsed:
+                        listings.append(parsed)
+                logger.info(f"[geo-scan] p{page_num}: {len(listings)} total parsées")
+
+                if len(ads) < 100:
+                    break  # dernière page
+
+            except Exception as e:
+                logger.error(f"[geo-scan] Erreur p{page_num}: {e}")
+                blocked = True
+                break
+
+        if not blocked:
+            return listings
+
+    return []
+
+
+@app.post("/scan-geo")
+async def scan_geo(req: GeoScanRequest):
+    listings = await _fetch_geo_listings(req)
+    logger.info(f"[geo-scan] Terminé : {len(listings)} annonces")
+    return {"listings": listings, "count": len(listings)}
+
+
+# ─── Leboncoin classique ───────────────────────────────────────────────────────
+
 @app.post("/leboncoin")
 async def leboncoin(req: SearchRequest):
     # Texte limité à marque + modele — motorisation/finition trop restrictifs sur LBC
