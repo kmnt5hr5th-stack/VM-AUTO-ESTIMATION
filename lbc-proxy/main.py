@@ -290,11 +290,8 @@ def health():
 
 @app.post("/leboncoin")
 async def leboncoin(req: SearchRequest):
+    # Texte limité à marque + modele — motorisation/finition trop restrictifs sur LBC
     text = f"{req.marque} {req.modele}"
-    if req.motorisation:
-        text += f" {req.motorisation}"
-    if req.finition:
-        text += f" {req.finition}"
 
     is_util = req.type_vehicule and req.type_vehicule.lower() in ("utilitaire", "fourgon", "van", "camionnette")
     cat_id = "5" if is_util else "2"
