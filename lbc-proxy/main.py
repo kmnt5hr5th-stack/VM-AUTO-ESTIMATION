@@ -1,11 +1,9 @@
-import uuid, random, logging, asyncio, re
+import uuid, random, logging, asyncio
 from typing import Optional
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from curl_cffi.requests import AsyncSession
-from playwright.async_api import async_playwright
-from bs4 import BeautifulSoup
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -120,36 +118,7 @@ def _extract_prix_from_ads(ads: list) -> list[int]:
     return prix
 
 
-def _extract_prix_from_html(html: str) -> list[int]:
-    """Extraire les prix depuis le HTML LeBonCoin (fallback Playwright)."""
-    prix = set()
-    soup = BeautifulSoup(html, "lxml")
-
-    # Sélecteurs LeBonCoin connus
-    for selector in [
-        {"attrs": {"data-qa-id": "aditem_price"}},
-        {"attrs": {"data-test-id": "price"}},
-        {"class": re.compile(r"price", re.I)},
-    ]:
-        for el in soup.find_all(**selector):
-            text = el.get_text(" ", strip=True)
-            for m in re.finditer(r'(\d[\d\s]{2,5})\s*€', text):
-                val = int(m.group(1).replace(" ", "").replace(" ", ""))
-                if 500 <= val <= 150_000:
-                    prix.add(val)
-
-    # Fallback : tous les prix dans la page
-    if not prix:
-        for m in re.finditer(r'(\d{4,6})\s*€', soup.get_text(" ")):
-            val = int(m.group(1))
-            if 500 <= val <= 150_000:
-                prix.add(val)
-
-    return list(prix)
-
-
 async def _fetch_mobile_api(text, annee, km, enums, cat_id, max_pages=2) -> list[int]:
-    """Méthode 1 : API mobile LeBonCoin avec User-Agent LBC."""
     for attempt in range(3):
         if attempt > 0:
             await asyncio.sleep(3)
@@ -188,86 +157,9 @@ async def _fetch_mobile_api(text, annee, km, enums, cat_id, max_pages=2) -> list
         if not blocked and prix:
             return prix
         if not blocked:
-            return []  # 0 résultats légitimes
+            return []
 
-    return []  # Bloqué après 3 tentatives
-
-
-async def _fetch_playwright(search_url: str) -> list[int]:
-    """Méthode 2 : Playwright avec vrai Chrome — contourne DataDome."""
-    logger.info(f"[playwright] Ouverture: {search_url}")
-    prix = []
-    try:
-        async with async_playwright() as p:
-            browser = await p.chromium.launch(
-                headless=True,
-                proxy={"server": "http://p.webshare.io:80", "username": random.choice(WEBSHARE_USERS), "password": "nomkg04o6fsd"},
-                args=[
-                    "--no-sandbox",
-                    "--disable-setuid-sandbox",
-                    "--disable-dev-shm-usage",
-                    "--disable-blink-features=AutomationControlled",
-                ],
-            )
-            context = await browser.new_context(
-                locale="fr-FR",
-                timezone_id="Europe/Paris",
-                user_agent=(
-                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
-                    "AppleWebKit/537.36 (KHTML, like Gecko) "
-                    "Chrome/124.0.0.0 Safari/537.36"
-                ),
-                viewport={"width": 1280, "height": 800},
-            )
-
-            # Masquer les traces d'automatisation
-            await context.add_init_script("""
-                Object.defineProperty(navigator, 'webdriver', { get: () => undefined });
-                Object.defineProperty(navigator, 'plugins', { get: () => [1, 2, 3] });
-            """)
-
-            page = await context.new_page()
-
-            # Visiter la homepage d'abord pour récupérer les cookies
-            await page.goto(HOMEPAGE, wait_until="domcontentloaded", timeout=30000)
-            await asyncio.sleep(random.uniform(1.5, 3.0))
-
-            # Aller sur la page de recherche
-            await page.goto(search_url, wait_until="networkidle", timeout=45000)
-            await asyncio.sleep(random.uniform(2.0, 4.0))
-
-            html = await page.content()
-            prix = _extract_prix_from_html(html)
-            logger.info(f"[playwright] {len(prix)} prix extraits")
-
-            await browser.close()
-    except Exception as e:
-        logger.error(f"[playwright] Erreur: {e}")
-
-    return prix
-
-
-def _build_search_url(text, annee, km, carburant=None, boite=None, cat_id="2") -> str:
-    km_delta = 15_000
-    from urllib.parse import urlencode, quote_plus
-    params = {
-        "category": cat_id,
-        "text": text,
-        "regdate_min": str(annee - 1),
-        "regdate_max": str(annee),
-        "mileage_min": str(max(0, km - km_delta)),
-        "mileage_max": str(km + km_delta),
-        "price": "500-150000",
-    }
-    if carburant:
-        fuel_lbc = {"diesel": "2", "essence": "1", "hybride": "6", "electrique": "4", "électrique": "4"}.get(carburant.lower())
-        if fuel_lbc:
-            params["fuel"] = fuel_lbc
-    if boite:
-        gear_lbc = {"manuelle": "1", "manual": "1", "automatique": "2", "automatic": "2"}.get(boite.lower())
-        if gear_lbc:
-            params["gearbox"] = gear_lbc
-    return f"https://www.leboncoin.fr/recherche?{urlencode(params, quote_via=quote_plus)}"
+    return []
 
 
 class SearchRequest(BaseModel):
@@ -306,20 +198,10 @@ async def leboncoin(req: SearchRequest):
         if gear:
             enums["gearbox"] = [gear]
 
-    # Méthode 1 : API mobile (rapide, sans Chrome)
     prix = await _fetch_mobile_api(text, req.annee, req.kilometrage, enums, cat_id, req.max_pages)
 
     if prix:
-        logger.info(f"[proxy] API mobile OK: {len(prix)} prix")
+        logger.info(f"[proxy] {len(prix)} prix")
         return {"prix": prix, "nb_annonces": len(prix), "methode": "mobile_api"}
-
-    # Méthode 2 : Playwright (vrai Chrome, contourne DataDome)
-    logger.info("[proxy] API mobile bloquée → Playwright")
-    search_url = _build_search_url(text, req.annee, req.kilometrage, req.carburant, req.boite, cat_id)
-    prix = await _fetch_playwright(search_url)
-
-    if prix:
-        logger.info(f"[proxy] Playwright OK: {len(prix)} prix")
-        return {"prix": prix, "nb_annonces": len(prix), "methode": "playwright"}
 
     raise HTTPException(status_code=503, detail="Aucune annonce trouvée ou DataDome non résolu")

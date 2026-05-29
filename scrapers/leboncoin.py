@@ -2,13 +2,11 @@ import logging
 import uuid
 import random
 from typing import Optional
-from urllib.parse import urlencode, quote_plus
 from curl_cffi.requests import AsyncSession
-from bs4 import BeautifulSoup
 from playwright.async_api import BrowserContext
 
-from .base import BaseScraper, extraire_prix_texte
-from ._proxy import proxy_available, flaresolverr_available, build_url, service_name, FLARESOLVERR_URL, LBC_PROXY_URL
+from .base import BaseScraper
+from ._proxy import LBC_PROXY_URL
 
 logger = logging.getLogger(__name__)
 
@@ -17,7 +15,6 @@ HOMEPAGE = "https://www.leboncoin.fr/"
 
 
 def _mobile_ua() -> tuple[str, str]:
-    """Retourne (User-Agent LBC mobile, browser à imiter)."""
     if random.choice([True, False]):
         ua = (
             f"LBC;iOS;{random.choice(['18.3', '18.4', '26.0', '26.2'])};"
@@ -38,7 +35,6 @@ def _mobile_ua() -> tuple[str, str]:
 class LeboncoinScraper(BaseScraper):
     name = "leboncoin"
 
-    # Mapping carburant → valeur enum LeBonCoin
     FUEL_MAP = {
         "diesel": "diesel", "gazole": "diesel",
         "essence": "petrol", "sp95": "petrol", "sp98": "petrol",
@@ -51,13 +47,7 @@ class LeboncoinScraper(BaseScraper):
         "automatique": "automatic", "auto": "automatic", "bva": "automatic", "dsg": "automatic", "edr": "automatic",
     }
 
-    def _build_payload(self, marque: str, modele: str, annee: int, km: int, page: int = 1, finition: Optional[str] = None, carburant: Optional[str] = None, boite: Optional[str] = None, motorisation: Optional[str] = None, type_vehicule: Optional[str] = None) -> dict:
-        text = f"{marque} {modele}"
-        if motorisation:
-            text += f" {motorisation}"
-        if finition:
-            text += f" {finition}"
-        km_delta = 10_000
+    def _build_payload(self, marque, modele, annee, km, page=1, carburant=None, boite=None, type_vehicule=None) -> dict:
         enums: dict = {"ad_type": ["offer"]}
         if carburant:
             fuel = self.FUEL_MAP.get(carburant.lower().strip())
@@ -73,10 +63,10 @@ class LeboncoinScraper(BaseScraper):
             "filters": {
                 "category": {"id": cat_id},
                 "enums": enums,
-                "keywords": {"text": text},
+                "keywords": {"text": f"{marque} {modele}"},
                 "ranges": {
                     "regdate": {"min": annee - 1, "max": annee},
-                    "mileage": {"min": max(0, km - km_delta), "max": km + km_delta},
+                    "mileage": {"min": max(0, km - 10_000), "max": km + 10_000},
                 },
             },
             "limit": 35,
@@ -87,7 +77,7 @@ class LeboncoinScraper(BaseScraper):
             "listing_source": "direct-search" if page == 1 else "pagination",
         }
 
-    async def _fetch_mobile_api(self, marque: str, modele: str, annee: int, km: int, page: int, finition: Optional[str], carburant: Optional[str] = None, boite: Optional[str] = None, motorisation: Optional[str] = None, type_vehicule: Optional[str] = None) -> list[int]:
+    async def _fetch_mobile_api(self, marque, modele, annee, km, page, carburant=None, boite=None, type_vehicule=None) -> list[int]:
         ua, impersonate = _mobile_ua()
         headers = {
             "User-Agent": ua,
@@ -95,7 +85,7 @@ class LeboncoinScraper(BaseScraper):
             "Sec-Fetch-Mode": "cors",
             "Sec-Fetch-Site": "same-site",
         }
-        payload = self._build_payload(marque, modele, annee, km, page, finition, carburant, boite, motorisation, type_vehicule)
+        payload = self._build_payload(marque, modele, annee, km, page, carburant, boite, type_vehicule)
 
         async with AsyncSession(impersonate=impersonate) as s:
             await s.get(HOMEPAGE, headers=headers, timeout=15)
@@ -116,122 +106,35 @@ class LeboncoinScraper(BaseScraper):
         return prix
 
     async def get_prices(self, marque, modele, annee, kilometrage, max_pages=2, finition=None, carburant=None, boite=None, motorisation=None, type_vehicule=None):
-        # 0) Proxy externe (Fly.io / OVH) si configuré — IP non-blacklistée
         if LBC_PROXY_URL:
-            logger.info(f"[leboncoin] Via proxy externe: {LBC_PROXY_URL}")
+            logger.info(f"[leboncoin] Via lbc-proxy (Webshare)")
             try:
                 payload = {"marque": marque, "modele": modele, "annee": annee,
-                           "kilometrage": kilometrage, "finition": finition, "max_pages": max_pages,
-                           "carburant": carburant, "boite": boite, "motorisation": motorisation,
-                           "type_vehicule": type_vehicule}
+                           "kilometrage": kilometrage, "max_pages": max_pages,
+                           "carburant": carburant, "boite": boite, "type_vehicule": type_vehicule}
                 async with AsyncSession(impersonate="chrome131") as s:
                     r = await s.post(f"{LBC_PROXY_URL}/leboncoin", json=payload, timeout=90)
                 if r.ok:
-                    data = r.json()
-                    prix = data.get("prix", [])
-                    logger.info(f"[leboncoin] Proxy externe: {len(prix)} prix")
+                    prix = r.json().get("prix", [])
+                    logger.info(f"[leboncoin] lbc-proxy: {len(prix)} prix")
                     if prix:
                         return prix
             except Exception as e:
-                logger.warning(f"[leboncoin] Proxy externe échoué: {e}")
+                logger.warning(f"[leboncoin] lbc-proxy échoué: {e}")
 
-        # 1) API mobile LeBonCoin — User-Agent LBC, pas de proxy requis
-        logger.info("[leboncoin] Tentative API mobile (User-Agent LBC)...")
+        logger.info("[leboncoin] Tentative API mobile directe")
         try:
             prix = []
             for page_num in range(1, max_pages + 1):
-                page_prices = await self._fetch_mobile_api(marque, modele, annee, kilometrage, page_num, finition, carburant, boite, motorisation, type_vehicule)
-                logger.info(f"[leboncoin] API p{page_num} → {len(page_prices)} prix : {page_prices[:5]}")
+                page_prices = await self._fetch_mobile_api(marque, modele, annee, kilometrage, page_num, carburant, boite, type_vehicule)
+                logger.info(f"[leboncoin] API p{page_num} → {len(page_prices)} prix")
                 prix.extend(page_prices)
                 if not page_prices:
                     break
-            if prix:
-                return prix
-            logger.warning("[leboncoin] API mobile: 0 résultats, fallback proxy")
+            return prix
         except Exception as e:
-            logger.warning(f"[leboncoin] API mobile échouée ({e}), fallback proxy")
-
-        # 2) Fallback proxy (FlareSolverr / ZenRows / ScraperAPI)
-        if not proxy_available():
-            logger.warning("[leboncoin] Aucun proxy configuré — source ignorée")
+            logger.warning(f"[leboncoin] API mobile échouée: {e}")
             return []
-
-        logger.info(f"[leboncoin] Service proxy: {service_name()}")
-        prix: list[int] = []
-
-        for page_num in range(1, max_pages + 1):
-            target = self._build_search_url(marque, modele, annee, kilometrage, finition, type_vehicule)
-            if page_num > 1:
-                target += f"&page={page_num}"
-
-            try:
-                if flaresolverr_available():
-                    html = await self._fetch_flaresolverr(target)
-                else:
-                    api_url = build_url(target, js_render=True)
-                    async with AsyncSession(impersonate="chrome131") as s:
-                        r = await s.get(api_url, timeout=90)
-                    if r.status_code != 200:
-                        break
-                    html = r.text
-
-                prix_page = self._parse_html(html)
-                logger.info(f"[leboncoin] proxy p{page_num} → {len(prix_page)} prix")
-                prix.extend(prix_page)
-                if not prix_page:
-                    break
-
-            except Exception as e:
-                logger.error(f"[leboncoin] Proxy erreur: {e}")
-                break
-
-        return prix
-
-    def _build_search_url(self, marque: str, modele: str, annee: int, km: int, finition: Optional[str] = None, type_vehicule: Optional[str] = None) -> str:
-        text = f"{marque} {modele}"
-        if finition:
-            text += f" {finition}"
-        km_delta = 10_000
-        is_util = type_vehicule and type_vehicule.lower() in ("utilitaire", "fourgon", "van", "camionnette")
-        cat_id = "5" if is_util else "2"
-        params = {
-            "category": cat_id,
-            "text": text,
-            "regdate_min": str(annee - 1),
-            "regdate_max": str(annee),
-            "mileage_min": str(max(0, km - km_delta)),
-            "mileage_max": str(km + km_delta),
-            "price": "500-150000",
-        }
-        return f"https://www.leboncoin.fr/recherche?{urlencode(params, quote_via=quote_plus)}"
-
-    async def _fetch_flaresolverr(self, url: str) -> str:
-        async with AsyncSession(impersonate="chrome131") as s:
-            r = await s.post(
-                f"{FLARESOLVERR_URL}/v1",
-                json={"cmd": "request.get", "url": url, "maxTimeout": 60000},
-                timeout=70,
-            )
-        data = r.json()
-        if data.get("status") != "ok":
-            raise Exception(f"FlareSolverr: {data.get('message', data)}")
-        return data["solution"]["response"]
-
-    def _parse_html(self, html: str) -> list[int]:
-        prix: set[int] = set()
-        soup = BeautifulSoup(html, "lxml")
-        for selector in [
-            {"attrs": {"data-qa-id": "aditem_price"}},
-            {"attrs": {"data-test-id": "price"}},
-        ]:
-            for el in soup.find_all(**selector):
-                for v in extraire_prix_texte(el.get_text(" ", strip=True)):
-                    prix.add(v)
-            if prix:
-                return list(prix)
-        for v in extraire_prix_texte(soup.get_text(" ")):
-            prix.add(v)
-        return list(prix)
 
     async def _scrape(self, context: BrowserContext, marque, modele, annee, kilometrage, max_pages, finition=None) -> list[int]:
         return []

@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup
 from playwright.async_api import BrowserContext
 
 from .base import BaseScraper, extraire_prix_texte
-from ._proxy import proxy_available, build_url, service_name
+from ._proxy import proxy_available, build_url, service_name  # ZenRows/ScraperAPI
 
 logger = logging.getLogger(__name__)
 
@@ -101,4 +101,4 @@ class LaCentraleScraper(BaseScraper):
         return list(prix)
 
     async def _scrape(self, context: BrowserContext, *args, **kwargs) -> list[int]:
-        return []
+        return []  # La Centrale ne supporte pas Playwright
