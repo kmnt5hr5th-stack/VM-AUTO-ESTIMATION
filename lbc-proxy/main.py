@@ -16,16 +16,12 @@ HOMEPAGE   = "https://www.leboncoin.fr/"
 
 WEBSHARE_PASS = "nomkg04o6fsd"
 WEBSHARE_HOST = "p.webshare.io:80"
-WEBSHARE_USERS = [
-    "lmgdmysu-fr-4",
-    "lmgdmysu-de-3",
-    "lmgdmysu-gb-1",
-    "lmgdmysu-nl-6",
-    "lmgdmysu-be-9",
-]
+WEBSHARE_COUNTRIES = ["fr", "de", "gb", "nl", "be", "es", "it", "pl", "pt", "ro"]
 
 def _webshare_proxies() -> dict:
-    user = random.choice(WEBSHARE_USERS)
+    country = random.choice(WEBSHARE_COUNTRIES)
+    session = random.randint(1, 99999)
+    user = f"lmgdmysu-{country}-{session}"
     proxy = f"http://{user}:{WEBSHARE_PASS}@{WEBSHARE_HOST}"
     return {"http": proxy, "https": proxy}
 
