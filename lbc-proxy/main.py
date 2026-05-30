@@ -185,23 +185,26 @@ def health():
 class GeoScanRequest(BaseModel):
     lat: float = 48.8359857
     lng: float = 2.5860974
-    radius: int = 20000       # mètres — 20 km autour de Champs-sur-Marne
+    radius: int = 20000
     prix_max: int = 25000
     km_max: int = 180000
     max_pages: int = 5
+    tout_france: bool = False  # si True, ignore lat/lng/radius — recherche nationale
 
 
-def _build_geo_payload(lat: float, lng: float, radius: int, prix_max: int, km_max: int, page: int = 1) -> dict:
-    return {
-        "filters": {
-            "category": {"id": "2"},
-            "enums": {"ad_type": ["offer"]},
-            "location": {"area": {"lat": lat, "lng": lng, "radius": radius}},
-            "ranges": {
-                "price": {"max": prix_max},
-                "mileage": {"max": km_max},
-            },
+def _build_geo_payload(lat: float, lng: float, radius: int, prix_max: int, km_max: int, page: int = 1, tout_france: bool = False) -> dict:
+    filters: dict = {
+        "category": {"id": "2"},
+        "enums": {"ad_type": ["offer"]},
+        "ranges": {
+            "price": {"max": prix_max},
+            "mileage": {"max": km_max},
         },
+    }
+    if not tout_france:
+        filters["location"] = {"area": {"lat": lat, "lng": lng, "radius": radius}}
+    return {
+        "filters": filters,
         "limit": 100,
         "limit_alu": 3,
         "offset": 100 * (page - 1),
@@ -286,6 +289,7 @@ async def _fetch_geo_listings(params: GeoScanRequest) -> list[dict]:
             payload = _build_geo_payload(
                 params.lat, params.lng, params.radius,
                 params.prix_max, params.km_max, page_num,
+                tout_france=params.tout_france,
             )
             try:
                 async with AsyncSession(impersonate=impersonate, proxies=_webshare_proxies()) as s:
