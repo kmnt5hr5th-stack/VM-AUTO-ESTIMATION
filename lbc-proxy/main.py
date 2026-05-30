@@ -321,7 +321,7 @@ async def _fetch_geo_listings(params: GeoScanRequest) -> list[dict]:
                 blocked = True
                 break
 
-        if not blocked:
+        if listings:  # retourner ce qu'on a, même si bloqué sur les pages suivantes
             return listings
 
     return []
