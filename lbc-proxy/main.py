@@ -66,7 +66,7 @@ def _mobile_ua() -> tuple[str, str, dict]:
             "Origin": "https://www.leboncoin.fr",
             "Referer": "https://www.leboncoin.fr/",
         }
-        return ua, "safari_ios", headers
+        return ua, "safari18_0_ios", headers
     else:
         android = random.choice(ANDROID_VERSIONS)
         lbc = random.choice(LBC_VERSIONS_ANDROID)
@@ -84,7 +84,7 @@ def _mobile_ua() -> tuple[str, str, dict]:
             "Origin": "https://www.leboncoin.fr",
             "Referer": "https://www.leboncoin.fr/",
         }
-        return ua, "chrome_android", headers
+        return ua, "chrome131_android", headers
 
 
 def _build_payload(text, annee, km, enums, cat_id, page=1):
