@@ -97,40 +97,40 @@ def get_discount_rate(
                 return round(base * 0.97, 4), label + " + boîte manuelle - 3%"
             return base, label
 
-    # 2. SUV premium → -5%
+    # 2. SUV premium → -8%
     for brand, suvs in PREMIUM_SUVS.items():
         if brand == marque_up:
             for suv in suvs:
                 if suv in modele_up:
-                    base, label = 0.95, f"SUV premium ({marque} {suv.title()}) - 5%"
+                    base, label = 0.92, f"SUV premium ({marque} {suv.title()}) - 8%"
                     if is_manual:
-                        return round(base * 0.97, 4), label + " + boîte manuelle - 3%"
+                        return round(base * 0.95, 4), label + " + boîte manuelle - 5%"
                     return base, label
 
-    # 3. SUV standard → -8%
+    # 3. SUV standard → -12%
     for brand, suvs in STANDARD_SUVS.items():
         if brand == marque_up:
             for suv in suvs:
                 if suv in modele_up:
-                    base, label = 0.92, f"SUV standard ({marque} {suv.title()}) - 8%"
+                    base, label = 0.88, f"SUV standard ({marque} {suv.title()}) - 12%"
                     if is_manual:
-                        return round(base * 0.97, 4), label + " + boîte manuelle - 3%"
+                        return round(base * 0.95, 4), label + " + boîte manuelle - 5%"
                     return base, label
 
-    # 4. Citadine/volume → -10%
+    # 4. Citadine/volume → -15%
     for brand, cars in CITY_CARS.items():
         if brand == marque_up:
             for car in cars:
                 if car in modele_up:
-                    base, label = 0.90, f"Citadine ({marque} {car.title()}) - 10%"
+                    base, label = 0.85, f"Citadine ({marque} {car.title()}) - 15%"
                     if is_manual:
-                        return round(base * 0.97, 4), label + " + boîte manuelle - 3%"
+                        return round(base * 0.95, 4), label + " + boîte manuelle - 5%"
                     return base, label
 
-    # 5. Berline/break/standard → -12%
-    base, label = 0.88, "Berline/standard - 12%"
+    # 5. Berline/break/standard → -17%
+    base, label = 0.83, "Berline/standard - 17%"
     if is_manual:
-        return round(base * 0.97, 4), label + " + boîte manuelle - 3%"
+        return round(base * 0.95, 4), label + " + boîte manuelle - 5%"
     return base, label
 
 
