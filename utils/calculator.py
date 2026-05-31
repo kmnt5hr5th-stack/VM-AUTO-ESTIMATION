@@ -1,5 +1,4 @@
 import statistics
-import datetime
 from typing import Optional
 
 # ── Catégories véhicules ──────────────────────────────────────────────────────
@@ -144,18 +143,6 @@ def supprimer_outliers(prix: list[int]) -> list[int]:
     return [p for p in prix if borne_basse <= p <= borne_haute]
 
 
-def _age_factor(annee: int) -> tuple[float, str]:
-    """Pénalité ancienneté : les annonces LBC surévaluent d'autant plus que la voiture est vieille."""
-    anciennete = datetime.date.today().year - annee
-    if anciennete >= 14:
-        return 0.68, f"ancienneté {anciennete} ans -32%"
-    if anciennete >= 11:
-        return 0.77, f"ancienneté {anciennete} ans -23%"
-    if anciennete >= 8:
-        return 0.92, f"ancienneté {anciennete} ans -8%"
-    return 1.0, ""
-
-
 def calculate_estimation(
     prix_bruts: list[int],
     marque: str = "",
@@ -177,7 +164,7 @@ def calculate_estimation(
     prix_median = r100(statistics.median(prix))
 
     if n >= 4:
-        quantiles       = statistics.quantiles(prix, n=20)
+        quantiles        = statistics.quantiles(prix, n=20)
         fourchette_basse = r100(quantiles[2])   # ~15e percentile
         fourchette_haute = r100(quantiles[16])  # ~85e percentile
     else:
@@ -185,21 +172,14 @@ def calculate_estimation(
         fourchette_haute = r100(max(prix))
 
     coef, methode = get_discount_rate(marque, modele, motorisation, finition, boite)
-
-    if annee:
-        age_f, age_label = _age_factor(annee)
-        if age_f < 1.0:
-            coef   = round(coef * age_f, 4)
-            methode = methode + " + " + age_label
-
-    prix_rachat = r100(prix_median * coef)
+    prix_rachat   = r100(prix_median * coef)
 
     return {
-        "nb_annonces":     n,
-        "prix_moyen":      prix_moyen,
-        "prix_median":     prix_median,
+        "nb_annonces":      n,
+        "prix_moyen":       prix_moyen,
+        "prix_median":      prix_median,
         "fourchette_basse": fourchette_basse,
         "fourchette_haute": fourchette_haute,
-        "prix_rachat":     prix_rachat,
-        "methode":         methode,
+        "prix_rachat":      prix_rachat,
+        "methode":          methode,
     }

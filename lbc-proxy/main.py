@@ -114,63 +114,47 @@ def _extract_prix_from_ads(ads: list) -> list[int]:
 
 
 async def _fetch_mobile_api(text, annee, km, enums, cat_id, max_pages=2) -> list[int]:
-    # Recherche progressive : strict → élargi → sans filtre km
-    search_levels = [
-        {"km_delta": 15_000, "annee_delta": 0,  "no_km_filter": False, "label": "strict"},
-        {"km_delta": 50_000, "annee_delta": 1,  "no_km_filter": False, "label": "élargi"},
-        {"km_delta": 0,      "annee_delta": 2,  "no_km_filter": True,  "label": "sans filtre km"},
-    ]
+    for attempt in range(3):
+        if attempt > 0:
+            await asyncio.sleep(3)
+        ua, impersonate, headers = _mobile_ua()
+        logger.info(f"[mobile-api] Tentative {attempt + 1}")
+        prix = []
+        blocked = False
 
-    for level in search_levels:
-        logger.info(f"[mobile-api] Niveau {level['label']}")
-        for attempt in range(3):
-            if attempt > 0:
-                await asyncio.sleep(3)
-            ua, impersonate, headers = _mobile_ua()
-            prix = []
-            blocked = False
+        try:
+            async with AsyncSession(impersonate=impersonate, proxies=_webshare_proxies()) as s:
+                await s.get(HOMEPAGE, headers=headers, timeout=15)
 
-            try:
-                # 1 session + 1 homepage par tentative (économie bande passante)
-                async with AsyncSession(impersonate=impersonate, proxies=_webshare_proxies()) as s:
-                    await s.get(HOMEPAGE, headers=headers, timeout=15)
+                for page_num in range(1, max_pages + 1):
+                    payload = _build_payload(
+                        text, annee, km, enums, cat_id, page_num,
+                        km_delta=15_000, annee_delta=1,
+                    )
+                    r = await s.post(SEARCH_URL, json=payload, headers=headers, timeout=30)
 
-                    for page_num in range(1, max_pages + 1):
-                        payload = _build_payload(
-                            text, annee, km, enums, cat_id, page_num,
-                            km_delta=level["km_delta"],
-                            annee_delta=level["annee_delta"],
-                            no_km_filter=level["no_km_filter"],
-                        )
-                        r = await s.post(SEARCH_URL, json=payload, headers=headers, timeout=30)
+                    if r.status_code == 403:
+                        logger.warning(f"[mobile-api] DataDome 403 (tentative {attempt+1})")
+                        blocked = True
+                        break
+                    if not r.ok:
+                        blocked = True
+                        break
 
-                        if r.status_code == 403:
-                            logger.warning(f"[mobile-api] DataDome 403 (tentative {attempt+1})")
-                            blocked = True
-                            break
-                        if not r.ok:
-                            blocked = True
-                            break
+                    ads = r.json().get("ads", [])
+                    page_prix = _extract_prix_from_ads(ads)
+                    logger.info(f"[mobile-api] p{page_num}: {len(page_prix)} prix")
+                    prix.extend(page_prix)
+                    if not page_prix:
+                        break
 
-                        ads = r.json().get("ads", [])
-                        page_prix = _extract_prix_from_ads(ads)
-                        logger.info(f"[mobile-api] p{page_num}: {len(page_prix)} prix")
-                        prix.extend(page_prix)
-                        if not page_prix:
-                            break
+        except Exception as e:
+            logger.error(f"[mobile-api] Erreur: {e}")
+            blocked = True
 
-            except Exception as e:
-                logger.error(f"[mobile-api] Erreur: {e}")
-                blocked = True
-
-            if blocked:
-                continue
-
-            if len(prix) >= 5:
-                logger.info(f"[mobile-api] {len(prix)} prix trouvés (niveau {level['label']})")
-                return prix
-
-        logger.info(f"[mobile-api] Seulement {len(prix) if not blocked else 0} prix au niveau {level['label']}, on élargit")
+        if not blocked and prix:
+            logger.info(f"[mobile-api] {len(prix)} prix trouvés")
+            return prix
 
     return prix if prix else []
 
