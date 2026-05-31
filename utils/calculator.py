@@ -73,7 +73,7 @@ def get_discount_rate(
     """Retourne (multiplicateur, raison).
 
     Framework :
-      SUV premium      → -15%  (forte demande, prix stables)
+      SUV premium      → -20%  (forte demande, prix stables)
       SUV standard     → -19%  (bonne demande)
       Citadine/volume  → -14%  (marché liquide)
       Berline/standard → -15%  (défaut)
@@ -102,7 +102,7 @@ def get_discount_rate(
         if brand == marque_up:
             for suv in suvs:
                 if suv in modele_up:
-                    base, label = 0.85, f"SUV premium ({marque} {suv.title()}) - 15%"
+                    base, label = 0.80, f"SUV premium ({marque} {suv.title()}) - 20%"
                     if is_manual:
                         return round(base * 0.97, 4), label + " + boîte manuelle - 3%"
                     return base, label

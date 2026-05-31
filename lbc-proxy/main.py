@@ -123,11 +123,16 @@ def _extract_prix_from_ads(ads: list, modele_filter: str = None) -> list[int]:
 async def _fetch_mobile_api(text, annee, km, enums, cat_id, max_pages=2, modele_filter=None) -> list[int]:
     for attempt in range(3):
         if attempt > 0:
-            await asyncio.sleep(3)
+            await asyncio.sleep(5)
         ua, impersonate, headers = _mobile_ua()
         logger.info(f"[mobile-api] Tentative {attempt + 1}")
         prix = []
         blocked = False
+
+        # Sur les tentatives suivantes, on retire les filtres carburant/boîte pour contourner DataDome
+        active_enums = enums if attempt == 0 else {"ad_type": ["offer"]}
+        if attempt > 0:
+            logger.info("[mobile-api] Fallback : enums réduits (sans carburant/boîte)")
 
         try:
             async with AsyncSession(impersonate=impersonate, proxies=_webshare_proxies()) as s:
@@ -135,7 +140,7 @@ async def _fetch_mobile_api(text, annee, km, enums, cat_id, max_pages=2, modele_
 
                 for page_num in range(1, max_pages + 1):
                     payload = _build_payload(
-                        text, annee, km, enums, cat_id, page_num,
+                        text, annee, km, active_enums, cat_id, page_num,
                         km_delta=10_000, annee_delta=1,
                     )
                     r = await s.post(SEARCH_URL, json=payload, headers=headers, timeout=30)
@@ -160,7 +165,7 @@ async def _fetch_mobile_api(text, annee, km, enums, cat_id, max_pages=2, modele_
             blocked = True
 
         if not blocked and prix:
-            logger.info(f"[mobile-api] {len(prix)} prix trouvés")
+            logger.info(f"[mobile-api] {len(prix)} prix trouvés (tentative {attempt+1})")
             return prix
 
     return prix if prix else []
