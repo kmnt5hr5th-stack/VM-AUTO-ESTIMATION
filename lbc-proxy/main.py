@@ -103,9 +103,16 @@ def _build_payload(text, annee, km, enums, cat_id, page=1, km_delta=15_000, anne
     }
 
 
-def _extract_prix_from_ads(ads: list) -> list[int]:
+def _extract_prix_from_ads(ads: list, modele_filter: str = None) -> list[int]:
     prix = []
     for ad in ads:
+        if modele_filter:
+            attrs = {a["key"]: a.get("value_label", a.get("value", "")).upper().strip()
+                     for a in ad.get("attributes", [])}
+            model_attr = attrs.get("model", "")
+            mf = modele_filter.upper().strip()
+            if mf not in model_attr and model_attr not in mf:
+                continue
         raw = ad.get("price", [])
         p = raw[0] if isinstance(raw, list) and raw else (raw if isinstance(raw, (int, float)) else None)
         if p and 500 <= int(p) <= 150_000:
@@ -113,7 +120,7 @@ def _extract_prix_from_ads(ads: list) -> list[int]:
     return prix
 
 
-async def _fetch_mobile_api(text, annee, km, enums, cat_id, max_pages=2) -> list[int]:
+async def _fetch_mobile_api(text, annee, km, enums, cat_id, max_pages=2, modele_filter=None) -> list[int]:
     for attempt in range(3):
         if attempt > 0:
             await asyncio.sleep(3)
@@ -142,10 +149,10 @@ async def _fetch_mobile_api(text, annee, km, enums, cat_id, max_pages=2) -> list
                         break
 
                     ads = r.json().get("ads", [])
-                    page_prix = _extract_prix_from_ads(ads)
-                    logger.info(f"[mobile-api] p{page_num}: {len(page_prix)} prix")
+                    page_prix = _extract_prix_from_ads(ads, modele_filter)
+                    logger.info(f"[mobile-api] p{page_num}: {len(page_prix)} prix (modele_filter={modele_filter})")
                     prix.extend(page_prix)
-                    if not page_prix:
+                    if not ads:
                         break
 
         except Exception as e:
@@ -348,7 +355,7 @@ async def leboncoin(req: SearchRequest):
         if gear:
             enums["gearbox"] = [gear]
 
-    prix = await _fetch_mobile_api(text, req.annee, req.kilometrage, enums, cat_id, req.max_pages)
+    prix = await _fetch_mobile_api(text, req.annee, req.kilometrage, enums, cat_id, req.max_pages, modele_filter=req.modele)
 
     if prix:
         logger.info(f"[proxy] {len(prix)} prix")
