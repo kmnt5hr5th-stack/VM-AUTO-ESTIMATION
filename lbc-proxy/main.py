@@ -333,11 +333,27 @@ async def scan_geo(req: GeoScanRequest):
 
 # ─── Leboncoin classique ───────────────────────────────────────────────────────
 
+def _lbc_search_text(marque: str, modele: str, motorisation: str | None) -> str:
+    """Construit le texte de recherche LBC.
+
+    Pour Mercedes, 'Classe GLC' → 'GLC' car GLC/GLE/GLS ne sont pas des séries 'Classe'.
+    Les vraies séries Classe (A, B, C, E, S, CLA, CLS) gardent leur nom complet.
+    """
+    m = modele.strip()
+    if marque.upper().replace("-", " ").replace("BENZ", "").strip() == "MERCEDES":
+        if m.upper().startswith("CLASSE "):
+            suffix = m[7:].strip().upper()
+            if suffix and suffix[0] == "G":  # GLC, GLE, GLS, GLA, GLB, EQC…
+                m = m[7:].strip()
+    text = f"{marque} {m}"
+    if motorisation:
+        text += f" {motorisation}"
+    return text
+
+
 @app.post("/leboncoin")
 async def leboncoin(req: SearchRequest):
-    text = f"{req.marque} {req.modele}"
-    if req.motorisation:
-        text += f" {req.motorisation}"
+    text = _lbc_search_text(req.marque, req.modele, req.motorisation)
 
     is_util = req.type_vehicule and req.type_vehicule.lower() in ("utilitaire", "fourgon", "van", "camionnette")
     cat_id = "5" if is_util else "2"
