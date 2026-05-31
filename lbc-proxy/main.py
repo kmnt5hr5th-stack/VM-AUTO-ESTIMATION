@@ -338,15 +338,12 @@ async def leboncoin(req: SearchRequest):
     text = f"{req.marque} {req.modele}"
     if req.motorisation:
         text += f" {req.motorisation}"
-    # Carburant dans le texte (plus fiable que l'enum qui déclenche DataDome)
-    if req.carburant:
-        carb_lower = req.carburant.lower().strip()
-        if carb_lower in ("hybride", "hybrid", "electrique", "électrique", "electric", "gpl", "gnv"):
-            text += f" {req.carburant}"
 
     is_util = req.type_vehicule and req.type_vehicule.lower() in ("utilitaire", "fourgon", "van", "camionnette")
     cat_id = "5" if is_util else "2"
 
+    # On n'envoie pas les enums carburant/boite — ils déclenchent DataDome
+    # Le filtrage se fait par km range + modele_filter + motorisation dans le texte
     enums: dict = {"ad_type": ["offer"]}
 
     prix = await _fetch_mobile_api(text, req.annee, req.kilometrage, enums, cat_id, req.max_pages, modele_filter=req.modele)
