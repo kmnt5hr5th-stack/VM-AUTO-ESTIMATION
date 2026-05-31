@@ -38,6 +38,8 @@ STANDARD_SUVS: dict[str, list[str]] = {
     "JEEP":      ["COMPASS", "RENEGADE"],
     "MITSUBISHI":["ECLIPSE CROSS", "OUTLANDER"],
     "SUBARU":    ["FORESTER", "XV"],
+    "FIAT":      ["500X", "500 X"],
+    "ALFA ROMEO":["TONALE"],
 }
 
 CITY_CARS: dict[str, list[str]] = {
