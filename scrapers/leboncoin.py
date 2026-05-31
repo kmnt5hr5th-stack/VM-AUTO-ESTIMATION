@@ -65,8 +65,8 @@ class LeboncoinScraper(BaseScraper):
                 "enums": enums,
                 "keywords": {"text": f"{marque} {modele}"},
                 "ranges": {
-                    "regdate": {"min": annee - 1, "max": annee},
-                    "mileage": {"min": max(0, km - 10_000), "max": km + 10_000},
+                    "regdate": {"min": annee - 1, "max": annee + 1},
+                    "mileage": {"min": max(0, km - 15_000), "max": km + 15_000},
                 },
             },
             "limit": 35,
@@ -99,6 +99,8 @@ class LeboncoinScraper(BaseScraper):
         ads = r.json().get("ads", [])
         prix = []
         for ad in ads:
+            if ad.get("owner", {}).get("type", "").lower() == "pro":
+                continue
             raw = ad.get("price", [])
             p = raw[0] if isinstance(raw, list) and raw else (raw if isinstance(raw, (int, float)) else None)
             if p and 500 <= int(p) <= 150_000:
