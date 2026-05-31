@@ -106,8 +106,6 @@ def _build_payload(text, annee, km, enums, cat_id, page=1, km_delta=15_000, anne
 def _extract_prix_from_ads(ads: list) -> list[int]:
     prix = []
     for ad in ads:
-        if ad.get("owner", {}).get("type", "").lower() == "pro":
-            continue
         raw = ad.get("price", [])
         p = raw[0] if isinstance(raw, list) and raw else (raw if isinstance(raw, (int, float)) else None)
         if p and 500 <= int(p) <= 150_000:
