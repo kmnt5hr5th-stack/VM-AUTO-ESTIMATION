@@ -130,37 +130,38 @@ async def _fetch_mobile_api(text, annee, km, enums, cat_id, max_pages=2) -> list
             prix = []
             blocked = False
 
-            for page_num in range(1, max_pages + 1):
-                payload = _build_payload(
-                    text, annee, km, enums, cat_id, page_num,
-                    km_delta=level["km_delta"],
-                    annee_delta=level["annee_delta"],
-                    no_km_filter=level["no_km_filter"],
-                )
-                try:
-                    async with AsyncSession(impersonate=impersonate, proxies=_webshare_proxies()) as s:
-                        await s.get(HOMEPAGE, headers=headers, timeout=15)
+            try:
+                # 1 session + 1 homepage par tentative (économie bande passante)
+                async with AsyncSession(impersonate=impersonate, proxies=_webshare_proxies()) as s:
+                    await s.get(HOMEPAGE, headers=headers, timeout=15)
+
+                    for page_num in range(1, max_pages + 1):
+                        payload = _build_payload(
+                            text, annee, km, enums, cat_id, page_num,
+                            km_delta=level["km_delta"],
+                            annee_delta=level["annee_delta"],
+                            no_km_filter=level["no_km_filter"],
+                        )
                         r = await s.post(SEARCH_URL, json=payload, headers=headers, timeout=30)
 
-                    if r.status_code == 403:
-                        logger.warning(f"[mobile-api] DataDome 403 (tentative {attempt+1})")
-                        blocked = True
-                        break
-                    if not r.ok:
-                        blocked = True
-                        break
+                        if r.status_code == 403:
+                            logger.warning(f"[mobile-api] DataDome 403 (tentative {attempt+1})")
+                            blocked = True
+                            break
+                        if not r.ok:
+                            blocked = True
+                            break
 
-                    ads = r.json().get("ads", [])
-                    page_prix = _extract_prix_from_ads(ads)
-                    logger.info(f"[mobile-api] p{page_num}: {len(page_prix)} prix")
-                    prix.extend(page_prix)
-                    if not page_prix:
-                        break
+                        ads = r.json().get("ads", [])
+                        page_prix = _extract_prix_from_ads(ads)
+                        logger.info(f"[mobile-api] p{page_num}: {len(page_prix)} prix")
+                        prix.extend(page_prix)
+                        if not page_prix:
+                            break
 
-                except Exception as e:
-                    logger.error(f"[mobile-api] Erreur: {e}")
-                    blocked = True
-                    break
+            except Exception as e:
+                logger.error(f"[mobile-api] Erreur: {e}")
+                blocked = True
 
             if blocked:
                 continue
@@ -169,7 +170,6 @@ async def _fetch_mobile_api(text, annee, km, enums, cat_id, max_pages=2) -> list
                 logger.info(f"[mobile-api] {len(prix)} prix trouvés (niveau {level['label']})")
                 return prix
 
-        # Moins de 5 résultats à ce niveau → on passe au niveau suivant
         logger.info(f"[mobile-api] Seulement {len(prix) if not blocked else 0} prix au niveau {level['label']}, on élargit")
 
     return prix if prix else []
@@ -296,45 +296,42 @@ async def _fetch_geo_listings(params: GeoScanRequest) -> list[dict]:
         ua, impersonate, headers = _mobile_ua()
         logger.info(f"[geo-scan] Tentative {attempt + 1}")
         listings: list[dict] = []
-        blocked = False
 
-        for page_num in range(1, params.max_pages + 1):
-            payload = _build_geo_payload(
-                params.lat, params.lng, params.radius,
-                params.prix_max, params.km_max, page_num,
-                tout_france=params.tout_france,
-            )
-            try:
-                async with AsyncSession(impersonate=impersonate, proxies=_webshare_proxies()) as s:
-                    await s.get(HOMEPAGE, headers=headers, timeout=15)
+        try:
+            # 1 session + 1 homepage par tentative (économie bande passante)
+            async with AsyncSession(impersonate=impersonate, proxies=_webshare_proxies()) as s:
+                await s.get(HOMEPAGE, headers=headers, timeout=15)
+
+                for page_num in range(1, params.max_pages + 1):
+                    payload = _build_geo_payload(
+                        params.lat, params.lng, params.radius,
+                        params.prix_max, params.km_max, page_num,
+                        tout_france=params.tout_france,
+                    )
                     r = await s.post(SEARCH_URL, json=payload, headers=headers, timeout=30)
 
-                if r.status_code == 403:
-                    logger.warning(f"[geo-scan] DataDome 403 (tentative {attempt + 1})")
-                    blocked = True
-                    break
-                if not r.ok:
-                    logger.warning(f"[geo-scan] HTTP {r.status_code}")
-                    blocked = True
-                    break
+                    if r.status_code == 403:
+                        logger.warning(f"[geo-scan] DataDome 403 (tentative {attempt + 1})")
+                        break
+                    if not r.ok:
+                        logger.warning(f"[geo-scan] HTTP {r.status_code}")
+                        break
 
-                ads = r.json().get("ads", [])
-                logger.info(f"[geo-scan] p{page_num}: {len(ads)} annonces brutes")
-                for ad in ads:
-                    parsed = _parse_listing(ad)
-                    if parsed:
-                        listings.append(parsed)
-                logger.info(f"[geo-scan] p{page_num}: {len(listings)} total parsées")
+                    ads = r.json().get("ads", [])
+                    logger.info(f"[geo-scan] p{page_num}: {len(ads)} annonces brutes")
+                    for ad in ads:
+                        parsed = _parse_listing(ad)
+                        if parsed:
+                            listings.append(parsed)
+                    logger.info(f"[geo-scan] p{page_num}: {len(listings)} total parsées")
 
-                if len(ads) < 100:
-                    break  # dernière page
+                    if len(ads) < 100:
+                        break
 
-            except Exception as e:
-                logger.error(f"[geo-scan] Erreur p{page_num}: {e}")
-                blocked = True
-                break
+        except Exception as e:
+            logger.error(f"[geo-scan] Erreur: {e}")
 
-        if listings:  # retourner ce qu'on a, même si bloqué sur les pages suivantes
+        if listings:
             return listings
 
     return []
