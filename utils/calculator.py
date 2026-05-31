@@ -50,7 +50,7 @@ def get_discount_rate(
         if brand.upper() == marque_up:
             for suv in suvs:
                 if suv.upper() in modele_up or modele_up in suv.upper():
-                    return 0.80, f"SUV premium ({brand} {suv}) - 20%"
+                    return 0.95, f"SUV premium ({brand} {suv}) - 5%"
 
     # Finition flotte/entrée de gamme
     if finition:
@@ -109,7 +109,7 @@ def calculate_estimation(
         fourchette_haute = r100(max(prix))
 
     coef, methode = get_discount_rate(marque, modele, motorisation, finition, boite)
-    prix_rachat = r100(prix_moyen * coef)
+    prix_rachat = r100(prix_median * coef)
 
     return {
         "nb_annonces": n,
