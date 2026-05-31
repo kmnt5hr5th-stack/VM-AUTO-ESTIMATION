@@ -78,7 +78,7 @@ def get_discount_rate(
       Citadine/volume  → -14%  (marché liquide)
       Berline/standard → -15%  (défaut)
       Boîte manuelle   → -3%   supplémentaire
-      Moteur à risque  → -20%  supplémentaire
+      Moteur à risque  → -25%  supplémentaire
     """
     is_manual = boite and any(
         w in boite.lower() for w in ["mecanique", "mécanique", "manuelle", "bvm", "bm"]
@@ -91,8 +91,8 @@ def get_discount_rate(
     if motorisation:
         m = motorisation.lower().replace("-", " ").replace("_", " ")
         if any(k in m for k in WEAK_ENGINE_KEYWORDS):
-            base = 0.80
-            label = "Moteur à risque (PureTech/EcoBoost) - 20%"
+            base = 0.75
+            label = "Moteur à risque (PureTech/EcoBoost) - 25%"
             if is_manual:
                 return round(base * 0.97, 4), label + " + boîte manuelle - 3%"
             return base, label
