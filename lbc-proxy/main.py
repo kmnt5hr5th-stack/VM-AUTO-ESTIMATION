@@ -120,55 +120,51 @@ def _extract_prix_from_ads(ads: list, modele_filter: str = None) -> list[int]:
     return prix
 
 
+async def _fetch_one_page(text, annee, km, enums, cat_id, page_num, modele_filter=None) -> tuple[list[int], bool]:
+    """Fetch une page avec une IP fraîche. Retourne (prix, blocked)."""
+    ua, impersonate, headers = _mobile_ua()
+    payload = _build_payload(text, annee, km, enums, cat_id, page_num, km_delta=10_000, annee_delta=1)
+    try:
+        async with AsyncSession(impersonate=impersonate, proxies=_webshare_proxies()) as s:
+            await s.get(HOMEPAGE, headers=headers, timeout=15)
+            r = await s.post(SEARCH_URL, json=payload, headers=headers, timeout=30)
+        if r.status_code == 403:
+            logger.warning(f"[mobile-api] DataDome 403 p{page_num}")
+            return [], True
+        if not r.ok:
+            return [], True
+        ads = r.json().get("ads", [])
+        page_prix = _extract_prix_from_ads(ads, modele_filter)
+        logger.info(f"[mobile-api] p{page_num}: {len(page_prix)} prix")
+        return page_prix, not ads
+    except Exception as e:
+        logger.error(f"[mobile-api] p{page_num} erreur: {e}")
+        return [], True
+
+
 async def _fetch_mobile_api(text, annee, km, enums, cat_id, max_pages=2, modele_filter=None) -> list[int]:
-    for attempt in range(3):
-        if attempt > 0:
-            await asyncio.sleep(5)
-        ua, impersonate, headers = _mobile_ua()
-        logger.info(f"[mobile-api] Tentative {attempt + 1}")
-        prix = []
-        blocked = False
+    prix = []
+    blocked_count = 0
 
-        # Sur les tentatives suivantes, on retire les filtres carburant/boîte pour contourner DataDome
-        active_enums = enums if attempt == 0 else {"ad_type": ["offer"]}
-        if attempt > 0:
-            logger.info("[mobile-api] Fallback : enums réduits (sans carburant/boîte)")
+    for page_num in range(1, max_pages + 1):
+        page_prix, stop = await _fetch_one_page(text, annee, km, enums, cat_id, page_num, modele_filter)
+        if page_prix:
+            prix.extend(page_prix)
+            blocked_count = 0
+        else:
+            blocked_count += 1
+            if stop and not page_prix:
+                # Retry cette page avec enums réduits + nouvelle IP
+                logger.info(f"[mobile-api] p{page_num}: retry sans filtres carburant/boîte")
+                await asyncio.sleep(2)
+                fallback_enums = {"ad_type": ["offer"]}
+                page_prix2, _ = await _fetch_one_page(text, annee, km, fallback_enums, cat_id, page_num, modele_filter)
+                prix.extend(page_prix2)
+        if stop and not page_prix:
+            break
 
-        try:
-            async with AsyncSession(impersonate=impersonate, proxies=_webshare_proxies()) as s:
-                await s.get(HOMEPAGE, headers=headers, timeout=15)
-
-                for page_num in range(1, max_pages + 1):
-                    payload = _build_payload(
-                        text, annee, km, active_enums, cat_id, page_num,
-                        km_delta=10_000, annee_delta=1,
-                    )
-                    r = await s.post(SEARCH_URL, json=payload, headers=headers, timeout=30)
-
-                    if r.status_code == 403:
-                        logger.warning(f"[mobile-api] DataDome 403 (tentative {attempt+1})")
-                        blocked = True
-                        break
-                    if not r.ok:
-                        blocked = True
-                        break
-
-                    ads = r.json().get("ads", [])
-                    page_prix = _extract_prix_from_ads(ads, modele_filter)
-                    logger.info(f"[mobile-api] p{page_num}: {len(page_prix)} prix (modele_filter={modele_filter})")
-                    prix.extend(page_prix)
-                    if not ads:
-                        break
-
-        except Exception as e:
-            logger.error(f"[mobile-api] Erreur: {e}")
-            blocked = True
-
-        if not blocked and prix:
-            logger.info(f"[mobile-api] {len(prix)} prix trouvés (tentative {attempt+1})")
-            return prix
-
-    return prix if prix else []
+    logger.info(f"[mobile-api] Total: {len(prix)} prix")
+    return prix
 
 
 class SearchRequest(BaseModel):
@@ -286,51 +282,49 @@ def _parse_listing(ad: dict) -> dict | None:
 
 
 async def _fetch_geo_listings(params: GeoScanRequest) -> list[dict]:
-    for attempt in range(3):
-        if attempt > 0:
-            await asyncio.sleep(3)
-        ua, impersonate, headers = _mobile_ua()
-        logger.info(f"[geo-scan] Tentative {attempt + 1}")
-        listings: list[dict] = []
+    listings: list[dict] = []
+    blocked_pages = 0
 
+    for page_num in range(1, params.max_pages + 1):
+        ua, impersonate, headers = _mobile_ua()
+        payload = _build_geo_payload(
+            params.lat, params.lng, params.radius,
+            params.prix_max, params.km_max, page_num,
+            tout_france=params.tout_france,
+        )
         try:
-            # 1 session + 1 homepage par tentative (économie bande passante)
             async with AsyncSession(impersonate=impersonate, proxies=_webshare_proxies()) as s:
                 await s.get(HOMEPAGE, headers=headers, timeout=15)
+                r = await s.post(SEARCH_URL, json=payload, headers=headers, timeout=30)
 
-                for page_num in range(1, params.max_pages + 1):
-                    payload = _build_geo_payload(
-                        params.lat, params.lng, params.radius,
-                        params.prix_max, params.km_max, page_num,
-                        tout_france=params.tout_france,
-                    )
-                    r = await s.post(SEARCH_URL, json=payload, headers=headers, timeout=30)
+            if r.status_code == 403:
+                logger.warning(f"[geo-scan] DataDome 403 p{page_num}")
+                blocked_pages += 1
+                if blocked_pages >= 2:
+                    break
+                await asyncio.sleep(3)
+                continue
+            if not r.ok:
+                logger.warning(f"[geo-scan] HTTP {r.status_code} p{page_num}")
+                break
 
-                    if r.status_code == 403:
-                        logger.warning(f"[geo-scan] DataDome 403 (tentative {attempt + 1})")
-                        break
-                    if not r.ok:
-                        logger.warning(f"[geo-scan] HTTP {r.status_code}")
-                        break
+            ads = r.json().get("ads", [])
+            logger.info(f"[geo-scan] p{page_num}: {len(ads)} annonces brutes")
+            for ad in ads:
+                parsed = _parse_listing(ad)
+                if parsed:
+                    listings.append(parsed)
+            logger.info(f"[geo-scan] p{page_num}: {len(listings)} total parsées")
 
-                    ads = r.json().get("ads", [])
-                    logger.info(f"[geo-scan] p{page_num}: {len(ads)} annonces brutes")
-                    for ad in ads:
-                        parsed = _parse_listing(ad)
-                        if parsed:
-                            listings.append(parsed)
-                    logger.info(f"[geo-scan] p{page_num}: {len(listings)} total parsées")
-
-                    if len(ads) < 100:
-                        break
+            if len(ads) < 100:
+                break
+            blocked_pages = 0
 
         except Exception as e:
-            logger.error(f"[geo-scan] Erreur: {e}")
+            logger.error(f"[geo-scan] p{page_num} erreur: {e}")
+            break
 
-        if listings:
-            return listings
-
-    return []
+    return listings
 
 
 @app.post("/scan-geo")
