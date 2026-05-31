@@ -136,7 +136,7 @@ async def _fetch_mobile_api(text, annee, km, enums, cat_id, max_pages=2, modele_
                 for page_num in range(1, max_pages + 1):
                     payload = _build_payload(
                         text, annee, km, enums, cat_id, page_num,
-                        km_delta=15_000, annee_delta=1,
+                        km_delta=10_000, annee_delta=1,
                     )
                     r = await s.post(SEARCH_URL, json=payload, headers=headers, timeout=30)
 
