@@ -1,6 +1,24 @@
 import statistics
 from typing import Optional
 
+# ── Normalisation des marques (aliases courants) ──────────────────────────────
+
+_MARQUE_ALIASES: dict[str, str] = {
+    "MERCEDES-BENZ": "MERCEDES",
+    "MERCEDES BENZ": "MERCEDES",
+    "VW":            "VOLKSWAGEN",
+    "LAND-ROVER":    "LAND ROVER",
+    "CITROËN":       "CITROEN",
+    "CITROËN":       "CITROEN",
+    "ALFA-ROMEO":    "ALFA ROMEO",
+}
+
+
+def _normalize_marque(marque: str) -> str:
+    up = marque.strip().upper()
+    return _MARQUE_ALIASES.get(up, up)
+
+
 # ── Catégories véhicules ──────────────────────────────────────────────────────
 
 PREMIUM_SUVS: dict[str, list[str]] = {
@@ -20,26 +38,27 @@ PREMIUM_SUVS: dict[str, list[str]] = {
 }
 
 STANDARD_SUVS: dict[str, list[str]] = {
-    "RENAULT":   ["KADJAR", "KOLEOS", "CAPTUR", "ARKANA"],
-    "PEUGEOT":   ["3008", "5008", "2008"],
-    "CITROEN":   ["C5 AIRCROSS", "C3 AIRCROSS"],
-    "VOLKSWAGEN":["TIGUAN", "T-ROC", "T-CROSS"],
-    "TOYOTA":    ["RAV4", "C-HR", "YARIS CROSS"],
-    "HYUNDAI":   ["TUCSON", "SANTA FE", "KONA"],
-    "KIA":       ["SPORTAGE", "SORENTO", "STONIC", "NIRO"],
-    "FORD":      ["KUGA", "PUMA", "ECOSPORT"],
-    "NISSAN":    ["QASHQAI", "X-TRAIL", "JUKE"],
-    "SEAT":      ["ATECA", "TARRACO"],
-    "SKODA":     ["KODIAQ", "KAROQ", "KAMIQ"],
-    "OPEL":      ["GRANDLAND", "MOKKA", "CROSSLAND"],
-    "DACIA":     ["DUSTER"],
-    "MAZDA":     ["CX-3", "CX-5", "CX-30"],
-    "HONDA":     ["CR-V", "HR-V"],
-    "JEEP":      ["COMPASS", "RENEGADE"],
-    "MITSUBISHI":["ECLIPSE CROSS", "OUTLANDER"],
-    "SUBARU":    ["FORESTER", "XV"],
-    "FIAT":      ["500X", "500 X"],
-    "ALFA ROMEO":["TONALE"],
+    "RENAULT":    ["KADJAR", "KOLEOS", "CAPTUR", "ARKANA"],
+    "PEUGEOT":    ["3008", "5008", "2008"],
+    "CITROEN":    ["C5 AIRCROSS", "C3 AIRCROSS"],
+    "VOLKSWAGEN": ["TIGUAN", "T-ROC", "T-CROSS"],
+    "TOYOTA":     ["RAV4", "C-HR", "YARIS CROSS"],
+    "HYUNDAI":    ["TUCSON", "SANTA FE", "KONA"],
+    "KIA":        ["SPORTAGE", "SORENTO", "STONIC", "NIRO"],
+    "FORD":       ["KUGA", "PUMA", "ECOSPORT"],
+    "NISSAN":     ["QASHQAI", "X-TRAIL", "JUKE"],
+    "SEAT":       ["ATECA", "TARRACO"],
+    "SKODA":      ["KODIAQ", "KAROQ", "KAMIQ"],
+    "OPEL":       ["GRANDLAND", "MOKKA", "CROSSLAND"],
+    "DACIA":      ["DUSTER"],
+    "MAZDA":      ["CX-3", "CX-5", "CX-30"],
+    "HONDA":      ["CR-V", "HR-V"],
+    "JEEP":       ["COMPASS", "RENEGADE", "WRANGLER"],
+    "MITSUBISHI": ["ECLIPSE CROSS", "OUTLANDER"],
+    "SUBARU":     ["FORESTER", "XV", "OUTBACK"],
+    "FIAT":       ["500X", "500 X"],
+    "ALFA ROMEO": ["TONALE"],
+    "MINI":       ["COUNTRYMAN", "CLUBMAN", "PACEMAN"],
 }
 
 CITY_CARS: dict[str, list[str]] = {
@@ -84,7 +103,7 @@ def get_discount_rate(
         w in boite.lower() for w in ["mecanique", "mécanique", "manuelle", "bvm", "bm"]
     )
 
-    marque_up = marque.strip().upper()
+    marque_up = _normalize_marque(marque)
     modele_up = modele.strip().upper()
 
     # 1. Moteur à risque (PureTech / EcoBoost) — prioritaire

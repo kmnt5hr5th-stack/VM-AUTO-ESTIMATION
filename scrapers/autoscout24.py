@@ -48,7 +48,7 @@ class AutoScout24Scraper(BaseScraper):
         url = (
             f"https://www.autoscout24.fr/lst/{m}/{mo}"
             f"?atype={atype}&cy=F"
-            f"&fregfrom={annee - 1}&fregto={annee}"
+            f"&fregfrom={annee - 1}&fregto={annee + 1}"
             f"&kmfrom={km_min}&kmto={km_max}"
             f"&sort=standard&ustate=N%2CU&page={page}"
         )

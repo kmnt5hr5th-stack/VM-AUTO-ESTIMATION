@@ -144,23 +144,20 @@ async def _fetch_one_page(text, annee, km, enums, cat_id, page_num, modele_filte
 
 async def _fetch_mobile_api(text, annee, km, enums, cat_id, max_pages=2, modele_filter=None) -> list[int]:
     prix = []
-    blocked_count = 0
 
     for page_num in range(1, max_pages + 1):
         page_prix, stop = await _fetch_one_page(text, annee, km, enums, cat_id, page_num, modele_filter)
-        if page_prix:
-            prix.extend(page_prix)
-            blocked_count = 0
-        else:
-            blocked_count += 1
-            if stop and not page_prix:
-                # Retry cette page avec enums réduits + nouvelle IP
-                logger.info(f"[mobile-api] p{page_num}: retry sans filtres carburant/boîte")
-                await asyncio.sleep(2)
-                fallback_enums = {"ad_type": ["offer"]}
-                page_prix2, _ = await _fetch_one_page(text, annee, km, fallback_enums, cat_id, page_num, modele_filter)
-                prix.extend(page_prix2)
-        if stop and not page_prix:
+
+        if not page_prix and stop:
+            # DataDome ou erreur — retry avec enums réduits + nouvelle IP
+            logger.info(f"[mobile-api] p{page_num}: retry sans filtres carburant/boîte")
+            await asyncio.sleep(2)
+            fallback_enums = {"ad_type": ["offer"]}
+            page_prix, stop = await _fetch_one_page(text, annee, km, fallback_enums, cat_id, page_num, modele_filter)
+
+        prix.extend(page_prix)
+
+        if stop:
             break
 
     logger.info(f"[mobile-api] Total: {len(prix)} prix")

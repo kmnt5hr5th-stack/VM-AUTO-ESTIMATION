@@ -20,8 +20,8 @@ class LaCentraleScraper(BaseScraper):
             "makesModelsCommercialNames": f"{marque.upper()}:{modele.upper()}",
             "yearMin": str(annee - 1),
             "yearMax": str(annee + 1),
-            "mileageMin": str(max(0, km - 20_000)),
-            "mileageMax": str(km + 20_000),
+            "mileageMin": str(max(0, km - 10_000)),
+            "mileageMax": str(km + 10_000),
         }
         return f"https://www.lacentrale.fr/listing?{urlencode(params, quote_via=quote)}"
 

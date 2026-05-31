@@ -83,7 +83,7 @@ app.add_middleware(
 class EstimationRequest(BaseModel):
     marque: str = Field(..., example="Peugeot")
     modele: str = Field(..., example="308")
-    annee: int = Field(..., ge=1990, le=2025, example=2020)
+    annee: int = Field(..., ge=1990, le=2030, example=2020)
     kilometrage: int = Field(..., ge=0, le=500000, example=80000)
     finition: Optional[str] = Field(None, example="S-Line")
     motorisation: Optional[str] = Field(None, example="1.2 PureTech 130")
@@ -120,7 +120,10 @@ async def estimation(req: EstimationRequest):
                      type_vehicule=type_vehicule)
         for s in scrapers
     ]
-    results = await asyncio.gather(*tasks, return_exceptions=True)
+    results = await asyncio.wait_for(
+        asyncio.gather(*tasks, return_exceptions=True),
+        timeout=90,
+    )
 
     all_prices: list[int] = []
     sources_detail: dict = {}
