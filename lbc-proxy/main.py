@@ -251,6 +251,8 @@ def _parse_listing(ad: dict) -> dict | None:
 
     if not marque or not modele or not annee or km is None:
         return None
+    if marque.upper() in ("AUTRES", "AUTRE") or modele.upper() in ("AUTRES", "AUTRE"):
+        return None
 
     list_id = ad.get("list_id")
     location = ad.get("location", {})
