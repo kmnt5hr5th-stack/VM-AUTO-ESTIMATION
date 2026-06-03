@@ -1,4 +1,4 @@
-import uuid, random, logging, asyncio
+import uuid, random, logging, asyncio, re
 from typing import Optional
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
@@ -216,6 +216,23 @@ def _build_geo_payload(lat: float, lng: float, radius: int, prix_max: int, km_ma
     }
 
 
+_STOP_WORDS = {
+    "OCCASION", "VOITURE", "AUTO", "VEHICULE", "VÉHICULE", "DIESEL", "ESSENCE",
+    "HYBRIDE", "ELECTRIQUE", "ÉLECTRIQUE", "GARANTIE", "ENTRETIEN", "REVISION",
+    "CONTROLE", "TECHNIQUE", "VENTE", "URGENT", "BONNE", "BON", "ETAT", "ÉTAT",
+    "TRÈS", "TRES", "BELLE", "BEAU", "PROPRE", "NEUF", "NEUVE", "RÉCENT",
+}
+
+def _model_from_subject(subject: str, marque: str) -> str | None:
+    """Extrait le modèle depuis le titre quand LBC retourne 'Autres'."""
+    text = subject.upper().strip()
+    for part in sorted([marque] + marque.split(), key=len, reverse=True):
+        text = re.sub(r'\b' + re.escape(part.upper()) + r'\b', ' ', text)
+    text = re.sub(r'[^A-ZÀ-Ÿ0-9\s\-]', ' ', text)
+    words = [w for w in text.split() if len(w) >= 2 and w not in _STOP_WORDS]
+    return " ".join(words[:2]) if words else None
+
+
 def _parse_listing(ad: dict) -> dict | None:
     if ad.get("owner", {}).get("type", "").lower() == "pro":
         return None
@@ -249,9 +266,11 @@ def _parse_listing(ad: dict) -> dict | None:
     except (ValueError, TypeError):
         km = None
 
-    if not marque or not modele or not annee or km is None:
+    if marque.upper() in ("AUTRES", "AUTRE"):
         return None
-    if marque.upper() in ("AUTRES", "AUTRE") or modele.upper() in ("AUTRES", "AUTRE"):
+    if modele.upper() in ("AUTRES", "AUTRE"):
+        modele = _model_from_subject(ad.get("subject", ""), marque) or ""
+    if not marque or not modele or not annee or km is None:
         return None
 
     list_id = ad.get("list_id")
