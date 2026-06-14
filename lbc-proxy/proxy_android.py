@@ -103,12 +103,6 @@ def leboncoin(req: SearchRequest):
 
     km_delta = 10_000
 
-    # Extraire la cylindrée depuis motorisation (ex: "0.9 TCE 90CV" → "0.9")
-    if req.motorisation:
-        m = re.search(r'\b(\d\.\d)\b', req.motorisation)
-        if m:
-            text += f" {m.group(1)}"
-
     for attempt in range(3):
         headers = _mobile_ua()
         logger.info(f"Tentative {attempt + 1}")
