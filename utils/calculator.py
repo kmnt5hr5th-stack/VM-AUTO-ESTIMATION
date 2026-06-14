@@ -82,6 +82,17 @@ CITY_CARS: dict[str, list[str]] = {
 WEAK_ENGINE_KEYWORDS = ["puretech", "pure tech", "ecoboost", "eco boost", "ecoboot"]
 
 
+def _km_penalty(kilometrage: Optional[int]) -> tuple[float, str]:
+    if kilometrage is None or kilometrage <= 80_000:
+        return 1.0, ""
+    elif kilometrage <= 120_000:
+        return 0.96, " + kilométrage élevé -4%"
+    elif kilometrage <= 160_000:
+        return 0.88, " + kilométrage élevé -12%"
+    else:
+        return 0.82, " + kilométrage très élevé -18%"
+
+
 def get_discount_rate(
     marque: str,
     modele: str,
@@ -172,6 +183,7 @@ def calculate_estimation(
     finition: Optional[str] = None,
     boite: Optional[str] = None,
     annee: Optional[int] = None,
+    kilometrage: Optional[int] = None,
 ) -> dict:
     prix = supprimer_outliers(sorted(prix_bruts))
     if not prix:
@@ -193,7 +205,9 @@ def calculate_estimation(
         fourchette_haute = r100(max(prix))
 
     coef, methode = get_discount_rate(marque, modele, motorisation, finition, boite)
-    prix_rachat   = r100(prix_median * coef)
+    km_coef, km_label = _km_penalty(kilometrage)
+    prix_rachat = r100(prix_median * coef * km_coef)
+    methode += km_label
 
     return {
         "nb_annonces":      n,

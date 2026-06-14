@@ -157,7 +157,7 @@ async def estimation(req: EstimationRequest):
             detail="Aucune annonce trouvée pour ce véhicule. Vérifiez la marque et le modèle.",
         )
 
-    calc = calculate_estimation(all_prices, req.marque, req.modele, req.motorisation, req.finition, req.boite, req.annee)
+    calc = calculate_estimation(all_prices, req.marque, req.modele, req.motorisation, req.finition, req.boite, req.annee, req.kilometrage)
 
     return {
         "vehicule": {
