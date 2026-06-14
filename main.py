@@ -107,35 +107,49 @@ async def estimation(req: EstimationRequest):
     type_vehicule = req.type_vehicule or _detect_type_vehicule(req.modele)
     logger.info(f"Demande reçue : {req.marque} {req.modele} {req.annee} {req.kilometrage} km | type={type_vehicule}")
 
-    scrapers = [
-        LeboncoinScraper(),
-        LaCentraleScraper(),
-        AutoScout24Scraper(),
-    ]
-
-    tasks = [
-        s.get_prices(req.marque, req.modele, req.annee, req.kilometrage,
-                     finition=req.finition, carburant=req.carburant,
-                     boite=req.boite, motorisation=req.motorisation,
-                     type_vehicule=type_vehicule)
-        for s in scrapers
-    ]
-    results = await asyncio.wait_for(
-        asyncio.gather(*tasks, return_exceptions=True),
-        timeout=90,
+    scraper_args = dict(
+        finition=req.finition, carburant=req.carburant,
+        boite=req.boite, motorisation=req.motorisation,
+        type_vehicule=type_vehicule,
     )
 
     all_prices: list[int] = []
     sources_detail: dict = {}
 
-    for scraper, result in zip(scrapers, results):
-        if isinstance(result, Exception):
-            logger.error(f"[{scraper.name}] Erreur : {result}")
-            sources_detail[scraper.name] = {"annonces": 0, "erreur": str(result)}
-        else:
-            logger.info(f"[{scraper.name}] {len(result)} prix récupérés")
-            sources_detail[scraper.name] = {"annonces": len(result)}
-            all_prices.extend(result)
+    # 1. LeBonCoin en priorité
+    lbc = LeboncoinScraper()
+    try:
+        lbc_prices = await asyncio.wait_for(
+            lbc.get_prices(req.marque, req.modele, req.annee, req.kilometrage, **scraper_args),
+            timeout=60,
+        )
+        sources_detail["leboncoin"] = {"annonces": len(lbc_prices)}
+        all_prices.extend(lbc_prices)
+        logger.info(f"[leboncoin] {len(lbc_prices)} prix récupérés")
+    except Exception as e:
+        logger.error(f"[leboncoin] Erreur : {e}")
+        sources_detail["leboncoin"] = {"annonces": 0, "erreur": str(e)}
+
+    # 2. Fallback AutoScout24 + La Centrale si LBC n'a rien retourné
+    if not all_prices:
+        logger.info("LBC vide — fallback AutoScout24 + La Centrale")
+        fallback_scrapers = [AutoScout24Scraper(), LaCentraleScraper()]
+        tasks = [
+            s.get_prices(req.marque, req.modele, req.annee, req.kilometrage, **scraper_args)
+            for s in fallback_scrapers
+        ]
+        results = await asyncio.wait_for(
+            asyncio.gather(*tasks, return_exceptions=True),
+            timeout=60,
+        )
+        for scraper, result in zip(fallback_scrapers, results):
+            if isinstance(result, Exception):
+                logger.error(f"[{scraper.name}] Erreur : {result}")
+                sources_detail[scraper.name] = {"annonces": 0, "erreur": str(result)}
+            else:
+                logger.info(f"[{scraper.name}] {len(result)} prix récupérés")
+                sources_detail[scraper.name] = {"annonces": len(result)}
+                all_prices.extend(result)
 
     if not all_prices:
         raise HTTPException(

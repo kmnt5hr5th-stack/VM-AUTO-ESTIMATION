@@ -76,15 +76,16 @@ class AutoScout24Scraper(BaseScraper):
         exclude = [v for v in VARIANTS if v not in modele_lower]
 
         prices = []
-        articles = re.findall(r'<article[^>]*data-source="listpage_search-results"[^>]*>.*?</article>', html, re.DOTALL)
-        for article in articles:
-            if any(v in article.lower() for v in exclude):
+        for m in re.finditer(r'data-source="listpage_search-results"[^>]*?data-price="(\d+)"', html):
+            # Vérifier les 600 caractères autour pour détecter une variante
+            start = max(0, m.start() - 600)
+            end = min(len(html), m.end() + 200)
+            context = html[start:end].lower()
+            if any(v in context for v in exclude):
                 continue
-            m = re.search(r'data-price="(\d+)"', article)
-            if m:
-                v = int(m.group(1))
-                if 500 <= v <= 150_000:
-                    prices.append(v)
+            v = int(m.group(1))
+            if 500 <= v <= 150_000:
+                prices.append(v)
         return prices
 
     async def get_prices(self, marque, modele, annee, kilometrage, max_pages=2, finition=None, carburant=None, boite=None, motorisation=None, type_vehicule=None):
