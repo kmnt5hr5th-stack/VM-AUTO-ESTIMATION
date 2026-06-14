@@ -69,13 +69,22 @@ class AutoScout24Scraper(BaseScraper):
             url += f"&q={quote_plus(finition)}"
         return url
 
-    def _parse_data_price(self, html: str) -> list[int]:
+    def _parse_data_price(self, html: str, modele: str = "") -> list[int]:
         """Extraction via data-price sur les vraies annonces (data-source=listpage_search-results)."""
+        modele_lower = modele.lower()
+        VARIANTS = ["stepway", "rs", "sport", "gt"]
+        exclude = [v for v in VARIANTS if v not in modele_lower]
+
         prices = []
-        for m in re.findall(r'data-source="listpage_search-results"[^>]*?data-price="(\d+)"', html):
-            v = int(m)
-            if 500 <= v <= 150_000:
-                prices.append(v)
+        articles = re.findall(r'<article[^>]*data-source="listpage_search-results"[^>]*>.*?</article>', html, re.DOTALL)
+        for article in articles:
+            if any(v in article.lower() for v in exclude):
+                continue
+            m = re.search(r'data-price="(\d+)"', article)
+            if m:
+                v = int(m.group(1))
+                if 500 <= v <= 150_000:
+                    prices.append(v)
         return prices
 
     async def get_prices(self, marque, modele, annee, kilometrage, max_pages=2, finition=None, carburant=None, boite=None, motorisation=None, type_vehicule=None):
@@ -103,7 +112,7 @@ class AutoScout24Scraper(BaseScraper):
                     logger.warning(f"[autoscout24] HTTP {r.status_code} p{page_num}")
                     break
 
-                prix_page = self._parse_data_price(r.text)
+                prix_page = self._parse_data_price(r.text, modele)
                 logger.info(f"[autoscout24] p{page_num} → {len(prix_page)} prix : {prix_page[:5]}")
                 prix.extend(prix_page)
 
