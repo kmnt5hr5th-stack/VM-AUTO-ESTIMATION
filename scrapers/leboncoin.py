@@ -95,7 +95,7 @@ class LeboncoinScraper(BaseScraper):
                 "keywords": {"text": text},
                 "ranges": {
                     "regdate": {"min": annee - 1, "max": annee + 1},
-                    "mileage": {"min": max(0, km - 10_000), "max": km + 10_000},
+                    "mileage": {"min": max(0, km - 15_000), "max": km + 15_000},
                 },
             },
             "limit": 35,

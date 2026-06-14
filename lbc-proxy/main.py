@@ -127,7 +127,7 @@ def _extract_prix_from_ads(ads: list, modele_filter: str = None, exclude_variant
 async def _fetch_one_page(text, annee, km, enums, cat_id, page_num, modele_filter=None, exclude_variants=None) -> tuple[list[int], bool]:
     """Fetch une page avec une IP fraîche. Retourne (prix, blocked)."""
     ua, impersonate, headers = _mobile_ua()
-    payload = _build_payload(text, annee, km, enums, cat_id, page_num, km_delta=10_000, annee_delta=1)
+    payload = _build_payload(text, annee, km, enums, cat_id, page_num, km_delta=15_000, annee_delta=1)
     try:
         async with AsyncSession(impersonate=impersonate, proxies=_webshare_proxies()) as s:
             await s.get(HOMEPAGE, headers=headers, timeout=15)
