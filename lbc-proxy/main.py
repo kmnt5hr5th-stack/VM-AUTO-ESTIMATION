@@ -83,10 +83,12 @@ def _mobile_ua() -> tuple[str, str, dict]:
         return ua, "chrome131_android", headers
 
 
-def _build_payload(text, annee, km, enums, cat_id, page=1, km_delta=15_000, annee_delta=0, no_km_filter=False):
+def _build_payload(text, annee, km, enums, cat_id, page=1, km_delta=15_000, annee_delta=0, no_km_filter=False, target_hp=None):
     ranges = {"regdate": {"min": annee - annee_delta, "max": annee + annee_delta}}
     if not no_km_filter:
         ranges["mileage"] = {"min": max(0, km - km_delta), "max": km + km_delta}
+    if target_hp:
+        ranges["horse_power_din"] = {"min": target_hp - 5, "max": target_hp + 5}
     return {
         "filters": {
             "category": {"id": cat_id},
@@ -103,20 +105,32 @@ def _build_payload(text, annee, km, enums, cat_id, page=1, km_delta=15_000, anne
     }
 
 
-def _extract_prix_from_ads(ads: list, modele_filter: str = None, exclude_variants: list = None) -> list[int]:
+def _extract_prix_from_ads(ads: list, modele_filter: str = None, exclude_variants: list = None, target_hp: int = None) -> list[int]:
     prix = []
     for ad in ads:
+        attrs = {a["key"]: a.get("value_label", a.get("value", ""))
+                 for a in ad.get("attributes", [])}
+
         if modele_filter:
-            attrs = {a["key"]: a.get("value_label", a.get("value", "")).upper().strip()
-                     for a in ad.get("attributes", [])}
-            model_attr = attrs.get("model", "")
+            model_attr = str(attrs.get("model", "")).upper().strip()
             mf = modele_filter.upper().strip()
             if mf not in model_attr and model_attr not in mf:
                 continue
+
         if exclude_variants:
             title = ad.get("subject", "").lower()
             if any(v in title for v in exclude_variants):
                 continue
+
+        if target_hp:
+            hp_raw = attrs.get("horse_power_din", "")
+            try:
+                hp_val = int(hp_raw) if hp_raw else None
+                if hp_val and abs(hp_val - target_hp) > 15:
+                    continue
+            except (ValueError, TypeError):
+                pass
+
         raw = ad.get("price", [])
         p = raw[0] if isinstance(raw, list) and raw else (raw if isinstance(raw, (int, float)) else None)
         if p and 500 <= int(p) <= 150_000:
@@ -124,10 +138,10 @@ def _extract_prix_from_ads(ads: list, modele_filter: str = None, exclude_variant
     return prix
 
 
-async def _fetch_one_page(text, annee, km, enums, cat_id, page_num, modele_filter=None, exclude_variants=None) -> tuple[list[int], bool]:
+async def _fetch_one_page(text, annee, km, enums, cat_id, page_num, modele_filter=None, exclude_variants=None, target_hp=None) -> tuple[list[int], bool]:
     """Fetch une page avec une IP fraîche. Retourne (prix, blocked)."""
     ua, impersonate, headers = _mobile_ua()
-    payload = _build_payload(text, annee, km, enums, cat_id, page_num, km_delta=15_000, annee_delta=1)
+    payload = _build_payload(text, annee, km, enums, cat_id, page_num, km_delta=15_000, annee_delta=1, target_hp=target_hp)
     try:
         async with AsyncSession(impersonate=impersonate, proxies=_webshare_proxies()) as s:
             await s.get(HOMEPAGE, headers=headers, timeout=15)
@@ -138,25 +152,25 @@ async def _fetch_one_page(text, annee, km, enums, cat_id, page_num, modele_filte
         if not r.ok:
             return [], True
         ads = r.json().get("ads", [])
-        page_prix = _extract_prix_from_ads(ads, modele_filter, exclude_variants)
-        logger.info(f"[mobile-api] p{page_num}: {len(page_prix)} prix")
+        page_prix = _extract_prix_from_ads(ads, modele_filter, exclude_variants, target_hp)
+        logger.info(f"[mobile-api] p{page_num}: {len(page_prix)} prix (target_hp={target_hp})")
         return page_prix, not ads
     except Exception as e:
         logger.error(f"[mobile-api] p{page_num} erreur: {e}")
         return [], True
 
 
-async def _fetch_mobile_api(text, annee, km, enums, cat_id, max_pages=2, modele_filter=None, exclude_variants=None) -> list[int]:
+async def _fetch_mobile_api(text, annee, km, enums, cat_id, max_pages=2, modele_filter=None, exclude_variants=None, target_hp=None) -> list[int]:
     prix = []
 
     for page_num in range(1, max_pages + 1):
-        page_prix, stop = await _fetch_one_page(text, annee, km, enums, cat_id, page_num, modele_filter, exclude_variants)
+        page_prix, stop = await _fetch_one_page(text, annee, km, enums, cat_id, page_num, modele_filter, exclude_variants, target_hp)
 
         if not page_prix and stop:
             logger.info(f"[mobile-api] p{page_num}: retry sans filtres carburant/boîte")
             await asyncio.sleep(2)
             fallback_enums = {"ad_type": ["offer"]}
-            page_prix, stop = await _fetch_one_page(text, annee, km, fallback_enums, cat_id, page_num, modele_filter, exclude_variants)
+            page_prix, stop = await _fetch_one_page(text, annee, km, fallback_enums, cat_id, page_num, modele_filter, exclude_variants, target_hp)
 
         prix.extend(page_prix)
 
@@ -372,6 +386,17 @@ GEAR_MAP_ENUM = {
 VARIANTS_A_EXCLURE = ["stepway", "rs", "sport", "gt"]
 
 
+def _extraire_cv(motorisation: str) -> Optional[int]:
+    if not motorisation:
+        return None
+    m = re.search(r'(\d{2,4})\s*(?:cv|ch|hp|bhp)', motorisation, re.IGNORECASE)
+    if m:
+        return int(m.group(1))
+    nums = re.findall(r'\b(\d{2,4})\b', motorisation)
+    candidates = [int(n) for n in nums if 50 <= int(n) <= 600]
+    return candidates[-1] if candidates else None
+
+
 def _lbc_search_text(marque: str, modele: str) -> str:
     """Construit le texte de recherche LBC — marque + modèle uniquement."""
     m = modele.strip()
@@ -402,8 +427,10 @@ async def leboncoin(req: SearchRequest):
 
     modele_lower = req.modele.lower()
     exclude_variants = [v for v in VARIANTS_A_EXCLURE if v not in modele_lower]
+    target_hp = _extraire_cv(req.motorisation) if req.motorisation else None
+    logger.info(f"[proxy] target_hp={target_hp} (motorisation={req.motorisation})")
 
-    prix = await _fetch_mobile_api(text, req.annee, req.kilometrage, enums, cat_id, req.max_pages, modele_filter=req.modele, exclude_variants=exclude_variants)
+    prix = await _fetch_mobile_api(text, req.annee, req.kilometrage, enums, cat_id, req.max_pages, modele_filter=req.modele, exclude_variants=exclude_variants, target_hp=target_hp)
 
     if prix:
         logger.info(f"[proxy] {len(prix)} prix")

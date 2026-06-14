@@ -1,6 +1,7 @@
 import logging
 import uuid
 import random
+import re
 from typing import Optional
 from curl_cffi.requests import AsyncSession
 from playwright.async_api import BrowserContext
@@ -9,6 +10,18 @@ from .base import BaseScraper
 from ._proxy import LBC_PROXY_URL
 
 logger = logging.getLogger(__name__)
+
+
+def _extraire_cv(motorisation: str) -> Optional[int]:
+    if not motorisation:
+        return None
+    m = re.search(r'(\d{2,4})\s*(?:cv|ch|hp|bhp)', motorisation, re.IGNORECASE)
+    if m:
+        return int(m.group(1))
+    nums = re.findall(r'\b(\d{2,4})\b', motorisation)
+    candidates = [int(n) for n in nums if 50 <= int(n) <= 600]
+    return candidates[-1] if candidates else None
+
 
 API_URL = "https://api.leboncoin.fr/finder/search"
 HOMEPAGE = "https://www.leboncoin.fr/"
@@ -75,7 +88,7 @@ class LeboncoinScraper(BaseScraper):
         "automatique": "automatic", "auto": "automatic", "bva": "automatic", "dsg": "automatic", "edr": "automatic",
     }
 
-    def _build_payload(self, marque, modele, annee, km, page=1, carburant=None, boite=None, type_vehicule=None, motorisation=None) -> dict:
+    def _build_payload(self, marque, modele, annee, km, page=1, carburant=None, boite=None, type_vehicule=None, motorisation=None, target_hp=None) -> dict:
         enums: dict = {"ad_type": ["offer"]}
         if carburant:
             fuel = self.FUEL_MAP.get(carburant.lower().strip())
@@ -88,15 +101,18 @@ class LeboncoinScraper(BaseScraper):
         is_util = type_vehicule and type_vehicule.lower() in ("utilitaire", "fourgon", "van", "camionnette")
         cat_id = "5" if is_util else "2"
         text = f"{marque} {modele}"
+        ranges: dict = {
+            "regdate": {"min": annee - 1, "max": annee + 1},
+            "mileage": {"min": max(0, km - 15_000), "max": km + 15_000},
+        }
+        if target_hp:
+            ranges["horse_power_din"] = {"min": target_hp - 5, "max": target_hp + 5}
         return {
             "filters": {
                 "category": {"id": cat_id},
                 "enums": enums,
                 "keywords": {"text": text},
-                "ranges": {
-                    "regdate": {"min": annee - 1, "max": annee + 1},
-                    "mileage": {"min": max(0, km - 15_000), "max": km + 15_000},
-                },
+                "ranges": ranges,
             },
             "limit": 35,
             "limit_alu": 3,
@@ -106,9 +122,9 @@ class LeboncoinScraper(BaseScraper):
             "listing_source": "direct-search" if page == 1 else "pagination",
         }
 
-    async def _fetch_mobile_api(self, marque, modele, annee, km, page, carburant=None, boite=None, type_vehicule=None, motorisation=None) -> list[int]:
+    async def _fetch_mobile_api(self, marque, modele, annee, km, page, carburant=None, boite=None, type_vehicule=None, motorisation=None, target_hp=None) -> list[int]:
         ua, impersonate, headers = _mobile_ua()
-        payload = self._build_payload(marque, modele, annee, km, page, carburant, boite, type_vehicule, motorisation)
+        payload = self._build_payload(marque, modele, annee, km, page, carburant, boite, type_vehicule, motorisation, target_hp)
         proxies = _webshare_proxies()
 
         async with AsyncSession(impersonate=impersonate, proxies=proxies) as s:
@@ -157,9 +173,10 @@ class LeboncoinScraper(BaseScraper):
 
         logger.info("[leboncoin] Tentative API mobile directe")
         try:
+            target_hp = _extraire_cv(motorisation) if motorisation else None
             prix = []
             for page_num in range(1, max_pages + 1):
-                page_prices = await self._fetch_mobile_api(marque, modele, annee, kilometrage, page_num, carburant, boite, type_vehicule, motorisation)
+                page_prices = await self._fetch_mobile_api(marque, modele, annee, kilometrage, page_num, carburant, boite, type_vehicule, motorisation, target_hp)
                 logger.info(f"[leboncoin] API p{page_num} → {len(page_prices)} prix")
                 prix.extend(page_prices)
                 if not page_prices:
