@@ -49,17 +49,9 @@ class LeboncoinScraper(BaseScraper):
 
     def _build_payload(self, marque, modele, annee, km, page=1, carburant=None, boite=None, type_vehicule=None, motorisation=None) -> dict:
         enums: dict = {"ad_type": ["offer"]}
-        if carburant:
-            fuel = self.FUEL_MAP.get(carburant.lower().strip())
-            if fuel:
-                enums["fuel"] = [fuel]
-        if boite:
-            gear = self.GEAR_MAP.get(boite.lower().strip())
-            if gear:
-                enums["gearbox"] = [gear]
         is_util = type_vehicule and type_vehicule.lower() in ("utilitaire", "fourgon", "van", "camionnette")
         cat_id = "5" if is_util else "2"
-        text = f"{marque} {modele}" + (f" {motorisation}" if motorisation else "")
+        text = f"{marque} {modele}"
         return {
             "filters": {
                 "category": {"id": cat_id},

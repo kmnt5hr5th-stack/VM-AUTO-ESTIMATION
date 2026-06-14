@@ -87,23 +87,11 @@ def health():
 @app.post("/leboncoin")
 def leboncoin(req: SearchRequest):
     text = f"{req.marque} {req.modele}"
-    if req.motorisation:
-        text += f" {req.motorisation}"
-    if req.finition:
-        text += f" {req.finition}"
 
     is_util = req.type_vehicule and req.type_vehicule.lower() in ("utilitaire", "fourgon", "van")
-    cat_id = "3" if is_util else "2"
+    cat_id = "5" if is_util else "2"
 
     enums = {"ad_type": ["offer"]}
-    if req.carburant:
-        fuel = FUEL_MAP.get(req.carburant.lower().strip())
-        if fuel:
-            enums["fuel"] = [fuel]
-    if req.boite:
-        gear = GEAR_MAP.get(req.boite.lower().strip())
-        if gear:
-            enums["gearbox"] = [gear]
 
     km_delta = 10_000
 
