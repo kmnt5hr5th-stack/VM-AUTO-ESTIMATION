@@ -1,4 +1,4 @@
-import uuid, random, logging, requests, threading, uvicorn
+import uuid, random, logging, re, requests, threading, uvicorn
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
@@ -103,6 +103,17 @@ def leboncoin(req: SearchRequest):
 
     km_delta = 10_000
 
+    # Extraire les chevaux depuis motorisation (ex: "0.9 TCE 90CV" → 90)
+    cv = None
+    if req.motorisation:
+        m = re.search(r'(\d{2,4})\s*(?:cv|ch|hp)', req.motorisation, re.IGNORECASE)
+        if not m:
+            nums = re.findall(r'\b(\d{2,4})\b', req.motorisation)
+            candidates = [int(n) for n in nums if 50 <= int(n) <= 600]
+            cv = candidates[-1] if candidates else None
+        else:
+            cv = int(m.group(1))
+
     for attempt in range(3):
         headers = _mobile_ua()
         logger.info(f"Tentative {attempt + 1}")
@@ -110,15 +121,19 @@ def leboncoin(req: SearchRequest):
         blocked = False
 
         for page_num in range(1, req.max_pages + 1):
+            ranges = {
+                "regdate": {"min": req.annee - 1, "max": req.annee + 1},
+                "mileage": {"min": max(0, req.kilometrage - km_delta), "max": req.kilometrage + km_delta},
+            }
+            if cv:
+                ranges["horse_power_din"] = {"min": cv - 10, "max": cv + 10}
+
             payload = {
                 "filters": {
                     "category": {"id": cat_id},
                     "enums": enums,
                     "keywords": {"text": text},
-                    "ranges": {
-                        "regdate": {"min": req.annee - 1, "max": req.annee + 1},
-                        "mileage": {"min": max(0, req.kilometrage - km_delta), "max": req.kilometrage + km_delta},
-                    },
+                    "ranges": ranges,
                 },
                 "limit": 35,
                 "limit_alu": 3,
