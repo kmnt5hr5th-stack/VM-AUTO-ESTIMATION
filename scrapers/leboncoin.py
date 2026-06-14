@@ -53,6 +53,10 @@ class LeboncoinScraper(BaseScraper):
             fuel = self.FUEL_MAP.get(carburant.lower().strip())
             if fuel:
                 enums["fuel"] = [fuel]
+        if boite:
+            gear = self.GEAR_MAP.get(boite.lower().strip())
+            if gear:
+                enums["gearbox"] = [gear]
         is_util = type_vehicule and type_vehicule.lower() in ("utilitaire", "fourgon", "van", "camionnette")
         cat_id = "5" if is_util else "2"
         text = f"{marque} {modele}"

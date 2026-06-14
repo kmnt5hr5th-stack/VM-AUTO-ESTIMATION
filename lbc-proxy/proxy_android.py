@@ -96,6 +96,10 @@ def leboncoin(req: SearchRequest):
         fuel = FUEL_MAP.get(req.carburant.lower().strip())
         if fuel:
             enums["fuel"] = [fuel]
+    if req.boite:
+        gear = GEAR_MAP.get(req.boite.lower().strip())
+        if gear:
+            enums["gearbox"] = [gear]
 
     km_delta = 10_000
 
