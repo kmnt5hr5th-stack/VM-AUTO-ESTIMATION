@@ -92,6 +92,10 @@ def leboncoin(req: SearchRequest):
     cat_id = "5" if is_util else "2"
 
     enums = {"ad_type": ["offer"]}
+    if req.carburant:
+        fuel = FUEL_MAP.get(req.carburant.lower().strip())
+        if fuel:
+            enums["fuel"] = [fuel]
 
     km_delta = 10_000
 
