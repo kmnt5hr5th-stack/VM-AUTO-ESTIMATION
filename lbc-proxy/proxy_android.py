@@ -126,7 +126,7 @@ def leboncoin(req: SearchRequest):
                 "mileage": {"min": max(0, req.kilometrage - km_delta), "max": req.kilometrage + km_delta},
             }
             if cv:
-                ranges["horse_power_din"] = {"min": cv - 10, "max": cv + 10}
+                ranges["horse_power_din"] = {"min": cv, "max": cv}
 
             payload = {
                 "filters": {
