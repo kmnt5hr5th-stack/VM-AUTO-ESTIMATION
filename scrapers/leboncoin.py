@@ -98,8 +98,16 @@ class LeboncoinScraper(BaseScraper):
             raise Exception(f"API {r.status_code}")
 
         ads = r.json().get("ads", [])
+        # Termes de variantes à exclure si non présents dans le modèle cherché
+        modele_lower = (modele or "").lower()
+        VARIANTS = ["stepway", "stepway 2", "rs", "sport", "gt"]
+        exclude = [v for v in VARIANTS if v not in modele_lower]
+
         prix = []
         for ad in ads:
+            title = ad.get("subject", "").lower()
+            if any(v in title for v in exclude):
+                continue
             raw = ad.get("price", [])
             p = raw[0] if isinstance(raw, list) and raw else (raw if isinstance(raw, (int, float)) else None)
             if p and 500 <= int(p) <= 150_000:
