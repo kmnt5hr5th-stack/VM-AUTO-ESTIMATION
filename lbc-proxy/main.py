@@ -103,7 +103,7 @@ def _build_payload(text, annee, km, enums, cat_id, page=1, km_delta=15_000, anne
     }
 
 
-def _extract_prix_from_ads(ads: list, modele_filter: str = None) -> list[int]:
+def _extract_prix_from_ads(ads: list, modele_filter: str = None, exclude_variants: list = None) -> list[int]:
     prix = []
     for ad in ads:
         if modele_filter:
@@ -113,6 +113,10 @@ def _extract_prix_from_ads(ads: list, modele_filter: str = None) -> list[int]:
             mf = modele_filter.upper().strip()
             if mf not in model_attr and model_attr not in mf:
                 continue
+        if exclude_variants:
+            title = ad.get("subject", "").lower()
+            if any(v in title for v in exclude_variants):
+                continue
         raw = ad.get("price", [])
         p = raw[0] if isinstance(raw, list) and raw else (raw if isinstance(raw, (int, float)) else None)
         if p and 500 <= int(p) <= 150_000:
@@ -120,7 +124,7 @@ def _extract_prix_from_ads(ads: list, modele_filter: str = None) -> list[int]:
     return prix
 
 
-async def _fetch_one_page(text, annee, km, enums, cat_id, page_num, modele_filter=None) -> tuple[list[int], bool]:
+async def _fetch_one_page(text, annee, km, enums, cat_id, page_num, modele_filter=None, exclude_variants=None) -> tuple[list[int], bool]:
     """Fetch une page avec une IP fraîche. Retourne (prix, blocked)."""
     ua, impersonate, headers = _mobile_ua()
     payload = _build_payload(text, annee, km, enums, cat_id, page_num, km_delta=10_000, annee_delta=1)
@@ -134,7 +138,7 @@ async def _fetch_one_page(text, annee, km, enums, cat_id, page_num, modele_filte
         if not r.ok:
             return [], True
         ads = r.json().get("ads", [])
-        page_prix = _extract_prix_from_ads(ads, modele_filter)
+        page_prix = _extract_prix_from_ads(ads, modele_filter, exclude_variants)
         logger.info(f"[mobile-api] p{page_num}: {len(page_prix)} prix")
         return page_prix, not ads
     except Exception as e:
@@ -142,18 +146,17 @@ async def _fetch_one_page(text, annee, km, enums, cat_id, page_num, modele_filte
         return [], True
 
 
-async def _fetch_mobile_api(text, annee, km, enums, cat_id, max_pages=2, modele_filter=None) -> list[int]:
+async def _fetch_mobile_api(text, annee, km, enums, cat_id, max_pages=2, modele_filter=None, exclude_variants=None) -> list[int]:
     prix = []
 
     for page_num in range(1, max_pages + 1):
-        page_prix, stop = await _fetch_one_page(text, annee, km, enums, cat_id, page_num, modele_filter)
+        page_prix, stop = await _fetch_one_page(text, annee, km, enums, cat_id, page_num, modele_filter, exclude_variants)
 
         if not page_prix and stop:
-            # DataDome ou erreur — retry avec enums réduits + nouvelle IP
             logger.info(f"[mobile-api] p{page_num}: retry sans filtres carburant/boîte")
             await asyncio.sleep(2)
             fallback_enums = {"ad_type": ["offer"]}
-            page_prix, stop = await _fetch_one_page(text, annee, km, fallback_enums, cat_id, page_num, modele_filter)
+            page_prix, stop = await _fetch_one_page(text, annee, km, fallback_enums, cat_id, page_num, modele_filter, exclude_variants)
 
         prix.extend(page_prix)
 
@@ -354,36 +357,53 @@ async def scan_geo(req: GeoScanRequest):
 
 # ─── Leboncoin classique ───────────────────────────────────────────────────────
 
-def _lbc_search_text(marque: str, modele: str, motorisation: str | None) -> str:
-    """Construit le texte de recherche LBC.
+FUEL_MAP_ENUM = {
+    "diesel": "diesel", "gazole": "diesel",
+    "essence": "petrol", "sp95": "petrol", "sp98": "petrol",
+    "hybride": "hybrid", "hybrid": "hybrid",
+    "electrique": "electric", "électrique": "electric",
+    "gpl": "lpg", "gnv": "cng",
+}
+GEAR_MAP_ENUM = {
+    "mecanique": "manual", "mécanique": "manual", "manuelle": "manual", "bvm": "manual", "bm": "manual",
+    "automatique": "automatic", "auto": "automatic", "bva": "automatic", "dsg": "automatic",
+}
 
-    Pour Mercedes, 'Classe GLC' → 'GLC' car GLC/GLE/GLS ne sont pas des séries 'Classe'.
-    Les vraies séries Classe (A, B, C, E, S, CLA, CLS) gardent leur nom complet.
-    """
+VARIANTS_A_EXCLURE = ["stepway", "rs", "sport", "gt"]
+
+
+def _lbc_search_text(marque: str, modele: str) -> str:
+    """Construit le texte de recherche LBC — marque + modèle uniquement."""
     m = modele.strip()
     if marque.upper().replace("-", " ").replace("BENZ", "").strip() == "MERCEDES":
         if m.upper().startswith("CLASSE "):
             suffix = m[7:].strip().upper()
-            if suffix and suffix[0] == "G":  # GLC, GLE, GLS, GLA, GLB, EQC…
+            if suffix and suffix[0] == "G":
                 m = m[7:].strip()
-    text = f"{marque} {m}"
-    if motorisation:
-        text += f" {motorisation}"
-    return text
+    return f"{marque} {m}"
 
 
 @app.post("/leboncoin")
 async def leboncoin(req: SearchRequest):
-    text = _lbc_search_text(req.marque, req.modele, req.motorisation)
+    text = _lbc_search_text(req.marque, req.modele)
 
     is_util = req.type_vehicule and req.type_vehicule.lower() in ("utilitaire", "fourgon", "van", "camionnette")
     cat_id = "5" if is_util else "2"
 
-    # On n'envoie pas les enums carburant/boite — ils déclenchent DataDome
-    # Le filtrage se fait par km range + modele_filter + motorisation dans le texte
     enums: dict = {"ad_type": ["offer"]}
+    if req.carburant:
+        fuel = FUEL_MAP_ENUM.get(req.carburant.lower().strip())
+        if fuel:
+            enums["fuel"] = [fuel]
+    if req.boite:
+        gear = GEAR_MAP_ENUM.get(req.boite.lower().strip())
+        if gear:
+            enums["gearbox"] = [gear]
 
-    prix = await _fetch_mobile_api(text, req.annee, req.kilometrage, enums, cat_id, req.max_pages, modele_filter=req.modele)
+    modele_lower = req.modele.lower()
+    exclude_variants = [v for v in VARIANTS_A_EXCLURE if v not in modele_lower]
+
+    prix = await _fetch_mobile_api(text, req.annee, req.kilometrage, enums, cat_id, req.max_pages, modele_filter=req.modele, exclude_variants=exclude_variants)
 
     if prix:
         logger.info(f"[proxy] {len(prix)} prix")
