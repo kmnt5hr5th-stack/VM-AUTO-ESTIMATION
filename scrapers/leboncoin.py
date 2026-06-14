@@ -13,23 +13,51 @@ logger = logging.getLogger(__name__)
 API_URL = "https://api.leboncoin.fr/finder/search"
 HOMEPAGE = "https://www.leboncoin.fr/"
 
+_WEBSHARE_HOST = "p.webshare.io:80"
+_WEBSHARE_USER = "lmgdmysu"
+_WEBSHARE_PASS = "nomkg04o6fsd"
+_WEBSHARE_COUNTRIES = ["fr", "de", "gb", "nl", "be", "es"]
 
-def _mobile_ua() -> tuple[str, str]:
+def _webshare_proxies() -> dict:
+    country = random.choice(_WEBSHARE_COUNTRIES)
+    session = random.randint(1, 99999)
+    proxy = f"http://{_WEBSHARE_USER}-{country}-{session}:{_WEBSHARE_PASS}@{_WEBSHARE_HOST}"
+    return {"http": proxy, "https": proxy}
+
+
+def _mobile_ua() -> tuple[str, str, dict]:
     if random.choice([True, False]):
-        ua = (
-            f"LBC;iOS;{random.choice(['18.3', '18.4', '26.0', '26.2'])};"
-            f"iPhone;phone;{str(uuid.uuid4()).upper()};wifi;"
-            f"{random.choice(['101.44.0', '101.45.0', '101.43.1'])}"
-        )
-        return ua, "safari_ios"
+        ios = random.choice(["18.3", "18.4", "17.6"])
+        lbc = random.choice(["101.50.0", "101.49.1", "101.48.0"])
+        device_id = str(uuid.uuid4()).upper()
+        ua = f"LBC;iOS;{ios};{random.choice(['iPhone15,2','iPhone15,3','iPhone14,2'])};phone;{device_id};wifi;{lbc}"
+        headers = {
+            "User-Agent": ua,
+            "Accept": "application/json, text/plain, */*",
+            "Accept-Language": "fr-FR,fr;q=0.9",
+            "X-LBC-DEVICE-ID": device_id,
+            "X-LBC-VERSION": lbc,
+            "X-LBC-PLATFORM": "ios",
+            "Origin": "https://www.leboncoin.fr",
+            "Referer": "https://www.leboncoin.fr/",
+        }
+        return ua, "safari18_0_ios", headers
     else:
-        model = random.choice(["Pixel 8", "Pixel 7", "SM-G991B", "SM-S918B"])
-        ua = (
-            f"LBC;Android;{random.choice(['13', '14'])};"
-            f"{model};phone;{uuid.uuid4().hex[:16].upper()};wifi;"
-            f"{random.choice(['100.85.2', '100.84.1'])}"
-        )
-        return ua, "chrome_android"
+        lbc = random.choice(["101.50.0", "101.49.1"])
+        model = random.choice(["Pixel 8", "SM-G991B", "SM-S918B"])
+        device_id = uuid.uuid4().hex[:16].upper()
+        ua = f"LBC;Android;{random.choice(['13','14'])};{model};phone;{device_id};wifi;{lbc}"
+        headers = {
+            "User-Agent": ua,
+            "Accept": "application/json, text/plain, */*",
+            "Accept-Language": "fr-FR,fr;q=0.9",
+            "X-LBC-DEVICE-ID": device_id,
+            "X-LBC-VERSION": lbc,
+            "X-LBC-PLATFORM": "android",
+            "Origin": "https://www.leboncoin.fr",
+            "Referer": "https://www.leboncoin.fr/",
+        }
+        return ua, "chrome131_android", headers
 
 
 class LeboncoinScraper(BaseScraper):
@@ -79,16 +107,11 @@ class LeboncoinScraper(BaseScraper):
         }
 
     async def _fetch_mobile_api(self, marque, modele, annee, km, page, carburant=None, boite=None, type_vehicule=None, motorisation=None) -> list[int]:
-        ua, impersonate = _mobile_ua()
-        headers = {
-            "User-Agent": ua,
-            "Sec-Fetch-Dest": "empty",
-            "Sec-Fetch-Mode": "cors",
-            "Sec-Fetch-Site": "same-site",
-        }
+        ua, impersonate, headers = _mobile_ua()
         payload = self._build_payload(marque, modele, annee, km, page, carburant, boite, type_vehicule, motorisation)
+        proxies = _webshare_proxies()
 
-        async with AsyncSession(impersonate=impersonate) as s:
+        async with AsyncSession(impersonate=impersonate, proxies=proxies) as s:
             await s.get(HOMEPAGE, headers=headers, timeout=15)
             r = await s.post(API_URL, json=payload, headers=headers, timeout=30)
 
