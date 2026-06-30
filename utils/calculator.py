@@ -167,12 +167,22 @@ def get_discount_rate(
 def supprimer_outliers(prix: list[int]) -> list[int]:
     if len(prix) < 4:
         return prix
+
+    # Filtre IQR standard
     q1 = statistics.quantiles(prix, n=4)[0]
     q3 = statistics.quantiles(prix, n=4)[2]
     iqr = q3 - q1
     borne_basse = q1 - 1.5 * iqr
     borne_haute = q3 + 1.5 * iqr
-    return [p for p in prix if borne_basse <= p <= borne_haute]
+    filtered = [p for p in prix if borne_basse <= p <= borne_haute]
+
+    # Filtre supplémentaire : exclure tout prix > 30% au-dessus de la médiane
+    # (protège contre les annonces aberrantes sur petits échantillons)
+    if filtered:
+        med = statistics.median(filtered)
+        filtered = [p for p in filtered if p <= med * 1.30]
+
+    return filtered if filtered else prix
 
 
 def calculate_estimation(
