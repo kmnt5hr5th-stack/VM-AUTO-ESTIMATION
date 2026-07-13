@@ -102,9 +102,20 @@ async def health():
     return {"status": "healthy"}
 
 
+DS_CITROEN_MODELS = {"DS3", "DS4", "DS5"}
+
+def _resolve_brand(marque: str, modele: str) -> str:
+    """DS3/DS4/DS5 sont indexés sous Citroën sur LeBonCoin."""
+    if marque.upper() == "DS" and modele.upper().replace(" ", "") in {m.replace(" ", "") for m in DS_CITROEN_MODELS}:
+        return "Citroën"
+    return marque
+
 @app.post("/estimation")
 async def estimation(req: EstimationRequest):
     type_vehicule = req.type_vehicule or _detect_type_vehicule(req.modele)
+    marque_search = _resolve_brand(req.marque, req.modele)
+    if marque_search != req.marque:
+        logger.info(f"Marque résolue : {req.marque} → {marque_search} pour {req.modele}")
     logger.info(f"Demande reçue : {req.marque} {req.modele} {req.annee} {req.kilometrage} km | type={type_vehicule}")
 
     scraper_args = dict(
@@ -120,7 +131,7 @@ async def estimation(req: EstimationRequest):
     lbc = LeboncoinScraper()
     try:
         lbc_prices = await asyncio.wait_for(
-            lbc.get_prices(req.marque, req.modele, req.annee, req.kilometrage, **scraper_args),
+            lbc.get_prices(marque_search, req.modele, req.annee, req.kilometrage, **scraper_args),
             timeout=60,
         )
         sources_detail["leboncoin"] = {"annonces": len(lbc_prices)}
@@ -135,7 +146,7 @@ async def estimation(req: EstimationRequest):
         logger.info("LBC vide — fallback AutoScout24 + La Centrale")
         fallback_scrapers = [AutoScout24Scraper(), LaCentraleScraper()]
         tasks = [
-            s.get_prices(req.marque, req.modele, req.annee, req.kilometrage, **scraper_args)
+            s.get_prices(marque_search, req.modele, req.annee, req.kilometrage, **scraper_args)
             for s in fallback_scrapers
         ]
         results = await asyncio.wait_for(
