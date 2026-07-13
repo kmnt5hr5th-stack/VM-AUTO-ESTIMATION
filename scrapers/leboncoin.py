@@ -181,6 +181,14 @@ class LeboncoinScraper(BaseScraper):
                 prix.extend(page_prices)
                 if not page_prices:
                     break
+            if not prix and (carburant or boite):
+                logger.info("[leboncoin] Retry sans carburant/boite")
+                for page_num in range(1, max_pages + 1):
+                    page_prices = await self._fetch_mobile_api(marque, modele, annee, kilometrage, page_num, None, None, type_vehicule, motorisation, target_hp)
+                    logger.info(f"[leboncoin] Retry p{page_num} → {len(page_prices)} prix")
+                    prix.extend(page_prices)
+                    if not page_prices:
+                        break
             return prix
         except Exception as e:
             logger.warning(f"[leboncoin] API mobile échouée: {e}")
