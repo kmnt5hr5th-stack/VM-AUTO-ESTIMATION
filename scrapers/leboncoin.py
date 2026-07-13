@@ -120,7 +120,33 @@ def _build_lbc_payload(marque, modele, annee, km, page=1, carburant=None, boite=
     }
 
 
-def _extract_prix(ads: list, modele: str) -> list[int]:
+_FUEL_LABELS = {
+    "diesel": ["diesel", "gazole"],
+    "essence": ["essence", "petrol", "sp95", "sp98"],
+    "hybride": ["hybride", "hybrid"],
+    "electrique": ["electrique", "électrique", "electric"],
+    "gpl": ["gpl", "lpg"],
+}
+_GEAR_LABELS = {
+    "manual": ["manuelle", "manual", "mécanique", "mecanique", "bvm"],
+    "automatic": ["automatique", "automatic", "auto", "bva", "dsg"],
+}
+
+def _match_fuel(attr_val: str, carburant: str) -> bool:
+    v = attr_val.lower()
+    labels = _FUEL_LABELS.get(carburant.lower(), [carburant.lower()])
+    return any(lbl in v for lbl in labels)
+
+def _match_gear(attr_val: str, boite: str) -> bool:
+    v = attr_val.lower()
+    boite_norm = boite.lower().replace("mécanique", "mecanique").replace("é", "e")
+    for gear_key, labels in _GEAR_LABELS.items():
+        if boite_norm in labels or boite_norm == gear_key:
+            return any(lbl in v for lbl in labels)
+    return boite_norm in v
+
+
+def _extract_prix(ads: list, modele: str, carburant: str = None, boite: str = None) -> list[int]:
     modele_lower = (modele or "").lower()
     VARIANTS = ["stepway", "stepway 2", "rs", "sport", "gt"]
     exclude = [v for v in VARIANTS if v not in modele_lower]
@@ -129,6 +155,19 @@ def _extract_prix(ads: list, modele: str) -> list[int]:
         title = ad.get("subject", "").lower()
         if any(v in title for v in exclude):
             continue
+
+        if carburant or boite:
+            attrs = {a["key"]: a.get("value_label", a.get("value", ""))
+                     for a in ad.get("attributes", [])}
+            if carburant:
+                fuel_val = str(attrs.get("fuel", ""))
+                if fuel_val and not _match_fuel(fuel_val, carburant):
+                    continue
+            if boite:
+                gear_val = str(attrs.get("gearbox", ""))
+                if gear_val and not _match_gear(gear_val, boite):
+                    continue
+
         raw = ad.get("price", [])
         p = raw[0] if isinstance(raw, list) and raw else (raw if isinstance(raw, (int, float)) else None)
         if p and 500 <= int(p) <= 150_000:
@@ -143,7 +182,7 @@ class LeboncoinScraper(BaseScraper):
                                  carburant=None, boite=None, type_vehicule=None,
                                  target_hp=None) -> list[int]:
         ua, impersonate, headers = _mobile_ua()
-        # Mobile API: pas de filtres carburant/boite pour éviter les blocages DataDome
+        # Pas de filtres carburant/boite dans le payload (DataDome bloque) — filtrage post-hoc
         payload = _build_lbc_payload(marque, modele, annee, km, page,
                                       carburant=None, boite=None,
                                       type_vehicule=type_vehicule, target_hp=target_hp)
@@ -155,7 +194,7 @@ class LeboncoinScraper(BaseScraper):
             raise Exception("DataDome 403")
         if not r.ok:
             raise Exception(f"API {r.status_code}")
-        return _extract_prix(r.json().get("ads", []), modele)
+        return _extract_prix(r.json().get("ads", []), modele, carburant=carburant, boite=boite)
 
     async def _playwright_search(self, marque, modele, annee, km,
                                   carburant=None, boite=None, type_vehicule=None,
@@ -202,7 +241,7 @@ class LeboncoinScraper(BaseScraper):
                 if result["status"] != 200:
                     return []
                 ads = result["data"].get("ads", [])
-                prix = _extract_prix(ads, modele)
+                prix = _extract_prix(ads, modele, carburant=carburant, boite=boite)
                 logger.info(f"[leboncoin] Playwright → {len(prix)} prix")
                 return prix
             except Exception as e:
@@ -223,6 +262,7 @@ class LeboncoinScraper(BaseScraper):
             for page_num in range(1, max_pages + 1):
                 page_prices = await self._fetch_mobile_api(
                     marque, modele, annee, kilometrage, page_num,
+                    carburant=carburant, boite=boite,
                     type_vehicule=type_vehicule, target_hp=target_hp,
                 )
                 logger.info(f"[leboncoin] API p{page_num} → {len(page_prices)} prix")
