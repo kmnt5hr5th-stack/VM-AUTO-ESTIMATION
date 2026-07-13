@@ -1,11 +1,19 @@
 import logging
 import re
+import unicodedata
 from typing import Optional
 from urllib.parse import quote_plus
 from curl_cffi.requests import AsyncSession
 from playwright.async_api import BrowserContext
 
 from .base import BaseScraper, extraire_prix_texte
+
+
+def _slug(s: str) -> str:
+    """Normalise une chaîne en slug URL : retire accents, minuscules, espaces → tirets."""
+    nfkd = unicodedata.normalize("NFKD", s)
+    ascii_str = "".join(c for c in nfkd if not unicodedata.combining(c))
+    return ascii_str.lower().replace(" ", "-")
 
 
 def _extraire_cv(motorisation: str) -> Optional[int]:
@@ -38,8 +46,8 @@ class AutoScout24Scraper(BaseScraper):
     }
 
     def _build_url(self, marque: str, modele: str, annee: int, kilometrage: int, page: int = 1, finition: Optional[str] = None, carburant: Optional[str] = None, boite: Optional[str] = None, motorisation: Optional[str] = None, type_vehicule: Optional[str] = None) -> str:
-        m = marque.lower().replace(" ", "-")
-        mo = modele.lower().replace(" ", "-")
+        m = _slug(marque)
+        mo = _slug(modele)
         km_delta = 15_000
         km_min = max(0, kilometrage - km_delta)
         km_max = kilometrage + km_delta

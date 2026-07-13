@@ -146,7 +146,7 @@ async def estimation(req: EstimationRequest):
         logger.info("LBC vide — fallback AutoScout24 + La Centrale")
         fallback_scrapers = [AutoScout24Scraper(), LaCentraleScraper()]
         tasks = [
-            s.get_prices(req.marque, req.modele, req.annee, req.kilometrage, **scraper_args)
+            s.get_prices(marque_search, req.modele, req.annee, req.kilometrage, **scraper_args)
             for s in fallback_scrapers
         ]
         results = await asyncio.wait_for(
