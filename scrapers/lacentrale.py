@@ -1,14 +1,23 @@
 import logging
 import json
 import re
+import random
 from typing import Optional
 from urllib.parse import urlencode, quote
 from curl_cffi.requests import AsyncSession
 from bs4 import BeautifulSoup
-from playwright.async_api import BrowserContext
+from playwright.async_api import async_playwright, BrowserContext
 
 from .base import BaseScraper, extraire_prix_texte
 from ._proxy import proxy_available, build_url, service_name  # ZenRows/ScraperAPI
+
+_WEBSHARE_HOST = "p.webshare.io:80"
+_WEBSHARE_USER = "lmgdmysu"
+_WEBSHARE_PASS = "nomkg04o6fsd"
+
+def _webshare_proxy_url() -> str:
+    session = random.randint(1000000, 9999999)
+    return f"http://{_WEBSHARE_USER}-fr-{session}:{_WEBSHARE_PASS}@{_WEBSHARE_HOST}"
 
 logger = logging.getLogger(__name__)
 
@@ -107,47 +116,64 @@ class LaCentraleScraper(BaseScraper):
     # ─── Scan géographique par département ───────────────────────────────────
 
     async def scan_by_dept(self, dept_code: str, prix_max: int = 25000, km_max: int = 180000, max_pages: int = 5) -> list[dict]:
-        """Scan La Centrale par département, retourne des annonces complètes."""
-        if not proxy_available():
-            logger.warning("[lacentrale-geo] Aucun proxy configuré — source ignorée")
-            return []
-
+        """Scan La Centrale par département via Playwright + Webshare (bypass DataDome)."""
         listings: list[dict] = []
         seen_ids: set = set()
 
-        for page_num in range(1, max_pages + 1):
-            target = (
-                f"https://www.lacentrale.fr/listing"
-                f"?departmentIds[]={dept_code}"
-                f"&priceMax={prix_max}"
-                f"&mileageMax={km_max}"
-                f"&sortBy=priceAsc"
-            )
-            if page_num > 1:
-                target += f"&page={page_num}"
+        proxy_url = _webshare_proxy_url()
+        logger.info(f"[lacentrale-geo] Démarrage Playwright (dept={dept_code})")
 
-            api_url = build_url(target, js_render=True)
-            logger.info(f"[lacentrale-geo] Dept {dept_code} p{page_num}…")
+        try:
+            async with async_playwright() as p:
+                browser = await p.chromium.launch(
+                    headless=True,
+                    proxy={"server": f"http://{_WEBSHARE_HOST}", "username": f"{_WEBSHARE_USER}-fr-{random.randint(1000000,9999999)}", "password": _WEBSHARE_PASS},
+                    args=["--no-sandbox", "--disable-setuid-sandbox", "--disable-dev-shm-usage",
+                          "--disable-blink-features=AutomationControlled"],
+                )
+                context = await browser.new_context(
+                    user_agent=(
+                        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                        "AppleWebKit/537.36 (KHTML, like Gecko) "
+                        "Chrome/131.0.0.0 Safari/537.36"
+                    ),
+                    locale="fr-FR",
+                    extra_http_headers={"Accept-Language": "fr-FR,fr;q=0.9"},
+                )
+                await context.add_init_script(
+                    "Object.defineProperty(navigator, 'webdriver', {get: () => undefined})"
+                )
+                page = await context.new_page()
 
-            try:
-                async with AsyncSession(impersonate="chrome131") as s:
-                    r = await s.get(api_url, timeout=45)
+                try:
+                    for page_num in range(1, max_pages + 1):
+                        url = (
+                            f"https://www.lacentrale.fr/listing"
+                            f"?departmentIds[]={dept_code}"
+                            f"&priceMax={prix_max}"
+                            f"&mileageMax={km_max}"
+                            f"&sortBy=priceAsc"
+                        )
+                        if page_num > 1:
+                            url += f"&page={page_num}"
 
-                if r.status_code != 200:
-                    logger.error(f"[lacentrale-geo] HTTP {r.status_code}")
-                    break
+                        logger.info(f"[lacentrale-geo] p{page_num}: {url}")
+                        await page.goto(url, wait_until="domcontentloaded", timeout=40_000)
 
-                page_listings = self._parse_listings_html(r.text)
-                new = [l for l in page_listings if l.get("external_id") not in seen_ids]
-                seen_ids.update(l["external_id"] for l in new if l.get("external_id"))
-                listings.extend(new)
-                logger.info(f"[lacentrale-geo] p{page_num}: {len(new)} nouvelles annonces ({len(listings)} total)")
-                if not page_listings:
-                    break
+                        html = await page.content()
+                        page_listings = self._parse_listings_html(html)
+                        new = [l for l in page_listings if l.get("external_id") not in seen_ids]
+                        seen_ids.update(l["external_id"] for l in new if l.get("external_id"))
+                        listings.extend(new)
+                        logger.info(f"[lacentrale-geo] p{page_num}: {len(new)} nouvelles ({len(listings)} total)")
 
-            except Exception as e:
-                logger.warning(f"[lacentrale-geo] Inaccessible ({type(e).__name__}) — source ignorée")
-                break
+                        if not page_listings:
+                            break
+                finally:
+                    await browser.close()
+
+        except Exception as e:
+            logger.error(f"[lacentrale-geo] Playwright erreur: {e}")
 
         return listings
 
