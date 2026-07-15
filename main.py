@@ -413,7 +413,7 @@ async def scan_lacentrale(req: LaCentraleScanRequest):
 # ─── Scan géo enrichi : scan LBC + estimation marché LBC par modèle ──────────
 
 async def _estimate_market_lbc(marque: str, modele: str, annee: Optional[int], km: Optional[int]) -> Optional[int]:
-    """Estime la valeur marché d'un modèle via LeBonCoin directement (sans HTTP)."""
+    """Estime la valeur marché d'un modèle via LeBonCoin (médiane des prix trouvés)."""
     try:
         marque_search = _resolve_brand(marque, modele)
         type_vehicule = _detect_type_vehicule(modele)
@@ -425,9 +425,8 @@ async def _estimate_market_lbc(marque: str, modele: str, annee: Optional[int], k
         )
         if not prices:
             return None
-        from utils.calculator import calculate_estimation
-        result = calculate_estimation(prices, annee or 2015, km or 100000)
-        return result.get("estimation")
+        sorted_prices = sorted(prices)
+        return sorted_prices[len(sorted_prices) // 2]
     except Exception as e:
         logger.warning(f"[enriched] estimation {marque} {modele} {annee} → erreur: {e}")
         return None
