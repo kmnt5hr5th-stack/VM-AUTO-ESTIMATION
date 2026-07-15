@@ -448,10 +448,13 @@ async def scan_geo_enriched(req: GeoScanRequest):
 
     logger.info(f"[geo-enriched] {len(groups)} groupes uniques → estimation LBC en parallèle")
 
-    # Estimation en parallèle pour tous les groupes
+    # Estimation en parallèle (max 6 simultanées pour ne pas surcharger Render free tier)
     market_values: dict[str, Optional[int]] = {}
+    sem = asyncio.Semaphore(6)
+
     async def _est(key: str, g: dict):
-        val = await _estimate_market_lbc(g["marque"], g["modele"], g["annee"], g["km"])
+        async with sem:
+            val = await _estimate_market_lbc(g["marque"], g["modele"], g["annee"], g["km"])
         market_values[key] = val
         logger.info(f"[geo-enriched] {g['marque']} {g['modele']} {g['annee']} → {val}")
 
