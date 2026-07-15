@@ -358,3 +358,53 @@ async def scan_geo(req: GeoScanRequest):
     listings = await _fetch_geo_listings(req)
     logger.info(f"[geo-scan] Terminé : {len(listings)} annonces")
     return {"listings": listings, "count": len(listings)}
+
+
+# ─── La Centrale scan (Bonnes Affaires) ──────────────────────────────────────
+
+class LaCentraleScanRequest(BaseModel):
+    lat: float = 48.8359857
+    lng: float = 2.5860974
+    prix_max: int = 25000
+    km_max: int = 180000
+    max_pages: int = 5
+    dept_code: Optional[str] = None  # code département explicite (ex: "77"), sinon déduit de lat/lng
+
+
+async def _lat_lng_to_dept(lat: float, lng: float) -> Optional[str]:
+    """Convertit des coordonnées GPS en code département français via Nominatim."""
+    url = f"https://nominatim.openstreetmap.org/reverse?lat={lat}&lon={lng}&format=json"
+    try:
+        async with AsyncSession(impersonate="chrome120") as s:
+            r = await s.get(url, headers={"User-Agent": "vmautobusiness/1.0 (contact@vmautobusiness.fr)"}, timeout=10)
+        if not r.ok:
+            return None
+        data = r.json()
+        postcode = (data.get("address") or {}).get("postcode", "")
+        if postcode and len(postcode) >= 2:
+            code = postcode[:2]
+            if code == "97":
+                code = postcode[:3]
+            return code
+        # Fallback: code depuis county
+        county = (data.get("address") or {}).get("county", "")
+        m = re.search(r'\b(\d{2,3})\b', county)
+        return m.group(1) if m else None
+    except Exception as e:
+        logger.error(f"[nominatim] Erreur géocodage inverse: {e}")
+        return None
+
+
+@app.post("/scan-lacentrale")
+async def scan_lacentrale(req: LaCentraleScanRequest):
+    dept = req.dept_code
+    if not dept:
+        dept = await _lat_lng_to_dept(req.lat, req.lng)
+    if not dept:
+        raise HTTPException(status_code=400, detail="Impossible de déterminer le département depuis les coordonnées fournies")
+
+    logger.info(f"[scan-lacentrale] Département: {dept}, prix_max={req.prix_max}, km_max={req.km_max}")
+    lc = LaCentraleScraper()
+    listings = await lc.scan_by_dept(dept, req.prix_max, req.km_max, req.max_pages)
+    logger.info(f"[scan-lacentrale] Terminé : {len(listings)} annonces (dept {dept})")
+    return {"listings": listings, "count": len(listings), "dept": dept}

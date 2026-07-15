@@ -1,6 +1,7 @@
 import logging
 import json
 import re
+from typing import Optional
 from urllib.parse import urlencode, quote
 from curl_cffi.requests import AsyncSession
 from bs4 import BeautifulSoup
@@ -102,3 +103,177 @@ class LaCentraleScraper(BaseScraper):
 
     async def _scrape(self, context: BrowserContext, *args, **kwargs) -> list[int]:
         return []  # La Centrale ne supporte pas Playwright
+
+    # ─── Scan géographique par département ───────────────────────────────────
+
+    async def scan_by_dept(self, dept_code: str, prix_max: int = 25000, km_max: int = 180000, max_pages: int = 5) -> list[dict]:
+        """Scan La Centrale par département, retourne des annonces complètes."""
+        if not proxy_available():
+            logger.warning("[lacentrale-geo] Aucun proxy configuré — source ignorée")
+            return []
+
+        listings: list[dict] = []
+        seen_ids: set = set()
+
+        for page_num in range(1, max_pages + 1):
+            target = (
+                f"https://www.lacentrale.fr/listing"
+                f"?departmentIds[]={dept_code}"
+                f"&priceMax={prix_max}"
+                f"&mileageMax={km_max}"
+                f"&sortBy=priceAsc"
+            )
+            if page_num > 1:
+                target += f"&page={page_num}"
+
+            api_url = build_url(target, js_render=True)
+            logger.info(f"[lacentrale-geo] Dept {dept_code} p{page_num}…")
+
+            try:
+                async with AsyncSession(impersonate="chrome131") as s:
+                    r = await s.get(api_url, timeout=45)
+
+                if r.status_code != 200:
+                    logger.error(f"[lacentrale-geo] HTTP {r.status_code}")
+                    break
+
+                page_listings = self._parse_listings_html(r.text)
+                new = [l for l in page_listings if l.get("external_id") not in seen_ids]
+                seen_ids.update(l["external_id"] for l in new if l.get("external_id"))
+                listings.extend(new)
+                logger.info(f"[lacentrale-geo] p{page_num}: {len(new)} nouvelles annonces ({len(listings)} total)")
+                if not page_listings:
+                    break
+
+            except Exception as e:
+                logger.warning(f"[lacentrale-geo] Inaccessible ({type(e).__name__}) — source ignorée")
+                break
+
+        return listings
+
+    def _parse_listings_html(self, html: str) -> list[dict]:
+        soup = BeautifulSoup(html, "lxml")
+        tag = soup.find("script", {"id": "__NEXT_DATA__"})
+        if not tag or not tag.string:
+            logger.warning("[lacentrale-geo] __NEXT_DATA__ introuvable")
+            return []
+        try:
+            data = json.loads(tag.string)
+        except json.JSONDecodeError:
+            logger.warning("[lacentrale-geo] JSON invalide dans __NEXT_DATA__")
+            return []
+
+        results: list[dict] = []
+        self._find_ad_objects(data, results, depth=0)
+        return results
+
+    def _find_ad_objects(self, obj, results: list, depth: int):
+        if depth > 12:
+            return
+        if isinstance(obj, list):
+            candidate_batch = []
+            for item in obj:
+                if isinstance(item, dict):
+                    price = item.get("price") or item.get("prix")
+                    has_make = any(k in item for k in ("make", "brand", "marque", "makeName"))
+                    if price and has_make:
+                        parsed = self._parse_lc_ad(item)
+                        if parsed:
+                            candidate_batch.append(parsed)
+            if candidate_batch:
+                results.extend(candidate_batch)
+                return
+            for item in obj:
+                self._find_ad_objects(item, results, depth + 1)
+        elif isinstance(obj, dict):
+            for v in obj.values():
+                if isinstance(v, (dict, list)):
+                    self._find_ad_objects(v, results, depth + 1)
+
+    def _parse_lc_ad(self, ad: dict) -> Optional[dict]:
+        price = ad.get("price") or ad.get("prix")
+        try:
+            price = int(price)
+        except (TypeError, ValueError):
+            return None
+        if not (500 <= price <= 150_000):
+            return None
+
+        marque = (ad.get("make") or ad.get("brand") or ad.get("marque") or ad.get("makeName") or "").upper().strip()
+        modele = (ad.get("model") or ad.get("modele") or ad.get("modelName") or "").upper().strip()
+        if not marque or not modele:
+            return None
+
+        # Année
+        year = ad.get("year") or ad.get("registrationYear") or ad.get("annee")
+        if not year:
+            for k in ("firstCirculationDate", "firstRegistrationDate", "dateCirculation"):
+                val = ad.get(k, "")
+                if val:
+                    try:
+                        year = int(str(val)[:4])
+                    except (ValueError, TypeError):
+                        pass
+                    break
+        try:
+            year = int(year) if year else None
+        except (TypeError, ValueError):
+            year = None
+
+        # Kilométrage
+        km = ad.get("mileage") or ad.get("kilometrage") or ad.get("km")
+        try:
+            km = int(km) if km is not None else None
+        except (TypeError, ValueError):
+            km = None
+
+        ad_id = str(ad.get("adId") or ad.get("id") or ad.get("listingId") or "")
+
+        # URL
+        url = ad.get("url") or ad.get("slug") or ad.get("link") or ""
+        if url and not url.startswith("http"):
+            url = f"https://www.lacentrale.fr{url}"
+        elif not url and ad_id:
+            slug = f"{year}+{marque}+{modele}".replace(" ", "+")
+            url = f"https://www.lacentrale.fr/auto-annonce-occasion-{slug}-{ad_id}.html"
+
+        # Localisation
+        location = ad.get("location") or ad.get("localisation") or {}
+        if isinstance(location, str):
+            location = {}
+        city = location.get("city") or location.get("ville") or ad.get("city") or ad.get("ville") or ""
+        region = location.get("region") or ad.get("region") or ""
+
+        # Image
+        photos = ad.get("photos") or ad.get("images") or ad.get("pictures") or []
+        image_url = None
+        if photos:
+            img = photos[0]
+            if isinstance(img, str):
+                image_url = img
+            elif isinstance(img, dict):
+                image_url = img.get("url") or img.get("src") or img.get("href")
+
+        # Vendeur
+        seller = str(ad.get("sellerType") or ad.get("ownerType") or ad.get("typeVendeur") or "").lower()
+        is_pro = seller in ("pro", "professional", "dealer", "marchand", "garage")
+
+        return {
+            "source": "lacentrale",
+            "external_id": ad_id or None,
+            "url_annonce": url or None,
+            "titre": ad.get("title") or ad.get("titre") or f"{marque} {modele}",
+            "marque": marque,
+            "modele": modele,
+            "annee": year,
+            "kilometrage": km,
+            "prix_annonce": price,
+            "energie": (ad.get("fuelType") or ad.get("fuel") or ad.get("energie") or "").lower(),
+            "boite": (ad.get("gearboxType") or ad.get("gearbox") or ad.get("boite") or "").lower(),
+            "vendeur_type": "Pro" if is_pro else "Particulier",
+            "pays": "France",
+            "region": region,
+            "ville": city,
+            "image_url": image_url,
+            "date_publication": ad.get("publicationDate") or ad.get("datePublication") or ad.get("date_publication"),
+        }
