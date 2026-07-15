@@ -408,3 +408,62 @@ async def scan_lacentrale(req: LaCentraleScanRequest):
     listings = await lc.scan_by_dept(dept, req.prix_max, req.km_max, req.max_pages)
     logger.info(f"[scan-lacentrale] Terminé : {len(listings)} annonces (dept {dept})")
     return {"listings": listings, "count": len(listings), "dept": dept}
+
+
+# ─── Scan géo enrichi : scan LBC + estimation marché LBC par modèle ──────────
+
+async def _estimate_market_lbc(marque: str, modele: str, annee: Optional[int], km: Optional[int]) -> Optional[int]:
+    """Estime la valeur marché d'un modèle via LeBonCoin directement (sans HTTP)."""
+    try:
+        marque_search = _resolve_brand(marque, modele)
+        type_vehicule = _detect_type_vehicule(modele)
+        lbc = LeboncoinScraper()
+        prices = await asyncio.wait_for(
+            lbc.get_prices(marque_search, modele, annee or 2015, km or 100000,
+                           type_vehicule=type_vehicule),
+            timeout=25,
+        )
+        if not prices:
+            return None
+        from utils.calculator import calculate_estimation
+        result = calculate_estimation(prices, annee or 2015, km or 100000)
+        return result.get("estimation")
+    except Exception as e:
+        logger.warning(f"[enriched] estimation {marque} {modele} {annee} → erreur: {e}")
+        return None
+
+
+@app.post("/scan-geo-enriched")
+async def scan_geo_enriched(req: GeoScanRequest):
+    """Scan LBC géographique + estimation valeur marché LBC pour chaque modèle unique."""
+    listings = await _fetch_geo_listings(req)
+    logger.info(f"[geo-enriched] {len(listings)} annonces scannées")
+
+    # Groupes uniques marque/modèle/année
+    groups: dict[str, dict] = {}
+    for l in listings:
+        key = f"{(l.get('marque') or '').upper()}|{(l.get('modele') or '').upper()}|{l.get('annee') or ''}"
+        if key not in groups:
+            groups[key] = {"marque": l.get("marque"), "modele": l.get("modele"),
+                           "annee": l.get("annee"), "km": l.get("kilometrage")}
+
+    logger.info(f"[geo-enriched] {len(groups)} groupes uniques → estimation LBC en parallèle")
+
+    # Estimation en parallèle pour tous les groupes
+    market_values: dict[str, Optional[int]] = {}
+    async def _est(key: str, g: dict):
+        val = await _estimate_market_lbc(g["marque"], g["modele"], g["annee"], g["km"])
+        market_values[key] = val
+        logger.info(f"[geo-enriched] {g['marque']} {g['modele']} {g['annee']} → {val}")
+
+    await asyncio.gather(*[_est(k, v) for k, v in groups.items()])
+
+    # Enrichir les listings
+    enriched = []
+    for l in listings:
+        key = f"{(l.get('marque') or '').upper()}|{(l.get('modele') or '').upper()}|{l.get('annee') or ''}"
+        valeur_marche = market_values.get(key)
+        enriched.append({**l, "valeur_marche": valeur_marche})
+
+    logger.info(f"[geo-enriched] Terminé — {len(enriched)} annonces enrichies")
+    return {"listings": enriched, "count": len(enriched)}
