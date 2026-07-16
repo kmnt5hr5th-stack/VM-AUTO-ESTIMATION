@@ -438,15 +438,20 @@ async def scan_geo_enriched(req: GeoScanRequest):
     listings = await _fetch_geo_listings(req)
     logger.info(f"[geo-enriched] {len(listings)} annonces scannées")
 
-    # Groupes uniques marque/modèle/année
-    groups: dict[str, dict] = {}
+    # Groupes uniques marque/modèle/année — compter les occurrences pour prioriser
+    group_counts: dict[str, int] = {}
+    group_meta: dict[str, dict] = {}
     for l in listings:
         key = f"{(l.get('marque') or '').upper()}|{(l.get('modele') or '').upper()}|{l.get('annee') or ''}"
-        if key not in groups:
-            groups[key] = {"marque": l.get("marque"), "modele": l.get("modele"),
-                           "annee": l.get("annee"), "km": l.get("kilometrage")}
+        group_counts[key] = group_counts.get(key, 0) + 1
+        if key not in group_meta:
+            group_meta[key] = {"marque": l.get("marque"), "modele": l.get("modele"),
+                                "annee": l.get("annee"), "km": l.get("kilometrage")}
 
-    logger.info(f"[geo-enriched] {len(groups)} groupes uniques → estimation LBC en parallèle")
+    # Limiter à 15 groupes les plus fréquents (éviter timeout edge function)
+    top_keys = sorted(group_counts, key=lambda k: group_counts[k], reverse=True)[:15]
+    groups = {k: group_meta[k] for k in top_keys}
+    logger.info(f"[geo-enriched] {len(group_meta)} groupes uniques, estimation sur top {len(groups)}")
 
     # Estimation en parallèle (max 6 simultanées pour ne pas surcharger Render free tier)
     market_values: dict[str, Optional[int]] = {}
