@@ -231,6 +231,8 @@ def _build_geo_payload(lat, lng, radius, prix_max, km_max, page=1, tout_france=F
         "disable_total": True,
         "extend": True,
         "listing_source": "direct-search" if page == 1 else "pagination",
+        "sort_by": "time",
+        "sort_order": "desc",
     }
 
 
