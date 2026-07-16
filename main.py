@@ -415,23 +415,42 @@ async def scan_lacentrale(req: LaCentraleScanRequest):
 # ─── Scan géo enrichi : scan LBC + estimation marché LBC par modèle ──────────
 
 async def _estimate_market_lbc(marque: str, modele: str, annee: Optional[int], km: Optional[int]) -> Optional[int]:
-    """Estime la valeur marché d'un modèle via LeBonCoin (médiane des prix trouvés)."""
+    """Estime la valeur marché : LeBonCoin en priorité, AutoScout24 en fallback."""
+    marque_search = _resolve_brand(marque, modele)
+    type_vehicule = _detect_type_vehicule(modele)
+    annee_eff = annee or 2015
+    km_eff = km or 100000
+
+    # 1. LeBonCoin
     try:
-        marque_search = _resolve_brand(marque, modele)
-        type_vehicule = _detect_type_vehicule(modele)
         lbc = LeboncoinScraper()
         prices = await asyncio.wait_for(
-            lbc.get_prices(marque_search, modele, annee or 2015, km or 100000,
-                           type_vehicule=type_vehicule),
-            timeout=25,
+            lbc.get_prices(marque_search, modele, annee_eff, km_eff, type_vehicule=type_vehicule),
+            timeout=20,
         )
-        if not prices:
-            return None
-        sorted_prices = sorted(prices)
-        return sorted_prices[len(sorted_prices) // 2]
+        if prices:
+            s = sorted(prices)
+            logger.info(f"[enriched] LBC {marque} {modele} {annee} → {s[len(s)//2]}€ ({len(s)} prix)")
+            return s[len(s) // 2]
     except Exception as e:
-        logger.warning(f"[enriched] estimation {marque} {modele} {annee} → erreur: {e}")
-        return None
+        logger.warning(f"[enriched] LBC {marque} {modele} {annee} erreur: {e}")
+
+    # 2. Fallback AutoScout24 si LBC n'a rien trouvé
+    try:
+        as24 = AutoScout24Scraper()
+        prices2 = await asyncio.wait_for(
+            as24.get_prices(marque_search, modele, annee_eff, km_eff, type_vehicule=type_vehicule),
+            timeout=15,
+        )
+        if prices2:
+            s2 = sorted(prices2)
+            logger.info(f"[enriched] AS24 {marque} {modele} {annee} → {s2[len(s2)//2]}€ ({len(s2)} prix)")
+            return s2[len(s2) // 2]
+    except Exception as e:
+        logger.warning(f"[enriched] AS24 {marque} {modele} {annee} erreur: {e}")
+
+    logger.warning(f"[enriched] aucun prix trouvé pour {marque} {modele} {annee}")
+    return None
 
 
 @app.post("/scan-geo-enriched")
