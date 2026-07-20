@@ -100,26 +100,41 @@ async def get_histovec_pdf(nom: str, prenom: str, formule: str, immatriculation:
                 logger.warning("[histovec] Bouton submit non trouvé, tentative Enter")
                 await page.keyboard.press("Enter")
 
-            await asyncio.sleep(4)
+            await asyncio.sleep(6)
 
-            # Attendre le chargement du résultat
+            # Attendre que la page se stabilise après soumission
             try:
-                await page.wait_for_load_state("networkidle", timeout=15000)
+                await page.wait_for_load_state("networkidle", timeout=20000)
             except Exception:
                 pass
 
+            # Attendre encore un peu pour le rendu Vue.js des résultats
+            await asyncio.sleep(4)
+
             # Vérifier erreur
             page_text = (await page.inner_text("body")).lower()
+            logger.info(f"[histovec] Texte page ({len(page_text)} chars): {page_text[:500]}")
             error_keywords = ["aucun résultat", "aucune donnée", "non trouvé", "incorrect", "invalide", "erreur"]
             for kw in error_keywords:
                 if kw in page_text:
                     logger.warning(f"[histovec] Erreur page: '{kw}' trouvé")
                     return None
 
+            # Forcer le mode screen (les SPAs Vue.js masquent souvent le contenu en print CSS)
+            await page.emulate_media(media="screen")
+
+            # Screenshot de debug pour voir l'état de la page
+            try:
+                screenshot = await page.screenshot(full_page=True)
+                logger.info(f"[histovec] Screenshot debug: {len(screenshot)} bytes")
+            except Exception:
+                pass
+
             logger.info("[histovec] Génération du PDF...")
             pdf_bytes = await page.pdf(
                 format="A4",
                 print_background=True,
+                prefer_css_page_size=False,
                 margin={"top": "10mm", "bottom": "10mm", "left": "10mm", "right": "10mm"},
             )
             logger.info(f"[histovec] PDF généré ({len(pdf_bytes)} bytes)")
