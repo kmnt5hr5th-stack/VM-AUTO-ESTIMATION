@@ -1,64 +1,12 @@
 import asyncio
 import base64
-import json
 import logging
-import re
-import httpx
-from playwright.async_api import async_playwright
+from playwright.async_api import async_playwright, Page
 from playwright_stealth import stealth_async
 
 logger = logging.getLogger(__name__)
 
 HISTOVEC_URL = "https://histovec.interieur.gouv.fr/histovec/"
-
-
-async def ocr_carte_grise(photo_url: str, api_key: str) -> dict:
-    """Appelle Claude API pour extraire nom, prenom, formule depuis la photo de carte grise."""
-    async with httpx.AsyncClient(timeout=40) as client:
-        img_resp = await client.get(photo_url)
-        img_resp.raise_for_status()
-        image_b64 = base64.standard_b64encode(img_resp.content).decode()
-        content_type = img_resp.headers.get("content-type", "image/jpeg").split(";")[0]
-
-        response = await client.post(
-            "https://api.anthropic.com/v1/messages",
-            headers={
-                "x-api-key": api_key,
-                "anthropic-version": "2023-06-01",
-                "content-type": "application/json",
-            },
-            json={
-                "model": "claude-haiku-4-5-20251001",
-                "max_tokens": 200,
-                "messages": [{
-                    "role": "user",
-                    "content": [
-                        {
-                            "type": "image",
-                            "source": {"type": "base64", "media_type": content_type, "data": image_b64},
-                        },
-                        {
-                            "type": "text",
-                            "text": (
-                                "Sur cette carte grise française, extrais exactement :\n"
-                                "1. Numéro de formule : code en bas à droite du document (format AAAA XX NNNNN, ex: 2013FK00001)\n"
-                                "2. Nom du premier titulaire (champ C.4.1)\n"
-                                "3. Prénom du premier titulaire (champ C.4.2)\n\n"
-                                "Réponds UNIQUEMENT en JSON: "
-                                '{"formule": "...", "nom": "...", "prenom": "..."}\n'
-                                "Si un champ n'est pas lisible, mets null."
-                            ),
-                        },
-                    ],
-                }],
-            },
-        )
-        response.raise_for_status()
-        text = response.json()["content"][0]["text"].strip()
-        match = re.search(r'\{[^}]+\}', text, re.DOTALL)
-        if match:
-            return json.loads(match.group())
-        return {"formule": None, "nom": None, "prenom": None}
 
 
 async def get_histovec_pdf(nom: str, prenom: str, formule: str, immatriculation: str) -> bytes | None:
@@ -86,78 +34,148 @@ async def get_histovec_pdf(nom: str, prenom: str, formule: str, immatriculation:
         await stealth_async(page)
 
         try:
-            logger.info("Ouverture de Histovec...")
-            await page.goto(HISTOVEC_URL, wait_until="networkidle", timeout=30000)
+            logger.info(f"[histovec] Ouverture de {HISTOVEC_URL}")
+            await page.goto(HISTOVEC_URL, wait_until="domcontentloaded", timeout=30000)
+
+            # Attendre que le JS Vue.js charge le contenu
+            await asyncio.sleep(4)
+
+            # Debug : lister tous les inputs visibles
+            inputs = await page.locator("input:visible").all()
+            logger.info(f"[histovec] {len(inputs)} input(s) visible(s) trouvé(s)")
+            for i, inp in enumerate(inputs):
+                attrs = await inp.evaluate(
+                    "(el) => ({ id: el.id, name: el.name, placeholder: el.placeholder, type: el.type, "
+                    "ariaLabel: el.getAttribute('aria-label'), label: el.getAttribute('label') })"
+                )
+                logger.info(f"[histovec] input[{i}]: {attrs}")
+
+            # Chercher et cliquer sur un bouton "Propriétaire" ou "Accéder" si présent
+            for btn_text in ["propriétaire", "Propriétaire", "Accéder", "accéder", "Connexion"]:
+                btn = page.get_by_text(btn_text, exact=False).first
+                if await btn.count() > 0:
+                    try:
+                        await btn.click(timeout=3000)
+                        await asyncio.sleep(2)
+                        logger.info(f"[histovec] Cliqué sur '{btn_text}'")
+                        break
+                    except Exception:
+                        pass
+
+            # Attendre que les champs soient visibles
             await asyncio.sleep(2)
 
-            # Normaliser l'immatriculation (retirer tirets/espaces si besoin)
+            # Normaliser l'immatriculation
             immat_clean = immatriculation.replace("-", "").replace(" ", "").upper()
+            formule_clean = formule.replace(" ", "").upper()
 
-            # Remplir le formulaire — plusieurs stratégies de sélecteurs
-            await _fill_field(page, ["immat", "immatriculation", "plaque"], immat_clean)
-            await asyncio.sleep(0.5)
-            await _fill_field(page, ["formule", "numero_formule", "num_formule"], formule.replace(" ", "").upper())
-            await asyncio.sleep(0.5)
-            await _fill_field(page, ["nom"], nom.upper())
-            await asyncio.sleep(0.5)
+            # Remplir — stratégie 1 : par label
+            filled = await _fill_by_label(page, ["immatriculation", "immat", "plaque", "SIV"], immat_clean)
+            if not filled:
+                await _fill_by_position(page, 0, immat_clean)
+
+            await asyncio.sleep(0.3)
+
+            filled = await _fill_by_label(page, ["formule", "numéro de formule", "numero"], formule_clean)
+            if not filled:
+                await _fill_by_position(page, 1, formule_clean)
+
+            await asyncio.sleep(0.3)
+
+            filled = await _fill_by_label(page, ["nom", "titulaire"], nom.upper())
+            if not filled:
+                await _fill_by_position(page, 2, nom.upper())
+
+            await asyncio.sleep(0.3)
+
             if prenom:
-                await _fill_field(page, ["prenom"], prenom)
-                await asyncio.sleep(0.5)
+                filled = await _fill_by_label(page, ["prénom", "prenom"], prenom)
+                if not filled:
+                    await _fill_by_position(page, 3, prenom)
 
-            logger.info("Soumission du formulaire Histovec...")
-            await _submit_form(page)
-            await asyncio.sleep(3)
-            await page.wait_for_load_state("networkidle", timeout=20000)
+            # Soumettre
+            logger.info("[histovec] Soumission du formulaire...")
+            submitted = await _submit(page)
+            if not submitted:
+                logger.warning("[histovec] Bouton submit non trouvé, tentative Enter")
+                await page.keyboard.press("Enter")
 
-            # Vérifier qu'on a bien un résultat (pas une erreur)
-            page_text = await page.inner_text("body")
-            if "aucun résultat" in page_text.lower() or "aucune donnée" in page_text.lower():
-                logger.warning("Histovec : aucun résultat trouvé pour ce véhicule")
-                return None
+            await asyncio.sleep(4)
 
-            logger.info("Génération du PDF depuis la page résultat...")
+            # Attendre le chargement du résultat
+            try:
+                await page.wait_for_load_state("networkidle", timeout=15000)
+            except Exception:
+                pass
+
+            # Vérifier erreur
+            page_text = (await page.inner_text("body")).lower()
+            error_keywords = ["aucun résultat", "aucune donnée", "non trouvé", "incorrect", "invalide", "erreur"]
+            for kw in error_keywords:
+                if kw in page_text:
+                    logger.warning(f"[histovec] Erreur page: '{kw}' trouvé")
+                    return None
+
+            logger.info("[histovec] Génération du PDF...")
             pdf_bytes = await page.pdf(
                 format="A4",
                 print_background=True,
                 margin={"top": "10mm", "bottom": "10mm", "left": "10mm", "right": "10mm"},
             )
+            logger.info(f"[histovec] PDF généré ({len(pdf_bytes)} bytes)")
             return pdf_bytes
 
         except Exception as e:
-            logger.error(f"Erreur Playwright Histovec: {e}")
+            logger.error(f"[histovec] Erreur Playwright: {e}", exc_info=True)
             return None
         finally:
             await browser.close()
 
 
-async def _fill_field(page, keywords: list[str], value: str):
-    """Tente de remplir un champ en cherchant par id, name, placeholder ou aria-label."""
+async def _fill_by_label(page: Page, keywords: list[str], value: str) -> bool:
+    """Tente de remplir un champ par label, placeholder, id ou aria-label."""
     for kw in keywords:
-        selectors = [
-            f'input[id*="{kw}"]',
-            f'input[name*="{kw}"]',
-            f'input[placeholder*="{kw}"]',
-            f'input[aria-label*="{kw}"]',
+        strategies = [
+            lambda k=kw: page.get_by_label(k, exact=False),
+            lambda k=kw: page.get_by_placeholder(k, exact=False),
+            lambda k=kw: page.locator(f'input[id*="{k}"]'),
+            lambda k=kw: page.locator(f'input[name*="{k}"]'),
+            lambda k=kw: page.locator(f'input[aria-label*="{k}"]'),
         ]
-        for sel in selectors:
+        for strategy in strategies:
             try:
-                el = page.locator(sel).first
-                if await el.count() > 0:
-                    await el.fill(value)
-                    logger.info(f"Champ '{kw}' rempli avec '{value}' via '{sel}'")
-                    return
+                loc = strategy()
+                if await loc.count() > 0:
+                    await loc.first.fill(value)
+                    logger.info(f"[histovec] Champ '{kw}' rempli avec '{value}'")
+                    return True
             except Exception:
                 continue
-    logger.warning(f"Champ non trouvé pour keywords={keywords}")
+    return False
 
 
-async def _submit_form(page):
-    """Soumet le formulaire Histovec."""
+async def _fill_by_position(page: Page, index: int, value: str) -> bool:
+    """Remplit le Nème input visible comme fallback."""
+    try:
+        inputs = page.locator("input:visible")
+        count = await inputs.count()
+        if index < count:
+            await inputs.nth(index).fill(value)
+            logger.info(f"[histovec] Fallback: input[{index}] rempli avec '{value}'")
+            return True
+    except Exception as e:
+        logger.warning(f"[histovec] Fallback input[{index}] échoué: {e}")
+    return False
+
+
+async def _submit(page: Page) -> bool:
+    """Tente de soumettre le formulaire."""
     selectors = [
         'button[type="submit"]',
         'button:has-text("Accéder")',
         'button:has-text("Consulter")',
         'button:has-text("Valider")',
+        'button:has-text("Rechercher")',
         'input[type="submit"]',
     ]
     for sel in selectors:
@@ -165,8 +183,8 @@ async def _submit_form(page):
             el = page.locator(sel).first
             if await el.count() > 0:
                 await el.click()
-                return
+                logger.info(f"[histovec] Submit via '{sel}'")
+                return True
         except Exception:
             continue
-    # Fallback : Enter sur le dernier champ rempli
-    await page.keyboard.press("Enter")
+    return False
