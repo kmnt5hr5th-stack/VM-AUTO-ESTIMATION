@@ -1,4 +1,5 @@
 import asyncio
+import base64
 import logging
 import re
 from dotenv import load_dotenv
@@ -12,6 +13,7 @@ from typing import Optional
 from curl_cffi.requests import AsyncSession
 
 import os
+from scrapers.histovec import get_histovec_pdf
 from scrapers.leboncoin import (
     LeboncoinScraper,
     _mobile_ua, _webshare_proxies,
@@ -495,3 +497,36 @@ async def scan_geo_enriched(req: GeoScanRequest):
 
     logger.info(f"[geo-enriched] Terminé — {len(enriched)} annonces enrichies")
     return {"listings": enriched, "count": len(enriched)}
+
+
+# ---------------------------------------------------------------------------
+# Histovec — OCR carte grise + rapport automatique
+# ---------------------------------------------------------------------------
+
+class HistovecRequest(BaseModel):
+    immatriculation: str
+    nom: str
+    prenom: Optional[str] = ""
+    formule: str
+
+@app.post("/histovec")
+async def histovec(req: HistovecRequest):
+    """
+    Ouvre Histovec avec Playwright, remplit le formulaire et retourne le PDF en base64.
+    Les données (nom, formule) proviennent du scan de carte grise fait à l'étape 1.
+    """
+    logger.info(f"[histovec] Démarrage pour immat={req.immatriculation} nom={req.nom}")
+
+    try:
+        pdf_bytes = await get_histovec_pdf(req.nom, req.prenom or "", req.formule, req.immatriculation)
+    except Exception as e:
+        logger.error(f"[histovec] Erreur Playwright: {e}")
+        raise HTTPException(status_code=502, detail=f"Erreur navigation Histovec: {e}")
+
+    if not pdf_bytes:
+        raise HTTPException(status_code=404, detail="Histovec n'a retourné aucun résultat pour ce véhicule")
+
+    pdf_b64 = base64.standard_b64encode(pdf_bytes).decode()
+    logger.info(f"[histovec] PDF généré ({len(pdf_bytes)} bytes)")
+
+    return {"success": True, "pdf_base64": pdf_b64}
