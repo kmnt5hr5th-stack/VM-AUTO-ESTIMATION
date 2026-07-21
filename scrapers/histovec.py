@@ -1,7 +1,11 @@
 import asyncio
+import base64
+import hashlib
 import logging
+import re
+import unicodedata
 import uuid as uuid_lib
-from datetime import datetime
+from datetime import datetime, timedelta
 
 from playwright.async_api import async_playwright
 from playwright_stealth import stealth_async
@@ -34,21 +38,23 @@ async def get_histovec_pdf(nom: str, prenom: str, formule: str, immatriculation:
     immat_siv = _format_immat_siv(immatriculation)
     formule_clean = formule.upper().replace(" ", "")
 
-    # ── Stratégie 1 : API directe ─────────────────────────────────────────
+    # prenom vide : l'API exige min 1 char
+    prenom_api = prenom.strip() if prenom and prenom.strip() else " "
+
+    # ── Stratégie 1 : API directe + téléchargement CSA officiel ──────────
     logger.info(f"[histovec] API directe — immat={immat_siv}")
     try:
-        report = await _call_api(nom, prenom, formule_clean, immat_siv)
-        if report is not None:
-            logger.info("[histovec] API OK — rendu HTML")
-            return await _render_html_report(report, nom, immat_siv)
+        result = await _call_api_and_get_csa(nom, prenom_api, formule_clean, immat_siv)
+        if result is not None:
+            return result
         else:
-            logger.warning("[histovec] Véhicule non trouvé (404)")
+            logger.warning("[histovec] Véhicule non trouvé ou données incorrectes")
             return None
     except Exception as e:
-        logger.warning(f"[histovec] API échouée ({e}) — fallback Playwright")
+        logger.warning(f"[histovec] API directe échouée ({e}) — fallback Playwright")
 
     # ── Stratégie 2 : Playwright ──────────────────────────────────────────
-    return await _get_via_playwright(nom, prenom, formule_clean, immat_siv)
+    return await _get_via_playwright(nom, prenom_api, formule_clean, immat_siv)
 
 
 # ─── API directe ─────────────────────────────────────────────────────────────
@@ -70,20 +76,38 @@ async def _get_jwt() -> str | None:
     return None
 
 
-async def _call_api(nom: str, prenom: str, formule: str, immatriculation: str) -> dict | None:
-    """POST /public/v1/report_by_data/{uuid} avec JWT Bearer token."""
+def _compute_holder_id(nom: str, prenom: str, immat: str, formule: str) -> str:
+    """Calcule le holderId Histovec (SHA-256 base64) comme le fait le frontend Vue.js."""
+    current_month = (datetime.now() - timedelta(days=7)).strftime("%Y%m")
+    raw_id = nom.upper() + prenom.upper() + immat + formule + current_month
+    # normalizeIdvAsDataPreparation: NFD → remove accents → lowercase → keep only a-z0-9
+    no_accent = unicodedata.normalize("NFD", raw_id[:510])
+    no_accent = "".join(c for c in no_accent if unicodedata.category(c) != "Mn")
+    normalized = re.sub(r"[^0-9a-z]", "", no_accent.lower())
+    return base64.b64encode(hashlib.sha256(normalized.encode()).digest()).decode()
+
+
+async def _call_api_and_get_csa(nom: str, prenom: str, formule: str, immatriculation: str) -> bytes | None:
+    """Appel API Histovec + téléchargement du CSA officiel (PDF).
+
+    Flow :
+    1. GET JWT via /get_token
+    2. POST /report_by_data/{userId} → vérifie les données
+    3. GET /get_csa/{userId}/{holderId} → télécharge le PDF officiel
+    """
     token = await _get_jwt()
     if not token:
         raise Exception("Impossible d'obtenir le JWT Histovec")
 
-    request_id = str(uuid_lib.uuid4())
+    user_id = str(uuid_lib.uuid4())
+    holder_id = _compute_holder_id(nom, prenom, immatriculation, formule)
+
     payload = {
         "nom": nom.upper(),
-        "prenom": prenom.strip() if prenom else "",
+        "prenom": prenom,
         "numeroFormule": formule,
         "immat": immatriculation,
     }
-
     headers = {
         "Authorization": f"Bearer {token}",
         "Content-Type": "application/json",
@@ -94,25 +118,38 @@ async def _call_api(nom: str, prenom: str, formule: str, immatriculation: str) -
     }
 
     async with AsyncSession(impersonate="chrome120") as s:
+        logger.info(f"[histovec-api] POST report_by_data — userId={user_id} holderId={holder_id[:20]}…")
         r = await s.post(
-            f"{HISTOVEC_PUBLIC_API}/report_by_data/{request_id}",
+            f"{HISTOVEC_PUBLIC_API}/report_by_data/{user_id}",
             json=payload,
             headers=headers,
             timeout=30,
         )
+        logger.info(f"[histovec-api] report_by_data → HTTP {r.status_code}")
 
-    logger.info(f"[histovec-api] HTTP {r.status_code} — payload={payload}")
+        if r.status_code == 404:
+            logger.warning(f"[histovec-api] Véhicule non trouvé: {r.text[:300]}")
+            return None
+        if r.status_code != 200:
+            logger.warning(f"[histovec-api] Erreur {r.status_code}: {r.text[:300]}")
+            raise Exception(f"HTTP {r.status_code}")
 
-    if r.status_code == 200:
-        data = r.json()
-        logger.info(f"[histovec-api] Réponse OK ({len(str(data))} chars)")
-        return data
-    elif r.status_code == 404:
-        logger.warning(f"[histovec-api] 404: {r.text[:200]}")
-        return None
-    else:
-        logger.warning(f"[histovec-api] {r.status_code}: {r.text[:300]}")
-        raise Exception(f"HTTP {r.status_code}")
+        # Données OK — télécharger le CSA officiel
+        logger.info(f"[histovec-api] GET get_csa/{user_id}/{holder_id[:20]}…")
+        r_csa = await s.get(
+            f"{HISTOVEC_PUBLIC_API}/get_csa/{user_id}/{holder_id}",
+            headers={**headers, "Accept": "application/pdf,*/*"},
+            timeout=30,
+        )
+        logger.info(f"[histovec-api] get_csa → HTTP {r_csa.status_code} ({len(r_csa.content)} bytes)")
+
+        if r_csa.status_code == 200 and r_csa.content[:4] == b"%PDF":
+            logger.info("[histovec-api] CSA PDF officiel obtenu !")
+            return r_csa.content
+
+        # Fallback : rendu HTML custom avec les données JSON
+        logger.warning(f"[histovec-api] CSA non disponible ({r_csa.status_code}) — rendu HTML")
+        return await _render_html_report(r.json(), nom, immatriculation)
 
 
 # ─── Rendu HTML ──────────────────────────────────────────────────────────────
