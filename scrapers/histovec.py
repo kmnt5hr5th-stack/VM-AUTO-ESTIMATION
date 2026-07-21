@@ -154,28 +154,28 @@ async def _call_api_and_get_csa(nom: str, prenom: str, formule: str, immatricula
             logger.warning("[histovec-api] Pas de clefAcheteur dans la réponse — fallback HTML")
             return await _render_html_report(resp_json, nom, immatriculation)
 
-        # Données OK — télécharger le CSA officiel avec la clefAcheteur fournie par l'API
-        logger.info(f"[histovec-api] GET get_csa/{user_id}/{clef_acheteur}")
-        r_csa = await s.get(
-            f"{HISTOVEC_PUBLIC_API}/get_csa/{user_id}/{clef_acheteur}",
+        # Télécharger le rapport complet (immat visible) via /get_printable
+        logger.info(f"[histovec-api] GET get_printable/{user_id}/{clef_acheteur}")
+        r_rapport = await s.get(
+            f"{HISTOVEC_PUBLIC_API}/get_printable/{user_id}/{clef_acheteur}",
             headers={**headers, "Accept": "application/pdf,*/*"},
             timeout=30,
         )
         logger.info(
-            f"[histovec-api] get_csa → HTTP {r_csa.status_code} "
-            f"ct={r_csa.headers.get('content-type', '?')} "
-            f"size={len(r_csa.content)} "
-            f"first4={r_csa.content[:4]!r}"
+            f"[histovec-api] get_printable → HTTP {r_rapport.status_code} "
+            f"ct={r_rapport.headers.get('content-type', '?')} "
+            f"size={len(r_rapport.content)} "
+            f"first4={r_rapport.content[:4]!r}"
         )
 
-        if r_csa.status_code == 200 and r_csa.content[:4] == b"%PDF":
-            logger.info("[histovec-api] CSA PDF officiel obtenu !")
-            return r_csa.content
+        if r_rapport.status_code == 200 and r_rapport.content[:4] == b"%PDF":
+            logger.info("[histovec-api] Rapport PDF complet obtenu !")
+            return r_rapport.content
 
         logger.warning(
-            f"[histovec-api] get_csa pas un PDF → body[:300]={r_csa.content[:300]!r}"
+            f"[histovec-api] get_printable pas un PDF → body[:300]={r_rapport.content[:300]!r}"
         )
-        logger.warning(f"[histovec-api] CSA non disponible ({r_csa.status_code}) — fallback HTML")
+        logger.warning(f"[histovec-api] Rapport non disponible ({r_rapport.status_code}) — fallback HTML")
         return await _render_html_report(resp_json, nom, immatriculation)
 
 
