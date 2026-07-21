@@ -6,6 +6,7 @@ import re
 import unicodedata
 import uuid as uuid_lib
 from datetime import datetime, timedelta
+from urllib.parse import quote
 
 from playwright.async_api import async_playwright
 from playwright_stealth import stealth_async
@@ -135,13 +136,20 @@ async def _call_api_and_get_csa(nom: str, prenom: str, formule: str, immatricula
             raise Exception(f"HTTP {r.status_code}")
 
         # Données OK — télécharger le CSA officiel
-        logger.info(f"[histovec-api] GET get_csa/{user_id}/{holder_id[:20]}…")
+        # holder_id est en base64 (contient +, /, =) → URL-encoder pour le path
+        holder_id_encoded = quote(holder_id, safe="")
+        logger.info(f"[histovec-api] GET get_csa/{user_id}/{holder_id_encoded[:20]}… (holderId brut={holder_id})")
         r_csa = await s.get(
-            f"{HISTOVEC_PUBLIC_API}/get_csa/{user_id}/{holder_id}",
+            f"{HISTOVEC_PUBLIC_API}/get_csa/{user_id}/{holder_id_encoded}",
             headers={**headers, "Accept": "application/pdf,*/*"},
             timeout=30,
         )
-        logger.info(f"[histovec-api] get_csa → HTTP {r_csa.status_code} ({len(r_csa.content)} bytes)")
+        logger.info(
+            f"[histovec-api] get_csa → HTTP {r_csa.status_code} "
+            f"ct={r_csa.headers.get('content-type', '?')} "
+            f"size={len(r_csa.content)} "
+            f"first4={r_csa.content[:4]!r}"
+        )
 
         if r_csa.status_code == 200 and r_csa.content[:4] == b"%PDF":
             logger.info("[histovec-api] CSA PDF officiel obtenu !")
