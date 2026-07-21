@@ -621,6 +621,140 @@ async def histovec_debug_full(req: HistovecRequest):
     return result
 
 
+@app.post("/histovec-intercept")
+async def histovec_intercept(req: HistovecRequest):
+    """Playwright: intercepte les requêtes réseau lors du téléchargement CSA propriétaire."""
+    from playwright.async_api import async_playwright
+    from playwright_stealth import stealth_async
+
+    immat_siv_clean = req.immatriculation.upper().replace(" ", "")
+    formule_clean = req.formule.upper().replace(" ", "")
+    prenom = req.prenom.strip() if req.prenom else ""
+
+    captured = []
+
+    async with async_playwright() as p:
+        browser = await p.chromium.launch(
+            headless=True,
+            args=["--no-sandbox", "--disable-setuid-sandbox", "--disable-dev-shm-usage"],
+        )
+        context = await browser.new_context(
+            user_agent=(
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+            ),
+            viewport={"width": 1280, "height": 900},
+            locale="fr-FR",
+        )
+        page = await context.new_page()
+        await stealth_async(page)
+
+        # Intercepter tous les appels réseau
+        async def on_request(request):
+            url = request.url
+            if "histovec" in url or "interieur.gouv.fr" in url:
+                captured.append({
+                    "type": "request",
+                    "method": request.method,
+                    "url": url,
+                    "post_data": request.post_data,
+                })
+
+        async def on_response(response):
+            url = response.url
+            if "get_csa" in url or "pdf" in url.lower() or "certificat" in url.lower():
+                try:
+                    body = await response.body()
+                    captured.append({
+                        "type": "response",
+                        "url": url,
+                        "status": response.status,
+                        "content_type": response.headers.get("content-type", "?"),
+                        "size": len(body),
+                        "is_pdf": body[:4] == b"%PDF",
+                        "preview": body[:100].decode(errors="replace"),
+                    })
+                except Exception as e:
+                    captured.append({"type": "response_error", "url": url, "error": str(e)})
+
+        page.on("request", on_request)
+        page.on("response", on_response)
+
+        await page.goto("https://histovec.interieur.gouv.fr/histovec/", wait_until="domcontentloaded", timeout=30000)
+        await asyncio.sleep(4)
+
+        # Cliquer sur "Propriétaire" si bouton présent
+        for txt in ["Propriétaire", "propriétaire", "Je suis le propriétaire"]:
+            try:
+                btn = page.get_by_text(txt, exact=False).first
+                if await btn.count() > 0:
+                    await btn.click(timeout=3000)
+                    await asyncio.sleep(2)
+                    break
+            except Exception:
+                pass
+
+        # Remplir le formulaire
+        for kws, val in [
+            (["immatriculation", "immat", "SIV"], immat_siv_clean),
+            (["formule", "numeroFormule", "numéro de formule"], formule_clean),
+            (["nom"], req.nom.upper()),
+            (["prénom", "prenom"], prenom),
+        ]:
+            for kw in kws:
+                for loc in [
+                    page.get_by_label(kw, exact=False),
+                    page.get_by_placeholder(kw, exact=False),
+                    page.locator(f'input[id*="{kw}"]'),
+                    page.locator(f'input[name*="{kw}"]'),
+                ]:
+                    try:
+                        if await loc.count() > 0:
+                            await loc.first.fill(val)
+                            break
+                    except Exception:
+                        pass
+            await asyncio.sleep(0.2)
+
+        # Soumettre
+        for sel in ['button[type="submit"]', 'button:has-text("Accéder")', 'button:has-text("Consulter")']:
+            try:
+                el = page.locator(sel).first
+                if await el.count() > 0:
+                    await el.click()
+                    break
+            except Exception:
+                pass
+
+        await asyncio.sleep(10)
+        try:
+            await page.wait_for_load_state("networkidle", timeout=20000)
+        except Exception:
+            pass
+        await asyncio.sleep(3)
+
+        # Chercher bouton télécharger CSA
+        for txt in ["Télécharger", "télécharger", "CSA", "certificat", "Certificat", "situation administrative"]:
+            try:
+                btn = page.get_by_text(txt, exact=False).first
+                if await btn.count() > 0:
+                    await btn.click(timeout=3000)
+                    await asyncio.sleep(5)
+                    break
+            except Exception:
+                pass
+
+        # Screenshot final
+        screenshot = await page.screenshot(full_page=True)
+        await browser.close()
+
+    return {
+        "captured_requests": [c for c in captured if c["type"] == "request"],
+        "captured_responses": [c for c in captured if c["type"] != "request"],
+        "screenshot_size": len(screenshot),
+    }
+
+
 @app.post("/histovec")
 async def histovec(req: HistovecRequest):
     """
