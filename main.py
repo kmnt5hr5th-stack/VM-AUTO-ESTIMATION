@@ -509,6 +509,40 @@ class HistovecRequest(BaseModel):
     prenom: Optional[str] = ""
     formule: str
 
+@app.post("/histovec-debug")
+async def histovec_debug(req: HistovecRequest):
+    """Retourne la réponse JSON brute d'Histovec pour débug des clés."""
+    from scrapers.histovec import _get_jwt, _format_immat_siv
+    import uuid as uuid_lib
+    from curl_cffi.requests import AsyncSession
+
+    immat_siv = _format_immat_siv(req.immatriculation)
+    formule_clean = req.formule.upper().replace(" ", "")
+    token = await _get_jwt()
+    if not token:
+        raise HTTPException(status_code=502, detail="Impossible d'obtenir le JWT Histovec")
+
+    payload = {
+        "nom": req.nom.upper(),
+        "prenom": req.prenom.strip() if req.prenom else "",
+        "numeroFormule": formule_clean,
+        "immat": immat_siv,
+    }
+    headers = {
+        "Authorization": f"Bearer {token}",
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+        "Origin": "https://histovec.interieur.gouv.fr",
+        "Referer": "https://histovec.interieur.gouv.fr/histovec/",
+    }
+    async with AsyncSession(impersonate="chrome120") as s:
+        r = await s.post(
+            f"https://histovec.interieur.gouv.fr/public/v1/report_by_data/{uuid_lib.uuid4()}",
+            json=payload, headers=headers, timeout=30,
+        )
+    return {"status": r.status_code, "payload_sent": payload, "response": r.json() if r.headers.get("content-type","").startswith("application/json") else r.text[:2000]}
+
+
 @app.post("/histovec")
 async def histovec(req: HistovecRequest):
     """
