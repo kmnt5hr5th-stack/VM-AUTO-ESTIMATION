@@ -10,60 +10,82 @@ from curl_cffi.requests import AsyncSession
 logger = logging.getLogger(__name__)
 
 HISTOVEC_URL = "https://histovec.interieur.gouv.fr/histovec/"
-HISTOVEC_API = "https://histovec.interieur.gouv.fr/histovec/api/v1"
+HISTOVEC_PUBLIC_API = "https://histovec.interieur.gouv.fr/public/v1"
+_HISTOVEC_LOGIN = "histovec_frontend"
+_HISTOVEC_PWD = "rpupxm1e8PN7GnQKav"
+
+
+def _format_immat_siv(immat: str) -> str:
+    """Formate l'immatriculation en format SIV (AA-123-BB)."""
+    clean = immat.upper().replace(" ", "").replace("-", "")
+    import re
+    m = re.match(r'^([A-Z]{2})(\d{3})([A-Z]{2})$', clean)
+    if m:
+        return f"{m.group(1)}-{m.group(2)}-{m.group(3)}"
+    return clean  # retourner tel quel si format non reconnu
 
 
 async def get_histovec_pdf(nom: str, prenom: str, formule: str, immatriculation: str) -> bytes | None:
     """Retourne un screenshot PNG du rapport Histovec.
 
-    Stratégie 1 : appel direct à l'API JSON d'Histovec via curl_cffi (bypass Cloudflare HTML).
-    Stratégie 2 : fallback Playwright si l'API est bloquée.
+    Utilise l'API JSON directe /public/v1/report_by_data (bypass Cloudflare).
+    Fallback : Playwright si l'API échoue.
     """
-    immat_clean = immatriculation.upper().replace(" ", "").replace("-", "")
+    immat_siv = _format_immat_siv(immatriculation)
     formule_clean = formule.upper().replace(" ", "")
 
     # ── Stratégie 1 : API directe ─────────────────────────────────────────
-    logger.info(f"[histovec] Tentative API directe — immat={immat_clean}")
+    logger.info(f"[histovec] API directe — immat={immat_siv}")
     try:
-        report = await _call_api(nom, prenom, formule_clean, immat_clean)
+        report = await _call_api(nom, prenom, formule_clean, immat_siv)
         if report is not None:
-            logger.info("[histovec] API directe OK — génération du rapport HTML")
-            return await _render_html_report(report, nom, immat_clean)
+            logger.info("[histovec] API OK — rendu HTML")
+            return await _render_html_report(report, nom, immat_siv)
         else:
-            logger.warning("[histovec] API directe: véhicule non trouvé (404)")
+            logger.warning("[histovec] Véhicule non trouvé (404)")
             return None
     except Exception as e:
-        logger.warning(f"[histovec] API directe échouée ({e}) — fallback Playwright")
+        logger.warning(f"[histovec] API échouée ({e}) — fallback Playwright")
 
     # ── Stratégie 2 : Playwright ──────────────────────────────────────────
-    return await _get_via_playwright(nom, prenom, formule_clean, immat_clean)
+    return await _get_via_playwright(nom, prenom, formule_clean, immat_siv)
 
 
 # ─── API directe ─────────────────────────────────────────────────────────────
 
+async def _get_jwt() -> str | None:
+    """Récupère le JWT token depuis l'API Histovec."""
+    async with AsyncSession(impersonate="chrome120") as s:
+        r = await s.post(
+            f"{HISTOVEC_PUBLIC_API}/get_token",
+            json={"login": _HISTOVEC_LOGIN, "password": _HISTOVEC_PWD},
+            headers={"Content-Type": "application/json", "Accept": "application/json"},
+            timeout=15,
+        )
+    if r.status_code == 200:
+        token = r.json().get("access_token")
+        logger.info(f"[histovec-api] JWT obtenu: {token[:30]}...")
+        return token
+    logger.warning(f"[histovec-api] get_token échoué: {r.status_code}")
+    return None
+
+
 async def _call_api(nom: str, prenom: str, formule: str, immatriculation: str) -> dict | None:
-    """POST /histovec/api/v1/report_by_data avec curl_cffi (fingerprint TLS Chrome)."""
+    """POST /public/v1/report_by_data/{uuid} avec JWT Bearer token."""
+    token = await _get_jwt()
+    if not token:
+        raise Exception("Impossible d'obtenir le JWT Histovec")
+
+    request_id = str(uuid_lib.uuid4())
     payload = {
-        "uuid": str(uuid_lib.uuid4()),
-        "vehicule": {
-            "certificat_immatriculation": {
-                "titulaire": {
-                    "particulier": {
-                        "nom": nom.upper(),
-                        "prenoms": [prenom.upper()] if prenom and prenom.strip() else [""],
-                    }
-                },
-                "numero_immatriculation": immatriculation,
-                "numero_formule": formule,
-            }
-        },
-        "options": {
-            "controles_techniques": True,
-            "ignore_utac_cache": False,
-        },
+        "nom": nom.upper(),
+        "prenom": prenom.strip() if prenom else "",
+        "numeroFormule": formule,
+        "immat": immatriculation,
     }
 
     headers = {
+        "Authorization": f"Bearer {token}",
         "Content-Type": "application/json",
         "Accept": "application/json",
         "Origin": "https://histovec.interieur.gouv.fr",
@@ -71,21 +93,22 @@ async def _call_api(nom: str, prenom: str, formule: str, immatriculation: str) -
         "Accept-Language": "fr-FR,fr;q=0.9",
     }
 
-    async with AsyncSession(impersonate="chrome120") as session:
-        r = await session.post(
-            f"{HISTOVEC_API}/report_by_data",
+    async with AsyncSession(impersonate="chrome120") as s:
+        r = await s.post(
+            f"{HISTOVEC_PUBLIC_API}/report_by_data/{request_id}",
             json=payload,
             headers=headers,
             timeout=30,
         )
 
-    logger.info(f"[histovec-api] HTTP {r.status_code}")
+    logger.info(f"[histovec-api] HTTP {r.status_code} — payload={payload}")
 
     if r.status_code == 200:
         data = r.json()
-        logger.info(f"[histovec-api] Réponse reçue ({len(str(data))} chars)")
+        logger.info(f"[histovec-api] Réponse OK ({len(str(data))} chars)")
         return data
     elif r.status_code == 404:
+        logger.warning(f"[histovec-api] 404: {r.text[:200]}")
         return None
     else:
         logger.warning(f"[histovec-api] {r.status_code}: {r.text[:300]}")
