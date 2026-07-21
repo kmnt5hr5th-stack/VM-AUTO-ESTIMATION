@@ -120,25 +120,16 @@ async def get_histovec_pdf(nom: str, prenom: str, formule: str, immatriculation:
                     logger.warning(f"[histovec] Erreur page: '{kw}' trouvé")
                     return None
 
-            # Forcer le mode screen (les SPAs Vue.js masquent souvent le contenu en print CSS)
-            await page.emulate_media(media="screen")
-
-            # Screenshot de debug pour voir l'état de la page
-            try:
-                screenshot = await page.screenshot(full_page=True)
-                logger.info(f"[histovec] Screenshot debug: {len(screenshot)} bytes")
-            except Exception:
-                pass
-
-            logger.info("[histovec] Génération du PDF...")
-            pdf_bytes = await page.pdf(
-                format="A4",
-                print_background=True,
-                prefer_css_page_size=False,
-                margin={"top": "10mm", "bottom": "10mm", "left": "10mm", "right": "10mm"},
+            # Screenshot pleine page — capture exactement ce qui est visible à l'écran
+            # (page.pdf() utilise toujours @media print même avec emulate_media, ce qui
+            # donne une page blanche sur les SPAs Vue.js qui masquent leur contenu en print CSS)
+            logger.info("[histovec] Capture screenshot pleine page...")
+            screenshot_bytes = await page.screenshot(
+                full_page=True,
+                type="png",
             )
-            logger.info(f"[histovec] PDF généré ({len(pdf_bytes)} bytes)")
-            return pdf_bytes
+            logger.info(f"[histovec] Screenshot: {len(screenshot_bytes)} bytes")
+            return screenshot_bytes
 
         except Exception as e:
             logger.error(f"[histovec] Erreur Playwright: {e}", exc_info=True)

@@ -527,6 +527,6 @@ async def histovec(req: HistovecRequest):
         raise HTTPException(status_code=404, detail="Histovec n'a retourné aucun résultat pour ce véhicule")
 
     pdf_b64 = base64.standard_b64encode(pdf_bytes).decode()
-    logger.info(f"[histovec] PDF généré ({len(pdf_bytes)} bytes)")
+    logger.info(f"[histovec] Fichier généré ({len(pdf_bytes)} bytes)")
 
-    return {"success": True, "pdf_base64": pdf_b64}
+    return {"success": True, "pdf_base64": pdf_b64, "content_type": "image/png"}
