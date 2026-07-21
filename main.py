@@ -596,9 +596,17 @@ async def histovec_debug_full(req: HistovecRequest):
         except Exception:
             result["report_text"] = r.text[:1000]
 
-        # get_csa
+        # Extraire clefAcheteur de la réponse
+        try:
+            resp_json = r.json()
+        except Exception:
+            resp_json = {}
+        clef_acheteur = (resp_json.get("hubimmat") or {}).get("clefAcheteur", "")
+        result["clef_acheteur"] = clef_acheteur
+
+        # get_csa avec clefAcheteur (pas holderId calculé)
         r_csa = await s.get(
-            f"https://histovec.interieur.gouv.fr/public/v1/get_csa/{user_id}/{holder_id_encoded}",
+            f"https://histovec.interieur.gouv.fr/public/v1/get_csa/{user_id}/{clef_acheteur}",
             headers={**headers, "Accept": "application/pdf,*/*"},
             timeout=30,
         )

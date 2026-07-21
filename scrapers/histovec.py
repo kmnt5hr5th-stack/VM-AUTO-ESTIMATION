@@ -137,21 +137,27 @@ async def _call_api_and_get_csa(nom: str, prenom: str, formule: str, immatricula
             raise Exception(f"HTTP {r.status_code}")
 
         # Vérifier que la réponse contient des données véhicule réelles
+        # Structure : { "hubimmat": { "vehicule": {...}, "clefAcheteur": "uuid", ... } }
         try:
             resp_json = r.json()
         except Exception:
             resp_json = {}
-        vehicule_data = resp_json.get("vehicule") or {}
+        hubimmat = resp_json.get("hubimmat") or {}
+        vehicule_data = hubimmat.get("vehicule") or {}
+        clef_acheteur = hubimmat.get("clefAcheteur")
+
         if not vehicule_data:
             logger.warning("[histovec-api] report_by_data: aucune donnée véhicule → données incorrectes ou véhicule absent")
             return None
 
-        # Données OK — télécharger le CSA officiel
-        # holder_id est en base64 (contient +, /, =) → URL-encoder pour le path
-        holder_id_encoded = quote(holder_id, safe="")
-        logger.info(f"[histovec-api] GET get_csa/{user_id}/{holder_id_encoded[:20]}… (holderId brut={holder_id})")
+        if not clef_acheteur:
+            logger.warning("[histovec-api] Pas de clefAcheteur dans la réponse — fallback HTML")
+            return await _render_html_report(resp_json, nom, immatriculation)
+
+        # Données OK — télécharger le CSA officiel avec la clefAcheteur fournie par l'API
+        logger.info(f"[histovec-api] GET get_csa/{user_id}/{clef_acheteur}")
         r_csa = await s.get(
-            f"{HISTOVEC_PUBLIC_API}/get_csa/{user_id}/{holder_id_encoded}",
+            f"{HISTOVEC_PUBLIC_API}/get_csa/{user_id}/{clef_acheteur}",
             headers={**headers, "Accept": "application/pdf,*/*"},
             timeout=30,
         )
@@ -166,12 +172,10 @@ async def _call_api_and_get_csa(nom: str, prenom: str, formule: str, immatricula
             logger.info("[histovec-api] CSA PDF officiel obtenu !")
             return r_csa.content
 
-        # Log détaillé pour diagnostic
         logger.warning(
             f"[histovec-api] get_csa pas un PDF → body[:300]={r_csa.content[:300]!r}"
         )
-        # Fallback : rendu HTML custom avec les données JSON
-        logger.warning(f"[histovec-api] CSA non disponible ({r_csa.status_code}) — rendu HTML")
+        logger.warning(f"[histovec-api] CSA non disponible ({r_csa.status_code}) — fallback HTML")
         return await _render_html_report(resp_json, nom, immatriculation)
 
 
