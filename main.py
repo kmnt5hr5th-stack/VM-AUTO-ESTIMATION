@@ -543,6 +543,76 @@ async def histovec_debug(req: HistovecRequest):
     return {"status": r.status_code, "payload_sent": payload, "response": r.json() if r.headers.get("content-type","").startswith("application/json") else r.text[:2000]}
 
 
+@app.post("/histovec-debug-full")
+async def histovec_debug_full(req: HistovecRequest):
+    """Debug complet : report_by_data + get_csa avec logs de chaque étape."""
+    from scrapers.histovec import _get_jwt, _format_immat_siv, _compute_holder_id
+    import uuid as uuid_lib
+    from urllib.parse import quote
+    from curl_cffi.requests import AsyncSession
+
+    immat_siv = _format_immat_siv(req.immatriculation)
+    formule_clean = req.formule.upper().replace(" ", "")
+    prenom_api = req.prenom.strip() if req.prenom and req.prenom.strip() else " "
+
+    token = await _get_jwt()
+    if not token:
+        raise HTTPException(status_code=502, detail="JWT échoué")
+
+    user_id = str(uuid_lib.uuid4())
+    holder_id = _compute_holder_id(req.nom, prenom_api, immat_siv, formule_clean)
+    holder_id_encoded = quote(holder_id, safe="")
+
+    payload = {
+        "nom": req.nom.upper(),
+        "prenom": prenom_api,
+        "numeroFormule": formule_clean,
+        "immat": immat_siv,
+    }
+    headers = {
+        "Authorization": f"Bearer {token}",
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+        "Origin": "https://histovec.interieur.gouv.fr",
+        "Referer": "https://histovec.interieur.gouv.fr/histovec/",
+    }
+
+    result = {
+        "immat_siv": immat_siv,
+        "holder_id": holder_id,
+        "holder_id_encoded": holder_id_encoded,
+        "payload_sent": payload,
+    }
+
+    async with AsyncSession(impersonate="chrome120") as s:
+        r = await s.post(
+            f"https://histovec.interieur.gouv.fr/public/v1/report_by_data/{user_id}",
+            json=payload, headers=headers, timeout=30,
+        )
+        result["report_status"] = r.status_code
+        result["report_ct"] = r.headers.get("content-type", "?")
+        try:
+            result["report_json"] = r.json()
+        except Exception:
+            result["report_text"] = r.text[:1000]
+
+        # get_csa
+        r_csa = await s.get(
+            f"https://histovec.interieur.gouv.fr/public/v1/get_csa/{user_id}/{holder_id_encoded}",
+            headers={**headers, "Accept": "application/pdf,*/*"},
+            timeout=30,
+        )
+        result["csa_status"] = r_csa.status_code
+        result["csa_ct"] = r_csa.headers.get("content-type", "?")
+        result["csa_size"] = len(r_csa.content)
+        result["csa_first4"] = r_csa.content[:4].decode(errors="replace")
+        result["csa_is_pdf"] = r_csa.content[:4] == b"%PDF"
+        if not result["csa_is_pdf"]:
+            result["csa_body_preview"] = r_csa.content[:500].decode(errors="replace")
+
+    return result
+
+
 @app.post("/histovec")
 async def histovec(req: HistovecRequest):
     """

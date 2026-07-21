@@ -127,6 +127,7 @@ async def _call_api_and_get_csa(nom: str, prenom: str, formule: str, immatricula
             timeout=30,
         )
         logger.info(f"[histovec-api] report_by_data → HTTP {r.status_code}")
+        logger.info(f"[histovec-api] report_by_data body[:500] = {r.text[:500]}")
 
         if r.status_code == 404:
             logger.warning(f"[histovec-api] Véhicule non trouvé: {r.text[:300]}")
@@ -134,6 +135,16 @@ async def _call_api_and_get_csa(nom: str, prenom: str, formule: str, immatricula
         if r.status_code != 200:
             logger.warning(f"[histovec-api] Erreur {r.status_code}: {r.text[:300]}")
             raise Exception(f"HTTP {r.status_code}")
+
+        # Vérifier que la réponse contient des données véhicule réelles
+        try:
+            resp_json = r.json()
+        except Exception:
+            resp_json = {}
+        vehicule_data = resp_json.get("vehicule") or {}
+        if not vehicule_data:
+            logger.warning("[histovec-api] report_by_data: aucune donnée véhicule → données incorrectes ou véhicule absent")
+            return None
 
         # Données OK — télécharger le CSA officiel
         # holder_id est en base64 (contient +, /, =) → URL-encoder pour le path
@@ -155,9 +166,13 @@ async def _call_api_and_get_csa(nom: str, prenom: str, formule: str, immatricula
             logger.info("[histovec-api] CSA PDF officiel obtenu !")
             return r_csa.content
 
+        # Log détaillé pour diagnostic
+        logger.warning(
+            f"[histovec-api] get_csa pas un PDF → body[:300]={r_csa.content[:300]!r}"
+        )
         # Fallback : rendu HTML custom avec les données JSON
         logger.warning(f"[histovec-api] CSA non disponible ({r_csa.status_code}) — rendu HTML")
-        return await _render_html_report(r.json(), nom, immatriculation)
+        return await _render_html_report(resp_json, nom, immatriculation)
 
 
 # ─── Rendu HTML ──────────────────────────────────────────────────────────────
