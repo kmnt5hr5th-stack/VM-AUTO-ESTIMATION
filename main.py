@@ -101,11 +101,13 @@ class EstimationRequest(BaseModel):
 
 
 @app.get("/")
+@app.head("/")
 async def root():
     return {"status": "ok", "service": "VM Auto Estimation API", "version": "1.0.0"}
 
 
 @app.get("/health")
+@app.head("/health")
 async def health():
     return {"status": "healthy"}
 
