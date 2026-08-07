@@ -102,13 +102,13 @@ def get_discount_rate(
 ) -> tuple[float, str]:
     """Retourne (multiplicateur, raison).
 
-    Framework :
-      SUV premium      → -20%  (forte demande, prix stables)
-      SUV standard     → -19%  (bonne demande)
-      Citadine/volume  → -14%  (marché liquide)
-      Berline/standard → -15%  (défaut)
+    Framework (prix LeBonCoin = prix vente particulier, pas prix rachat) :
+      Moteur à risque  → -48%  (PureTech/EcoBoost — défauts connus)
+      SUV premium      → -22%  (forte demande mais prix reconditionnement élevé)
+      SUV standard     → -25%  (bonne demande, marché concurrentiel)
+      Citadine/volume  → -33%  (marché saturé, faibles marges)
+      Berline/standard → -30%  (défaut)
       Boîte manuelle   → -3%   supplémentaire
-      Moteur à risque  → -25%  supplémentaire
     """
     is_manual = boite and any(
         w in boite.lower() for w in ["mecanique", "mécanique", "manuelle", "bvm", "bm"]
@@ -121,44 +121,44 @@ def get_discount_rate(
     if motorisation:
         m = motorisation.lower().replace("-", " ").replace("_", " ")
         if any(k in m for k in WEAK_ENGINE_KEYWORDS):
-            base = 0.75
-            label = "Moteur à risque (PureTech/EcoBoost) - 25%"
+            base = 0.52
+            label = "Moteur à risque (PureTech/EcoBoost) - 48%"
             if is_manual:
                 return round(base * 0.97, 4), label + " + boîte manuelle - 3%"
             return base, label
 
-    # 2. SUV premium → -5%
+    # 2. SUV premium → -22%
     for brand, suvs in PREMIUM_SUVS.items():
         if brand == marque_up:
             for suv in suvs:
                 if suv in modele_up:
-                    base, label = 0.80, f"SUV premium ({marque} {suv.title()}) - 20%"
+                    base, label = 0.78, f"SUV premium ({marque} {suv.title()}) - 22%"
                     if is_manual:
                         return round(base * 0.97, 4), label + " + boîte manuelle - 3%"
                     return base, label
 
-    # 3. SUV standard → -8%
+    # 3. SUV standard → -25%
     for brand, suvs in STANDARD_SUVS.items():
         if brand == marque_up:
             for suv in suvs:
                 if suv in modele_up:
-                    base, label = 0.81, f"SUV standard ({marque} {suv.title()}) - 19%"
+                    base, label = 0.75, f"SUV standard ({marque} {suv.title()}) - 25%"
                     if is_manual:
                         return round(base * 0.97, 4), label + " + boîte manuelle - 3%"
                     return base, label
 
-    # 4. Citadine/volume → -10%
+    # 4. Citadine/volume → -33%
     for brand, cars in CITY_CARS.items():
         if brand == marque_up:
             for car in cars:
                 if car in modele_up:
-                    base, label = 0.86, f"Citadine ({marque} {car.title()}) - 14%"
+                    base, label = 0.67, f"Citadine ({marque} {car.title()}) - 33%"
                     if is_manual:
                         return round(base * 0.97, 4), label + " + boîte manuelle - 3%"
                     return base, label
 
-    # 5. Berline/break/standard → -12%
-    base, label = 0.85, "Berline/standard - 15%"
+    # 5. Berline/break/standard → -30%
+    base, label = 0.70, "Berline/standard - 30%"
     if is_manual:
         return round(base * 0.97, 4), label + " + boîte manuelle - 3%"
     return base, label
