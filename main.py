@@ -153,7 +153,7 @@ async def estimation(req: EstimationRequest):
 
     # 2. Fallback AutoScout24 + La Centrale si LBC n'a rien retourné
     if not all_prices:
-        logger.info("LBC vide — fallback AutoScout24 + La Centrale (correction marché FR -15%)")
+        logger.info("LBC vide — fallback AutoScout24 + La Centrale")
         fallback_scrapers = [AutoScout24Scraper(), LaCentraleScraper()]
         tasks = [
             s.get_prices(marque_search, req.modele, req.annee, req.kilometrage, **scraper_args)
