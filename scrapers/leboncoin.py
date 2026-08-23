@@ -146,8 +146,10 @@ def _match_gear(attr_val: str, boite: str) -> bool:
     return boite_norm in v
 
 
-def _extract_prix(ads: list, modele: str, carburant: str = None, boite: str = None) -> list[int]:
+def _extract_prix(ads: list, modele: str, marque: str = None, carburant: str = None,
+                   boite: str = None, target_hp: int = None) -> list[int]:
     modele_lower = (modele or "").lower()
+    marque_lower = (marque or "").lower()
     VARIANTS = ["stepway", "stepway 2", "rs", "sport", "gt"]
     exclude = [v for v in VARIANTS if v not in modele_lower]
     prix = []
@@ -156,17 +158,37 @@ def _extract_prix(ads: list, modele: str, carburant: str = None, boite: str = No
         if any(v in title for v in exclude):
             continue
 
-        if carburant or boite:
-            attrs = {a["key"]: a.get("value_label", a.get("value", ""))
-                     for a in ad.get("attributes", [])}
-            if carburant:
-                fuel_val = str(attrs.get("fuel", ""))
-                if fuel_val and not _match_fuel(fuel_val, carburant):
-                    continue
-            if boite:
-                gear_val = str(attrs.get("gearbox", ""))
-                if gear_val and not _match_gear(gear_val, boite):
-                    continue
+        attrs = {a["key"]: a.get("value_label", a.get("value", ""))
+                 for a in ad.get("attributes", [])}
+
+        # Vérification stricte marque + modèle depuis les attributs LBC
+        if marque_lower:
+            brand_attr = str(attrs.get("brand", "")).lower()
+            if brand_attr and marque_lower not in brand_attr and brand_attr not in marque_lower:
+                continue
+        if modele_lower:
+            model_attr = str(attrs.get("model", "")).lower()
+            if model_attr and modele_lower not in model_attr and model_attr not in modele_lower:
+                continue
+
+        if carburant:
+            fuel_val = str(attrs.get("fuel", ""))
+            if fuel_val and not _match_fuel(fuel_val, carburant):
+                continue
+        if boite:
+            gear_val = str(attrs.get("gearbox", ""))
+            if gear_val and not _match_gear(gear_val, boite):
+                continue
+
+        # Filtre HP post-hoc (filet de sécurité si le filtre API laisse passer des cas limites)
+        if target_hp:
+            hp_raw = attrs.get("horse_power_din") or attrs.get("power") or ""
+            try:
+                hp = int(re.sub(r"[^\d]", "", str(hp_raw))) if hp_raw else None
+            except (ValueError, TypeError):
+                hp = None
+            if hp and abs(hp - target_hp) > 20:
+                continue
 
         raw = ad.get("price", [])
         p = raw[0] if isinstance(raw, list) and raw else (raw if isinstance(raw, (int, float)) else None)
@@ -194,7 +216,8 @@ class LeboncoinScraper(BaseScraper):
             raise Exception("DataDome 403")
         if not r.ok:
             raise Exception(f"API {r.status_code}")
-        return _extract_prix(r.json().get("ads", []), modele, carburant=carburant, boite=boite)
+        return _extract_prix(r.json().get("ads", []), modele, marque=marque,
+                             carburant=carburant, boite=boite, target_hp=target_hp)
 
     async def _playwright_search(self, marque, modele, annee, km,
                                   carburant=None, boite=None, type_vehicule=None,
@@ -241,7 +264,8 @@ class LeboncoinScraper(BaseScraper):
                 if result["status"] != 200:
                     return []
                 ads = result["data"].get("ads", [])
-                prix = _extract_prix(ads, modele, carburant=carburant, boite=boite)
+                prix = _extract_prix(ads, modele, marque=marque, carburant=carburant,
+                                     boite=boite, target_hp=target_hp)
                 logger.info(f"[leboncoin] Playwright → {len(prix)} prix")
                 return prix
             except Exception as e:
