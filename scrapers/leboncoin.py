@@ -100,7 +100,7 @@ def _build_lbc_payload(marque, modele, annee, km, page=1, carburant=None, boite=
     cat_id = "5" if is_util else "2"
     ranges: dict = {
         "regdate": {"min": annee - 1, "max": annee + 1},
-        "mileage": {"min": max(0, km - 15_000), "max": km + 15_000},
+        "mileage": {"min": max(0, km - 10_000), "max": km + 10_000},
     }
     if target_hp:
         ranges["horse_power_din"] = {"min": target_hp - 5, "max": target_hp + 5}

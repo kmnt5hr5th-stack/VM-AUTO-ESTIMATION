@@ -37,6 +37,23 @@ PREMIUM_SUVS: dict[str, list[str]] = {
     "DS":          ["DS 7", "DS7"],
 }
 
+PREMIUM_SEDANS: dict[str, list[str]] = {
+    "AUDI":      ["A1", "A3", "A4", "A5", "A6", "A7", "A8", "TT", "TTS", "TTRS"],
+    "BMW":       ["SERIE 1", "SERIE 2", "SERIE 3", "SERIE 4", "SERIE 5", "SERIE 6", "SERIE 7",
+                  "SERIE 8", "M2", "M3", "M4", "M5", "Z4", "I3", "I4", "I8"],
+    "MERCEDES":  ["CLASSE A", "CLASSE B", "CLASSE C", "CLASSE E", "CLASSE S",
+                  "CLA", "CLS", "SL", "SLK", "AMG", "EQA", "EQB", "EQC", "EQE", "EQS"],
+    "VOLKSWAGEN": ["PASSAT", "ARTEON", "CC", "PHAETON"],
+    "VOLVO":     ["S60", "S90", "V60", "V90"],
+    "LEXUS":     ["IS", "ES", "GS", "LS", "RC", "LC", "CT"],
+    "JAGUAR":    ["XE", "XF", "XJ", "F-TYPE"],
+    "PORSCHE":   ["911", "718", "PANAMERA", "TAYCAN"],
+    "MASERATI":  ["GHIBLI", "QUATTROPORTE", "GRECALE"],
+    "GENESIS":   ["G70", "G80", "G90"],
+    "ALFA ROMEO": ["GIULIA", "GIULIETTA", "BRERA", "159", "156"],
+    "DS":        ["DS 4", "DS4", "DS 9", "DS9"],
+}
+
 STANDARD_SUVS: dict[str, list[str]] = {
     "RENAULT":    ["KADJAR", "KOLEOS", "CAPTUR", "ARKANA"],
     "PEUGEOT":    ["3008", "5008", "2008"],
@@ -137,7 +154,17 @@ def get_discount_rate(
                         return round(base * 0.97, 4), label + " + boîte manuelle - 3%"
                     return base, label
 
-    # 3. SUV standard → -8%
+    # 3. Berline premium → -20%
+    for brand, models in PREMIUM_SEDANS.items():
+        if brand == marque_up:
+            for m in models:
+                if m in modele_up:
+                    base, label = 0.72, f"Berline premium ({marque} {m.title()}) - 28%"
+                    if is_manual:
+                        return round(base * 0.97, 4), label + " + boîte manuelle - 3%"
+                    return base, label
+
+    # 4. SUV standard → -19%
     for brand, suvs in STANDARD_SUVS.items():
         if brand == marque_up:
             for suv in suvs:
@@ -147,7 +174,7 @@ def get_discount_rate(
                         return round(base * 0.97, 4), label + " + boîte manuelle - 3%"
                     return base, label
 
-    # 4. Citadine/volume → -10%
+    # 5. Citadine/volume → -14%
     for brand, cars in CITY_CARS.items():
         if brand == marque_up:
             for car in cars:
@@ -157,7 +184,7 @@ def get_discount_rate(
                         return round(base * 0.97, 4), label + " + boîte manuelle - 3%"
                     return base, label
 
-    # 5. Berline/break/standard → -12%
+    # 6. Berline/break/standard → -15%
     base, label = 0.85, "Berline/standard - 15%"
     if is_manual:
         return round(base * 0.97, 4), label + " + boîte manuelle - 3%"
@@ -180,7 +207,7 @@ def supprimer_outliers(prix: list[int]) -> list[int]:
     # (protège contre les annonces aberrantes sur petits échantillons)
     if filtered:
         med = statistics.median(filtered)
-        filtered = [p for p in filtered if p <= med * 1.30]
+        filtered = [p for p in filtered if med * 0.85 <= p <= med * 1.15]
 
     return filtered if filtered else prix
 
