@@ -152,10 +152,16 @@ def _extract_prix(ads: list, modele: str, marque: str = None, carburant: str = N
     marque_lower = (marque or "").lower()
     VARIANTS = ["stepway", "stepway 2", "rs", "sport", "gt"]
     exclude = [v for v in VARIANTS if v not in modele_lower]
+    is_coupe_search = "coup" in modele_lower.replace("é", "e")
     prix = []
     for ad in ads:
         title = ad.get("subject", "").lower()
         if any(v in title for v in exclude):
+            continue
+        # Si on cherche un Coupé, exclure les SUV standard (et vice versa)
+        if is_coupe_search and "coup" not in title.replace("é", "e"):
+            continue
+        if not is_coupe_search and "coup" in title.replace("é", "e") and "suv" not in title and modele_lower in ["glc", "gle", "q3", "q5"]:
             continue
 
         attrs = {a["key"]: a.get("value_label", a.get("value", ""))
