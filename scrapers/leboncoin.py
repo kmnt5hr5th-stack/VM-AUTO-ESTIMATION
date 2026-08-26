@@ -99,7 +99,7 @@ def _build_lbc_payload(marque, modele, annee, km, page=1, carburant=None, boite=
     is_util = type_vehicule and type_vehicule.lower() in ("utilitaire", "fourgon", "van", "camionnette")
     cat_id = "5" if is_util else "2"
     ranges: dict = {
-        "regdate": {"min": annee - 1, "max": annee + 1},
+        "regdate": {"min": annee, "max": annee},
         "mileage": {"min": max(0, km - 10_000), "max": km + 10_000},
     }
     if target_hp:
@@ -168,7 +168,8 @@ def _extract_prix(ads: list, modele: str, marque: str = None, carburant: str = N
                 continue
         if modele_lower:
             model_attr = str(attrs.get("model", "")).lower()
-            if model_attr and modele_lower not in model_attr and model_attr not in modele_lower:
+            # "Autres" = LBC fourre-tout pour les sous-versions (ex: GLC 300e) — on fait confiance au keyword
+            if model_attr and model_attr not in ("autres", "other") and modele_lower not in model_attr and model_attr not in modele_lower:
                 continue
 
         if carburant:
