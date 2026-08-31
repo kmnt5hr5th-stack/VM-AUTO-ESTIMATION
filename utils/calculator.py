@@ -114,9 +114,9 @@ def _km_penalty(kilometrage: Optional[int]) -> tuple[float, str]:
     elif kilometrage <= 200_000:
         return 0.96, " + kilométrage élevé -4%"
     elif kilometrage <= 250_000:
-        return 0.90, " + kilométrage très élevé -10%"
+        return 0.95, " + kilométrage très élevé -5%"
     else:
-        return 0.82, " + kilométrage excessif -18%"
+        return 0.88, " + kilométrage excessif -12%"
 
 
 def get_discount_rate(
