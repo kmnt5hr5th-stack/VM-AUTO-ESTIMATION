@@ -390,8 +390,8 @@ class LeboncoinScraper(BaseScraper):
         ) as browser:
             page = await browser.new_page()
             try:
-                await page.goto(HOMEPAGE, wait_until="domcontentloaded", timeout=25_000)
-                await asyncio.sleep(random.uniform(1.5, 2.5))
+                await page.goto(HOMEPAGE, wait_until="commit", timeout=20_000)
+                await asyncio.sleep(random.uniform(0.4, 0.8))
 
                 result = await page.evaluate(
                     """async ([payload, url]) => {
@@ -434,40 +434,53 @@ class LeboncoinScraper(BaseScraper):
                           motorisation=None, type_vehicule=None):
         target_hp = _extraire_cv(motorisation) if motorisation else None
 
-        # 1. Camoufox (nouveau) — proxy résidentiel, filtre km natif, boite correcte
-        logger.info("[leboncoin] Tentative Camoufox")
-        try:
-            prix = await self._camoufox_search(
-                marque, modele, annee, kilometrage,
-                carburant=carburant, boite=boite,
-                type_vehicule=type_vehicule, target_hp=target_hp,
-            )
-            if prix:
-                return prix
-            logger.info("[leboncoin] Camoufox → 0 prix, bascule sur API mobile")
-        except Exception as e:
-            logger.warning(f"[leboncoin] Camoufox échoué: {e}")
+        # Mobile API (rapide) + Camoufox (précis) en parallèle.
+        # Mobile retourne en ~5s, camoufox en ~20s.
+        # On démarre les deux et on prend les résultats camoufox si dispo dans le temps imparti,
+        # sinon on utilise les résultats mobile dès qu'ils arrivent.
+        logger.info("[leboncoin] Lancement parallèle Camoufox + API mobile")
 
-        # 2. API mobile directe (ancien système — conservé comme fallback)
-        logger.info("[leboncoin] Fallback API mobile directe")
-        try:
+        async def _mobile_all_pages():
             prix = []
             for page_num in range(1, max_pages + 1):
-                page_prices = await self._fetch_mobile_api(
-                    marque, modele, annee, kilometrage, page_num,
-                    carburant=carburant, boite=boite,
-                    type_vehicule=type_vehicule, target_hp=target_hp,
-                )
-                logger.info(f"[leboncoin] API p{page_num} → {len(page_prices)} prix")
-                prix.extend(page_prices)
-                if not page_prices:
+                try:
+                    p = await self._fetch_mobile_api(
+                        marque, modele, annee, kilometrage, page_num,
+                        carburant=carburant, boite=boite,
+                        type_vehicule=type_vehicule, target_hp=target_hp,
+                    )
+                    prix.extend(p)
+                    if not p:
+                        break
+                except Exception:
                     break
-            if prix:
-                return prix
-        except Exception as e:
-            logger.warning(f"[leboncoin] API mobile échouée: {e}")
+            return prix
 
-        # 3. Playwright (ancien système — dernier recours)
+        mobile_task   = asyncio.create_task(_mobile_all_pages())
+        camoufox_task = asyncio.create_task(self._camoufox_search(
+            marque, modele, annee, kilometrage,
+            carburant=carburant, boite=boite,
+            type_vehicule=type_vehicule, target_hp=target_hp,
+        ))
+
+        # Camoufox prioritaire mais limité à 28s — sinon on utilise mobile
+        camoufox_prix: list[int] = []
+        try:
+            camoufox_prix = await asyncio.wait_for(asyncio.shield(camoufox_task), timeout=28)
+        except (asyncio.TimeoutError, Exception) as e:
+            logger.warning(f"[leboncoin] Camoufox timeout/erreur: {e}")
+            camoufox_task.cancel()
+
+        mobile_prix = await mobile_task
+
+        if camoufox_prix:
+            logger.info(f"[leboncoin] Camoufox → {len(camoufox_prix)} prix")
+            return camoufox_prix
+        if mobile_prix:
+            logger.info(f"[leboncoin] Mobile API → {len(mobile_prix)} prix")
+            return mobile_prix
+
+        # Dernier recours : Playwright (ancien système)
         logger.info("[leboncoin] Fallback Playwright")
         try:
             prix = await self._playwright_search(
