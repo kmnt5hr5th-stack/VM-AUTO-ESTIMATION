@@ -440,11 +440,9 @@ class LeboncoinScraper(BaseScraper):
                           motorisation=None, type_vehicule=None):
         target_hp = _extraire_cv(motorisation) if motorisation else None
 
-        # Mobile API (rapide) + Camoufox (précis) en parallèle.
-        # Mobile retourne en ~5s, camoufox en ~20s.
-        # On démarre les deux et on prend les résultats camoufox si dispo dans le temps imparti,
-        # sinon on utilise les résultats mobile dès qu'ils arrivent.
-        logger.info("[leboncoin] Lancement parallèle Camoufox + API mobile")
+        # Stratégie : Mobile d'abord (5-10s), Camoufox seulement si Mobile vide/bloqué.
+        # Le Mobile utilise maintenant _build_camoufox_payload (même qualité de filtre).
+        logger.info("[leboncoin] Essai Mobile API (rapide)")
 
         async def _mobile_all_pages():
             prix = []
@@ -462,29 +460,32 @@ class LeboncoinScraper(BaseScraper):
                     break
             return prix
 
-        mobile_task   = asyncio.create_task(_mobile_all_pages())
-        camoufox_task = asyncio.create_task(self._camoufox_search(
-            marque, modele, annee, kilometrage,
-            carburant=carburant, boite=boite,
-            type_vehicule=type_vehicule, target_hp=target_hp,
-        ))
-
-        # Camoufox prioritaire mais limité à 28s — sinon on utilise mobile
-        camoufox_prix: list[int] = []
         try:
-            camoufox_prix = await asyncio.wait_for(asyncio.shield(camoufox_task), timeout=28)
-        except (asyncio.TimeoutError, Exception) as e:
-            logger.warning(f"[leboncoin] Camoufox timeout/erreur: {e}")
-            camoufox_task.cancel()
+            mobile_prix = await asyncio.wait_for(_mobile_all_pages(), timeout=20)
+        except Exception as e:
+            logger.warning(f"[leboncoin] Mobile API erreur: {e}")
+            mobile_prix = []
 
-        mobile_prix = await mobile_task
-
-        if camoufox_prix:
-            logger.info(f"[leboncoin] Camoufox → {len(camoufox_prix)} prix")
-            return camoufox_prix
         if mobile_prix:
             logger.info(f"[leboncoin] Mobile API → {len(mobile_prix)} prix")
             return mobile_prix
+
+        # Fallback : Camoufox (DataDome a bloqué le mobile ou 0 résultats)
+        logger.info("[leboncoin] Mobile vide → fallback Camoufox")
+        try:
+            camoufox_prix = await asyncio.wait_for(
+                self._camoufox_search(
+                    marque, modele, annee, kilometrage,
+                    carburant=carburant, boite=boite,
+                    type_vehicule=type_vehicule, target_hp=target_hp,
+                ),
+                timeout=30,
+            )
+            if camoufox_prix:
+                logger.info(f"[leboncoin] Camoufox → {len(camoufox_prix)} prix")
+                return camoufox_prix
+        except Exception as e:
+            logger.warning(f"[leboncoin] Camoufox erreur: {e}")
 
         # Dernier recours : Playwright (ancien système)
         logger.info("[leboncoin] Fallback Playwright")
