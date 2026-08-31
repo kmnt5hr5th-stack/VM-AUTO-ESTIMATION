@@ -100,18 +100,16 @@ WEAK_ENGINE_KEYWORDS = ["puretech", "pure tech", "ecoboost", "eco boost", "ecobo
 
 
 def _km_penalty(kilometrage: Optional[int]) -> tuple[float, str]:
-    if kilometrage is None or kilometrage <= 80_000:
+    # Le prix marché est déjà calculé sur des annonces au km proche (±10k) →
+    # la pénalité km sert uniquement à ajuster la marge pro, pas à re-déprécier le véhicule.
+    if kilometrage is None or kilometrage <= 150_000:
         return 1.0, ""
-    elif kilometrage <= 120_000:
-        return 0.96, " + kilométrage élevé -4%"
-    elif kilometrage <= 160_000:
-        return 0.88, " + kilométrage élevé -12%"
     elif kilometrage <= 200_000:
-        return 0.80, " + kilométrage très élevé -20%"
-    elif kilometrage <= 240_000:
-        return 0.70, " + kilométrage très élevé -30%"
+        return 0.96, " + kilométrage élevé -4%"
+    elif kilometrage <= 250_000:
+        return 0.90, " + kilométrage très élevé -10%"
     else:
-        return 0.58, " + kilométrage excessif -42%"
+        return 0.82, " + kilométrage excessif -18%"
 
 
 def get_discount_rate(
@@ -123,13 +121,13 @@ def get_discount_rate(
 ) -> tuple[float, str]:
     """Retourne (multiplicateur, raison).
 
-    Framework :
-      SUV premium      → -20%  (forte demande, prix stables)
-      SUV standard     → -19%  (bonne demande)
-      Citadine/volume  → -14%  (marché liquide)
-      Berline/standard → -15%  (défaut)
+    Framework (estimation attractive pour faire venir le client — ajustement en RDV) :
+      SUV premium      → -14%  (forte demande, prix stables)
+      SUV standard     → -15%  (bonne demande)
+      Citadine/volume  → -10%  (marché liquide)
+      Berline/standard → -12%  (défaut)
       Boîte manuelle   → -3%   supplémentaire
-      Moteur à risque  → -25%  supplémentaire
+      Moteur à risque  → -22%  supplémentaire
     """
     is_manual = boite and any(
         w in boite.lower() for w in ["mecanique", "mécanique", "manuelle", "bvm", "bm"]
@@ -142,54 +140,54 @@ def get_discount_rate(
     if motorisation:
         m = motorisation.lower().replace("-", " ").replace("_", " ")
         if any(k in m for k in WEAK_ENGINE_KEYWORDS):
-            base = 0.75
-            label = "Moteur à risque (PureTech/EcoBoost) - 25%"
+            base = 0.78
+            label = "Moteur à risque (PureTech/EcoBoost) - 22%"
             if is_manual:
                 return round(base * 0.97, 4), label + " + boîte manuelle - 3%"
             return base, label
 
-    # 2. SUV premium → -5%
+    # 2. SUV premium → -14%
     for brand, suvs in PREMIUM_SUVS.items():
         if brand == marque_up:
             for suv in suvs:
                 if suv in modele_up:
-                    base, label = 0.80, f"SUV premium ({marque} {suv.title()}) - 20%"
+                    base, label = 0.86, f"SUV premium ({marque} {suv.title()}) - 14%"
                     if is_manual:
                         return round(base * 0.97, 4), label + " + boîte manuelle - 3%"
                     return base, label
 
-    # 3. Berline premium → -20%
+    # 3. Berline premium → -22%
     for brand, models in PREMIUM_SEDANS.items():
         if brand == marque_up:
             for m in models:
                 if m in modele_up:
-                    base, label = 0.72, f"Berline premium ({marque} {m.title()}) - 28%"
+                    base, label = 0.78, f"Berline premium ({marque} {m.title()}) - 22%"
                     if is_manual:
                         return round(base * 0.97, 4), label + " + boîte manuelle - 3%"
                     return base, label
 
-    # 4. SUV standard → -19%
+    # 4. SUV standard → -15%
     for brand, suvs in STANDARD_SUVS.items():
         if brand == marque_up:
             for suv in suvs:
                 if suv in modele_up:
-                    base, label = 0.81, f"SUV standard ({marque} {suv.title()}) - 19%"
+                    base, label = 0.85, f"SUV standard ({marque} {suv.title()}) - 15%"
                     if is_manual:
                         return round(base * 0.97, 4), label + " + boîte manuelle - 3%"
                     return base, label
 
-    # 5. Citadine/volume → -14%
+    # 5. Citadine/volume → -10%
     for brand, cars in CITY_CARS.items():
         if brand == marque_up:
             for car in cars:
                 if car in modele_up:
-                    base, label = 0.86, f"Citadine ({marque} {car.title()}) - 14%"
+                    base, label = 0.90, f"Citadine ({marque} {car.title()}) - 10%"
                     if is_manual:
                         return round(base * 0.97, 4), label + " + boîte manuelle - 3%"
                     return base, label
 
-    # 6. Berline/break/standard → -15%
-    base, label = 0.85, "Berline/standard - 15%"
+    # 6. Berline/break/standard → -12%
+    base, label = 0.88, "Berline/standard - 12%"
     if is_manual:
         return round(base * 0.97, 4), label + " + boîte manuelle - 3%"
     return base, label
@@ -249,6 +247,13 @@ def calculate_estimation(
     km_coef, km_label = _km_penalty(kilometrage)
     prix_rachat = r100(prix_median * coef * km_coef)
     methode += km_label
+
+    # Plafond dur uniquement pour les kilométrages extrêmes
+    if kilometrage is not None:
+        if kilometrage > 300_000:
+            prix_rachat = min(prix_rachat, 3_000)
+        elif kilometrage > 250_000:
+            prix_rachat = min(prix_rachat, 5_000)
 
     return {
         "nb_annonces":      n,
