@@ -70,12 +70,19 @@ STANDARD_SUVS: dict[str, list[str]] = {
     "DACIA":      ["DUSTER"],
     "MAZDA":      ["CX-3", "CX-5", "CX-30"],
     "HONDA":      ["CR-V", "HR-V"],
-    "JEEP":       ["COMPASS", "RENEGADE", "WRANGLER"],
+    "JEEP":       ["COMPASS", "RENEGADE"],
     "MITSUBISHI": ["ECLIPSE CROSS", "OUTLANDER"],
     "SUBARU":     ["FORESTER", "XV", "OUTBACK"],
     "FIAT":       ["500X", "500 X"],
-    "ALFA ROMEO": ["TONALE"],
+}
+
+# Marques premium à entretien coûteux — difficiles à revendre pour un pro, décote plus forte
+PREMIUM_COSTLY: dict[str, list[str]] = {
     "MINI":       ["COUNTRYMAN", "CLUBMAN", "PACEMAN"],
+    "ALFA ROMEO": ["STELVIO", "TONALE", "GIULIA", "GIULIETTA"],
+    "DS":         ["DS 7", "DS7", "DS 4", "DS4", "DS 9", "DS9"],
+    "JEEP":       ["WRANGLER", "GRAND CHEROKEE"],
+    "LAND ROVER": ["DISCOVERY SPORT", "FREELANDER"],
 }
 
 CITY_CARS: dict[str, list[str]] = {
@@ -156,7 +163,17 @@ def get_discount_rate(
                         return round(base * 0.97, 4), label + " + boîte manuelle - 3%"
                     return base, label
 
-    # 3. Berline premium → -22%
+    # 3. Premium entretien coûteux (Mini, Alfa, DS, Jeep Wrangler…) → -32%
+    for brand, models in PREMIUM_COSTLY.items():
+        if brand == marque_up:
+            for m in models:
+                if m in modele_up:
+                    base, label = 0.68, f"Premium entretien coûteux ({marque} {m.title()}) - 32%"
+                    if is_manual:
+                        return round(base * 0.97, 4), label + " + boîte manuelle - 3%"
+                    return base, label
+
+    # 3b. Berline premium → -22%
     for brand, models in PREMIUM_SEDANS.items():
         if brand == marque_up:
             for m in models:
