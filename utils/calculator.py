@@ -39,7 +39,7 @@ PREMIUM_SUVS: dict[str, list[str]] = {
 
 PREMIUM_SEDANS: dict[str, list[str]] = {
     "AUDI":      ["A1", "A3", "A4", "A5", "A6", "A7", "A8", "TT", "TTS", "TTRS"],
-    "BMW":       ["SERIE 1", "SERIE 2", "SERIE 3", "SERIE 4", "SERIE 5", "SERIE 6", "SERIE 7",
+    "BMW":       ["SERIE 3", "SERIE 4", "SERIE 5", "SERIE 6", "SERIE 7",
                   "SERIE 8", "M2", "M3", "M4", "M5", "Z4", "I3", "I4", "I8"],
     "MERCEDES":  ["CLASSE A", "CLASSE B", "CLASSE C", "CLASSE E", "CLASSE S",
                   "CLA", "CLS", "SL", "SLK", "AMG", "EQA", "EQB", "EQC", "EQE", "EQS"],
