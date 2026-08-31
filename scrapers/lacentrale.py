@@ -26,12 +26,13 @@ class LaCentraleScraper(BaseScraper):
     name = "lacentrale"
 
     def _build_url(self, marque: str, modele: str, annee: int, km: int) -> str:
+        km_delta = max(30_000, int(km * 0.15)) if km > 150_000 else 10_000
         params = {
             "makesModelsCommercialNames": f"{marque.upper()}:{modele.upper()}",
             "yearMin": str(annee - 1),
             "yearMax": str(annee + 1),
-            "mileageMin": str(max(0, km - 10_000)),
-            "mileageMax": str(km + 10_000),
+            "mileageMin": str(max(0, km - km_delta)),
+            "mileageMax": str(km + km_delta),
         }
         return f"https://www.lacentrale.fr/listing?{urlencode(params, quote_via=quote)}"
 

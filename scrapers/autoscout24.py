@@ -48,7 +48,7 @@ class AutoScout24Scraper(BaseScraper):
     def _build_url(self, marque: str, modele: str, annee: int, kilometrage: int, page: int = 1, finition: Optional[str] = None, carburant: Optional[str] = None, boite: Optional[str] = None, motorisation: Optional[str] = None, type_vehicule: Optional[str] = None) -> str:
         m = _slug(marque)
         mo = _slug(modele)
-        km_delta = 15_000
+        km_delta = max(30_000, int(kilometrage * 0.15)) if kilometrage > 150_000 else 15_000
         km_min = max(0, kilometrage - km_delta)
         km_max = kilometrage + km_delta
         is_util = type_vehicule and type_vehicule.lower() in ("utilitaire", "fourgon", "van", "camionnette")

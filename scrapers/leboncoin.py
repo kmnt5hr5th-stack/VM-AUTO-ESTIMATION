@@ -98,9 +98,11 @@ def _build_lbc_payload(marque, modele, annee, km, page=1, carburant=None, boite=
             enums["gearbox"] = [gear]
     is_util = type_vehicule and type_vehicule.lower() in ("utilitaire", "fourgon", "van", "camionnette")
     cat_id = "5" if is_util else "2"
+    # Pour les hauts kilométrages, élargir la plage pour avoir assez d'annonces
+    km_delta = max(30_000, int(km * 0.15)) if km > 150_000 else 10_000
     ranges: dict = {
         "regdate": {"min": annee, "max": annee},
-        "mileage": {"min": max(0, km - 10_000), "max": km + 10_000},
+        "mileage": {"min": max(0, km - km_delta), "max": km + km_delta},
     }
     if target_hp:
         ranges["horse_power_din"] = {"min": target_hp - 5, "max": target_hp + 5}
@@ -147,7 +149,7 @@ def _match_gear(attr_val: str, boite: str) -> bool:
 
 
 def _extract_prix(ads: list, modele: str, marque: str = None, carburant: str = None,
-                   boite: str = None, target_hp: int = None) -> list[int]:
+                   boite: str = None, target_hp: int = None, km_cible: int = None) -> list[int]:
     modele_lower = (modele or "").lower()
     marque_lower = (marque or "").lower()
     VARIANTS = ["stepway", "stepway 2", "rs", "sport", "gt"]
@@ -187,6 +189,18 @@ def _extract_prix(ads: list, modele: str, marque: str = None, carburant: str = N
             if gear_val and not _match_gear(gear_val, boite):
                 continue
 
+        # Filtre km post-hoc (l'API LBC ne respecte pas toujours le filtre mileage)
+        if km_cible is not None:
+            mileage_raw = attrs.get("mileage") or attrs.get("km") or ""
+            try:
+                ad_km = int(re.sub(r"[^\d]", "", str(mileage_raw))) if mileage_raw else None
+            except (ValueError, TypeError):
+                ad_km = None
+            if ad_km is not None:
+                km_tolerance = max(40_000, int(km_cible * 0.20))
+                if abs(ad_km - km_cible) > km_tolerance:
+                    continue
+
         # Filtre HP post-hoc (filet de sécurité si le filtre API laisse passer des cas limites)
         if target_hp:
             hp_raw = attrs.get("horse_power_din") or attrs.get("power") or ""
@@ -224,7 +238,7 @@ class LeboncoinScraper(BaseScraper):
         if not r.ok:
             raise Exception(f"API {r.status_code}")
         return _extract_prix(r.json().get("ads", []), modele, marque=marque,
-                             carburant=carburant, boite=boite, target_hp=target_hp)
+                             carburant=carburant, boite=boite, target_hp=target_hp, km_cible=km)
 
     async def _playwright_search(self, marque, modele, annee, km,
                                   carburant=None, boite=None, type_vehicule=None,
@@ -272,7 +286,7 @@ class LeboncoinScraper(BaseScraper):
                     return []
                 ads = result["data"].get("ads", [])
                 prix = _extract_prix(ads, modele, marque=marque, carburant=carburant,
-                                     boite=boite, target_hp=target_hp)
+                                     boite=boite, target_hp=target_hp, km_cible=km)
                 logger.info(f"[leboncoin] Playwright → {len(prix)} prix")
                 return prix
             except Exception as e:
