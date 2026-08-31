@@ -157,6 +157,11 @@ def _build_camoufox_payload(marque, modele, annee, km, boite=None,
     ranges: dict = {"regdate": {"min": annee - 1, "max": annee + 1}}
     if _km_bas_pour_age(km, annee):
         logger.info(f"[leboncoin] Km bas pour l'âge ({km} km / {annee}) — filtre km désactivé")
+    elif km > 200_000:
+        # Peu d'annonces >200k km sur LBC — élargir pour trouver des résultats
+        ranges["mileage"] = {"min": max(0, km - 40_000), "max": km + 40_000}
+    elif km > 150_000:
+        ranges["mileage"] = {"min": max(0, km - 20_000), "max": km + 20_000}
     else:
         ranges["mileage"] = {"min": max(0, km - 10_000), "max": km + 10_000}
     if target_hp:
