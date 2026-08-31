@@ -1,3 +1,4 @@
+import asyncio
 import logging
 import uuid
 import random
@@ -37,6 +38,15 @@ def _webshare_proxies() -> dict:
     session = random.randint(1, 99999)
     proxy = f"http://{_WEBSHARE_USER}-{country}-{session}:{_WEBSHARE_PASS}@{_WEBSHARE_HOST}"
     return {"http": proxy, "https": proxy}
+
+def _camoufox_proxy() -> dict:
+    country = random.choice(["fr", "de", "gb", "nl", "be"])
+    session = random.randint(1, 99999)
+    return {
+        "server": f"http://{_WEBSHARE_HOST}",
+        "username": f"{_WEBSHARE_USER}-{country}-{session}",
+        "password": _WEBSHARE_PASS,
+    }
 
 
 def _mobile_ua() -> tuple[str, str, dict]:
@@ -118,6 +128,42 @@ def _build_lbc_payload(marque, modele, annee, km, page=1, carburant=None, boite=
         "disable_total": True,
         "extend": True,
         "listing_source": "direct-search" if page == 1 else "pagination",
+    }
+
+
+def _build_camoufox_payload(marque, modele, annee, km, boite=None,
+                             type_vehicule=None, target_hp=None) -> dict:
+    """Payload optimisé pour le navigateur camoufox — gearbox numérique, km ±10k, année ±1."""
+    GEAR_NUM = {
+        "mecanique": "1", "mécanique": "1", "manuelle": "1", "bvm": "1", "bm": "1", "manual": "1",
+        "automatique": "2", "auto": "2", "bva": "2", "dsg": "2", "edr": "2", "automatic": "2",
+    }
+    is_util = type_vehicule and type_vehicule.lower() in ("utilitaire", "fourgon", "van", "camionnette")
+    cat_id = "5" if is_util else "2"
+    enums: dict = {"ad_type": ["offer"]}
+    if boite:
+        gear = GEAR_NUM.get(boite.lower().strip())
+        if gear:
+            enums["gearbox"] = [gear]
+    ranges: dict = {
+        "regdate": {"min": annee - 1, "max": annee + 1},
+        "mileage": {"min": max(0, km - 10_000), "max": km + 10_000},
+    }
+    if target_hp:
+        ranges["horse_power_din"] = {"min": target_hp - 5, "max": target_hp + 5}
+    return {
+        "filters": {
+            "category": {"id": cat_id},
+            "enums": enums,
+            "keywords": {"text": f"{marque} {modele}"},
+            "ranges": ranges,
+        },
+        "limit": 35,
+        "limit_alu": 3,
+        "offset": 0,
+        "disable_total": False,
+        "extend": True,
+        "listing_source": "direct-search",
     }
 
 
@@ -311,13 +357,89 @@ class LeboncoinScraper(BaseScraper):
             finally:
                 await browser.close()
 
+    async def _camoufox_search(self, marque, modele, annee, km,
+                                carburant=None, boite=None, type_vehicule=None,
+                                target_hp=None) -> list[int]:
+        """Camoufox + proxy résidentiel — filtre km natif (±10k), boite numérique."""
+        try:
+            from camoufox.async_api import AsyncCamoufox
+        except ImportError:
+            raise Exception("camoufox non installé")
+
+        proxy = _camoufox_proxy()
+        payload = _build_camoufox_payload(marque, modele, annee, km, boite=boite,
+                                           type_vehicule=type_vehicule, target_hp=target_hp)
+        logger.info(f"[leboncoin] Camoufox payload: {_json.dumps(payload)[:200]}")
+
+        async with AsyncCamoufox(
+            headless=True,
+            proxy=proxy,
+            geoip=True,
+            locale="fr-FR",
+            os="windows",
+        ) as browser:
+            page = await browser.new_page()
+            try:
+                await page.goto(HOMEPAGE, wait_until="domcontentloaded", timeout=25_000)
+                await asyncio.sleep(random.uniform(1.5, 2.5))
+
+                result = await page.evaluate(
+                    """async ([payload, url]) => {
+                        try {
+                            const r = await fetch(url, {
+                                method: "POST",
+                                headers: {
+                                    "Content-Type": "application/json",
+                                    "Accept": "application/json",
+                                    "Origin": "https://www.leboncoin.fr",
+                                    "Referer": "https://www.leboncoin.fr/"
+                                },
+                                body: JSON.stringify(payload)
+                            });
+                            const data = await r.json();
+                            return {status: r.status, ads: data.ads || []};
+                        } catch(e) {
+                            return {status: 0, ads: [], error: e.toString()};
+                        }
+                    }""",
+                    [payload, API_URL]
+                )
+
+                status = result.get("status")
+                ads = result.get("ads", [])
+                logger.info(f"[leboncoin] Camoufox status={status} → {len(ads)} annonces brutes")
+
+                if status != 200:
+                    raise Exception(f"Camoufox API {status}")
+
+                prix = _extract_prix(ads, modele, marque=marque, carburant=carburant,
+                                     boite=boite, target_hp=target_hp, km_cible=km)
+                logger.info(f"[leboncoin] Camoufox → {len(prix)} prix filtrés")
+                return prix
+            finally:
+                await page.close()
+
     async def get_prices(self, marque, modele, annee, kilometrage, max_pages=2,
                           finition=None, carburant=None, boite=None,
                           motorisation=None, type_vehicule=None):
         target_hp = _extraire_cv(motorisation) if motorisation else None
 
-        # 1. API mobile directe (rapide, sans filtres carburant/boite)
-        logger.info("[leboncoin] Tentative API mobile directe")
+        # 1. Camoufox (nouveau) — proxy résidentiel, filtre km natif, boite correcte
+        logger.info("[leboncoin] Tentative Camoufox")
+        try:
+            prix = await self._camoufox_search(
+                marque, modele, annee, kilometrage,
+                carburant=carburant, boite=boite,
+                type_vehicule=type_vehicule, target_hp=target_hp,
+            )
+            if prix:
+                return prix
+            logger.info("[leboncoin] Camoufox → 0 prix, bascule sur API mobile")
+        except Exception as e:
+            logger.warning(f"[leboncoin] Camoufox échoué: {e}")
+
+        # 2. API mobile directe (ancien système — conservé comme fallback)
+        logger.info("[leboncoin] Fallback API mobile directe")
         try:
             prix = []
             for page_num in range(1, max_pages + 1):
@@ -335,8 +457,8 @@ class LeboncoinScraper(BaseScraper):
         except Exception as e:
             logger.warning(f"[leboncoin] API mobile échouée: {e}")
 
-        # 2. Playwright fallback (vrai navigateur, tous filtres)
-        logger.info("[leboncoin] Playwright fallback")
+        # 3. Playwright (ancien système — dernier recours)
+        logger.info("[leboncoin] Fallback Playwright")
         try:
             prix = await self._playwright_search(
                 marque, modele, annee, kilometrage,
