@@ -154,7 +154,7 @@ def _build_camoufox_payload(marque, modele, annee, km, boite=None,
         gear = GEAR_NUM.get(boite.lower().strip())
         if gear:
             enums["gearbox"] = [gear]
-    ranges: dict = {"regdate": {"min": annee - 1, "max": annee + 1}}
+    ranges: dict = {"regdate": {"min": annee - 1, "max": annee}}
     if _km_bas_pour_age(km, annee):
         logger.info(f"[leboncoin] Km bas pour l'âge ({km} km / {annee}) — filtre km désactivé")
     elif km > 200_000:

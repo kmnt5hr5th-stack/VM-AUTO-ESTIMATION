@@ -222,11 +222,10 @@ def supprimer_outliers(prix: list[int]) -> list[int]:
     borne_haute = q3 + 1.5 * iqr
     filtered = [p for p in prix if borne_basse <= p <= borne_haute]
 
-    # Filtre supplémentaire : exclure tout prix > 30% au-dessus de la médiane
-    # (protège contre les annonces aberrantes sur petits échantillons)
+    # Filtre asymétrique : on garde les bonnes affaires (-25%) mais on exclut les "trop en cote" (+10%)
     if filtered:
         med = statistics.median(filtered)
-        filtered = [p for p in filtered if med * 0.85 <= p <= med * 1.15]
+        filtered = [p for p in filtered if med * 0.75 <= p <= med * 1.10]
 
     return filtered if filtered else prix
 
