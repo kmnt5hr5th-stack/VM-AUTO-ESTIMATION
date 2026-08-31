@@ -245,8 +245,12 @@ def _extract_prix(ads: list, modele: str, marque: str = None, carburant: str = N
         if modele_lower:
             model_attr = str(attrs.get("model", "")).lower()
             # "Autres" = LBC fourre-tout pour les sous-versions (ex: GLC 300e) — on fait confiance au keyword
-            if model_attr and model_attr not in ("autres", "other") and modele_lower not in model_attr and model_attr not in modele_lower:
-                continue
+            if model_attr and model_attr not in ("autres", "other"):
+                # Normaliser espaces/tirets pour gérer "rav4" vs "rav 4", "a3" vs "a 3", etc.
+                modele_norm = modele_lower.replace(" ", "").replace("-", "")
+                model_attr_norm = model_attr.replace(" ", "").replace("-", "")
+                if modele_norm not in model_attr_norm and model_attr_norm not in modele_norm:
+                    continue
 
         if carburant:
             fuel_val = str(attrs.get("fuel", ""))
@@ -297,10 +301,12 @@ class LeboncoinScraper(BaseScraper):
                                  carburant=None, boite=None, type_vehicule=None,
                                  target_hp=None) -> list[int]:
         ua, impersonate, headers = _mobile_ua()
-        # Pas de filtres carburant/boite dans le payload (DataDome bloque) — filtrage post-hoc
-        payload = _build_lbc_payload(marque, modele, annee, km, page,
-                                      carburant=None, boite=None,
-                                      type_vehicule=type_vehicule, target_hp=target_hp)
+        # Utilise _build_camoufox_payload : année ±1, km ±10k, boite numérique "1"/"2"
+        # curl_cffi avec ce payload n'est pas bloqué par DataDome (~1-2s)
+        base = _build_camoufox_payload(marque, modele, annee, km, boite=boite,
+                                        type_vehicule=type_vehicule, target_hp=target_hp)
+        payload = {**base, "offset": 35 * (page - 1),
+                   "listing_source": "direct-search" if page == 1 else "pagination"}
         proxies = _webshare_proxies()
         async with AsyncSession(impersonate=impersonate, proxies=proxies) as s:
             await s.get(HOMEPAGE, headers=headers, timeout=15)
