@@ -262,8 +262,8 @@ def calculate_estimation(
 
     coef, methode = get_discount_rate(marque, modele, motorisation, finition, boite)
     km_coef, km_label = _km_penalty(kilometrage)
-    prix_rachat = r100(prix_median * coef * km_coef)
-    methode += km_label
+    prix_rachat = r100(prix_median * coef * km_coef * 0.95)
+    methode += km_label + " + marge pro -5%"
 
     # Plafond dur uniquement pour les kilométrages extrêmes
     if kilometrage is not None:
