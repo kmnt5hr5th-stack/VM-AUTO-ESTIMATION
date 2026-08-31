@@ -98,11 +98,10 @@ def _build_lbc_payload(marque, modele, annee, km, page=1, carburant=None, boite=
             enums["gearbox"] = [gear]
     is_util = type_vehicule and type_vehicule.lower() in ("utilitaire", "fourgon", "van", "camionnette")
     cat_id = "5" if is_util else "2"
-    # Pour les hauts kilométrages, élargir la plage pour avoir assez d'annonces
-    km_delta = max(30_000, int(km * 0.15)) if km > 150_000 else 10_000
+    # Pas de filtre km dans l'API — LBC l'ignore souvent et retourne
+    # des voitures hors plage. Le filtrage km est fait post-hoc dans _extract_prix.
     ranges: dict = {
         "regdate": {"min": annee, "max": annee},
-        "mileage": {"min": max(0, km - km_delta), "max": km + km_delta},
     }
     if target_hp:
         ranges["horse_power_din"] = {"min": target_hp - 5, "max": target_hp + 5}
@@ -148,6 +147,16 @@ def _match_gear(attr_val: str, boite: str) -> bool:
     return boite_norm in v
 
 
+_PROBLEM_KEYWORDS = [
+    "moteur hs", "moteur h.s", "moteur défaillant", "moteur defaillant",
+    "problème moteur", "probleme moteur", "casse moteur",
+    "pour pièces", "pour pieces", "pour piece", "a la casse",
+    "accidenté", "accidente", "epave", "épave",
+    "à réparer", "a reparer", "ne demarre pas", "ne démarre pas",
+    "hors service", "à démonter", "a demonter",
+]
+
+
 def _extract_prix(ads: list, modele: str, marque: str = None, carburant: str = None,
                    boite: str = None, target_hp: int = None, km_cible: int = None) -> list[int]:
     modele_lower = (modele or "").lower()
@@ -157,8 +166,11 @@ def _extract_prix(ads: list, modele: str, marque: str = None, carburant: str = N
     is_coupe_search = "coup" in modele_lower.replace("é", "e")
     prix = []
     for ad in ads:
-        title = ad.get("subject", "").lower()
+        title = ad.get("subject", "").lower().replace("é", "e").replace("è", "e").replace("ê", "e")
         if any(v in title for v in exclude):
+            continue
+        if any(kw in title for kw in _PROBLEM_KEYWORDS):
+            logger.debug(f"[leboncoin] Exclu (problème): {ad.get('subject', '')[:60]}")
             continue
         # Si on cherche un Coupé, exclure les SUV standard (et vice versa)
         if is_coupe_search and "coup" not in title.replace("é", "e"):
@@ -189,15 +201,19 @@ def _extract_prix(ads: list, modele: str, marque: str = None, carburant: str = N
             if gear_val and not _match_gear(gear_val, boite):
                 continue
 
-        # Filtre km post-hoc (l'API LBC ne respecte pas toujours le filtre mileage)
+        # Filtre km post-hoc — LBC API ignore souvent le filtre mileage
         if km_cible is not None:
-            mileage_raw = attrs.get("mileage") or attrs.get("km") or ""
+            # km peut être dans les attributs ou directement sur l'annonce
+            mileage_raw = (
+                attrs.get("mileage") or attrs.get("km") or
+                ad.get("mileage") or ad.get("kilometrage") or ""
+            )
             try:
                 ad_km = int(re.sub(r"[^\d]", "", str(mileage_raw))) if mileage_raw else None
             except (ValueError, TypeError):
                 ad_km = None
             if ad_km is not None:
-                km_tolerance = max(40_000, int(km_cible * 0.20))
+                km_tolerance = max(50_000, int(km_cible * 0.25))
                 if abs(ad_km - km_cible) > km_tolerance:
                     continue
 

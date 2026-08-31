@@ -83,13 +83,21 @@ class AutoScout24Scraper(BaseScraper):
         VARIANTS = ["stepway", "rs", "sport", "gt"]
         exclude = [v for v in VARIANTS if v not in modele_lower]
 
+        PROBLEM_KEYWORDS = [
+            "moteur hs", "probleme moteur", "problème moteur", "pour pieces",
+            "pour pièces", "accidente", "accidenté", "epave", "épave",
+            "a reparer", "à réparer", "hors service",
+        ]
+
         prices = []
         for m in re.finditer(r'data-source="listpage_search-results"[^>]*?data-price="(\d+)"', html):
-            # Vérifier les 600 caractères autour pour détecter une variante
+            # Vérifier les 600 caractères autour pour détecter une variante ou un problème
             start = max(0, m.start() - 600)
             end = min(len(html), m.end() + 200)
             context = html[start:end].lower()
             if any(v in context for v in exclude):
+                continue
+            if any(kw in context for kw in PROBLEM_KEYWORDS):
                 continue
             v = int(m.group(1))
             if 500 <= v <= 150_000:
