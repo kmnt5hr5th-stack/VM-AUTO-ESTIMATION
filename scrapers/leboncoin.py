@@ -1,4 +1,5 @@
 import asyncio
+import datetime
 import logging
 import uuid
 import random
@@ -131,9 +132,17 @@ def _build_lbc_payload(marque, modele, annee, km, page=1, carburant=None, boite=
     }
 
 
+def _km_bas_pour_age(km: int, annee: int) -> bool:
+    """Vrai si le km est anormalement bas pour l'âge du véhicule.
+    Base : 15 000 km/an. Si km < 50% du km attendu → pas de filtre km."""
+    age = max(1, datetime.date.today().year - annee)
+    return km < age * 15_000 * 0.5
+
+
 def _build_camoufox_payload(marque, modele, annee, km, boite=None,
                              type_vehicule=None, target_hp=None) -> dict:
-    """Payload optimisé pour le navigateur camoufox — gearbox numérique, km ±10k, année ±1."""
+    """Payload optimisé pour le navigateur camoufox — gearbox numérique, km ±10k, année ±1.
+    Si km anormalement bas pour l'âge → pas de filtre km (marché de niche)."""
     GEAR_NUM = {
         "mecanique": "1", "mécanique": "1", "manuelle": "1", "bvm": "1", "bm": "1", "manual": "1",
         "automatique": "2", "auto": "2", "bva": "2", "dsg": "2", "edr": "2", "automatic": "2",
@@ -145,10 +154,11 @@ def _build_camoufox_payload(marque, modele, annee, km, boite=None,
         gear = GEAR_NUM.get(boite.lower().strip())
         if gear:
             enums["gearbox"] = [gear]
-    ranges: dict = {
-        "regdate": {"min": annee - 1, "max": annee + 1},
-        "mileage": {"min": max(0, km - 10_000), "max": km + 10_000},
-    }
+    ranges: dict = {"regdate": {"min": annee - 1, "max": annee + 1}}
+    if _km_bas_pour_age(km, annee):
+        logger.info(f"[leboncoin] Km bas pour l'âge ({km} km / {annee}) — filtre km désactivé")
+    else:
+        ranges["mileage"] = {"min": max(0, km - 10_000), "max": km + 10_000}
     if target_hp:
         ranges["horse_power_din"] = {"min": target_hp - 5, "max": target_hp + 5}
     return {
