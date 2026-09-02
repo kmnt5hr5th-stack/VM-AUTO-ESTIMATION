@@ -395,7 +395,7 @@ class LeboncoinScraper(BaseScraper):
         async with AsyncCamoufox(
             headless=True,
             proxy=proxy,
-            geoip=False,
+            geoip=True,
             locale="fr-FR",
             os="windows",
         ) as browser:
@@ -445,8 +445,8 @@ class LeboncoinScraper(BaseScraper):
                           motorisation=None, type_vehicule=None):
         target_hp = _extraire_cv(motorisation) if motorisation else None
 
-        # TEST : Camoufox uniquement (geoip=False)
-        logger.info("[leboncoin] Camoufox uniquement (test)")
+        # TEST : Camoufox uniquement (geoip=True, timeout 60s)
+        logger.info("[leboncoin] Camoufox uniquement (test geoip=True)")
         try:
             camoufox_prix = await asyncio.wait_for(
                 self._camoufox_search(
@@ -454,7 +454,7 @@ class LeboncoinScraper(BaseScraper):
                     carburant=carburant, boite=boite,
                     type_vehicule=type_vehicule, target_hp=target_hp,
                 ),
-                timeout=40,
+                timeout=60,
             )
             logger.info(f"[leboncoin] Camoufox → {len(camoufox_prix)} prix")
             return camoufox_prix
