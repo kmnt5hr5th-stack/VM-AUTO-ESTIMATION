@@ -445,8 +445,37 @@ class LeboncoinScraper(BaseScraper):
                           motorisation=None, type_vehicule=None):
         target_hp = _extraire_cv(motorisation) if motorisation else None
 
-        # TEST : Camoufox uniquement (geoip=True, timeout 60s)
-        logger.info("[leboncoin] Camoufox uniquement (test geoip=True)")
+        # Stratégie : Mobile d'abord (5-10s), Camoufox seulement si Mobile vide/bloqué.
+        logger.info("[leboncoin] Essai Mobile API (rapide)")
+
+        async def _mobile_all_pages():
+            prix = []
+            for page_num in range(1, max_pages + 1):
+                try:
+                    p = await self._fetch_mobile_api(
+                        marque, modele, annee, kilometrage, page_num,
+                        carburant=carburant, boite=boite,
+                        type_vehicule=type_vehicule, target_hp=target_hp,
+                    )
+                    prix.extend(p)
+                    if not p:
+                        break
+                except Exception:
+                    break
+            return prix
+
+        try:
+            mobile_prix = await asyncio.wait_for(_mobile_all_pages(), timeout=20)
+        except Exception as e:
+            logger.warning(f"[leboncoin] Mobile API erreur: {e}")
+            mobile_prix = []
+
+        if mobile_prix:
+            logger.info(f"[leboncoin] Mobile API → {len(mobile_prix)} prix")
+            return mobile_prix
+
+        # Fallback : Camoufox (DataDome a bloqué le mobile ou 0 résultats)
+        logger.info("[leboncoin] Mobile vide → fallback Camoufox")
         try:
             camoufox_prix = await asyncio.wait_for(
                 self._camoufox_search(
@@ -454,12 +483,25 @@ class LeboncoinScraper(BaseScraper):
                     carburant=carburant, boite=boite,
                     type_vehicule=type_vehicule, target_hp=target_hp,
                 ),
-                timeout=60,
+                timeout=30,
             )
-            logger.info(f"[leboncoin] Camoufox → {len(camoufox_prix)} prix")
-            return camoufox_prix
+            if camoufox_prix:
+                logger.info(f"[leboncoin] Camoufox → {len(camoufox_prix)} prix")
+                return camoufox_prix
         except Exception as e:
             logger.warning(f"[leboncoin] Camoufox erreur: {e}")
+
+        # Dernier recours : Playwright
+        logger.info("[leboncoin] Fallback Playwright")
+        try:
+            prix = await self._playwright_search(
+                marque, modele, annee, kilometrage,
+                carburant=carburant, boite=boite,
+                type_vehicule=type_vehicule, target_hp=target_hp,
+            )
+            return prix
+        except Exception as e:
+            logger.warning(f"[leboncoin] Playwright échoué: {e}")
             return []
 
     async def _scrape(self, context: BrowserContext, marque, modele, annee, kilometrage,
