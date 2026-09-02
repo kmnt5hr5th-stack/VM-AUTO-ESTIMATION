@@ -120,8 +120,7 @@ def _resolve_brand(marque: str, modele: str) -> str:
         return "Citroën"
     return marque
 
-@app.post("/estimation")
-async def estimation(req: EstimationRequest):
+async def _run_estimation(req: EstimationRequest) -> dict:
     type_vehicule = req.type_vehicule or _detect_type_vehicule(req.modele)
     marque_search = _resolve_brand(req.marque, req.modele)
     if marque_search != req.marque:
@@ -142,7 +141,7 @@ async def estimation(req: EstimationRequest):
     try:
         lbc_prices = await asyncio.wait_for(
             lbc.get_prices(marque_search, req.modele, req.annee, req.kilometrage, **scraper_args),
-            timeout=45,
+            timeout=40,
         )
         sources_detail["leboncoin"] = {"annonces": len(lbc_prices)}
         all_prices.extend(lbc_prices)
@@ -161,7 +160,7 @@ async def estimation(req: EstimationRequest):
         ]
         results = await asyncio.wait_for(
             asyncio.gather(*tasks, return_exceptions=True),
-            timeout=60,
+            timeout=50,
         )
         for scraper, result in zip(fallback_scrapers, results):
             if isinstance(result, Exception):
@@ -205,6 +204,20 @@ async def estimation(req: EstimationRequest):
         },
         "sources": sources_detail,
     }
+
+
+@app.post("/estimation")
+async def estimation(req: EstimationRequest):
+    try:
+        return await asyncio.wait_for(_run_estimation(req), timeout=100)
+    except asyncio.TimeoutError:
+        logger.error("[estimation] Timeout global 100s dépassé")
+        raise HTTPException(status_code=504, detail="Délai de scraping dépassé — réessayez dans quelques secondes.")
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"[estimation] Erreur inattendue: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
 
 
 # ─── Geo scan (Bonnes Affaires) ───────────────────────────────────────────────
