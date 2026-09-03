@@ -490,6 +490,8 @@ class LeboncoinScraper(BaseScraper):
                 return camoufox_prix
         except Exception as e:
             logger.warning(f"[leboncoin] Camoufox erreur: {e}")
+            # Laisse asyncio nettoyer les tâches annulées avant de démarrer Playwright
+            await asyncio.sleep(1)
 
         # Dernier recours : Playwright
         logger.info("[leboncoin] Fallback Playwright")
