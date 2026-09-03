@@ -474,6 +474,37 @@ class LeboncoinScraper(BaseScraper):
             logger.info(f"[leboncoin] Mobile API → {len(mobile_prix)} prix")
             return mobile_prix
 
+        # Retry Mobile avec km élargi à 50 000 si km original trop bas/élevé → 0 résultats
+        km_retry = 50_000
+        if kilometrage != km_retry:
+            logger.info(f"[leboncoin] Mobile 0 résultats → retry km={km_retry}")
+
+            async def _mobile_retry():
+                prix = []
+                for page_num in range(1, max_pages + 1):
+                    try:
+                        p = await self._fetch_mobile_api(
+                            marque, modele, annee, km_retry, page_num,
+                            carburant=carburant, boite=boite,
+                            type_vehicule=type_vehicule, target_hp=target_hp,
+                        )
+                        prix.extend(p)
+                        if not p:
+                            break
+                    except Exception:
+                        break
+                return prix
+
+            try:
+                mobile_retry_prix = await asyncio.wait_for(_mobile_retry(), timeout=20)
+            except Exception as e:
+                logger.warning(f"[leboncoin] Mobile retry erreur: {e}")
+                mobile_retry_prix = []
+
+            if mobile_retry_prix:
+                logger.info(f"[leboncoin] Mobile retry km={km_retry} → {len(mobile_retry_prix)} prix")
+                return mobile_retry_prix
+
         # Fallback : Camoufox (DataDome a bloqué le mobile ou 0 résultats)
         logger.info("[leboncoin] Mobile vide → fallback Camoufox")
         try:
