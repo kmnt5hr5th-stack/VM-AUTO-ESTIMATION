@@ -256,6 +256,13 @@ def _extract_prix(ads: list, modele: str, marque: str = None, carburant: str = N
                 model_attr_norm = model_attr.replace(" ", "").replace("-", "")
                 if modele_norm not in model_attr_norm and model_attr_norm not in modele_norm:
                     continue
+                # Distinguer Sportback / non-Sportback strictement
+                is_sportback_search = "sportback" in modele_lower
+                ad_is_sportback = "sportback" in model_attr
+                if is_sportback_search and not ad_is_sportback:
+                    continue
+                if not is_sportback_search and ad_is_sportback:
+                    continue
 
         if carburant:
             fuel_val = str(attrs.get("fuel", ""))
