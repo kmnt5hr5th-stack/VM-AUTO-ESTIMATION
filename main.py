@@ -374,12 +374,28 @@ async def lookup_plate(plate: str):
     if motorisation_raw and (_marque_clean in motorisation_raw.lower() or _modele_clean in motorisation_raw.lower()):
         motorisation_raw = ""
 
-    # Version SIV complète (utilisée comme finition suggérée, comme biwiz)
+    # Données étendues SIV
     extended = data.get("ExtendedData") or {}
     lib_version = extended.get("libVersion", "") if isinstance(extended, dict) else ""
+    puissance_dyn = str(extended.get("puissanceDyn", "") or "").strip()
+    engine_cc = str(extended.get("EngineCC", "") or "").strip()
 
-    # Puissance en CV si disponible
-    puissance_cv = str(data.get("puissanceFisc", "") or data.get("puissanceDyn", "") or "")
+    # Litrage arrondi (ex: 1991 → 2.0L)
+    litrage = ""
+    try:
+        if engine_cc:
+            cc = int(engine_cc)
+            litrage = f"{cc / 1000:.1f}L"
+    except Exception:
+        pass
+
+    # Motorisation complète : version SIV + litrage + CV
+    motorisation_parts = [lib_version]
+    if litrage:
+        motorisation_parts.append(litrage)
+    if puissance_dyn:
+        motorisation_parts.append(f"{puissance_dyn}ch")
+    motorisation_complete = " — ".join(filter(None, [lib_version, " ".join(filter(None, [litrage, f"{puissance_dyn}ch" if puissance_dyn else ""]))]))
 
     carburant = _FUEL_MAP.get(fuel_raw, fuel_raw.capitalize() if fuel_raw else "")
     boite = _BOITE_MAP.get(boite_raw, "Automatique")
@@ -398,9 +414,7 @@ async def lookup_plate(plate: str):
     finitions = _get_finitions_from_catalog(marque, modele)
 
     # Log pour debug — affiche tous les champs retournés par l'API
-    logger.info(f"[lookup-plate] {plate_clean} → {marque} {modele} {annee} {carburant} {boite}")
-    logger.info(f"[lookup-plate] motorisation_raw={motorisation_raw!r} lib_version={lib_version!r}")
-    logger.info(f"[lookup-plate] all keys: {list(data.keys())}")
+    logger.info(f"[lookup-plate] {plate_clean} → {marque} {modele} {annee} {carburant} {boite} | {motorisation_complete}")
 
     return {
         "marque": marque,
@@ -409,8 +423,7 @@ async def lookup_plate(plate: str):
         "carburant": carburant,
         "boite": boite,
         "nb_portes": nb_portes,
-        "motorisation": motorisation_raw,
-        "version": lib_version,
+        "motorisation": motorisation_complete,
         "finitions": finitions,
     }
 
