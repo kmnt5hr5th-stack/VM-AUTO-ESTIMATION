@@ -232,19 +232,54 @@ IMMAT_API_USERNAME = os.getenv("IMMAT_API_USERNAME", "Macken97")
 IMMAT_API_KEY = os.getenv("IMMAT_API_KEY", "")
 
 _FUEL_MAP: dict[str, str] = {
+    # Noms directs API
     "ESSENCE": "Essence",
     "DIESEL": "Diesel",
     "ELECTRIQUE": "Électrique",
+    "ÉLECTRIQUE": "Électrique",
     "HYBRIDE RECHARGEABLE": "Hybride rechargeable",
+    "HYBRIDE PLUG-IN": "Hybride rechargeable",
+    "PLUG-IN HYBRID": "Hybride rechargeable",
+    "PLUG IN HYBRID": "Hybride rechargeable",
+    "PHEV": "Hybride rechargeable",
     "HYBRIDE": "Hybride",
     "GPL": "GPL",
     "GNV": "GNV",
+    "GAZ NATUREL": "GNV",
     "HYDROGENE": "Hydrogène",
+    "HYDROGÈNE": "Hydrogène",
+    # Codes carte grise française (SIV)
+    "GO": "Diesel",
+    "GAZOLE": "Diesel",
+    "GASOIL": "Diesel",
+    "GAS-OIL": "Diesel",
+    "ES": "Essence",
+    "SUPERETHANOL": "Essence",
+    "PETROL": "Essence",
+    "GASOLINE": "Essence",
+    "EH": "Hybride",
+    "ELECTRIC/ESSENCE": "Hybride rechargeable",
+    "ELECTRIC/DIESEL": "Hybride rechargeable",
+    "EL": "Électrique",
+    "ELECTRIC": "Électrique",
+    "GP": "GPL",
+    "GN": "GNV",
+    "H2": "Hydrogène",
+    "FE": "Essence",
 }
 
 _BOITE_MAP: dict[str, str] = {
     "MECANIQUE": "Manuelle",
+    "MANUELLE": "Manuelle",
+    "MANUAL": "Manuelle",
+    "BVM": "Manuelle",
     "AUTOMATIQUE": "Automatique",
+    "AUTOMATIC": "Automatique",
+    "BVA": "Automatique",
+    "CVT": "Automatique",
+    "DCT": "Automatique",
+    "ROBOTISEE": "Automatique",
+    "ROBOTISÉE": "Automatique",
 }
 
 
