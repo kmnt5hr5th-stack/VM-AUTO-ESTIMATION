@@ -231,6 +231,34 @@ async def estimation(req: EstimationRequest):
 IMMAT_API_USERNAME = os.getenv("IMMAT_API_USERNAME", "Macken97")
 IMMAT_API_KEY = os.getenv("IMMAT_API_KEY", "")
 
+# Catalog (finitions) chargé une seule fois au démarrage
+_catalog: dict = {}
+try:
+    _catalog_path = os.path.join(os.path.dirname(__file__), "catalog.json")
+    with open(_catalog_path, encoding="utf-8") as _f:
+        _catalog = _json.load(_f)
+    logger.info(f"[catalog] chargé ({len(_catalog.get('finitions', {}))} marques avec finitions)")
+except Exception as _e:
+    logger.warning(f"[catalog] non chargé: {_e}")
+
+def _normalize(s: str) -> str:
+    """Normalise un nom pour comparaison souple (lowercase, sans accents ni tirets)."""
+    import unicodedata
+    s = unicodedata.normalize("NFD", s.lower())
+    s = "".join(c for c in s if unicodedata.category(c) != "Mn")
+    return s.replace("-", " ").replace("_", " ").strip()
+
+def _get_finitions_from_catalog(brand: str, model: str) -> list[str]:
+    finitions_db = _catalog.get("finitions", {})
+    b_norm = _normalize(brand)
+    m_norm = _normalize(model)
+    for b_key, models in finitions_db.items():
+        if _normalize(b_key) == b_norm:
+            for m_key, fins in models.items():
+                if _normalize(m_key) == m_norm:
+                    return [f for f in fins if f and f != "Autre"]
+    return []
+
 _FUEL_MAP: dict[str, str] = {
     # Noms directs API
     "ESSENCE": "Essence",
@@ -327,19 +355,24 @@ async def lookup_plate(plate: str):
     fuel_raw = _text("FuelType").upper().strip()
     boite_raw = _text("Transmission").upper().strip()
     annee_raw = _text("RegistrationYear") or _text("YearOfManufacture") or ""
-    extended = data.get("ExtendedData") or {}
-    lib_version = extended.get("libVersion", "") if isinstance(extended, dict) else ""
-    puissance_kw = str(data.get("puissanceDyn", "") or "")
+    nb_portes_raw = _text("NumberOfDoors") or _text("Doors") or ""
 
     carburant = _FUEL_MAP.get(fuel_raw, fuel_raw.capitalize() if fuel_raw else "")
-    boite = _BOITE_MAP.get(boite_raw, "")
+    boite = _BOITE_MAP.get(boite_raw, "Automatique")
 
     try:
         annee = int(str(annee_raw)[:4]) if annee_raw else None
     except Exception:
         annee = None
 
-    logger.info(f"[lookup-plate] {plate_clean} → {marque} {modele} {annee} {carburant} {boite}")
+    try:
+        nb_portes = int(nb_portes_raw) if nb_portes_raw else None
+    except Exception:
+        nb_portes = None
+
+    finitions = _get_finitions_from_catalog(marque, modele)
+
+    logger.info(f"[lookup-plate] {plate_clean} → {marque} {modele} {annee} {carburant} {boite} ({len(finitions)} finitions)")
 
     return {
         "marque": marque,
@@ -347,8 +380,8 @@ async def lookup_plate(plate: str):
         "annee": annee,
         "carburant": carburant,
         "boite": boite,
-        "lib_version": lib_version,
-        "puissance_kw": puissance_kw,
+        "nb_portes": nb_portes,
+        "finitions": finitions,
     }
 
 
