@@ -360,6 +360,22 @@ async def lookup_plate(plate: str):
     annee_raw = _text("RegistrationYear") or _text("YearOfManufacture") or ""
     nb_portes_raw = _text("NumberOfDoors") or _text("Doors") or ""
 
+    # Motorisation : on essaie plusieurs champs de l'API
+    motorisation_raw = (
+        _text("ModelVariant")
+        or _text("EngineDescription")
+        or _text("Description")
+        or _text("Trim")
+        or ""
+    )
+
+    # Version SIV complète (utilisée comme finition suggérée, comme biwiz)
+    extended = data.get("ExtendedData") or {}
+    lib_version = extended.get("libVersion", "") if isinstance(extended, dict) else ""
+
+    # Puissance en CV si disponible
+    puissance_cv = str(data.get("puissanceFisc", "") or data.get("puissanceDyn", "") or "")
+
     carburant = _FUEL_MAP.get(fuel_raw, fuel_raw.capitalize() if fuel_raw else "")
     boite = _BOITE_MAP.get(boite_raw, "Automatique")
 
@@ -373,9 +389,13 @@ async def lookup_plate(plate: str):
     except Exception:
         nb_portes = None
 
+    # Finitions depuis catalogue backend (Renault, Peugeot, Dacia, etc.)
     finitions = _get_finitions_from_catalog(marque, modele)
 
-    logger.info(f"[lookup-plate] {plate_clean} → {marque} {modele} {annee} {carburant} {boite} ({len(finitions)} finitions)")
+    # Log pour debug — affiche tous les champs retournés par l'API
+    logger.info(f"[lookup-plate] {plate_clean} → {marque} {modele} {annee} {carburant} {boite}")
+    logger.info(f"[lookup-plate] motorisation_raw={motorisation_raw!r} lib_version={lib_version!r}")
+    logger.info(f"[lookup-plate] all keys: {list(data.keys())}")
 
     return {
         "marque": marque,
@@ -384,6 +404,8 @@ async def lookup_plate(plate: str):
         "carburant": carburant,
         "boite": boite,
         "nb_portes": nb_portes,
+        "motorisation": motorisation_raw,
+        "version": lib_version,
         "finitions": finitions,
     }
 
