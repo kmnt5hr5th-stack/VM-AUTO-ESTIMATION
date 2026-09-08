@@ -377,25 +377,29 @@ async def lookup_plate(plate: str):
     # Données étendues SIV
     extended = data.get("ExtendedData") or {}
     lib_version = extended.get("libVersion", "") if isinstance(extended, dict) else ""
-    puissance_dyn = str(extended.get("puissanceDyn", "") or "").strip()
+    puissance_kw_raw = str(extended.get("puissanceDyn", "") or "").strip()
     engine_cc = str(extended.get("EngineCC", "") or "").strip()
 
     # Litrage arrondi (ex: 1991 → 2.0L)
     litrage = ""
     try:
         if engine_cc:
-            cc = int(engine_cc)
-            litrage = f"{cc / 1000:.1f}L"
+            litrage = f"{int(engine_cc) / 1000:.1f}L"
     except Exception:
         pass
 
-    # Motorisation complète : version SIV + litrage + CV
-    motorisation_parts = [lib_version]
-    if litrage:
-        motorisation_parts.append(litrage)
-    if puissance_dyn:
-        motorisation_parts.append(f"{puissance_dyn}ch")
-    motorisation_complete = " — ".join(filter(None, [lib_version, " ".join(filter(None, [litrage, f"{puissance_dyn}ch" if puissance_dyn else ""]))]))
+    # puissanceDyn est en kW → convertir en CV (1 kW = 1.3596 CV)
+    puissance_cv = ""
+    try:
+        if puissance_kw_raw:
+            cv = round(int(puissance_kw_raw) * 1.3596)
+            puissance_cv = f"{cv}ch"
+    except Exception:
+        pass
+
+    # Motorisation complète : version SIV — litrage CV
+    specs = " ".join(filter(None, [litrage, puissance_cv]))
+    motorisation_complete = " — ".join(filter(None, [lib_version, specs]))
 
     carburant = _FUEL_MAP.get(fuel_raw, fuel_raw.capitalize() if fuel_raw else "")
     boite = _BOITE_MAP.get(boite_raw, "Automatique")
