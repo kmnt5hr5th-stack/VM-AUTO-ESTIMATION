@@ -128,14 +128,10 @@ async def _run_estimation(req: EstimationRequest) -> dict:
         logger.info(f"Marque résolue : {req.marque} → {marque_search} pour {req.modele}")
     logger.info(f"Demande reçue : {req.marque} {req.modele} {req.annee} {req.kilometrage} km | type={type_vehicule}")
 
-    from scrapers.leboncoin import _extraire_cv
-    target_hp = _extraire_cv(req.motorisation) if req.motorisation else None
-    if target_hp:
-        logger.info(f"Puissance extraite : {target_hp} ch depuis '{req.motorisation}'")
     lbc_args = dict(
         finition=req.finition, carburant=req.carburant,
         boite=req.boite, motorisation=req.motorisation,
-        type_vehicule=type_vehicule, target_hp=target_hp,
+        type_vehicule=type_vehicule,
     )
 
     all_prices: list[int] = []
