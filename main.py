@@ -133,10 +133,16 @@ async def _run_estimation(req: EstimationRequest) -> dict:
     target_hp = _extraire_cv(req.motorisation) if req.motorisation else None
     if target_hp:
         logger.info(f"Puissance extraite : {target_hp} ch depuis '{req.motorisation}'")
-    scraper_args = dict(
+    # LBC supporte target_hp, AutoScout24 et LaCentrale ne l'acceptent pas
+    lbc_args = dict(
         finition=req.finition, carburant=req.carburant,
         boite=req.boite, motorisation=req.motorisation,
         type_vehicule=type_vehicule, target_hp=target_hp,
+    )
+    fallback_args = dict(
+        finition=req.finition, carburant=req.carburant,
+        boite=req.boite, motorisation=req.motorisation,
+        type_vehicule=type_vehicule,
     )
 
     all_prices: list[int] = []
@@ -146,7 +152,7 @@ async def _run_estimation(req: EstimationRequest) -> dict:
     lbc = LeboncoinScraper()
     try:
         lbc_prices = await asyncio.wait_for(
-            lbc.get_prices(marque_search, req.modele, req.annee, req.kilometrage, **scraper_args),
+            lbc.get_prices(marque_search, req.modele, req.annee, req.kilometrage, **lbc_args),
             timeout=45,
         )
         sources_detail["leboncoin"] = {"annonces": len(lbc_prices)}
@@ -161,7 +167,7 @@ async def _run_estimation(req: EstimationRequest) -> dict:
         logger.info("LBC vide — fallback AutoScout24 + La Centrale")
         fallback_scrapers = [AutoScout24Scraper(), LaCentraleScraper()]
         tasks = [
-            s.get_prices(marque_search, req.modele, req.annee, req.kilometrage, **scraper_args)
+            s.get_prices(marque_search, req.modele, req.annee, req.kilometrage, **fallback_args)
             for s in fallback_scrapers
         ]
         results = await asyncio.wait_for(
