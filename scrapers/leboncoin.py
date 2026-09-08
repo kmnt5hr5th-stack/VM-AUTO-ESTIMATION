@@ -297,7 +297,7 @@ def _extract_prix(ads: list, modele: str, marque: str = None, carburant: str = N
                 hp = int(re.sub(r"[^\d]", "", str(hp_raw))) if hp_raw else None
             except (ValueError, TypeError):
                 hp = None
-            if hp and abs(hp - target_hp) > 20:
+            if hp and abs(hp - target_hp) > 3:
                 continue
 
         raw = ad.get("price", [])

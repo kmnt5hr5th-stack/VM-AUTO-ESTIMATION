@@ -1,7 +1,9 @@
 import asyncio
 import base64
+import json as _json
 import logging
 import re
+import xml.etree.ElementTree as ET
 from dotenv import load_dotenv
 
 load_dotenv()  # Charge .env en local ; les variables Railway ont priorité en prod
@@ -127,10 +129,14 @@ async def _run_estimation(req: EstimationRequest) -> dict:
         logger.info(f"Marque résolue : {req.marque} → {marque_search} pour {req.modele}")
     logger.info(f"Demande reçue : {req.marque} {req.modele} {req.annee} {req.kilometrage} km | type={type_vehicule}")
 
+    from scrapers.leboncoin import _extraire_cv
+    target_hp = _extraire_cv(req.motorisation) if req.motorisation else None
+    if target_hp:
+        logger.info(f"Puissance extraite : {target_hp} ch depuis '{req.motorisation}'")
     scraper_args = dict(
         finition=req.finition, carburant=req.carburant,
         boite=req.boite, motorisation=req.motorisation,
-        type_vehicule=type_vehicule,
+        type_vehicule=type_vehicule, target_hp=target_hp,
     )
 
     all_prices: list[int] = []
@@ -218,6 +224,95 @@ async def estimation(req: EstimationRequest):
     except Exception as e:
         logger.error(f"[estimation] Erreur inattendue: {e}")
         raise HTTPException(status_code=500, detail=str(e))
+
+
+# ─── Immatriculation lookup ───────────────────────────────────────────────────
+
+IMMAT_API_USERNAME = os.getenv("IMMAT_API_USERNAME", "Macken97")
+IMMAT_API_KEY = os.getenv("IMMAT_API_KEY", "")
+
+_FUEL_MAP: dict[str, str] = {
+    "ESSENCE": "Essence",
+    "DIESEL": "Diesel",
+    "ELECTRIQUE": "Électrique",
+    "HYBRIDE RECHARGEABLE": "Hybride rechargeable",
+    "HYBRIDE": "Hybride",
+    "GPL": "GPL",
+    "GNV": "GNV",
+    "HYDROGENE": "Hydrogène",
+}
+
+_BOITE_MAP: dict[str, str] = {
+    "MECANIQUE": "Manuelle",
+    "AUTOMATIQUE": "Automatique",
+}
+
+
+@app.get("/lookup-plate")
+async def lookup_plate(plate: str):
+    if not IMMAT_API_KEY:
+        raise HTTPException(status_code=503, detail="API immatriculation non configurée (clé manquante)")
+
+    plate_clean = plate.upper().replace(" ", "").replace("-", "")
+    url = (
+        f"https://www.immatriculationapi.com/api/reg.asmx/CheckFrance"
+        f"?RegistrationNumber={plate_clean}"
+        f"&username={IMMAT_API_USERNAME}"
+        f"&licensekey={IMMAT_API_KEY}"
+    )
+
+    try:
+        async with AsyncSession() as session:
+            resp = await asyncio.wait_for(session.get(url), timeout=10)
+    except asyncio.TimeoutError:
+        raise HTTPException(status_code=504, detail="Timeout API immatriculation")
+
+    if resp.status_code != 200:
+        raise HTTPException(status_code=502, detail=f"Erreur API immatriculation ({resp.status_code})")
+
+    try:
+        root = ET.fromstring(resp.text)
+        vehicle_json_el = root.find("vehicleJson")
+        if vehicle_json_el is None or not vehicle_json_el.text:
+            raise ValueError("vehicleJson manquant dans la réponse")
+        data = _json.loads(vehicle_json_el.text)
+    except Exception as e:
+        raise HTTPException(status_code=502, detail=f"Erreur parsing réponse: {e}")
+
+    def _text(field: str) -> str:
+        val = data.get(field)
+        if isinstance(val, dict):
+            return val.get("CurrentTextValue", "") or ""
+        return str(val) if val else ""
+
+    marque = _text("CarMake")
+    modele = _text("CarModel")
+    fuel_raw = _text("FuelType").upper().strip()
+    boite_raw = _text("Transmission").upper().strip()
+    annee_raw = _text("RegistrationYear") or _text("YearOfManufacture") or ""
+    extended = data.get("ExtendedData") or {}
+    lib_version = extended.get("libVersion", "") if isinstance(extended, dict) else ""
+    puissance_kw = str(data.get("puissanceDyn", "") or "")
+
+    carburant = _FUEL_MAP.get(fuel_raw, fuel_raw.capitalize() if fuel_raw else "")
+    boite = _BOITE_MAP.get(boite_raw, "")
+
+    try:
+        annee = int(str(annee_raw)[:4]) if annee_raw else None
+    except Exception:
+        annee = None
+
+    logger.info(f"[lookup-plate] {plate_clean} → {marque} {modele} {annee} {carburant} {boite}")
+
+    return {
+        "marque": marque,
+        "modele": modele,
+        "annee": annee,
+        "carburant": carburant,
+        "boite": boite,
+        "lib_version": lib_version,
+        "puissance_kw": puissance_kw,
+    }
 
 
 # ─── Geo scan (Bonnes Affaires) ───────────────────────────────────────────────
