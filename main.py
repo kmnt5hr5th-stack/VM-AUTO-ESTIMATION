@@ -22,7 +22,6 @@ from scrapers.leboncoin import (
     API_URL as LBC_API_URL, HOMEPAGE as LBC_HOMEPAGE,
 )
 from scrapers.lacentrale import LaCentraleScraper
-from scrapers.autoscout24 import AutoScout24Scraper
 from utils.calculator import calculate_estimation
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(name)s %(levelname)s %(message)s")
@@ -133,22 +132,15 @@ async def _run_estimation(req: EstimationRequest) -> dict:
     target_hp = _extraire_cv(req.motorisation) if req.motorisation else None
     if target_hp:
         logger.info(f"Puissance extraite : {target_hp} ch depuis '{req.motorisation}'")
-    # LBC supporte target_hp, AutoScout24 et LaCentrale ne l'acceptent pas
     lbc_args = dict(
         finition=req.finition, carburant=req.carburant,
         boite=req.boite, motorisation=req.motorisation,
         type_vehicule=type_vehicule, target_hp=target_hp,
     )
-    fallback_args = dict(
-        finition=req.finition, carburant=req.carburant,
-        boite=req.boite, motorisation=req.motorisation,
-        type_vehicule=type_vehicule,
-    )
 
     all_prices: list[int] = []
     sources_detail: dict = {}
 
-    # 1. LeBonCoin en priorité
     lbc = LeboncoinScraper()
     try:
         lbc_prices = await asyncio.wait_for(
@@ -161,27 +153,6 @@ async def _run_estimation(req: EstimationRequest) -> dict:
     except Exception as e:
         logger.error(f"[leboncoin] Erreur : {e}")
         sources_detail["leboncoin"] = {"annonces": 0, "erreur": str(e)}
-
-    # 2. Fallback AutoScout24 + La Centrale si LBC n'a rien retourné
-    if not all_prices:
-        logger.info("LBC vide — fallback AutoScout24 + La Centrale")
-        fallback_scrapers = [AutoScout24Scraper(), LaCentraleScraper()]
-        tasks = [
-            s.get_prices(marque_search, req.modele, req.annee, req.kilometrage, **fallback_args)
-            for s in fallback_scrapers
-        ]
-        results = await asyncio.wait_for(
-            asyncio.gather(*tasks, return_exceptions=True),
-            timeout=50,
-        )
-        for scraper, result in zip(fallback_scrapers, results):
-            if isinstance(result, Exception):
-                logger.error(f"[{scraper.name}] Erreur : {result}")
-                sources_detail[scraper.name] = {"annonces": 0, "erreur": str(result)}
-            else:
-                logger.info(f"[{scraper.name}] {len(result)} prix récupérés")
-                sources_detail[scraper.name] = {"annonces": len(result)}
-                all_prices.extend(result)
 
     if not all_prices:
         raise HTTPException(
@@ -650,13 +621,12 @@ async def scan_lacentrale(req: LaCentraleScanRequest):
 # ─── Scan géo enrichi : scan LBC + estimation marché LBC par modèle ──────────
 
 async def _estimate_market_lbc(marque: str, modele: str, annee: Optional[int], km: Optional[int]) -> Optional[int]:
-    """Estime la valeur marché : LeBonCoin en priorité, AutoScout24 en fallback."""
+    """Estime la valeur marché via LeBonCoin API mobile uniquement."""
     marque_search = _resolve_brand(marque, modele)
     type_vehicule = _detect_type_vehicule(modele)
     annee_eff = annee or 2015
     km_eff = km or 100000
 
-    # 1. LeBonCoin
     try:
         lbc = LeboncoinScraper()
         prices = await asyncio.wait_for(
@@ -669,20 +639,6 @@ async def _estimate_market_lbc(marque: str, modele: str, annee: Optional[int], k
             return s[len(s) // 2]
     except Exception as e:
         logger.warning(f"[enriched] LBC {marque} {modele} {annee} erreur: {e}")
-
-    # 2. Fallback AutoScout24 si LBC n'a rien trouvé
-    try:
-        as24 = AutoScout24Scraper()
-        prices2 = await asyncio.wait_for(
-            as24.get_prices(marque_search, modele, annee_eff, km_eff, type_vehicule=type_vehicule),
-            timeout=15,
-        )
-        if prices2:
-            s2 = sorted(prices2)
-            logger.info(f"[enriched] AS24 {marque} {modele} {annee} → {s2[len(s2)//2]}€ ({len(s2)} prix)")
-            return s2[len(s2) // 2]
-    except Exception as e:
-        logger.warning(f"[enriched] AS24 {marque} {modele} {annee} erreur: {e}")
 
     logger.warning(f"[enriched] aucun prix trouvé pour {marque} {modele} {annee}")
     return None
