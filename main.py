@@ -272,7 +272,9 @@ async def lookup_plate(plate: str):
 
     try:
         root = ET.fromstring(resp.text)
-        vehicle_json_el = root.find("vehicleJson")
+        ns = root.tag.split("}")[0].strip("{") if "}" in root.tag else ""
+        prefix = f"{{{ns}}}" if ns else ""
+        vehicle_json_el = root.find(f"{prefix}vehicleJson")
         if vehicle_json_el is None or not vehicle_json_el.text:
             raise ValueError("vehicleJson manquant dans la réponse")
         data = _json.loads(vehicle_json_el.text)
