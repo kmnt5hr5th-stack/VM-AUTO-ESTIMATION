@@ -361,13 +361,18 @@ async def lookup_plate(plate: str):
     nb_portes_raw = _text("NumberOfDoors") or _text("Doors") or ""
 
     # Motorisation : on essaie plusieurs champs de l'API
+    # On exclut les valeurs qui répètent juste marque+modèle (inutile)
     motorisation_raw = (
-        _text("ModelVariant")
-        or _text("EngineDescription")
-        or _text("Description")
+        _text("EngineDescription")
         or _text("Trim")
+        or _text("ModelVariant")
         or ""
     )
+    # Si la valeur contient juste marque/modèle, on vide
+    _marque_clean = marque.lower().strip()
+    _modele_clean = modele.lower().strip()
+    if motorisation_raw and (_marque_clean in motorisation_raw.lower() or _modele_clean in motorisation_raw.lower()):
+        motorisation_raw = ""
 
     # Version SIV complète (utilisée comme finition suggérée, comme biwiz)
     extended = data.get("ExtendedData") or {}
