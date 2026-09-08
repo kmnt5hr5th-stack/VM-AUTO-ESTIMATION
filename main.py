@@ -189,6 +189,40 @@ async def _run_estimation(req: EstimationRequest) -> dict:
     }
 
 
+@app.get("/debug-lbc")
+async def debug_lbc():
+    """Diagnostic : teste l'API mobile LBC depuis Render."""
+    from scrapers.leboncoin import _mobile_ua, _webshare_proxies, API_URL, HOMEPAGE, _build_camoufox_payload
+    from curl_cffi.requests import AsyncSession
+    import socket
+    results = {}
+    try:
+        results["server_ip"] = socket.gethostbyname(socket.gethostname())
+    except Exception as e:
+        results["server_ip"] = str(e)
+    ua, impersonate, headers = _mobile_ua()
+    results["ua"] = ua
+    results["impersonate"] = impersonate
+    proxies = _webshare_proxies()
+    results["proxy"] = proxies.get("http", "")[:30] + "..."
+    payload = _build_camoufox_payload("Renault", "Clio", 2019, 80000)
+    try:
+        async with AsyncSession(impersonate=impersonate, proxies=proxies) as s:
+            r1 = await s.get(HOMEPAGE, headers=headers, timeout=15)
+            results["homepage_status"] = r1.status_code
+            r2 = await s.post(API_URL, json=payload, headers=headers, timeout=30)
+            results["api_status"] = r2.status_code
+            if r2.ok:
+                ads = r2.json().get("ads", [])
+                results["ads_count"] = len(ads)
+                results["first_ad"] = ads[0].get("subject", "") if ads else None
+            else:
+                results["api_body"] = r2.text[:300]
+    except Exception as e:
+        results["error"] = str(e)
+    return results
+
+
 @app.post("/estimation")
 async def estimation(req: EstimationRequest):
     try:
