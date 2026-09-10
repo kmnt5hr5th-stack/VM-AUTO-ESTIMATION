@@ -9759,16 +9759,33 @@
       ],
       "Polo GTI": [
         {
+          "name": "1.8 T 150",
+          "fuel": "Essence",
+          "yearStart": 2001,
+          "yearEnd": 2009
+        },
+        {
+          "name": "1.4 TSI 180",
+          "fuel": "Essence",
+          "yearStart": 2010,
+          "yearEnd": 2015
+        },
+        {
+          "name": "1.8 TSI 192",
+          "fuel": "Essence",
+          "yearStart": 2014,
+          "yearEnd": 2017
+        },
+        {
           "name": "2.0 TSI 200",
           "fuel": "Essence",
           "yearStart": 2017,
-          "yearEnd": 2021
+          "yearEnd": 2020
         },
         {
           "name": "2.0 TSI 207",
           "fuel": "Essence",
-          "yearStart": 2021,
-          "yearEnd": 2026
+          "yearStart": 2021
         }
       ],
       "Arteon Shooting Brake": [
@@ -10179,340 +10196,271 @@
       ],
       "Polo": [
         {
-          "name": "1.0",
+          "name": "1.2 55",
           "fuel": "Essence",
-          "yearStart": 2011,
-          "yearEnd": 2026
-        },
-        {
-          "name": "1.0 60",
-          "fuel": "Essence",
-          "yearStart": 2011,
-          "yearEnd": 2026
-        },
-        {
-          "name": "1.0 75",
-          "fuel": "Essence",
-          "yearStart": 2011,
-          "yearEnd": 2026
-        },
-        {
-          "name": "1.0 TSI",
-          "fuel": "Essence",
-          "yearStart": 2011,
-          "yearEnd": 2026
-        },
-        {
-          "name": "1.2 60",
-          "fuel": "Essence",
-          "yearStart": 2014,
-          "yearEnd": 2014
+          "yearStart": 2001,
+          "yearEnd": 2007
         },
         {
           "name": "1.2 65",
           "fuel": "Essence",
-          "yearStart": 2011,
-          "yearEnd": 2026
+          "yearStart": 2001,
+          "yearEnd": 2007
         },
         {
-          "name": "1.2 70",
+          "name": "1.4 16",
           "fuel": "Essence",
-          "yearStart": 2013,
-          "yearEnd": 2013
+          "yearStart": 2001,
+          "yearEnd": 2004
         },
         {
-          "name": "1.2 TSI 105",
+          "name": "1.4 16S 100",
           "fuel": "Essence",
-          "yearStart": 2011,
-          "yearEnd": 2014
-        },
-        {
-          "name": "1.2 TSI 110",
-          "fuel": "Essence",
-          "yearStart": 2011,
-          "yearEnd": 2026
-        },
-        {
-          "name": "1.2 TSI 90",
-          "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2012
-        },
-        {
-          "name": "1.3",
-          "fuel": "Essence",
-          "yearStart": 2011,
-          "yearEnd": 2026
-        },
-        {
-          "name": "1.4",
-          "fuel": "Essence",
-          "yearStart": 2011,
-          "yearEnd": 2026
-        },
-        {
-          "name": "1.4 75",
-          "fuel": "Essence",
-          "yearStart": 2011,
-          "yearEnd": 2026
-        },
-        {
-          "name": "1.4 80",
-          "fuel": "Essence",
-          "yearStart": 2011,
-          "yearEnd": 2026
-        },
-        {
-          "name": "1.4 85",
-          "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2012
-        },
-        {
-          "name": "1.4 TSI 150",
-          "fuel": "Essence",
-          "yearStart": 2011,
-          "yearEnd": 2026
-        },
-        {
-          "name": "1.6",
-          "fuel": "Essence",
-          "yearStart": 2011,
-          "yearEnd": 2026
-        },
-        {
-          "name": "1.6 105",
-          "fuel": "Essence",
-          "yearStart": 2011,
-          "yearEnd": 2026
-        },
-        {
-          "name": "1.8 150",
-          "fuel": "Essence",
-          "yearStart": 2011,
-          "yearEnd": 2026
-        },
-        {
-          "name": "1.8 180",
-          "fuel": "Essence",
-          "yearStart": 2011,
-          "yearEnd": 2026
+          "yearStart": 2001,
+          "yearEnd": 2006
         },
         {
           "name": "1.4 TDI 75",
           "fuel": "Diesel",
-          "yearStart": 2011,
-          "yearEnd": 2022
+          "yearStart": 2001,
+          "yearEnd": 2017
+        },
+        {
+          "name": "1.9 TDI 100",
+          "fuel": "Diesel",
+          "yearStart": 2001,
+          "yearEnd": 2009
+        },
+        {
+          "name": "1.4 16S 75",
+          "fuel": "Essence",
+          "yearStart": 2004,
+          "yearEnd": 2008
+        },
+        {
+          "name": "1.9 TDI 130",
+          "fuel": "Diesel",
+          "yearStart": 2004,
+          "yearEnd": 2009
+        },
+        {
+          "name": "1.2 16S 65",
+          "fuel": "Essence",
+          "yearStart": 2005,
+          "yearEnd": 2005
+        },
+        {
+          "name": "1.2 60",
+          "fuel": "Essence",
+          "yearStart": 2005,
+          "yearEnd": 2015
+        },
+        {
+          "name": "1.4 100",
+          "fuel": "Essence",
+          "yearStart": 2005,
+          "yearEnd": 2006
+        },
+        {
+          "name": "1.4 75",
+          "fuel": "Essence",
+          "yearStart": 2005,
+          "yearEnd": 2007
+        },
+        {
+          "name": "1.4 TDI 70",
+          "fuel": "Diesel",
+          "yearStart": 2005,
+          "yearEnd": 2009
+        },
+        {
+          "name": "1.4 TDI 80",
+          "fuel": "Diesel",
+          "yearStart": 2005,
+          "yearEnd": 2009
+        },
+        {
+          "name": "1.4 16S 80",
+          "fuel": "Essence",
+          "yearStart": 2006,
+          "yearEnd": 2009
+        },
+        {
+          "name": "1.4 80",
+          "fuel": "Essence",
+          "yearStart": 2006,
+          "yearEnd": 2009
+        },
+        {
+          "name": "1.6 16S 105",
+          "fuel": "Essence",
+          "yearStart": 2006,
+          "yearEnd": 2009
+        },
+        {
+          "name": "1.2 70",
+          "fuel": "Essence",
+          "yearStart": 2007,
+          "yearEnd": 2015
+        },
+        {
+          "name": "1.6 105",
+          "fuel": "Essence",
+          "yearStart": 2008,
+          "yearEnd": 2009
+        },
+        {
+          "name": "1.2 TDI 75",
+          "fuel": "Diesel",
+          "yearStart": 2009,
+          "yearEnd": 2015
+        },
+        {
+          "name": "1.4 85",
+          "fuel": "Essence",
+          "yearStart": 2009,
+          "yearEnd": 2015
         },
         {
           "name": "1.4 TDI 90",
           "fuel": "Diesel",
-          "yearStart": 2011,
-          "yearEnd": 2022
+          "yearStart": 2009,
+          "yearEnd": 2017
         },
         {
           "name": "1.6 TDI 105",
           "fuel": "Diesel",
-          "yearStart": 2011,
-          "yearEnd": 2022
+          "yearStart": 2009,
+          "yearEnd": 2015
         },
         {
           "name": "1.6 TDI 75",
           "fuel": "Diesel",
-          "yearStart": 2011,
-          "yearEnd": 2022
+          "yearStart": 2009,
+          "yearEnd": 2010
         },
         {
           "name": "1.6 TDI 90",
           "fuel": "Diesel",
+          "yearStart": 2009,
+          "yearEnd": 2015
+        },
+        {
+          "name": "1.2 TSI 105",
+          "fuel": "Essence",
+          "yearStart": 2010,
+          "yearEnd": 2013
+        },
+        {
+          "name": "1.4 TSI ACT 140",
+          "fuel": "Essence",
           "yearStart": 2012,
-          "yearEnd": 2012
+          "yearEnd": 2015
         },
         {
-          "name": "CROSSPOLO TDI 100 5P",
+          "name": "1.0 60",
+          "fuel": "Essence",
+          "yearStart": 2014,
+          "yearEnd": 2017
+        },
+        {
+          "name": "1.0 75",
+          "fuel": "Essence",
+          "yearStart": 2014,
+          "yearEnd": 2018
+        },
+        {
+          "name": "1.2 TSI 110",
+          "fuel": "Essence",
+          "yearStart": 2014,
+          "yearEnd": 2017
+        },
+        {
+          "name": "1.2 TSI 90",
+          "fuel": "Essence",
+          "yearStart": 2014,
+          "yearEnd": 2017
+        },
+        {
+          "name": "1.4 TDI 105",
           "fuel": "Diesel",
-          "yearStart": 2011,
+          "yearStart": 2014,
+          "yearEnd": 2015
+        },
+        {
+          "name": "1.4 TSI ACT 150",
+          "fuel": "Essence",
+          "yearStart": 2014,
+          "yearEnd": 2017
+        },
+        {
+          "name": "1.0 80",
+          "fuel": "Essence",
+          "yearStart": 2017,
           "yearEnd": 2022
         },
         {
-          "name": "CROSSPOLO TDI 70 5P",
+          "name": "1.0 MPI 65",
+          "fuel": "Essence",
+          "yearStart": 2017,
+          "yearEnd": 2018
+        },
+        {
+          "name": "1.0 TSI 115",
+          "fuel": "Essence",
+          "yearStart": 2017,
+          "yearEnd": 2020
+        },
+        {
+          "name": "1.0 TSI 95",
+          "fuel": "Essence",
+          "yearStart": 2017
+        },
+        {
+          "name": "1.6 TDI 80",
           "fuel": "Diesel",
-          "yearStart": 2011,
+          "yearStart": 2017,
+          "yearEnd": 2019
+        },
+        {
+          "name": "1.6 TDI 95",
+          "fuel": "Diesel",
+          "yearStart": 2017,
+          "yearEnd": 2020
+        },
+        {
+          "name": "1.0 65",
+          "fuel": "Essence",
+          "yearStart": 2018,
+          "yearEnd": 2019
+        },
+        {
+          "name": "1.0 TGI 90",
+          "fuel": "GNV",
+          "yearStart": 2019,
+          "yearEnd": 2023
+        },
+        {
+          "name": "1.5 TSI 150",
+          "fuel": "Essence",
+          "yearStart": 2019,
           "yearEnd": 2022
         },
         {
-          "name": "ENTREPRISE TDI 70 3P",
-          "fuel": "Diesel",
-          "yearStart": 2011,
-          "yearEnd": 2022
+          "name": "1.0 TSI 110",
+          "fuel": "Essence",
+          "yearStart": 2020,
+          "yearEnd": 2024
         },
         {
-          "name": "ENTREPRISE TDI 80 3P",
-          "fuel": "Diesel",
-          "yearStart": 2011,
-          "yearEnd": 2022
+          "name": "1.0 MPI 80",
+          "fuel": "Essence",
+          "yearStart": 2023
         },
         {
-          "name": "ENTREPRISE UNITED TDI 70 3P",
-          "fuel": "Diesel",
-          "yearStart": 2011,
-          "yearEnd": 2022
-        },
-        {
-          "name": "TDI 100 CONFORTLINE 3P",
-          "fuel": "Diesel",
-          "yearStart": 2011,
-          "yearEnd": 2022
-        },
-        {
-          "name": "TDI 100 MATCH 3P",
-          "fuel": "Diesel",
-          "yearStart": 2011,
-          "yearEnd": 2022
-        },
-        {
-          "name": "TDI 100 MATCH 5P",
-          "fuel": "Diesel",
-          "yearStart": 2011,
-          "yearEnd": 2022
-        },
-        {
-          "name": "TDI 100 SPORTLINE 3P",
-          "fuel": "Diesel",
-          "yearStart": 2011,
-          "yearEnd": 2022
-        },
-        {
-          "name": "TDI 130 SPORTLINE 5P",
-          "fuel": "Diesel",
-          "yearStart": 2011,
-          "yearEnd": 2022
-        },
-        {
-          "name": "TDI 70 3P",
-          "fuel": "Diesel",
-          "yearStart": 2011,
-          "yearEnd": 2022
-        },
-        {
-          "name": "TDI 70 5P",
-          "fuel": "Diesel",
-          "yearStart": 2011,
-          "yearEnd": 2022
-        },
-        {
-          "name": "TDI 70 CONCEPT 2 3P",
-          "fuel": "Diesel",
-          "yearStart": 2011,
-          "yearEnd": 2022
-        },
-        {
-          "name": "TDI 70 CONCEPT 2 5P",
-          "fuel": "Diesel",
-          "yearStart": 2011,
-          "yearEnd": 2022
-        },
-        {
-          "name": "TDI 70 CONFORTLINE 3P",
-          "fuel": "Diesel",
-          "yearStart": 2011,
-          "yearEnd": 2022
-        },
-        {
-          "name": "TDI 70 ENTREPRISE 3P",
-          "fuel": "Diesel",
-          "yearStart": 2011,
-          "yearEnd": 2022
-        },
-        {
-          "name": "TDI 70 MATCH 3P",
-          "fuel": "Diesel",
-          "yearStart": 2011,
-          "yearEnd": 2022
-        },
-        {
-          "name": "TDI 70 MATCH 5P",
-          "fuel": "Diesel",
-          "yearStart": 2011,
-          "yearEnd": 2022
-        },
-        {
-          "name": "TDI 70 UNITED 3P",
-          "fuel": "Diesel",
-          "yearStart": 2011,
-          "yearEnd": 2022
-        },
-        {
-          "name": "TDI 70 UNITED 5P",
-          "fuel": "Diesel",
-          "yearStart": 2011,
-          "yearEnd": 2022
-        },
-        {
-          "name": "TDI 80 3P",
-          "fuel": "Diesel",
-          "yearStart": 2011,
-          "yearEnd": 2022
-        },
-        {
-          "name": "TDI 80 5P",
-          "fuel": "Diesel",
-          "yearStart": 2011,
-          "yearEnd": 2022
-        },
-        {
-          "name": "TDI 80 CONFORTLINE 3P",
-          "fuel": "Diesel",
-          "yearStart": 2011,
-          "yearEnd": 2022
-        },
-        {
-          "name": "TDI 80 ENTREPRISE 3P",
-          "fuel": "Diesel",
-          "yearStart": 2011,
-          "yearEnd": 2022
-        },
-        {
-          "name": "TDI 80 FAP BLUEMOTION TECHNOLOGY 3P",
-          "fuel": "Diesel",
-          "yearStart": 2011,
-          "yearEnd": 2022
-        },
-        {
-          "name": "TDI 80 MATCH 3P",
-          "fuel": "Diesel",
-          "yearStart": 2011,
-          "yearEnd": 2022
-        },
-        {
-          "name": "TDI 80 MATCH 5P",
-          "fuel": "Diesel",
-          "yearStart": 2011,
-          "yearEnd": 2022
-        },
-        {
-          "name": "TDI 80 SPORTLINE 3P",
-          "fuel": "Diesel",
-          "yearStart": 2011,
-          "yearEnd": 2022
-        },
-        {
-          "name": "TDI 80 SPORTLINE 5P",
-          "fuel": "Diesel",
-          "yearStart": 2011,
-          "yearEnd": 2022
-        },
-        {
-          "name": "TDI 80 UNITED 5P",
-          "fuel": "Diesel",
-          "yearStart": 2011,
-          "yearEnd": 2022
-        },
-        {
-          "name": "TDI MATCH CONFORT 3P",
-          "fuel": "Diesel",
-          "yearStart": 2011,
-          "yearEnd": 2022
+          "name": "1.0 TSI 116",
+          "fuel": "Essence",
+          "yearStart": 2024
         }
       ],
       "e-up!": [
@@ -10565,6 +10513,14 @@
           "fuel": "Diesel",
           "yearStart": 2010,
           "yearEnd": 2010
+        }
+      ],
+      "Polo R": [
+        {
+          "name": "2.0 TSI 220",
+          "fuel": "Essence",
+          "yearStart": 2010,
+          "yearEnd": 2017
         }
       ]
     },
