@@ -53079,14 +53079,44 @@
         "GTI Up"
       ],
       "Polo": [
+        "Active",
+        "Allstar",
+        "Beats Audio",
+        "Blue GT",
         "Business",
+        "Carat",
+        "Carat Exclusive",
+        "Concept",
         "Confort",
+        "Confortline",
+        "Confortline Business",
+        "Connect",
+        "Copper Line",
+        "Cup",
+        "Dune",
         "Edition",
-        "GTi",
+        "Elle",
+        "First Edition",
+        "Fox",
+        "IQ.Drive",
         "Life",
+        "Lounge",
+        "Lounge Business",
+        "Match",
+        "Match II",
         "R-Line",
+        "R-Line Exclusive",
+        "Sport",
+        "Sportline",
         "Style",
-        "Trend"
+        "Town",
+        "Trend",
+        "Trendline",
+        "Trendline Business",
+        "United",
+        "Wembley",
+        "Wembley Clim",
+        "Wembley Plus"
       ],
       "Golf": [
         "Trendline",
@@ -53373,6 +53403,9 @@
         "V6 TDI",
         "V8",
         "W12"
+      ],
+      "Polo R": [
+        "R WRC"
       ]
     },
     "Toyota": {
