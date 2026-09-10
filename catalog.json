@@ -9528,25 +9528,13 @@
           "name": "1.4 TSI 122",
           "fuel": "Essence",
           "yearStart": 2009,
-          "yearEnd": 2013
+          "yearEnd": 2015
         },
         {
           "name": "1.2 TSI 85",
           "fuel": "Essence",
           "yearStart": 2012,
-          "yearEnd": 2013
-        },
-        {
-          "name": "1.6 TDI 90",
-          "fuel": "Diesel",
-          "yearStart": 2009,
-          "yearEnd": 2013
-        },
-        {
-          "name": "1.6 TDI 105",
-          "fuel": "Diesel",
-          "yearStart": 2009,
-          "yearEnd": 2013
+          "yearEnd": 2017
         },
         {
           "name": "1.9 TDI 105",
@@ -9555,25 +9543,102 @@
           "yearEnd": 2009
         },
         {
+          "name": "1.6 TDI 90",
+          "fuel": "Diesel",
+          "yearStart": 2009,
+          "yearEnd": 2017
+        },
+        {
+          "name": "1.6 TDI 105",
+          "fuel": "Diesel",
+          "yearStart": 2009,
+          "yearEnd": 2016
+        },
+        {
           "name": "2.0 TDI 140",
           "fuel": "Diesel",
           "yearStart": 2009,
           "yearEnd": 2013
         },
         {
-          "name": "1.0 eTSI 110",
+          "name": "1.2 TSI 105",
           "fuel": "Essence",
-          "yearStart": 2020,
-          "yearEnd": 2023
+          "yearStart": 2013,
+          "yearEnd": 2015
+        },
+        {
+          "name": "1.2 TSI 110",
+          "fuel": "Essence",
+          "yearStart": 2015,
+          "yearEnd": 2017
+        },
+        {
+          "name": "1.4 TSI 125",
+          "fuel": "Essence",
+          "yearStart": 2015,
+          "yearEnd": 2018
+        },
+        {
+          "name": "1.4 TSI 125 E85",
+          "fuel": "Ethanol",
+          "yearStart": 2015,
+          "yearEnd": 2018
+        },
+        {
+          "name": "1.4 TSI 150",
+          "fuel": "Essence",
+          "yearStart": 2015,
+          "yearEnd": 2017
+        },
+        {
+          "name": "1.0 TSI 115",
+          "fuel": "Essence",
+          "yearStart": 2015,
+          "yearEnd": 2021
+        },
+        {
+          "name": "1.0 TSI 85",
+          "fuel": "Essence",
+          "yearStart": 2017,
+          "yearEnd": 2017
         },
         {
           "name": "1.0 TSI 110",
           "fuel": "Essence",
-          "yearStart": 2020,
+          "yearStart": 2017,
           "yearEnd": 2023
         },
         {
-          "name": "1.5 eTSI 130",
+          "name": "1.5 TSI EVO 130",
+          "fuel": "Essence",
+          "yearStart": 2017,
+          "yearEnd": 2021
+        },
+        {
+          "name": "1.5 TSI EVO 150",
+          "fuel": "Essence",
+          "yearStart": 2017,
+          "yearEnd": 2021
+        },
+        {
+          "name": "1.6 TDI 110",
+          "fuel": "Diesel",
+          "yearStart": 2013,
+          "yearEnd": 2017
+        },
+        {
+          "name": "1.6 TDI 115",
+          "fuel": "Diesel",
+          "yearStart": 2017,
+          "yearEnd": 2021
+        },
+        {
+          "name": "2.0 TDI 150",
+          "fuel": "Diesel",
+          "yearStart": 2013
+        },
+        {
+          "name": "1.0 eTSI 110",
           "fuel": "Essence",
           "yearStart": 2020,
           "yearEnd": 2023
@@ -9583,6 +9648,12 @@
           "fuel": "Essence",
           "yearStart": 2020,
           "yearEnd": 2021
+        },
+        {
+          "name": "1.5 eTSI 130",
+          "fuel": "Essence",
+          "yearStart": 2020,
+          "yearEnd": 2023
         },
         {
           "name": "1.5 eTSI 150",
@@ -9600,11 +9671,6 @@
           "name": "2.0 TDI 116",
           "fuel": "Diesel",
           "yearStart": 2021
-        },
-        {
-          "name": "2.0 TDI 150",
-          "fuel": "Diesel",
-          "yearStart": 2020
         },
         {
           "name": "2.0 TDI 200 4MOTION",
