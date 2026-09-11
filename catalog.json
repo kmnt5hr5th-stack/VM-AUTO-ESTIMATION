@@ -16879,6 +16879,13 @@
           "yearStart": 2019,
           "yearEnd": 2023
         }
+      ],
+      "X5 M F95 (2020-2026)": [
+        {
+          "name": "4.4 i 625",
+          "fuel": "Essence",
+          "yearStart": 2020
+        }
       ]
     },
     "Tesla": {
@@ -57652,6 +57659,9 @@
         "M SPORT 7PL",
         "XLINE",
         "XLINE 7PL"
+      ],
+      "X5 M F95 (2020-2026)": [
+        "M COMPETITION"
       ]
     },
     "Mercedes": {
