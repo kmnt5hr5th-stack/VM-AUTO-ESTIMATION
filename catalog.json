@@ -9942,28 +9942,68 @@
       ],
       "Amarok": [
         {
-          "name": "2.0 TDI 205",
+          "name": "2.0 TDI 122",
           "fuel": "Diesel",
-          "yearStart": 2012,
-          "yearEnd": 2026
+          "yearStart": 2010,
+          "yearEnd": 2013
+        },
+        {
+          "name": "2.0 BiTDI 163",
+          "fuel": "Diesel",
+          "yearStart": 2010,
+          "yearEnd": 2012
+        },
+        {
+          "name": "2.0 BiTDI 180",
+          "fuel": "Diesel",
+          "yearStart": 2011,
+          "yearEnd": 2013
+        },
+        {
+          "name": "2.0 TDI 140",
+          "fuel": "Diesel",
+          "yearStart": 2013,
+          "yearEnd": 2016
+        },
+        {
+          "name": "2.0 TDI 180",
+          "fuel": "Diesel",
+          "yearStart": 2011,
+          "yearEnd": 2016
+        },
+        {
+          "name": "3.0 V6 TDI 163",
+          "fuel": "Diesel",
+          "yearStart": 2017,
+          "yearEnd": 2019
+        },
+        {
+          "name": "3.0 V6 TDI 204",
+          "fuel": "Diesel",
+          "yearStart": 2016,
+          "yearEnd": 2021
+        },
+        {
+          "name": "3.0 V6 TDI 224",
+          "fuel": "Diesel",
+          "yearStart": 2016,
+          "yearEnd": 2018
+        },
+        {
+          "name": "3.0 V6 TDI 258",
+          "fuel": "Diesel",
+          "yearStart": 2018,
+          "yearEnd": 2021
         },
         {
           "name": "3.0 TDI 204",
           "fuel": "Diesel",
-          "yearStart": 2012,
-          "yearEnd": 2026
-        },
-        {
-          "name": "3.0 TDI 240",
-          "fuel": "Diesel",
-          "yearStart": 2012,
-          "yearEnd": 2026
+          "yearStart": 2020
         },
         {
           "name": "3.0 TDI 258",
           "fuel": "Diesel",
-          "yearStart": 2012,
-          "yearEnd": 2026
+          "yearStart": 2019
         }
       ],
       "Jetta": [
@@ -53364,9 +53404,17 @@
         "Edition"
       ],
       "Amarok": [
-        "Edition",
-        "Life",
-        "Style"
+        "Aventura",
+        "Canyon",
+        "Carat",
+        "Confortline",
+        "Ducati Diavel Edition",
+        "Highline",
+        "Hunter",
+        "Offroad Edition",
+        "Startline",
+        "Trendline",
+        "Ultimate"
       ],
       "Crafter": [
         "Business"
