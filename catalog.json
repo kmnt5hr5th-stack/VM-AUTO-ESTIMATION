@@ -23884,22 +23884,118 @@
       ],
       "A1 Sportback": [
         {
-          "name": "25 TFSI 95",
+          "name": "1.2 TFSI 86",
           "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
+          "yearStart": 2011,
+          "yearEnd": 2015
         },
         {
-          "name": "30 TFSI 116",
+          "name": "1.4 TFSI 122",
           "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
+          "yearStart": 2011,
+          "yearEnd": 2015
         },
         {
-          "name": "35 TFSI 150",
+          "name": "1.4 TFSI 140",
+          "fuel": "Essence",
+          "yearStart": 2013,
+          "yearEnd": 2015
+        },
+        {
+          "name": "1.4 TFSI 185",
+          "fuel": "Essence",
+          "yearStart": 2011,
+          "yearEnd": 2018
+        },
+        {
+          "name": "1.6 TDI 90",
+          "fuel": "Diesel",
+          "yearStart": 2011,
+          "yearEnd": 2015
+        },
+        {
+          "name": "1.6 TDI 105",
+          "fuel": "Diesel",
+          "yearStart": 2011,
+          "yearEnd": 2015
+        },
+        {
+          "name": "2.0 TDI 143",
+          "fuel": "Diesel",
+          "yearStart": 2012,
+          "yearEnd": 2015
+        },
+        {
+          "name": "1.0 TFSI 82",
+          "fuel": "Essence",
+          "yearStart": 2016,
+          "yearEnd": 2018
+        },
+        {
+          "name": "1.0 TFSI 95",
+          "fuel": "Essence",
+          "yearStart": 2014,
+          "yearEnd": 2023
+        },
+        {
+          "name": "1.4 TFSI 125",
+          "fuel": "Essence",
+          "yearStart": 2014,
+          "yearEnd": 2018
+        },
+        {
+          "name": "1.4 TFSI 150",
+          "fuel": "Essence",
+          "yearStart": 2014,
+          "yearEnd": 2016
+        },
+        {
+          "name": "1.8 TFSI 192",
+          "fuel": "Essence",
+          "yearStart": 2014,
+          "yearEnd": 2018
+        },
+        {
+          "name": "1.4 TDI 90",
+          "fuel": "Diesel",
+          "yearStart": 2016,
+          "yearEnd": 2018
+        },
+        {
+          "name": "1.6 TDI 116",
+          "fuel": "Diesel",
+          "yearStart": 2014,
+          "yearEnd": 2018
+        },
+        {
+          "name": "1.0 TFSI 110",
           "fuel": "Essence",
           "yearStart": 2018,
-          "yearEnd": 2026
+          "yearEnd": 2023
+        },
+        {
+          "name": "1.5 TFSI 150",
+          "fuel": "Essence",
+          "yearStart": 2018,
+          "yearEnd": 2023
+        },
+        {
+          "name": "2.0 TFSI 207",
+          "fuel": "Essence",
+          "yearStart": 2018,
+          "yearEnd": 2022
+        },
+        {
+          "name": "2.0 TDI 116",
+          "fuel": "Diesel",
+          "yearStart": 2018,
+          "yearEnd": 2021
+        },
+        {
+          "name": "2.0 TDI 150",
+          "fuel": "Diesel",
+          "yearStart": 2018,
+          "yearEnd": 2023
         }
       ],
       "A3": [
@@ -54299,38 +54395,27 @@
         "Urban Sport"
       ],
       "A1 Sportback": [
-        "Attraction",
-        "Ambition",
-        "S line",
-        "Ambition Luxe",
-        "Advanced",
-        "S line Competition",
-        "Edition One",
-        "Ambiente",
-        "Business Line",
-        "Ultra",
-        "Ultra Ambiente",
-        "Ultra Ambition",
-        "Ultra Ambition Luxe",
-        "Ultra Business Line",
-        "Ultra S line",
-        "Connect",
-        "Luxe",
-        "Ultra Style",
-        "Urban Sport",
-        "Metropolitan",
         "Active",
-        "Ultra Active",
-        "Midnight Series",
-        "Ultra Midnight Series",
-        "Design",
-        "Design Luxe",
+        "Advanced",
+        "Ambiente",
+        "Ambition",
+        "Ambition Luxe",
+        "Amplified",
+        "Attraction",
+        "Avus",
         "Black Edition",
+        "Business Line",
         "Competition",
         "Competition Line",
+        "Edition One",
         "Entry",
-        "Avus",
-        "S-Edition"
+        "Metropolitan",
+        "Midnight Series",
+        "S Edition",
+        "S Line",
+        "S Line Competition",
+        "Style",
+        "Urban Sport"
       ],
       "A3": [
         "Ambition",
