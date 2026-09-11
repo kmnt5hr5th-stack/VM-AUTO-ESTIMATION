@@ -28300,6 +28300,80 @@
           "yearStart": 2008,
           "yearEnd": 2014
         }
+      ],
+      "A3 Cabriolet 3e Génération": [
+        {
+          "name": "1.4 TFSI 125",
+          "fuel": "Essence",
+          "yearStart": 2014,
+          "yearEnd": 2016
+        },
+        {
+          "name": "1.4 TFSI 140",
+          "fuel": "Essence",
+          "yearStart": 2014,
+          "yearEnd": 2014
+        },
+        {
+          "name": "1.4 TFSI 150",
+          "fuel": "Essence",
+          "yearStart": 2014,
+          "yearEnd": 2017
+        },
+        {
+          "name": "1.4 TFSI 115",
+          "fuel": "Essence",
+          "yearStart": 2016,
+          "yearEnd": 2018
+        },
+        {
+          "name": "1.8 TFSI 160",
+          "fuel": "Essence",
+          "yearStart": 2014,
+          "yearEnd": 2016
+        },
+        {
+          "name": "1.8 TFSI 180",
+          "fuel": "Essence",
+          "yearStart": 2014,
+          "yearEnd": 2016
+        },
+        {
+          "name": "2.0 TFSI 190",
+          "fuel": "Essence",
+          "yearStart": 2016,
+          "yearEnd": 2018
+        },
+        {
+          "name": "1.6 TDI 110",
+          "fuel": "Diesel",
+          "yearStart": 2014,
+          "yearEnd": 2017
+        },
+        {
+          "name": "1.6 TDI 116",
+          "fuel": "Diesel",
+          "yearStart": 2017,
+          "yearEnd": 2018
+        },
+        {
+          "name": "2.0 TDI 150",
+          "fuel": "Diesel",
+          "yearStart": 2014,
+          "yearEnd": 2018
+        },
+        {
+          "name": "2.0 TDI 184",
+          "fuel": "Diesel",
+          "yearStart": 2014,
+          "yearEnd": 2018
+        },
+        {
+          "name": "1.5 TFSI 150",
+          "fuel": "Essence",
+          "yearStart": 2017,
+          "yearEnd": 2021
+        }
       ]
     },
     "Ford": {
@@ -55076,6 +55150,17 @@
         "S Line",
         "S Line Plus",
         "Streamline"
+      ],
+      "A3 Cabriolet 3e Génération": [
+        "Ambiente",
+        "Ambition",
+        "Ambition Luxe",
+        "Attraction",
+        "Design",
+        "Design Luxe",
+        "S Line",
+        "S Line Plus",
+        "Sport"
       ]
     },
     "Fiat": {
