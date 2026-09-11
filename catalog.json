@@ -12934,1170 +12934,628 @@
     "BMW": {
       "Série 1": [
         {
-          "name": "(2) CABRIOLET 125I 218 CONFORT",
-          "fuel": "Essence",
-          "yearStart": 2010,
-          "yearEnd": 2026
+          "name": "1.5 TDI 114",
+          "fuel": "Diesel",
+          "yearStart": 2012,
+          "yearEnd": 2019
         },
         {
-          "name": "(2) CABRIOLET 125IA 218 SPORT DESIGN",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2018
+          "name": "1.5 TDI 95",
+          "fuel": "Diesel",
+          "yearStart": 2012,
+          "yearEnd": 2019
         },
         {
-          "name": "(2) CABRIOLET 135I 306 EDITION EXCLUSIVE",
+          "name": "1.5 i 102",
           "fuel": "Essence",
-          "yearStart": 2010,
-          "yearEnd": 2010
+          "yearStart": 2012,
+          "yearEnd": 2015
         },
         {
-          "name": "(2) COUPE 123DA 204 SPORT DESIGN",
-          "fuel": "Essence",
-          "yearStart": 2010,
-          "yearEnd": 2026
+          "name": "1.6 TDI 115",
+          "fuel": "Diesel",
+          "yearStart": 2009,
+          "yearEnd": 2011
         },
         {
-          "name": "116D 115",
-          "fuel": "Essence",
-          "yearStart": 2010,
-          "yearEnd": 2026
+          "name": "1.6 TDI 116",
+          "fuel": "Diesel",
+          "yearStart": 2011
         },
         {
-          "name": "116I 122",
+          "name": "1.6 i 109",
           "fuel": "Essence",
-          "yearStart": 2010,
+          "yearStart": 2022
+        },
+        {
+          "name": "1.6 i 115",
+          "fuel": "Essence",
+          "yearStart": 2004,
+          "yearEnd": 2012
+        },
+        {
+          "name": "1.6 i 116",
+          "fuel": "Essence",
+          "yearStart": 2004,
+          "yearEnd": 2023
+        },
+        {
+          "name": "1.6 i 122",
+          "fuel": "Essence",
+          "yearStart": 2006,
+          "yearEnd": 2011
+        },
+        {
+          "name": "1.6 i 136",
+          "fuel": "Essence",
+          "yearStart": 2011,
+          "yearEnd": 2015
+        },
+        {
+          "name": "2.0 TDI 118",
+          "fuel": "Diesel",
+          "yearStart": 2014,
+          "yearEnd": 2022
+        },
+        {
+          "name": "2.0 TDI 120",
+          "fuel": "Diesel",
+          "yearStart": 2012
+        },
+        {
+          "name": "2.0 TDI 122",
+          "fuel": "Diesel",
+          "yearStart": 2004,
+          "yearEnd": 2012
+        },
+        {
+          "name": "2.0 TDI 143",
+          "fuel": "Diesel",
+          "yearStart": 2007,
+          "yearEnd": 2015
+        },
+        {
+          "name": "2.0 TDI 150",
+          "fuel": "Diesel",
+          "yearStart": 2018
+        },
+        {
+          "name": "2.0 TDI 163",
+          "fuel": "Diesel",
+          "yearStart": 2004,
+          "yearEnd": 2012
+        },
+        {
+          "name": "2.0 TDI 177",
+          "fuel": "Diesel",
+          "yearStart": 2007,
+          "yearEnd": 2011
+        },
+        {
+          "name": "2.0 TDI 184",
+          "fuel": "Diesel",
+          "yearStart": 2011,
+          "yearEnd": 2015
+        },
+        {
+          "name": "2.0 TDI 190",
+          "fuel": "Diesel",
+          "yearStart": 2019
+        },
+        {
+          "name": "2.0 i 118",
+          "fuel": "Essence",
+          "yearStart": 2013,
+          "yearEnd": 2022
+        },
+        {
+          "name": "2.0 i 120",
+          "fuel": "Essence",
+          "yearStart": 2015
+        },
+        {
+          "name": "2.0 i 129",
+          "fuel": "Essence",
+          "yearStart": 2004,
+          "yearEnd": 2012
+        },
+        {
+          "name": "2.0 i 136",
+          "fuel": "Essence",
+          "yearStart": 2022
+        },
+        {
+          "name": "2.0 i 140",
+          "fuel": "Essence",
+          "yearStart": 2019,
+          "yearEnd": 2023
+        },
+        {
+          "name": "2.0 i 143",
+          "fuel": "Essence",
+          "yearStart": 2007,
+          "yearEnd": 2011
+        },
+        {
+          "name": "2.0 i 150",
+          "fuel": "Essence",
+          "yearStart": 2004,
+          "yearEnd": 2012
+        },
+        {
+          "name": "2.0 i 170",
+          "fuel": "Essence",
+          "yearStart": 2004,
+          "yearEnd": 2015
+        },
+        {
+          "name": "2.0 i 178",
+          "fuel": "Essence",
+          "yearStart": 2022
+        },
+        {
+          "name": "2.0 i 184",
+          "fuel": "Essence",
+          "yearStart": 2016,
+          "yearEnd": 2019
+        },
+        {
+          "name": "2.5 TDI 125",
+          "fuel": "Diesel",
+          "yearStart": 2013,
+          "yearEnd": 2019
+        },
+        {
+          "name": "2.5 TDI 218",
+          "fuel": "Diesel",
+          "yearStart": 2012,
+          "yearEnd": 2015
+        },
+        {
+          "name": "2.5 i 125",
+          "fuel": "Essence",
+          "yearStart": 2013,
           "yearEnd": 2016
         },
         {
-          "name": "116IA 136",
-          "fuel": "Essence",
-          "yearStart": 2013,
-          "yearEnd": 2013
-        },
-        {
-          "name": "118D 143",
-          "fuel": "Essence",
-          "yearStart": 2010,
-          "yearEnd": 2026
-        },
-        {
-          "name": "118I 143",
+          "name": "2.5 i 218",
           "fuel": "Essence",
           "yearStart": 2012,
           "yearEnd": 2016
         },
         {
-          "name": "118IA 129",
+          "name": "2.5 i 224",
           "fuel": "Essence",
-          "yearStart": 2010,
-          "yearEnd": 2026
+          "yearStart": 2016,
+          "yearEnd": 2019
         },
         {
-          "name": "120D 177",
+          "name": "3.0 i 135",
           "fuel": "Essence",
-          "yearStart": 2010,
-          "yearEnd": 2026
-        },
-        {
-          "name": "120I 170",
-          "fuel": "Essence",
-          "yearStart": 2010,
-          "yearEnd": 2026
-        },
-        {
-          "name": "120IA 150",
-          "fuel": "Essence",
-          "yearStart": 2010,
-          "yearEnd": 2026
-        },
-        {
-          "name": "123D 204",
-          "fuel": "Essence",
-          "yearStart": 2010,
-          "yearEnd": 2026
-        },
-        {
-          "name": "130I 258",
-          "fuel": "Essence",
-          "yearStart": 2010,
-          "yearEnd": 2026
-        },
-        {
-          "name": "3.0 340",
-          "fuel": "Essence",
-          "yearStart": 2010,
-          "yearEnd": 2026
-        },
-        {
-          "name": "CABRIOLET 135IA 306 SPORT DESIGN",
-          "fuel": "Essence",
-          "yearStart": 2010,
-          "yearEnd": 2026
-        },
-        {
-          "name": "SOCIETE 118DA CONFORT 3P",
-          "fuel": "Essence",
-          "yearStart": 2010,
-          "yearEnd": 2026
-        },
-        {
-          "name": "SOCIETE 120DA CONFORT 3P",
-          "fuel": "Essence",
-          "yearStart": 2010,
-          "yearEnd": 2026
-        },
-        {
-          "name": "(2) COUPE 123D 204 M SPORT",
-          "fuel": "Diesel",
-          "yearStart": 2013,
-          "yearEnd": 2013
-        },
-        {
-          "name": "118DA 143",
-          "fuel": "Diesel",
-          "yearStart": 2011,
-          "yearEnd": 2026
-        },
-        {
-          "name": "120DA 177",
-          "fuel": "Diesel",
-          "yearStart": 2011,
-          "yearEnd": 2026
-        },
-        {
-          "name": "COUPE 120D 177 EXCELLIS",
-          "fuel": "Diesel",
-          "yearStart": 2011,
+          "yearStart": 2012,
           "yearEnd": 2016
+        },
+        {
+          "name": "3.0 i 140",
+          "fuel": "Essence",
+          "yearStart": 2016,
+          "yearEnd": 2019
+        },
+        {
+          "name": "3.0 i 258",
+          "fuel": "Essence",
+          "yearStart": 2005,
+          "yearEnd": 2011
+        },
+        {
+          "name": "3.0 i 265",
+          "fuel": "Essence",
+          "yearStart": 2005,
+          "yearEnd": 2011
+        },
+        {
+          "name": "? TDI 204",
+          "fuel": "Diesel",
+          "yearStart": 2007,
+          "yearEnd": 2011
         }
       ],
       "Série 2 Active Tourer": [
         {
-          "name": "218i 136",
+          "name": "2.0 TDI 150",
+          "fuel": "Diesel",
+          "yearStart": 2021
+        },
+        {
+          "name": "2.0 TDI 163",
+          "fuel": "Diesel",
+          "yearStart": 2024
+        },
+        {
+          "name": "2.0 i 136",
           "fuel": "Essence",
-          "yearStart": 2022,
-          "yearEnd": 2026
+          "yearStart": 2021,
+          "yearEnd": 2025
         },
         {
-          "name": "220i 170",
+          "name": "2.0 i 140",
           "fuel": "Essence",
-          "yearStart": 2022,
-          "yearEnd": 2026
+          "yearStart": 2020,
+          "yearEnd": 2020
         },
         {
-          "name": "230e xDrive 245 PHEV",
-          "fuel": "Hybride rechargeable",
-          "yearStart": 2022,
-          "yearEnd": 2026
-        },
-        {
-          "name": "216d 116",
-          "fuel": "Diesel",
-          "yearStart": 2022,
-          "yearEnd": 2026
-        },
-        {
-          "name": "218d 150",
-          "fuel": "Diesel",
-          "yearStart": 2022,
-          "yearEnd": 2026
-        },
-        {
-          "name": "220d 190",
-          "fuel": "Diesel",
-          "yearStart": 2022,
-          "yearEnd": 2026
+          "name": "2.0 i 170",
+          "fuel": "Essence",
+          "yearStart": 2021
         }
       ],
       "Série 3": [
         {
-          "name": "(2) 316IA COMPACT PACK",
-          "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2026
-        },
-        {
-          "name": "3.2",
-          "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2026
-        },
-        {
-          "name": "316I COMPACT",
-          "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2026
-        },
-        {
-          "name": "316TI COMPACT PACK CONFORT",
-          "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2026
-        },
-        {
-          "name": "316TIA COMPACT PACK",
-          "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2026
-        },
-        {
-          "name": "318I PACK",
-          "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2026
-        },
-        {
-          "name": "318IA PACK LUXE",
-          "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2026
-        },
-        {
-          "name": "318TDS COMPACT",
-          "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2026
-        },
-        {
-          "name": "318TDS COMPACT CS",
-          "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2026
-        },
-        {
-          "name": "318TDS COMPACT DECOUVRABLE",
-          "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2026
-        },
-        {
-          "name": "318TDS COMPACT PACK",
-          "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2026
-        },
-        {
-          "name": "318TI COMPACT",
-          "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2026
-        },
-        {
-          "name": "318TIA COMPACT",
-          "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2026
-        },
-        {
-          "name": "320I",
-          "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2026
-        },
-        {
-          "name": "323I",
-          "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2026
-        },
-        {
-          "name": "323TI COMPACT",
-          "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2026
-        },
-        {
-          "name": "323TIA COMPACT",
-          "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2026
-        },
-        {
-          "name": "325TI COMPACT PACK M",
-          "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2026
-        },
-        {
-          "name": "325TIA COMPACT",
-          "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2026
-        },
-        {
-          "name": "325XI",
-          "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2026
-        },
-        {
-          "name": "328I",
-          "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2026
-        },
-        {
-          "name": "CABRIOLET 320CD",
-          "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2026
-        },
-        {
-          "name": "CABRIOLET 320CDA PREFERENCE LUXE",
-          "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2026
-        },
-        {
-          "name": "CABRIOLET 320CI PREFERENCE",
-          "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2026
-        },
-        {
-          "name": "CABRIOLET 320CIA PREFERENCE",
-          "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2026
-        },
-        {
-          "name": "CABRIOLET 325CI PREFERENCE",
-          "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2026
-        },
-        {
-          "name": "CABRIOLET 325CIA PREFERENCE",
-          "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2026
-        },
-        {
-          "name": "CABRIOLET 330CD PREFERENCE",
-          "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2026
-        },
-        {
-          "name": "CABRIOLET 330CI PREFERENCE",
-          "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2026
-        },
-        {
-          "name": "CABRIOLET 330CIA PREFERENCE",
-          "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2026
-        },
-        {
-          "name": "CABRIOLET M3",
-          "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2026
-        },
-        {
-          "name": "COUPE 318CI",
-          "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2026
-        },
-        {
-          "name": "COUPE 318CIA",
-          "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2026
-        },
-        {
-          "name": "COUPE 318CIA PACK",
-          "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2026
-        },
-        {
-          "name": "COUPE 323CI",
-          "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2026
-        },
-        {
-          "name": "COUPE 328CI",
-          "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2026
-        },
-        {
-          "name": "COUPE M3",
-          "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2026
-        },
-        {
-          "name": "COUPE M3 CSL 360",
-          "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2026
-        },
-        {
-          "name": "318TD COMPACT",
+          "name": "1.6 TDI 115",
           "fuel": "Diesel",
-          "yearStart": 2019,
-          "yearEnd": 2026
+          "yearStart": 2009,
+          "yearEnd": 2015
         },
         {
-          "name": "320D",
+          "name": "1.6 TDI 116",
           "fuel": "Diesel",
-          "yearStart": 2019,
-          "yearEnd": 2026
+          "yearStart": 2012,
+          "yearEnd": 2018
         },
         {
-          "name": "320TD COMPACT PACK",
+          "name": "1.6 TDI 122",
           "fuel": "Diesel",
-          "yearStart": 2019,
-          "yearEnd": 2026
+          "yearStart": 2020,
+          "yearEnd": 2024
         },
         {
-          "name": "330D PREFERENCE",
+          "name": "1.6 TDI 136",
           "fuel": "Diesel",
-          "yearStart": 2019,
-          "yearEnd": 2026
+          "yearStart": 2014,
+          "yearEnd": 2015
         },
         {
-          "name": "COUPE 330CD PREFERENCE LUXE STEPTRONIC",
-          "fuel": "Diesel",
-          "yearStart": 2019,
-          "yearEnd": 2026
+          "name": "1.6 i 122",
+          "fuel": "Essence",
+          "yearStart": 2008,
+          "yearEnd": 2011
         },
         {
-          "name": "COUPE 330CDA",
+          "name": "1.6 i 136",
+          "fuel": "Essence",
+          "yearStart": 2012,
+          "yearEnd": 2015
+        },
+        {
+          "name": "2.0 TDI 143",
           "fuel": "Diesel",
+          "yearStart": 2005,
+          "yearEnd": 2015
+        },
+        {
+          "name": "2.0 TDI 150",
+          "fuel": "Diesel",
+          "yearStart": 2015
+        },
+        {
+          "name": "2.0 TDI 163",
+          "fuel": "Diesel",
+          "yearStart": 2005,
+          "yearEnd": 2018
+        },
+        {
+          "name": "2.0 TDI 177",
+          "fuel": "Diesel",
+          "yearStart": 2005,
+          "yearEnd": 2010
+        },
+        {
+          "name": "2.0 TDI 184",
+          "fuel": "Diesel",
+          "yearStart": 2010,
+          "yearEnd": 2014
+        },
+        {
+          "name": "2.0 TDI 190",
+          "fuel": "Diesel",
+          "yearStart": 2015,
+          "yearEnd": 2024
+        },
+        {
+          "name": "2.0 e 204",
+          "fuel": "Électrique",
+          "yearStart": 2021,
+          "yearEnd": 2024
+        },
+        {
+          "name": "2.0 i 136",
+          "fuel": "Essence",
+          "yearStart": 2015,
+          "yearEnd": 2018
+        },
+        {
+          "name": "2.0 i 143",
+          "fuel": "Essence",
+          "yearStart": 2005,
+          "yearEnd": 2011
+        },
+        {
+          "name": "2.0 i 156",
+          "fuel": "Essence",
+          "yearStart": 2020
+        },
+        {
+          "name": "2.0 i 170",
+          "fuel": "Essence",
+          "yearStart": 2005,
+          "yearEnd": 2014
+        },
+        {
+          "name": "2.0 i 184",
+          "fuel": "Essence",
+          "yearStart": 2012,
+          "yearEnd": 2022
+        },
+        {
+          "name": "2.0 i 245",
+          "fuel": "Essence",
+          "yearStart": 2012,
+          "yearEnd": 2014
+        },
+        {
+          "name": "2.5 TDI 197",
+          "fuel": "Diesel",
+          "yearStart": 2007,
+          "yearEnd": 2010
+        },
+        {
+          "name": "2.5 TDI 204",
+          "fuel": "Diesel",
+          "yearStart": 2010,
+          "yearEnd": 2011
+        },
+        {
+          "name": "2.5 TDI 218",
+          "fuel": "Diesel",
+          "yearStart": 2013,
+          "yearEnd": 2016
+        },
+        {
+          "name": "2.5 i 218",
+          "fuel": "Essence",
+          "yearStart": 2005,
+          "yearEnd": 2011
+        },
+        {
+          "name": "3.0 TDI 231",
+          "fuel": "Diesel",
+          "yearStart": 2007,
+          "yearEnd": 2012
+        },
+        {
+          "name": "3.0 TDI 245",
+          "fuel": "Diesel",
+          "yearStart": 2005,
+          "yearEnd": 2011
+        },
+        {
+          "name": "3.0 TDI 258",
+          "fuel": "Diesel",
+          "yearStart": 2012,
+          "yearEnd": 2018
+        },
+        {
+          "name": "3.0 TDI 286",
+          "fuel": "Diesel",
+          "yearStart": 2006,
+          "yearEnd": 2011
+        },
+        {
+          "name": "3.0 e 252",
+          "fuel": "Électrique",
+          "yearStart": 2015,
+          "yearEnd": 2018
+        },
+        {
+          "name": "3.0 e 292",
+          "fuel": "Électrique",
+          "yearStart": 2020
+        },
+        {
+          "name": "3.0 e 293",
+          "fuel": "Électrique",
           "yearStart": 2019,
-          "yearEnd": 2026
+          "yearEnd": 2022
+        },
+        {
+          "name": "3.0 i 258",
+          "fuel": "Essence",
+          "yearStart": 2019,
+          "yearEnd": 2021
+        },
+        {
+          "name": "3.0 i 272",
+          "fuel": "Essence",
+          "yearStart": 2007,
+          "yearEnd": 2011
+        },
+        {
+          "name": "3.0 i 306",
+          "fuel": "Essence",
+          "yearStart": 2006,
+          "yearEnd": 2014
+        },
+        {
+          "name": "3.0 i 326",
+          "fuel": "Essence",
+          "yearStart": 2015,
+          "yearEnd": 2018
+        },
+        {
+          "name": "ActiveHybrid",
+          "fuel": "Essence",
+          "yearStart": 2012,
+          "yearEnd": 2013
         }
       ],
       "X1": [
         {
-          "name": "(2) SDRIVE16D 116 BUSINESS",
+          "name": "2.0 i 136",
           "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
+          "yearStart": 2020
         },
         {
-          "name": "(2) SDRIVE16D BUSINESS",
+          "name": "2.0 i 178",
           "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "(2) SDRIVE16D BUSINESS DESIGN",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "(2) SDRIVE16D EXECUTIVE",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "(2) SDRIVE16D LOUNGE",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "(2) SDRIVE16D M SPORT",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "(2) SDRIVE16D PREMIERE",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "(2) SDRIVE16D SPORT",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "(2) SDRIVE16D XLINE",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "(2) SDRIVE16D XLINE START EDITION",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "(2) SDRIVE18D 143 BUSINESS",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "(2) SDRIVE18D BUSINESS",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "(2) SDRIVE18D BUSINESS DESIGN",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "(2) SDRIVE18D LOUNGE",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "(2) SDRIVE18D M SPORT",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "(2) SDRIVE18D PREMIERE",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "(2) SDRIVE18D XLINE",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "(2) SDRIVE18I 136 BUSINESS DESIGN",
-          "fuel": "Essence",
-          "yearStart": 2022,
-          "yearEnd": 2023
-        },
-        {
-          "name": "(2) SDRIVE18I 8CV XLINE DKG7",
-          "fuel": "Essence",
-          "yearStart": 2017,
-          "yearEnd": 2017
-        },
-        {
-          "name": "(2) SDRIVE18I PREMIERE",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "(2) SDRIVE20D 184 BUSINESS",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "(2) SDRIVE20D BUSINESS",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "(2) SDRIVE20D EFFICIENTDYNAMICS EDITION 163 8CV BUSINESS",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "(2) SDRIVE20D EXECUTIVE",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "(2) SDRIVE20D LOUNGE",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "(2) SDRIVE20D M SPORT",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "(2) SDRIVE20D SPORT",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "(2) SDRIVE20I 10CV M SPORT DKG7",
-          "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2019
-        },
-        {
-          "name": "(2) SDRIVE20I 178 9CV BUSINESS DESIGN DKG7",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "(2) SDRIVE20I LOUNGE PLUS",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "(2) SDRIVE20I M SPORT",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "(2) SDRIVE20I SPORT",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "(2) SDRIVE20I XLINE",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "(2) SDRIVE20IA LOUNGE",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "(2) XDRIVE18D BUSINESS",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "(2) XDRIVE18D BUSINESS DESIGN",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "(2) XDRIVE18D EXECUTIVE",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "(2) XDRIVE18D LOUNGE",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "(2) XDRIVE18D M SPORT",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "(2) XDRIVE18D PREMIERE",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "(2) XDRIVE18D SPORT",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "(2) XDRIVE18D XLINE",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "(2) XDRIVE20D BUSINESS",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "(2) XDRIVE20D BUSINESS DESIGN",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "(2) XDRIVE20D EXECUTIVE",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "(2) XDRIVE20D LOUNGE",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "(2) XDRIVE20D M SPORT",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "(2) XDRIVE20D XLINE",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "(2) XDRIVE20I LOUNGE",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "(2) XDRIVE20I M SPORT",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "(2) XDRIVE20I SPORT",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "(2) XDRIVE20I XLINE",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "(2) XDRIVE25D 218 13CV LOUNGE",
-          "fuel": "Essence",
-          "yearStart": 2023,
-          "yearEnd": 2023
-        },
-        {
-          "name": "(2) XDRIVE25D LOUNGE",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "(2) XDRIVE25D M SPORT",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "(2) XDRIVE25D SPORT",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "(2) XDRIVE25D XLINE",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "(2) XDRIVE28I LOUNGE",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "(2) XDRIVE28I M SPORT",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "(2) XDRIVE28I SPORT",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "(2) XDRIVE28I XLINE",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "SDRIVE 18D 150 DKG7",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "SDRIVE 20I 170 DKG7",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "XDRIVE 23D 211 DKG7",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "XDRIVE M35I 300 M PERFORMANCE DKG7",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "(2) SDRIVE16D 116 PREMIERE",
-          "fuel": "Diesel",
-          "yearStart": 2012,
-          "yearEnd": 2012
-        },
-        {
-          "name": "2.0 184",
-          "fuel": "Diesel",
-          "yearStart": 2013,
-          "yearEnd": 2013
-        },
-        {
-          "name": "SDRIVE 18D 150 BUSINESS DESIGN DKG7",
-          "fuel": "Diesel",
-          "yearStart": 2024,
-          "yearEnd": 2026
-        },
-        {
-          "name": "SDRIVE18D XLINE",
-          "fuel": "Diesel",
-          "yearStart": 2018,
-          "yearEnd": 2018
-        },
-        {
-          "name": "SDRIVE20D 177 PREMIERE",
-          "fuel": "Diesel",
-          "yearStart": 2010,
-          "yearEnd": 2010
-        },
-        {
-          "name": "SDRIVE20D XLINE",
-          "fuel": "Diesel",
-          "yearStart": 2018,
-          "yearEnd": 2018
-        },
-        {
-          "name": "XDRIVE18D 143 CONFORT",
-          "fuel": "Diesel",
-          "yearStart": 2011,
-          "yearEnd": 2012
-        },
-        {
-          "name": "(2) XDRIVE 25E 220 BUSINESS DESIGN",
-          "fuel": "Hybride",
-          "yearStart": 2012,
-          "yearEnd": 2026
-        },
-        {
-          "name": "(2) XDRIVE25E 6CV BUSINESS DESIGN",
-          "fuel": "Hybride",
-          "yearStart": 2012,
-          "yearEnd": 2026
-        },
-        {
-          "name": "(2) XDRIVE25E 6CV LOUNGE",
-          "fuel": "Hybride",
-          "yearStart": 2012,
-          "yearEnd": 2026
-        },
-        {
-          "name": "(2) XDRIVE25E 6CV M SPORT",
-          "fuel": "Hybride",
-          "yearStart": 2012,
-          "yearEnd": 2026
-        },
-        {
-          "name": "(2) XDRIVE25E 6CV XLINE",
-          "fuel": "Hybride",
-          "yearStart": 2012,
-          "yearEnd": 2026
-        },
-        {
-          "name": "XDRIVE 25E 245 DKG7",
-          "fuel": "Hybride",
-          "yearStart": 2023,
-          "yearEnd": 2023
-        },
-        {
-          "name": "XDRIVE 30E 326 DKG7",
-          "fuel": "Hybride",
-          "yearStart": 2012,
-          "yearEnd": 2026
+          "yearStart": 2020
         }
       ],
       "X3": [
         {
-          "name": "(2) M40IA 360",
-          "fuel": "Essence",
-          "yearStart": 2015,
-          "yearEnd": 2026
-        },
-        {
-          "name": "(2) SDRIVE20IA 184 LOUNGE",
-          "fuel": "Essence",
-          "yearStart": 2015,
-          "yearEnd": 2026
-        },
-        {
-          "name": "(2) XDRIVE 30D 286 XLINE",
-          "fuel": "Essence",
-          "yearStart": 2015,
-          "yearEnd": 2026
-        },
-        {
-          "name": "(2) XDRIVE20D 190 BUSINESS",
-          "fuel": "Essence",
-          "yearStart": 2015,
-          "yearEnd": 2026
-        },
-        {
-          "name": "(2) XDRIVE20I 150 SPORT DESIGN",
-          "fuel": "Essence",
-          "yearStart": 2015,
-          "yearEnd": 2026
-        },
-        {
-          "name": "(2) XDRIVE28IA 245 LOUNGE",
-          "fuel": "Essence",
-          "yearStart": 2015,
-          "yearEnd": 2015
-        },
-        {
-          "name": "(2) XDRIVE30D 218 SPORT DESIGN",
-          "fuel": "Essence",
-          "yearStart": 2015,
-          "yearEnd": 2026
-        },
-        {
-          "name": "(2) XDRIVE30DA 258 LOUNGE",
-          "fuel": "Essence",
-          "yearStart": 2015,
-          "yearEnd": 2026
-        },
-        {
-          "name": "(2) XDRIVE35DA 313 LOUNGE PLUS",
-          "fuel": "Essence",
-          "yearStart": 2015,
-          "yearEnd": 2026
-        },
-        {
-          "name": "(2) XDRIVE35IA 306 LOUNGE PLUS",
-          "fuel": "Essence",
-          "yearStart": 2015,
-          "yearEnd": 2026
-        },
-        {
-          "name": "2.0I CONFORT",
-          "fuel": "Essence",
-          "yearStart": 2015,
-          "yearEnd": 2026
-        },
-        {
-          "name": "20 XDRIVE 208",
-          "fuel": "Essence",
-          "yearStart": 2015,
-          "yearEnd": 2026
-        },
-        {
-          "name": "20D XDRIVE 197",
-          "fuel": "Essence",
-          "yearStart": 2015,
-          "yearEnd": 2026
-        },
-        {
-          "name": "3.0 510",
-          "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2019
-        },
-        {
-          "name": "3.0D CONFORT",
-          "fuel": "Essence",
-          "yearStart": 2015,
-          "yearEnd": 2026
-        },
-        {
-          "name": "3.0D LUXE",
-          "fuel": "Essence",
-          "yearStart": 2015,
-          "yearEnd": 2026
-        },
-        {
-          "name": "3.0D PREMIERE",
-          "fuel": "Essence",
-          "yearStart": 2015,
-          "yearEnd": 2026
-        },
-        {
-          "name": "3.0D SPORT",
-          "fuel": "Essence",
-          "yearStart": 2015,
-          "yearEnd": 2026
-        },
-        {
-          "name": "3.0DA CONFORT",
-          "fuel": "Essence",
-          "yearStart": 2015,
-          "yearEnd": 2026
-        },
-        {
-          "name": "3.0DA LUXE",
-          "fuel": "Essence",
-          "yearStart": 2015,
-          "yearEnd": 2026
-        },
-        {
-          "name": "3.0DA PREMIERE",
-          "fuel": "Essence",
-          "yearStart": 2015,
-          "yearEnd": 2026
-        },
-        {
-          "name": "3.0DA SPORT",
-          "fuel": "Essence",
-          "yearStart": 2015,
-          "yearEnd": 2026
-        },
-        {
-          "name": "3.0I",
-          "fuel": "Essence",
-          "yearStart": 2015,
-          "yearEnd": 2026
-        },
-        {
-          "name": "3.0I CONFORT",
-          "fuel": "Essence",
-          "yearStart": 2015,
-          "yearEnd": 2026
-        },
-        {
-          "name": "3.0I LUXE",
-          "fuel": "Essence",
-          "yearStart": 2015,
-          "yearEnd": 2026
-        },
-        {
-          "name": "3.0I SPORT",
-          "fuel": "Essence",
-          "yearStart": 2015,
-          "yearEnd": 2026
-        },
-        {
-          "name": "3.0IA",
-          "fuel": "Essence",
-          "yearStart": 2015,
-          "yearEnd": 2026
-        },
-        {
-          "name": "3.0IA CONFORT",
-          "fuel": "Essence",
-          "yearStart": 2015,
-          "yearEnd": 2026
-        },
-        {
-          "name": "3.0IA LUXE",
-          "fuel": "Essence",
-          "yearStart": 2015,
-          "yearEnd": 2026
-        },
-        {
-          "name": "3.0IA SPORT",
-          "fuel": "Essence",
-          "yearStart": 2015,
-          "yearEnd": 2026
-        },
-        {
-          "name": "40D XDRIVE 303",
-          "fuel": "Essence",
-          "yearStart": 2015,
-          "yearEnd": 2026
-        },
-        {
-          "name": "XDRIVE 398 M PERFORMANCE",
-          "fuel": "Essence",
-          "yearStart": 2015,
-          "yearEnd": 2026
-        },
-        {
-          "name": "(2) XDRIVE18D 143 CONFORT",
+          "name": "2.0 TDI 143",
           "fuel": "Diesel",
-          "yearStart": 2010,
-          "yearEnd": 2010
-        },
-        {
-          "name": "(2) XDRIVE20DA 177 LUXE",
-          "fuel": "Diesel",
-          "yearStart": 2010,
-          "yearEnd": 2026
-        },
-        {
-          "name": "2.0",
-          "fuel": "Diesel",
-          "yearStart": 2010,
-          "yearEnd": 2026
-        },
-        {
-          "name": "3.0DA 218 CONFORT",
-          "fuel": "Diesel",
-          "yearStart": 2010,
-          "yearEnd": 2026
-        },
-        {
-          "name": "XDRIVE20D 184 CONFORT",
-          "fuel": "Diesel",
-          "yearStart": 2014,
+          "yearStart": 2009,
           "yearEnd": 2014
         },
         {
-          "name": "XDRIVE20D 190 F25 LCI M SPORT",
+          "name": "2.0 TDI 150",
           "fuel": "Diesel",
-          "yearStart": 2016,
-          "yearEnd": 2016
+          "yearStart": 2006
         },
         {
-          "name": "XDRIVE20D 197 M SPORT",
+          "name": "2.0 TDI 177",
           "fuel": "Diesel",
-          "yearStart": 2025,
-          "yearEnd": 2026
+          "yearStart": 2004,
+          "yearEnd": 2010
         },
         {
-          "name": "(2) XDRIVE30E 292 M SPORT",
-          "fuel": "Hybride",
+          "name": "2.0 TDI 184",
+          "fuel": "Diesel",
+          "yearStart": 2010,
+          "yearEnd": 2014
+        },
+        {
+          "name": "2.0 TDI 190",
+          "fuel": "Diesel",
+          "yearStart": 2014
+        },
+        {
+          "name": "2.0 i 150",
+          "fuel": "Essence",
+          "yearStart": 2004,
+          "yearEnd": 2010
+        },
+        {
+          "name": "2.0 i 184",
+          "fuel": "Essence",
+          "yearStart": 2011
+        },
+        {
+          "name": "2.0 i 245",
+          "fuel": "Essence",
+          "yearStart": 2012,
+          "yearEnd": 2017
+        },
+        {
+          "name": "2.0 i 258",
+          "fuel": "Essence",
+          "yearStart": 2010,
+          "yearEnd": 2012
+        },
+        {
+          "name": "2.5 TDI 231",
+          "fuel": "Diesel",
+          "yearStart": 2018,
+          "yearEnd": 2019
+        },
+        {
+          "name": "2.5 i 218",
+          "fuel": "Essence",
+          "yearStart": 2006,
+          "yearEnd": 2010
+        },
+        {
+          "name": "3.0 TDI 218",
+          "fuel": "Diesel",
+          "yearStart": 2004,
+          "yearEnd": 2010
+        },
+        {
+          "name": "3.0 TDI 258",
+          "fuel": "Diesel",
+          "yearStart": 2010,
+          "yearEnd": 2017
+        },
+        {
+          "name": "3.0 TDI 265",
+          "fuel": "Diesel",
+          "yearStart": 2017,
+          "yearEnd": 2020
+        },
+        {
+          "name": "3.0 TDI 286",
+          "fuel": "Diesel",
+          "yearStart": 2006,
+          "yearEnd": 2025
+        },
+        {
+          "name": "3.0 TDI 313",
+          "fuel": "Diesel",
+          "yearStart": 2011,
+          "yearEnd": 2017
+        },
+        {
+          "name": "3.0 TDI 326",
+          "fuel": "Diesel",
+          "yearStart": 2018,
+          "yearEnd": 2020
+        },
+        {
+          "name": "3.0 TDI 340",
+          "fuel": "Diesel",
           "yearStart": 2020,
-          "yearEnd": 2023
+          "yearEnd": 2025
         },
         {
-          "name": "30E XDRIVE 299",
-          "fuel": "Hybride",
-          "yearStart": 2024,
-          "yearEnd": 2026
+          "name": "3.0 e 292",
+          "fuel": "Essence",
+          "yearStart": 2019,
+          "yearEnd": 2022
+        },
+        {
+          "name": "3.0 i 252",
+          "fuel": "Essence",
+          "yearStart": 2017,
+          "yearEnd": 2020
+        },
+        {
+          "name": "3.0 i 272",
+          "fuel": "Essence",
+          "yearStart": 2006,
+          "yearEnd": 2010
+        },
+        {
+          "name": "3.0 i 306",
+          "fuel": "Essence",
+          "yearStart": 2010,
+          "yearEnd": 2017
+        },
+        {
+          "name": "3.0 i 354",
+          "fuel": "Essence",
+          "yearStart": 2018,
+          "yearEnd": 2020
+        },
+        {
+          "name": "3.0 i 360",
+          "fuel": "Essence",
+          "yearStart": 2017
+        },
+        {
+          "name": "4.4 i 510",
+          "fuel": "Essence",
+          "yearStart": 2021,
+          "yearEnd": 2022
         }
       ],
       "X5": [
@@ -14548,22 +14006,60 @@
       ],
       "Série 2 Coupé": [
         {
-          "name": "220i 184",
-          "fuel": "Essence",
-          "yearStart": 2021,
-          "yearEnd": 2026
-        },
-        {
-          "name": "M240i xDrive 374",
-          "fuel": "Essence",
-          "yearStart": 2021,
-          "yearEnd": 2026
-        },
-        {
-          "name": "220d 190",
+          "name": "2.0 TDI 150",
           "fuel": "Diesel",
-          "yearStart": 2021,
-          "yearEnd": 2026
+          "yearStart": 2015,
+          "yearEnd": 2020
+        },
+        {
+          "name": "2.0 TDI 184",
+          "fuel": "Diesel",
+          "yearStart": 2014,
+          "yearEnd": 2014
+        },
+        {
+          "name": "2.0 TDI 190",
+          "fuel": "Diesel",
+          "yearStart": 2014
+        },
+        {
+          "name": "2.0 i 136",
+          "fuel": "Essence",
+          "yearStart": 2015,
+          "yearEnd": 2021
+        },
+        {
+          "name": "2.0 i 156",
+          "fuel": "Essence",
+          "yearStart": 2022
+        },
+        {
+          "name": "2.0 i 184",
+          "fuel": "Essence",
+          "yearStart": 2014
+        },
+        {
+          "name": "2.0 i 245",
+          "fuel": "Essence",
+          "yearStart": 2014,
+          "yearEnd": 2016
+        },
+        {
+          "name": "2.5 TDI 224",
+          "fuel": "Diesel",
+          "yearStart": 2015,
+          "yearEnd": 2019
+        },
+        {
+          "name": "3.0 i 245",
+          "fuel": "Essence",
+          "yearStart": 2024
+        },
+        {
+          "name": "3.0 i 252",
+          "fuel": "Essence",
+          "yearStart": 2016,
+          "yearEnd": 2019
         }
       ],
       "Neue Klasse": [
@@ -14868,274 +14364,87 @@
       ],
       "Série 7": [
         {
-          "name": "(2) 730LDA XDRIVE 286",
-          "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2026
+          "name": "2.5 TDI 231",
+          "fuel": "Diesel",
+          "yearStart": 2017,
+          "yearEnd": 2019
         },
         {
-          "name": "(2) 740LD XDRIVE 286",
-          "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2026
+          "name": "3.0 TDI 245",
+          "fuel": "Diesel",
+          "yearStart": 2008,
+          "yearEnd": 2012
         },
         {
-          "name": "728I 13",
-          "fuel": "Essence",
+          "name": "3.0 TDI 258",
+          "fuel": "Diesel",
           "yearStart": 2012,
-          "yearEnd": 2026
+          "yearEnd": 2014
         },
         {
-          "name": "728IA 14",
-          "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2026
+          "name": "3.0 TDI 265",
+          "fuel": "Diesel",
+          "yearStart": 2015,
+          "yearEnd": 2019
         },
         {
-          "name": "730DA 13",
-          "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2026
+          "name": "3.0 TDI 306",
+          "fuel": "Diesel",
+          "yearStart": 2010,
+          "yearEnd": 2012
         },
         {
-          "name": "730I PACK",
-          "fuel": "Essence",
+          "name": "3.0 TDI 313",
+          "fuel": "Diesel",
           "yearStart": 2012,
-          "yearEnd": 2026
+          "yearEnd": 2014
         },
         {
-          "name": "730IA PACK LUXE",
-          "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2026
+          "name": "3.0 e 394",
+          "fuel": "Électrique",
+          "yearStart": 2019
         },
         {
-          "name": "730LD 258",
+          "name": "3.0 i 320",
           "fuel": "Essence",
           "yearStart": 2012,
-          "yearEnd": 2026
+          "yearEnd": 2014
         },
         {
-          "name": "735I LUXE",
+          "name": "3.0 i 326",
           "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2026
+          "yearStart": 2010,
+          "yearEnd": 2018
         },
         {
-          "name": "735IA LUXE",
+          "name": "4.4 i 407",
           "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2026
+          "yearStart": 2008,
+          "yearEnd": 2012
         },
         {
-          "name": "740DA",
-          "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2026
-        },
-        {
-          "name": "740I 320",
-          "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2026
-        },
-        {
-          "name": "740IA 21",
-          "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2026
-        },
-        {
-          "name": "740LI 320",
-          "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2026
-        },
-        {
-          "name": "740LIA 306 INDIVIDUAL LIGNE MARINE",
-          "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2026
-        },
-        {
-          "name": "740LIA EXCLUSIVE",
-          "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2026
-        },
-        {
-          "name": "740LIA LUXE",
-          "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2026
-        },
-        {
-          "name": "745IA",
-          "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2026
-        },
-        {
-          "name": "750I L7",
-          "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2026
-        },
-        {
-          "name": "750IA 25",
+          "name": "4.4 i 450",
           "fuel": "Essence",
           "yearStart": 2012,
           "yearEnd": 2012
         },
         {
-          "name": "750LD xDrive 380",
+          "name": "4.4 i 544",
+          "fuel": "Essence",
+          "yearStart": 2010,
+          "yearEnd": 2014
+        },
+        {
+          "name": "ActiveHybrid 354",
           "fuel": "Essence",
           "yearStart": 2012,
-          "yearEnd": 2026
+          "yearEnd": 2014
         },
         {
-          "name": "750LI xDrive 450",
+          "name": "ActiveHybrid 465",
           "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2016
-        },
-        {
-          "name": "750LIA",
-          "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2026
-        },
-        {
-          "name": "750LIA 367 EXCLUSIVE INDIVIDUAL",
-          "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2026
-        },
-        {
-          "name": "750LIA EXCLUSIVE",
-          "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2026
-        },
-        {
-          "name": "760I 544",
-          "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2026
-        },
-        {
-          "name": "760IA EXCLUSIVE INDIVIDUAL",
-          "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2026
-        },
-        {
-          "name": "760ILA INDIVIDUAL LIGNE MARINE 1",
-          "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2026
-        },
-        {
-          "name": "760LI 544",
-          "fuel": "Essence",
-          "yearStart": 2017,
-          "yearEnd": 2017
-        },
-        {
-          "name": "(2) 740LDA XDRIVE 320 M SPORT",
-          "fuel": "Diesel",
-          "yearStart": 2019,
-          "yearEnd": 2019
-        },
-        {
-          "name": "725DA 231",
-          "fuel": "Diesel",
-          "yearStart": 2017,
-          "yearEnd": 2017
-        },
-        {
-          "name": "730D 258",
-          "fuel": "Diesel",
-          "yearStart": 2015,
-          "yearEnd": 2016
-        },
-        {
-          "name": "730DA 231",
-          "fuel": "Diesel",
-          "yearStart": 2011,
-          "yearEnd": 2011
-        },
-        {
-          "name": "730LD xDrive 265",
-          "fuel": "Diesel",
-          "yearStart": 2014,
-          "yearEnd": 2017
-        },
-        {
-          "name": "740D 313",
-          "fuel": "Diesel",
-          "yearStart": 2016,
-          "yearEnd": 2016
-        },
-        {
-          "name": "740DA xDrive 306",
-          "fuel": "Diesel",
-          "yearStart": 2011,
-          "yearEnd": 2011
-        },
-        {
-          "name": "740LD xDrive 320",
-          "fuel": "Diesel",
-          "yearStart": 2018,
-          "yearEnd": 2018
-        },
-        {
-          "name": "750D xDrive 380",
-          "fuel": "Diesel",
-          "yearStart": 2011,
-          "yearEnd": 2019
-        },
-        {
-          "name": "(2) 745LE 17CV",
-          "fuel": "Hybride",
-          "yearStart": 2016,
-          "yearEnd": 2018
-        },
-        {
-          "name": "740E IPERFORMANCE 326 EXCLUSIVE",
-          "fuel": "Hybride",
-          "yearStart": 2016,
-          "yearEnd": 2018
-        },
-        {
-          "name": "740LE XDRIVE IPERF 326 M SPORT",
-          "fuel": "Hybride",
-          "yearStart": 2016,
-          "yearEnd": 2017
-        },
-        {
-          "name": "(2) 745E 394 15CV",
-          "fuel": "Hybride rechargeable",
-          "yearStart": 2019,
-          "yearEnd": 2019
-        },
-        {
-          "name": "ACTIVEHYBRID 7 354 EDITION INDIVIDUAL",
-          "fuel": "Hybride rechargeable",
-          "yearStart": 2011,
-          "yearEnd": 2026
-        },
-        {
-          "name": "ACTIVEHYBRID 7 L EDITION INDIVIDUAL",
-          "fuel": "Hybride rechargeable",
-          "yearStart": 2011,
-          "yearEnd": 2026
-        },
-        {
-          "name": "LIMOUSINE ACTIVEHYBRID 7L 465",
-          "fuel": "Hybride rechargeable",
-          "yearStart": 2011,
-          "yearEnd": 2011
+          "yearStart": 2010,
+          "yearEnd": 2012
         }
       ],
       "X4": [
@@ -15363,144 +14672,91 @@
       ],
       "X7": [
         {
-          "name": "(2) XDRIVE40D 340",
-          "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2019
-        },
-        {
-          "name": "(2) XDRIVE40D 352 M SPORT",
-          "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2026
-        },
-        {
-          "name": "M50I 530",
-          "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2026
-        },
-        {
-          "name": "XDRIVE30DA 265 M SPORT 6PL",
+          "name": "3.0 TDI 265",
           "fuel": "Diesel",
           "yearStart": 2019,
           "yearEnd": 2020
         },
         {
-          "name": "XDRIVE40D 340 M SPORT",
+          "name": "3.0 TDI 340",
           "fuel": "Diesel",
-          "yearStart": 2022,
+          "yearStart": 2020
+        },
+        {
+          "name": "3.0 TDI 352",
+          "fuel": "Diesel",
+          "yearStart": 2022
+        },
+        {
+          "name": "3.0 TDI 400",
+          "fuel": "Diesel",
+          "yearStart": 2019,
+          "yearEnd": 2020
+        },
+        {
+          "name": "3.0 i 333",
+          "fuel": "Essence",
+          "yearStart": 2020,
           "yearEnd": 2022
+        },
+        {
+          "name": "3.0 i 340",
+          "fuel": "Essence",
+          "yearStart": 2019,
+          "yearEnd": 2020
+        },
+        {
+          "name": "4.4 i 530",
+          "fuel": "Essence",
+          "yearStart": 2019
         }
       ],
       "Z4": [
         {
-          "name": "(2) SDRIVE18I 156 EDITION WORLDLINE",
+          "name": "2.0 i 156",
           "fuel": "Essence",
-          "yearStart": 2014,
-          "yearEnd": 2014
-        },
-        {
-          "name": "(2) SDRIVE20I LOUNGE",
-          "fuel": "Essence",
-          "yearStart": 2015,
+          "yearStart": 2013,
           "yearEnd": 2015
         },
         {
-          "name": "(2) SDRIVE35I M SPORT",
-          "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2012
-        },
-        {
-          "name": "2.0",
-          "fuel": "Essence",
-          "yearStart": 2021,
-          "yearEnd": 2021
-        },
-        {
-          "name": "2.0 197",
-          "fuel": "Essence",
-          "yearStart": 2021,
-          "yearEnd": 2021
-        },
-        {
-          "name": "2.0 258",
+          "name": "2.0 i 184",
           "fuel": "Essence",
           "yearStart": 2011,
-          "yearEnd": 2026
+          "yearEnd": 2015
         },
         {
-          "name": "2.5I BV6",
+          "name": "2.0 i 197",
+          "fuel": "Essence",
+          "yearStart": 2022
+        },
+        {
+          "name": "2.0 i 245",
           "fuel": "Essence",
           "yearStart": 2011,
-          "yearEnd": 2026
+          "yearEnd": 2015
         },
         {
-          "name": "2.5SI BV6",
+          "name": "3.0 i 258",
           "fuel": "Essence",
-          "yearStart": 2011,
-          "yearEnd": 2026
+          "yearStart": 2009,
+          "yearEnd": 2011
         },
         {
-          "name": "2.5SIA",
+          "name": "3.0 i 306",
           "fuel": "Essence",
-          "yearStart": 2011,
-          "yearEnd": 2026
+          "yearStart": 2009,
+          "yearEnd": 2015
         },
         {
-          "name": "3.0",
+          "name": "3.0 i 340",
           "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2019
+          "yearStart": 2010
         },
         {
-          "name": "3.0 340",
+          "name": "? i 204",
           "fuel": "Essence",
-          "yearStart": 2011,
-          "yearEnd": 2019
-        },
-        {
-          "name": "3.0I SEQUENTIELLE",
-          "fuel": "Essence",
-          "yearStart": 2011,
-          "yearEnd": 2026
-        },
-        {
-          "name": "3.0SIA",
-          "fuel": "Essence",
-          "yearStart": 2011,
-          "yearEnd": 2026
-        },
-        {
-          "name": "3.0SIA CONFORT",
-          "fuel": "Essence",
-          "yearStart": 2011,
-          "yearEnd": 2026
-        },
-        {
-          "name": "COUPE 3.0SI 265",
-          "fuel": "Essence",
-          "yearStart": 2011,
-          "yearEnd": 2026
-        },
-        {
-          "name": "M 343 BV6",
-          "fuel": "Essence",
-          "yearStart": 2011,
-          "yearEnd": 2026
-        },
-        {
-          "name": "SDRIVE23I 204 LUXE",
-          "fuel": "Essence",
-          "yearStart": 2011,
-          "yearEnd": 2026
-        },
-        {
-          "name": "SDRIVE35I 306 M SPORT",
-          "fuel": "Essence",
-          "yearStart": 2010,
-          "yearEnd": 2013
+          "yearStart": 2009,
+          "yearEnd": 2011
         }
       ],
       "Série 6": [
@@ -15703,84 +14959,318 @@
       ],
       "Série 3 Touring": [
         {
-          "name": "318i 156",
-          "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2026
-        },
-        {
-          "name": "320i 184",
-          "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2026
-        },
-        {
-          "name": "330i 258",
-          "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2026
-        },
-        {
-          "name": "M340i xDrive 374",
-          "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2026
-        },
-        {
-          "name": "318d 150",
+          "name": "1.6 TDI 115",
           "fuel": "Diesel",
-          "yearStart": 2019,
-          "yearEnd": 2026
+          "yearStart": 2010,
+          "yearEnd": 2012
         },
         {
-          "name": "320d 190",
+          "name": "1.6 TDI 116",
           "fuel": "Diesel",
-          "yearStart": 2019,
-          "yearEnd": 2026
+          "yearStart": 2012,
+          "yearEnd": 2019
         },
         {
-          "name": "330d 286 xDrive",
+          "name": "1.6 TDI 122",
           "fuel": "Diesel",
-          "yearStart": 2019,
-          "yearEnd": 2026
+          "yearStart": 2022,
+          "yearEnd": 2024
         },
         {
-          "name": "330e 292 xDrive PHEV",
-          "fuel": "Hybride rechargeable",
-          "yearStart": 2020,
-          "yearEnd": 2026
+          "name": "1.6 i 136",
+          "fuel": "Essence",
+          "yearStart": 2013,
+          "yearEnd": 2015
+        },
+        {
+          "name": "2.0 TDI 143",
+          "fuel": "Diesel",
+          "yearStart": 2006,
+          "yearEnd": 2015
+        },
+        {
+          "name": "2.0 TDI 145",
+          "fuel": "Diesel",
+          "yearStart": 2008,
+          "yearEnd": 2008
+        },
+        {
+          "name": "2.0 TDI 150",
+          "fuel": "Diesel",
+          "yearStart": 2015
+        },
+        {
+          "name": "2.0 TDI 163",
+          "fuel": "Diesel",
+          "yearStart": 2011,
+          "yearEnd": 2019
+        },
+        {
+          "name": "2.0 TDI 177",
+          "fuel": "Diesel",
+          "yearStart": 2007,
+          "yearEnd": 2010
+        },
+        {
+          "name": "2.0 TDI 184",
+          "fuel": "Diesel",
+          "yearStart": 2010,
+          "yearEnd": 2015
+        },
+        {
+          "name": "2.0 TDI 190",
+          "fuel": "Diesel",
+          "yearStart": 2015,
+          "yearEnd": 2024
+        },
+        {
+          "name": "2.0 e 204",
+          "fuel": "Électrique",
+          "yearStart": 2021,
+          "yearEnd": 2024
+        },
+        {
+          "name": "2.0 i 136",
+          "fuel": "Essence",
+          "yearStart": 2015,
+          "yearEnd": 2019
+        },
+        {
+          "name": "2.0 i 143",
+          "fuel": "Essence",
+          "yearStart": 2006,
+          "yearEnd": 2012
+        },
+        {
+          "name": "2.0 i 156",
+          "fuel": "Essence",
+          "yearStart": 2020
+        },
+        {
+          "name": "2.0 i 170",
+          "fuel": "Essence",
+          "yearStart": 2005,
+          "yearEnd": 2012
+        },
+        {
+          "name": "2.0 i 184",
+          "fuel": "Essence",
+          "yearStart": 2012
+        },
+        {
+          "name": "2.0 i 245",
+          "fuel": "Essence",
+          "yearStart": 2012,
+          "yearEnd": 2014
+        },
+        {
+          "name": "2.5 TDI 197",
+          "fuel": "Diesel",
+          "yearStart": 2007,
+          "yearEnd": 2010
+        },
+        {
+          "name": "2.5 TDI 204",
+          "fuel": "Diesel",
+          "yearStart": 2010,
+          "yearEnd": 2012
+        },
+        {
+          "name": "2.5 TDI 218",
+          "fuel": "Diesel",
+          "yearStart": 2013,
+          "yearEnd": 2016
+        },
+        {
+          "name": "2.5 i 218",
+          "fuel": "Essence",
+          "yearStart": 2005,
+          "yearEnd": 2012
+        },
+        {
+          "name": "3.0 TDI 231",
+          "fuel": "Diesel",
+          "yearStart": 2005,
+          "yearEnd": 2010
+        },
+        {
+          "name": "3.0 TDI 245",
+          "fuel": "Diesel",
+          "yearStart": 2005,
+          "yearEnd": 2012
+        },
+        {
+          "name": "3.0 TDI 258",
+          "fuel": "Diesel",
+          "yearStart": 2012,
+          "yearEnd": 2019
+        },
+        {
+          "name": "3.0 TDI 286",
+          "fuel": "Diesel",
+          "yearStart": 2007,
+          "yearEnd": 2012
+        },
+        {
+          "name": "3.0 e 292",
+          "fuel": "Électrique",
+          "yearStart": 2020
+        },
+        {
+          "name": "3.0 i 258",
+          "fuel": "Essence",
+          "yearStart": 2019,
+          "yearEnd": 2021
+        },
+        {
+          "name": "3.0 i 272",
+          "fuel": "Essence",
+          "yearStart": 2005,
+          "yearEnd": 2012
+        },
+        {
+          "name": "3.0 i 306",
+          "fuel": "Essence",
+          "yearStart": 2007,
+          "yearEnd": 2014
+        },
+        {
+          "name": "3.0 i 326",
+          "fuel": "Essence",
+          "yearStart": 2018,
+          "yearEnd": 2019
         }
       ],
       "Série 5 Touring": [
         {
-          "name": "520i 170",
-          "fuel": "Essence",
-          "yearStart": 2024,
-          "yearEnd": 2026
+          "name": "2.0 TDI 143",
+          "fuel": "Diesel",
+          "yearStart": 2013,
+          "yearEnd": 2014
         },
         {
-          "name": "530i 252",
-          "fuel": "Essence",
-          "yearStart": 2017,
-          "yearEnd": 2026
+          "name": "2.0 TDI 150",
+          "fuel": "Diesel",
+          "yearStart": 2014,
+          "yearEnd": 2023
         },
         {
-          "name": "520d 190",
+          "name": "2.0 TDI 184",
+          "fuel": "Diesel",
+          "yearStart": 2010,
+          "yearEnd": 2014
+        },
+        {
+          "name": "2.0 TDI 190",
+          "fuel": "Diesel",
+          "yearStart": 2014
+        },
+        {
+          "name": "2.0 e 204",
+          "fuel": "Électrique",
+          "yearStart": 2021,
+          "yearEnd": 2022
+        },
+        {
+          "name": "2.0 i 184",
+          "fuel": "Essence",
+          "yearStart": 2011
+        },
+        {
+          "name": "2.0 i 245",
+          "fuel": "Essence",
+          "yearStart": 2011,
+          "yearEnd": 2017
+        },
+        {
+          "name": "2.0 i 258",
+          "fuel": "Essence",
+          "yearStart": 2010,
+          "yearEnd": 2011
+        },
+        {
+          "name": "2.5 TDI 204",
+          "fuel": "Diesel",
+          "yearStart": 2010,
+          "yearEnd": 2011
+        },
+        {
+          "name": "2.5 TDI 218",
+          "fuel": "Diesel",
+          "yearStart": 2011,
+          "yearEnd": 2017
+        },
+        {
+          "name": "3.0 TDI 245",
+          "fuel": "Diesel",
+          "yearStart": 2010,
+          "yearEnd": 2011
+        },
+        {
+          "name": "3.0 TDI 258",
+          "fuel": "Diesel",
+          "yearStart": 2011,
+          "yearEnd": 2017
+        },
+        {
+          "name": "3.0 TDI 265",
           "fuel": "Diesel",
           "yearStart": 2017,
-          "yearEnd": 2026
+          "yearEnd": 2020
         },
         {
-          "name": "530d 286",
+          "name": "3.0 TDI 286",
           "fuel": "Diesel",
-          "yearStart": 2017,
-          "yearEnd": 2026
-        },
-        {
-          "name": "530e xDrive PHEV",
-          "fuel": "Hybride rechargeable",
           "yearStart": 2020,
-          "yearEnd": 2026
+          "yearEnd": 2021
+        },
+        {
+          "name": "3.0 TDI 300",
+          "fuel": "Diesel",
+          "yearStart": 2010,
+          "yearEnd": 2011
+        },
+        {
+          "name": "3.0 TDI 313",
+          "fuel": "Diesel",
+          "yearStart": 2011,
+          "yearEnd": 2013
+        },
+        {
+          "name": "3.0 e 292",
+          "fuel": "Électrique",
+          "yearStart": 2020,
+          "yearEnd": 2022
+        },
+        {
+          "name": "3.0 i 252",
+          "fuel": "Essence",
+          "yearStart": 2017,
+          "yearEnd": 2019
+        },
+        {
+          "name": "3.0 i 272",
+          "fuel": "Essence",
+          "yearStart": 2011,
+          "yearEnd": 2012
+        },
+        {
+          "name": "3.0 i 306",
+          "fuel": "Essence",
+          "yearStart": 2010,
+          "yearEnd": 2013
+        },
+        {
+          "name": "4.4 i 407",
+          "fuel": "Essence",
+          "yearStart": 2011,
+          "yearEnd": 2012
+        },
+        {
+          "name": "? i 204",
+          "fuel": "Essence",
+          "yearStart": 2010,
+          "yearEnd": 2011
         }
       ],
       "M2": [
@@ -15839,332 +15329,351 @@
       ],
       "Série 2 Gran Coupé": [
         {
-          "name": "218i 136",
-          "fuel": "Essence",
-          "yearStart": 2020,
-          "yearEnd": 2026
-        },
-        {
-          "name": "220i 178",
-          "fuel": "Essence",
-          "yearStart": 2020,
-          "yearEnd": 2026
-        },
-        {
-          "name": "M235i xDrive 306",
-          "fuel": "Essence",
-          "yearStart": 2020,
-          "yearEnd": 2026
-        },
-        {
-          "name": "218d 150",
+          "name": "1.6 TDI 116",
           "fuel": "Diesel",
-          "yearStart": 2020,
-          "yearEnd": 2026
+          "yearStart": 2022
+        },
+        {
+          "name": "2.0 TDI 150",
+          "fuel": "Diesel",
+          "yearStart": 2022
+        },
+        {
+          "name": "2.0 TDI 190",
+          "fuel": "Diesel",
+          "yearStart": 2022
+        },
+        {
+          "name": "2.0 i 136",
+          "fuel": "Essence",
+          "yearStart": 2022
+        },
+        {
+          "name": "2.0 i 178",
+          "fuel": "Essence",
+          "yearStart": 2021
         }
       ],
       "Série 3 Gran Turismo": [
         {
-          "name": "318i 136",
-          "fuel": "Essence",
-          "yearStart": 2013,
-          "yearEnd": 2020
-        },
-        {
-          "name": "320i 184",
-          "fuel": "Essence",
-          "yearStart": 2013,
-          "yearEnd": 2020
-        },
-        {
-          "name": "330i 252",
-          "fuel": "Essence",
-          "yearStart": 2013,
-          "yearEnd": 2020
-        },
-        {
-          "name": "318d 150",
+          "name": "2.0 TDI 143",
           "fuel": "Diesel",
           "yearStart": 2013,
-          "yearEnd": 2020
+          "yearEnd": 2015
         },
         {
-          "name": "320d 190",
+          "name": "2.0 TDI 150",
           "fuel": "Diesel",
-          "yearStart": 2013,
-          "yearEnd": 2020
+          "yearStart": 2015
         },
         {
-          "name": "330d 265",
+          "name": "2.0 TDI 184",
           "fuel": "Diesel",
           "yearStart": 2013,
-          "yearEnd": 2020
+          "yearEnd": 2015
+        },
+        {
+          "name": "2.0 TDI 190",
+          "fuel": "Diesel",
+          "yearStart": 2015
+        },
+        {
+          "name": "2.0 i 184",
+          "fuel": "Essence",
+          "yearStart": 2013
+        },
+        {
+          "name": "2.5 TDI 218",
+          "fuel": "Diesel",
+          "yearStart": 2013,
+          "yearEnd": 2016
+        },
+        {
+          "name": "3.0 TDI 258",
+          "fuel": "Diesel",
+          "yearStart": 2014,
+          "yearEnd": 2019
         }
       ],
       "Série 4 Gran Coupé": [
         {
-          "name": "420i 184",
-          "fuel": "Essence",
-          "yearStart": 2021,
-          "yearEnd": 2026
-        },
-        {
-          "name": "430i 258",
-          "fuel": "Essence",
-          "yearStart": 2021,
-          "yearEnd": 2026
-        },
-        {
-          "name": "M440i xDrive 374",
-          "fuel": "Essence",
-          "yearStart": 2021,
-          "yearEnd": 2026
-        },
-        {
-          "name": "420d 190",
+          "name": "2.0 TDI 190",
           "fuel": "Diesel",
           "yearStart": 2021,
-          "yearEnd": 2026
+          "yearEnd": 2024
         },
         {
-          "name": "430d 286 xDrive",
-          "fuel": "Diesel",
-          "yearStart": 2021,
-          "yearEnd": 2026
+          "name": "2.0 i 184",
+          "fuel": "Essence",
+          "yearStart": 2021
         }
       ],
       "Série 4 Cabriolet": [
         {
-          "name": "420i 184",
-          "fuel": "Essence",
-          "yearStart": 2021,
-          "yearEnd": 2026
-        },
-        {
-          "name": "430i 258",
-          "fuel": "Essence",
-          "yearStart": 2021,
-          "yearEnd": 2026
-        },
-        {
-          "name": "M440i xDrive 374",
-          "fuel": "Essence",
-          "yearStart": 2021,
-          "yearEnd": 2026
-        },
-        {
-          "name": "420d 190",
+          "name": "2.0 TDI 184",
           "fuel": "Diesel",
-          "yearStart": 2021,
-          "yearEnd": 2026
+          "yearStart": 2013,
+          "yearEnd": 2015
+        },
+        {
+          "name": "2.0 TDI 190",
+          "fuel": "Diesel",
+          "yearStart": 2013
+        },
+        {
+          "name": "2.0 i 184",
+          "fuel": "Essence",
+          "yearStart": 2014
+        },
+        {
+          "name": "2.0 i 245",
+          "fuel": "Essence",
+          "yearStart": 2013,
+          "yearEnd": 2016
+        },
+        {
+          "name": "2.5 TDI 218",
+          "fuel": "Diesel",
+          "yearStart": 2014,
+          "yearEnd": 2016
+        },
+        {
+          "name": "3.0 TDI 258",
+          "fuel": "Diesel",
+          "yearStart": 2014
+        },
+        {
+          "name": "3.0 i 252",
+          "fuel": "Essence",
+          "yearStart": 2016,
+          "yearEnd": 2019
+        },
+        {
+          "name": "3.0 i 306",
+          "fuel": "Essence",
+          "yearStart": 2013,
+          "yearEnd": 2016
+        },
+        {
+          "name": "3.0 i 326",
+          "fuel": "Essence",
+          "yearStart": 2016
         }
       ],
       "Série 5": [
         {
-          "name": "(2) 550IA SPORT DESIGN",
-          "fuel": "Essence",
-          "yearStart": 2017,
-          "yearEnd": 2026
+          "name": "2.0 TDI 143",
+          "fuel": "Diesel",
+          "yearStart": 2013,
+          "yearEnd": 2014
         },
         {
-          "name": "(2) M5 SMG7",
-          "fuel": "Essence",
-          "yearStart": 2017,
-          "yearEnd": 2026
+          "name": "2.0 TDI 150",
+          "fuel": "Diesel",
+          "yearStart": 2013,
+          "yearEnd": 2022
         },
         {
-          "name": "(2) M5 TOURING 43CV SMG7",
-          "fuel": "Essence",
-          "yearStart": 2017,
-          "yearEnd": 2026
+          "name": "2.0 TDI 184",
+          "fuel": "Diesel",
+          "yearStart": 2010,
+          "yearEnd": 2014
         },
         {
-          "name": "(2) M5 TOURING SMG7",
-          "fuel": "Essence",
-          "yearStart": 2017,
-          "yearEnd": 2026
+          "name": "2.0 TDI 190",
+          "fuel": "Diesel",
+          "yearStart": 2013,
+          "yearEnd": 2023
         },
         {
-          "name": "(2) TOURING 520DA 177 LUXE",
-          "fuel": "Essence",
-          "yearStart": 2017,
-          "yearEnd": 2026
+          "name": "2.0 TDI 197",
+          "fuel": "Diesel",
+          "yearStart": 2023
         },
         {
-          "name": "(2) TOURING 523I 190",
-          "fuel": "Essence",
-          "yearStart": 2017,
-          "yearEnd": 2026
+          "name": "2.0 e 204",
+          "fuel": "Électrique",
+          "yearStart": 2021,
+          "yearEnd": 2022
         },
         {
-          "name": "(2) TOURING 530XIA 272 LUXE",
+          "name": "2.0 i 184",
           "fuel": "Essence",
-          "yearStart": 2017,
-          "yearEnd": 2026
+          "yearStart": 2011,
+          "yearEnd": 2023
         },
         {
-          "name": "(2) TOURING 535DA 286",
+          "name": "2.0 i 208",
           "fuel": "Essence",
-          "yearStart": 2017,
-          "yearEnd": 2026
+          "yearStart": 2023
         },
         {
-          "name": "(2) TOURING 550I 367 LUXE",
+          "name": "2.0 i 245",
           "fuel": "Essence",
-          "yearStart": 2017,
-          "yearEnd": 2026
+          "yearStart": 2011,
+          "yearEnd": 2016
         },
         {
-          "name": "520I PACK CONFORT",
+          "name": "2.0 i 258",
           "fuel": "Essence",
-          "yearStart": 2017,
-          "yearEnd": 2026
+          "yearStart": 2010,
+          "yearEnd": 2011
         },
         {
-          "name": "523IA",
-          "fuel": "Essence",
-          "yearStart": 2017,
-          "yearEnd": 2026
+          "name": "2.5 TDI 204",
+          "fuel": "Diesel",
+          "yearStart": 2010,
+          "yearEnd": 2011
         },
         {
-          "name": "530DA 13",
-          "fuel": "Essence",
-          "yearStart": 2017,
-          "yearEnd": 2026
+          "name": "2.5 TDI 218",
+          "fuel": "Diesel",
+          "yearStart": 2011,
+          "yearEnd": 2016
         },
         {
-          "name": "530I",
-          "fuel": "Essence",
-          "yearStart": 2017,
-          "yearEnd": 2026
+          "name": "3.0 TDI 245",
+          "fuel": "Diesel",
+          "yearStart": 2010,
+          "yearEnd": 2011
         },
         {
-          "name": "530IA",
-          "fuel": "Essence",
-          "yearStart": 2017,
-          "yearEnd": 2026
+          "name": "3.0 TDI 258",
+          "fuel": "Diesel",
+          "yearStart": 2011,
+          "yearEnd": 2016
         },
         {
-          "name": "535IA",
-          "fuel": "Essence",
-          "yearStart": 2017,
-          "yearEnd": 2026
-        },
-        {
-          "name": "M5",
-          "fuel": "Essence",
-          "yearStart": 2017,
-          "yearEnd": 2026
-        },
-        {
-          "name": "M5 PREFERENCE",
-          "fuel": "Essence",
-          "yearStart": 2017,
-          "yearEnd": 2026
-        },
-        {
-          "name": "M5 SMG7",
-          "fuel": "Essence",
-          "yearStart": 2017,
-          "yearEnd": 2026
-        },
-        {
-          "name": "TOURING 520IA PREFERENCE PACK",
-          "fuel": "Essence",
-          "yearStart": 2017,
-          "yearEnd": 2026
-        },
-        {
-          "name": "TOURING 525DA EXCELLIS",
-          "fuel": "Essence",
-          "yearStart": 2017,
-          "yearEnd": 2026
-        },
-        {
-          "name": "TOURING 525I EXCELLIS",
-          "fuel": "Essence",
-          "yearStart": 2017,
-          "yearEnd": 2026
-        },
-        {
-          "name": "TOURING 525IA EXCELLIS",
-          "fuel": "Essence",
-          "yearStart": 2017,
-          "yearEnd": 2026
-        },
-        {
-          "name": "TOURING 545I PACK LUXE",
-          "fuel": "Essence",
-          "yearStart": 2017,
-          "yearEnd": 2026
-        },
-        {
-          "name": "TOURING 545IA PACK LUXE",
-          "fuel": "Essence",
-          "yearStart": 2017,
-          "yearEnd": 2026
-        },
-        {
-          "name": "(2) 535DA 272 SPORT",
+          "name": "3.0 TDI 265",
           "fuel": "Diesel",
           "yearStart": 2017,
-          "yearEnd": 2026
+          "yearEnd": 2020
         },
         {
-          "name": "(2) TOURING 520D 177",
+          "name": "3.0 TDI 286",
           "fuel": "Diesel",
-          "yearStart": 2017,
-          "yearEnd": 2026
+          "yearStart": 2020,
+          "yearEnd": 2023
         },
         {
-          "name": "525DA PACK LUXE",
+          "name": "3.0 TDI 300",
           "fuel": "Diesel",
-          "yearStart": 2017,
-          "yearEnd": 2026
+          "yearStart": 2010,
+          "yearEnd": 2011
         },
         {
-          "name": "530D 14",
+          "name": "3.0 TDI 313",
           "fuel": "Diesel",
-          "yearStart": 2017,
-          "yearEnd": 2026
+          "yearStart": 2011,
+          "yearEnd": 2016
         },
         {
-          "name": "530DA PACK",
-          "fuel": "Diesel",
-          "yearStart": 2017,
-          "yearEnd": 2026
+          "name": "3.0 e 252",
+          "fuel": "Électrique",
+          "yearStart": 2019,
+          "yearEnd": 2020
         },
         {
-          "name": "TOURING 525D EXCELLIS",
-          "fuel": "Diesel",
+          "name": "3.0 e 292",
+          "fuel": "Électrique",
+          "yearStart": 2020,
+          "yearEnd": 2022
+        },
+        {
+          "name": "3.0 i 252",
+          "fuel": "Essence",
           "yearStart": 2017,
-          "yearEnd": 2026
+          "yearEnd": 2020
+        },
+        {
+          "name": "3.0 i 272",
+          "fuel": "Essence",
+          "yearStart": 2011,
+          "yearEnd": 2012
+        },
+        {
+          "name": "3.0 i 306",
+          "fuel": "Essence",
+          "yearStart": 2010,
+          "yearEnd": 2016
+        },
+        {
+          "name": "3.0 i 340",
+          "fuel": "Essence",
+          "yearStart": 2017,
+          "yearEnd": 2020
+        },
+        {
+          "name": "4.4 i 407",
+          "fuel": "Essence",
+          "yearStart": 2010,
+          "yearEnd": 2012
+        },
+        {
+          "name": "? i 204",
+          "fuel": "Essence",
+          "yearStart": 2010,
+          "yearEnd": 2011
+        },
+        {
+          "name": "ActiveHybrid",
+          "fuel": "Essence",
+          "yearStart": 2012,
+          "yearEnd": 2016
+        },
+        {
+          "name": "ActiveHybrid 340",
+          "fuel": "Essence",
+          "yearStart": 2014,
+          "yearEnd": 2016
         }
       ],
       "Série 5 Gran Turismo": [
         {
-          "name": "520i 185",
-          "fuel": "Essence",
-          "yearStart": 2009,
-          "yearEnd": 2017
+          "name": "2.0 TDI 184",
+          "fuel": "Diesel",
+          "yearStart": 2012
         },
         {
-          "name": "530i 270",
-          "fuel": "Essence",
-          "yearStart": 2009,
-          "yearEnd": 2017
-        },
-        {
-          "name": "520d 185",
+          "name": "3.0 TDI 245",
           "fuel": "Diesel",
           "yearStart": 2009,
-          "yearEnd": 2017
+          "yearEnd": 2012
         },
         {
-          "name": "530d 258",
+          "name": "3.0 TDI 258",
           "fuel": "Diesel",
+          "yearStart": 2012
+        },
+        {
+          "name": "3.0 TDI 300",
+          "fuel": "Diesel",
+          "yearStart": 2010,
+          "yearEnd": 2012
+        },
+        {
+          "name": "3.0 TDI 313",
+          "fuel": "Diesel",
+          "yearStart": 2012,
+          "yearEnd": 2012
+        },
+        {
+          "name": "3.0 i 306",
+          "fuel": "Essence",
           "yearStart": 2009,
-          "yearEnd": 2017
+          "yearEnd": 2012
+        },
+        {
+          "name": "4.4 i 407",
+          "fuel": "Essence",
+          "yearStart": 2009,
+          "yearEnd": 2012
+        },
+        {
+          "name": "4.4 i 450",
+          "fuel": "Essence",
+          "yearStart": 2012,
+          "yearEnd": 2012
         }
       ],
       "Série 6 Gran Turismo": [
@@ -16247,106 +15756,9 @@
       ],
       "X2": [
         {
-          "name": "SDRIVE 16D 116 BUSINESS DESIGN",
+          "name": "2.0 i 178",
           "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "SDRIVE 16D LOUNGE DKG7 2019",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "SDRIVE 18D 150 GOLDPLAY EDITION",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "SDRIVE 18D 163 M SPORT DKG7",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "SDRIVE 18D LOUNGE",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "SDRIVE 18D M SPORT",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "SDRIVE 18I 136 BUSINESS DESIGN DKG7",
-          "fuel": "Essence",
-          "yearStart": 2021,
-          "yearEnd": 2023
-        },
-        {
-          "name": "SDRIVE 20I 170 DKG7",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "SDRIVE 20I 178 BUSINESS DESIGN DKG7",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "XDRIVE 18D LOUNGE PLUS",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "XDRIVE 20D 190 GOLDPLAY EDITION",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "XDRIVE 20D LOUNGE PLUS",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "XDRIVE 20D PREMIERE",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "XDRIVE M35I 300 M PERFORMANCE DKG7",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "SDRIVE 16D M SPORT DKG7",
-          "fuel": "Diesel",
-          "yearStart": 2023,
-          "yearEnd": 2023
-        },
-        {
-          "name": "XDRIVE 20D M SPORT",
-          "fuel": "Diesel",
-          "yearStart": 2019,
-          "yearEnd": 2022
-        },
-        {
-          "name": "XDRIVE 25E 220 M SPORT",
-          "fuel": "Hybride",
-          "yearStart": 2022,
-          "yearEnd": 2023
+          "yearStart": 2020
         }
       ],
       "M4": [
@@ -16399,16 +15811,9 @@
       ],
       "X3 M": [
         {
-          "name": "3.0 TwinPower Turbo 480",
+          "name": "4.4 i 510",
           "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2026
-        },
-        {
-          "name": "3.0 TwinPower Turbo 510 Competition",
-          "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2026
+          "yearStart": 2019
         }
       ],
       "X4 M": [
@@ -16934,6 +16339,180 @@
           "fuel": "Essence",
           "yearStart": 2014,
           "yearEnd": 2015
+        }
+      ],
+      "Série 1 Coupé": [
+        {
+          "name": "2.0 TDI 143",
+          "fuel": "Diesel",
+          "yearStart": 2009
+        },
+        {
+          "name": "2.0 TDI 177",
+          "fuel": "Diesel",
+          "yearStart": 2007
+        },
+        {
+          "name": "2.0 i 170",
+          "fuel": "Essence",
+          "yearStart": 2009,
+          "yearEnd": 2012
+        },
+        {
+          "name": "2.5 i 218",
+          "fuel": "Essence",
+          "yearStart": 2008,
+          "yearEnd": 2012
+        },
+        {
+          "name": "3.0 i 306",
+          "fuel": "Essence",
+          "yearStart": 2007,
+          "yearEnd": 2012
+        },
+        {
+          "name": "? TDI 204",
+          "fuel": "Diesel",
+          "yearStart": 2007
+        }
+      ],
+      "Série 1 Cabriolet": [
+        {
+          "name": "2.0 TDI 143",
+          "fuel": "Diesel",
+          "yearStart": 2008
+        },
+        {
+          "name": "2.0 TDI 177",
+          "fuel": "Diesel",
+          "yearStart": 2008
+        },
+        {
+          "name": "2.0 i 143",
+          "fuel": "Essence",
+          "yearStart": 2008
+        },
+        {
+          "name": "2.0 i 170",
+          "fuel": "Essence",
+          "yearStart": 2008
+        },
+        {
+          "name": "2.5 i 218",
+          "fuel": "Essence",
+          "yearStart": 2008
+        },
+        {
+          "name": "3.0 i 306",
+          "fuel": "Essence",
+          "yearStart": 2008
+        },
+        {
+          "name": "? TDI 204",
+          "fuel": "Diesel",
+          "yearStart": 2008
+        }
+      ],
+      "Série 2 Cabriolet": [
+        {
+          "name": "2.0 TDI 150",
+          "fuel": "Diesel",
+          "yearStart": 2015,
+          "yearEnd": 2020
+        },
+        {
+          "name": "2.0 TDI 190",
+          "fuel": "Diesel",
+          "yearStart": 2015,
+          "yearEnd": 2020
+        },
+        {
+          "name": "2.0 i 136",
+          "fuel": "Essence",
+          "yearStart": 2015
+        },
+        {
+          "name": "2.0 i 184",
+          "fuel": "Essence",
+          "yearStart": 2015
+        },
+        {
+          "name": "2.0 i 245",
+          "fuel": "Essence",
+          "yearStart": 2015,
+          "yearEnd": 2016
+        },
+        {
+          "name": "2.0 i 252",
+          "fuel": "Essence",
+          "yearStart": 2016,
+          "yearEnd": 2018
+        },
+        {
+          "name": "2.5 TDI 224",
+          "fuel": "Diesel",
+          "yearStart": 2015,
+          "yearEnd": 2019
+        },
+        {
+          "name": "3.0 i 252",
+          "fuel": "Essence",
+          "yearStart": 2018,
+          "yearEnd": 2019
+        }
+      ],
+      "Série 4 Coupé": [
+        {
+          "name": "2.0 TDI 190",
+          "fuel": "Diesel",
+          "yearStart": 2020,
+          "yearEnd": 2025
+        },
+        {
+          "name": "2.0 i 184",
+          "fuel": "Essence",
+          "yearStart": 2020
+        }
+      ],
+      "Série 6 Cabriolet": [
+        {
+          "name": "3.0 TDI 286",
+          "fuel": "Diesel",
+          "yearStart": 2007,
+          "yearEnd": 2010
+        },
+        {
+          "name": "3.0 TDI 313",
+          "fuel": "Diesel",
+          "yearStart": 2011
+        },
+        {
+          "name": "3.0 i 272",
+          "fuel": "Essence",
+          "yearStart": 2009,
+          "yearEnd": 2010
+        },
+        {
+          "name": "3.0 i 320",
+          "fuel": "Essence",
+          "yearStart": 2011
+        },
+        {
+          "name": "4.4 i 367",
+          "fuel": "Essence",
+          "yearStart": 2005,
+          "yearEnd": 2010
+        },
+        {
+          "name": "4.4 i 407",
+          "fuel": "Essence",
+          "yearStart": 2011,
+          "yearEnd": 2012
+        },
+        {
+          "name": "4.4 i 450",
+          "fuel": "Essence",
+          "yearStart": 2012
         }
       ]
     },
@@ -57303,13 +56882,133 @@
     },
     "BMW": {
       "Série 1": [
-        "Business",
-        "Confort",
-        "Edition",
-        "Lounge",
-        "Luxe",
-        "M Sport",
-        "Sport"
+        "128TI",
+        "AVANTAGE EDITION 5P",
+        "BUSINESS",
+        "BUSINESS 3P",
+        "BUSINESS 5P",
+        "BUSINESS ABSOLUTE EDITION 3P",
+        "BUSINESS ABSOLUTE EDITION 5P",
+        "BUSINESS DESIGN",
+        "BUSINESS OPEN EDITION 3P",
+        "BUSINESS OPEN EDITION 5P",
+        "BUSINESS START EDITION 3P",
+        "BUSINESS START EDITION 5P",
+        "CONFORT 5P",
+        "CONFORT PACK SPORT M 5P",
+        "EDITION 5P",
+        "EDITION BLACK &AMP; WHITE 5P",
+        "EDITION BLACK &AMP; WHITE SPORT 5P",
+        "EDITION BUSINESS 5P",
+        "EDITION CONFORT 5P",
+        "EDITION CONNECTEDDRIVE 5P",
+        "EDITION EXECUTIVE 5P",
+        "EDITION LUXE 5P",
+        "EDITION M SPORT PRO",
+        "EDITION SPORT",
+        "EDITION SPORT 5P",
+        "EFFICIENTDYNAMICS EDITION BUSINESS 3P",
+        "EFFICIENTDYNAMICS EDITION BUSINESS 5P",
+        "EFFICIENTDYNAMICS EDITION BUSINESS DESIGN",
+        "EFFICIENTDYNAMICS EDITION EXECUTIVE",
+        "EFFICIENTDYNAMICS EDITION EXECUTIVE 3P",
+        "EFFICIENTDYNAMICS EDITION EXECUTIVE 5P",
+        "EFFICIENTDYNAMICS EDITION LOUNGE 3P",
+        "EFFICIENTDYNAMICS EDITION LOUNGE 5P",
+        "EFFICIENTDYNAMICS EDITION LOUNGE PLUS 3P",
+        "EFFICIENTDYNAMICS EDITION LOUNGE PLUS 5P",
+        "EFFICIENTDYNAMICS EDITION PREMIERE 3P",
+        "EFFICIENTDYNAMICS EDITION PREMIERE 5P",
+        "EFFICIENTDYNAMICS EDITION SPORT 3P",
+        "EFFICIENTDYNAMICS EDITION SPORT 5P",
+        "EFFICIENTDYNAMICS EDITION URBANCHIC 3P",
+        "EFFICIENTDYNAMICS EDITION URBANCHIC 5P",
+        "EFFICIENTDYNAMICS EDITION URBANLIFE 3P",
+        "EFFICIENTDYNAMICS EDITION URBANLIFE 5P",
+        "EXCELLIS 5P",
+        "EXCELLIS OR 5P",
+        "EXECUTIVE",
+        "EXECUTIVE 3P",
+        "EXECUTIVE 5P",
+        "EXECUTIVE ABSOLUTE EDITION 3P",
+        "EXECUTIVE ABSOLUTE EDITION 5P",
+        "EXECUTIVE OPEN EDITION 3P",
+        "EXECUTIVE OPEN EDITION 5P",
+        "EXECUTIVE START EDITION 5P",
+        "GRAND TOURISME 5P",
+        "LOUNGE",
+        "LOUNGE 3P",
+        "LOUNGE 5P",
+        "LOUNGE ABSOLUTE EDITION 3P",
+        "LOUNGE ABSOLUTE EDITION 5P",
+        "LOUNGE OPEN EDITION 3P",
+        "LOUNGE OPEN EDITION 5P",
+        "LOUNGE PLUS",
+        "LOUNGE PLUS 3P",
+        "LOUNGE PLUS 5P",
+        "LOUNGE PLUS ABSOLUTE EDITION 3P",
+        "LOUNGE PLUS ABSOLUTE EDITION 5P",
+        "LOUNGE PLUS OPEN EDITION 3P",
+        "LOUNGE PLUS OPEN EDITION 5P",
+        "LOUNGE PLUS START EDITION 3P",
+        "LOUNGE PLUS START EDITION 5P",
+        "LOUNGE START EDITION 3P",
+        "LOUNGE START EDITION 5P",
+        "LUXE 5P",
+        "LUXURY",
+        "M DESIGN",
+        "M DESIGN 3P",
+        "M DESIGN 5P",
+        "M PERFORMANCE 3P",
+        "M PERFORMANCE 5P",
+        "M SPORT",
+        "M SPORT 3P",
+        "M SPORT 5P",
+        "M SPORT 5P 122G",
+        "M SPORT 5P 126G",
+        "M SPORT ABSOLUTE EDITION 3P",
+        "M SPORT ABSOLUTE EDITION 5P",
+        "M SPORT ULTIMATE",
+        "M SPORT ULTIMATE 3P",
+        "M SPORT ULTIMATE 5P",
+        "M135I",
+        "M135I 5P",
+        "M135I EDITION M SPORT PRO",
+        "M135I M PERFORMANCE",
+        "PREMIERE",
+        "PREMIERE 3P",
+        "PREMIERE 5P",
+        "PREMIERE OPEN EDITION 3P",
+        "PREMIERE OPEN EDITION 5P",
+        "PREMIERE OR 5P",
+        "PREMIERE OR2 5P",
+        "PREMIERE PACK SPORT M 5P",
+        "PREMIERE START EDITION 3P",
+        "PREMIERE START EDITION 5P",
+        "SPORT",
+        "SPORT 3P",
+        "SPORT 5P",
+        "SPORT ABSOLUTE EDITION 3P",
+        "SPORT ABSOLUTE EDITION 5P",
+        "SPORT DESIGN 5P",
+        "SPORT OPEN EDITION 3P",
+        "SPORT OPEN EDITION 5P",
+        "SPORT PACK SPORT M 5P",
+        "SPORT START EDITION 3P",
+        "SPORT START EDITION 5P",
+        "URBANCHIC 3P",
+        "URBANCHIC 5P",
+        "URBANCHIC START EDITION 3P",
+        "URBANCHIC START EDITION 5P",
+        "URBANLIFE",
+        "URBANLIFE 3P",
+        "URBANLIFE 5P",
+        "URBANLIFE ABSOLUTE EDITION 3P",
+        "URBANLIFE ABSOLUTE EDITION 5P",
+        "URBANLIFE OPEN EDITION 3P",
+        "URBANLIFE OPEN EDITION 5P",
+        "URBANLIFE START EDITION 3P",
+        "URBANLIFE START EDITION 5P"
       ],
       "Série 2": [
         "Business",
@@ -57320,17 +57019,42 @@
         "Sport"
       ],
       "Série 2 Coupé": [
-        "Lounge",
-        "Sport",
-        "M Sport",
-        "M Sport Pro"
+        "COUPE",
+        "COUPE LOUNGE",
+        "COUPE LUXURY",
+        "COUPE M SPORT",
+        "COUPE M240I M PERFORMANCE",
+        "COUPE SPORT",
+        "M SPORT",
+        "M240I",
+        "M240I M PERFORMANCE"
       ],
       "Série 2 Active Tourer": [
-        "Lounge",
-        "Business",
-        "Sport",
-        "M Sport",
-        "M Sport Pro"
+        "ACTIVE TOURER",
+        "ACTIVE TOURER 225XE BUSINESS",
+        "ACTIVE TOURER 225XE EXECUTIVE",
+        "ACTIVE TOURER 225XE IPERFORMANCE BUSINESS DESIGN",
+        "ACTIVE TOURER 225XE IPERFORMANCE LOUNGE",
+        "ACTIVE TOURER 225XE IPERFORMANCE LUXURY",
+        "ACTIVE TOURER 225XE IPERFORMANCE M SPORT",
+        "ACTIVE TOURER 225XE IPERFORMANCE PREMIERE",
+        "ACTIVE TOURER 225XE IPERFORMANCE SPORT",
+        "ACTIVE TOURER 225XE LOUNGE",
+        "ACTIVE TOURER 225XE LUXURY",
+        "ACTIVE TOURER 225XE M SPORT",
+        "ACTIVE TOURER 225XE PREMIERE",
+        "ACTIVE TOURER 225XE SPORT",
+        "ACTIVE TOURER BUSINESS",
+        "ACTIVE TOURER BUSINESS DESIGN",
+        "ACTIVE TOURER EXECUTIVE",
+        "ACTIVE TOURER LOUNGE",
+        "ACTIVE TOURER LUXURY",
+        "ACTIVE TOURER LUXURY EDITION HELLO FUTURE",
+        "ACTIVE TOURER M SPORT",
+        "ACTIVE TOURER M SPORT EDITION HELLO FUTURE",
+        "ACTIVE TOURER PREMIERE",
+        "ACTIVE TOURER SPORT",
+        "ACTIVE TOURER SPORT EDITION HELLO FUTURE"
       ],
       "Série 2 Gran Tourer": [
         "Lounge",
@@ -57339,37 +57063,363 @@
         "M Sport"
       ],
       "Série 2 Gran Coupé": [
-        "Lounge",
-        "Sport",
-        "M Sport",
-        "M Sport Pro"
+        "GRAN COUPE",
+        "GRAN COUPE 7",
+        "GRAN COUPE 8",
+        "GRAN COUPE BUSINESS DESIGN",
+        "GRAN COUPE BUSINESS DESIGN 7",
+        "GRAN COUPE BUSINESS DESIGN 8",
+        "GRAN COUPE EDITION M SPORT PRO",
+        "GRAN COUPE LUXURY",
+        "GRAN COUPE LUXURY 7",
+        "GRAN COUPE LUXURY 8",
+        "GRAN COUPE M SPORT",
+        "GRAN COUPE M SPORT 7",
+        "GRAN COUPE M SPORT 8",
+        "GRAN COUPE M235I",
+        "GRAN COUPE M235I EDITION M SPORT PRO",
+        "GRAN COUPE M235I M PERFORMANCE"
       ],
       "Série 3": [
-        "Business",
-        "Confort",
-        "Edition",
-        "Exclusive",
-        "Executive",
-        "Lounge",
-        "Luxe",
-        "M Sport",
-        "Pack",
-        "Preference",
-        "Sport"
+        "292CH EDITION SPORT HYBRIDE",
+        "292CH LOUNGE HYBRIDE",
+        "3 LOUNGE",
+        "3 LUXURY",
+        "3 M SPORT",
+        "3 MODERN",
+        "3 SPORT",
+        "320SI",
+        "325XI CONFORT",
+        "325XI CONFORT PACK SPORT M",
+        "325XI EDITION",
+        "325XI LUXE",
+        "325XI PREMIERE",
+        "325XI PREMIERE PACK SPORT M",
+        "325XI SPORT",
+        "325XI SPORT DESIGN",
+        "325XI SPORT PACK SPORT M",
+        "325XIA CONFORT",
+        "325XIA CONFORT PACK SPORT M",
+        "325XIA EDITION",
+        "325XIA LUXE",
+        "325XIA PREMIERE",
+        "325XIA PREMIERE PACK SPORT M",
+        "325XIA SPORT DESIGN",
+        "325XIA SPORT PACK SPORT M",
+        "330XD CONFORT",
+        "330XD CONFORT PACK SPORT M",
+        "330XD EDITION",
+        "330XD LUXE",
+        "330XD PREMIERE",
+        "330XD PREMIERE PACK SPORT M",
+        "330XD SPORT",
+        "330XD SPORT DESIGN",
+        "330XD SPORT PACK SPORT M",
+        "330XDA",
+        "330XDA CONFORT PACK SPORT M",
+        "330XDA EDITION",
+        "330XDA LUXE",
+        "330XDA PREMIERE PACK SPORT M",
+        "330XDA SPORT DESIGN",
+        "330XI CONFORT",
+        "330XI CONFORT PACK SPORT M",
+        "330XI EDITION",
+        "330XI LUXE",
+        "330XI PREMIERE",
+        "330XI PREMIERE PACK SPORT M",
+        "330XI SPORT",
+        "330XI SPORT DESIGN",
+        "330XI SPORT PACK SPORT M",
+        "330XIA CONFORT",
+        "330XIA CONFORT PACK SPORT M",
+        "330XIA EDITION",
+        "330XIA LUXE",
+        "330XIA PREMIERE",
+        "330XIA PREMIERE PACK SPORT M",
+        "330XIA SPORT DESIGN",
+        "330XIA SPORT PACK SPORT M",
+        "335XI CONFORT",
+        "335XI EDITION",
+        "335XI LUXE",
+        "335XI SPORT DESIGN",
+        "335XIA EDITION",
+        "335XIA LUXE",
+        "335XIA SPORT DESIGN",
+        "AVANTAGE EDITION",
+        "BUSINESS",
+        "BUSINESS DESIGN",
+        "BUSINESS DESIGN HYBRIDE",
+        "BUSINESS OPEN",
+        "BUSINESS START EDITION",
+        "CONFORT",
+        "CONFORT PACK SPORT M",
+        "EDITION",
+        "EDITION BLACK &AMP; WHITE",
+        "EDITION BLACK &AMP; WHITE SPORT",
+        "EDITION BUSINESS",
+        "EDITION CONFORT",
+        "EDITION CONNECTDRIVE",
+        "EDITION EXECUTIVE",
+        "EDITION LUXE",
+        "EDITION SPORT",
+        "EDITION SPORT HYBRIDE",
+        "EFFICIENTDYNAMICS BUSINESS DESIGN",
+        "EFFICIENTDYNAMICS EDITION",
+        "EFFICIENTDYNAMICS EDITION BUSINESS",
+        "EFFICIENTDYNAMICS EDITION CONFORT",
+        "EFFICIENTDYNAMICS EDITION EXECUTIVE",
+        "EFFICIENTDYNAMICS EDITION LOUNGE",
+        "EFFICIENTDYNAMICS EDITION LUXE",
+        "EFFICIENTDYNAMICS EDITION LUXURY",
+        "EFFICIENTDYNAMICS EDITION LUXURY ULTIMATE",
+        "EFFICIENTDYNAMICS EDITION MODERN",
+        "EFFICIENTDYNAMICS EDITION PREMIERE",
+        "EFFICIENTDYNAMICS EDITION SPORT",
+        "EFFICIENTDYNAMICS EDITION SPORT ULTIMATE",
+        "EFFICIENTDYNAMICS LOUNGE PLUS",
+        "EFFICIENTDYNAMICS LUXURY ULTIMATE",
+        "EFFICIENTDYNAMICS SPORT ULTIMATE",
+        "EXECUTIVE",
+        "EXECUTIVE OPEN",
+        "EXECUTIVE START EDITION",
+        "HYBRIDE BUSINESS DESIGN",
+        "HYBRIDE EDITION SPORT",
+        "HYBRIDE EXECUTIVE",
+        "HYBRIDE LOUNGE",
+        "HYBRIDE LOUNGE PLUS",
+        "HYBRIDE LUXURY",
+        "HYBRIDE LUXURY ULTIMATE",
+        "HYBRIDE M SPORT",
+        "HYBRIDE M SPORT ULTIMATE",
+        "HYBRIDE SPORT",
+        "HYBRIDE SPORT ULTIMATE",
+        "LOUNGE",
+        "LOUNGE ABSOLUTE",
+        "LOUNGE HYBRIDE",
+        "LOUNGE OPEN",
+        "LOUNGE OPEN 2012",
+        "LOUNGE PLUS",
+        "LOUNGE PLUS EDITION HELLO FUTURE",
+        "LOUNGE PLUS START EDITION",
+        "LOUNGE PLUS STARTEDITION",
+        "LOUNGE START EDITION",
+        "LUXE",
+        "LUXURY",
+        "LUXURY ABSOLUTE",
+        "LUXURY EDITION HELLO FUTURE",
+        "LUXURY HYBRIDE",
+        "LUXURY OPEN",
+        "LUXURY START EDITION",
+        "LUXURY ULTIMATE",
+        "M PERFORMANCE",
+        "M SPORT",
+        "M SPORT ABSOLUTE",
+        "M SPORT EDITION HELLO FUTURE",
+        "M SPORT HELLO FUTURE",
+        "M SPORT HYBRIDE",
+        "M SPORT ULTIMATE",
+        "M340D",
+        "M340D M PERFORMANCE",
+        "M340I",
+        "M340I H",
+        "M340I M PERFORMANCE",
+        "MODERN",
+        "MODERN ABSOLUTE",
+        "MODERN OPEN",
+        "MODERN START EDITION",
+        "PACK BUSINESS",
+        "PACK LUXE",
+        "PREMIERE",
+        "PREMIERE OR2",
+        "PREMIERE PACK SPORT M",
+        "SPORT",
+        "SPORT ABSOLUTE",
+        "SPORT DESIGN",
+        "SPORT EDITION HELLO FUTURE",
+        "SPORT OPEN",
+        "SPORT PACK SPORT M",
+        "SPORT START EDITION",
+        "SPORT ULTIMATE",
+        "TECHNO DESIGN"
       ],
       "Série 3 Touring": [
-        "Lounge",
-        "Luxury",
-        "Sport",
-        "M Sport",
-        "Business",
-        "M Sport Pro"
+        "M SPORT ULTIMATE",
+        "M340I",
+        "TOURING",
+        "TOURING 320XD CONFORT",
+        "TOURING 320XD LUXE",
+        "TOURING 320XD PREMIERE",
+        "TOURING 320XD SPORT DESIGN",
+        "TOURING 325XI CONFORT",
+        "TOURING 325XI CONFORT PACK SPORT M",
+        "TOURING 325XI EDITION",
+        "TOURING 325XI LUXE",
+        "TOURING 325XI PREMIERE",
+        "TOURING 325XI PREMIERE PACK SPORT M",
+        "TOURING 325XI SPORT DESIGN",
+        "TOURING 325XI SPORT PACK SPORT M",
+        "TOURING 325XIA CONFORT",
+        "TOURING 325XIA CONFORT PACK SPORT M",
+        "TOURING 325XIA EDITION",
+        "TOURING 325XIA LUXE",
+        "TOURING 325XIA PREMIERE",
+        "TOURING 325XIA PREMIERE PACK SPORT M",
+        "TOURING 325XIA SPORT DESIGN",
+        "TOURING 325XIA SPORT PACK SPORT M",
+        "TOURING 330XD CONFORT",
+        "TOURING 330XD CONFORT PACK SPORT M",
+        "TOURING 330XD EDITION",
+        "TOURING 330XD LUXE",
+        "TOURING 330XD PREMIERE",
+        "TOURING 330XD PREMIERE PACK SPORT M",
+        "TOURING 330XD SPORT",
+        "TOURING 330XD SPORT DESIGN",
+        "TOURING 330XD SPORT PACK SPORT M",
+        "TOURING 330XDA CONFORT PACK SPORT M",
+        "TOURING 330XDA EDITION",
+        "TOURING 330XDA EDITION LUXE",
+        "TOURING 330XDA LUXE",
+        "TOURING 330XDA PREMIERE PACK SPORT M",
+        "TOURING 330XDA SPORT DESIGN",
+        "TOURING 330XDA SPORT PACK SPORT M",
+        "TOURING 330XI CONFORT",
+        "TOURING 330XI CONFORT PACK SPORT M",
+        "TOURING 330XI EDITION",
+        "TOURING 330XI LUXE",
+        "TOURING 330XI PREMIERE",
+        "TOURING 330XI PREMIERE PACK SPORT M",
+        "TOURING 330XI SPORT DESIGN",
+        "TOURING 330XI SPORT PACK SPORT M",
+        "TOURING 330XIA CONFORT",
+        "TOURING 330XIA CONFORT PACK SPORT M",
+        "TOURING 330XIA EDITION",
+        "TOURING 330XIA LUXE",
+        "TOURING 330XIA PREMIERE",
+        "TOURING 330XIA PREMIERE PACK SPORT M",
+        "TOURING 330XIA SPORT DESIGN",
+        "TOURING 330XIA SPORT PACK SPORT M",
+        "TOURING 335XI CONFORT",
+        "TOURING 335XI EDITION",
+        "TOURING 335XI LUXE",
+        "TOURING 335XI SPORT",
+        "TOURING 335XI SPORT DESIGN",
+        "TOURING 335XI SPORT PACK SPORT M",
+        "TOURING 335XIA CONFORT",
+        "TOURING 335XIA EDITION",
+        "TOURING 335XIA LUXE",
+        "TOURING 335XIA SPORT",
+        "TOURING 335XIA SPORT PACK SPORT M",
+        "TOURING AVANTAGE EDITION",
+        "TOURING BUSINESS",
+        "TOURING BUSINESS DESIGN",
+        "TOURING BUSINESS DESIGN HYBRIDE",
+        "TOURING BUSINESS OPEN",
+        "TOURING BUSINESS START EDITION",
+        "TOURING CONFORT",
+        "TOURING CONFORT OR",
+        "TOURING CONFORT PACK SPORT M",
+        "TOURING EDITION",
+        "TOURING EDITION BUSINESS",
+        "TOURING EDITION CONFORT",
+        "TOURING EDITION CONNECTDRIVE",
+        "TOURING EDITION EXCLUSIVE",
+        "TOURING EDITION EXECUTIVE",
+        "TOURING EDITION LUXE",
+        "TOURING EDITION SPORT",
+        "TOURING EDITION SPORT HYBRIDE",
+        "TOURING EDITION WORLDLINE",
+        "TOURING EFFICIENTDYNAMICS BUSINESS",
+        "TOURING EFFICIENTDYNAMICS BUSINESS DESIGN",
+        "TOURING EFFICIENTDYNAMICS EDITION",
+        "TOURING EFFICIENTDYNAMICS EDITION BUSINESS",
+        "TOURING EFFICIENTDYNAMICS EDITION CONFORT",
+        "TOURING EFFICIENTDYNAMICS EDITION EXECUTIVE",
+        "TOURING EFFICIENTDYNAMICS EDITION WORLDLINE",
+        "TOURING EFFICIENTDYNAMICS EXECUTIVE",
+        "TOURING EFFICIENTDYNAMICS LOUNGE",
+        "TOURING EFFICIENTDYNAMICS LOUNGE PLUS",
+        "TOURING EFFICIENTDYNAMICS LUXURY",
+        "TOURING EFFICIENTDYNAMICS LUXURY ULTIMATE",
+        "TOURING EFFICIENTDYNAMICS MODERN",
+        "TOURING EFFICIENTDYNAMICS SPORT",
+        "TOURING EFFICIENTDYNAMICS SPORT ULTIMATE",
+        "TOURING EXECUTIVE",
+        "TOURING EXECUTIVE OPEN",
+        "TOURING EXECUTIVE START EDITION",
+        "TOURING H M SPORT",
+        "TOURING HELLO FUTURE",
+        "TOURING HYBRIDE BUSINESS DESIGN",
+        "TOURING HYBRIDE EDITION SPORT",
+        "TOURING HYBRIDE LOUNGE",
+        "TOURING HYBRIDE LUXURY",
+        "TOURING HYBRIDE M SPORT",
+        "TOURING LOUNGE",
+        "TOURING LOUNGE 8",
+        "TOURING LOUNGE ABSOLUTE",
+        "TOURING LOUNGE HYBRIDE",
+        "TOURING LOUNGE OPEN",
+        "TOURING LOUNGE PLUS",
+        "TOURING LOUNGE PLUS FUTURE",
+        "TOURING LOUNGE PLUS HELLO FUTURE",
+        "TOURING LOUNGE PLUS START EDITION",
+        "TOURING LOUNGE PLUS STARTEDITION",
+        "TOURING LOUNGE START EDITION",
+        "TOURING LUXE",
+        "TOURING LUXE PACK SPORT M",
+        "TOURING LUXURY",
+        "TOURING LUXURY ABSOLUTE",
+        "TOURING LUXURY EDITION HELLO FUTURE",
+        "TOURING LUXURY HYBRIDE",
+        "TOURING LUXURY OPEN",
+        "TOURING LUXURY START EDITION",
+        "TOURING LUXURY ULTIMATE",
+        "TOURING M SPORT",
+        "TOURING M SPORT ABSOLUTE",
+        "TOURING M SPORT EDITION HELLO FUTURE",
+        "TOURING M SPORT HYBRIDE",
+        "TOURING M SPORT ULTIMATE",
+        "TOURING M340D",
+        "TOURING M340D M PERFORMANCE",
+        "TOURING M340I H",
+        "TOURING M340I M PERFORMANCE",
+        "TOURING MODERN",
+        "TOURING MODERN ABSOLUTE",
+        "TOURING MODERN OPEN",
+        "TOURING MODERN START EDITION",
+        "TOURING PREMIERE",
+        "TOURING PREMIERE OR",
+        "TOURING PREMIERE OR2",
+        "TOURING PREMIERE PACK SPORT M",
+        "TOURING SPORT",
+        "TOURING SPORT ABSOLUTE",
+        "TOURING SPORT DESIGN",
+        "TOURING SPORT EDITION HELLO FUTURE",
+        "TOURING SPORT EDITION HELLO FUTURE 2016",
+        "TOURING SPORT HELLO FUTURE",
+        "TOURING SPORT OPEN",
+        "TOURING SPORT PACK SPORT M",
+        "TOURING SPORT START EDITION",
+        "TOURING SPORT ULTIMATE",
+        "TOURING TECHNO DESIGN",
+        "TOURING TOURING EDITION SPORT",
+        "TOURING TOURING HYBRIDE BUSINESS DESIGN",
+        "TOURING TOURING HYBRIDE LOUNGE",
+        "TOURING TOURING LUXURY HYBRIDE",
+        "TOURING TOURING M SPORT HYBRIDE"
       ],
       "Série 3 Gran Turismo": [
-        "Lounge",
-        "Luxury",
-        "Sport",
-        "M Sport"
+        "BUSINESS",
+        "BUSINESS DESIGN",
+        "BUSINESS LOUNGE",
+        "EXECUTIVE",
+        "LOUNGE",
+        "LUXURY",
+        "LUXURY ULTIMATE",
+        "M SPORT",
+        "M SPORT ULTIMATE",
+        "MODERN",
+        "SPORT",
+        "SPORT ULTIMATE"
       ],
       "Série 4": [
         "Business",
@@ -57379,42 +57429,172 @@
         "Sport"
       ],
       "Série 4 Gran Coupé": [
-        "Lounge",
-        "Luxury",
-        "Sport",
-        "M Sport",
-        "M Sport Pro"
+        "GRAN COUPE",
+        "GRAN COUPE BUSINESS DESIGN",
+        "GRAN COUPE M SPORT",
+        "GRAN COUPE M SPORT LIMITED",
+        "GRAN COUPE M440I",
+        "GRAN COUPE M440I M PERFORMANCE",
+        "M SPORT",
+        "M440I M PERFORMANCE"
       ],
       "Série 4 Cabriolet": [
-        "Lounge",
-        "Luxury",
-        "Sport",
-        "M Sport"
+        "CABRIOLET 184CH LOUNGE",
+        "CABRIOLET LOUNGE",
+        "CABRIOLET LOUNGE BV6",
+        "CABRIOLET LUXURY",
+        "CABRIOLET LUXURY BV6",
+        "CABRIOLET LUXURY PACK TECHNO",
+        "CABRIOLET LUXURY PACK TECHNO BV6",
+        "CABRIOLET M SPORT",
+        "CABRIOLET M SPORT BV6",
+        "CABRIOLET M SPORT PACK TECHNO",
+        "CABRIOLET M SPORT PACK TECHNO BV6",
+        "CABRIOLET MODERN",
+        "CABRIOLET MODERN BV6",
+        "CABRIOLET SPORT",
+        "CABRIOLET SPORT BV6",
+        "CABRIOLET SPORT PACK TECHNO",
+        "CABRIOLET SPORT PACK TECHNO BV6"
       ],
       "Série 5": [
-        "Confort",
-        "Edition",
-        "Exclusive",
-        "Executive",
-        "Lounge",
-        "Luxe",
-        "M Sport",
-        "Pack",
-        "Preference",
-        "Sport"
+        "218CH LUXURY",
+        "5 EXCLUSIVE",
+        "5 LOUNGE PLUS",
+        "5 LUXE",
+        "5 LUXURY",
+        "5 M SPORT",
+        "5 MODERN",
+        "BUSINESS",
+        "BUSINESS ABSOLUTE EDITION",
+        "BUSINESS DESIGN",
+        "BUSINESS OPEN",
+        "BUSINESS START EDITION",
+        "CONFORT",
+        "EDITION TECHNODESIGN",
+        "EFFICIENT DYNAMICS BUSINESS",
+        "EFFICIENT DYNAMICS EXECUTIVE",
+        "EFFICIENT DYNAMICS LOUNGE",
+        "EFFICIENT DYNAMICS LUXURY",
+        "EFFICIENT DYNAMICS M SPORT",
+        "EFFICIENT DYNAMICS SPORT",
+        "EFFICIENTDYNAMICS BUSINESS",
+        "EFFICIENTDYNAMICS CONFORT",
+        "EFFICIENTDYNAMICS EXCELLIS",
+        "EFFICIENTDYNAMICS EXECUTIVE",
+        "EFFICIENTDYNAMICS LUXE",
+        "EXCELLIS",
+        "EXCLUSIVE",
+        "EXECUTIVE",
+        "EXECUTIVE ABSOLUTE EDITION",
+        "EXECUTIVE OPEN EDITION",
+        "EXECUTIVE START EDITION",
+        "IPERFORMANCE BUSINESS",
+        "IPERFORMANCE BUSINESS DESIGN",
+        "IPERFORMANCE EXECUTIVE",
+        "IPERFORMANCE LOUNGE",
+        "IPERFORMANCE LUXURY",
+        "IPERFORMANCE M SPORT",
+        "IPERFORMANCE SPORT",
+        "LOUNGE",
+        "LOUNGE OPEN EDITION",
+        "LOUNGE PLUS",
+        "LOUNGE PLUS ABSOLUTE EDITION",
+        "LOUNGE PLUS OPEN",
+        "LOUNGE PLUS START EDITION",
+        "LOUNGE START EDITION",
+        "LUXE",
+        "LUXURY",
+        "LUXURY ABSOLUTE EDITION",
+        "LUXURY OPEN EDITION",
+        "LUXURY START EDITION",
+        "M SPORT",
+        "M SPORT ABSOLUTE EDITION",
+        "M SPORT START EDITION",
+        "M550D",
+        "M550DA",
+        "M550I",
+        "M550IA",
+        "MODERN",
+        "MODERN ABSOLUTE EDITION",
+        "MODERN OPEN EDITION",
+        "PHEV",
+        "PHEV M SPORT",
+        "PHEV SERIE 5",
+        "SERIE 5",
+        "SPORT",
+        "SPORT DESIGN",
+        "TWINPOWER TURBO BUSINESS DESIGN",
+        "TWINPOWER TURBO LOUNGE",
+        "TWINPOWER TURBO LUXURY",
+        "TWINPOWER TURBO M SPORT"
       ],
       "Série 5 Touring": [
-        "Lounge",
-        "Luxury",
-        "Sport",
-        "M Sport",
-        "Business"
+        "TOURING 340CH BUSINESS DESIGN",
+        "TOURING 340CH LOUNGE",
+        "TOURING 340CH LUXURY",
+        "TOURING 340CH M SPORT",
+        "TOURING ABSOLUTE BUSINESS EDITION",
+        "TOURING BUSINESS",
+        "TOURING BUSINESS DESIGN",
+        "TOURING BUSINESS OPEN EDITION",
+        "TOURING BUSINESS START EDITION",
+        "TOURING CONFORT",
+        "TOURING EDITION TECHNODESIGN",
+        "TOURING EDITION TECHNODESIGN BV6",
+        "TOURING EXCELLIS",
+        "TOURING EXCLUSIVE",
+        "TOURING EXECUTIVE",
+        "TOURING EXECUTIVE ABSOLUTE EDITION",
+        "TOURING EXECUTIVE OPEN EDITION",
+        "TOURING EXECUTIVE START EDITION",
+        "TOURING H LUXURY",
+        "TOURING H M SPORT",
+        "TOURING LOUNGE",
+        "TOURING LOUNGE OPEN EDITION",
+        "TOURING LOUNGE PLUS",
+        "TOURING LOUNGE PLUS ABSOLUTE EDITION",
+        "TOURING LOUNGE PLUS OPEN EDITION",
+        "TOURING LOUNGE PLUS START EDITION",
+        "TOURING LOUNGE START EDITION",
+        "TOURING LUXE",
+        "TOURING LUXURY",
+        "TOURING LUXURY ABSOLUTE EDITION",
+        "TOURING LUXURY OPEN EDITION",
+        "TOURING LUXURY START EDITION",
+        "TOURING M SPORT",
+        "TOURING M SPORT ABSOLUTE EDITION",
+        "TOURING M SPORT START EDITION",
+        "TOURING M550D",
+        "TOURING M550DA",
+        "TOURING MODERN",
+        "TOURING MODERN ABSOLUTE EDITION",
+        "TOURING MODERN OPEN EDITION",
+        "TOURING SPORT",
+        "TOURING SPORT 156G",
+        "TOURING SPORT DESIGN",
+        "TOURING TWINPOWER TURBO BUSINESS DESIGN",
+        "TOURING TWINPOWER TURBO LOUNGE",
+        "TOURING TWINPOWER TURBO LUXURY",
+        "TOURING TWINPOWER TURBO M SPORT"
       ],
       "Série 5 Gran Turismo": [
-        "Lounge",
-        "Luxury",
-        "Sport",
-        "M Sport"
+        "EXCELLIS",
+        "EXCELLIS 4PL",
+        "EXCLUSIVE",
+        "EXCLUSIVE 4PL",
+        "LOUNGE PLUS",
+        "LOUNGE PLUS EU6",
+        "LUXE",
+        "LUXE 4PL",
+        "LUXURY",
+        "LUXURY EU6",
+        "M SPORT",
+        "M SPORT EU6",
+        "MODERN",
+        "MODERN EU6",
+        "SPORT DESIGN",
+        "SPORT DESIGN 4PL"
       ],
       "Série 6": [
         "Edition",
@@ -57432,11 +57612,33 @@
         "M Sport"
       ],
       "Série 7": [
-        "Edition",
-        "Exclusive",
-        "Luxe",
-        "M Sport",
-        "Pack"
+        "7 EDITION INDIVIDUAL",
+        "7 EDITION INDIVIDUAL ULTIMATE",
+        "7 EXCLUSIVE",
+        "7 EXCLUSIVE INDIVIDUAL",
+        "7 EXCLUSIVE ULTIMATE",
+        "7 LUXE",
+        "730LDA",
+        "730LDA 4PL",
+        "730LDA EXCLUSIVE",
+        "730LDA EXCLUSIVE 4PL",
+        "730LDA H 4PL",
+        "730LDA H EXCLUSIVE 4PL",
+        "EDITION INDIVIDUAL",
+        "EDITION INDIVIDUAL ULTIMATE",
+        "EDITION ULTIMATE",
+        "EXCLUSIVE",
+        "EXCLUSIVE INDIVIDUAL",
+        "EXCLUSIVE ULTIMATE",
+        "I7 M70 M PERFORMANCE KWH",
+        "I7 XDRIVE60 KWH",
+        "I7 XDRIVE60 M SPORT KWH",
+        "IPERFORMANCE",
+        "IPERFORMANCE EXCLUSIVE",
+        "IPERFORMANCE M SPORT",
+        "LUXE",
+        "M SPORT",
+        "M760E M PERFORMANCE"
       ],
       "Série 8": [
         "M Sport"
@@ -57450,35 +57652,266 @@
         "M Sport Pro"
       ],
       "X1": [
-        "Business",
-        "Edition",
-        "Executive",
-        "Lounge",
-        "Luxe",
-        "M Sport",
-        "Sport"
+        "23D M SPORT",
+        "23D M SPORT FIRST EDITION EXCLUSIVE",
+        "23D M SPORT FIRST EDITION PLUS",
+        "23D XLINE",
+        "23D XLINE FIRST EDITION EXCLUSIVE",
+        "23D XLINE FIRST EDITION PLUS",
+        "23I M SPORT",
+        "23I M SPORT FIRST EDITION EXCLUSIVE",
+        "23I M SPORT FIRST EDITION PLUS",
+        "23I XLINE",
+        "23I XLINE FIRST EDITION EXCLUSIVE",
+        "23I XLINE FIRST EDITION PLUS",
+        "25E BUSINESS DESIGN",
+        "25E LOUNGE",
+        "25E M SPORT",
+        "25E XLINE",
+        "30E BUSINESS DESIGN",
+        "30E M SPORT",
+        "30E XLINE",
+        "BUSINESS",
+        "BUSINESS DESIGN",
+        "BUSINESS DESIGN STEPTRONIC DCT8",
+        "LOUNGE",
+        "LOUNGE STEPTRONIC DCT8",
+        "M PERFORMANCE",
+        "M SPORT",
+        "M SPORT STEPTRONIC DCT8",
+        "PREMIERE",
+        "SDRIVE 18D",
+        "SDRIVE 18D BUSINESS DESIGN",
+        "SDRIVE 18D FIRST EDITION",
+        "SDRIVE 18D M SPORT",
+        "SDRIVE 18D M SPORT FIRST EDITION EXCLUSIVE",
+        "SDRIVE 18D M SPORT FIRST EDITION PLUS",
+        "SDRIVE 18D XLINE",
+        "SDRIVE 18D XLINE FIRST EDITION",
+        "SDRIVE 18D XLINE FIRST EDITION EXCLUSIVE",
+        "SDRIVE 18D XLINE FIRST EDITION PLUS",
+        "SDRIVE 18I",
+        "SDRIVE 18I BUSINESS DESIGN",
+        "SDRIVE 18I FIRST EDITION",
+        "SDRIVE 18I M SPORT",
+        "SDRIVE 18I M SPORT FIRST EDITION EXCLUSIVE",
+        "SDRIVE 18I M SPORT FIRST EDITION PLUS",
+        "SDRIVE 18I XLINE",
+        "SDRIVE 18I XLINE FIRST EDITION",
+        "SDRIVE 18I XLINE FIRST EDITION EXCLUSIVE",
+        "SDRIVE 18I XLINE FIRST EDITION PLUS",
+        "SDRIVE 20D",
+        "SDRIVE 20D BUSINESS DESIGN",
+        "SDRIVE 20D M SPORT",
+        "SDRIVE 20D XLINE",
+        "SDRIVE 20I",
+        "SDRIVE 20I BUSINESS DESIGN",
+        "SDRIVE 20I M SPORT",
+        "SDRIVE 20I XLINE",
+        "SPORT",
+        "SPORT STEPTRONIC DCT8",
+        "XDRIVE30 BUSINESS DESIGN KWH",
+        "XDRIVE30 KWH",
+        "XDRIVE30 M SPORT KWH",
+        "XDRIVE30 XLINE KWH",
+        "XLINE",
+        "XLINE STEPTRONIC DCT8"
       ],
       "X2": [
-        "Business",
-        "Edition",
-        "Lounge",
-        "M Sport"
+        "18D BUSINESS DESIGN",
+        "18D GOLDPLAY EDITION",
+        "18D LOUNGE",
+        "18D LOUNGE PLUS",
+        "18D M MESH EDITION",
+        "18D M SPORT",
+        "18D M SPORT X",
+        "18D PREMIERE",
+        "20D BUSINESS DESIGN",
+        "20D GOLDPLAY EDITION",
+        "20D LOUNGE",
+        "20D LOUNGE PLUS",
+        "20D M MESH EDITION",
+        "20D M SPORT",
+        "20D M SPORT X",
+        "20D PREMIERE",
+        "20I BUSINESS DESIGN",
+        "20I LOUNGE",
+        "20I LOUNGE PLUS",
+        "20I M MESH EDITION",
+        "20I M SPORT",
+        "20I M SPORT X",
+        "20I PREMIERE",
+        "25D BUSINESS DESIGN",
+        "25D LOUNGE",
+        "25D M SPORT",
+        "25D M SPORT X",
+        "25D PREMIERE",
+        "25E BUSINESS DESIGN",
+        "25E EDITION GOLDPLAY",
+        "25E GOLDPLAY EDITION",
+        "25E LOUNGE",
+        "25E M MESH EDITION",
+        "25E M SPORT",
+        "25E M SPORT X",
+        "BUSINESS DESIGN",
+        "M PERFORMANCE",
+        "M SPORT",
+        "M SPORT X",
+        "PREMIERE",
+        "SDRIVE 16D BUSINESS DESIGN",
+        "SDRIVE 16D GOLDPLAY EDITION",
+        "SDRIVE 16D LOUNGE",
+        "SDRIVE 16D LOUNGE 2019",
+        "SDRIVE 16D LOUNGE PLUS",
+        "SDRIVE 16D M MESH EDITION",
+        "SDRIVE 16D M SPORT",
+        "SDRIVE 16D M SPORT X",
+        "SDRIVE 16D PREMIERE",
+        "SDRIVE 18D",
+        "SDRIVE 18D BUSINESS DESIGN",
+        "SDRIVE 18D GOLDPLAY EDITION",
+        "SDRIVE 18D LOUNGE",
+        "SDRIVE 18D LOUNGE 2019",
+        "SDRIVE 18D LOUNGE PLUS",
+        "SDRIVE 18D M MESH EDITION",
+        "SDRIVE 18D M SPORT",
+        "SDRIVE 18D M SPORT X",
+        "SDRIVE 18D PREMIERE",
+        "SDRIVE 18I BUSINESS DESIGN",
+        "SDRIVE 18I GOLDPLAY EDITION",
+        "SDRIVE 18I LOUNGE",
+        "SDRIVE 18I LOUNGE PLUS",
+        "SDRIVE 18I M MESH EDITION",
+        "SDRIVE 18I M SPORT",
+        "SDRIVE 18I M SPORT X",
+        "SDRIVE 18I PREMIERE",
+        "SDRIVE 18IA BUSINESS DESIGN",
+        "SDRIVE 18IA PREMIERE",
+        "SDRIVE 20D",
+        "SDRIVE 20D BUSINESS DESIGN",
+        "SDRIVE 20D LOUNGE",
+        "SDRIVE 20D LOUNGE PLUS",
+        "SDRIVE 20D M SPORT",
+        "SDRIVE 20D M SPORT X",
+        "SDRIVE 20D PREMIERE",
+        "SDRIVE 20I",
+        "SDRIVE 20I BUSINESS DESIGN",
+        "SDRIVE 20I GOLDPLAY EDITION",
+        "SDRIVE 20I LOUNGE",
+        "SDRIVE 20I LOUNGE PLUS",
+        "SDRIVE 20I M MESH EDITION",
+        "SDRIVE 20I M SPORT",
+        "SDRIVE 20I M SPORT X",
+        "SDRIVE 20I PREMIERE",
+        "SDRIVE 20IA BUSINESS DESIGN"
       ],
       "X3": [
-        "Business",
-        "Confort",
-        "Edition",
-        "Executive",
-        "Line",
-        "Lounge",
-        "Luxe",
-        "M Sport",
-        "Sport"
+        "2.0I CONFORT",
+        "2.0I LUXE",
+        "2.0I PREMIERE",
+        "2.0I SPORT",
+        "2.5I LUXE",
+        "2.5I PREMIERE",
+        "2.5I SPORT",
+        "2.5IA CONFORT",
+        "2.5IA LUXE",
+        "2.5IA PREMIERE",
+        "2.5IA SPORT",
+        "20D X LINE",
+        "20I BUSINESS DESIGN",
+        "20I XLINE",
+        "3.0D CONFORT",
+        "3.0D LUXE",
+        "3.0D PREMIERE",
+        "3.0D SPORT",
+        "3.0DA CONFORT",
+        "3.0DA LUXE",
+        "3.0DA PREMIERE",
+        "3.0DA SPORT",
+        "3.0I",
+        "3.0I CONFORT",
+        "3.0I LUXE",
+        "3.0I PREMIERE",
+        "3.0I SPORT",
+        "3.0IA",
+        "3.0IA CONFORT",
+        "3.0IA LUXE",
+        "3.0IA SPORT",
+        "30D XLINE",
+        "30E BUSINESS DESIGN",
+        "30E M SPORT",
+        "30E X LINE",
+        "BUSINESS",
+        "BUSINESS DESIGN",
+        "BUSINESS OPEN EDITION",
+        "BUSINESS START EDITION",
+        "BUSINESS START EDITION BV6",
+        "CONFORT",
+        "CONFORT ABSOLUTE EDITION",
+        "CONFORT OPEN EDITION",
+        "D CONFORT",
+        "D LUXE",
+        "D PREMIERE",
+        "D SPORT",
+        "EDITION AVANTAGE",
+        "EXCELLIS",
+        "EXCELLIS ABSOLUTE EDITION",
+        "EXCELLIS OPEN EDITION",
+        "EXCLUSIVE",
+        "EXCLUSIVE ABSOLUTE EDITION",
+        "EXCLUSIVE EDITION ABSOLUTE",
+        "EXCLUSIVE OPEN EDITION",
+        "EXECUTIVE",
+        "EXECUTIVE ABSOLUTE EDITION",
+        "EXECUTIVE OPEN EDITION",
+        "EXECUTIVE START EDITION",
+        "EXECUTIVE START EDITION BV6",
+        "LIMITED SPORT EDITION",
+        "LOUNGE",
+        "LOUNGE ABSOLUTE EDITION",
+        "LOUNGE BV6",
+        "LOUNGE OPEN EDITION",
+        "LOUNGE PLUS",
+        "LOUNGE PLUS ABSOLUTE EDITION",
+        "LOUNGE PLUS OPEN EDITION",
+        "LOUNGE PLUS START EDITION",
+        "LOUNGE PLUS START EDITION BV6",
+        "LOUNGE START EDITION",
+        "LOUNGE START EDITION BV6",
+        "LUXE",
+        "LUXE ABSOLUTE EDITION",
+        "LUXE OPEN EDITION",
+        "LUXURY",
+        "LUXURY BV6",
+        "M SPORT",
+        "M SPORT ABSOLUTE EDITION",
+        "M SPORT OPEN EDITION",
+        "M SPORT START EDITION",
+        "PREMIERE",
+        "PREMIERE BV6",
+        "PREMIERE OR",
+        "SDRIVE 18D BUSINESS DESIGN",
+        "SDRIVE 18D XLINE",
+        "SPORT",
+        "SPORT DESIGN",
+        "SPORT DESIGN ABSOLUTE EDITION",
+        "SPORT DESIGN EDITION ABSOLUTE",
+        "SPORT DESIGN OPEN EDITION",
+        "SPORT PACK SPORT M",
+        "XDRIVE35SDA",
+        "XDRIVE35SDA EXCELLIS",
+        "XDRIVE35SDA LIMITED SPORT EDITION",
+        "XDRIVE35SDA LUXE",
+        "XDRIVE35SDA SPORT",
+        "XDRIVE35SDA SPORT DESIGN",
+        "XLINE",
+        "XLINE ABSOLUTE EDITION",
+        "XLINE BV6",
+        "XLINE OPEN EDITION",
+        "XLINE START EDITION",
+        "XLINE START EDITION BV6"
       ],
-      "X3 M": [
-        "Competition",
-        "CS"
-      ],
+      "X3 M": [],
       "X4": [
         "BUSINESS DESIGN",
         "LOUNGE",
@@ -57516,8 +57949,12 @@
         "CS"
       ],
       "X7": [
-        "Exclusive",
-        "M Sport"
+        "EXCLUSIVE",
+        "EXCLUSIVE 6PL",
+        "M PERFORMANCE",
+        "M SPORT",
+        "M SPORT 6PL",
+        "M SPORT 7PL"
       ],
       "M2": [
         "Coupé",
@@ -57628,12 +58065,24 @@
         "M Sport"
       ],
       "Z4": [
-        "Confort",
-        "Design",
-        "Edition",
-        "Lounge",
-        "Luxe",
-        "M Sport"
+        "CONFORT",
+        "EDITION WORLDLINE",
+        "FIRST EDITION",
+        "INTENSE",
+        "LOUNGE",
+        "LOUNGE PLUS",
+        "LUXE",
+        "M PERFORMANCE",
+        "M SPORT",
+        "M SPORT BV6",
+        "PURE DESIGN",
+        "S INTENSE",
+        "S M SPORT",
+        "S PURE DESIGN",
+        "SDRIVE 30I",
+        "SPORT",
+        "SPORT BV6",
+        "SPORT DESIGN"
       ],
       "Neue Klasse": [
         "Base",
@@ -57723,6 +58172,62 @@
         "LOUNGE PLUS BVM6",
         "XLINE",
         "XLINE BVM6"
+      ],
+      "Série 1 Coupé": [
+        "COUPE AVANTAGE EDITION",
+        "COUPE CONFORT",
+        "COUPE EXCELLIS",
+        "COUPE LUXE",
+        "COUPE M SPORT",
+        "COUPE PREMIERE",
+        "COUPE SPORT DESIGN"
+      ],
+      "Série 1 Cabriolet": [
+        "CABRIOLET AVANTAGE EDITION",
+        "CABRIOLET CONFORT",
+        "CABRIOLET EDITION EXCLUSIVE",
+        "CABRIOLET EXCELLIS",
+        "CABRIOLET LUXE",
+        "CABRIOLET LUXE 7",
+        "CABRIOLET SPORT DESIGN"
+      ],
+      "Série 2 Cabriolet": [
+        "CABRIOLET LOUNGE",
+        "CABRIOLET LUXURY",
+        "CABRIOLET M SPORT",
+        "CABRIOLET M240IA",
+        "CABRIOLET SPORT"
+      ],
+      "Série 4 Coupé": [
+        "COUPE",
+        "COUPE LOUNGE",
+        "COUPE M SPORT",
+        "COUPE M440D",
+        "COUPE M440I",
+        "COUPE M440I M PERFORMANCE"
+      ],
+      "Série 6 Cabriolet": [
+        "CABRIOLET",
+        "CABRIOLET 630CI",
+        "CABRIOLET 630CI PACK LUXE",
+        "CABRIOLET 630CI PACK LUXE SMG",
+        "CABRIOLET 630CI SEQUENTIELLE",
+        "CABRIOLET 630CI SMG",
+        "CABRIOLET 630CIA",
+        "CABRIOLET 630CIA PACK LUXE",
+        "CABRIOLET 640XD M SPORT",
+        "CABRIOLET 640XD SPORT DESIGN",
+        "CABRIOLET 645CI",
+        "CABRIOLET 645CIA",
+        "CABRIOLET EXCELLIS",
+        "CABRIOLET EXCLUSIVE",
+        "CABRIOLET EXCLUSIVE INDIVIDUAL",
+        "CABRIOLET LOUNGE PLUS",
+        "CABRIOLET LUXE",
+        "CABRIOLET M SPORT",
+        "CABRIOLET PACK LUXE",
+        "CABRIOLET SEQUENTIELLE",
+        "CABRIOLET SPORT DESIGN"
       ]
     },
     "Mercedes": {
