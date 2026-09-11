@@ -3,446 +3,598 @@
     "Renault": {
       "Clio": [
         {
-          "name": "0.9 TCe 75ch",
+          "name": "1.2",
           "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2019
+          "yearStart": 2003
         },
         {
-          "name": "0.9 TCe 90ch",
+          "name": "1.2 75",
           "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2019
+          "yearStart": 2003
         },
         {
-          "name": "1.0 TCe 65ch",
+          "name": "1.2 60",
           "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2026
+          "yearStart": 2003
         },
         {
-          "name": "1.0 TCe 90ch",
-          "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2026
-        },
-        {
-          "name": "1.0 TCe 100ch",
-          "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2026
-        },
-        {
-          "name": "1.9 D 65ch",
-          "fuel": "Diesel",
-          "yearStart": 1998,
-          "yearEnd": 2001
-        },
-        {
-          "name": "1.9 DTi 80ch",
-          "fuel": "Diesel",
-          "yearStart": 1998,
-          "yearEnd": 2001
-        },
-        {
-          "name": "1.5 dCi 80ch",
-          "fuel": "Diesel",
-          "yearStart": 2001,
-          "yearEnd": 2005
-        },
-        {
-          "name": "1.2 75ch",
-          "fuel": "Essence",
-          "yearStart": 1998,
-          "yearEnd": 2014
-        },
-        {
-          "name": "1.4 16v 98ch",
-          "fuel": "Essence",
-          "yearStart": 1998,
-          "yearEnd": 2012
-        },
-        {
-          "name": "1.6 16v 128ch",
-          "fuel": "Essence",
-          "yearStart": 2001,
-          "yearEnd": 2012
-        },
-        {
-          "name": "2.0 RS 197ch",
-          "fuel": "Essence",
-          "yearStart": 2006,
-          "yearEnd": 2012
-        },
-        {
-          "name": "2.0 RS 203ch",
-          "fuel": "Essence",
-          "yearStart": 2009,
-          "yearEnd": 2012
-        },
-        {
-          "name": "1.5 dCi 65ch",
-          "fuel": "Diesel",
-          "yearStart": 2001,
-          "yearEnd": 2012
-        },
-        {
-          "name": "1.5 dCi 105ch",
-          "fuel": "Diesel",
-          "yearStart": 2006,
-          "yearEnd": 2012
-        },
-        {
-          "name": "1.2 TCe 100ch",
-          "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2019
-        },
-        {
-          "name": "1.2 TCe 120ch",
-          "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2019
-        },
-        {
-          "name": "1.3 TCe 130ch",
-          "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2026
-        },
-        {
-          "name": "1.3 TCe 140ch",
-          "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2026
-        },
-        {
-          "name": "1.6 RS 200ch",
-          "fuel": "Essence",
-          "yearStart": 2013,
-          "yearEnd": 2019
-        },
-        {
-          "name": "1.6 RS 220ch Trophy",
-          "fuel": "Essence",
-          "yearStart": 2015,
-          "yearEnd": 2019
-        },
-        {
-          "name": "1.5 dCi 65ch",
-          "fuel": "Diesel",
-          "yearStart": 2005,
-          "yearEnd": 2012
-        },
-        {
-          "name": "1.5 dCi 75ch",
-          "fuel": "Diesel",
-          "yearStart": 2005,
-          "yearEnd": 2019
-        },
-        {
-          "name": "1.5 dCi 85ch",
-          "fuel": "Diesel",
-          "yearStart": 2008,
-          "yearEnd": 2019
-        },
-        {
-          "name": "1.5 dCi 90ch",
-          "fuel": "Diesel",
-          "yearStart": 2012,
-          "yearEnd": 2019
-        },
-        {
-          "name": "1.5 Blue dCi 85ch",
-          "fuel": "Diesel",
-          "yearStart": 2019,
-          "yearEnd": 2026
-        },
-        {
-          "name": "1.5 Blue dCi 100ch",
-          "fuel": "Diesel",
-          "yearStart": 2019,
-          "yearEnd": 2026
-        },
-        {
-          "name": "1.5 Blue dCi 115ch",
-          "fuel": "Diesel",
-          "yearStart": 2019,
-          "yearEnd": 2023
-        },
-        {
-          "name": "1.6 E-Tech 140ch",
-          "fuel": "Hybride",
-          "yearStart": 2020,
-          "yearEnd": 2026
-        },
-        {
-          "name": "1.6 E-Tech 145ch",
-          "fuel": "Hybride",
-          "yearStart": 2023,
-          "yearEnd": 2026
-        },
-        {
-          "name": "1.0 TCe 100ch GPL",
+          "name": "1.2 GPL 60",
           "fuel": "GPL",
-          "yearStart": 2020,
-          "yearEnd": 2026
+          "yearStart": 2003
+        },
+        {
+          "name": "1.2 GPL",
+          "fuel": "GPL",
+          "yearStart": 2003
+        },
+        {
+          "name": "1.4",
+          "fuel": "Essence",
+          "yearStart": 2003
+        },
+        {
+          "name": "1.4 100",
+          "fuel": "Essence",
+          "yearStart": 2003
+        },
+        {
+          "name": "1.5 dCi 65",
+          "fuel": "Diesel",
+          "yearStart": 2003
+        },
+        {
+          "name": "1.5 dCi 70",
+          "fuel": "Diesel",
+          "yearStart": 2003
+        },
+        {
+          "name": "1.5 dCi 80",
+          "fuel": "Diesel",
+          "yearStart": 2003
+        },
+        {
+          "name": "1.5 dCi 85",
+          "fuel": "Diesel",
+          "yearStart": 2003
+        },
+        {
+          "name": "1.5 dCi 105",
+          "fuel": "Diesel",
+          "yearStart": 2003
+        },
+        {
+          "name": "2.0 RS 203",
+          "fuel": "Essence",
+          "yearStart": 2003
+        },
+        {
+          "name": "1.5 dCi 75",
+          "fuel": "Diesel",
+          "yearStart": 2003
+        },
+        {
+          "name": "1.2 80",
+          "fuel": "Essence",
+          "yearStart": 2003
+        },
+        {
+          "name": "1.2 TCe 100",
+          "fuel": "Essence",
+          "yearStart": 2003
+        },
+        {
+          "name": "1.5 dCi 110",
+          "fuel": "Diesel",
+          "yearStart": 2003
+        },
+        {
+          "name": "1.5 dCi 90",
+          "fuel": "Diesel",
+          "yearStart": 2003
+        },
+        {
+          "name": "1.6 110",
+          "fuel": "Essence",
+          "yearStart": 2003
+        },
+        {
+          "name": "1.6 128",
+          "fuel": "Essence",
+          "yearStart": 2003
+        },
+        {
+          "name": "dCi 90",
+          "fuel": "Diesel",
+          "yearStart": 2003
+        },
+        {
+          "name": "1.5 dCi 55",
+          "fuel": "Diesel",
+          "yearStart": 2003
+        },
+        {
+          "name": "2.0 RS 200",
+          "fuel": "Essence",
+          "yearStart": 2003
+        },
+        {
+          "name": "1.5 dCi 68",
+          "fuel": "Diesel",
+          "yearStart": 2003
+        },
+        {
+          "name": "0.9 TCe 75",
+          "fuel": "Essence",
+          "yearStart": 2003
+        },
+        {
+          "name": "0.9 TCe 90",
+          "fuel": "Essence",
+          "yearStart": 2003
+        },
+        {
+          "name": "1.2 TCe 120",
+          "fuel": "Essence",
+          "yearStart": 2003
+        },
+        {
+          "name": "1.6 RS 200",
+          "fuel": "Essence",
+          "yearStart": 2003
+        },
+        {
+          "name": "1.6 RS 220",
+          "fuel": "Essence",
+          "yearStart": 2003
+        },
+        {
+          "name": "TCe 90",
+          "fuel": "Essence",
+          "yearStart": 2003
+        },
+        {
+          "name": "0.9 TCe 95",
+          "fuel": "Essence",
+          "yearStart": 2003
+        },
+        {
+          "name": "1.2 GPL 75",
+          "fuel": "GPL",
+          "yearStart": 2003
+        },
+        {
+          "name": "1.0 GPL 100",
+          "fuel": "GPL",
+          "yearStart": 2003
+        },
+        {
+          "name": "1.0 SCe 65",
+          "fuel": "Essence",
+          "yearStart": 2003
+        },
+        {
+          "name": "1.0 TCe 90",
+          "fuel": "Essence",
+          "yearStart": 2003
+        },
+        {
+          "name": "1.5 dCi 100",
+          "fuel": "Diesel",
+          "yearStart": 2003
+        },
+        {
+          "name": "1.6 E-Tech 145",
+          "fuel": "Hybride rechargeable",
+          "yearStart": 2003
+        },
+        {
+          "name": "1.0 SCe 75",
+          "fuel": "Essence",
+          "yearStart": 2003
+        },
+        {
+          "name": "1.0 TCe 100",
+          "fuel": "Essence",
+          "yearStart": 2003
+        },
+        {
+          "name": "1.3 TCe 130",
+          "fuel": "Essence",
+          "yearStart": 2003
+        },
+        {
+          "name": "1.3 TCe 140",
+          "fuel": "Essence",
+          "yearStart": 2003
+        },
+        {
+          "name": "1.5 dCi 115",
+          "fuel": "Diesel",
+          "yearStart": 2003
+        },
+        {
+          "name": "1.6 E-Tech 140",
+          "fuel": "Hybride rechargeable",
+          "yearStart": 2003
+        },
+        {
+          "name": "dCi 100",
+          "fuel": "Diesel",
+          "yearStart": 2003
+        },
+        {
+          "name": "GPL 100",
+          "fuel": "GPL",
+          "yearStart": 2003
+        },
+        {
+          "name": "E-Tech 140",
+          "fuel": "Hybride rechargeable",
+          "yearStart": 2003
+        },
+        {
+          "name": "E-Tech 145",
+          "fuel": "Hybride rechargeable",
+          "yearStart": 2003
+        },
+        {
+          "name": "1.2 120",
+          "fuel": "Essence",
+          "yearStart": 2003
+        },
+        {
+          "name": "1.2 TCe 115",
+          "fuel": "Essence",
+          "yearStart": 2003
+        },
+        {
+          "name": "1.8 E-Tech 160",
+          "fuel": "Hybride rechargeable",
+          "yearStart": 2003
         }
       ],
       "Captur": [
         {
-          "name": "0.9 TCe 90ch",
+          "name": "0.9 TCe 90",
           "fuel": "Essence",
-          "yearStart": 2013,
-          "yearEnd": 2019
+          "yearStart": 2013
         },
         {
-          "name": "1.0 TCe 90ch",
+          "name": "1.2 TCe 120",
           "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2026
+          "yearStart": 2013
         },
         {
-          "name": "1.0 TCe 100ch",
+          "name": "1.3 TCe 130",
           "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2026
+          "yearStart": 2013
         },
         {
-          "name": "1.2 TCe 120ch",
+          "name": "1.3 TCe 150",
           "fuel": "Essence",
-          "yearStart": 2013,
-          "yearEnd": 2019
+          "yearStart": 2013
         },
         {
-          "name": "1.3 TCe 130ch",
-          "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2026
-        },
-        {
-          "name": "1.3 TCe 140ch",
-          "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2026
-        },
-        {
-          "name": "1.3 TCe 155ch",
-          "fuel": "Essence",
-          "yearStart": 2020,
-          "yearEnd": 2026
-        },
-        {
-          "name": "1.5 dCi 90ch",
+          "name": "1.5 dCi 110",
           "fuel": "Diesel",
-          "yearStart": 2013,
-          "yearEnd": 2019
+          "yearStart": 2013
         },
         {
-          "name": "1.5 dCi 110ch",
+          "name": "1.5 dCi 90",
           "fuel": "Diesel",
-          "yearStart": 2015,
-          "yearEnd": 2019
+          "yearStart": 2013
         },
         {
-          "name": "1.5 Blue dCi 95ch",
-          "fuel": "Diesel",
-          "yearStart": 2019,
-          "yearEnd": 2026
+          "name": "1.0 TCe 90",
+          "fuel": "Essence",
+          "yearStart": 2013
         },
         {
-          "name": "1.5 Blue dCi 115ch",
-          "fuel": "Diesel",
-          "yearStart": 2019,
-          "yearEnd": 2026
+          "name": "1.2 120",
+          "fuel": "Essence",
+          "yearStart": 2013
         },
         {
-          "name": "1.6 E-Tech 145ch",
-          "fuel": "Hybride",
-          "yearStart": 2020,
-          "yearEnd": 2026
+          "name": "1.2 TCe 115",
+          "fuel": "Essence",
+          "yearStart": 2013
         },
         {
-          "name": "1.6 E-Tech 160ch PHEV",
+          "name": "1.8 E-Tech 160",
           "fuel": "Hybride rechargeable",
-          "yearStart": 2020,
-          "yearEnd": 2026
+          "yearStart": 2013
+        },
+        {
+          "name": "1.0 TCe 100",
+          "fuel": "Essence",
+          "yearStart": 2013
+        },
+        {
+          "name": "1.0 GPL 100",
+          "fuel": "GPL",
+          "yearStart": 2013
+        },
+        {
+          "name": "1.3 140",
+          "fuel": "Essence",
+          "yearStart": 2013
+        },
+        {
+          "name": "1.3 RS 140",
+          "fuel": "Essence",
+          "yearStart": 2013
+        },
+        {
+          "name": "1.3 160",
+          "fuel": "Essence",
+          "yearStart": 2013
+        },
+        {
+          "name": "1.3 RS 160",
+          "fuel": "Essence",
+          "yearStart": 2013
+        },
+        {
+          "name": "1.3 TCe 140",
+          "fuel": "Essence",
+          "yearStart": 2013
+        },
+        {
+          "name": "1.3 TCe 155",
+          "fuel": "Essence",
+          "yearStart": 2013
+        },
+        {
+          "name": "1.3 TCe 160",
+          "fuel": "Essence",
+          "yearStart": 2013
+        },
+        {
+          "name": "1.5 dCi 115",
+          "fuel": "Diesel",
+          "yearStart": 2013
+        },
+        {
+          "name": "1.5 dCi 95",
+          "fuel": "Diesel",
+          "yearStart": 2013
+        },
+        {
+          "name": "1.6 E-Tech 145",
+          "fuel": "Hybride rechargeable",
+          "yearStart": 2013
+        },
+        {
+          "name": "1.6 E-Tech 160",
+          "fuel": "Hybride rechargeable",
+          "yearStart": 2013
+        },
+        {
+          "name": "E-Tech 145",
+          "fuel": "Hybride rechargeable",
+          "yearStart": 2013
+        },
+        {
+          "name": "E-Tech 160",
+          "fuel": "Hybride rechargeable",
+          "yearStart": 2013
+        },
+        {
+          "name": "160",
+          "fuel": "Essence",
+          "yearStart": 2013
         }
       ],
       "Mégane": [
         {
-          "name": "1.4 16v 98ch",
+          "name": "1.2 TCe 115",
           "fuel": "Essence",
-          "yearStart": 2005,
-          "yearEnd": 2008
+          "yearStart": 2008
         },
         {
-          "name": "1.6 16v 115ch",
+          "name": "1.2 TCe 130",
           "fuel": "Essence",
-          "yearStart": 2005,
-          "yearEnd": 2008
+          "yearStart": 2008
         },
         {
-          "name": "2.0 16v 135ch",
-          "fuel": "Essence",
-          "yearStart": 2005,
-          "yearEnd": 2008
-        },
-        {
-          "name": "2.0 RS 225ch",
-          "fuel": "Essence",
-          "yearStart": 2005,
-          "yearEnd": 2008
-        },
-        {
-          "name": "1.5 dCi 100ch",
+          "name": "1.5 dCi 110",
           "fuel": "Diesel",
-          "yearStart": 2005,
-          "yearEnd": 2008
+          "yearStart": 2008
         },
         {
-          "name": "1.9 dCi 120ch",
+          "name": "1.5 dCi 90",
           "fuel": "Diesel",
-          "yearStart": 2005,
-          "yearEnd": 2008
+          "yearStart": 2008
         },
         {
-          "name": "2.0 dCi 150ch",
+          "name": "1.6 110",
+          "fuel": "Essence",
+          "yearStart": 2008
+        },
+        {
+          "name": "1.6 dCi 130",
           "fuel": "Diesel",
-          "yearStart": 2006,
-          "yearEnd": 2008
+          "yearStart": 2008
         },
         {
-          "name": "1.4 TCe 130ch",
-          "fuel": "Essence",
-          "yearStart": 2009,
-          "yearEnd": 2012
-        },
-        {
-          "name": "1.6 115ch",
-          "fuel": "Essence",
-          "yearStart": 2008,
-          "yearEnd": 2016
-        },
-        {
-          "name": "2.0 140ch",
-          "fuel": "Essence",
-          "yearStart": 2008,
-          "yearEnd": 2012
-        },
-        {
-          "name": "Mégane RS 265ch",
-          "fuel": "Essence",
-          "yearStart": 2010,
-          "yearEnd": 2016
-        },
-        {
-          "name": "1.2 TCe 100ch",
-          "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2016
-        },
-        {
-          "name": "1.2 TCe 115ch",
-          "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2016
-        },
-        {
-          "name": "1.2 TCe 130ch",
-          "fuel": "Essence",
-          "yearStart": 2015,
-          "yearEnd": 2020
-        },
-        {
-          "name": "1.3 TCe 115ch",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2022
-        },
-        {
-          "name": "1.3 TCe 140ch",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2022
-        },
-        {
-          "name": "1.3 TCe 160ch",
-          "fuel": "Essence",
-          "yearStart": 2020,
-          "yearEnd": 2022
-        },
-        {
-          "name": "1.6 TCe 205ch GT",
-          "fuel": "Essence",
-          "yearStart": 2016,
-          "yearEnd": 2019
-        },
-        {
-          "name": "1.8 TCe 280ch RS",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2022
-        },
-        {
-          "name": "Mégane RS 280ch",
-          "fuel": "Essence",
-          "yearStart": 2017,
-          "yearEnd": 2022
-        },
-        {
-          "name": "Mégane RS 300ch",
-          "fuel": "Essence",
-          "yearStart": 2017,
-          "yearEnd": 2022
-        },
-        {
-          "name": "1.8 TCe 300ch RS Trophy",
-          "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2022
-        },
-        {
-          "name": "2.0 Turbo 180ch",
-          "fuel": "Essence",
-          "yearStart": 2008,
-          "yearEnd": 2016
-        },
-        {
-          "name": "1.5 dCi 90ch",
+          "name": "2.0 dCi 160",
           "fuel": "Diesel",
-          "yearStart": 2008,
-          "yearEnd": 2016
+          "yearStart": 2008
         },
         {
-          "name": "1.5 dCi 110ch",
+          "name": "2.0 dCi 165",
           "fuel": "Diesel",
-          "yearStart": 2008,
-          "yearEnd": 2020
+          "yearStart": 2008
         },
         {
-          "name": "1.5 Blue dCi 115ch",
+          "name": "1.4 TCe 130",
+          "fuel": "Essence",
+          "yearStart": 2008
+        },
+        {
+          "name": "1.6 dCi",
           "fuel": "Diesel",
-          "yearStart": 2018,
-          "yearEnd": 2022
+          "yearStart": 2008
         },
         {
-          "name": "2.0 Blue dCi 150ch",
+          "name": "2.0 RS 265",
+          "fuel": "Essence",
+          "yearStart": 2008
+        },
+        {
+          "name": "2.0 TCe 180",
+          "fuel": "Essence",
+          "yearStart": 2008
+        },
+        {
+          "name": "2.0 TCe 190",
+          "fuel": "Essence",
+          "yearStart": 2008
+        },
+        {
+          "name": "1.9 dCi 130",
           "fuel": "Diesel",
-          "yearStart": 2018,
-          "yearEnd": 2022
+          "yearStart": 2008
         },
         {
-          "name": "1.6 dCi 130ch",
+          "name": "2.0 220",
+          "fuel": "Essence",
+          "yearStart": 2008
+        },
+        {
+          "name": "1.5 dCi 130",
           "fuel": "Diesel",
-          "yearStart": 2015,
-          "yearEnd": 2019
+          "yearStart": 2008
         },
         {
-          "name": "1.6 E-Tech 160ch PHEV",
+          "name": "1.5 dCi 95",
+          "fuel": "Diesel",
+          "yearStart": 2008
+        },
+        {
+          "name": "2.0 RS 275",
+          "fuel": "Essence",
+          "yearStart": 2008
+        },
+        {
+          "name": "dCi 110",
+          "fuel": "Diesel",
+          "yearStart": 2008
+        },
+        {
+          "name": "1.5 dCi 105",
+          "fuel": "Diesel",
+          "yearStart": 2008
+        },
+        {
+          "name": "1.5 dCi 85",
+          "fuel": "Diesel",
+          "yearStart": 2008
+        },
+        {
+          "name": "2.0 140",
+          "fuel": "Essence",
+          "yearStart": 2008
+        },
+        {
+          "name": "2.0 dCi 150",
+          "fuel": "Diesel",
+          "yearStart": 2008
+        },
+        {
+          "name": "2.0 RS 250",
+          "fuel": "Essence",
+          "yearStart": 2008
+        },
+        {
+          "name": "1.0 TCe 115",
+          "fuel": "Essence",
+          "yearStart": 2008
+        },
+        {
+          "name": "1.3 TCe 115",
+          "fuel": "Essence",
+          "yearStart": 2008
+        },
+        {
+          "name": "1.3 TCe 140",
+          "fuel": "Essence",
+          "yearStart": 2008
+        },
+        {
+          "name": "1.3 TCe 160",
+          "fuel": "Essence",
+          "yearStart": 2008
+        },
+        {
+          "name": "1.5 dCi 115",
+          "fuel": "Diesel",
+          "yearStart": 2008
+        },
+        {
+          "name": "1.6 E-Tech 160",
           "fuel": "Hybride rechargeable",
-          "yearStart": 2020,
-          "yearEnd": 2022
+          "yearStart": 2008
+        },
+        {
+          "name": "1.8 TCe 300",
+          "fuel": "Essence",
+          "yearStart": 2008
+        },
+        {
+          "name": "E-Tech 160",
+          "fuel": "Hybride rechargeable",
+          "yearStart": 2008
+        },
+        {
+          "name": "1.2 TCe 100",
+          "fuel": "Essence",
+          "yearStart": 2008
+        },
+        {
+          "name": "1.6 dCi 165",
+          "fuel": "Diesel",
+          "yearStart": 2008
+        },
+        {
+          "name": "1.6 TCe 165",
+          "fuel": "Essence",
+          "yearStart": 2008
+        },
+        {
+          "name": "1.6 TCe 205",
+          "fuel": "Essence",
+          "yearStart": 2008
+        },
+        {
+          "name": "1.7 dCi 150",
+          "fuel": "Diesel",
+          "yearStart": 2008
+        },
+        {
+          "name": "1.8 TCe 280",
+          "fuel": "Essence",
+          "yearStart": 2008
+        },
+        {
+          "name": "électrique 130",
+          "fuel": "Électrique",
+          "yearStart": 2008
+        },
+        {
+          "name": "E-Tech 130",
+          "fuel": "Hybride rechargeable",
+          "yearStart": 2008
+        },
+        {
+          "name": "électrique 220",
+          "fuel": "Électrique",
+          "yearStart": 2008
+        },
+        {
+          "name": "E-Tech 220",
+          "fuel": "Hybride rechargeable",
+          "yearStart": 2008
         }
       ],
       "Arkana": [
@@ -474,42 +626,51 @@
       ],
       "Austral": [
         {
-          "name": "1.2 E-Tech 130ch",
-          "fuel": "Hybride",
-          "yearStart": 2022,
-          "yearEnd": 2026
+          "name": "1.2 E-Tech 200",
+          "fuel": "Hybride rechargeable",
+          "yearStart": 2022
         },
         {
-          "name": "1.2 E-Tech 160ch",
-          "fuel": "Hybride",
-          "yearStart": 2022,
-          "yearEnd": 2026
-        },
-        {
-          "name": "1.2 E-Tech 200ch",
-          "fuel": "Hybride",
-          "yearStart": 2022,
-          "yearEnd": 2026
-        },
-        {
-          "name": "1.3 TCe 160ch",
+          "name": "1.2 130",
           "fuel": "Essence",
-          "yearStart": 2022,
-          "yearEnd": 2026
+          "yearStart": 2022
+        },
+        {
+          "name": "1.3 160",
+          "fuel": "Essence",
+          "yearStart": 2022
+        },
+        {
+          "name": "E-Tech 200",
+          "fuel": "Hybride rechargeable",
+          "yearStart": 2022
+        },
+        {
+          "name": "E-Tech 160",
+          "fuel": "Hybride rechargeable",
+          "yearStart": 2022
+        },
+        {
+          "name": "160",
+          "fuel": "Essence",
+          "yearStart": 2022
+        },
+        {
+          "name": "130",
+          "fuel": "Essence",
+          "yearStart": 2022
         }
       ],
       "Rafale": [
         {
-          "name": "1.2 E-Tech 200ch",
-          "fuel": "Hybride",
-          "yearStart": 2024,
-          "yearEnd": 2026
+          "name": "1.2 E-Tech 300",
+          "fuel": "Hybride rechargeable",
+          "yearStart": 2024
         },
         {
-          "name": "1.2 E-Tech 300ch AWD",
-          "fuel": "Hybride",
-          "yearStart": 2024,
-          "yearEnd": 2026
+          "name": "1.2 E-Tech 200",
+          "fuel": "Hybride rechargeable",
+          "yearStart": 2024
         }
       ],
       "5 E-Tech": [
@@ -556,182 +717,263 @@
       ],
       "Symbioz": [
         {
-          "name": "1.6 E-Tech 145ch",
-          "fuel": "Hybride",
-          "yearStart": 2024,
-          "yearEnd": 2026
+          "name": "1.2 120",
+          "fuel": "Essence",
+          "yearStart": 2024
+        },
+        {
+          "name": "1.3 140",
+          "fuel": "Essence",
+          "yearStart": 2024
+        },
+        {
+          "name": "1.6 E-Tech 145",
+          "fuel": "Hybride rechargeable",
+          "yearStart": 2024
+        },
+        {
+          "name": "1.8 E-Tech 160",
+          "fuel": "Hybride rechargeable",
+          "yearStart": 2024
         }
       ],
       "Espace": [
         {
-          "name": "2.0 16v 135ch",
-          "fuel": "Essence",
-          "yearStart": 2002,
-          "yearEnd": 2014
-        },
-        {
-          "name": "3.5 V6 241ch",
-          "fuel": "Essence",
-          "yearStart": 2003,
-          "yearEnd": 2014
-        },
-        {
-          "name": "2.0 T 163ch",
-          "fuel": "Essence",
-          "yearStart": 2007,
-          "yearEnd": 2014
-        },
-        {
-          "name": "2.0 dCi 150ch",
+          "name": "1.9 dCi 117",
           "fuel": "Diesel",
-          "yearStart": 2006,
-          "yearEnd": 2014
+          "yearStart": 2002
         },
         {
-          "name": "2.0 dCi 175ch",
-          "fuel": "Diesel",
-          "yearStart": 2007,
-          "yearEnd": 2014
-        },
-        {
-          "name": "3.0 dCi 180ch",
-          "fuel": "Diesel",
-          "yearStart": 2002,
-          "yearEnd": 2012
-        },
-        {
-          "name": "3.0 dCi 225ch",
-          "fuel": "Diesel",
-          "yearStart": 2006,
-          "yearEnd": 2012
-        },
-        {
-          "name": "1.6 TCe 160ch",
+          "name": "2.0 140",
           "fuel": "Essence",
-          "yearStart": 2015,
-          "yearEnd": 2023
+          "yearStart": 2002
         },
         {
-          "name": "1.6 TCe 200ch",
-          "fuel": "Essence",
-          "yearStart": 2015,
-          "yearEnd": 2023
-        },
-        {
-          "name": "1.8 TCe 225ch",
-          "fuel": "Essence",
-          "yearStart": 2015,
-          "yearEnd": 2023
-        },
-        {
-          "name": "1.6 dCi 130ch",
+          "name": "2.0 dCi 130",
           "fuel": "Diesel",
-          "yearStart": 2015,
-          "yearEnd": 2023
+          "yearStart": 2002
         },
         {
-          "name": "1.6 dCi 160ch",
+          "name": "2.0 dCi 150",
           "fuel": "Diesel",
-          "yearStart": 2015,
-          "yearEnd": 2023
+          "yearStart": 2002
         },
         {
-          "name": "1.2 E-Tech 200ch",
-          "fuel": "Hybride",
-          "yearStart": 2023,
-          "yearEnd": 2026
+          "name": "2.0 dCi 175",
+          "fuel": "Diesel",
+          "yearStart": 2002
+        },
+        {
+          "name": "2.0 170",
+          "fuel": "Essence",
+          "yearStart": 2002
+        },
+        {
+          "name": "2.2 dCi 140",
+          "fuel": "Diesel",
+          "yearStart": 2002
+        },
+        {
+          "name": "2.2 dCi 150",
+          "fuel": "Diesel",
+          "yearStart": 2002
+        },
+        {
+          "name": "3.0 dCi",
+          "fuel": "Diesel",
+          "yearStart": 2002
+        },
+        {
+          "name": "1.9 dCi",
+          "fuel": "Diesel",
+          "yearStart": 2002
+        },
+        {
+          "name": "2.0",
+          "fuel": "Essence",
+          "yearStart": 2002
+        },
+        {
+          "name": "3.5 245",
+          "fuel": "Essence",
+          "yearStart": 2002
+        },
+        {
+          "name": "3.5",
+          "fuel": "Essence",
+          "yearStart": 2002
+        },
+        {
+          "name": "1.8 TCe 225",
+          "fuel": "Essence",
+          "yearStart": 2002
+        },
+        {
+          "name": "2.0 dCi 160",
+          "fuel": "Diesel",
+          "yearStart": 2002
+        },
+        {
+          "name": "2.0 dCi 190",
+          "fuel": "Diesel",
+          "yearStart": 2002
+        },
+        {
+          "name": "2.0 dCi 200",
+          "fuel": "Diesel",
+          "yearStart": 2002
+        },
+        {
+          "name": "1.6 dCi 130",
+          "fuel": "Diesel",
+          "yearStart": 2002
+        },
+        {
+          "name": "1.6 dCi 160",
+          "fuel": "Diesel",
+          "yearStart": 2002
+        },
+        {
+          "name": "1.6 TCe 200",
+          "fuel": "Essence",
+          "yearStart": 2002
+        },
+        {
+          "name": "1.2 E-Tech 200",
+          "fuel": "Hybride rechargeable",
+          "yearStart": 2002
         }
       ],
       "Trafic": [
         {
-          "name": "1.9 dCi 82ch",
+          "name": "2.0 dCi 130",
           "fuel": "Diesel",
-          "yearStart": 2001,
-          "yearEnd": 2006
+          "yearStart": 2010
         },
         {
-          "name": "1.9 dCi 100ch",
+          "name": "2.0 dCi 150",
           "fuel": "Diesel",
-          "yearStart": 2001,
-          "yearEnd": 2006
+          "yearStart": 2010
         },
         {
-          "name": "2.0 dCi 90ch",
+          "name": "2.0 dCi 170",
           "fuel": "Diesel",
-          "yearStart": 2006,
-          "yearEnd": 2014
+          "yearStart": 2010
         },
         {
-          "name": "2.0 dCi 115ch",
+          "name": "2.0 dCi 110",
           "fuel": "Diesel",
-          "yearStart": 2006,
-          "yearEnd": 2014
+          "yearStart": 2010
         },
         {
-          "name": "2.5 dCi 135ch",
+          "name": "dCi 120",
           "fuel": "Diesel",
-          "yearStart": 2001,
-          "yearEnd": 2014
+          "yearStart": 2010
         },
         {
-          "name": "2.5 dCi 150ch",
+          "name": "dCi 145",
           "fuel": "Diesel",
-          "yearStart": 2008,
-          "yearEnd": 2014
+          "yearStart": 2010
         },
         {
-          "name": "1.6 dCi 90ch",
+          "name": "dCi 170",
           "fuel": "Diesel",
-          "yearStart": 2014,
-          "yearEnd": 2019
+          "yearStart": 2010
         },
         {
-          "name": "1.6 dCi 115ch",
+          "name": "dCi 130",
           "fuel": "Diesel",
-          "yearStart": 2014,
-          "yearEnd": 2019
+          "yearStart": 2010
         },
         {
-          "name": "1.6 dCi 125ch",
+          "name": "dCi 150",
           "fuel": "Diesel",
-          "yearStart": 2014,
-          "yearEnd": 2019
+          "yearStart": 2010
         },
         {
-          "name": "1.6 dCi 145ch",
+          "name": "dCi 95",
           "fuel": "Diesel",
-          "yearStart": 2016,
-          "yearEnd": 2019
+          "yearStart": 2010
         },
         {
-          "name": "2.0 Blue dCi 110ch",
+          "name": "1.6 dCi 145",
           "fuel": "Diesel",
-          "yearStart": 2019,
-          "yearEnd": 2026
+          "yearStart": 2010
         },
         {
-          "name": "2.0 Blue dCi 130ch",
+          "name": "2.0 dCi 120",
           "fuel": "Diesel",
-          "yearStart": 2019,
-          "yearEnd": 2026
+          "yearStart": 2010
         },
         {
-          "name": "2.0 Blue dCi 150ch",
+          "name": "2.0 dCi 145",
           "fuel": "Diesel",
-          "yearStart": 2019,
-          "yearEnd": 2026
+          "yearStart": 2010
         },
         {
-          "name": "2.0 Blue dCi 170ch",
-          "fuel": "Diesel",
-          "yearStart": 2019,
-          "yearEnd": 2026
-        },
-        {
-          "name": "E-Tech 90kWh 136ch",
+          "name": "électrique",
           "fuel": "Électrique",
-          "yearStart": 2025,
-          "yearEnd": 2026
+          "yearStart": 2010
+        },
+        {
+          "name": "électrique 52",
+          "fuel": "Électrique",
+          "yearStart": 2010
+        },
+        {
+          "name": "dCi 110",
+          "fuel": "Diesel",
+          "yearStart": 2010
+        },
+        {
+          "name": "dCi 140",
+          "fuel": "Diesel",
+          "yearStart": 2010
+        },
+        {
+          "name": "dCi 90",
+          "fuel": "Diesel",
+          "yearStart": 2010
+        },
+        {
+          "name": "dCi 125",
+          "fuel": "Diesel",
+          "yearStart": 2010
+        },
+        {
+          "name": "2.0 dCi 115",
+          "fuel": "Diesel",
+          "yearStart": 2010
+        },
+        {
+          "name": "1.6 dCi 120",
+          "fuel": "Diesel",
+          "yearStart": 2010
+        },
+        {
+          "name": "1.6 dCi 125",
+          "fuel": "Diesel",
+          "yearStart": 2010
+        },
+        {
+          "name": "1.6 dCi 140",
+          "fuel": "Diesel",
+          "yearStart": 2010
+        },
+        {
+          "name": "1.6 dCi 95",
+          "fuel": "Diesel",
+          "yearStart": 2010
+        },
+        {
+          "name": "dCi 115",
+          "fuel": "Diesel",
+          "yearStart": 2010
+        },
+        {
+          "name": "2.2 dCi 115",
+          "fuel": "Diesel",
+          "yearStart": 2010
         }
       ],
       "Master": [
@@ -836,144 +1078,221 @@
       ],
       "Twingo": [
         {
-          "name": "1.2 75ch",
+          "name": "1.2 75",
           "fuel": "Essence",
           "yearStart": 2007,
-          "yearEnd": 2014
+          "yearEnd": 2024
         },
         {
-          "name": "1.2 TCe 100ch",
+          "name": "1.2 TCe 100",
           "fuel": "Essence",
           "yearStart": 2007,
-          "yearEnd": 2014
+          "yearEnd": 2024
         },
         {
-          "name": "1.5 dCi 65ch",
+          "name": "1.5 dCi 75",
           "fuel": "Diesel",
           "yearStart": 2007,
-          "yearEnd": 2014
+          "yearEnd": 2024
         },
         {
-          "name": "1.5 dCi 75ch",
+          "name": "1.5 dCi 85",
           "fuel": "Diesel",
-          "yearStart": 2009,
-          "yearEnd": 2014
+          "yearStart": 2007,
+          "yearEnd": 2024
         },
         {
-          "name": "0.9 TCe 90ch",
+          "name": "1.6 RS 133",
           "fuel": "Essence",
-          "yearStart": 2014,
-          "yearEnd": 2021
+          "yearStart": 2007,
+          "yearEnd": 2024
         },
         {
-          "name": "1.0 SCe 65ch",
+          "name": "1.2 60",
           "fuel": "Essence",
-          "yearStart": 2014,
-          "yearEnd": 2021
+          "yearStart": 2007,
+          "yearEnd": 2024
         },
         {
-          "name": "1.0 SCe 70ch",
+          "name": "1.5 dCi 65",
+          "fuel": "Diesel",
+          "yearStart": 2007,
+          "yearEnd": 2024
+        },
+        {
+          "name": "1.5 dCi 90",
+          "fuel": "Diesel",
+          "yearStart": 2007,
+          "yearEnd": 2024
+        },
+        {
+          "name": "0.9 TCe 95",
           "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2021
+          "yearStart": 2007,
+          "yearEnd": 2024
+        },
+        {
+          "name": "1.0 SCe 65",
+          "fuel": "Essence",
+          "yearStart": 2007,
+          "yearEnd": 2024
+        },
+        {
+          "name": "1.0 SCe 75",
+          "fuel": "Essence",
+          "yearStart": 2007,
+          "yearEnd": 2024
+        },
+        {
+          "name": "électrique 22",
+          "fuel": "Électrique",
+          "yearStart": 2007,
+          "yearEnd": 2024
+        },
+        {
+          "name": "0.9 TCe 90",
+          "fuel": "Essence",
+          "yearStart": 2007,
+          "yearEnd": 2024
+        },
+        {
+          "name": "0.9 TCe 110",
+          "fuel": "Essence",
+          "yearStart": 2007,
+          "yearEnd": 2024
+        },
+        {
+          "name": "1.0 SCe 70",
+          "fuel": "Essence",
+          "yearStart": 2007,
+          "yearEnd": 2024
         }
       ],
       "Kangoo": [
         {
-          "name": "1.4 80ch",
+          "name": "1.2 TCe 115",
           "fuel": "Essence",
-          "yearStart": 2005,
-          "yearEnd": 2008
+          "yearStart": 2007
         },
         {
-          "name": "1.6 90ch",
+          "name": "1.5 dCi 115",
+          "fuel": "Diesel",
+          "yearStart": 2007
+        },
+        {
+          "name": "1.5 dCi 80",
+          "fuel": "Diesel",
+          "yearStart": 2007
+        },
+        {
+          "name": "1.5 dCi 95",
+          "fuel": "Diesel",
+          "yearStart": 2007
+        },
+        {
+          "name": "1.5 dCi 110",
+          "fuel": "Diesel",
+          "yearStart": 2007
+        },
+        {
+          "name": "1.5 dCi 75",
+          "fuel": "Diesel",
+          "yearStart": 2007
+        },
+        {
+          "name": "1.5 dCi 90",
+          "fuel": "Diesel",
+          "yearStart": 2007
+        },
+        {
+          "name": "1.5 dCi",
+          "fuel": "Diesel",
+          "yearStart": 2007
+        },
+        {
+          "name": "1.6 105",
           "fuel": "Essence",
-          "yearStart": 2005,
-          "yearEnd": 2008
+          "yearStart": 2007
         },
         {
-          "name": "1.5 dCi 65ch",
+          "name": "1.5 dCi 105",
           "fuel": "Diesel",
-          "yearStart": 2005,
-          "yearEnd": 2008
+          "yearStart": 2007
         },
         {
-          "name": "1.5 dCi 85ch",
+          "name": "1.5 dCi 70",
           "fuel": "Diesel",
-          "yearStart": 2005,
-          "yearEnd": 2008
+          "yearStart": 2007
         },
         {
-          "name": "1.5 dCi 106ch",
+          "name": "1.5 dCi 85",
           "fuel": "Diesel",
-          "yearStart": 2005,
-          "yearEnd": 2008
+          "yearStart": 2007
         },
         {
-          "name": "1.2 TCe 115ch",
+          "name": "1.6 90",
           "fuel": "Essence",
-          "yearStart": 2013,
-          "yearEnd": 2021
+          "yearStart": 2007
         },
         {
-          "name": "1.6 110ch",
+          "name": "1.6 95",
           "fuel": "Essence",
-          "yearStart": 2008,
-          "yearEnd": 2013
+          "yearStart": 2007
         },
         {
-          "name": "1.5 dCi 70ch",
+          "name": "dCi 75",
           "fuel": "Diesel",
-          "yearStart": 2008,
-          "yearEnd": 2013
+          "yearStart": 2007
         },
         {
-          "name": "1.5 dCi 75ch",
+          "name": "électrique 45",
+          "fuel": "Électrique",
+          "yearStart": 2007
+        },
+        {
+          "name": "électrique",
+          "fuel": "Électrique",
+          "yearStart": 2007
+        },
+        {
+          "name": "dCi 115",
           "fuel": "Diesel",
-          "yearStart": 2013,
-          "yearEnd": 2021
+          "yearStart": 2007
         },
         {
-          "name": "1.5 dCi 90ch",
-          "fuel": "Diesel",
-          "yearStart": 2008,
-          "yearEnd": 2021
-        },
-        {
-          "name": "1.5 dCi 110ch",
-          "fuel": "Diesel",
-          "yearStart": 2013,
-          "yearEnd": 2021
-        },
-        {
-          "name": "1.5 Blue dCi 95ch",
-          "fuel": "Diesel",
-          "yearStart": 2019,
-          "yearEnd": 2021
-        },
-        {
-          "name": "1.3 TCe 100ch",
+          "name": "TCe 100",
           "fuel": "Essence",
-          "yearStart": 2021,
-          "yearEnd": 2026
+          "yearStart": 2007
         },
         {
-          "name": "1.3 TCe 130ch",
+          "name": "TCe 130",
           "fuel": "Essence",
-          "yearStart": 2021,
-          "yearEnd": 2026
+          "yearStart": 2007
         },
         {
-          "name": "1.5 Blue dCi 95ch",
-          "fuel": "Diesel",
-          "yearStart": 2021,
-          "yearEnd": 2026
+          "name": "1.3 TCe 130",
+          "fuel": "Essence",
+          "yearStart": 2007
         },
         {
-          "name": "1.5 Blue dCi 115ch",
+          "name": "1.3 TCe 100",
+          "fuel": "Essence",
+          "yearStart": 2007
+        },
+        {
+          "name": "électrique 120",
+          "fuel": "Électrique",
+          "yearStart": 2007
+        },
+        {
+          "name": "électrique 80",
+          "fuel": "Électrique",
+          "yearStart": 2007
+        },
+        {
+          "name": "dCi 95",
           "fuel": "Diesel",
-          "yearStart": 2021,
-          "yearEnd": 2026
+          "yearStart": 2007
         }
       ],
       "Scenic": [
@@ -1404,28 +1723,39 @@
       ],
       "Express": [
         {
-          "name": "1.0 SCe 75ch",
+          "name": "1.3 TCe 100",
           "fuel": "Essence",
-          "yearStart": 2021,
-          "yearEnd": 2026
+          "yearStart": 2021
         },
         {
-          "name": "1.5 Blue dCi 75ch",
+          "name": "1.5 dCi 75",
           "fuel": "Diesel",
-          "yearStart": 2021,
-          "yearEnd": 2026
+          "yearStart": 2021
         },
         {
-          "name": "1.5 Blue dCi 95ch",
+          "name": "1.5 dCi 95",
           "fuel": "Diesel",
-          "yearStart": 2021,
-          "yearEnd": 2026
+          "yearStart": 2021
         },
         {
-          "name": "45kWh 75ch E-Tech",
+          "name": "TCe 130",
+          "fuel": "Essence",
+          "yearStart": 2021
+        },
+        {
+          "name": "électrique 45",
           "fuel": "Électrique",
-          "yearStart": 2022,
-          "yearEnd": 2026
+          "yearStart": 2021
+        },
+        {
+          "name": "électrique 80",
+          "fuel": "Électrique",
+          "yearStart": 2021
+        },
+        {
+          "name": "dCi 115",
+          "fuel": "Diesel",
+          "yearStart": 2021
         }
       ],
       "Fluence": [
@@ -1928,6 +2258,274 @@
           "fuel": "Diesel",
           "yearStart": 2008,
           "yearEnd": 2012
+        }
+      ],
+      "Grand Kangoo": [
+        {
+          "name": "1.5 dCi 110",
+          "fuel": "Diesel",
+          "yearStart": 2012
+        },
+        {
+          "name": "1.5 dCi 90",
+          "fuel": "Diesel",
+          "yearStart": 2012
+        },
+        {
+          "name": "1.3 dCi 95",
+          "fuel": "Diesel",
+          "yearStart": 2012
+        },
+        {
+          "name": "1.3 TCe 130",
+          "fuel": "Essence",
+          "yearStart": 2012
+        },
+        {
+          "name": "1.5 dCi 115",
+          "fuel": "Diesel",
+          "yearStart": 2012
+        },
+        {
+          "name": "1.5 dCi 95",
+          "fuel": "Diesel",
+          "yearStart": 2012
+        },
+        {
+          "name": "électrique 45",
+          "fuel": "Électrique",
+          "yearStart": 2012
+        },
+        {
+          "name": "électrique 120",
+          "fuel": "Électrique",
+          "yearStart": 2012
+        }
+      ],
+      "Grand Scénic": [
+        {
+          "name": "1.2 TCe 130",
+          "fuel": "Essence",
+          "yearStart": 2008
+        },
+        {
+          "name": "1.5 dCi 110",
+          "fuel": "Diesel",
+          "yearStart": 2008
+        },
+        {
+          "name": "1.6 dCi 130",
+          "fuel": "Diesel",
+          "yearStart": 2008
+        },
+        {
+          "name": "2.0 dCi 150",
+          "fuel": "Diesel",
+          "yearStart": 2008
+        },
+        {
+          "name": "1.5 dCi 130",
+          "fuel": "Diesel",
+          "yearStart": 2008
+        },
+        {
+          "name": "1.4 TCe 130",
+          "fuel": "Essence",
+          "yearStart": 2008
+        },
+        {
+          "name": "1.5 dCi 105",
+          "fuel": "Diesel",
+          "yearStart": 2008
+        },
+        {
+          "name": "1.6 110",
+          "fuel": "Essence",
+          "yearStart": 2008
+        },
+        {
+          "name": "1.9 dCi 130",
+          "fuel": "Diesel",
+          "yearStart": 2008
+        },
+        {
+          "name": "2.0 140",
+          "fuel": "Essence",
+          "yearStart": 2008
+        },
+        {
+          "name": "2.0 dCi 160",
+          "fuel": "Diesel",
+          "yearStart": 2008
+        },
+        {
+          "name": "1.3 TCe 115",
+          "fuel": "Essence",
+          "yearStart": 2008
+        },
+        {
+          "name": "1.3 TCe 140",
+          "fuel": "Essence",
+          "yearStart": 2008
+        },
+        {
+          "name": "1.3 TCe 160",
+          "fuel": "Essence",
+          "yearStart": 2008
+        },
+        {
+          "name": "1.6 dCi 160",
+          "fuel": "Diesel",
+          "yearStart": 2008
+        },
+        {
+          "name": "1.7 dCi 120",
+          "fuel": "Diesel",
+          "yearStart": 2008
+        },
+        {
+          "name": "1.7 dCi 150",
+          "fuel": "Diesel",
+          "yearStart": 2008
+        }
+      ],
+      "R5": [
+        {
+          "name": "électrique 120",
+          "fuel": "Électrique",
+          "yearStart": 2024
+        },
+        {
+          "name": "électrique 150",
+          "fuel": "Électrique",
+          "yearStart": 2024
+        },
+        {
+          "name": "électrique 95",
+          "fuel": "Électrique",
+          "yearStart": 2024
+        }
+      ],
+      "Scénic": [
+        {
+          "name": "1.2 TCe 115",
+          "fuel": "Essence",
+          "yearStart": 2006
+        },
+        {
+          "name": "1.2 TCe 130",
+          "fuel": "Essence",
+          "yearStart": 2006
+        },
+        {
+          "name": "1.5 dCi 110",
+          "fuel": "Diesel",
+          "yearStart": 2006
+        },
+        {
+          "name": "1.5 dCi 95",
+          "fuel": "Diesel",
+          "yearStart": 2006
+        },
+        {
+          "name": "1.6 110",
+          "fuel": "Essence",
+          "yearStart": 2006
+        },
+        {
+          "name": "1.6 dCi 130",
+          "fuel": "Diesel",
+          "yearStart": 2006
+        },
+        {
+          "name": "2.0 dCi 150",
+          "fuel": "Diesel",
+          "yearStart": 2006
+        },
+        {
+          "name": "1.2 TCe",
+          "fuel": "Essence",
+          "yearStart": 2006
+        },
+        {
+          "name": "1.5 dCi 130",
+          "fuel": "Diesel",
+          "yearStart": 2006
+        },
+        {
+          "name": "1.4 TCe 130",
+          "fuel": "Essence",
+          "yearStart": 2006
+        },
+        {
+          "name": "1.5 dCi 105",
+          "fuel": "Diesel",
+          "yearStart": 2006
+        },
+        {
+          "name": "1.5 dCi 85",
+          "fuel": "Diesel",
+          "yearStart": 2006
+        },
+        {
+          "name": "1.9 dCi 130",
+          "fuel": "Diesel",
+          "yearStart": 2006
+        },
+        {
+          "name": "2.0 140",
+          "fuel": "Essence",
+          "yearStart": 2006
+        },
+        {
+          "name": "2.0 dCi 160",
+          "fuel": "Diesel",
+          "yearStart": 2006
+        },
+        {
+          "name": "1.3 TCe 140",
+          "fuel": "Essence",
+          "yearStart": 2006
+        },
+        {
+          "name": "1.3 TCe 160",
+          "fuel": "Essence",
+          "yearStart": 2006
+        },
+        {
+          "name": "1.3 TCe 115",
+          "fuel": "Essence",
+          "yearStart": 2006
+        },
+        {
+          "name": "1.6 dCi 160",
+          "fuel": "Diesel",
+          "yearStart": 2006
+        },
+        {
+          "name": "1.7 dCi 120",
+          "fuel": "Diesel",
+          "yearStart": 2006
+        },
+        {
+          "name": "1.7 dCi 150",
+          "fuel": "Diesel",
+          "yearStart": 2006
+        },
+        {
+          "name": "1.8 dCi 120",
+          "fuel": "Diesel",
+          "yearStart": 2006
+        },
+        {
+          "name": "électrique 170",
+          "fuel": "Électrique",
+          "yearStart": 2006
+        },
+        {
+          "name": "électrique 220",
+          "fuel": "Électrique",
+          "yearStart": 2006
         }
       ]
     },
@@ -2912,76 +3510,139 @@
       ],
       "2008": [
         {
-          "name": "1.2 PureTech 82ch",
+          "name": "1.2 PureTech 110",
           "fuel": "Essence",
-          "yearStart": 2013,
-          "yearEnd": 2019
+          "yearStart": 2013
         },
         {
-          "name": "1.2 PureTech 100ch",
+          "name": "1.2 PureTech 130",
           "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2026
+          "yearStart": 2013
         },
         {
-          "name": "1.2 PureTech 110ch",
+          "name": "1.2 PureTech 82",
           "fuel": "Essence",
-          "yearStart": 2013,
-          "yearEnd": 2019
+          "yearStart": 2013
         },
         {
-          "name": "1.2 PureTech 130ch",
+          "name": "1.5 BlueHDi 100",
+          "fuel": "Diesel",
+          "yearStart": 2013
+        },
+        {
+          "name": "1.5 BlueHDi 120",
+          "fuel": "Diesel",
+          "yearStart": 2013
+        },
+        {
+          "name": "1.6 BlueHDi 100",
+          "fuel": "Diesel",
+          "yearStart": 2013
+        },
+        {
+          "name": "1.6 BlueHDi 120",
+          "fuel": "Diesel",
+          "yearStart": 2013
+        },
+        {
+          "name": "1.6 BlueHDi 75",
+          "fuel": "Diesel",
+          "yearStart": 2013
+        },
+        {
+          "name": "BlueHDi 120",
+          "fuel": "Diesel",
+          "yearStart": 2013
+        },
+        {
+          "name": "PureTech 110",
           "fuel": "Essence",
-          "yearStart": 2013,
-          "yearEnd": 2026
+          "yearStart": 2013
         },
         {
-          "name": "1.2 PureTech 155ch",
+          "name": "1.2 VTi 82",
           "fuel": "Essence",
-          "yearStart": 2021,
-          "yearEnd": 2026
+          "yearStart": 2013
         },
         {
-          "name": "1.5 BlueHDi 100ch",
+          "name": "1.4 HDi 68",
           "fuel": "Diesel",
-          "yearStart": 2019,
-          "yearEnd": 2026
+          "yearStart": 2013
         },
         {
-          "name": "1.5 BlueHDi 110ch",
+          "name": "1.6 e-HDi 115",
           "fuel": "Diesel",
-          "yearStart": 2021,
-          "yearEnd": 2026
+          "yearStart": 2013
         },
         {
-          "name": "1.5 BlueHDi 130ch",
+          "name": "1.6 e-HDi 92",
           "fuel": "Diesel",
-          "yearStart": 2019,
-          "yearEnd": 2026
+          "yearStart": 2013
         },
         {
-          "name": "1.6 BlueHDi 100ch",
+          "name": "1.6 VTi 120",
+          "fuel": "Essence",
+          "yearStart": 2013
+        },
+        {
+          "name": "1.2 100",
+          "fuel": "Essence",
+          "yearStart": 2013
+        },
+        {
+          "name": "1.2 130",
+          "fuel": "Essence",
+          "yearStart": 2013
+        },
+        {
+          "name": "1.2 110",
+          "fuel": "Essence",
+          "yearStart": 2013
+        },
+        {
+          "name": "1.2 136",
+          "fuel": "Essence",
+          "yearStart": 2013
+        },
+        {
+          "name": "1.2 145",
+          "fuel": "Essence",
+          "yearStart": 2013
+        },
+        {
+          "name": "1.2 PureTech 100",
+          "fuel": "Essence",
+          "yearStart": 2013
+        },
+        {
+          "name": "1.5 BlueHDi 130",
           "fuel": "Diesel",
-          "yearStart": 2013,
-          "yearEnd": 2019
+          "yearStart": 2013
         },
         {
-          "name": "1.6 BlueHDi 120ch",
-          "fuel": "Diesel",
-          "yearStart": 2016,
-          "yearEnd": 2019
-        },
-        {
-          "name": "e-2008 100kW 136ch",
+          "name": "électrique 136",
           "fuel": "Électrique",
-          "yearStart": 2019,
-          "yearEnd": 2023
+          "yearStart": 2013
         },
         {
-          "name": "e-2008 115kW 156ch",
+          "name": "électrique 156",
           "fuel": "Électrique",
-          "yearStart": 2023,
-          "yearEnd": 2026
+          "yearStart": 2013
+        },
+        {
+          "name": "1.2 PureTech 155",
+          "fuel": "Essence",
+          "yearStart": 2013
+        },
+        {
+          "name": "1.5 BlueHDi 110",
+          "fuel": "Diesel",
+          "yearStart": 2013
+        },
+        {
+          "name": "électrique 50",
+          "fuel": "Électrique",
+          "yearStart": 2013
         }
       ],
       "3008": [
@@ -47073,55 +47734,547 @@
   "finitions": {
     "Renault": {
       "Clio": [
-        "Authentique",
-        "Expression",
-        "Dynamique",
-        "Dynamique S",
-        "Luxe",
-        "Initiale",
-        "Campus",
-        "GT",
-        "RS",
-        "RS Cup",
-        "Life",
-        "Zen",
-        "Business",
-        "Intens",
-        "GT Line",
-        "Limited",
-        "Collection",
-        "RS Trophy",
-        "Initiale Paris",
-        "RS Line",
-        "E-Tech",
-        "Esprit Alpine",
-        "Iconic",
-        "Equilibre",
-        "Première Edition",
-        "Techno"
+        "-21",
+        ".COM 5P",
+        ".COM 5P EURO5",
+        "115G",
+        "115G 20 ANS",
+        "115G DYNAMIQUE",
+        "115G EXCEPTION",
+        "115G TOMTOM EDITION",
+        "16S 3P",
+        "16S 4CV PACK SPORT",
+        "16S 5P",
+        "16S PACK SPORT 3P",
+        "16S PACK SPORT 5P",
+        "20 ANS",
+        "20 ANS EURO5",
+        "21N SL LIMITED",
+        "21N SL LIMITED X-TRONIC",
+        "21N SL LUTECIA",
+        "4CV AUTHENTIQUE 5P",
+        "5CV BUSINESS",
+        "5CV ENERGY INTENS",
+        "5CV INITIALE PARIS",
+        "5CV INTENS",
+        "5CV PREMIERE EDITION",
+        "5CV ZEN",
+        "6CV 20 ANS",
+        "6CV 20 ANS EURO5",
+        "6CV BUSINESS",
+        "6CV INITIALE PARIS",
+        "6CV INTENS",
+        "6CV ZEN",
+        "94G ECO2",
+        "98G SOCIETE AIR ECO2",
+        "ACCESS 5P",
+        "AIR",
+        "AIR 2020",
+        "AIR 21N",
+        "AIR ENERGY 90G ECO2",
+        "AIR NAV",
+        "AIR NAV 2020",
+        "AIR NAV 21N",
+        "AIR NAV BLUE 21N",
+        "AIR SOCIETE 3P",
+        "ALIZE",
+        "ALIZE 3P",
+        "ALIZE 5P",
+        "ALIZE 5P ECO2",
+        "ALIZE ECO2",
+        "AUTHENTIC",
+        "AUTHENTIQUE",
+        "AUTHENTIQUE 3P",
+        "AUTHENTIQUE 3P EURO5",
+        "AUTHENTIQUE 5P",
+        "AUTHENTIQUE 5P EURO5",
+        "AUTHENTIQUE ECO2",
+        "AUTHENTIQUE EURO5",
+        "BUSINESS",
+        "BUSINESS 21",
+        "BUSINESS 21N",
+        "BUSINESS 5P ECO2",
+        "BUSINESS 90G",
+        "BUSINESS 90G ECO2",
+        "BUSINESS ECO2",
+        "BUSINESS ECO2 95G",
+        "BUSINESS X-TRONIC",
+        "BUSINESS X-TRONIC -21",
+        "BUSINESS X-TRONIC 21N",
+        "BYE BYE 3P",
+        "BYE BYE 5P",
+        "CLIM 3P",
+        "CLIM 5P",
+        "COOL CHIC",
+        "COOL CHIC X-TRONIC",
+        "DYNAMIQUE",
+        "DYNAMIQUE 3P",
+        "DYNAMIQUE 5P",
+        "DYNAMIQUE ECO2",
+        "DYNAMIQUE QUICKSHIFT",
+        "DYNAMIQUE TOMTOM",
+        "DYNAMIQUE TOMTOM EURO5",
+        "DYNAMIQUE TOMTOM QUICKSHIFT",
+        "ECO2",
+        "ENERGY",
+        "ENERGY BUSINESS",
+        "ENERGY BUSINESS 82G",
+        "ENERGY BUSINESS E6",
+        "ENERGY BUSINESS E6C",
+        "ENERGY BUSINESS ECO2",
+        "ENERGY BUSINESS ECO2 82G",
+        "ENERGY BUSINESS ECO2 83G",
+        "ENERGY DYNAMIQUE ECO2",
+        "ENERGY DYNAMIQUE ECO2 90G",
+        "ENERGY EDITION ONE",
+        "ENERGY EXPRESSION ECO2",
+        "ENERGY EXPRESSION ECO2 83G",
+        "ENERGY EXPRESSION ECO2 90G",
+        "ENERGY EXPRESSION ECO2 99G",
+        "ENERGY GRAPHITE ECO2",
+        "ENERGY GRAPHITE ECO2 90G",
+        "ENERGY ICONIC",
+        "ENERGY ICONIC E6",
+        "ENERGY ICONIC ECO2 E6",
+        "ENERGY INITIALE PARIS",
+        "ENERGY INITIALE PARIS E6",
+        "ENERGY INITIALE PARIS ECO2",
+        "ENERGY INTENS",
+        "ENERGY INTENS E6",
+        "ENERGY INTENS ECO2",
+        "ENERGY INTENS ECO2 90G",
+        "ENERGY INTENS ECO2 E6",
+        "ENERGY INTENS EDC6",
+        "ENERGY LIFE",
+        "ENERGY LIFE E6",
+        "ENERGY LIMITED",
+        "ENERGY LIMITED E6",
+        "ENERGY LIMITED E6C",
+        "ENERGY LIMITED ECO2",
+        "ENERGY LIMITED ECO2 82G",
+        "ENERGY LIMITED ECO2 90G",
+        "ENERGY LIMITED EDC6",
+        "ENERGY NOUVELLE LIMITED ECO2",
+        "ENERGY STEEL",
+        "ENERGY TREND",
+        "ENERGY TREND 82G",
+        "ENERGY TREND E6C",
+        "ENERGY TREND ECO2 82G",
+        "ENERGY ZEN",
+        "ENERGY ZEN 82G",
+        "ENERGY ZEN E6",
+        "ENERGY ZEN E6C",
+        "ENERGY ZEN ECO2",
+        "ENERGY ZEN ECO2 105G",
+        "ENERGY ZEN ECO2 82G",
+        "ENERGY ZEN ECO2 83G",
+        "ENERGY ZEN ECO2 90G",
+        "ENERGY ZEN ECO2 99G",
+        "ENGINEERED",
+        "EQUILIBRE",
+        "ESPRIT ALPINE",
+        "ETHANOL",
+        "ETHANOL ECO2",
+        "ETHANOL RIP CURL 3P",
+        "ETHANOL RIP CURL 5P",
+        "ETHANOL SOCIETE AIR ECO2",
+        "EVOLUTION",
+        "EVOLUTION +",
+        "EVOLUTION X-TRONIC",
+        "EXCEPTION",
+        "EXCEPTION 2",
+        "EXCEPTION 2 3P",
+        "EXCEPTION 2 5P",
+        "EXCEPTION 2 QUICKSHIFT",
+        "EXCEPTION 5P",
+        "EXCEPTION QUICKSHIFT",
+        "EXCEPTION QUICKSHIFT 5 5P",
+        "EXCEPTION TOMTOM",
+        "EXCEPTION TOMTOM EURO5",
+        "EXCEPTION TOMTOM QUICKSHIFT",
+        "EXPRESSION",
+        "EXPRESSION CLIM",
+        "EXPRESSION CLIM ECO2",
+        "EXPRESSION CLIM EURO5",
+        "EXPRESSION ECO2",
+        "EXTREME",
+        "EXTREME CLAIRE",
+        "EXTREME CLAIRE 3P",
+        "EXTREME CLAIRE QUICKSHIFT",
+        "EXTREME FONCE",
+        "EXTREME FONCE 3P",
+        "EXTREME FONCEE",
+        "EXTREME FONCEE QUICKSHIFT",
+        "EXTREME QUICKSHIFT",
+        "FAP AUTHENTIQUE",
+        "FAP AUTHENTIQUE 4CV",
+        "FAP AUTHENTIQUE 5CV",
+        "FAP COOL CHIC",
+        "FAP DYNAMIQUE",
+        "FAP DYNAMIQUE 4CV",
+        "FAP DYNAMIQUE 5CV",
+        "FAP DYNAMIQUE TOMTOM",
+        "FAP EXCEPTION",
+        "FAP EXCEPTION 2",
+        "FAP EXCEPTION 2 5P",
+        "FAP EXPRESSION",
+        "FAP EXPRESSION 4CV",
+        "FAP EXPRESSION 5CV",
+        "FAP EXPRESSION CLIM",
+        "FAP INITIALE PARIS",
+        "FAP INTENS",
+        "FAP TOMTOM EDITION",
+        "GENERATION",
+        "GENERIQUE ECO2",
+        "GENERIQUE SOCIETE 3P",
+        "GRAPHITE ECO2",
+        "GSR2 ESPRIT ALPINE",
+        "GSR2 EVOLUTION",
+        "GSR2 GENERATION",
+        "GSR2 TECHNO",
+        "GT ECO2",
+        "ICONIC",
+        "ICONIC E6",
+        "INITIALE PARIS",
+        "INITIALE PARIS 21",
+        "INITIALE PARIS 21N",
+        "INITIALE PARIS ECO2",
+        "INITIALE PARIS X-TRONIC",
+        "INTENS",
+        "INTENS 21N",
+        "INTENS E6",
+        "INTENS ECO2",
+        "INTENS ECO2 95G",
+        "INTENS X-TRONIC",
+        "INTENS X-TRONIC - 21N",
+        "INTENS X-TRONIC -21",
+        "INTENS X-TRONIC 21N",
+        "LIFE",
+        "LIFE 2020",
+        "LIFE 21N",
+        "LIFE 90G ECO2",
+        "LIFE E6",
+        "LIFE ECO2",
+        "LIFE ECO2 E6",
+        "LIMITED",
+        "LIMITED E6",
+        "LIMITED ECO2",
+        "LUTECIA 21N",
+        "NIGHT&DAY",
+        "NIGHT&DAY ECO2",
+        "NOUVELLE LIMITED",
+        "NOUVELLE LIMITED E6",
+        "NOUVELLE LIMITED ECO2",
+        "OVALIE",
+        "OVALIE ECO2",
+        "PACK SOCIETE 3P",
+        "PACK SPORT 3P",
+        "PACK SPORT 5P",
+        "PEPITE",
+        "PREMIERE EDITION",
+        "RIP CURL 3P",
+        "RIP CURL 5P",
+        "SL LIMITED",
+        "SL LIMITED - 21N",
+        "SL LIMITED 21N",
+        "SL LIMITED X-TRONIC 21N",
+        "SL PREMIERE EDITION",
+        "SL TEAM RUGBY",
+        "SOCIETE AIR ECO2",
+        "SOCIETE GENERIQUE ECO2",
+        "SPORT WAY 3P",
+        "SPORT WAY 5P",
+        "TECHNO",
+        "TOMTOM EDITION",
+        "TOMTOM LIVE",
+        "TOMTOM LIVE ECO2",
+        "TREND",
+        "TREND E6",
+        "TREND ECO2",
+        "TREND ECO2 90G",
+        "XV DE FRANCE",
+        "XV DE FRANCE 5P",
+        "XV DE FRANCE ECO2",
+        "XV DE FRANCE EURO5",
+        "YAHOO!",
+        "YAHOO! ECO2",
+        "ZEN",
+        "ZEN 21",
+        "ZEN 21N",
+        "ZEN 3P",
+        "ZEN 5P",
+        "ZEN 5P ECO2",
+        "ZEN 90G ECO2",
+        "ZEN E6",
+        "ZEN ECO2",
+        "ZEN ECO2 82G",
+        "ZEN ECO2 90G",
+        "ZEN ECO2 E6",
+        "ZEN X-TRONIC",
+        "ZEN X-TRONIC -21"
       ],
       "Mégane": [
-        "Authentique",
-        "Expression",
-        "Dynamique",
-        "GT Line",
-        "Business",
-        "RS",
-        "RS Cup",
-        "Collection",
-        "GT",
-        "Bose Edition",
-        "Exception",
-        "Life",
-        "Zen",
-        "Intens",
-        "RS Line",
-        "Edition One",
-        "E-Tech",
-        "Esprit Alpine",
-        "Avantage",
-        "Limited",
-        "Techno"
+        "AIR",
+        "AIR NAV",
+        "AIR NAV 21B",
+        "AIR NAV 2P 21N",
+        "AIR NAV EDC7",
+        "AIR NAV MY21",
+        "AUTHENTIQUE",
+        "AUTHENTIQUE ECO2",
+        "AUTONOMIE CONFORT AC7 EVOLUTION",
+        "AUTONOMIE CONFORT ESPRIT ALPINE",
+        "BIO-ETHANOL",
+        "BIO-ETHANOL COLOR EDITION",
+        "BIO-ETHANOL ECO2 EURO5",
+        "BIOETHANOL AUTHENTIQUE ECO2",
+        "BIOETHANOL ECO2",
+        "BIOETHANOL EXPRESSION ECO2",
+        "BLUE AIR",
+        "BLUE AIR 2020",
+        "BLUE AIR NAV",
+        "BLUE AIR NAV 2020",
+        "BLUE BUSINESS",
+        "BLUE BUSINESS INTENS",
+        "BLUE GT-LINE",
+        "BLUE INTENS",
+        "BLUE LIFE",
+        "BLUE LIMITED",
+        "BLUE SL LIMITED",
+        "BLUE ZEN",
+        "BOSE",
+        "BOSE EDITION",
+        "BOSE EDITION ECO2",
+        "BOSE EDITION EURO6",
+        "BUSINESS",
+        "BUSINESS 21B",
+        "BUSINESS 21N",
+        "BUSINESS ECO2",
+        "BUSINESS EURO6",
+        "BUSINESS INTENS",
+        "CARMINAT",
+        "CARMINAT TOMTOM",
+        "CARMINAT TOMTOM EURO5",
+        "COLOR EDITION",
+        "DYNAMIQUE",
+        "DYNAMIQUE ECO2",
+        "DYNAMIQUE EURO5",
+        "ECO2",
+        "EDITION ONE",
+        "EDITION ONE 21B",
+        "ENERGY AIR",
+        "ENERGY AIR NAV",
+        "ENERGY AKAJU",
+        "ENERGY AKAJU ECO2",
+        "ENERGY AUTHENTIQUE ECO2",
+        "ENERGY BOSE",
+        "ENERGY BOSE ECO2",
+        "ENERGY BOSE EDITION",
+        "ENERGY BOSE EDITION ECO2",
+        "ENERGY BOSE EDITION EURO6",
+        "ENERGY BOSE EDITIONECO2",
+        "ENERGY BOSE EURO6",
+        "ENERGY BUSINESS",
+        "ENERGY BUSINESS 86G ECO2",
+        "ENERGY BUSINESS 87G",
+        "ENERGY BUSINESS 90G",
+        "ENERGY BUSINESS 90G ECO2",
+        "ENERGY BUSINESS ECO2",
+        "ENERGY BUSINESS EURO6",
+        "ENERGY BUSINESS INTENS",
+        "ENERGY DYNAMIQUE ECO2",
+        "ENERGY ECO2",
+        "ENERGY EXPRESSION ECO2",
+        "ENERGY FAP BOSE ECO2",
+        "ENERGY FAP BOSE EDITION",
+        "ENERGY FAP BUSINESS ECO2",
+        "ENERGY FAP BUSINESS EURO6",
+        "ENERGY FAP DYNAMIQUE ECO2",
+        "ENERGY FAP EXPRESSION ECO2",
+        "ENERGY FAP LIMITED ECO2",
+        "ENERGY FAP SERIE LIMITEE",
+        "ENERGY GT",
+        "ENERGY GT EDC7",
+        "ENERGY GT-LINE ECO2",
+        "ENERGY INTENS",
+        "ENERGY INTENS ECO2",
+        "ENERGY INTENS EURO6",
+        "ENERGY LIFE",
+        "ENERGY LIFE 90G ECO2",
+        "ENERGY LIFE ECO2",
+        "ENERGY LIFE EURO6",
+        "ENERGY LIMITED",
+        "ENERGY LIMITED ECO2",
+        "ENERGY LIMITED EURO6",
+        "ENERGY MONACO GP",
+        "ENERGY MONACO GP ECO2",
+        "ENERGY NOUVELLE LIMITED",
+        "ENERGY NOUVELLE LIMITED ECO2",
+        "ENERGY PEPITE EU6",
+        "ENERGY SERIE LIMITEE ECO2",
+        "ENERGY SL LIMITED",
+        "ENERGY ULTIMATE",
+        "ENERGY ULTIMATE ECO2",
+        "ENERGY ZEN",
+        "ENERGY ZEN 86G ECO2",
+        "ENERGY ZEN 90G ECO2",
+        "ENERGY ZEN ECO2",
+        "ENERGY ZEN EURO6",
+        "ENGINEERED",
+        "ETHANOL",
+        "ETHANOL AUTHENTIQUE",
+        "ETHANOL CARMINAT",
+        "ETHANOL EXPRESSION",
+        "ETHANOL TOMTOM EDITION",
+        "EURO5",
+        "EVOLUTION",
+        "EXCEPTION",
+        "EXPRESSION",
+        "EXPRESSION ECO2",
+        "EXPRESSION EURO5",
+        "FAP",
+        "FAP 116G DYNAMIQUE",
+        "FAP 5CV AUTHENTIQUE ECO2",
+        "FAP 5CV BOSE ECO2",
+        "FAP 5CV BUSINESS ECO2",
+        "FAP 5CV DYNAMIQUE ECO2",
+        "FAP 5CV ECO2 EURO5",
+        "FAP 5CV EXPRESSION ECO2",
+        "FAP 5CV XV DE",
+        "FAP 6CV BUSINESS",
+        "FAP 6CV SL LIMITED",
+        "FAP 7CV BUSINESS",
+        "FAP 9CV DYNAMIQUE EURO5",
+        "FAP AIR 2PL",
+        "FAP AIR NAV 2PL",
+        "FAP AUTHENTIQUE",
+        "FAP AUTHENTIQUE ECO2",
+        "FAP AUTHENTIQUE ECO2 EURO5",
+        "FAP AUTHENTIQUE EURO5",
+        "FAP BOSE",
+        "FAP BOSE ECO2",
+        "FAP BOSE EDITION",
+        "FAP BOSE EDITION ECO2",
+        "FAP BOSE EDITION EURO6",
+        "FAP BOSE GEN6 ECO2",
+        "FAP BUSINESS",
+        "FAP BUSINESS 2020",
+        "FAP BUSINESS 21B",
+        "FAP BUSINESS 21N",
+        "FAP BUSINESS ECO2",
+        "FAP BUSINESS ECO2 EURO5",
+        "FAP BUSINESS EURO6",
+        "FAP BUSINESS INTENS",
+        "FAP BUSINESS INTENS 2020",
+        "FAP BUSINESS INTENS EDC6",
+        "FAP BUSINESS INTENS EDC7",
+        "FAP CARMINAT",
+        "FAP CARMINAT TOMTOM",
+        "FAP CARMINAT TOMTOM EURO5",
+        "FAP CHAMPION ECO2",
+        "FAP CHAMPION OVALIE ECO2",
+        "FAP COLOR EDITION",
+        "FAP DYNAMIQUE",
+        "FAP DYNAMIQUE 10CV",
+        "FAP DYNAMIQUE ECO2",
+        "FAP DYNAMIQUE ECO2 EURO5",
+        "FAP DYNAMIQUE EURO5",
+        "FAP ECO2",
+        "FAP ECO2 EURO5",
+        "FAP EDITION ONE",
+        "FAP EDITION ONE 21B",
+        "FAP ENERGY",
+        "FAP ENERGY BOSE ECO2",
+        "FAP ENERGY BOSE EDITION",
+        "FAP ENERGY DYNAMIQUE ECO2",
+        "FAP ENERGY ECO2",
+        "FAP ENERGY GT LINE",
+        "FAP ENERGY INTENS",
+        "FAP ENERGY INTENS ECO2",
+        "FAP ENERGY ZEN ECO2",
+        "FAP ENERGY ZEN EURO6",
+        "FAP EURO5",
+        "FAP EXCEPTION",
+        "FAP EXPRESSION",
+        "FAP EXPRESSION BV6",
+        "FAP EXPRESSION ECO2",
+        "FAP EXPRESSION ECO2 EURO5",
+        "FAP EXPRESSION EURO5",
+        "FAP FLORIDE",
+        "FAP GEN6 AUTHENTIQUE ECO2",
+        "FAP GEN6 BOSE ECO2",
+        "FAP GEN6 DYNAMIQUE ECO2",
+        "FAP GEN6 EXPRESSION ECO2",
+        "FAP GT",
+        "FAP GT EURO5",
+        "FAP GT LINE",
+        "FAP GT LINE ECO2",
+        "FAP GT-LINE",
+        "FAP IMPULSION",
+        "FAP INTENS",
+        "FAP INTENS 2020",
+        "FAP INTENS 21B",
+        "FAP INTENS 21N",
+        "FAP INTENS ECO2",
+        "FAP INTENS EDC6",
+        "FAP INTENS EDC7",
+        "FAP INTENS ENERGY",
+        "FAP LIFE",
+        "FAP LIFE ECO2",
+        "FAP LIFE EURO6",
+        "FAP LIMITED",
+        "FAP LIMITED ECO2",
+        "FAP LIMITEE EDITION ONE",
+        "FAP MONACO GP",
+        "FAP MONACO GP ECO2",
+        "FAP OVALIE ECO2",
+        "FAP PRIVILEGE",
+        "FAP PRIVILEGE 10CV",
+        "FAP PRIVILEGE ECO2 EURO5",
+        "FAP PRIVILEGE EURO5",
+        "FAP SERIE LIMITEE ECO2",
+        "FAP SL LIMITED",
+        "FAP SL LIMITED 21B",
+        "FAP SL LIMITED 21N",
+        "FAP TOMTOM EDITION",
+        "FAP TOMTOM EDITION EURO5",
+        "FAP XV DE FRANCE",
+        "FAP ZEN",
+        "FAP ZEN 21B",
+        "FAP ZEN 21N",
+        "FAP ZEN ECO2",
+        "FAP ZEN EURO6",
+        "FLORIDE",
+        "GT EURO5",
+        "GT LINE",
+        "IMPULSION",
+        "INTENS",
+        "INTENS 21B",
+        "INTENS 21N",
+        "INTENS EURO6",
+        "LIFE ECO2",
+        "LIFE EURO6",
+        "LIMITED",
+        "LIMITED 21B",
+        "LIMITED 21N",
+        "LIMITED ECO2",
+        "PEPITE ECO2",
+        "PRIVILEGE",
+        "PRIVILEGE EURO5",
+        "R.S. LINE 2021",
+        "SERIE LIMITEE ECO2",
+        "SL LIMITED",
+        "SL LIMITED 21N",
+        "TECHNO",
+        "TECHNO MY22",
+        "TOMTOM EDITION",
+        "TOMTOM EDITION EURO5",
+        "XV DE FRANCE",
+        "XV DE FRANCE EURO5",
+        "ZEN",
+        "ZEN 21N",
+        "ZEN ECO2",
+        "ZEN EURO6"
       ],
       "Mégane Estate": [
         "Authentique",
@@ -47189,19 +48342,108 @@
         "Bose Edition"
       ],
       "Captur": [
-        "Life",
-        "Zen",
-        "Business",
-        "Intens",
-        "S Edition",
-        "Initiale Paris",
-        "RS Line",
-        "E-Tech",
-        "Esprit Alpine",
-        "Iconic",
-        "Equilibre",
-        "Limited",
-        "Techno"
+        "- 21 BUSINESS",
+        "- 21 INTENS",
+        "- 21 ZEN",
+        "- 21B INITIALE PARIS",
+        "21 INITIALE PARIS",
+        "ARIZONA",
+        "ARIZONA ECO2",
+        "BUSINESS",
+        "BUSINESS 123G",
+        "BUSINESS 2020",
+        "BUSINESS 21",
+        "BUSINESS ECO2",
+        "BUSINESS MY21",
+        "ECO-G GSR2 TECHNO",
+        "ENERGY 5CV BUSINESS ECO2",
+        "ENERGY 5CV HELLY HANSEN",
+        "ENERGY 5CV INTENS ECO2",
+        "ENERGY 5CV PURE ECO2",
+        "ENERGY ARIZONA ECO2",
+        "ENERGY BUSINESS",
+        "ENERGY BUSINESS E6",
+        "ENERGY BUSINESS E6 ECO2",
+        "ENERGY BUSINESS ECO2",
+        "ENERGY BUSINESS ECO2 E6",
+        "ENERGY BUSINESS ECO2 EURO6",
+        "ENERGY COOL GREY",
+        "ENERGY COOL GREY ECO2",
+        "ENERGY HELLY HANSEN ECO2",
+        "ENERGY HYPNOTIC",
+        "ENERGY HYPNOTIC E6",
+        "ENERGY HYPNOTIC ECO2 E6",
+        "ENERGY INITIALE",
+        "ENERGY INITIALE PARIS",
+        "ENERGY INTENS",
+        "ENERGY INTENS 4CV ECO2",
+        "ENERGY INTENS E6",
+        "ENERGY INTENS E6 ECO2",
+        "ENERGY INTENS ECO2",
+        "ENERGY INTENS ECO2 E6",
+        "ENERGY INTENS ECO2 EURO6",
+        "ENERGY INTENS MY21",
+        "ENERGY IRIDIUM",
+        "ENERGY LIFE",
+        "ENERGY LIFE E6",
+        "ENERGY LIFE E6 ECO2",
+        "ENERGY LIFE ECO2",
+        "ENERGY LIFE ECO2 E6",
+        "ENERGY PURE ECO2",
+        "ENERGY S-EDITION",
+        "ENERGY WAVE",
+        "ENERGY WAVE ECO2",
+        "ENERGY ZEN",
+        "ENERGY ZEN E6",
+        "ENERGY ZEN ECO2",
+        "ENERGY ZEN ECO2 E6",
+        "ENGINEERED",
+        "EQUILIBRE",
+        "ESPRIT ALPINE",
+        "EVOLUTION",
+        "FAP BUSINESS",
+        "FAP ENERGY INITIALE PARIS",
+        "FAP ENERGY INTENS",
+        "FAP INITIALE PARIS",
+        "FAP INTENS",
+        "FAP RED EDITION",
+        "FAP SUNSET",
+        "FAP ZEN",
+        "GSR2 ESPRIT ALPINE",
+        "GSR2 EVOLUTION",
+        "GSR2 TECHNO",
+        "HELLY HANSEN",
+        "HELLY HANSEN ECO2",
+        "HYPNOTIC ENERGY E6",
+        "ICONIC",
+        "INITIALE PARIS",
+        "INITIALE PARIS -21",
+        "INITIALE PARIS 21",
+        "INITIALE PARIS 21B",
+        "INITIALE PARIS MY21",
+        "INTENS",
+        "INTENS -21",
+        "INTENS 123G",
+        "INTENS 21",
+        "INTENS ECO2",
+        "INTENS MY21",
+        "LIFE",
+        "LIFE 123G",
+        "PURE",
+        "PURE ECO2",
+        "RED EDITION",
+        "RIVE GAUCHE",
+        "SL RIVE GAUCHE",
+        "SUNSET",
+        "TECHNO",
+        "TECHNO FAST TRACK",
+        "ZEN",
+        "ZEN 123G",
+        "ZEN 21",
+        "ZEN ECO2",
+        "ZEN ENERGY",
+        "ZEN FAP",
+        "ZEN MY21"
       ],
       "Kadjar": [
         "Life",
@@ -47217,21 +48459,151 @@
         "Limited"
       ],
       "Twingo": [
-        "Authentique",
-        "Expression",
-        "Dynamique",
-        "GT",
-        "Life",
-        "Zen",
-        "Urban Night",
-        "Intens",
-        "EDC",
-        "Vibes",
-        "Access",
-        "Chic",
-        "Equilibre",
-        "Limited",
-        "RS Cup"
+        "4CV INITIALE",
+        "4CV NIGHT & DAY",
+        "4CV RIP CURL",
+        "4CV TREND QUICKSHIFT 5",
+        "5CV COSMIC",
+        "5CV DYNAMIQUE QUICKSHIFT 5",
+        "5CV EXPRESSION QUICKSHIFT 5",
+        "5CV INITIALE QUICKSHIFT 5",
+        "5CV INTENS",
+        "5CV LIMITED",
+        "5CV ZEN",
+        "6CV INITIALE",
+        "ACCESS",
+        "ACCESS ECO2",
+        "ACCESS ECO2 EURO5",
+        "ART COLLECTION",
+        "AUTHENTIQUE",
+        "AUTHENTIQUE 114G",
+        "AUTHENTIQUE ECO2",
+        "AUTHENTIQUE ECO2 EURO5",
+        "COSMIC",
+        "COSMIC E6",
+        "COSMIC EURO 6C",
+        "DOLCE VITA",
+        "DOLCE VITA 114G",
+        "DYNAMIQUE",
+        "DYNAMIQUE 114G",
+        "DYNAMIQUE BVR",
+        "DYNAMIQUE BVR5 EURO5 ECO2",
+        "DYNAMIQUE ECO2",
+        "DYNAMIQUE EURO5 ECO2",
+        "DYNAMIQUE QUICKSHIFT 5",
+        "ENERGY INTENS",
+        "ENERGY INTENS 2",
+        "ENERGY INTENS E6C",
+        "ENERGY LA PARISIENNE",
+        "ENERGY LIMITED",
+        "ENERGY LIMITED E6C",
+        "ENERGY RED NIGHT E6C",
+        "ENERGY SL EDITION ONE",
+        "ENERGY ZEN",
+        "ENERGY ZEN E6C",
+        "EQUILIBRE",
+        "EXPRESSION",
+        "EXPRESSION 114G",
+        "EXPRESSION ECO2",
+        "EXPRESSION EURO5",
+        "EXPRESSION QUICKSHIFT 5",
+        "FAP AUTHENTIQUE ECO2 EURO5",
+        "FAP EXPRESSION EURO5",
+        "FAP GORDINI ECO2 EURO5",
+        "FAP INITIALE ECO2 EURO5",
+        "FAP LIFE ECO2 EURO5",
+        "FAP MISS SIXTY ECO2",
+        "FAP RIP CURL EURO5",
+        "FAP WALKMAN EURO5",
+        "GORDINI",
+        "GORDINI ECO2",
+        "GORDINI EURO5",
+        "GT E6C",
+        "GT EURO5",
+        "HELIOS",
+        "HELIOS BVR",
+        "HIPANEMA",
+        "HIPANEMA E6",
+        "HIPANEMA EURO 6C",
+        "INITIALE",
+        "INITIALE BVR",
+        "INITIALE BVR EURO5",
+        "INITIALE ECO2",
+        "INITIALE ECO2 EURO5",
+        "INITIALE EURO5",
+        "INITIALE QUICKSHIFT 5",
+        "INTENS",
+        "INTENS 2",
+        "INTENS 2 E6",
+        "INTENS 2 E6C",
+        "INTENS BVR5 ECO2 EURO5",
+        "INTENS E6",
+        "INTENS E6C",
+        "INTENS ECO2",
+        "INTENS ECO2 EURO5",
+        "LA PARISIENNE",
+        "LA PARISIENNE EURO 6C",
+        "LE COQ SPORTIF",
+        "LIFE",
+        "LIFE 2",
+        "LIFE 2020",
+        "LIFE 2020 MY21",
+        "LIFE E6",
+        "LIFE E6C",
+        "LIFE ECO2",
+        "LIFE ECO2 EURO5",
+        "LIMITED",
+        "LIMITED E6",
+        "LIMITED E6C",
+        "LIMITED ECO2",
+        "MAUBOUSSIN ECO2",
+        "MIDNIGHT",
+        "MIDNIGHT EURO 6C",
+        "MISS SIXTY ECO2 EURO5",
+        "NIGHT & DAY",
+        "NIGHT&DAY BVR",
+        "NIGHT&DAY ECO2",
+        "NOKIA",
+        "OVALIE ECO2",
+        "PEPITE ECO2",
+        "PRIVILEGE ECO2",
+        "PURPLE ECO2",
+        "RED NIGHT",
+        "RED NIGHT E6C",
+        "RIP CURL",
+        "RIP CURL BVR EURO5",
+        "RIP CURL EURO5",
+        "RIVE GAUCHE",
+        "SIGNATURE",
+        "SL LIMITED",
+        "SL LIMITED MY21",
+        "SL TEAM RUGBY",
+        "SL URBAN NIGHT",
+        "SL VIBES MY21",
+        "STOP & START COSMIC",
+        "STOP & START HIPANEMA",
+        "STOP & START INTENS",
+        "STOP & START LA",
+        "STOP & START LIMITED",
+        "STOP & START MIDNIGHT",
+        "STOP & START RED",
+        "STOP & START ZEN",
+        "SUMMERTIME ECO2",
+        "TREND",
+        "TREND 114G",
+        "TREND QUICKSHIFT 5",
+        "URBAN NIGHT",
+        "URBAN NIGHT - 21",
+        "VIBES",
+        "WALKMAN",
+        "WALKMAN EURO5",
+        "XV DE FRANCE",
+        "YAHOO! ECO2",
+        "ZEN",
+        "ZEN E6",
+        "ZEN E6C",
+        "ZEN ECO2 EURO5",
+        "ZEN MY21"
       ],
       "Zoe": [
         "Life",
@@ -47260,34 +48632,280 @@
         "Exception"
       ],
       "Espace": [
-        "Authentique",
-        "Expression",
-        "Dynamique",
-        "Privilege",
-        "Initiale",
-        "Life",
-        "Zen",
-        "Intens",
-        "Initiale Paris",
-        "Emotion",
-        "Esprit Alpine",
-        "Iconic"
+        "10CV ALYUM PLUS PROACTIVE",
+        "10CV INITIALE",
+        "10CV PRIVILEGE",
+        "11CV ALYUM PLUS",
+        "11CV ALYUM PLUS PROACTIVE",
+        "25TH 5PL",
+        "25TH 7PL",
+        "8CV AUTHENTIQUE",
+        "9CV AUTHENTIQUE",
+        "ALYUM",
+        "ALYUM PLUS",
+        "ALYUM PLUS PROACTIVE",
+        "ALYUM PROACTIVE",
+        "ARGOS",
+        "AUTHENTIQUE",
+        "CARMINAT",
+        "CARMINAT EVOLUTION",
+        "EMOTION",
+        "EMPREINTE",
+        "EMPREINTE PROACTIVE",
+        "ENERGY INITIALE PARIS",
+        "ENERGY INITIALE PARIS 5PL",
+        "ENERGY INITIALE PARIS 7PL",
+        "ENERGY INTENS",
+        "ENERGY INTENS 5PL",
+        "ENERGY INTENS 7PL",
+        "ENERGY LIFE",
+        "ENERGY LIFE 7PL ECO2",
+        "ENERGY LIFE ECO2",
+        "ENERGY ZEN",
+        "ENERGY ZEN 5PL",
+        "ENERGY ZEN 7PL",
+        "ESPRIT ALPINE 5PL",
+        "ESPRIT ALPINE 7PL",
+        "EVOLUTION 5PL",
+        "EVOLUTION 7PL",
+        "EXPRESSION",
+        "EXPRESSION PROACTIVE",
+        "FAP 10CV ALYUM PLUS",
+        "FAP 10CV CARMINAT",
+        "FAP 10CV INITIALE",
+        "FAP 10CV INITIALE 7PL",
+        "FAP 25TH",
+        "FAP 25TH 6PL",
+        "FAP 25TH 7PL",
+        "FAP 25TH BV6",
+        "FAP 7CV 25TH",
+        "FAP 7CV 25TH 6PL",
+        "FAP 7CV 25TH 7PL",
+        "FAP 8CV 25TH BV6",
+        "FAP 8CV INITIALE",
+        "FAP 8CV INITIALE 7PL",
+        "FAP 9CV 25TH",
+        "FAP ALYUM",
+        "FAP ALYUM 6PL",
+        "FAP ALYUM 7PL",
+        "FAP ALYUM EVO",
+        "FAP ALYUM EVO PLUS",
+        "FAP ALYUM PLUS",
+        "FAP ALYUM PLUS 7PL",
+        "FAP ARGOS",
+        "FAP AUTHENTIQUE",
+        "FAP CARMINAT",
+        "FAP CARMINAT EVOLUTION",
+        "FAP EMOTION",
+        "FAP EXPRESSION",
+        "FAP INITIALE",
+        "FAP INITIALE 7PL",
+        "FAP INITIALE PARIS",
+        "FAP INITIALE PARIS 7PL",
+        "FAP INTENS",
+        "FAP INTENS 5PL",
+        "FAP INTENS 6PL",
+        "FAP INTENS 7PL",
+        "FAP LIMITED",
+        "FAP PRIVILEGE",
+        "FAP PRIVILEGE PROACTIVE",
+        "FAP TECH RUN",
+        "FAP TECH RUN PROACTIVE",
+        "FAP ZEN",
+        "FAP ZEN BV6",
+        "GSR2 ESPRIT ALPINE 5PL",
+        "GSR2 ESPRIT ALPINE 7PL",
+        "GSR2 ICONIC 5PL",
+        "GSR2 ICONIC 7PL",
+        "GSR2 TECHNO 5PL",
+        "GSR2 TECHNO 7PL",
+        "ICONIC 5PL",
+        "ICONIC 7PL",
+        "INITIALE",
+        "INITIALE PARIS",
+        "INITIALE PARIS 7PL",
+        "INITIALE PROACTIVE",
+        "INTENS",
+        "INTENS 7PL",
+        "LIFE",
+        "LIMITED",
+        "PRIVILEGE",
+        "PRIVILEGE PROACTIVE",
+        "T ALYUM",
+        "T ALYUM PLUS",
+        "T ALYUM PLUS PROACTIVE",
+        "T ALYUM PROACTIVE",
+        "T AUTHENTIQUE",
+        "T EMPREINTE",
+        "T EMPREINTE PROACTIVE",
+        "T EXPRESSION",
+        "T EXPRESSION PROACTIVE",
+        "T INITIALE",
+        "T INITIALE PROACTIVE",
+        "T LIMITED",
+        "T PRIVILEGE 5PL",
+        "T PRIVILEGE 7PL",
+        "T PRIVILEGE PROACTIVE 5PL",
+        "T PRIVILEGE PROACTIVE 7PL",
+        "TECH RUN",
+        "TECHNO 5PL",
+        "TECHNO 7PL",
+        "V6 24S PRIVILEGE",
+        "V6 INITIALE",
+        "V6 PRIVILEGE",
+        "ZEN",
+        "ZEN 7PL"
       ],
       "Kangoo": [
-        "Express",
-        "Confort",
-        "Business",
-        "Business Plus",
-        "Techno",
-        "Equilibre",
-        "Access",
-        "Authentique",
-        "Campus",
-        "Expression",
-        "Intens",
-        "Life",
-        "Limited",
-        "Zen"
+        "6CV BLUE BUSINESS",
+        "6CV EURO5",
+        "6CV INTENS",
+        "6CV TREND",
+        "7CV INTENS",
+        "ACCESS",
+        "ACCESS EURO4",
+        "ACCESS EURO5",
+        "ADVANCE",
+        "AUTHENTIQUE",
+        "AUTHENTIQUE EURO4",
+        "AUTHENTIQUE EURO5",
+        "AUTHENTIQUE PRO",
+        "AUTO ADVANCE",
+        "AUTO ADVANCE PRO",
+        "AUTO GSR2 ADVANCE",
+        "AUTO GSR2 EXTRA",
+        "AUTO TECHNO",
+        "BI- BOP",
+        "BI- BOP EURO5",
+        "BLUE BUSINESS",
+        "BUSINESS N1",
+        "ECO LEADER GRAND CONFORT",
+        "EDC7 EXTRA SESAME OUVRE",
+        "ENERGY 6CV LIFE",
+        "ENERGY EXTREM",
+        "ENERGY EXTREM ESP",
+        "ENERGY EXTREM EURO6",
+        "ENERGY FT EXTREM",
+        "ENERGY FT EXTREM EURO6",
+        "ENERGY FT INTENS",
+        "ENERGY FT INTENS EURO6",
+        "ENERGY FT LIFE",
+        "ENERGY FT LIFE EURO6",
+        "ENERGY FT NOUVELLE LIMITED",
+        "ENERGY FT ZEN",
+        "ENERGY ICONIC",
+        "ENERGY INTENS",
+        "ENERGY INTENS ESP",
+        "ENERGY INTENS EURO6",
+        "ENERGY LIFE",
+        "ENERGY LIFE ESP",
+        "ENERGY LIFE EURO6",
+        "ENERGY LIMITED",
+        "ENERGY LIMITED EURO6",
+        "ENERGY NOUVELLE LIMITED",
+        "ENERGY PEPITE EURO6",
+        "ENERGY ZEN",
+        "ENERGY ZEN ESP",
+        "ENERGY ZEN EURO6",
+        "EQUILIBRE",
+        "ETHANOL AUTHENTIQUE",
+        "ETHANOL EXPRESSION",
+        "ETHANOL EXPRESSION EURO5",
+        "ETHANOL PRIVILEGE",
+        "ETHANOL PRIVILEGE EURO5",
+        "ETHANOL TOMTOM EDITION",
+        "ETHANOL TOMTOM EDITION EURO5",
+        "EVOLUTION",
+        "EXPRESSION",
+        "EXPRESSION EURO4",
+        "EXPRESSION EURO5",
+        "EXPRESSION PRO",
+        "EXTRA",
+        "EXTRA - 22",
+        "EXTRA 22 EDC7",
+        "EXTRA SESAME OUVRE TOI",
+        "EXTREM",
+        "EXTREM ESP",
+        "EXTREM EURO6",
+        "FAP ACCESS",
+        "FAP ACCESS EURO5",
+        "FAP AUTHENTIQUE",
+        "FAP AUTHENTIQUE EURO5",
+        "FAP BI- BOP",
+        "FAP ENERGY AUTHENTIQUE",
+        "FAP ENERGY EXPRESSION",
+        "FAP ENERGY LIFE",
+        "FAP ENERGY LIFE ESP",
+        "FAP ENERGY PRIVILEGE",
+        "FAP ENERGY TOMTOM EDITION",
+        "FAP ENERGY ZEN",
+        "FAP ENERGY ZEN ESP",
+        "FAP EXPRESSION",
+        "FAP EXPRESSION EURO5",
+        "FAP LIFE",
+        "FAP LIFE ESP",
+        "FAP OVALIE",
+        "FAP PRIVILEGE",
+        "FAP PRIVILEGE EURO5",
+        "FAP TOMTOM EDITION",
+        "FAP TOMTOM EDITION EURO5",
+        "FAP ZEN",
+        "FAP ZEN ESP",
+        "FT ENERGY LIMITED EURO6",
+        "FT EXTREM",
+        "FT INTENS",
+        "FT LIFE",
+        "FT NOUVELLE LIMITED",
+        "FT ZEN",
+        "GRAND CONFORT",
+        "GRAND CONFORT - 22",
+        "GRAND CONFORT 22",
+        "GRAND CONFORT 22 EDC7",
+        "GRAND CONFORT ECO LEADER",
+        "GRAND CONFORT SESAME OUVRE",
+        "GRAND CONFORT- 22",
+        "GSR2 ADVANCE",
+        "GSR2 ADVANCE AUTO",
+        "GSR2 EVOLUTION",
+        "GSR2 EVOLUTION AUTO",
+        "GSR2 EXTRA",
+        "GSR2 EXTRA AUTO",
+        "GSR2 TECHNO",
+        "GSR2 TECHNO AUTO",
+        "INTENS",
+        "INTENS ESP",
+        "INTENS EURO6",
+        "INTENS N1",
+        "L1 ADVANCE",
+        "L1 ADVANCE AUTO",
+        "L1 EXTRA",
+        "L1 EXTRA AUTO",
+        "L2 ADVANCE",
+        "L2 ADVANCE AUTO",
+        "L2 EXTRA",
+        "L2 EXTRA AUTO",
+        "LIFE",
+        "LIFE ACCESS",
+        "LIMITED",
+        "NOUVELLE LIMITED",
+        "OVALIE",
+        "PAP L1",
+        "PEPITE",
+        "PEPITE ECO2",
+        "PRIVILEGE",
+        "PRIVILEGE EURO4",
+        "PRIVILEGE EURO5",
+        "TECHNO",
+        "TOMTOM EDITION",
+        "TOMTOM EDITION EURO4",
+        "TOMTOM EDITION EURO5",
+        "TREND",
+        "VAN PAP FOURGON TOLE",
+        "VAN PAP FRIGO L1",
+        "VAN PAP PICK-UP BENNE",
+        "VAN PAP PICK-UP L1",
+        "ZEN",
+        "ZEN EURO6"
       ],
       "Master": [
         "Confort",
@@ -47295,10 +48913,105 @@
         "Grand Confort"
       ],
       "Trafic": [
-        "Confort",
-        "Business",
-        "Grand Confort",
-        "Techno"
+        "- 18 8PL",
+        "- 8 PL",
+        "1H1 2T8 GSR2 ADVANCE",
+        "2PL",
+        "6PL",
+        "7CV 8PL",
+        "7CV 9PL",
+        "7PL",
+        "7PL EDITION",
+        "8 PL",
+        "8CV 7PL",
+        "8CV ZEN L1 8PL",
+        "8CV ZEN L2 8PL",
+        "8PL",
+        "9CV 7PL",
+        "9CV 7PL EDITION",
+        "9PL",
+        "ADVANCE AUTO",
+        "AUTO ADVANCE PRO",
+        "AUTO EVOLUTION",
+        "AUTO GRAND EVOLUTION",
+        "AUTO GRAND SPACECLASS",
+        "AUTO GRAND TECHNO",
+        "AUTO SPACECLASS",
+        "AUTO TECHNO",
+        "BVR",
+        "CONFORT",
+        "E6 2PL",
+        "ENERGY INTENS",
+        "ENERGY INTENS 2 L1",
+        "ENERGY INTENS 2 L2",
+        "ENERGY INTENS 8PL",
+        "ENERGY INTENS 9PL",
+        "ENERGY INTENS L1 8PL",
+        "ENERGY INTENS L2 8PL",
+        "ENERGY INTENS L2 9PL",
+        "ENERGY LIFE L1 9PL",
+        "ENERGY LIFE L2 9PL",
+        "ENERGY SPACECLASS",
+        "ENERGY ZEN",
+        "ENERGY ZEN L1",
+        "ENERGY ZEN L1 8PL",
+        "ENERGY ZEN L1 9PL",
+        "ENERGY ZEN L2",
+        "ENERGY ZEN L2 8PL",
+        "ENERGY ZEN L2 9PL",
+        "ESSENTIEL",
+        "EVOLUTION",
+        "EVOLUTION AUTO",
+        "EXTRA",
+        "EXTRA AUTO",
+        "GRAND CONFORT",
+        "GRAND CONFORT E6",
+        "GRAND EVOLUTION",
+        "GRAND EVOLUTION AUTO",
+        "GRAND SPACECLASS",
+        "GRAND SPACECLASS AUTO",
+        "GRAND TECHNO",
+        "GRAND TECHNO AUTO",
+        "GSR2 ADVANCE",
+        "GSR2 EXTRA",
+        "INTENS 2 L1 8PL",
+        "INTENS 2 L2 8PL",
+        "L1H1 2T8 ADVANCE",
+        "L1H1 2T8 AUTO ADVANCE",
+        "L1H1 2T8 EXTRA",
+        "L1H1 2T8 EXTRA AUTO",
+        "L1H1 3T",
+        "L1H1 3T ADVANCE",
+        "L1H1 3T AUTO ADVANCE",
+        "L1H1 3T AUTO EXTRA",
+        "L1H1 3T EXTRA",
+        "L1H1 3T EXTRA AUTO",
+        "L2 LIFE 8PL",
+        "L2 LIFE 9PL",
+        "L2 ZEN 8PL",
+        "L2 ZEN 9PL",
+        "L2H1 3T ADVANCE",
+        "L2H1 3T AUTO ADVANCE",
+        "L2H1 3T AUTO EXTRA",
+        "L2H1 3T EXTRA",
+        "L2H1 3T EXTRA AUTO",
+        "LIFE L1 8PL",
+        "LIFE L1 9PL",
+        "RED EDITION 5PL",
+        "RED EDITION 9PL",
+        "RED EXCLUSIVE 3PL",
+        "S&SLIFE L2 9PL",
+        "SPACECLASS",
+        "SPACECLASS AUTO",
+        "STOP & START",
+        "STOP & START LIFE",
+        "STOP&START",
+        "TECHNO",
+        "TECHNO AUTO",
+        "ZEN 8 PL",
+        "ZEN L1 8PL",
+        "ZEN L1 9PL",
+        "ZEN L2 8PL"
       ],
       "Laguna": [
         "Authentique",
@@ -47333,15 +49046,30 @@
         "ZEN"
       ],
       "Austral": [
-        "Equilibre",
-        "Techno",
-        "Esprit Alpine",
-        "Iconic"
+        "- 23 EVOLUTION",
+        "AUTO - 23 EVOLUTION",
+        "AUTO ICONIC",
+        "AUTO TECHNO",
+        "AUTO TECHNO ESPRIT ALPINE",
+        "EQUILIBRE",
+        "ESPRIT ALPINE",
+        "EVOLUTION",
+        "GSR2 EVOLUTION",
+        "GSR2 EVOLUTION AUTO",
+        "GSR2 ICONIC",
+        "GSR2 ICONIC ESPRIT ALPINE",
+        "GSR2 TECHNO",
+        "GSR2 TECHNO AUTO",
+        "GSR2 TECHNO ESPRIT ALPINE",
+        "ICONIC",
+        "ICONIC ESPRIT ALPINE",
+        "TECHNO",
+        "TECHNO ESPRIT ALPINE"
       ],
       "Rafale": [
-        "Techno",
-        "Esprit Alpine",
-        "Iconic"
+        "ATELIER ALPINE",
+        "ESPRIT ALPINE",
+        "TECHNO"
       ],
       "5 E-Tech": [
         "Evolution",
@@ -47360,9 +49088,10 @@
         "Iconic"
       ],
       "Symbioz": [
-        "Equilibre",
-        "Techno",
-        "Esprit Alpine"
+        "ESPRIT ALPINE",
+        "EVOLUTION",
+        "ICONIC",
+        "TECHNO"
       ],
       "Megane E-Tech Electric": [
         "Life",
@@ -47386,8 +49115,18 @@
         "Equilibre"
       ],
       "Express": [
-        "Confort",
-        "Business"
+        "CONFORT",
+        "CONFORT 2022",
+        "ECO LEADER CONFORT",
+        "ECO LEADER CONFORT 2022",
+        "ECO LEADER ESSENTIEL",
+        "ECO LEADER ESSENTIEL 2022",
+        "ESSENTIEL",
+        "ESSENTIEL 2022",
+        "EXTRA - 22",
+        "GRAND CONFORT - 22",
+        "GSR2 ADVANCE",
+        "GSR2 ADVANCE AUTO"
       ],
       "Fluence": [
         "Expression",
@@ -47437,6 +49176,444 @@
         "Expression",
         "Privilege",
         "Initiale"
+      ],
+      "Grand Kangoo": [
+        "AUTO GSR2 EVOLUTION",
+        "AUTO GSR2 TECHNO",
+        "ENERGY INTENS",
+        "ENERGY INTENS E6",
+        "ENERGY INTENS ESP",
+        "ENERGY LIFE",
+        "ENERGY LIFE E6",
+        "ENERGY LIFE ESP",
+        "ENERGY LIMITED",
+        "ENERGY ZEN",
+        "ENERGY ZEN EURO6",
+        "EVOLUTION",
+        "FAP AUTHENTIQUE",
+        "FAP INTENS",
+        "FAP INTENS ESP",
+        "FAP LIFE ACCESS",
+        "FAP PRIVILEGE",
+        "GSR2 EVOLUTION",
+        "GSR2 EVOLUTION AUTO",
+        "GSR2 TECHNO",
+        "LIFE",
+        "LIFE ESP",
+        "TECHNO"
+      ],
+      "Grand Scénic": [
+        "7CV BUSINESS 7PL 21",
+        "7CV ENERGY LIFE",
+        "7CV ENERGY LIFE E6",
+        "7CV ENERGY ZEN 5PL",
+        "7CV ENERGY ZEN 7PL",
+        "ALYUM 5PL",
+        "ALYUM 5PL EURO5",
+        "ALYUM 7PL",
+        "ALYUM 7PL EURO5",
+        "AUTHENTIQUE 5PL",
+        "AUTHENTIQUE 7PL",
+        "BIOETHANOL AUTHENTIQUE",
+        "BIOETHANOL AUTHENTIQUE 5PL",
+        "BIOETHANOL AUTHENTIQUE 5PL EURO5",
+        "BIOETHANOL AUTHENTIQUE 7PL EURO5",
+        "BLACK EDITION",
+        "BLACK EDITION 7PL",
+        "BLUE BUSINESS 7PL",
+        "BLUE BUSINESS INTENS 7PL",
+        "BLUE INTENS",
+        "BLUE INTENS 7PL",
+        "BLUE LIFE",
+        "BLUE LIFE 7PL",
+        "BLUE SL LIMITED",
+        "BLUE SL LIMITED 7PL",
+        "BLUE ZEN",
+        "BLUE ZEN 7PL",
+        "BOSE 5PL",
+        "BOSE 7PL",
+        "BOSE EDITION 2015 5PL",
+        "BOSE EDITION 2015 7PL",
+        "BOSE EDITION 5PL",
+        "BOSE EDITION 5PL E6",
+        "BOSE EDITION 7PL",
+        "BOSE EDITION 7PL E6",
+        "BUSINESS",
+        "BUSINESS 7PL",
+        "BUSINESS 7PL 21",
+        "BUSINESS 7PL E6",
+        "BUSINESS INTENS",
+        "CARMINAT TOMTOM 5PL",
+        "CARMINAT TOMTOM 5PL EURO5",
+        "CARMINAT TOMTOM 7PL",
+        "CARMINAT TOMTOM 7PL EURO5",
+        "DYNAMIQUE 5PL",
+        "DYNAMIQUE 5PL EURO5",
+        "DYNAMIQUE 7PL",
+        "DYNAMIQUE 7PL EURO5",
+        "ENERGY 7CV LIFE 7PL",
+        "ENERGY AUTHENTIQUE 5PL ECO2",
+        "ENERGY AUTHENTIQUE 7PL ECO2",
+        "ENERGY BOSE 7PL ECO2",
+        "ENERGY BOSE EDITION 5PL",
+        "ENERGY BOSE EDITION 7PL",
+        "ENERGY BUSINESS 7PL",
+        "ENERGY BUSINESS 7PL E6",
+        "ENERGY BUSINESS 7PL ECO2",
+        "ENERGY BUSINESS 7PL EURO6",
+        "ENERGY BUSINESS INTENS",
+        "ENERGY DYNAMIQUE 5PL",
+        "ENERGY DYNAMIQUE 7PL",
+        "ENERGY DYNAMIQUE 7PL ECO2",
+        "ENERGY EXPRESSION 5PL",
+        "ENERGY EXPRESSION 5PL ECO2",
+        "ENERGY EXPRESSION 7PL",
+        "ENERGY EXPRESSION 7PL ECO2",
+        "ENERGY FAP BOSE 5PL",
+        "ENERGY FAP INITIALE 5PL",
+        "ENERGY INITIALE 7PL ECO2",
+        "ENERGY INITIALE PARIS",
+        "ENERGY INITIALE PARIS 7PL",
+        "ENERGY INTENS",
+        "ENERGY INTENS 5PL",
+        "ENERGY INTENS 7PL",
+        "ENERGY LIFE",
+        "ENERGY LIFE 5PL",
+        "ENERGY LIFE 5PL ECO2",
+        "ENERGY LIFE 7PL",
+        "ENERGY LIFE 7PL E6",
+        "ENERGY LIFE 7PL ECO2",
+        "ENERGY LIMITED 7PL",
+        "ENERGY LIMITED 7PL E6",
+        "ENERGY LOUNGE 7PL",
+        "ENERGY LOUNGE 7PL ECO2",
+        "ENERGY LOUNGE 7PL EURO6",
+        "ENERGY NOUVELLE LIMITED 7PL",
+        "ENERGY SL LIMITED",
+        "ENERGY SL LIMITED 7PL",
+        "ENERGY SL LIMITED INTENS",
+        "ENERGY ZEN",
+        "ENERGY ZEN 5PL",
+        "ENERGY ZEN 5PL ECO2",
+        "ENERGY ZEN 5PL EURO6",
+        "ENERGY ZEN 7 PL",
+        "ENERGY ZEN 7PL",
+        "ENERGY ZEN 7PL ECO2",
+        "ENERGY ZEN 7PL EURO6",
+        "EVOLUTION",
+        "EXCEPTION 5PL EURO5",
+        "EXCEPTION 7PL EURO5",
+        "EXECUTIVE",
+        "EXPRESSION 5PL",
+        "EXPRESSION 5PL EURO5",
+        "EXPRESSION 7PL",
+        "EXPRESSION 7PL EURO5",
+        "FAP 15TH 5PL",
+        "FAP 15TH 7PL",
+        "FAP 15TH ENERGY 5PL",
+        "FAP 15TH ENERGY 7PL",
+        "FAP 7CV BUSINESS 7PL",
+        "FAP ALYUM 5PL",
+        "FAP ALYUM 5PL EURO5",
+        "FAP ALYUM 7PL",
+        "FAP ALYUM 7PL EURO5",
+        "FAP AUTHENTIQUE 5PL",
+        "FAP AUTHENTIQUE 5PL EURO5",
+        "FAP AUTHENTIQUE 7PL",
+        "FAP AUTHENTIQUE 7PL EURO5",
+        "FAP BLACK EDITION",
+        "FAP BLACK EDITION 7PL",
+        "FAP BOSE 5PL",
+        "FAP BOSE 7PL",
+        "FAP BOSE EDITION 5PL",
+        "FAP BOSE EDITION 7PL",
+        "FAP BUSINESS 7PL",
+        "FAP BUSINESS 7PL EURO5",
+        "FAP BUSINESS ENERGY 7PL",
+        "FAP BUSINESS EURO5 7PL",
+        "FAP BUSINESS INTENS",
+        "FAP CARMINAT TOMTOM 5PL",
+        "FAP CARMINAT TOMTOM 7PL",
+        "FAP DYNAMIQUE 5PL",
+        "FAP DYNAMIQUE 5PL EURO5",
+        "FAP DYNAMIQUE 7PL",
+        "FAP DYNAMIQUE 7PL EURO5",
+        "FAP DYNAMIQUE ENERGY 5PL",
+        "FAP DYNAMIQUE ENERGY 7PL",
+        "FAP ENERGY AUTHENTIQUE 5PL",
+        "FAP ENERGY AUTHENTIQUE 7PL",
+        "FAP ENERGY BOSE 5PL",
+        "FAP ENERGY BOSE 7PL",
+        "FAP ENERGY BOSE EDITION",
+        "FAP ENERGY BUSINESS 7PL",
+        "FAP ENERGY DYNAMIQUE 5PL",
+        "FAP ENERGY DYNAMIQUE 7PL",
+        "FAP ENERGY EXPRESSION 5PL",
+        "FAP ENERGY EXPRESSION 7PL",
+        "FAP ENERGY LIFE 5PL",
+        "FAP ENERGY LIFE 7PL",
+        "FAP ENERGY ZEN 5PL",
+        "FAP ENERGY ZEN 7PL",
+        "FAP EXCEPTION 5PL",
+        "FAP EXCEPTION 5PL EURO5",
+        "FAP EXCEPTION 7PL",
+        "FAP EXCEPTION 7PL EURO5",
+        "FAP EXCEPTION ENERGY 5PL",
+        "FAP EXCEPTION ENERGY 7PL",
+        "FAP EXPRESSION 5PL",
+        "FAP EXPRESSION 5PL EURO5",
+        "FAP EXPRESSION 7PL",
+        "FAP EXPRESSION 7PL EURO5",
+        "FAP EXPRESSION ENERGY 5PL",
+        "FAP INITIALE 5PL",
+        "FAP INITIALE 5PL ECO2",
+        "FAP INITIALE 7PL",
+        "FAP INITIALE 7PL ECO2",
+        "FAP INITIALE PARIS",
+        "FAP INITIALE PARIS 7PL",
+        "FAP INTENS",
+        "FAP INTENS 7PL",
+        "FAP INTENS 7PL 21",
+        "FAP JADE 5PL",
+        "FAP JADE 5PL EURO5",
+        "FAP JADE 7PL",
+        "FAP JADE 7PL EURO5",
+        "FAP JADE ENERGY 5PL",
+        "FAP JADE ENERGY 7PL",
+        "FAP LIFE",
+        "FAP LIFE 5PL",
+        "FAP LIFE 7PL",
+        "FAP PEPITE 7PL",
+        "FAP PRIVILEGE 5PL",
+        "FAP PRIVILEGE 5PL EURO5",
+        "FAP PRIVILEGE 7PL",
+        "FAP PRIVILEGE 7PL EURO5",
+        "FAP SERIE LIMITEE 5PL",
+        "FAP SERIE LIMITEE 7PL",
+        "FAP SL BLACK EDITION",
+        "FAP SL LIMITED",
+        "FAP SL LIMITED 21",
+        "FAP SL LIMITED 7PL",
+        "FAP SL TREND",
+        "FAP ZEN",
+        "FAP ZEN 5PL",
+        "FAP ZEN 7PL",
+        "INITIALE 7PL",
+        "INITIALE PARIS",
+        "INITIALE PARIS 5PL",
+        "INITIALE PARIS 7PL",
+        "INTENS",
+        "INTENS 21",
+        "INTENS 21 7PL",
+        "INTENS 5PL",
+        "INTENS 7PL",
+        "INTENS 7PL 21",
+        "INTENS EDC6",
+        "JADE 5PL",
+        "JADE 5PL EURO5",
+        "JADE 7PL",
+        "JADE 7PL EURO5",
+        "LATITUDE 7PL",
+        "LIMITED 7PL",
+        "LIMITED E6",
+        "LOUNGE 7PL",
+        "NOUVELLE LIMITED 7PL",
+        "PRIVILEGE 5PL",
+        "PRIVILEGE 5PL EURO5",
+        "PRIVILEGE 7PL",
+        "PRIVILEGE 7PL EURO5",
+        "SL BLACK EDITION",
+        "SL BLACK EDITION 7PL",
+        "SL LIMITED",
+        "SL LIMITED 21",
+        "SL LIMITED 21 7PL",
+        "SL LIMITED 7PL",
+        "SL LIMITED 7PL 21",
+        "SL TREND",
+        "TECHNO",
+        "ZEN 21",
+        "ZEN 21 7PL",
+        "ZEN 5PL",
+        "ZEN 5PL E6",
+        "ZEN 7PL",
+        "ZEN 7PL 21",
+        "ZEN 7PL E6"
+      ],
+      "R5": [
+        "AUTONOMIE CONFORT EVOLUTION",
+        "AUTONOMIE URBAINE TECHNO"
+      ],
+      "Scénic": [
+        "7CV ENERGY BOSE EDITION",
+        "8CV BLUE SL BLACK",
+        "ALYUM",
+        "ALYUM EURO5",
+        "AUTHENTIQUE",
+        "AUTHENTIQUE ECO2",
+        "BIOETHANOL AUTHENTIQUE",
+        "BIOETHANOL AUTHENTIQUE ECO2",
+        "BIOETHANOL AUTHENTIQUE ECO2 EURO5",
+        "BIOETHANOL EXPRESSION",
+        "BIOETHANOL EXPRESSION ECO2",
+        "BIOETHANOL EXPRESSION ECO2 EURO5",
+        "BLUE BLACK EDITION",
+        "BLUE BUSINESS",
+        "BLUE BUSINESS INTENS",
+        "BLUE INITIALE PARIS",
+        "BLUE INTENS BLUE",
+        "BLUE SL BLACK EDITION",
+        "BLUE SL LIMITED",
+        "BOSE",
+        "BOSE EDITION",
+        "BOSE EDITION 2015",
+        "BUSINESS",
+        "BUSINESS 21",
+        "BUSINESS INTENS",
+        "CARMINAT",
+        "DYNAMIQUE",
+        "DYNAMIQUE EURO5",
+        "EDITION ONE",
+        "ENERGY AUTHENTIQUE",
+        "ENERGY AUTHENTIQUE ECO2",
+        "ENERGY BOSE",
+        "ENERGY BOSE ECO2",
+        "ENERGY BOSE EDITION",
+        "ENERGY BOSE EDITION E6",
+        "ENERGY BOSE EDITION ECO2",
+        "ENERGY BUSINESS",
+        "ENERGY BUSINESS 21",
+        "ENERGY BUSINESS E6",
+        "ENERGY BUSINESS ECO2",
+        "ENERGY BUSINESS ECO2 E6",
+        "ENERGY BUSINESS INTENS",
+        "ENERGY DYNAMIQUE",
+        "ENERGY DYNAMIQUE ECO2",
+        "ENERGY EDITION ONE",
+        "ENERGY EXPRESSION",
+        "ENERGY EXPRESSION ECO2",
+        "ENERGY FAP 15TH ECO2",
+        "ENERGY FAP AUTHENTIQUE ECO2",
+        "ENERGY FAP BOSE ECO2",
+        "ENERGY FAP BOSE EDITION",
+        "ENERGY FAP BUSINESS",
+        "ENERGY FAP BUSINESS E6",
+        "ENERGY FAP BUSINESS ECO2",
+        "ENERGY FAP DYNAMIQUE ECO2",
+        "ENERGY FAP EXCEPTION ECO2",
+        "ENERGY FAP EXPRESSION ECO2",
+        "ENERGY FAP INITIALE ECO2",
+        "ENERGY FAP JADE ECO2",
+        "ENERGY FAP LIFE ECO2",
+        "ENERGY FAP SERIE LIMITEE",
+        "ENERGY FAP ZEN ECO2",
+        "ENERGY INITIALE ECO2",
+        "ENERGY INITIALE PARIS",
+        "ENERGY INTENS",
+        "ENERGY LIFE",
+        "ENERGY LIFE E6",
+        "ENERGY LIFE ECO2",
+        "ENERGY LIMITED",
+        "ENERGY LIMITED E6",
+        "ENERGY LIMITED ECO2",
+        "ENERGY LIMITED ECO2 E6",
+        "ENERGY LOUNGE",
+        "ENERGY LOUNGE E6",
+        "ENERGY LOUNGE ECO2",
+        "ENERGY LOUNGE ECO2 E6",
+        "ENERGY NOUVELLE LIMITED",
+        "ENERGY NOUVELLE LIMITED E6",
+        "ENERGY PEPITE E6",
+        "ENERGY SERIE LIMITEE",
+        "ENERGY SL LIMITED",
+        "ENERGY SL LIMITED 21",
+        "ENERGY ZEN",
+        "ENERGY ZEN E6",
+        "ENERGY ZEN ECO2",
+        "ENERGY ZEN ECO2 E6",
+        "EVOLUTION",
+        "EXCEPTION",
+        "EXCEPTION EURO5",
+        "EXECUTIVE",
+        "EXPRESSION",
+        "EXPRESSION ECO2",
+        "EXPRESSION EURO5",
+        "FAP 15TH",
+        "FAP 15TH ECO2",
+        "FAP 21 INTENS",
+        "FAP 21 SL BLACK",
+        "FAP 21 SL LIMITED",
+        "FAP 7CV BUSINESS",
+        "FAP 7CV BUSINESS INTENS",
+        "FAP 7CV INTENS",
+        "FAP 7CV SL BLACK",
+        "FAP 7CV SL LIMITED",
+        "FAP 7CV SL TREND",
+        "FAP 7CV ZEN",
+        "FAP 8CV INITIALE PARIS",
+        "FAP 8CV INTENS",
+        "FAP 8CV SL BLACK",
+        "FAP ALYUM",
+        "FAP ALYUM EURO5",
+        "FAP AUTHENTIQUE",
+        "FAP AUTHENTIQUE ECO2",
+        "FAP AUTHENTIQUE ECO2 EURO5",
+        "FAP AUTHENTIQUE EURO5",
+        "FAP BLACK EDITION",
+        "FAP BOSE",
+        "FAP BOSE EDITION",
+        "FAP BUSINESS",
+        "FAP BUSINESS EURO5",
+        "FAP BUSINESS INTENS",
+        "FAP DYNAMIQUE",
+        "FAP DYNAMIQUE EURO5",
+        "FAP EURO5 ALYUM",
+        "FAP EXCEPTION EURO5",
+        "FAP EXPRESSION",
+        "FAP EXPRESSION ECO2",
+        "FAP EXPRESSION ECO2 EURO5",
+        "FAP EXPRESSION EURO 5",
+        "FAP EXPRESSION EURO5",
+        "FAP INITIALE",
+        "FAP INITIALE PARIS",
+        "FAP INTENS",
+        "FAP JADE",
+        "FAP JADE EURO5",
+        "FAP LIFE",
+        "FAP LIFE ECO2",
+        "FAP OVALIE",
+        "FAP PRIVILEGE",
+        "FAP PRIVILEGE EURO5",
+        "FAP PRO EXPRESSION EURO5",
+        "FAP SERIE LIMITEE TEAM",
+        "FAP SL BLACK EDITION",
+        "FAP SL LIMITED",
+        "FAP SL TREND",
+        "FAP ZEN",
+        "INITIALE",
+        "INITIALE PARIS",
+        "INTENS",
+        "INTENS 21",
+        "JADE",
+        "JADE EURO5",
+        "LIFE",
+        "LIMITED",
+        "LIMITED E6",
+        "LIMITED ECO2",
+        "LOUNGE",
+        "LOUNGE E6",
+        "NOUVELLE LIMITED",
+        "NOUVELLE LIMITED ECO2",
+        "PEPITE",
+        "PEPITE ECO2",
+        "PRIVILEGE",
+        "PRIVILEGE EURO5",
+        "SL BLACK EDITION 21",
+        "SL LIMITED",
+        "SL LIMITED 21",
+        "SL TREND",
+        "TECHNO",
+        "ZEN",
+        "ZEN 21"
       ]
     },
     "Dacia": {
@@ -47684,19 +49861,88 @@
         "Filou"
       ],
       "2008": [
-        "Access",
-        "Active",
-        "Allure",
-        "GT Line",
-        "Roland Garros",
-        "Active Pack",
-        "Allure Pack",
-        "GT",
-        "GT Premium",
-        "Active Business",
-        "Allure Business",
-        "GT Pack",
-        "Signature"
+        "5CV ACTIVE",
+        "5CV ACTIVE BUSINESS",
+        "5CV ALLURE",
+        "5CV ALLURE BUSINESS",
+        "5CV CROSSWAY",
+        "5CV GT LINE",
+        "6CV ACTIVE",
+        "6CV ACTIVE BUSINESS",
+        "6CV ALLURE",
+        "6CV ALLURE BUSINESS",
+        "6CV CROSSWAY",
+        "6CV GT",
+        "6CV GT LINE",
+        "7CV ACTIVE",
+        "7CV ACTIVE BUSINESS",
+        "7CV ALLURE",
+        "7CV ALLURE BUSINESS",
+        "7CV GT LINE",
+        "ACCESS",
+        "ACTIVE",
+        "ACTIVE BMP6",
+        "ACTIVE BUSINESS",
+        "ACTIVE BUSINESS BV6",
+        "ACTIVE BUSINESS E6",
+        "ACTIVE BUSINESS ETG5",
+        "ACTIVE BUSINESS ETG6",
+        "ACTIVE BV6",
+        "ACTIVE E-DCS6",
+        "ACTIVE E6",
+        "ACTIVE ETG5",
+        "ACTIVE ETG6",
+        "ACTIVE PACK",
+        "ACTIVE PACK MY21",
+        "ALLURE",
+        "ALLURE AUTO",
+        "ALLURE BUSINESS",
+        "ALLURE BUSINESS BV6",
+        "ALLURE BUSINESS E6",
+        "ALLURE BUSINESS ETG6",
+        "ALLURE BV6",
+        "ALLURE E-DCS6",
+        "ALLURE E6",
+        "ALLURE PACK",
+        "ALLURE PACK 2022",
+        "ALLURE PACK MY21",
+        "BLUE LION ACTIVE BMP5",
+        "BLUE LION ACTIVE ETG5",
+        "BLUE LION ALLURE BMP5",
+        "BLUE LION ALLURE BMP6",
+        "BLUE LION ALLURE ETG5",
+        "BLUE LION ALLURE ETG6",
+        "BLUE LION BUSINESS BMP6",
+        "BLUE LION BUSINESS PACK",
+        "BUSINESS",
+        "BUSINESS E-DCS6",
+        "BUSINESS ETG6",
+        "BUSINESS PACK",
+        "BUSINESS PACK ETG6",
+        "CROSSWAY",
+        "CROSSWAY E6",
+        "E-DCS6 EDITION",
+        "EDITION",
+        "ENVY",
+        "ENVY E-DCS6",
+        "FELINE CUIVRE",
+        "FELINE TITANE",
+        "GT E-DCS6",
+        "GT EXCLUSIVE E-DCS6",
+        "GT LINE",
+        "GT LINE BV6",
+        "GT LINE E6",
+        "GT PACK",
+        "RED URBAN CROSS",
+        "ROADTRIP",
+        "SERIE SPECIALE ENVY E-DCS6",
+        "SIGNATURE",
+        "STYLE",
+        "STYLE E-DCS6",
+        "STYLE E6",
+        "URBAN CROSS",
+        "URBAN CROSS JAUNE CITRUS",
+        "URBAN CROSS ORANGE"
       ],
       "3008": [
         "Access",
