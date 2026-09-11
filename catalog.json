@@ -28068,6 +28068,32 @@
           "yearStart": 2018,
           "yearEnd": 2025
         }
+      ],
+      "A1 2e Génération Citycarver": [
+        {
+          "name": "1.0 TFSI 95",
+          "fuel": "Essence",
+          "yearStart": 2019,
+          "yearEnd": 2022
+        },
+        {
+          "name": "1.0 TFSI 110",
+          "fuel": "Essence",
+          "yearStart": 2020,
+          "yearEnd": 2022
+        },
+        {
+          "name": "1.0 TFSI 116",
+          "fuel": "Essence",
+          "yearStart": 2019,
+          "yearEnd": 2020
+        },
+        {
+          "name": "1.5 TFSI 150",
+          "fuel": "Essence",
+          "yearStart": 2020,
+          "yearEnd": 2022
+        }
       ]
     },
     "Ford": {
@@ -54796,6 +54822,11 @@
         "S Line",
         "S Line Plus",
         "Turbo Blue Edition"
+      ],
+      "A1 2e Génération Citycarver": [
+        "Design",
+        "Design Luxe",
+        "Edition One"
       ]
     },
     "Fiat": {
