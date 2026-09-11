@@ -30506,6 +30506,340 @@
           "yearStart": 2020,
           "yearEnd": 2022
         }
+      ],
+      "Q3 1e Génération": [
+        {
+          "name": "2.0 TDI 120",
+          "fuel": "Diesel",
+          "yearStart": 2015
+        },
+        {
+          "name": "2.0 TDI 140",
+          "fuel": "Diesel",
+          "yearStart": 2011,
+          "yearEnd": 2014
+        },
+        {
+          "name": "2.0 TDI 150",
+          "fuel": "Diesel",
+          "yearStart": 2014
+        },
+        {
+          "name": "2.0 TDI 177",
+          "fuel": "Diesel",
+          "yearStart": 2011,
+          "yearEnd": 2014
+        },
+        {
+          "name": "2.0 TDI 184",
+          "fuel": "Diesel",
+          "yearStart": 2014
+        },
+        {
+          "name": "1.4 TFSI 125",
+          "fuel": "Essence",
+          "yearStart": 2016
+        },
+        {
+          "name": "1.4 TFSI 150",
+          "fuel": "Essence",
+          "yearStart": 2013
+        },
+        {
+          "name": "2.0 TFSI 170",
+          "fuel": "Essence",
+          "yearStart": 2011,
+          "yearEnd": 2014
+        },
+        {
+          "name": "2.0 TFSI 180",
+          "fuel": "Essence",
+          "yearStart": 2014
+        },
+        {
+          "name": "2.0 TFSI 211",
+          "fuel": "Essence",
+          "yearStart": 2011,
+          "yearEnd": 2014
+        },
+        {
+          "name": "2.0 TFSI 220",
+          "fuel": "Essence",
+          "yearStart": 2014,
+          "yearEnd": 2016
+        }
+      ],
+      "Q3 2e Génération": [
+        {
+          "name": "2.0 TDI 150",
+          "fuel": "Diesel",
+          "yearStart": 2018
+        },
+        {
+          "name": "2.0 TDI 190",
+          "fuel": "Diesel",
+          "yearStart": 2018,
+          "yearEnd": 2020
+        },
+        {
+          "name": "2.0 TDI 193",
+          "fuel": "Diesel",
+          "yearStart": 2024
+        },
+        {
+          "name": "2.0 TDI 200",
+          "fuel": "Diesel",
+          "yearStart": 2020,
+          "yearEnd": 2025
+        },
+        {
+          "name": "1.5 TFSI 150",
+          "fuel": "Essence",
+          "yearStart": 2018
+        },
+        {
+          "name": "2.0 TFSI 190",
+          "fuel": "Essence",
+          "yearStart": 2018
+        },
+        {
+          "name": "2.0 TFSI 204",
+          "fuel": "Essence",
+          "yearStart": 2021,
+          "yearEnd": 2022
+        },
+        {
+          "name": "2.0 TFSI 230",
+          "fuel": "Essence",
+          "yearStart": 2018,
+          "yearEnd": 2021
+        },
+        {
+          "name": "2.0 TFSI 245",
+          "fuel": "Essence",
+          "yearStart": 2021,
+          "yearEnd": 2025
+        }
+      ],
+      "Q3 Sportback 2e Génération": [
+        {
+          "name": "2.0 TDI 150",
+          "fuel": "Diesel",
+          "yearStart": 2019
+        },
+        {
+          "name": "2.0 TDI 190",
+          "fuel": "Diesel",
+          "yearStart": 2019,
+          "yearEnd": 2020
+        },
+        {
+          "name": "2.0 TDI 193",
+          "fuel": "Diesel",
+          "yearStart": 2024,
+          "yearEnd": 2025
+        },
+        {
+          "name": "2.0 TDI 200",
+          "fuel": "Diesel",
+          "yearStart": 2020
+        },
+        {
+          "name": "1.5 TFSI 150",
+          "fuel": "Essence",
+          "yearStart": 2019
+        },
+        {
+          "name": "2.0 TFSI 190",
+          "fuel": "Essence",
+          "yearStart": 2018,
+          "yearEnd": 2025
+        },
+        {
+          "name": "2.0 TFSI 230",
+          "fuel": "Essence",
+          "yearStart": 2019,
+          "yearEnd": 2021
+        },
+        {
+          "name": "2.0 TFSI 245",
+          "fuel": "Essence",
+          "yearStart": 2021,
+          "yearEnd": 2024
+        }
+      ],
+      "Q3 3e Génération": [
+        {
+          "name": "1.5 TDI 150",
+          "fuel": "Diesel",
+          "yearStart": 2025
+        },
+        {
+          "name": "1.5 TDI 193",
+          "fuel": "Diesel",
+          "yearStart": 2025
+        },
+        {
+          "name": "2.0 TDI 150",
+          "fuel": "Diesel",
+          "yearStart": 2026
+        },
+        {
+          "name": "2.0 TDI 193",
+          "fuel": "Diesel",
+          "yearStart": 2026
+        },
+        {
+          "name": "1.5 TFSI 150",
+          "fuel": "Essence",
+          "yearStart": 2025
+        },
+        {
+          "name": "1.5 TFSI 272",
+          "fuel": "Essence",
+          "yearStart": 2025
+        },
+        {
+          "name": "2.0 TFSI 265",
+          "fuel": "Essence",
+          "yearStart": 2026
+        }
+      ],
+      "Q3 Sportback 3e Génération": [
+        {
+          "name": "2.0 TDI 150",
+          "fuel": "Diesel",
+          "yearStart": 2025
+        },
+        {
+          "name": "2.0 TDI 193",
+          "fuel": "Diesel",
+          "yearStart": 2026
+        },
+        {
+          "name": "1.5 TFSI 150",
+          "fuel": "Essence",
+          "yearStart": 2025
+        },
+        {
+          "name": "1.5 TFSI 272",
+          "fuel": "Essence",
+          "yearStart": 2025
+        },
+        {
+          "name": "2.0 TFSI 265",
+          "fuel": "Essence",
+          "yearStart": 2026
+        }
+      ],
+      "Q5 1e Génération": [
+        {
+          "name": "2.0 TDI 143",
+          "fuel": "Diesel",
+          "yearStart": 2009,
+          "yearEnd": 2012
+        },
+        {
+          "name": "2.0 TDI 150",
+          "fuel": "Diesel",
+          "yearStart": 2012,
+          "yearEnd": 2016
+        },
+        {
+          "name": "2.0 TDI 163",
+          "fuel": "Diesel",
+          "yearStart": 2016,
+          "yearEnd": 2016
+        },
+        {
+          "name": "2.0 TDI 170",
+          "fuel": "Diesel",
+          "yearStart": 2008,
+          "yearEnd": 2012
+        },
+        {
+          "name": "2.0 TDI 177",
+          "fuel": "Diesel",
+          "yearStart": 2012,
+          "yearEnd": 2014
+        },
+        {
+          "name": "2.0 TDI 190",
+          "fuel": "Diesel",
+          "yearStart": 2014
+        },
+        {
+          "name": "3.0 TDI 240",
+          "fuel": "Diesel",
+          "yearStart": 2008,
+          "yearEnd": 2012
+        },
+        {
+          "name": "3.0 TDI 245",
+          "fuel": "Diesel",
+          "yearStart": 2012,
+          "yearEnd": 2014
+        },
+        {
+          "name": "3.0 TDI 258",
+          "fuel": "Diesel",
+          "yearStart": 2014,
+          "yearEnd": 2016
+        },
+        {
+          "name": "2.0 TFSI 180",
+          "fuel": "Essence",
+          "yearStart": 2009,
+          "yearEnd": 2016
+        },
+        {
+          "name": "2.0 TFSI 211",
+          "fuel": "Essence",
+          "yearStart": 2008,
+          "yearEnd": 2012
+        },
+        {
+          "name": "2.0 TFSI 225",
+          "fuel": "Essence",
+          "yearStart": 2012,
+          "yearEnd": 2015
+        },
+        {
+          "name": "2.0 TFSI 230",
+          "fuel": "Essence",
+          "yearStart": 2015,
+          "yearEnd": 2016
+        },
+        {
+          "name": "2.0 TFSI 245",
+          "fuel": "Essence",
+          "yearStart": 2012,
+          "yearEnd": 2015
+        },
+        {
+          "name": "2.0 TFSI 252",
+          "fuel": "Essence",
+          "yearStart": 2016,
+          "yearEnd": 2016
+        },
+        {
+          "name": "2.0 TFSI 272",
+          "fuel": "Essence",
+          "yearStart": 2014,
+          "yearEnd": 2015
+        },
+        {
+          "name": "3.0 TFSI 272",
+          "fuel": "Essence",
+          "yearStart": 2012,
+          "yearEnd": 2015
+        },
+        {
+          "name": "3.2 FSI 270",
+          "fuel": "Essence",
+          "yearStart": 2008,
+          "yearEnd": 2012
+        }
       ]
     },
     "Ford": {
@@ -57872,6 +58206,100 @@
         "TFSIE LWB AVUS 4PL",
         "TFSIE LWB AVUS EXTENDED",
         "TFSIE LWB AVUS EXTENDED 4PL"
+      ],
+      "Q3 1e Génération": [
+        "AMBIENTE",
+        "AMBITION LUXE",
+        "ATTRACTION",
+        "BUSINESS",
+        "BUSINESS LINE",
+        "MIDNIGHT SERIES",
+        "S LINE",
+        "SPORT DESIGN",
+        "ULTRA BUSINESS LINE",
+        "ULTRA MIDNIGHT SERIES",
+        "ULTRA URBAN TECHNO",
+        "URBAN CROSS",
+        "URBAN SPORT",
+        "URBAN TECHNO"
+      ],
+      "Q3 2e Génération": [
+        "ADVANCED",
+        "AVUS",
+        "BUSINESS EXECUTIVE",
+        "BUSINESS LINE",
+        "DESIGN",
+        "DESIGN LUXE",
+        "LIMITED",
+        "MHEV ADVANCED",
+        "MHEV BUSINESS LINE",
+        "MHEV DESIGN",
+        "MHEV DESIGN LUXE",
+        "MHEV S EDITION",
+        "MHEV S LINE"
+      ],
+      "Q3 Sportback 2e Génération": [
+        "ADVANCED",
+        "AVUS",
+        "BLACK EDITION",
+        "BUSINESS EXECUTIVE",
+        "BUSINESS LINE",
+        "DESIGN",
+        "MHEV ADVANCED",
+        "MHEV BUSINESS LINE",
+        "MHEV DESIGN",
+        "MHEV S EDITION",
+        "MHEV S LINE"
+      ],
+      "Q3 3e Génération": [
+        "ADVANCED",
+        "BUSINESS EXECUTIVE",
+        "DESIGN",
+        "HYBRIDE ADVANCED",
+        "HYBRIDE BUSINESS EXECUTIVE",
+        "HYBRIDE DESIGN",
+        "HYBRIDE S LINE"
+      ],
+      "Q3 Sportback 3e Génération": [
+        "ADVANCED",
+        "BUSINESS EXECUTIVE",
+        "DESIGN",
+        "HYBRIDE ADVANCED",
+        "HYBRIDE BUSINESS EXECUTIVE",
+        "HYBRIDE DESIGN",
+        "HYBRIDE S LINE"
+      ],
+      "Q5 1e Génération": [
+        "ADVANCED",
+        "AMBIENTE",
+        "AMBIENTE EU6",
+        "AMBITION LUXE",
+        "AMBITION LUXE EU6",
+        "AVUS",
+        "AVUS EU6",
+        "AVUS S TRONIC",
+        "BUSINESS EXECUTIVE",
+        "BUSINESS LINE",
+        "BUSINESS LINE EU6",
+        "CLEAN DIESEL AMBIENTE",
+        "CLEAN DIESEL AMBITION LUXE",
+        "CLEAN DIESEL AVUS",
+        "CLEAN DIESEL BUSINESS LINE",
+        "CLEAN DIESEL S LINE",
+        "CLEAN DIESEL SPORT DESIGN",
+        "DESIGN",
+        "DESIGN LUXE",
+        "HYBRID",
+        "HYBRID AVUS",
+        "HYBRID S LINE",
+        "SPORT DESIGN",
+        "SPORT DESIGN EU6",
+        "ULTRA ADVANCED",
+        "ULTRA AMBIENTE",
+        "ULTRA AMBITION LUXE",
+        "ULTRA BUSINESS LINE",
+        "ULTRA S LINE",
+        "ULTRA S LINE COMPETITION PLUS"
       ]
     },
     "Fiat": {
