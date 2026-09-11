@@ -23768,142 +23768,118 @@
     "Audi": {
       "A1": [
         {
-          "name": "1.0 TFSI 116",
-          "fuel": "Essence",
-          "yearStart": 2015,
-          "yearEnd": 2026
-        },
-        {
-          "name": "1.0 TFSI 95",
-          "fuel": "Essence",
-          "yearStart": 2016,
-          "yearEnd": 2018
-        },
-        {
           "name": "1.2 TFSI 86",
           "fuel": "Essence",
-          "yearStart": 2015,
-          "yearEnd": 2026
+          "yearStart": 2010,
+          "yearEnd": 2015
         },
         {
           "name": "1.4 TFSI 122",
           "fuel": "Essence",
-          "yearStart": 2015,
-          "yearEnd": 2026
-        },
-        {
-          "name": "1.4 TFSI 125",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2018
+          "yearStart": 2010,
+          "yearEnd": 2015
         },
         {
           "name": "1.4 TFSI 140",
           "fuel": "Essence",
-          "yearStart": 2015,
-          "yearEnd": 2026
-        },
-        {
-          "name": "1.4 TFSI 150",
-          "fuel": "Essence",
-          "yearStart": 2015,
+          "yearStart": 2013,
           "yearEnd": 2015
         },
         {
           "name": "1.4 TFSI 185",
           "fuel": "Essence",
-          "yearStart": 2015,
-          "yearEnd": 2026
+          "yearStart": 2010,
+          "yearEnd": 2018
         },
         {
-          "name": "1.5 TFSI 150",
-          "fuel": "Essence",
-          "yearStart": 2015,
-          "yearEnd": 2026
-        },
-        {
-          "name": "2.0 TFSI 256",
-          "fuel": "Essence",
-          "yearStart": 2015,
-          "yearEnd": 2026
-        },
-        {
-          "name": "25 TFSI 95 ENTRY",
-          "fuel": "Essence",
-          "yearStart": 2022,
-          "yearEnd": 2022
-        },
-        {
-          "name": "30 TFSI 110 ADVANCED",
-          "fuel": "Essence",
-          "yearStart": 2023,
-          "yearEnd": 2023
-        },
-        {
-          "name": "30 TFSI 110 ADVANCED S TRONIC 7",
-          "fuel": "Essence",
-          "yearStart": 2023,
-          "yearEnd": 2023
-        },
-        {
-          "name": "30 TFSI 110 DESIGN LUXE S TRONIC 7",
-          "fuel": "Essence",
-          "yearStart": 2023,
-          "yearEnd": 2023
-        },
-        {
-          "name": "35 TFSI 150 S LINE S TRONIC 7",
-          "fuel": "Essence",
-          "yearStart": 2015,
-          "yearEnd": 2026
-        },
-        {
-          "name": "ALLSTREET 25 TFSI 95 ADVANCED",
-          "fuel": "Essence",
-          "yearStart": 2024,
-          "yearEnd": 2026
-        },
-        {
-          "name": "ALLSTREET 30 TFSI 110 AVUS S TRONIC 7",
-          "fuel": "Essence",
-          "yearStart": 2022,
-          "yearEnd": 2023
-        },
-        {
-          "name": "CITYCARVER 30 TFSI 110 DESIGN",
-          "fuel": "Essence",
-          "yearStart": 2015,
-          "yearEnd": 2026
-        },
-        {
-          "name": "1.4 TDI 90",
+          "name": "1.6 TDI 90",
           "fuel": "Diesel",
-          "yearStart": 2015,
+          "yearStart": 2011,
           "yearEnd": 2015
         },
         {
           "name": "1.6 TDI 105",
           "fuel": "Diesel",
-          "yearStart": 2012,
-          "yearEnd": 2026
-        },
-        {
-          "name": "1.6 TDI 116",
-          "fuel": "Diesel",
-          "yearStart": 2014,
-          "yearEnd": 2017
-        },
-        {
-          "name": "1.6 TDI 90",
-          "fuel": "Diesel",
-          "yearStart": 2012,
-          "yearEnd": 2026
+          "yearStart": 2010,
+          "yearEnd": 2015
         },
         {
           "name": "2.0 TDI 143",
           "fuel": "Diesel",
-          "yearStart": 2012,
-          "yearEnd": 2026
+          "yearStart": 2011,
+          "yearEnd": 2015
+        },
+        {
+          "name": "1.0 TFSI 82",
+          "fuel": "Essence",
+          "yearStart": 2016,
+          "yearEnd": 2018
+        },
+        {
+          "name": "1.0 TFSI 95",
+          "fuel": "Essence",
+          "yearStart": 2015,
+          "yearEnd": 2023
+        },
+        {
+          "name": "1.4 TFSI 125",
+          "fuel": "Essence",
+          "yearStart": 2015,
+          "yearEnd": 2018
+        },
+        {
+          "name": "1.4 TFSI 150",
+          "fuel": "Essence",
+          "yearStart": 2015,
+          "yearEnd": 2016
+        },
+        {
+          "name": "1.8 TFSI 192",
+          "fuel": "Essence",
+          "yearStart": 2015,
+          "yearEnd": 2018
+        },
+        {
+          "name": "1.4 TDI 90",
+          "fuel": "Diesel",
+          "yearStart": 2016,
+          "yearEnd": 2018
+        },
+        {
+          "name": "1.6 TDI 116",
+          "fuel": "Diesel",
+          "yearStart": 2015,
+          "yearEnd": 2018
+        },
+        {
+          "name": "1.0 TFSI 110",
+          "fuel": "Essence",
+          "yearStart": 2018,
+          "yearEnd": 2023
+        },
+        {
+          "name": "1.5 TFSI 150",
+          "fuel": "Essence",
+          "yearStart": 2018,
+          "yearEnd": 2023
+        },
+        {
+          "name": "2.0 TFSI 207",
+          "fuel": "Essence",
+          "yearStart": 2018,
+          "yearEnd": 2023
+        },
+        {
+          "name": "2.0 TDI 116",
+          "fuel": "Diesel",
+          "yearStart": 2018,
+          "yearEnd": 2021
+        },
+        {
+          "name": "2.0 TDI 150",
+          "fuel": "Diesel",
+          "yearStart": 2018,
+          "yearEnd": 2023
         }
       ],
       "A1 Sportback": [
@@ -54307,12 +54283,20 @@
     },
     "Audi": {
       "A1": [
+        "Active",
+        "Ambiente",
         "Ambition",
-        "Business",
-        "Design",
-        "Edition",
-        "Line",
-        "Urban"
+        "Ambition Luxe",
+        "Amplified",
+        "Attraction",
+        "Business Line",
+        "Metropolitan",
+        "Midnight Series",
+        "S Edition",
+        "S Line",
+        "Style",
+        "Urban",
+        "Urban Sport"
       ],
       "A1 Sportback": [
         "Attraction",
