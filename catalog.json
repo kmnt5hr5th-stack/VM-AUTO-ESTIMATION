@@ -8347,46 +8347,57 @@
       ],
       "Arteon": [
         {
-          "name": "2.0 TSI 272",
+          "name": "1.5 TSI 150",
           "fuel": "Essence",
-          "yearStart": 2019,
+          "yearStart": 2017,
           "yearEnd": 2019
         },
         {
-          "name": "2.0 TSI 320",
+          "name": "2.0 TSI 190",
           "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2026
+          "yearStart": 2017,
+          "yearEnd": 2022
+        },
+        {
+          "name": "2.0 TSI 272",
+          "fuel": "Essence",
+          "yearStart": 2018,
+          "yearEnd": 2020
+        },
+        {
+          "name": "2.0 TSI 280",
+          "fuel": "Essence",
+          "yearStart": 2017,
+          "yearEnd": 2018
         },
         {
           "name": "2.0 TDI 150",
           "fuel": "Diesel",
-          "yearStart": 2021,
-          "yearEnd": 2023
+          "yearStart": 2017,
+          "yearEnd": 2020
         },
         {
           "name": "2.0 TDI 190",
           "fuel": "Diesel",
           "yearStart": 2018,
-          "yearEnd": 2019
+          "yearEnd": 2020
+        },
+        {
+          "name": "1.4 eHybrid 218",
+          "fuel": "Hybride rechargeable",
+          "yearStart": 2020
+        },
+        {
+          "name": "2.0 TSI 320",
+          "fuel": "Essence",
+          "yearStart": 2021,
+          "yearEnd": 2023
         },
         {
           "name": "2.0 TDI 200",
           "fuel": "Diesel",
           "yearStart": 2020,
-          "yearEnd": 2022
-        },
-        {
-          "name": "1.4 eHybrid",
-          "fuel": "Hybride rechargeable",
-          "yearStart": 2021,
-          "yearEnd": 2021
-        },
-        {
-          "name": "1.4 eHybrid 218",
-          "fuel": "Hybride rechargeable",
-          "yearStart": 2020,
-          "yearEnd": 2026
+          "yearEnd": 2023
         }
       ],
       "Passat": [
@@ -53289,7 +53300,9 @@
       ],
       "Arteon": [
         "Elegance",
-        "R-Line"
+        "Elegance Exclusive",
+        "R-Line",
+        "R-Line Exclusive"
       ],
       "Arteon Shooting Brake": [
         "Elegance",
