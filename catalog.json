@@ -16813,6 +16813,72 @@
           "fuel": "Essence",
           "yearStart": 2019
         }
+      ],
+      "X5 G05 (2018-2026)": [
+        {
+          "name": "2.5 TDI 231",
+          "fuel": "Diesel",
+          "yearStart": 2019,
+          "yearEnd": 2022
+        },
+        {
+          "name": "3.0 TDI 265",
+          "fuel": "Diesel",
+          "yearStart": 2018,
+          "yearEnd": 2020
+        },
+        {
+          "name": "3.0 TDI 286",
+          "fuel": "Diesel",
+          "yearStart": 2020,
+          "yearEnd": 2023
+        },
+        {
+          "name": "3.0 TDI 298",
+          "fuel": "Diesel",
+          "yearStart": 2023
+        },
+        {
+          "name": "3.0 TDI 340",
+          "fuel": "Diesel",
+          "yearStart": 2020,
+          "yearEnd": 2023
+        },
+        {
+          "name": "3.0 TDI 400",
+          "fuel": "Diesel",
+          "yearStart": 2018,
+          "yearEnd": 2018
+        },
+        {
+          "name": "3.0 i 333",
+          "fuel": "Essence",
+          "yearStart": 2020,
+          "yearEnd": 2022
+        },
+        {
+          "name": "3.0 i 340",
+          "fuel": "Essence",
+          "yearStart": 2018,
+          "yearEnd": 2021
+        },
+        {
+          "name": "3.0 i 394",
+          "fuel": "Essence",
+          "yearStart": 2019,
+          "yearEnd": 2023
+        },
+        {
+          "name": "4.4 i 489",
+          "fuel": "Essence",
+          "yearStart": 2023
+        },
+        {
+          "name": "4.4 i 530",
+          "fuel": "Essence",
+          "yearStart": 2019,
+          "yearEnd": 2023
+        }
       ]
     },
     "Tesla": {
@@ -57574,6 +57640,18 @@
       ],
       "X5 M G05 (2018-2022)": [
         "M COMPETITION"
+      ],
+      "X5 G05 (2018-2026)": [
+        "HYBRIDE LOUNGE",
+        "HYBRIDE M SPORT",
+        "HYBRIDE XLINE",
+        "LOUNGE",
+        "LOUNGE 7PL",
+        "M PERFORMANCE",
+        "M SPORT",
+        "M SPORT 7PL",
+        "XLINE",
+        "XLINE 7PL"
       ]
     },
     "Mercedes": {
