@@ -7513,124 +7513,22 @@
     "Volkswagen": {
       "Golf": [
         {
-          "name": "1.4 FSI 90",
+          "name": "1.0 TSI 110",
           "fuel": "Essence",
-          "yearStart": 2004,
-          "yearEnd": 2005
+          "yearStart": 2017,
+          "yearEnd": 2024
         },
         {
-          "name": "1.6 102",
+          "name": "1.0 TSI 115",
           "fuel": "Essence",
-          "yearStart": 2004,
-          "yearEnd": 2007
+          "yearStart": 2015,
+          "yearEnd": 2019
         },
         {
-          "name": "1.6 FSI 115",
+          "name": "1.0 TSI 85",
           "fuel": "Essence",
-          "yearStart": 2004,
-          "yearEnd": 2007
-        },
-        {
-          "name": "2.0 FSI 150",
-          "fuel": "Essence",
-          "yearStart": 2004,
-          "yearEnd": 2006
-        },
-        {
-          "name": "1.4 75",
-          "fuel": "Essence",
-          "yearStart": 2006,
-          "yearEnd": 2009
-        },
-        {
-          "name": "1.4 80",
-          "fuel": "Essence",
-          "yearStart": 2006,
-          "yearEnd": 2013
-        },
-        {
-          "name": "1.4 TSI 122",
-          "fuel": "Essence",
-          "yearStart": 2006,
-          "yearEnd": 2016
-        },
-        {
-          "name": "1.4 TSI 140",
-          "fuel": "Essence",
-          "yearStart": 2006,
-          "yearEnd": 2008
-        },
-        {
-          "name": "1.4 TSI 170",
-          "fuel": "Essence",
-          "yearStart": 2006,
-          "yearEnd": 2008
-        },
-        {
-          "name": "1.9 TDI 90",
-          "fuel": "Diesel",
-          "yearStart": 2004,
-          "yearEnd": 2008
-        },
-        {
-          "name": "1.9 TDI 105",
-          "fuel": "Diesel",
-          "yearStart": 2004,
-          "yearEnd": 2008
-        },
-        {
-          "name": "2.0 SDI",
-          "fuel": "Diesel",
-          "yearStart": 2004,
-          "yearEnd": 2005
-        },
-        {
-          "name": "2.0 TDI 110",
-          "fuel": "Diesel",
-          "yearStart": 2005,
-          "yearEnd": 2013
-        },
-        {
-          "name": "2.0 TDI 136",
-          "fuel": "Diesel",
-          "yearStart": 2005,
-          "yearEnd": 2008
-        },
-        {
-          "name": "2.0 TDI 140",
-          "fuel": "Diesel",
-          "yearStart": 2004,
-          "yearEnd": 2013
-        },
-        {
-          "name": "2.0 TDI 170",
-          "fuel": "Diesel",
-          "yearStart": 2006,
-          "yearEnd": 2008
-        },
-        {
-          "name": "1.6 TDI 105",
-          "fuel": "Diesel",
-          "yearStart": 2009,
-          "yearEnd": 2016
-        },
-        {
-          "name": "1.4 TSI 160",
-          "fuel": "Essence",
-          "yearStart": 2008,
-          "yearEnd": 2013
-        },
-        {
-          "name": "1.2 TSI 85",
-          "fuel": "Essence",
-          "yearStart": 2010,
-          "yearEnd": 2016
-        },
-        {
-          "name": "1.6 TDI 90",
-          "fuel": "Diesel",
-          "yearStart": 2009,
-          "yearEnd": 2017
+          "yearStart": 2017,
+          "yearEnd": 2019
         },
         {
           "name": "1.2 TSI 105",
@@ -7645,97 +7543,147 @@
           "yearEnd": 2017
         },
         {
-          "name": "1.4 TSI ACT 140",
+          "name": "1.2 TSI 85",
           "fuel": "Essence",
           "yearStart": 2012,
-          "yearEnd": 2014
+          "yearEnd": 2017
         },
         {
-          "name": "1.4 TSI ACT 150",
+          "name": "1.4 75",
           "fuel": "Essence",
-          "yearStart": 2014,
-          "yearEnd": 2017
+          "yearStart": 2006,
+          "yearEnd": 2006
+        },
+        {
+          "name": "1.4 80",
+          "fuel": "Essence",
+          "yearStart": 2008,
+          "yearEnd": 2012
+        },
+        {
+          "name": "1.4 FSI 90",
+          "fuel": "Essence",
+          "yearStart": 2004,
+          "yearEnd": 2005
+        },
+        {
+          "name": "1.4 TSI 122",
+          "fuel": "Essence",
+          "yearStart": 2003,
+          "yearEnd": 2015
         },
         {
           "name": "1.4 TSI 125",
           "fuel": "Essence",
           "yearStart": 2015,
-          "yearEnd": 2021
+          "yearEnd": 2018
         },
         {
-          "name": "1.4 TSI 125 E85",
-          "fuel": "Ethanol",
-          "yearStart": 2015,
+          "name": "1.4 TSI 140",
+          "fuel": "Essence",
+          "yearStart": 2006,
+          "yearEnd": 2014
+        },
+        {
+          "name": "1.4 TSI 150",
+          "fuel": "Essence",
+          "yearStart": 2014,
+          "yearEnd": 2016
+        },
+        {
+          "name": "1.4 TSI 160",
+          "fuel": "Essence",
+          "yearStart": 2008,
+          "yearEnd": 2012
+        },
+        {
+          "name": "1.4 TSI 170",
+          "fuel": "Essence",
+          "yearStart": 2006,
+          "yearEnd": 2008
+        },
+        {
+          "name": "1.4 TSI 204",
+          "fuel": "Essence",
+          "yearStart": 2019,
           "yearEnd": 2019
         },
         {
-          "name": "1.4 TGI 110",
-          "fuel": "Gaz naturel",
-          "yearStart": 2016,
-          "yearEnd": 2017
-        },
-        {
-          "name": "1.0 TSI 115",
+          "name": "1.5 TSI 116",
           "fuel": "Essence",
-          "yearStart": 2015,
-          "yearEnd": 2021
-        },
-        {
-          "name": "1.0 TSI 110",
-          "fuel": "Essence",
-          "yearStart": 2017,
-          "yearEnd": 2021
+          "yearStart": 2019
         },
         {
           "name": "1.5 TSI 130",
           "fuel": "Essence",
-          "yearStart": 2017
+          "yearStart": 2017,
+          "yearEnd": 2022
         },
         {
           "name": "1.5 TSI 150",
           "fuel": "Essence",
           "yearStart": 2017,
-          "yearEnd": 2023
+          "yearEnd": 2019
+        },
+        {
+          "name": "1.6 102",
+          "fuel": "Essence",
+          "yearStart": 2004,
+          "yearEnd": 2007
+        },
+        {
+          "name": "1.6 FSI 115",
+          "fuel": "Essence",
+          "yearStart": 2003,
+          "yearEnd": 2007
+        },
+        {
+          "name": "1.6 TDI 105",
+          "fuel": "Diesel",
+          "yearStart": 2003,
+          "yearEnd": 2015
         },
         {
           "name": "1.6 TDI 110",
           "fuel": "Diesel",
           "yearStart": 2013,
-          "yearEnd": 2017
+          "yearEnd": 2016
         },
         {
           "name": "1.6 TDI 115",
           "fuel": "Diesel",
           "yearStart": 2017,
-          "yearEnd": 2021
+          "yearEnd": 2019
         },
         {
-          "name": "2.0 TDI 150",
+          "name": "1.6 TDI 90",
           "fuel": "Diesel",
-          "yearStart": 2012
+          "yearStart": 2009,
+          "yearEnd": 2017
         },
         {
-          "name": "1.0 eTSI 110",
+          "name": "1.9 TDI 105",
+          "fuel": "Diesel",
+          "yearStart": 2003,
+          "yearEnd": 2008
+        },
+        {
+          "name": "1.9 TDI 90",
+          "fuel": "Diesel",
+          "yearStart": 2004,
+          "yearEnd": 2008
+        },
+        {
+          "name": "2.0 FSI 150",
           "fuel": "Essence",
-          "yearStart": 2020,
-          "yearEnd": 2024
+          "yearStart": 2004,
+          "yearEnd": 2006
         },
         {
-          "name": "1.5 eTSI 130",
-          "fuel": "Essence",
-          "yearStart": 2020,
-          "yearEnd": 2023
-        },
-        {
-          "name": "1.5 eTSI 150",
-          "fuel": "Essence",
-          "yearStart": 2020
-        },
-        {
-          "name": "1.4 eHybrid 204",
-          "fuel": "Hybride rechargeable",
-          "yearStart": 2020,
-          "yearEnd": 2023
+          "name": "2.0 TDI 110",
+          "fuel": "Diesel",
+          "yearStart": 2003,
+          "yearEnd": 2012
         },
         {
           "name": "2.0 TDI 115",
@@ -7744,55 +7692,53 @@
           "yearEnd": 2023
         },
         {
-          "name": "1.5 TSI 116",
-          "fuel": "Essence",
-          "yearStart": 2024
-        },
-        {
-          "name": "1.5 eTSI EVO2 116",
-          "fuel": "Essence",
-          "yearStart": 2024
-        },
-        {
-          "name": "1.5 eTSI EVO2 150",
-          "fuel": "Essence",
-          "yearStart": 2024
-        },
-        {
-          "name": "1.5 Hybrid 170",
-          "fuel": "Hybride",
-          "yearStart": 2026
-        },
-        {
-          "name": "1.5 eHybrid 204",
-          "fuel": "Hybride rechargeable",
-          "yearStart": 2024
-        },
-        {
           "name": "2.0 TDI 116",
           "fuel": "Diesel",
-          "yearStart": 2024
+          "yearStart": 2019
+        },
+        {
+          "name": "2.0 TDI 136",
+          "fuel": "Diesel",
+          "yearStart": 2005,
+          "yearEnd": 2008
+        },
+        {
+          "name": "2.0 TDI 140",
+          "fuel": "Diesel",
+          "yearStart": 2003,
+          "yearEnd": 2012
+        },
+        {
+          "name": "2.0 TDI 150",
+          "fuel": "Diesel",
+          "yearStart": 2012
+        },
+        {
+          "name": "2.0 TDI 170",
+          "fuel": "Diesel",
+          "yearStart": 2006,
+          "yearEnd": 2012
+        },
+        {
+          "name": "2.0 TDI 184",
+          "fuel": "Diesel",
+          "yearStart": 2013,
+          "yearEnd": 2018
+        },
+        {
+          "name": "2.0 TDI 200",
+          "fuel": "Diesel",
+          "yearStart": 2020,
+          "yearEnd": 2024
+        },
+        {
+          "name": "électrique",
+          "fuel": "Électrique",
+          "yearStart": 2014,
+          "yearEnd": 2019
         }
       ],
       "T-Roc": [
-        {
-          "name": "1.0 TSI 115",
-          "fuel": "Essence",
-          "yearStart": 2017,
-          "yearEnd": 2020
-        },
-        {
-          "name": "1.5 TSI 150",
-          "fuel": "Essence",
-          "yearStart": 2017,
-          "yearEnd": 2020
-        },
-        {
-          "name": "2.0 TSI 190",
-          "fuel": "Essence",
-          "yearStart": 2017,
-          "yearEnd": 2022
-        },
         {
           "name": "1.0 TSI 110",
           "fuel": "Essence",
@@ -7800,14 +7746,21 @@
           "yearEnd": 2024
         },
         {
-          "name": "1.0 TSI 116",
+          "name": "1.0 TSI 115",
           "fuel": "Essence",
-          "yearStart": 2024
+          "yearStart": 2017,
+          "yearEnd": 2020
         },
         {
-          "name": "1.5 TSI EVO 150",
+          "name": "1.0 TSI 116",
           "fuel": "Essence",
-          "yearStart": 2021
+          "yearStart": 2024,
+          "yearEnd": 2025
+        },
+        {
+          "name": "1.5 TSI 150",
+          "fuel": "Essence",
+          "yearStart": 2017
         },
         {
           "name": "1.6 TDI 115",
@@ -7834,24 +7787,10 @@
           "yearEnd": 2025
         },
         {
-          "name": "1.5 eTSI EVO2 116",
+          "name": "2.0 TSI 190",
           "fuel": "Essence",
-          "yearStart": 2025
-        },
-        {
-          "name": "1.5 eTSI EVO2 150",
-          "fuel": "Essence",
-          "yearStart": 2025
-        },
-        {
-          "name": "1.5 Hybrid 136",
-          "fuel": "Hybride",
-          "yearStart": 2025
-        },
-        {
-          "name": "1.5 Hybrid 170",
-          "fuel": "Hybride",
-          "yearStart": 2025
+          "yearStart": 2017,
+          "yearEnd": 2022
         }
       ],
       "Tiguan": [
@@ -7880,18 +7819,6 @@
           "yearEnd": 2016
         },
         {
-          "name": "2.0 TSI 200",
-          "fuel": "Essence",
-          "yearStart": 2008,
-          "yearEnd": 2011
-        },
-        {
-          "name": "2.0 TSI 210",
-          "fuel": "Essence",
-          "yearStart": 2011,
-          "yearEnd": 2013
-        },
-        {
           "name": "1.5 TSI 130",
           "fuel": "Essence",
           "yearStart": 2019
@@ -7903,38 +7830,16 @@
           "yearEnd": 2023
         },
         {
-          "name": "2.0 TSI 180",
-          "fuel": "Essence",
-          "yearStart": 2016,
-          "yearEnd": 2018
-        },
-        {
-          "name": "2.0 TSI 190",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2020
-        },
-        {
-          "name": "2.0 TSI 320",
-          "fuel": "Essence",
-          "yearStart": 2021,
-          "yearEnd": 2022
-        },
-        {
-          "name": "1.5 eTSI 130",
-          "fuel": "Essence",
-          "yearStart": 2024
-        },
-        {
-          "name": "1.5 eTSI 150",
-          "fuel": "Essence",
-          "yearStart": 2024
-        },
-        {
           "name": "2.0 TDI 110",
           "fuel": "Diesel",
           "yearStart": 2010,
           "yearEnd": 2016
+        },
+        {
+          "name": "2.0 TDI 115",
+          "fuel": "Diesel",
+          "yearStart": 2016,
+          "yearEnd": 2018
         },
         {
           "name": "2.0 TDI 140",
@@ -7966,12 +7871,6 @@
           "yearEnd": 2016
         },
         {
-          "name": "2.0 TDI 115",
-          "fuel": "Diesel",
-          "yearStart": 2016,
-          "yearEnd": 2018
-        },
-        {
           "name": "2.0 TDI 190",
           "fuel": "Diesel",
           "yearStart": 2016,
@@ -7984,25 +7883,34 @@
           "yearEnd": 2023
         },
         {
-          "name": "2.0 TDI 193",
-          "fuel": "Diesel",
-          "yearStart": 2024
+          "name": "2.0 TSI 180",
+          "fuel": "Essence",
+          "yearStart": 2016,
+          "yearEnd": 2018
         },
         {
-          "name": "1.4 eHybrid 245",
-          "fuel": "Hybride rechargeable",
-          "yearStart": 2020,
-          "yearEnd": 2024
+          "name": "2.0 TSI 190",
+          "fuel": "Essence",
+          "yearStart": 2018,
+          "yearEnd": 2020
         },
         {
-          "name": "1.5 eHybrid 204",
-          "fuel": "Hybride rechargeable",
-          "yearStart": 2024
+          "name": "2.0 TSI 200",
+          "fuel": "Essence",
+          "yearStart": 2008,
+          "yearEnd": 2011
         },
         {
-          "name": "1.5 eHybrid 272",
-          "fuel": "Hybride rechargeable",
-          "yearStart": 2024
+          "name": "2.0 TSI 210",
+          "fuel": "Essence",
+          "yearStart": 2011,
+          "yearEnd": 2013
+        },
+        {
+          "name": "2.0 TSI 320",
+          "fuel": "Essence",
+          "yearStart": 2021,
+          "yearEnd": 2022
         }
       ],
       "ID.3": [
@@ -8125,11 +8033,6 @@
       ],
       "Taigo": [
         {
-          "name": "1.0 TSI 95",
-          "fuel": "Essence",
-          "yearStart": 2021
-        },
-        {
           "name": "1.0 TSI 110",
           "fuel": "Essence",
           "yearStart": 2021,
@@ -8141,17 +8044,17 @@
           "yearStart": 2024
         },
         {
+          "name": "1.0 TSI 95",
+          "fuel": "Essence",
+          "yearStart": 2021
+        },
+        {
           "name": "1.5 TSI 150",
           "fuel": "Essence",
           "yearStart": 2021
         }
       ],
       "T-Cross": [
-        {
-          "name": "1.0 TSI 95",
-          "fuel": "Essence",
-          "yearStart": 2019
-        },
         {
           "name": "1.0 TSI 110",
           "fuel": "Essence",
@@ -8161,24 +8064,29 @@
         {
           "name": "1.0 TSI 115",
           "fuel": "Essence",
-          "yearStart": 2018,
+          "yearStart": 2019,
           "yearEnd": 2024
+        },
+        {
+          "name": "1.0 TSI 116",
+          "fuel": "Essence",
+          "yearStart": 2024
+        },
+        {
+          "name": "1.0 TSI 95",
+          "fuel": "Essence",
+          "yearStart": 2019
+        },
+        {
+          "name": "1.5 TSI 150",
+          "fuel": "Essence",
+          "yearStart": 2023
         },
         {
           "name": "1.6 TDI 95",
           "fuel": "Diesel",
           "yearStart": 2019,
           "yearEnd": 2020
-        },
-        {
-          "name": "1.0 TSI 116",
-          "fuel": "Essence",
-          "yearStart": 2023
-        },
-        {
-          "name": "1.5 TSI 150",
-          "fuel": "Essence",
-          "yearStart": 2023
         }
       ],
       "Up": [
@@ -8572,63 +8480,15 @@
       ],
       "Touareg": [
         {
-          "name": "3.6 V6 FSI 280",
-          "fuel": "Essence",
-          "yearStart": 2010,
-          "yearEnd": 2013
-        },
-        {
-          "name": "3.0 V6 TFSI 380",
-          "fuel": "Hybride",
-          "yearStart": 2010,
-          "yearEnd": 2014
-        },
-        {
-          "name": "3.0 V6 TDI 204",
-          "fuel": "Diesel",
-          "yearStart": 2011,
-          "yearEnd": 2018
-        },
-        {
-          "name": "3.0 V6 TDI 240",
-          "fuel": "Diesel",
-          "yearStart": 2011,
-          "yearEnd": 2014
-        },
-        {
-          "name": "3.0 V6 TDI 245",
-          "fuel": "Diesel",
-          "yearStart": 2011,
-          "yearEnd": 2014
-        },
-        {
-          "name": "3.0 V6 TDI 262",
-          "fuel": "Diesel",
-          "yearStart": 2014,
-          "yearEnd": 2018
-        },
-        {
-          "name": "4.2 V8 TDI 340",
-          "fuel": "Diesel",
-          "yearStart": 2011,
-          "yearEnd": 2015
-        },
-        {
           "name": "3.0 TDI 231",
           "fuel": "Diesel",
-          "yearStart": 2018,
+          "yearStart": 2020,
           "yearEnd": 2022
         },
         {
           "name": "3.0 TDI 286",
           "fuel": "Diesel",
-          "yearStart": 2018,
-          "yearEnd": 2022
-        },
-        {
-          "name": "4.0 TDI 421",
-          "fuel": "Diesel",
-          "yearStart": 2019,
+          "yearStart": 2020,
           "yearEnd": 2022
         },
         {
@@ -8638,9 +8498,15 @@
           "yearEnd": 2022
         },
         {
-          "name": "3.0 TSI eHybrid 381",
-          "fuel": "Hybride rechargeable",
+          "name": "3.0 TSI 381",
+          "fuel": "Essence",
           "yearStart": 2020
+        },
+        {
+          "name": "4.0 TDI 421",
+          "fuel": "Diesel",
+          "yearStart": 2019,
+          "yearEnd": 2022
         }
       ],
       "Caddy": [
@@ -10106,202 +9972,22 @@
       ],
       "Polo": [
         {
-          "name": "1.2 55",
-          "fuel": "Essence",
-          "yearStart": 2001,
-          "yearEnd": 2007
-        },
-        {
-          "name": "1.2 65",
-          "fuel": "Essence",
-          "yearStart": 2001,
-          "yearEnd": 2007
-        },
-        {
-          "name": "1.4 16",
-          "fuel": "Essence",
-          "yearStart": 2001,
-          "yearEnd": 2004
-        },
-        {
-          "name": "1.4 16S 100",
-          "fuel": "Essence",
-          "yearStart": 2001,
-          "yearEnd": 2006
-        },
-        {
-          "name": "1.4 TDI 75",
-          "fuel": "Diesel",
-          "yearStart": 2001,
-          "yearEnd": 2017
-        },
-        {
-          "name": "1.9 TDI 100",
-          "fuel": "Diesel",
-          "yearStart": 2001,
-          "yearEnd": 2009
-        },
-        {
-          "name": "1.4 16S 75",
-          "fuel": "Essence",
-          "yearStart": 2004,
-          "yearEnd": 2008
-        },
-        {
-          "name": "1.9 TDI 130",
-          "fuel": "Diesel",
-          "yearStart": 2004,
-          "yearEnd": 2009
-        },
-        {
-          "name": "1.2 16S 65",
-          "fuel": "Essence",
-          "yearStart": 2005,
-          "yearEnd": 2005
-        },
-        {
-          "name": "1.2 60",
-          "fuel": "Essence",
-          "yearStart": 2005,
-          "yearEnd": 2015
-        },
-        {
-          "name": "1.4 100",
-          "fuel": "Essence",
-          "yearStart": 2005,
-          "yearEnd": 2006
-        },
-        {
-          "name": "1.4 75",
-          "fuel": "Essence",
-          "yearStart": 2005,
-          "yearEnd": 2007
-        },
-        {
-          "name": "1.4 TDI 70",
-          "fuel": "Diesel",
-          "yearStart": 2005,
-          "yearEnd": 2009
-        },
-        {
-          "name": "1.4 TDI 80",
-          "fuel": "Diesel",
-          "yearStart": 2005,
-          "yearEnd": 2009
-        },
-        {
-          "name": "1.4 16S 80",
-          "fuel": "Essence",
-          "yearStart": 2006,
-          "yearEnd": 2009
-        },
-        {
-          "name": "1.4 80",
-          "fuel": "Essence",
-          "yearStart": 2006,
-          "yearEnd": 2009
-        },
-        {
-          "name": "1.6 16S 105",
-          "fuel": "Essence",
-          "yearStart": 2006,
-          "yearEnd": 2009
-        },
-        {
-          "name": "1.2 70",
-          "fuel": "Essence",
-          "yearStart": 2007,
-          "yearEnd": 2015
-        },
-        {
-          "name": "1.6 105",
-          "fuel": "Essence",
-          "yearStart": 2008,
-          "yearEnd": 2009
-        },
-        {
-          "name": "1.2 TDI 75",
-          "fuel": "Diesel",
-          "yearStart": 2009,
-          "yearEnd": 2015
-        },
-        {
-          "name": "1.4 85",
-          "fuel": "Essence",
-          "yearStart": 2009,
-          "yearEnd": 2015
-        },
-        {
-          "name": "1.4 TDI 90",
-          "fuel": "Diesel",
-          "yearStart": 2009,
-          "yearEnd": 2017
-        },
-        {
-          "name": "1.6 TDI 105",
-          "fuel": "Diesel",
-          "yearStart": 2009,
-          "yearEnd": 2015
-        },
-        {
-          "name": "1.6 TDI 75",
-          "fuel": "Diesel",
-          "yearStart": 2009,
-          "yearEnd": 2010
-        },
-        {
-          "name": "1.6 TDI 90",
-          "fuel": "Diesel",
-          "yearStart": 2009,
-          "yearEnd": 2015
-        },
-        {
-          "name": "1.2 TSI 105",
-          "fuel": "Essence",
-          "yearStart": 2010,
-          "yearEnd": 2013
-        },
-        {
-          "name": "1.4 TSI ACT 140",
-          "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2015
-        },
-        {
           "name": "1.0 60",
           "fuel": "Essence",
           "yearStart": 2014,
           "yearEnd": 2017
         },
         {
+          "name": "1.0 65",
+          "fuel": "Essence",
+          "yearStart": 2018,
+          "yearEnd": 2019
+        },
+        {
           "name": "1.0 75",
           "fuel": "Essence",
           "yearStart": 2014,
           "yearEnd": 2018
-        },
-        {
-          "name": "1.2 TSI 110",
-          "fuel": "Essence",
-          "yearStart": 2014,
-          "yearEnd": 2017
-        },
-        {
-          "name": "1.2 TSI 90",
-          "fuel": "Essence",
-          "yearStart": 2014,
-          "yearEnd": 2017
-        },
-        {
-          "name": "1.4 TDI 105",
-          "fuel": "Diesel",
-          "yearStart": 2014,
-          "yearEnd": 2015
-        },
-        {
-          "name": "1.4 TSI ACT 150",
-          "fuel": "Essence",
-          "yearStart": 2014,
-          "yearEnd": 2017
         },
         {
           "name": "1.0 80",
@@ -10316,45 +10002,9 @@
           "yearEnd": 2018
         },
         {
-          "name": "1.0 TSI 115",
+          "name": "1.0 MPI 80",
           "fuel": "Essence",
-          "yearStart": 2017,
-          "yearEnd": 2020
-        },
-        {
-          "name": "1.0 TSI 95",
-          "fuel": "Essence",
-          "yearStart": 2017
-        },
-        {
-          "name": "1.6 TDI 80",
-          "fuel": "Diesel",
-          "yearStart": 2017,
-          "yearEnd": 2019
-        },
-        {
-          "name": "1.6 TDI 95",
-          "fuel": "Diesel",
-          "yearStart": 2017,
-          "yearEnd": 2020
-        },
-        {
-          "name": "1.0 65",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2019
-        },
-        {
-          "name": "1.0 TGI 90",
-          "fuel": "GNV",
-          "yearStart": 2019,
-          "yearEnd": 2023
-        },
-        {
-          "name": "1.5 TSI 150",
-          "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2022
+          "yearStart": 2023
         },
         {
           "name": "1.0 TSI 110",
@@ -10363,14 +10013,128 @@
           "yearEnd": 2024
         },
         {
-          "name": "1.0 MPI 80",
+          "name": "1.0 TSI 115",
           "fuel": "Essence",
-          "yearStart": 2023
+          "yearStart": 2017,
+          "yearEnd": 2020
         },
         {
           "name": "1.0 TSI 116",
           "fuel": "Essence",
           "yearStart": 2024
+        },
+        {
+          "name": "1.0 TSI 95",
+          "fuel": "Essence",
+          "yearStart": 2017
+        },
+        {
+          "name": "1.2 60",
+          "fuel": "Essence",
+          "yearStart": 2009,
+          "yearEnd": 2015
+        },
+        {
+          "name": "1.2 70",
+          "fuel": "Essence",
+          "yearStart": 2009,
+          "yearEnd": 2015
+        },
+        {
+          "name": "1.2 TDI 75",
+          "fuel": "Diesel",
+          "yearStart": 2009,
+          "yearEnd": 2015
+        },
+        {
+          "name": "1.2 TSI 105",
+          "fuel": "Essence",
+          "yearStart": 2010,
+          "yearEnd": 2013
+        },
+        {
+          "name": "1.2 TSI 110",
+          "fuel": "Essence",
+          "yearStart": 2014,
+          "yearEnd": 2017
+        },
+        {
+          "name": "1.2 TSI 90",
+          "fuel": "Essence",
+          "yearStart": 2014,
+          "yearEnd": 2017
+        },
+        {
+          "name": "1.4 85",
+          "fuel": "Essence",
+          "yearStart": 2009,
+          "yearEnd": 2015
+        },
+        {
+          "name": "1.4 TDI 105",
+          "fuel": "Diesel",
+          "yearStart": 2014,
+          "yearEnd": 2015
+        },
+        {
+          "name": "1.4 TDI 75",
+          "fuel": "Diesel",
+          "yearStart": 2013,
+          "yearEnd": 2017
+        },
+        {
+          "name": "1.4 TDI 90",
+          "fuel": "Diesel",
+          "yearStart": 2009,
+          "yearEnd": 2017
+        },
+        {
+          "name": "1.4 TSI 140",
+          "fuel": "Essence",
+          "yearStart": 2012,
+          "yearEnd": 2015
+        },
+        {
+          "name": "1.4 TSI 150",
+          "fuel": "Essence",
+          "yearStart": 2014,
+          "yearEnd": 2017
+        },
+        {
+          "name": "1.5 TSI 150",
+          "fuel": "Essence",
+          "yearStart": 2019,
+          "yearEnd": 2022
+        },
+        {
+          "name": "1.6 TDI 105",
+          "fuel": "Diesel",
+          "yearStart": 2009,
+          "yearEnd": 2015
+        },
+        {
+          "name": "1.6 TDI 75",
+          "fuel": "Diesel",
+          "yearStart": 2009,
+          "yearEnd": 2010
+        },
+        {
+          "name": "1.6 TDI 80",
+          "fuel": "Diesel",
+          "yearStart": 2017,
+          "yearEnd": 2019
+        },
+        {
+          "name": "1.6 TDI 90",
+          "fuel": "Diesel",
+          "yearStart": 2009,
+          "yearEnd": 2015
+        },
+        {
+          "name": "1.6 TDI 95",
+          "fuel": "Diesel",
+          "yearStart": 2017,
+          "yearEnd": 2020
         }
       ],
       "e-up!": [
@@ -13400,14 +13164,122 @@
       ],
       "X1": [
         {
+          "name": "1.6 TDI 116",
+          "fuel": "Diesel",
+          "yearStart": 2012,
+          "yearEnd": 2015
+        },
+        {
+          "name": "2.0 TDI 143",
+          "fuel": "Diesel",
+          "yearStart": 2009,
+          "yearEnd": 2015
+        },
+        {
+          "name": "2.0 TDI 150",
+          "fuel": "Diesel",
+          "yearStart": 2022
+        },
+        {
+          "name": "2.0 TDI 163",
+          "fuel": "Diesel",
+          "yearStart": 2011
+        },
+        {
+          "name": "2.0 TDI 177",
+          "fuel": "Diesel",
+          "yearStart": 2009,
+          "yearEnd": 2012
+        },
+        {
+          "name": "2.0 TDI 184",
+          "fuel": "Diesel",
+          "yearStart": 2012,
+          "yearEnd": 2015
+        },
+        {
+          "name": "2.0 TDI 204",
+          "fuel": "Diesel",
+          "yearStart": 2022
+        },
+        {
           "name": "2.0 i 136",
           "fuel": "Essence",
-          "yearStart": 2020
+          "yearStart": 2020,
+          "yearEnd": 2025
+        },
+        {
+          "name": "2.0 i 150",
+          "fuel": "Essence",
+          "yearStart": 2010,
+          "yearEnd": 2012
+        },
+        {
+          "name": "2.0 i 170",
+          "fuel": "Essence",
+          "yearStart": 2022
         },
         {
           "name": "2.0 i 178",
           "fuel": "Essence",
-          "yearStart": 2020
+          "yearStart": 2020,
+          "yearEnd": 2022
+        },
+        {
+          "name": "2.0 i 184",
+          "fuel": "Essence",
+          "yearStart": 2011,
+          "yearEnd": 2015
+        },
+        {
+          "name": "2.0 i 218",
+          "fuel": "Essence",
+          "yearStart": 2022
+        },
+        {
+          "name": "2.0 i 245",
+          "fuel": "Essence",
+          "yearStart": 2011,
+          "yearEnd": 2014
+        },
+        {
+          "name": "2.0 i 258",
+          "fuel": "Essence",
+          "yearStart": 2009,
+          "yearEnd": 2011
+        },
+        {
+          "name": "2.0 i 300",
+          "fuel": "Essence",
+          "yearStart": 2023
+        },
+        {
+          "name": "2.5 TDI 218",
+          "fuel": "Diesel",
+          "yearStart": 2012,
+          "yearEnd": 2015
+        },
+        {
+          "name": "2.5 e 220",
+          "fuel": "Essence",
+          "yearStart": 2021,
+          "yearEnd": 2022
+        },
+        {
+          "name": "2.5 e 245",
+          "fuel": "Essence",
+          "yearStart": 2022
+        },
+        {
+          "name": "2.5 i 218",
+          "fuel": "Essence",
+          "yearStart": 2010,
+          "yearEnd": 2011
+        },
+        {
+          "name": "3.0 e 326",
+          "fuel": "Essence",
+          "yearStart": 2022
         }
       ],
       "X3": [
@@ -13440,15 +13312,25 @@
           "yearStart": 2014
         },
         {
+          "name": "2.0 TDI 197",
+          "fuel": "Diesel",
+          "yearStart": 2024
+        },
+        {
           "name": "2.0 i 150",
           "fuel": "Essence",
-          "yearStart": 2004,
+          "yearStart": 2003,
           "yearEnd": 2010
         },
         {
           "name": "2.0 i 184",
           "fuel": "Essence",
           "yearStart": 2011
+        },
+        {
+          "name": "2.0 i 208",
+          "fuel": "Essence",
+          "yearStart": 2024
         },
         {
           "name": "2.0 i 245",
@@ -13477,7 +13359,7 @@
         {
           "name": "3.0 TDI 218",
           "fuel": "Diesel",
-          "yearStart": 2004,
+          "yearStart": 2003,
           "yearEnd": 2010
         },
         {
@@ -13495,8 +13377,7 @@
         {
           "name": "3.0 TDI 286",
           "fuel": "Diesel",
-          "yearStart": 2006,
-          "yearEnd": 2025
+          "yearStart": 2006
         },
         {
           "name": "3.0 TDI 313",
@@ -13513,14 +13394,12 @@
         {
           "name": "3.0 TDI 340",
           "fuel": "Diesel",
-          "yearStart": 2020,
-          "yearEnd": 2025
+          "yearStart": 2020
         },
         {
           "name": "3.0 e 292",
           "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2022
+          "yearStart": 2019
         },
         {
           "name": "3.0 i 252",
@@ -13552,7 +13431,7 @@
           "yearStart": 2017
         },
         {
-          "name": "4.4 i 510",
+          "name": "3.0 i 510",
           "fuel": "Essence",
           "yearStart": 2021,
           "yearEnd": 2022
@@ -15704,61 +15583,115 @@
       ],
       "Série 8 Gran Coupé": [
         {
-          "name": "(2) M850I XDRIVE 530 M PERFORMANCE",
-          "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2026
-        },
-        {
-          "name": "840I xDrive 340",
-          "fuel": "Essence",
-          "yearStart": 2020,
-          "yearEnd": 2023
-        },
-        {
-          "name": "M8 COMPETITION 625",
-          "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2026
-        },
-        {
-          "name": "M850IA xDrive 530",
-          "fuel": "Essence",
-          "yearStart": 2022,
-          "yearEnd": 2022
-        },
-        {
-          "name": "840D xDrive 320",
+          "name": "3.0 TDI 320",
           "fuel": "Diesel",
           "yearStart": 2019,
-          "yearEnd": 2023
+          "yearEnd": 2020
+        },
+        {
+          "name": "3.0 TDI 340",
+          "fuel": "Diesel",
+          "yearStart": 2020,
+          "yearEnd": 2025
+        },
+        {
+          "name": "3.0 i 333",
+          "fuel": "Essence",
+          "yearStart": 2020
+        },
+        {
+          "name": "3.0 i 340",
+          "fuel": "Essence",
+          "yearStart": 2019,
+          "yearEnd": 2020
+        },
+        {
+          "name": "4.4 i 530",
+          "fuel": "Essence",
+          "yearStart": 2019
         }
       ],
       "Série 8 Cabriolet": [
         {
-          "name": "840i 340",
-          "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2026
-        },
-        {
-          "name": "M850i xDrive 530",
-          "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2026
-        },
-        {
-          "name": "840d xDrive 320",
+          "name": "3.0 TDI 320",
           "fuel": "Diesel",
+          "yearStart": 2018,
+          "yearEnd": 2020
+        },
+        {
+          "name": "3.0 TDI 340",
+          "fuel": "Diesel",
+          "yearStart": 2020
+        },
+        {
+          "name": "3.0 i 333",
+          "fuel": "Essence",
+          "yearStart": 2020
+        },
+        {
+          "name": "3.0 i 340",
+          "fuel": "Essence",
           "yearStart": 2019,
-          "yearEnd": 2026
+          "yearEnd": 2020
+        },
+        {
+          "name": "4.4 i 530",
+          "fuel": "Essence",
+          "yearStart": 2018
         }
       ],
       "X2": [
         {
+          "name": "1.6 TDI 116",
+          "fuel": "Diesel",
+          "yearStart": 2022
+        },
+        {
+          "name": "2.0 TDI 150",
+          "fuel": "Diesel",
+          "yearStart": 2018
+        },
+        {
+          "name": "2.0 TDI 163",
+          "fuel": "Diesel",
+          "yearStart": 2023
+        },
+        {
+          "name": "2.0 TDI 190",
+          "fuel": "Diesel",
+          "yearStart": 2022
+        },
+        {
+          "name": "2.0 i 136",
+          "fuel": "Essence",
+          "yearStart": 2020
+        },
+        {
+          "name": "2.0 i 170",
+          "fuel": "Essence",
+          "yearStart": 2023
+        },
+        {
           "name": "2.0 i 178",
           "fuel": "Essence",
           "yearStart": 2020
+        },
+        {
+          "name": "2.0 i 300",
+          "fuel": "Essence",
+          "yearStart": 2023
+        },
+        {
+          "name": "2.0 i 306",
+          "fuel": "Essence",
+          "yearStart": 2019,
+          "yearEnd": 2025
+        },
+        {
+          "name": "2.5 e 220",
+          "fuel": "Essence",
+          "yearStart": 2021,
+          "yearEnd": 2025
         }
       ],
       "M4": [
@@ -15797,23 +15730,22 @@
       ],
       "M8": [
         {
-          "name": "4.4 V8 TwinPower Turbo 600",
+          "name": "4.4 i 625",
           "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2026
-        },
-        {
-          "name": "4.4 V8 TwinPower Turbo 625 Competition",
-          "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2026
+          "yearStart": 2019
         }
       ],
       "X3 M": [
         {
-          "name": "4.4 i 510",
+          "name": "3.0 i 480",
           "fuel": "Essence",
-          "yearStart": 2019
+          "yearStart": 2019,
+          "yearEnd": 2020
+        },
+        {
+          "name": "3.0 i 510",
+          "fuel": "Essence",
+          "yearStart": 2021
         }
       ],
       "X4 M": [
@@ -16513,6 +16445,36 @@
           "name": "4.4 i 450",
           "fuel": "Essence",
           "yearStart": 2012
+        }
+      ],
+      "Série 8 Coupé": [
+        {
+          "name": "3.0 TDI 320",
+          "fuel": "Diesel",
+          "yearStart": 2018,
+          "yearEnd": 2020
+        },
+        {
+          "name": "3.0 TDI 340",
+          "fuel": "Diesel",
+          "yearStart": 2020,
+          "yearEnd": 2025
+        },
+        {
+          "name": "3.0 i 333",
+          "fuel": "Essence",
+          "yearStart": 2020
+        },
+        {
+          "name": "3.0 i 340",
+          "fuel": "Essence",
+          "yearStart": 2019,
+          "yearEnd": 2020
+        },
+        {
+          "name": "4.4 i 530",
+          "fuel": "Essence",
+          "yearStart": 2018
         }
       ]
     },
@@ -54743,83 +54705,769 @@
         "GTI Up"
       ],
       "Polo": [
-        "Active",
-        "Allstar",
-        "Beats Audio",
-        "Blue GT",
-        "Business",
-        "Carat",
-        "Carat Exclusive",
-        "Concept",
-        "Confort",
-        "Confortline",
-        "Confortline Business",
-        "Connect",
-        "Copper Line",
-        "Cup",
-        "Dune",
-        "Edition",
-        "Elle",
-        "First Edition",
-        "Fox",
-        "IQ.Drive",
-        "Life",
-        "Lounge",
-        "Lounge Business",
-        "Match",
-        "Match II",
-        "R-Line",
-        "R-Line Exclusive",
-        "Sport",
-        "Sportline",
-        "Style",
-        "Town",
-        "Trend",
-        "Trendline",
-        "Trendline Business",
-        "United",
-        "Wembley",
-        "Wembley Clim",
-        "Wembley Plus"
+        "V (2) 1.0 ALLSTAR 3P",
+        "V (2) 1.0 ALLSTAR 5P",
+        "V (2) 1.0 BEATS AUDIO 3P",
+        "V (2) 1.0 BEATS AUDIO 5P",
+        "V (2) 1.0 CONFORTLINE 3P",
+        "V (2) 1.0 CONFORTLINE 5P",
+        "V (2) 1.0 CROSS POLO",
+        "V (2) 1.0 CUP 3P",
+        "V (2) 1.0 CUP 5P",
+        "V (2) 1.0 EDITION 3P",
+        "V (2) 1.0 EDITION 5P",
+        "V (2) 1.0 LOUNGE 3P",
+        "V (2) 1.0 LOUNGE 5P",
+        "V (2) 1.0 MATCH 3P",
+        "V (2) 1.0 MATCH 5P",
+        "V (2) 1.0 TRENDLINE 3P",
+        "V (2) 1.0 TRENDLINE 5P",
+        "V (2) ACT BLUEMOTION GT 3P",
+        "V (2) ACT BLUEMOTION GT 5P",
+        "V (2) BLUEMOTION 3P",
+        "V (2) BLUEMOTION 5P",
+        "V (2) BLUEMOTION BUSINESS 3P",
+        "V (2) BLUEMOTION BUSINESS 5P",
+        "V (2) BLUEMOTION TECHNOLOGY 3P",
+        "V (2) BLUEMOTION TECHNOLOGY 5P",
+        "V (2) BLUEMOTION TECHNOLOGY ALLSTAR 3P",
+        "V (2) BLUEMOTION TECHNOLOGY ALLSTAR 5P",
+        "V (2) BLUEMOTION TECHNOLOGY BEATS AUDIO 3P",
+        "V (2) BLUEMOTION TECHNOLOGY BEATS AUDIO 5P",
+        "V (2) BLUEMOTION TECHNOLOGY BUSINESS 3P",
+        "V (2) BLUEMOTION TECHNOLOGY BUSINESS 5P",
+        "V (2) BLUEMOTION TECHNOLOGY CARAT 3P",
+        "V (2) BLUEMOTION TECHNOLOGY CARAT 5P",
+        "V (2) BLUEMOTION TECHNOLOGY CONFORTLINE 3P",
+        "V (2) BLUEMOTION TECHNOLOGY CONFORTLINE 5P",
+        "V (2) BLUEMOTION TECHNOLOGY CONFORTLINE BUSINESS 3P",
+        "V (2) BLUEMOTION TECHNOLOGY CONFORTLINE BUSINESS 5P",
+        "V (2) BLUEMOTION TECHNOLOGY CROSS POLO 5P",
+        "V (2) BLUEMOTION TECHNOLOGY CUP 3P",
+        "V (2) BLUEMOTION TECHNOLOGY CUP 5P",
+        "V (2) BLUEMOTION TECHNOLOGY LOUNGE 3P",
+        "V (2) BLUEMOTION TECHNOLOGY LOUNGE 5P",
+        "V (2) BLUEMOTION TECHNOLOGY MATCH 3P",
+        "V (2) BLUEMOTION TECHNOLOGY MATCH 5P",
+        "V (2) BLUEMOTION TECHNOLOGY R-LINE 3P",
+        "V (2) BLUEMOTION TECHNOLOGY R-LINE 5P",
+        "V (2) BLUEMOTION TECHNOLOGY SPORTLINE 3P",
+        "V (2) BLUEMOTION TECHNOLOGY SPORTLINE 5P",
+        "V (2) BLUEMOTION TECHNOLOGY TRENDLINE 3P",
+        "V (2) BLUEMOTION TECHNOLOGY TRENDLINE 5P",
+        "V (2) BLUEMOTION TECHNOLOGY TRENDLINE BUSINESS 3P",
+        "V (2) BLUEMOTION TECHNOLOGY TRENDLINE BUSINESS 5P",
+        "V 1.2 CONCEPT 3P",
+        "V 1.2 CONCEPT 5P",
+        "V 1.2 CONFORTLINE 3P",
+        "V 1.2 CONFORTLINE 5P",
+        "V 1.2 LIFE 3P",
+        "V 1.2 LIFE 5P",
+        "V 1.2 MATCH 3P",
+        "V 1.2 MATCH 5P",
+        "V 1.2 MATCH II 3P",
+        "V 1.2 MATCH II 5P",
+        "V 1.2 SPORTLINE 3P",
+        "V 1.2 SPORTLINE 5P",
+        "V 1.2 STYLE 3P",
+        "V 1.2 STYLE 5P",
+        "V 1.2 TRENDLINE 3P",
+        "V 1.2 TRENDLINE 5P",
+        "V 1.4 CONFORTLINE 3P",
+        "V 1.4 CONFORTLINE 5P",
+        "V 1.4 CONFORTLINE 7 3P",
+        "V 1.4 CONFORTLINE 7 5P",
+        "V 1.4 IKKS 3P",
+        "V 1.4 IKKS 5P",
+        "V 1.4 IKKS 7 3P",
+        "V 1.4 IKKS 7 5P",
+        "V 1.4 LIFE 3P",
+        "V 1.4 LIFE 5P",
+        "V 1.4 LIFE 7 3P",
+        "V 1.4 LIFE 7 5P",
+        "V 1.4 MATCH 3P",
+        "V 1.4 MATCH 5P",
+        "V 1.4 MATCH 7 3P",
+        "V 1.4 MATCH 7 5P",
+        "V 1.4 MATCH II 3P",
+        "V 1.4 MATCH II 5P",
+        "V 1.4 SPORTLINE 3P",
+        "V 1.4 SPORTLINE 5P",
+        "V 1.4 SPORTLINE 7 3P",
+        "V 1.4 SPORTLINE 7 5P",
+        "V 1.4 STYLE 3P",
+        "V 1.4 STYLE 5P",
+        "V 1.4 TRENDLINE 3P",
+        "V 1.4 TRENDLINE 5P",
+        "V 1.4 TRENDLINE 7 3P",
+        "V 1.4 TRENDLINE 7 5P",
+        "V ACT 7 BLUEMOTION TECHNOLOGY BLUEMOTION GT 3P",
+        "V ACT 7 BLUEMOTION TECHNOLOGY BLUEMOTION GT 5P",
+        "V ACT BLUE GT 3P",
+        "V ACT BLUEMOTION GT 3P",
+        "V ACT BLUEMOTION GT 5P",
+        "V ACT BLUEMOTION TECHNOLOGY BLUEMOTION GT 3P",
+        "V ACT BLUEMOTION TECHNOLOGY BLUEMOTION GT 5P",
+        "V BLUE TECH LIFE 3P",
+        "V BLUE TECH LIFE 5P",
+        "V BLUEMOTION TECHNOLOGY 3P",
+        "V BLUEMOTION TECHNOLOGY 5P",
+        "V BLUEMOTION TECHNOLOGY BUSINESS 3P",
+        "V BLUEMOTION TECHNOLOGY BUSINESS 5P",
+        "V BLUEMOTION TECHNOLOGY CONFORTLINE 3P",
+        "V BLUEMOTION TECHNOLOGY CONFORTLINE 5P",
+        "V BLUEMOTION TECHNOLOGY CONFORTLINE BUSINESS 3P",
+        "V BLUEMOTION TECHNOLOGY CONFORTLINE BUSINESS 5P",
+        "V BLUEMOTION TECHNOLOGY LIFE 3P",
+        "V BLUEMOTION TECHNOLOGY LIFE 5P",
+        "V BLUEMOTION TECHNOLOGY MATCH 3P",
+        "V BLUEMOTION TECHNOLOGY MATCH 5P",
+        "V BLUEMOTION TECHNOLOGY STYLE 3P",
+        "V BLUEMOTION TECHNOLOGY STYLE 5P",
+        "V BLUEMOTION TECHNOLOGY TRENDLINE 3P",
+        "V BLUEMOTION TECHNOLOGY TRENDLINE 5P",
+        "V BLUEMOTION TECHNOLOGY TRENDLINE BUSINESS 3P",
+        "V BLUEMOTION TECHNOLOGY TRENDLINE BUSINESS 5P",
+        "V CONCEPT 3P",
+        "V CONCEPT 5P",
+        "V CONFORTLINE 3P",
+        "V CONFORTLINE 5P",
+        "V CONFORTLINE 7 3P",
+        "V CONFORTLINE 7 5P",
+        "V CONFORTLINE BLUEMOTION TECHNOLOGY 3P",
+        "V CONFORTLINE BLUEMOTION TECHNOLOGY 5P",
+        "V CONFORTLINE BUSINESS 3P",
+        "V CONFORTLINE BUSINESS 5P",
+        "V CONFORTLINE BUSINESS 7",
+        "V CONFORTLINE BUSINESS 7 3P",
+        "V CONFORTLINE BUSINESS 7 5P",
+        "V CONFORTLINE BUSINESS BLUEMOTION TECHNOLOGY 3P",
+        "V CONFORTLINE BUSINESS BLUEMOTION TECHNOLOGY 5P",
+        "V CR BLUEMOTION TECHNOLOGY 3P",
+        "V CR BLUEMOTION TECHNOLOGY 5P",
+        "V CR BLUEMOTION TECHNOLOGY CONFORTLINE 3P",
+        "V CR BLUEMOTION TECHNOLOGY CONFORTLINE 5P",
+        "V CR BLUEMOTION TECHNOLOGY SPORTLINE 3P",
+        "V CR BLUEMOTION TECHNOLOGY SPORTLINE 5P",
+        "V CR BLUEMOTION TECHNOLOGY TRENDLINE 3P",
+        "V CR BLUEMOTION TECHNOLOGY TRENDLINE 5P",
+        "V CR CONFORTLINE 3P",
+        "V CR CONFORTLINE 5P",
+        "V CR CONFORTLINE 7 3P",
+        "V CR CONFORTLINE 7 5P",
+        "V CR SPORTLINE 3P",
+        "V CR SPORTLINE 5P",
+        "V CR SPORTLINE 7 3P",
+        "V CR TRENDLINE 3P",
+        "V CR TRENDLINE 5P",
+        "V CR TRENDLINE 7 3P",
+        "V CR TRENDLINE 7 5P",
+        "V CROSS POLO 1.4 5P",
+        "V CROSS POLO 5P",
+        "V CROSS POLO 7 5P",
+        "V IKKS 3P",
+        "V IKKS 5P",
+        "V IKKS 7 3P",
+        "V IKKS 7 5P",
+        "V LIFE 3P",
+        "V LIFE 5P",
+        "V LIFE 7 3P",
+        "V LIFE 7 5P",
+        "V MATCH 3P",
+        "V MATCH 5P",
+        "V MATCH 7 3P",
+        "V MATCH 7 5P",
+        "V MATCH II 3P",
+        "V MATCH II 5P",
+        "V MATCH II BLUEMOTION TECHNOLOGY 3P",
+        "V MATCH II BLUEMOTION TECHNOLOGY 5P",
+        "V SPORTLINE 3P",
+        "V SPORTLINE 5P",
+        "V SPORTLINE 7 3P",
+        "V SPORTLINE 7 5P",
+        "V STYLE 3P",
+        "V STYLE 5P",
+        "V TRENDLINE 3P",
+        "V TRENDLINE 5P",
+        "V TRENDLINE BLUEMOTION TECHNOLOGY 3P",
+        "V TRENDLINE BLUEMOTION TECHNOLOGY 5P",
+        "V TRENDLINE BUSINESS 3P",
+        "V TRENDLINE BUSINESS 5P",
+        "V TRENDLINE BUSINESS BLUEMOTION TECHNOLOGY 3P",
+        "V TRENDLINE BUSINESS BLUEMOTION TECHNOLOGY 5P",
+        "V V 5P",
+        "VI (2)",
+        "VI (2) 1.0",
+        "VI (2) 1.0 BUSINESS",
+        "VI (2) 1.0 TGI LIFE BUSINESS",
+        "VI (2) 1.0 TGI S&AMP;S LIFE BUSINESS",
+        "VI (2) 1.0 TGI S&AMP;S LIFE PLUS",
+        "VI (2) BUSINESS",
+        "VI (2) LIFE",
+        "VI (2) LIFE BUSINESS",
+        "VI (2) R-LINE",
+        "VI (2) S&AMP;S",
+        "VI (2) S&AMP;S EDITION",
+        "VI (2) S&AMP;S LIFE",
+        "VI (2) S&AMP;S LIFE PLUS",
+        "VI (2) S&AMP;S R-LINE",
+        "VI (2) S&AMP;S R-LINE EDITION",
+        "VI (2) S&AMP;S STYLE",
+        "VI (2) S&AMP;S VW EDITION",
+        "VI (2) STYLE",
+        "VI 1.0",
+        "VI 1.0 ACTIVE",
+        "VI 1.0 BUSINESS",
+        "VI 1.0 CONFORTLINE",
+        "VI 1.0 CONFORTLINE BUSINESS",
+        "VI 1.0 CONNECT",
+        "VI 1.0 EDITION",
+        "VI 1.0 EDITION 104G",
+        "VI 1.0 FIRST EDITION",
+        "VI 1.0 IQ.DRIVE",
+        "VI 1.0 LOUNGE",
+        "VI 1.0 LOUNGE BUSINESS",
+        "VI 1.0 TGI BUSINESS",
+        "VI 1.0 TGI LOUNGE BUSINESS",
+        "VI 1.0 TRENDLINE",
+        "VI 1.0 TRENDLINE BUSINESS",
+        "VI 1.0 UNITED",
+        "VI ACTIVE",
+        "VI BUSINESS",
+        "VI CARAT",
+        "VI CARAT EXCLUSIVE",
+        "VI CONFORTLINE",
+        "VI CONFORTLINE BUSINESS",
+        "VI CONNECT",
+        "VI COPPER LINE",
+        "VI EDITION",
+        "VI EVO R-LINE EXCLUSIVE",
+        "VI FIRST EDITION",
+        "VI IQ.DRIVE",
+        "VI LOUNGE",
+        "VI LOUNGE BUSINESS",
+        "VI R-LINE",
+        "VI R-LINE EXCLUSIVE",
+        "VI TRENDLINE",
+        "VI TRENDLINE BUSINESS",
+        "VI UNITED"
       ],
       "Golf": [
-        "Trendline",
-        "Trendline Business",
-        "Confortline",
-        "Confortline Business",
-        "Sportline",
-        "Highline",
-        "GT Sport",
-        "United",
-        "Bluemotion",
-        "Concept",
-        "Carat",
-        "Carat Edition",
-        "Carat Senso",
-        "Carat Exclusive",
-        "Design Edition",
-        "Cup",
-        "Edition",
-        "First Edition",
-        "Lounge",
-        "Match",
-        "Allstar",
-        "Sound",
-        "Connect",
-        "Join",
-        "Edition 40",
-        "IQ.Drive",
-        "Life",
-        "Life Business",
-        "Life Plus",
-        "Active",
-        "Business",
-        "Style",
-        "R-Line",
-        "VW Edition",
-        "Edition 50",
-        "R-Line Edition",
-        "Trend"
+        "V 1.4 16S ASCOTT 3P",
+        "V 1.4 16S ASCOTT 5P",
+        "V 1.4 16S CONFORT 3P",
+        "V 1.4 16S CONFORT 5P",
+        "V 1.4 16S TREND 3P",
+        "V 1.4 16S TREND 5P",
+        "V 1.4 16S TREND PACK 3P",
+        "V 1.4 16S TREND PACK 5P",
+        "V 1.4 16V TRENDLINE 3P",
+        "V 1.4 16V TRENDLINE 5P",
+        "V 1.4 16V TSI GT 3P",
+        "V 1.4 16V TSI GT 5P",
+        "V 1.4 16V TSI GT SPORT 3P",
+        "V 1.4 16V TSI GT SPORT 5P",
+        "V 1.4 16V TSI GT SPORT BV6 3P",
+        "V 1.4 16V TSI GT SPORT BV6 5P",
+        "V 1.4 16V UNITED 3P",
+        "V 1.4 16V UNITED 5P",
+        "V 1.4 TREND 3P",
+        "V 1.6 BOSTON 3P",
+        "V 1.6 BOSTON 5P",
+        "V 1.6 CARAT 3P",
+        "V 1.6 CARAT 5P",
+        "V 1.6 CARAT TIPTRONIC 3P",
+        "V 1.6 CARAT TIPTRONIC 5P",
+        "V 1.6 CONFORT 3P",
+        "V 1.6 CONFORT 5P",
+        "V 1.6 CONFORT TIPTRONIC 3P",
+        "V 1.6 CONFORT TIPTRONIC 5P",
+        "V 1.6 CONFORTLINE 3P",
+        "V 1.6 CONFORTLINE 5P",
+        "V 1.6 CUP 3P",
+        "V 1.6 CUP 5P",
+        "V 1.6 SPORT 3P",
+        "V 1.6 SPORT 5P",
+        "V 1.6 SPORT TIPTRONIC 3P",
+        "V 1.6 SPORT TIPTRONIC 5P",
+        "V 1.6 TREND 3P",
+        "V 1.6 TREND 5P",
+        "V 1.6 TREND PACK 3P",
+        "V 1.6 TREND PACK 5P",
+        "V 1.6 TREND PACK TIPTRONIC 3P",
+        "V 1.6 TREND PACK TIPTRONIC 5P",
+        "V 1.6 TREND TIPTRONIC 3P",
+        "V 1.6 TREND TIPTRONIC 5P",
+        "V 1.6 TRENDLINE 3P",
+        "V 1.6 TRENDLINE 5P",
+        "V 4MOTION CARAT 3P",
+        "V 4MOTION CARAT 5P",
+        "V ANNIVERSARY 3P",
+        "V ANNIVERSARY 5P",
+        "V ASCOTT 3P",
+        "V ASCOTT 5P",
+        "V BOSTON 3P",
+        "V BOSTON 5P",
+        "V CARAT 3P",
+        "V CARAT 4MOTION 3P",
+        "V CARAT 4MOTION 5P",
+        "V CARAT 5P",
+        "V CARAT BLUEMOTION TECHNOLOGY 3P",
+        "V CARAT BLUEMOTION TECHNOLOGY 5P",
+        "V CARAT BV6 3P",
+        "V CARAT BV6 5P",
+        "V CARAT SENSO 3P",
+        "V CARAT SENSO 5P",
+        "V CARAT TIPTRONIC 3P",
+        "V CARAT TIPTRONIC 5P",
+        "V CONFORT 3P",
+        "V CONFORT 4MOTION 3P",
+        "V CONFORT 4MOTION 5P",
+        "V CONFORT 5P",
+        "V CONFORT BV6 3P",
+        "V CONFORT BV6 5P",
+        "V CONFORT LINE 5P",
+        "V CONFORT LINE TIP6 3P",
+        "V CONFORT TIPTRONIC 3P",
+        "V CONFORT TIPTRONIC 5P",
+        "V CONFORTLINE 3P",
+        "V CONFORTLINE 4M 3P",
+        "V CONFORTLINE 4MOTION 3P",
+        "V CONFORTLINE 4MOTION 5P",
+        "V CONFORTLINE 5 3P",
+        "V CONFORTLINE 5P",
+        "V CONFORTLINE BLUEMOTION TECHNOLOGY 3P",
+        "V CONFORTLINE BLUEMOTION TECHNOLOGY 5P",
+        "V CONFORTLINE BV6 3P",
+        "V CONFORTLINE BV6 5P",
+        "V CONFORTLINE TIPTRONIC 5P",
+        "V CR CARAT 3P",
+        "V CR CARAT 5P",
+        "V CR CONFORTLINE 3P",
+        "V CR CONFORTLINE 5P",
+        "V CR TRENDLINE 3P",
+        "V CR TRENDLINE 5P",
+        "V CUP 3P",
+        "V CUP 5P",
+        "V GT 3P",
+        "V GT 5P",
+        "V GT SPORT 3P",
+        "V GT SPORT 5P",
+        "V GT SPORT B6 5P",
+        "V GT SPORT BV6 3P",
+        "V GT SPORT BV6 5P",
+        "V MIAMI 3P",
+        "V MIAMI 5P",
+        "V SPORT 3P",
+        "V SPORT 4MOTION 3P",
+        "V SPORT 4MOTION 5P",
+        "V SPORT 5P",
+        "V SPORT BV6 3P",
+        "V SPORT BV6 5P",
+        "V SPORT TIPTRONIC 3P",
+        "V SPORT TIPTRONIC 5P",
+        "V SPORT TIPTRONIC 6 3P",
+        "V SPORTLINE 3P",
+        "V SPORTLINE 5P",
+        "V TREND 3P",
+        "V TREND 5P",
+        "V TREND PACK 3P",
+        "V TREND PACK 5P",
+        "V TREND PACK TIPTRONIC 3P",
+        "V TREND PACK TIPTRONIC 5P",
+        "V TREND TIPTRONIC 3P",
+        "V TREND TIPTRONIC 5P",
+        "V TRENDLINE 3P",
+        "V TRENDLINE 5P",
+        "V TRENDLINE BLUEMOTION TECHNOLOGY 5P",
+        "V UNITED 3P",
+        "V UNITED 5P",
+        "V UNITED BLUEMOTION TECHNOLOGY 3P",
+        "V UNITED BLUEMOTION TECHNOLOGY 5P",
+        "V WEMBLEY 3P",
+        "V WEMBLEY 5P",
+        "VI 1.4 16S CONCEPT 3P",
+        "VI 1.4 16S CONCEPT 5P",
+        "VI 1.4 16S MATCH 3P",
+        "VI 1.4 16S MATCH 5P",
+        "VI 1.4 16V TRENDLINE 3P",
+        "VI 1.4 16V TRENDLINE 5P",
+        "VI 1.4 CONCEPT 3P",
+        "VI 1.4 CONCEPT 5P",
+        "VI 1.4 STYLE 3P",
+        "VI 1.4 STYLE 5P",
+        "VI 1.4 TRENDLINE 3P",
+        "VI 1.4 TRENDLINE 5P",
+        "VI BLUEMOTION TECHNOLOGY CARAT 3P",
+        "VI BLUEMOTION TECHNOLOGY CARAT 5P",
+        "VI BLUEMOTION TECHNOLOGY CARAT EDITION 5P",
+        "VI BLUEMOTION TECHNOLOGY CONFORTLINE 3P",
+        "VI BLUEMOTION TECHNOLOGY CONFORTLINE 5P",
+        "VI BLUEMOTION TECHNOLOGY CONFORTLINE BUSINESS 3P",
+        "VI BLUEMOTION TECHNOLOGY CONFORTLINE BUSINESS 5P",
+        "VI BLUEMOTION TECHNOLOGY MATCH 3P",
+        "VI BLUEMOTION TECHNOLOGY MATCH 5P",
+        "VI BLUEMOTION TECHNOLOGY TRENDLINE 3P",
+        "VI BLUEMOTION TECHNOLOGY TRENDLINE 5P",
+        "VI CARAT 3P",
+        "VI CARAT 4MOTION 5P",
+        "VI CARAT 5P",
+        "VI CARAT BV6 3P",
+        "VI CARAT BV6 5P",
+        "VI CARAT EDITION 4MOTION 5P",
+        "VI CARAT EDITION 5P",
+        "VI CARAT SENSO 3P",
+        "VI CARAT SENSO 5P",
+        "VI CONFORTLINE",
+        "VI CONFORTLINE 3P",
+        "VI CONFORTLINE 4MOTION 5P",
+        "VI CONFORTLINE 5P",
+        "VI CONFORTLINE BUSINESS 3P",
+        "VI CONFORTLINE BUSINESS 5P",
+        "VI CONFORTLINE BV6 3P",
+        "VI CONFORTLINE BV6 5P",
+        "VI CR 4MOTION CARAT 3P",
+        "VI CR 4MOTION CONFORTLINE 3P",
+        "VI CR BLUEMOTION TECHNOLOGY 99GR TRENDLINE 3P",
+        "VI CR BLUEMOTION TECHNOLOGY 99GR TRENDLINE 5P",
+        "VI CR BLUEMOTION TECHNOLOGY 99GR TRENDLINE BUSINESS 3P",
+        "VI CR BLUEMOTION TECHNOLOGY 99GR TRENDLINE BUSINESS 5P",
+        "VI CR BLUEMOTION TECHNOLOGY CARAT 3P",
+        "VI CR BLUEMOTION TECHNOLOGY CARAT 5P",
+        "VI CR BLUEMOTION TECHNOLOGY CARAT EDITION 5P",
+        "VI CR BLUEMOTION TECHNOLOGY CONFORTLINE 3P",
+        "VI CR BLUEMOTION TECHNOLOGY CONFORTLINE 5P",
+        "VI CR BLUEMOTION TECHNOLOGY CONFORTLINE BUSINESS 3P",
+        "VI CR BLUEMOTION TECHNOLOGY CONFORTLINE BUSINESS 5P",
+        "VI CR BLUEMOTION TECHNOLOGY STYLE 3P",
+        "VI CR BLUEMOTION TECHNOLOGY STYLE 5P",
+        "VI CR BLUEMOTION TECHNOLOGY TRENDLINE 3P",
+        "VI CR BLUEMOTION TECHNOLOGY TRENDLINE 5P",
+        "VI CR CARAT 3P",
+        "VI CR CARAT 5P",
+        "VI CR CARAT EDITION 5P",
+        "VI CR CONFORTLINE 3P",
+        "VI CR CONFORTLINE 5P",
+        "VI CR CONFORTLINE BUSINESS 3P",
+        "VI CR CONFORTLINE BUSINESS 5P",
+        "VI CR STYLE 3P",
+        "VI CR STYLE 5P",
+        "VI CR TRENDLINE 3P",
+        "VI CR TRENDLINE 5P",
+        "VI CR TRENDLINE BUSINESS 3P",
+        "VI CR TRENDLINE BUSINESS 5P",
+        "VI GTD 3P",
+        "VI GTD 5P",
+        "VI MATCH 3P",
+        "VI MATCH 5P",
+        "VI STYLE 3P",
+        "VI STYLE 5P",
+        "VI TRENDLINE 3P",
+        "VI TRENDLINE 5P",
+        "VI TRENDLINE BUSINESS 5P",
+        "VII (2) BLUEMOTION TECHNOLOGY 4MOTION CARAT 5P",
+        "VII (2) BLUEMOTION TECHNOLOGY 4MOTION CONNECT BV6 5P",
+        "VII (2) BLUEMOTION TECHNOLOGY 4MOTION SOUND BV6 5P",
+        "VII (2) BLUEMOTION TECHNOLOGY CARAT 3P",
+        "VII (2) BLUEMOTION TECHNOLOGY CARAT 4MOTION BV6 5P",
+        "VII (2) BLUEMOTION TECHNOLOGY CARAT 5P",
+        "VII (2) BLUEMOTION TECHNOLOGY CARAT BV6 3P",
+        "VII (2) BLUEMOTION TECHNOLOGY CARAT BV6 5P",
+        "VII (2) BLUEMOTION TECHNOLOGY CARAT EXCLUSIVE",
+        "VII (2) BLUEMOTION TECHNOLOGY CARAT EXCLUSIVE 4MOTION 5P",
+        "VII (2) BLUEMOTION TECHNOLOGY CARAT EXCLUSIVE 4MOTION BV6 5P",
+        "VII (2) BLUEMOTION TECHNOLOGY CARAT EXCLUSIVE 5P",
+        "VII (2) BLUEMOTION TECHNOLOGY CARAT EXCLUSIVE BV6",
+        "VII (2) BLUEMOTION TECHNOLOGY CARAT EXCLUSIVE BV6 5P",
+        "VII (2) BLUEMOTION TECHNOLOGY CONFORTLINE 3P",
+        "VII (2) BLUEMOTION TECHNOLOGY CONFORTLINE 4MOTION BV6 5P",
+        "VII (2) BLUEMOTION TECHNOLOGY CONFORTLINE 5P",
+        "VII (2) BLUEMOTION TECHNOLOGY CONFORTLINE BUSINESS 3P",
+        "VII (2) BLUEMOTION TECHNOLOGY CONFORTLINE BUSINESS 5P",
+        "VII (2) BLUEMOTION TECHNOLOGY CONFORTLINE BUSINESS BV6 3P",
+        "VII (2) BLUEMOTION TECHNOLOGY CONFORTLINE BUSINESS BV6 5P",
+        "VII (2) BLUEMOTION TECHNOLOGY CONFORTLINE BV6 3P",
+        "VII (2) BLUEMOTION TECHNOLOGY CONFORTLINE BV6 5P",
+        "VII (2) BLUEMOTION TECHNOLOGY CONNECT 3P",
+        "VII (2) BLUEMOTION TECHNOLOGY CONNECT 5P",
+        "VII (2) BLUEMOTION TECHNOLOGY CONNECT BV6 3P",
+        "VII (2) BLUEMOTION TECHNOLOGY CONNECT BV6 5P",
+        "VII (2) BLUEMOTION TECHNOLOGY FIRST EDITION 3P",
+        "VII (2) BLUEMOTION TECHNOLOGY FIRST EDITION 4MOTION BV6 5P",
+        "VII (2) BLUEMOTION TECHNOLOGY FIRST EDITION 5P",
+        "VII (2) BLUEMOTION TECHNOLOGY FIRST EDITION BV6 3P",
+        "VII (2) BLUEMOTION TECHNOLOGY FIRST EDITION BV6 5P",
+        "VII (2) BLUEMOTION TECHNOLOGY GTD 3P",
+        "VII (2) BLUEMOTION TECHNOLOGY GTD 5P",
+        "VII (2) BLUEMOTION TECHNOLOGY JOIN BV6 3P",
+        "VII (2) BLUEMOTION TECHNOLOGY SOUND 3P",
+        "VII (2) BLUEMOTION TECHNOLOGY SOUND 5P",
+        "VII (2) BLUEMOTION TECHNOLOGY SOUND BV6 3P",
+        "VII (2) BLUEMOTION TECHNOLOGY SOUND BV6 5P",
+        "VII (2) BLUEMOTION TECHNOLOGY TRENDLINE 3P",
+        "VII (2) BLUEMOTION TECHNOLOGY TRENDLINE 5P",
+        "VII (2) BLUEMOTION TECHNOLOGY TRENDLINE BUSINESS 3P",
+        "VII (2) BLUEMOTION TECHNOLOGY TRENDLINE BUSINESS 5P",
+        "VII (2) BLUEMOTION TECHNOLOGY TRENDLINE BUSINESS BV6 3P",
+        "VII (2) BLUEMOTION TECHNOLOGY TRENDLINE BUSINESS BV6 5P",
+        "VII (2) BLUEMOTION TECHNOLOGY TRENDLINE BV6 3P",
+        "VII (2) BLUEMOTION TECHNOLOGY TRENDLINE BV6 5P",
+        "VII (2) CONFORTLINE BUSINESS 5P",
+        "VII (2) E-GOLF 5P .8 KWH",
+        "VII (2) EVO BLUEMOTION TECHNOLOGY CARAT 3P",
+        "VII (2) EVO BLUEMOTION TECHNOLOGY CARAT 5P",
+        "VII (2) EVO BLUEMOTION TECHNOLOGY CARAT BV6 3P",
+        "VII (2) EVO BLUEMOTION TECHNOLOGY CARAT BV6 5P",
+        "VII (2) EVO BLUEMOTION TECHNOLOGY CARAT EXCLUSIVE 5P",
+        "VII (2) EVO BLUEMOTION TECHNOLOGY CARAT EXCLUSIVE BV6 5P",
+        "VII (2) EVO BLUEMOTION TECHNOLOGY CONFORTLINE 3P",
+        "VII (2) EVO BLUEMOTION TECHNOLOGY CONFORTLINE 5P",
+        "VII (2) EVO BLUEMOTION TECHNOLOGY CONFORTLINE BV6 3P",
+        "VII (2) EVO BLUEMOTION TECHNOLOGY CONFORTLINE BV6 5P",
+        "VII (2) EVO BLUEMOTION TECHNOLOGY CONNECT 3P",
+        "VII (2) EVO BLUEMOTION TECHNOLOGY CONNECT 5P",
+        "VII (2) EVO BLUEMOTION TECHNOLOGY CONNECT BV6 3P",
+        "VII (2) EVO BLUEMOTION TECHNOLOGY CONNECT BV6 5P",
+        "VII (2) EVO BLUEMOTION TECHNOLOGY SOUND 3P",
+        "VII (2) EVO BLUEMOTION TECHNOLOGY SOUND 5P",
+        "VII (2) EVO BLUEMOTION TECHNOLOGY SOUND BV6 3P",
+        "VII (2) EVO BLUEMOTION TECHNOLOGY SOUND BV6 5P",
+        "VII (2) EVO CONFORTLINE 5P",
+        "VII (2) EVO CONFORTLINE BUSINESS 5P",
+        "VII (2) EVO CONFORTLINE BV6 5P",
+        "VII (2) EVO IQ.DRIVE 5P",
+        "VII (2) EVO IQ.DRIVE BV6 5P",
+        "VII (2) EVO MATCH",
+        "VII (2) GTE",
+        "VII (2) GTE 5P",
+        "VII (2) IQ.DRIVE 5P",
+        "VII (2) IQ.DRIVE BV6 5P",
+        "VII (2) MATCH",
+        "VII (2) MULTIFUEL BLUEMOTION TECHNOLOGY CONFORTLINE BUSINESS BV6",
+        "VII (2) MULTIFUEL BLUEMOTION TECHNOLOGY CONFORTLINE BUSINESS BV6 3P",
+        "VII (2) MULTIFUEL BLUEMOTION TECHNOLOGY CONFORTLINE BV6",
+        "VII (2) MULTIFUEL BLUEMOTION TECHNOLOGY CONFORTLINE BV6 3P",
+        "VII (2) MULTIFUEL BLUEMOTION TECHNOLOGY CONNECT 3P",
+        "VII (2) MULTIFUEL BLUEMOTION TECHNOLOGY CONNECT 5P",
+        "VII (2) MULTIFUEL BLUEMOTION TECHNOLOGY SOUND 3P",
+        "VII (2) MULTIFUEL BLUEMOTION TECHNOLOGY SOUND 5P",
+        "VII (2) MULTIFUEL BLUEMOTION TECHNOLOGY TRENDLINE BUSINESS BV6",
+        "VII (2) MULTIFUEL BLUEMOTION TECHNOLOGY TRENDLINE BUSINESS BV6 3P",
+        "VII (2) MULTIFUEL BLUEMOTION TECHNOLOGY TRENDLINE BV6",
+        "VII (2) MULTIFUEL BLUEMOTION TECHNOLOGY TRENDLINE BV6 3P",
+        "VII (2) MULTIFUEL FIRST EDITION BV6 3P",
+        "VII (2) MULTIFUEL FIRST EDITION BV6 5P",
+        "VII 1.4 TGI BLUEMOTION TECHNOLOGY CONFORTLINE BUSINESS 5P",
+        "VII ACT BLUEMOTION TECHNOLOGY ALLSTAR 3P",
+        "VII ACT BLUEMOTION TECHNOLOGY ALLSTAR 5P",
+        "VII ACT BLUEMOTION TECHNOLOGY ALLSTAR BV6 3P",
+        "VII ACT BLUEMOTION TECHNOLOGY ALLSTAR BV6 5P",
+        "VII ACT BLUEMOTION TECHNOLOGY CARAT 3P",
+        "VII ACT BLUEMOTION TECHNOLOGY CARAT 5P",
+        "VII ACT BLUEMOTION TECHNOLOGY CARAT EDITION",
+        "VII ACT BLUEMOTION TECHNOLOGY CARAT EDITION BV6",
+        "VII ACT BLUEMOTION TECHNOLOGY CARAT EXCLUSIVE 5P",
+        "VII ACT BLUEMOTION TECHNOLOGY CARAT EXCLUSIVE BV6 5P",
+        "VII ACT BLUEMOTION TECHNOLOGY CONFORTLINE 3P",
+        "VII ACT BLUEMOTION TECHNOLOGY CONFORTLINE 5P",
+        "VII ACT BLUEMOTION TECHNOLOGY CUP 3P",
+        "VII ACT BLUEMOTION TECHNOLOGY CUP 5P",
+        "VII ACT BLUEMOTION TECHNOLOGY CUP BV6 3P",
+        "VII ACT BLUEMOTION TECHNOLOGY CUP BV6 5P",
+        "VII ACT BLUEMOTION TECHNOLOGY EDITION 3P",
+        "VII ACT BLUEMOTION TECHNOLOGY EDITION 5P",
+        "VII ACT BLUEMOTION TECHNOLOGY EDITION BV6 3P",
+        "VII ACT BLUEMOTION TECHNOLOGY EDITION BV6 5P",
+        "VII ACT BLUEMOTION TECHNOLOGY LOUNGE 3P",
+        "VII ACT BLUEMOTION TECHNOLOGY LOUNGE 5P",
+        "VII ACT BLUEMOTION TECHNOLOGY LOUNGE BV6 3P",
+        "VII ACT BLUEMOTION TECHNOLOGY LOUNGE BV6 5P",
+        "VII ACT BLUEMOTION TECHNOLOGY MATCH 3P",
+        "VII ACT BLUEMOTION TECHNOLOGY MATCH 5P",
+        "VII ACT BLUEMOTION TECHNOLOGY MATCH ALLSTAR 3P",
+        "VII ACT BLUEMOTION TECHNOLOGY MATCH ALLSTAR 5P",
+        "VII ACT BLUEMOTION TECHNOLOGY MATCH ALLSTAR BV6 3P",
+        "VII ACT BLUEMOTION TECHNOLOGY MATCH ALLSTAR BV6 5P",
+        "VII BLUEMOTION CONFORTLINE 3P",
+        "VII BLUEMOTION CONFORTLINE 5P",
+        "VII BLUEMOTION CONFORTLINE BUSINESS 3P",
+        "VII BLUEMOTION CONFORTLINE BUSINESS 5P",
+        "VII BLUEMOTION CONFORTLINE BUSINESS BV6 3P",
+        "VII BLUEMOTION CONFORTLINE BUSINESS BV6 5P",
+        "VII BLUEMOTION CONFORTLINE BV6 3P",
+        "VII BLUEMOTION CONFORTLINE BV6 5P",
+        "VII BLUEMOTION TECHNOLOGY 4MOTION CARAT EDITION BV6",
+        "VII BLUEMOTION TECHNOLOGY 4MOTION CARAT EXCLUSIVE BV6",
+        "VII BLUEMOTION TECHNOLOGY 5P",
+        "VII BLUEMOTION TECHNOLOGY ALLSTAR 3P",
+        "VII BLUEMOTION TECHNOLOGY ALLSTAR 4MOTION 5P",
+        "VII BLUEMOTION TECHNOLOGY ALLSTAR 4MOTION BV6 5P",
+        "VII BLUEMOTION TECHNOLOGY ALLSTAR 5P",
+        "VII BLUEMOTION TECHNOLOGY ALLSTAR BV6 3P",
+        "VII BLUEMOTION TECHNOLOGY ALLSTAR BV6 5P",
+        "VII BLUEMOTION TECHNOLOGY CARAT 3P",
+        "VII BLUEMOTION TECHNOLOGY CARAT 4MOTION 5P",
+        "VII BLUEMOTION TECHNOLOGY CARAT 5P",
+        "VII BLUEMOTION TECHNOLOGY CARAT BV6 3P",
+        "VII BLUEMOTION TECHNOLOGY CARAT BV6 5P",
+        "VII BLUEMOTION TECHNOLOGY CARAT EDITION",
+        "VII BLUEMOTION TECHNOLOGY CARAT EDITION 4MOTION 5P",
+        "VII BLUEMOTION TECHNOLOGY CARAT EDITION BV6",
+        "VII BLUEMOTION TECHNOLOGY CARAT EXCLUSIVE",
+        "VII BLUEMOTION TECHNOLOGY CARAT EXCLUSIVE 5P",
+        "VII BLUEMOTION TECHNOLOGY CARAT EXCLUSIVE BV6 5P",
+        "VII BLUEMOTION TECHNOLOGY CONFORTLINE 3P",
+        "VII BLUEMOTION TECHNOLOGY CONFORTLINE 4MOTION 5P",
+        "VII BLUEMOTION TECHNOLOGY CONFORTLINE 5P",
+        "VII BLUEMOTION TECHNOLOGY CONFORTLINE BUSINESS 3P",
+        "VII BLUEMOTION TECHNOLOGY CONFORTLINE BUSINESS 5P",
+        "VII BLUEMOTION TECHNOLOGY CONFORTLINE BUSINESS BV6 3P",
+        "VII BLUEMOTION TECHNOLOGY CONFORTLINE BUSINESS BV6 5P",
+        "VII BLUEMOTION TECHNOLOGY CONFORTLINE BV6 3P",
+        "VII BLUEMOTION TECHNOLOGY CONFORTLINE BV6 5P",
+        "VII BLUEMOTION TECHNOLOGY CUP 3P",
+        "VII BLUEMOTION TECHNOLOGY CUP 4MOTION 5P",
+        "VII BLUEMOTION TECHNOLOGY CUP 4MOTION BV6 5P",
+        "VII BLUEMOTION TECHNOLOGY CUP 5P",
+        "VII BLUEMOTION TECHNOLOGY CUP BV6 3P",
+        "VII BLUEMOTION TECHNOLOGY CUP BV6 5P",
+        "VII BLUEMOTION TECHNOLOGY EDITION 3P",
+        "VII BLUEMOTION TECHNOLOGY EDITION 4MOTION 5P",
+        "VII BLUEMOTION TECHNOLOGY EDITION 4MOTION BV6 5P",
+        "VII BLUEMOTION TECHNOLOGY EDITION 5P",
+        "VII BLUEMOTION TECHNOLOGY EDITION BV5 3P",
+        "VII BLUEMOTION TECHNOLOGY EDITION BV5 5P",
+        "VII BLUEMOTION TECHNOLOGY EDITION BV6 3P",
+        "VII BLUEMOTION TECHNOLOGY EDITION BV6 5P",
+        "VII BLUEMOTION TECHNOLOGY GTD 3P",
+        "VII BLUEMOTION TECHNOLOGY GTD 5P",
+        "VII BLUEMOTION TECHNOLOGY LOUNGE 3P",
+        "VII BLUEMOTION TECHNOLOGY LOUNGE 4MOTION 5P",
+        "VII BLUEMOTION TECHNOLOGY LOUNGE 5P",
+        "VII BLUEMOTION TECHNOLOGY LOUNGE BV6 3P",
+        "VII BLUEMOTION TECHNOLOGY LOUNGE BV6 5P",
+        "VII BLUEMOTION TECHNOLOGY MATCH 3P",
+        "VII BLUEMOTION TECHNOLOGY MATCH 4MOTION BV6 5P",
+        "VII BLUEMOTION TECHNOLOGY MATCH 5P",
+        "VII BLUEMOTION TECHNOLOGY MATCH ALLSTAR 3P",
+        "VII BLUEMOTION TECHNOLOGY MATCH ALLSTAR 4MOTION BV6 5P",
+        "VII BLUEMOTION TECHNOLOGY MATCH ALLSTAR 5P",
+        "VII BLUEMOTION TECHNOLOGY MATCH ALLSTAR BV6 3P",
+        "VII BLUEMOTION TECHNOLOGY MATCH ALLSTAR BV6 5P",
+        "VII BLUEMOTION TECHNOLOGY MATCH BV6 3P",
+        "VII BLUEMOTION TECHNOLOGY MATCH BV6 5P",
+        "VII BLUEMOTION TECHNOLOGY TRENDLINE 3P",
+        "VII BLUEMOTION TECHNOLOGY TRENDLINE 5P",
+        "VII BLUEMOTION TECHNOLOGY TRENDLINE BUSINESS 3P",
+        "VII BLUEMOTION TECHNOLOGY TRENDLINE BUSINESS 5P",
+        "VII BLUEMOTION TECHNOLOGY TRENDLINE BUSINESS BV6 3P",
+        "VII BLUEMOTION TECHNOLOGY TRENDLINE BUSINESS BV6 5P",
+        "VII BLUEMOTION TECHNOLOGY TRENDLINE BV6 3P",
+        "VII BLUEMOTION TECHNOLOGY TRENDLINE BV6 5P",
+        "VII BLUEMOTION TRENDLINE BUSINESS BV6 3P",
+        "VII BLUEMOTION TRENDLINE BUSINESS BV6 5P",
+        "VII BLUEMOTION TRENDLINE BV6 3P",
+        "VII BLUEMOTION TRENDLINE BV6 5P",
+        "VII E-GOLF 5P .2 KWH",
+        "VII GTE 5P",
+        "VII MULTIFUEL ALLSTAR 3P",
+        "VII MULTIFUEL ALLSTAR 5P",
+        "VII MULTIFUEL BLUEMOTION TECHNOLOGY CONFORTLINE BUSINESS BV6",
+        "VII MULTIFUEL BLUEMOTION TECHNOLOGY CONFORTLINE BUSINESS BV6 3P",
+        "VII MULTIFUEL BLUEMOTION TECHNOLOGY CONFORTLINE BV6",
+        "VII MULTIFUEL BLUEMOTION TECHNOLOGY CONFORTLINE BV6 3P",
+        "VII MULTIFUEL BLUEMOTION TECHNOLOGY TRENDLINE BUSINESS BV6",
+        "VII MULTIFUEL BLUEMOTION TECHNOLOGY TRENDLINE BUSINESS BV6 3P",
+        "VII MULTIFUEL BLUEMOTION TECHNOLOGY TRENDLINE BV6",
+        "VII MULTIFUEL BLUEMOTION TECHNOLOGY TRENDLINE BV6 3P",
+        "VII MULTIFUEL MATCH 3P",
+        "VII MULTIFUEL MATCH 5P",
+        "VII MULTIFUEL MATCH ALLSTAR 3P",
+        "VII MULTIFUEL MATCH ALLSTAR 5P",
+        "VIII (2)",
+        "VIII (2) 1.5 EHYBRID EDITION",
+        "VIII (2) 1.5 EHYBRID GTE",
+        "VIII (2) 1.5 EHYBRID LIFE PLUS",
+        "VIII (2) 1.5 EHYBRID STYLE",
+        "VIII (2) 1.5 EHYBRID VW EDITION",
+        "VIII (2) 1.5 ETSI EVO2 LIFE PLUS",
+        "VIII (2) 1.5 ETSI EVO2 LIFE PLUS SOCIETE REVERSIBLE",
+        "VIII (2) 1.5 ETSI EVO2 R-LINE",
+        "VIII (2) 1.5 ETSI EVO2 R-LINE EDITION",
+        "VIII (2) 1.5 ETSI EVO2 STYLE",
+        "VIII (2) 1.5 ETSI EVO2 STYLE EDITION",
+        "VIII (2) 1.5 ETSI EVO2 VW EDITION",
+        "VIII (2) 1.5 HYBRID R-LINE",
+        "VIII (2) 1.5 HYBRID R-LINE EDITION",
+        "VIII (2) EVO2 LIFE PLUS SOCIETE REVERSIBLE",
+        "VIII (2) EVO2 TREND",
+        "VIII (2) LIFE PLUS",
+        "VIII (2) LIFE PLUS SOCIETE REVERSIBLE",
+        "VIII (2) R-LINE",
+        "VIII (2) R-LINE EDITION",
+        "VIII (2) STYLE",
+        "VIII (2) VW EDITION",
+        "VIII 1.0 ETSI ACTIVE",
+        "VIII 1.0 ETSI LIFE",
+        "VIII 1.0 ETSI LIFE 1ST",
+        "VIII 1.0 ETSI LIFE BUSINESS",
+        "VIII 1.0 ETSI LIFE BUSINESS 1ST",
+        "VIII 1.0 ETSI LIFE PLUS",
+        "VIII 1.0 ETSI MATCH",
+        "VIII 1.4 EHYBRID GTE",
+        "VIII 1.4 EHYBRID STYLE",
+        "VIII 1.4 EHYBRID STYLE 1ST",
+        "VIII 1.4 HYBRID RECHARGEABLE GTE",
+        "VIII 1.4 HYBRID RECHARGEABLE STYLE",
+        "VIII 1.5 ETSI ACTIVE",
+        "VIII 1.5 ETSI LIFE",
+        "VIII 1.5 ETSI LIFE 1ST",
+        "VIII 1.5 ETSI LIFE BUSINESS",
+        "VIII 1.5 ETSI LIFE BUSINESS 1ST",
+        "VIII 1.5 ETSI LIFE PLUS",
+        "VIII 1.5 ETSI MATCH",
+        "VIII 1.5 ETSI R-LINE",
+        "VIII 1.5 ETSI R-LINE 1ST",
+        "VIII 1.5 ETSI STYLE",
+        "VIII 1.5 ETSI STYLE 1ST",
+        "VIII ACT ACTIVE",
+        "VIII ACT LIFE 1ST BV6",
+        "VIII ACT LIFE BUSINESS 1ST BV6",
+        "VIII ACT LIFE BUSINESS BV6",
+        "VIII ACT LIFE BV6",
+        "VIII ACT STYLE 1ST BV6",
+        "VIII ACT STYLE BV6",
+        "VIII ACTIVE",
+        "VIII GTD",
+        "VIII LIFE 1ST BV6",
+        "VIII LIFE BUSINESS",
+        "VIII LIFE BUSINESS 1ST BV6",
+        "VIII LIFE BUSINESS BV6",
+        "VIII LIFE BV6",
+        "VIII LIFE PLUS",
+        "VIII MATCH",
+        "VIII SCR",
+        "VIII SCR 4MOTION STYLE",
+        "VIII SCR ACTIVE",
+        "VIII SCR BUSINESS",
+        "VIII SCR GTD",
+        "VIII SCR LIFE",
+        "VIII SCR LIFE 1ST",
+        "VIII SCR LIFE 1ST BV6",
+        "VIII SCR LIFE BUSINESS",
+        "VIII SCR LIFE BUSINESS 1ST",
+        "VIII SCR LIFE BUSINESS 1ST BV6",
+        "VIII SCR LIFE BUSINESS BV6",
+        "VIII SCR LIFE BV6",
+        "VIII SCR LIFE PLUS",
+        "VIII SCR LIFE PLUS 2022",
+        "VIII SCR MATCH",
+        "VIII SCR R-LINE",
+        "VIII SCR R-LINE 1ST",
+        "VIII SCR STYLE",
+        "VIII SCR STYLE 1ST",
+        "VIII SCR STYLE 1ST BV6",
+        "VIII SCR STYLE BV6"
       ],
       "Golf Sportsvan": [
         "Business",
@@ -54870,41 +55518,171 @@
         "Alltrack"
       ],
       "Tiguan": [
-        "Active",
-        "Black R-Line",
-        "Business",
-        "Carat",
-        "Carat Edition",
-        "Carat Exclusive",
-        "Confortline",
-        "Confortline Business",
-        "Connect",
-        "Cup",
-        "Edition 20",
-        "Elegance",
-        "Elegance Exclusive",
-        "IQ.Drive",
-        "Life",
-        "Life Business",
-        "Life Plus",
-        "Lounge",
-        "Match",
-        "Offroad",
-        "R-Exclusive",
-        "R-Line",
-        "R-Line Edition",
-        "R-Line Exclusive",
-        "Sound",
-        "Sport & Style",
-        "Sportline",
-        "Sportline Business",
-        "Style",
-        "Tiguan Edition",
-        "Track & Field",
-        "Trackline",
-        "Trendline",
-        "Trendline Business",
-        "VW Edition"
+        "4MOTION",
+        "4MOTION SPORTLINE",
+        "4MOTION SPORTLINE 7",
+        "4MOTION TRACK &AMP; FIELD",
+        "4MOTION TRACK &AMP; FIELD 7",
+        "BLUEMOTION TECHNOLOGY",
+        "BLUEMOTION TECHNOLOGY 4MOTION CARAT",
+        "BLUEMOTION TECHNOLOGY 4MOTION LOUNGE",
+        "BLUEMOTION TECHNOLOGY 4MOTION MATCH",
+        "BLUEMOTION TECHNOLOGY 4MOTION R-EXCLUSIVE",
+        "BLUEMOTION TECHNOLOGY 4MOTION SPORT BUSINESS",
+        "BLUEMOTION TECHNOLOGY 4MOTION SPORTLINE",
+        "BLUEMOTION TECHNOLOGY 4MOTION SPORTLINE BUSINESS",
+        "BLUEMOTION TECHNOLOGY 4MOTION TRACKLINE",
+        "BLUEMOTION TECHNOLOGY BUSINESS",
+        "BLUEMOTION TECHNOLOGY CARAT",
+        "BLUEMOTION TECHNOLOGY CARAT 4MOTION",
+        "BLUEMOTION TECHNOLOGY CARAT 4MOTION 7",
+        "BLUEMOTION TECHNOLOGY CUP",
+        "BLUEMOTION TECHNOLOGY CUP 4MOTION",
+        "BLUEMOTION TECHNOLOGY EDITION",
+        "BLUEMOTION TECHNOLOGY LOUNGE",
+        "BLUEMOTION TECHNOLOGY LOUNGE 4MOTION",
+        "BLUEMOTION TECHNOLOGY MATCH",
+        "BLUEMOTION TECHNOLOGY MATCH 4MOTION",
+        "BLUEMOTION TECHNOLOGY R-EXCLUSIVE",
+        "BLUEMOTION TECHNOLOGY R-EXCLUSIVE 4MOTION",
+        "BLUEMOTION TECHNOLOGY SPORT &AMP; STYLE",
+        "BLUEMOTION TECHNOLOGY SPORTLINE",
+        "BLUEMOTION TECHNOLOGY SPORTLINE 4MOTION",
+        "BLUEMOTION TECHNOLOGY SPORTLINE 4MOTION 7",
+        "BLUEMOTION TECHNOLOGY SPORTLINE BUSINESS",
+        "BLUEMOTION TECHNOLOGY SPORTLINE BUSINESS 4MOTION",
+        "BLUEMOTION TECHNOLOGY TIGUAN EDITION",
+        "BLUEMOTION TECHNOLOGY TRACKLINE 4MOTION",
+        "BUSINESS",
+        "CARAT",
+        "CARAT 4MOTION",
+        "CARAT 4MOTION 7",
+        "CARAT 4MOTION TIPTRONIC",
+        "CARAT BLUEMOTION TECHNOLOGY",
+        "CONFORTLINE",
+        "CONFORTLINE 4MOTION",
+        "CONFORTLINE 4MOTION TIPTRONIC",
+        "II (2)",
+        "II (2) 1.4 EHYBRID ELEGANCE",
+        "II (2) 1.4 EHYBRID ELEGANCE EXCLUSIVE",
+        "II (2) 1.4 EHYBRID LIFE",
+        "II (2) 1.4 EHYBRID LIFE BUSINESS",
+        "II (2) 1.4 EHYBRID LIFE PLUS",
+        "II (2) 1.4 EHYBRID R-LINE",
+        "II (2) 1.4 EHYBRID R-LINE EXCLUSIVE",
+        "II (2) 4MOTION R-LINE EXCLUSIVE",
+        "II (2) ACTIVE",
+        "II (2) ACTIVE 4MOTION",
+        "II (2) ACTIVE BMV6",
+        "II (2) BLUEMOTION TECHNOLOGY ELEGANCE",
+        "II (2) BLUEMOTION TECHNOLOGY ELEGANCE 4MOTION",
+        "II (2) BLUEMOTION TECHNOLOGY LIFE",
+        "II (2) BLUEMOTION TECHNOLOGY LIFE 4MOTION",
+        "II (2) BLUEMOTION TECHNOLOGY LIFE BUSINESS",
+        "II (2) BLUEMOTION TECHNOLOGY LIFE BUSINESS 4MOTION",
+        "II (2) BMV6",
+        "II (2) BUSINESS",
+        "II (2) ELEGANCE",
+        "II (2) ELEGANCE 4MOTION",
+        "II (2) ELEGANCE EXCLUSIVE",
+        "II (2) ELEGANCE EXCLUSIVE 4MOTION",
+        "II (2) LIFE",
+        "II (2) LIFE BUSINESS",
+        "II (2) LIFE BUSINESS BV6",
+        "II (2) LIFE BV6",
+        "II (2) LIFE PLUS",
+        "II (2) MATCH",
+        "II (2) R",
+        "II (2) R-LINE",
+        "II (2) R-LINE 4MOTION",
+        "II (2) R-LINE EXCLUSIVE",
+        "II (2) R-LINE EXCLUSIVE 4MOTION",
+        "II 2.0 BI-TDI BLACK R-LINE 4MOTION",
+        "II 2.0 BI-TDI BLUEMOTION TECHNOLOGY CARAT EDITION 4MOTION",
+        "II 2.0 BI-TDI BLUEMOTION TECHNOLOGY CARAT EXCLUSIVE 4MOTION",
+        "II 2.0 BI-TDI CARAT EXCLUSIVE 4MOTION",
+        "II ACT BLUEMOTION TECHNOLOGY CARAT",
+        "II ACT BLUEMOTION TECHNOLOGY CARAT EDITION",
+        "II ACT BLUEMOTION TECHNOLOGY CARAT EXCLUSIVE",
+        "II ACT BLUEMOTION TECHNOLOGY CONFORTLINE",
+        "II ACT BLUEMOTION TECHNOLOGY CONFORTLINE BV6",
+        "II ACT BLUEMOTION TECHNOLOGY SOUND",
+        "II ACT BLUEMOTION TECHNOLOGY SOUND BV6",
+        "II ACT BLUEMOTION TECHNOLOGY TRENDLINE BV6",
+        "II BLACK R-LINE",
+        "II BLACK R-LINE 4MOTION",
+        "II BLUEMOTION TECHNOLOGY CARAT",
+        "II BLUEMOTION TECHNOLOGY CARAT 4MOTION",
+        "II BLUEMOTION TECHNOLOGY CARAT 4MOTION BV6",
+        "II BLUEMOTION TECHNOLOGY CARAT BV6",
+        "II BLUEMOTION TECHNOLOGY CARAT EDITION",
+        "II BLUEMOTION TECHNOLOGY CARAT EDITION 4MOTION",
+        "II BLUEMOTION TECHNOLOGY CARAT EDITION 4MOTION BV6",
+        "II BLUEMOTION TECHNOLOGY CARAT EDITION BV6",
+        "II BLUEMOTION TECHNOLOGY CARAT EXCLUSIVE",
+        "II BLUEMOTION TECHNOLOGY CARAT EXCLUSIVE 4MOTION",
+        "II BLUEMOTION TECHNOLOGY CARAT EXCLUSIVE 4MOTION BV6",
+        "II BLUEMOTION TECHNOLOGY CARAT EXCLUSIVE BV6",
+        "II BLUEMOTION TECHNOLOGY CONFORTLINE",
+        "II BLUEMOTION TECHNOLOGY CONFORTLINE 4MOTION",
+        "II BLUEMOTION TECHNOLOGY CONFORTLINE 4MOTION BV6",
+        "II BLUEMOTION TECHNOLOGY CONFORTLINE BUSINESS",
+        "II BLUEMOTION TECHNOLOGY CONFORTLINE BUSINESS 4MOTION",
+        "II BLUEMOTION TECHNOLOGY CONFORTLINE BUSINESS 4MOTION BV6",
+        "II BLUEMOTION TECHNOLOGY CONFORTLINE BUSINESS BV6",
+        "II BLUEMOTION TECHNOLOGY CONFORTLINE BV6",
+        "II BLUEMOTION TECHNOLOGY SOUND",
+        "II BLUEMOTION TECHNOLOGY SOUND 4MOTION",
+        "II BLUEMOTION TECHNOLOGY SOUND 4MOTION BV6",
+        "II BLUEMOTION TECHNOLOGY SOUND BV6",
+        "II BLUEMOTION TECHNOLOGY TRENDLINE BUSINESS BV6",
+        "II BLUEMOTION TECHNOLOGY TRENDLINE BV6",
+        "II CARAT BV6",
+        "II CARAT EXCLUSIVE BV6",
+        "II CONFORTLINE BV6",
+        "II CONNECT",
+        "II CONNECT 4MOTION",
+        "II CONNECT BV6",
+        "II EVO BLACK R-LINE",
+        "II EVO CARAT",
+        "II EVO CARAT EXCLUSIVE",
+        "II EVO CONFORTLINE",
+        "II EVO CONFORTLINE BUSINESS",
+        "II EVO CONFORTLINE BUSINESS BV6",
+        "II EVO CONFORTLINE BV6",
+        "II EVO CONNECT",
+        "II EVO CONNECT BV6",
+        "II EVO IQ.DRIVE",
+        "II EVO IQ.DRIVE BV6",
+        "II EVO TRENDLINE BV6",
+        "II IQ.DRIVE",
+        "II IQ.DRIVE 4MOTION",
+        "II IQ.DRIVE BV6",
+        "II MATCH",
+        "II MATCH 4MOTION",
+        "II OFFROAD 4MOTION",
+        "II SOUND BV6",
+        "R-LINE",
+        "R-LINE 4MOTION",
+        "R-LINE 4MOTION TIPTRONIC",
+        "SPORT &AMP; STYLE",
+        "SPORT &AMP; STYLE 4MOTION",
+        "SPORT &AMP; STYLE 4MOTION 7",
+        "SPORT &AMP; STYLE 4MOTION TIPTRONIC",
+        "SPORTLINE",
+        "SPORTLINE 4MOTION",
+        "SPORTLINE 4MOTION TIPTRONIC",
+        "SPORTLINE BLUEMOTION TECHNOLOGY",
+        "SPORTLINE BUSINESS 4MOTION",
+        "SPORTLINE TIPTRONIC",
+        "TRACK &AMP; AVENUE 4MOTION TIPTRONIC",
+        "TRACK &AMP; FIELD 4MOTION",
+        "TRACK &AMP; FIELD 4MOTION TIPTRONIC",
+        "TRACK&AMP;FIELD 4MOTION TIPTRONIC",
+        "TRACKLINE BLUEMOTION TECHNOLOGY 4MOTION",
+        "TRENDLINE",
+        "TRENDLINE 4MOTION",
+        "TRENDLINE 4MOTION TIPTRONIC"
       ],
       "Tiguan Allspace": [
         "Elegance",
@@ -54912,56 +55690,173 @@
         "R-Line"
       ],
       "T-Roc": [
-        "Active",
-        "Business",
-        "Carat",
-        "Carat Exclusive",
-        "First Edition",
-        "IQ.Drive",
-        "Life",
-        "Life Business",
-        "Life Plus",
-        "Lounge",
-        "Lounge Business",
-        "R-Line",
-        "R-Line Edition",
-        "Style",
-        "Style Edition",
-        "Style Exclusive",
-        "T-Roc",
-        "Trend",
-        "United",
-        "VW Edition"
+        "150I IQ.DRIVE",
+        "4MOTION ACTIVE",
+        "4MOTION CARAT",
+        "4MOTION CARAT EXCLUSIVE",
+        "4MOTION R-LINE",
+        "ACTIVE",
+        "BUSINESS",
+        "CARAT",
+        "CARAT 4MOTION",
+        "CARAT EXCLUSIVE",
+        "CARAT EXCLUSIVE 4MOTION",
+        "EVO ACTIVE",
+        "EVO CARAT",
+        "EVO CARAT EXCLUSIVE",
+        "EVO FIRST EDITION",
+        "EVO IQ.DRIVE",
+        "EVO LOUNGE",
+        "EVO LOUNGE BUSINESS",
+        "EVO R-LINE",
+        "EVO START/STOP LIFE",
+        "EVO START/STOP LIFE BUSINESS",
+        "EVO START/STOP LIFE PLUS",
+        "EVO START/STOP R-LINE",
+        "EVO START/STOP STYLE",
+        "EVO START/STOP STYLE EXCLUSIVE",
+        "EVO START/STOP VW EDITION",
+        "EVO UNITED",
+        "EVO2 START/STOP LIFE",
+        "EVO2 START/STOP LIFE PLUS",
+        "EVO2 START/STOP R-LINE",
+        "EVO2 START/STOP R-LINE EDITION",
+        "EVO2 START/STOP STYLE",
+        "EVO2 START/STOP STYLE EDITION",
+        "EVO2 START/STOP STYLE EXCLUSIVE",
+        "EVO2 START/STOP VW EDITION",
+        "FIRST EDITION 4MOTION",
+        "IQ.DRIVE",
+        "IQ.DRIVE 4MOTION",
+        "LOUNGE",
+        "LOUNGE 4MOTION",
+        "LOUNGE BUSINESS",
+        "LOUNGE BUSINESS 4MOTION",
+        "R-LINE",
+        "R-LINE 4MOTION",
+        "START/STOP",
+        "START/STOP 4MOTION STYLE",
+        "START/STOP 4MOTION STYLE EXCLUSIVE",
+        "START/STOP LIFE",
+        "START/STOP LIFE BUSINESS",
+        "START/STOP LIFE PLUS",
+        "START/STOP R-LINE",
+        "START/STOP R-LINE EDITION",
+        "START/STOP STYLE",
+        "START/STOP STYLE EDITION",
+        "START/STOP STYLE EXCLUSIVE",
+        "START/STOP T-ROC",
+        "START/STOP VW EDITION",
+        "UNITED",
+        "UNITED 4MOTION"
       ],
       "T-Cross": [
-        "Active",
-        "Carat",
-        "First Edition",
-        "Life",
-        "Life Business",
-        "Life Plus",
-        "Life Tech",
-        "Lounge",
-        "Lounge Business",
-        "R-Line",
-        "R-Line Edition",
-        "R-Line Tech",
-        "Style",
-        "United",
-        "VW Edition"
+        "ACTIVE",
+        "CARAT",
+        "FIRST EDITION",
+        "LOUNGE",
+        "LOUNGE BUSINESS",
+        "R-LINE",
+        "START/STOP LIFE",
+        "START/STOP LIFE BUSINESS",
+        "START/STOP LIFE PLUS",
+        "START/STOP LIFE TECH",
+        "START/STOP LOUNGE BUSINESS",
+        "START/STOP R-LINE",
+        "START/STOP R-LINE EDITION",
+        "START/STOP R-LINE TECH",
+        "START/STOP STYLE",
+        "START/STOP VW EDITION",
+        "T-CROSS START/STOP LIFE PLUS",
+        "T-CROSS START/STOP VW EDITION",
+        "UNITED"
       ],
       "Touareg": [
-        "Atmosphere",
-        "Carat",
-        "Carat Edition",
-        "Carat Exclusive",
-        "Edition",
-        "Elegance",
-        "R-Exclusive",
-        "R-Line",
-        "R-Line Edition",
-        "R-Line Exclusive",
-        "Ultimate"
+        "2.5 R5 TDI BV6",
+        "2.5 R5 TDI CARAT BV6",
+        "2.5 R5 TDI CARAT EDITION BV6",
+        "2.5 R5 TDI CARAT EDITION TIPTRONIC",
+        "2.5 R5 TDI CARAT EDITION TIPTRONIC 6",
+        "2.5 R5 TDI CARAT PACK LUXE",
+        "2.5 R5 TDI CARAT TIPTRONIC",
+        "2.5 R5 TDI EDITION ONE",
+        "2.5 R5 TDI EDITION ONE TIPTRONIC",
+        "2.5 R5 TDI TIPTRONIC",
+        "3.0 V6 TDI CARAT",
+        "3.0 V6 TDI CARAT EDITION TIPTRONIC",
+        "3.0 V6 TDI CARAT PACK LUXE",
+        "3.0 V6 TDI CARAT TIPTRONIC",
+        "3.0 V6 TDI CARAT TIPTRONIC 8",
+        "3.0 V6 TDI DPF EXECUTIVE TIPTRONIC",
+        "3.0 V6 TDI R-LINE II TIPTRONIC",
+        "3.0 V6 TDI R-LINE TIPTRONIC",
+        "3.0 V6 TDI TIPTRONIC",
+        "3.2 V6",
+        "3.2 V6 TIPTRONIC",
+        "3.6 V6 FSI",
+        "3.6 V6 FSI CARAT",
+        "3.6 V6 FSI CARAT EDITION TIPTRONIC",
+        "3.6 V6 FSI CARAT PACK LUXE",
+        "3.6 V6 FSI CARAT TIPTRONIC",
+        "3.6 V6 FSI EXECUTIVE TIPTRONIC",
+        "3.6 V6 FSI TIPTRONIC",
+        "4.2 V8 PACK",
+        "4.2 V8 PACK TIPTRONIC",
+        "4.2 V8 TIPTRONIC",
+        "5.0 V10 TDI DPF",
+        "5.0 V10 TDI DPF PACK",
+        "5.0 V10 TDI EDITION TIPTRONIC",
+        "5.0 V10 TDI R50 TIPTRONIC",
+        "5.0 V10 TDI TIPTRONIC",
+        "6.0 W12 EDITION TIPTRONIC",
+        "6.0 W12 SPORT EDITION",
+        "6.0 W12 SPORT TIPTRONIC",
+        "II (2) 3.0 V6 TDI 4MOTION BLUEMOTION TECHNOLOGY CARAT EDITION TIPTRONIC",
+        "II (2) 3.0 V6 TDI 4MOTION BLUEMOTION TECHNOLOGY CARAT EXCLUSIVE TIPTRONIC",
+        "II (2) 3.0 V6 TDI 4MOTION BLUEMOTION TECHNOLOGY CARAT TIPTRONIC",
+        "II (2) 3.0 V6 TDI BLUEMOTION TECHNOLOGY R-LINE TIPTRONIC",
+        "II (2) 3.0 V6 TDI CARAT EDITION TIPTRONIC",
+        "II (2) 3.0 V6 TDI CARAT EXCLUSIVE TIPTRONIC",
+        "II (2) 3.0 V6 TDI CARAT TIPTRONIC",
+        "II (2) 3.0 V6 TDI R-LINE TIPTRONIC",
+        "II (2) 3.0 V6 TDI TIPTRONIC",
+        "II (2) 3.0 V6 TDI ULTIMATE TIPTRONIC",
+        "II (2) 4.2 V8 TDI CARAT EDITION TIPTRONIC",
+        "II 3.0 V6 TDI 4MOTION BLUEMOTION TECHNOLOGY CARAT EDITION TIPTRONIC",
+        "II 3.0 V6 TDI 4MOTION BLUEMOTION TECHNOLOGY CARAT TIPTRONIC",
+        "II 3.0 V6 TDI BLUEMOTION TECHNOLOGY R-EXCLUSIVE TIPTRONIC",
+        "II 3.0 V6 TDI BLUEMOTION TECHNOLOGY R-LINE EDITION TIPTRONIC",
+        "II 3.0 V6 TDI CARAT EDITION TIPTRONIC",
+        "II 3.0 V6 TDI CARAT TIPTRONIC",
+        "II 3.0 V6 TDI EDITION TIPTRONIC",
+        "II 3.0 V6 TDI R-EXCLUSIVE TIPTRONIC",
+        "II 3.0 V6 TFSI HYBRID CARAT EDITION TIPTRONIC",
+        "II 3.6 V6 FSI CARAT EDITION TIPTRONIC",
+        "II 3.6 V6 FSI CARAT TIPTRONIC",
+        "II 3.6 V6 FSI R-EXCLUSIVE TIPTRONIC",
+        "II 4.2 V8 TDI CARAT EDITION TIPTRONIC",
+        "II 4.2 V8 TDI R-EXCLUSIVE TIPTRONIC",
+        "III 3.0 V6 TDI 4MOTION BLUEMOTION TECHNOLOGY CARAT EXCLUSIVE TIPTRONIC",
+        "III 3.0 V6 TDI 4WD",
+        "III 3.0 V6 TDI 4WD CARAT",
+        "III 3.0 V6 TDI 4WD CARAT EXCLUSIVE",
+        "III 3.0 V6 TDI 4WD R-LINE",
+        "III 3.0 V6 TDI 4WD R-LINE EXCLUSIVE",
+        "III 3.0 V6 TSI 4WD CARAT EXCLUSIVE",
+        "III 3.0 V6 TSI 4WD R-LINE EXCLUSIVE",
+        "III 4.0 V8 TDI 4WD CARAT EXCLUSIVE",
+        "III 4.0 V8 TDI 4WD R-LINE EXCLUSIVE",
+        "III 4MOTION CARAT EXCLUSIVE TIPTRONIC 8",
+        "III 4MOTION CARAT TIPTRONIC 8",
+        "III 4MOTION R-LINE EXCLUSIVE TIPTRONIC 8",
+        "III EHYBRID 4MOTION ATMOSPHERE TIPTRONIC 8",
+        "III EHYBRID 4MOTION ELEGANCE TIPTRONIC 8",
+        "III EHYBRID ATMOSPHERE",
+        "III EHYBRID ELEGANCE",
+        "R5 CARAT",
+        "R5 EXECUTIVE",
+        "R5 EXECUTIVE TIPTRONIC",
+        "R5 TIPTRONIC"
       ],
       "Touran": [
         "Active",
@@ -55069,14 +55964,18 @@
         "R"
       ],
       "Taigo": [
-        "1st Edition",
-        "Life",
-        "Life Business",
-        "Life Plus",
-        "R-Line",
-        "R-Line Edition",
-        "Style",
-        "VW Edition"
+        "1ST EDITION",
+        "LIFE",
+        "LIFE 2023",
+        "LIFE BUSINESS",
+        "LIFE BUSINESS 2022",
+        "LIFE PLUS",
+        "R-LINE",
+        "R-LINE 2023",
+        "R-LINE EDITION",
+        "STYLE",
+        "STYLE 2023",
+        "VW EDITION"
       ],
       "Golf GTI": [
         "GTI",
@@ -56215,274 +57114,86 @@
         "M Sport"
       ],
       "Série 8 Gran Coupé": [
-        "M Sport",
-        "Sport"
+        "M SPORT",
+        "M SPORT TECHNIC"
       ],
       "Série 8 Cabriolet": [
-        "M Sport",
-        "M Sport Pro"
+        "M SPORT",
+        "M SPORT TECHNIC"
       ],
       "X1": [
-        "23D M SPORT",
-        "23D M SPORT FIRST EDITION EXCLUSIVE",
-        "23D M SPORT FIRST EDITION PLUS",
-        "23D XLINE",
-        "23D XLINE FIRST EDITION EXCLUSIVE",
-        "23D XLINE FIRST EDITION PLUS",
-        "23I M SPORT",
-        "23I M SPORT FIRST EDITION EXCLUSIVE",
-        "23I M SPORT FIRST EDITION PLUS",
-        "23I XLINE",
-        "23I XLINE FIRST EDITION EXCLUSIVE",
-        "23I XLINE FIRST EDITION PLUS",
-        "25E BUSINESS DESIGN",
-        "25E LOUNGE",
-        "25E M SPORT",
-        "25E XLINE",
-        "30E BUSINESS DESIGN",
-        "30E M SPORT",
-        "30E XLINE",
-        "BUSINESS",
-        "BUSINESS DESIGN",
-        "BUSINESS DESIGN STEPTRONIC DCT8",
-        "LOUNGE",
-        "LOUNGE STEPTRONIC DCT8",
-        "M PERFORMANCE",
-        "M SPORT",
-        "M SPORT STEPTRONIC DCT8",
-        "PREMIERE",
-        "SDRIVE 18D",
-        "SDRIVE 18D BUSINESS DESIGN",
-        "SDRIVE 18D FIRST EDITION",
-        "SDRIVE 18D M SPORT",
-        "SDRIVE 18D M SPORT FIRST EDITION EXCLUSIVE",
-        "SDRIVE 18D M SPORT FIRST EDITION PLUS",
-        "SDRIVE 18D XLINE",
-        "SDRIVE 18D XLINE FIRST EDITION",
-        "SDRIVE 18D XLINE FIRST EDITION EXCLUSIVE",
-        "SDRIVE 18D XLINE FIRST EDITION PLUS",
-        "SDRIVE 18I",
-        "SDRIVE 18I BUSINESS DESIGN",
-        "SDRIVE 18I FIRST EDITION",
-        "SDRIVE 18I M SPORT",
-        "SDRIVE 18I M SPORT FIRST EDITION EXCLUSIVE",
-        "SDRIVE 18I M SPORT FIRST EDITION PLUS",
-        "SDRIVE 18I XLINE",
-        "SDRIVE 18I XLINE FIRST EDITION",
-        "SDRIVE 18I XLINE FIRST EDITION EXCLUSIVE",
-        "SDRIVE 18I XLINE FIRST EDITION PLUS",
-        "SDRIVE 20D",
-        "SDRIVE 20D BUSINESS DESIGN",
-        "SDRIVE 20D M SPORT",
-        "SDRIVE 20D XLINE",
-        "SDRIVE 20I",
-        "SDRIVE 20I BUSINESS DESIGN",
-        "SDRIVE 20I M SPORT",
-        "SDRIVE 20I XLINE",
-        "SPORT",
-        "SPORT STEPTRONIC DCT8",
-        "XDRIVE30 BUSINESS DESIGN KWH",
-        "XDRIVE30 KWH",
-        "XDRIVE30 M SPORT KWH",
-        "XDRIVE30 XLINE KWH",
-        "XLINE",
-        "XLINE STEPTRONIC DCT8"
-      ],
-      "X2": [
-        "18D BUSINESS DESIGN",
-        "18D GOLDPLAY EDITION",
-        "18D LOUNGE",
-        "18D LOUNGE PLUS",
-        "18D M MESH EDITION",
-        "18D M SPORT",
-        "18D M SPORT X",
-        "18D PREMIERE",
-        "20D BUSINESS DESIGN",
-        "20D GOLDPLAY EDITION",
-        "20D LOUNGE",
-        "20D LOUNGE PLUS",
-        "20D M MESH EDITION",
-        "20D M SPORT",
-        "20D M SPORT X",
-        "20D PREMIERE",
-        "20I BUSINESS DESIGN",
-        "20I LOUNGE",
-        "20I LOUNGE PLUS",
-        "20I M MESH EDITION",
-        "20I M SPORT",
-        "20I M SPORT X",
-        "20I PREMIERE",
-        "25D BUSINESS DESIGN",
-        "25D LOUNGE",
-        "25D M SPORT",
-        "25D M SPORT X",
-        "25D PREMIERE",
-        "25E BUSINESS DESIGN",
-        "25E EDITION GOLDPLAY",
-        "25E GOLDPLAY EDITION",
-        "25E LOUNGE",
-        "25E M MESH EDITION",
-        "25E M SPORT",
-        "25E M SPORT X",
-        "BUSINESS DESIGN",
-        "M PERFORMANCE",
-        "M SPORT",
-        "M SPORT X",
-        "PREMIERE",
-        "SDRIVE 16D BUSINESS DESIGN",
-        "SDRIVE 16D GOLDPLAY EDITION",
-        "SDRIVE 16D LOUNGE",
-        "SDRIVE 16D LOUNGE 2019",
-        "SDRIVE 16D LOUNGE PLUS",
-        "SDRIVE 16D M MESH EDITION",
-        "SDRIVE 16D M SPORT",
-        "SDRIVE 16D M SPORT X",
-        "SDRIVE 16D PREMIERE",
-        "SDRIVE 18D",
-        "SDRIVE 18D BUSINESS DESIGN",
-        "SDRIVE 18D GOLDPLAY EDITION",
-        "SDRIVE 18D LOUNGE",
-        "SDRIVE 18D LOUNGE 2019",
-        "SDRIVE 18D LOUNGE PLUS",
-        "SDRIVE 18D M MESH EDITION",
-        "SDRIVE 18D M SPORT",
-        "SDRIVE 18D M SPORT X",
-        "SDRIVE 18D PREMIERE",
-        "SDRIVE 18I BUSINESS DESIGN",
-        "SDRIVE 18I GOLDPLAY EDITION",
-        "SDRIVE 18I LOUNGE",
-        "SDRIVE 18I LOUNGE PLUS",
-        "SDRIVE 18I M MESH EDITION",
-        "SDRIVE 18I M SPORT",
-        "SDRIVE 18I M SPORT X",
-        "SDRIVE 18I PREMIERE",
-        "SDRIVE 18IA BUSINESS DESIGN",
-        "SDRIVE 18IA PREMIERE",
-        "SDRIVE 20D",
-        "SDRIVE 20D BUSINESS DESIGN",
-        "SDRIVE 20D LOUNGE",
-        "SDRIVE 20D LOUNGE PLUS",
-        "SDRIVE 20D M SPORT",
-        "SDRIVE 20D M SPORT X",
-        "SDRIVE 20D PREMIERE",
-        "SDRIVE 20I",
-        "SDRIVE 20I BUSINESS DESIGN",
-        "SDRIVE 20I GOLDPLAY EDITION",
-        "SDRIVE 20I LOUNGE",
-        "SDRIVE 20I LOUNGE PLUS",
-        "SDRIVE 20I M MESH EDITION",
-        "SDRIVE 20I M SPORT",
-        "SDRIVE 20I M SPORT X",
-        "SDRIVE 20I PREMIERE",
-        "SDRIVE 20IA BUSINESS DESIGN"
-      ],
-      "X3": [
-        "2.0I CONFORT",
-        "2.0I LUXE",
-        "2.0I PREMIERE",
-        "2.0I SPORT",
-        "2.5I LUXE",
-        "2.5I PREMIERE",
-        "2.5I SPORT",
-        "2.5IA CONFORT",
-        "2.5IA LUXE",
-        "2.5IA PREMIERE",
-        "2.5IA SPORT",
-        "20D X LINE",
-        "20I BUSINESS DESIGN",
-        "20I XLINE",
-        "3.0D CONFORT",
-        "3.0D LUXE",
-        "3.0D PREMIERE",
-        "3.0D SPORT",
-        "3.0DA CONFORT",
-        "3.0DA LUXE",
-        "3.0DA PREMIERE",
-        "3.0DA SPORT",
-        "3.0I",
-        "3.0I CONFORT",
-        "3.0I LUXE",
-        "3.0I PREMIERE",
-        "3.0I SPORT",
-        "3.0IA",
-        "3.0IA CONFORT",
-        "3.0IA LUXE",
-        "3.0IA SPORT",
-        "30D XLINE",
-        "30E BUSINESS DESIGN",
-        "30E M SPORT",
-        "30E X LINE",
         "BUSINESS",
         "BUSINESS DESIGN",
         "BUSINESS OPEN EDITION",
         "BUSINESS START EDITION",
-        "BUSINESS START EDITION BV6",
         "CONFORT",
-        "CONFORT ABSOLUTE EDITION",
-        "CONFORT OPEN EDITION",
-        "D CONFORT",
-        "D LUXE",
-        "D PREMIERE",
-        "D SPORT",
-        "EDITION AVANTAGE",
-        "EXCELLIS",
-        "EXCELLIS ABSOLUTE EDITION",
-        "EXCELLIS OPEN EDITION",
-        "EXCLUSIVE",
-        "EXCLUSIVE ABSOLUTE EDITION",
-        "EXCLUSIVE EDITION ABSOLUTE",
-        "EXCLUSIVE OPEN EDITION",
+        "EFFICIENTDYNAMICS EDITION BUSINESS",
+        "EFFICIENTDYNAMICS EDITION CONFORT",
+        "EFFICIENTDYNAMICS EDITION EXECUTIVE",
+        "EFFICIENTDYNAMICS EDITION LOUNGE",
+        "EFFICIENTDYNAMICS EDITION LOUNGE PLUS",
+        "EFFICIENTDYNAMICS EDITION LUXE",
+        "EFFICIENTDYNAMICS EDITION PREMIERE",
+        "EFFICIENTDYNAMICS EDITION SPORT",
+        "EFFICIENTDYNAMICS EDITION XLINE",
         "EXECUTIVE",
-        "EXECUTIVE ABSOLUTE EDITION",
         "EXECUTIVE OPEN EDITION",
         "EXECUTIVE START EDITION",
-        "EXECUTIVE START EDITION BV6",
-        "LIMITED SPORT EDITION",
+        "FIRST EDITION",
         "LOUNGE",
-        "LOUNGE ABSOLUTE EDITION",
-        "LOUNGE BV6",
         "LOUNGE OPEN EDITION",
         "LOUNGE PLUS",
-        "LOUNGE PLUS ABSOLUTE EDITION",
         "LOUNGE PLUS OPEN EDITION",
         "LOUNGE PLUS START EDITION",
-        "LOUNGE PLUS START EDITION BV6",
         "LOUNGE START EDITION",
-        "LOUNGE START EDITION BV6",
         "LUXE",
-        "LUXE ABSOLUTE EDITION",
-        "LUXE OPEN EDITION",
-        "LUXURY",
-        "LUXURY BV6",
+        "M PERFORMANCE",
         "M SPORT",
-        "M SPORT ABSOLUTE EDITION",
-        "M SPORT OPEN EDITION",
-        "M SPORT START EDITION",
         "PREMIERE",
-        "PREMIERE BV6",
-        "PREMIERE OR",
-        "SDRIVE 18D BUSINESS DESIGN",
-        "SDRIVE 18D XLINE",
+        "PURE DESIGN",
         "SPORT",
         "SPORT DESIGN",
-        "SPORT DESIGN ABSOLUTE EDITION",
-        "SPORT DESIGN EDITION ABSOLUTE",
-        "SPORT DESIGN OPEN EDITION",
-        "SPORT PACK SPORT M",
-        "XDRIVE35SDA",
-        "XDRIVE35SDA EXCELLIS",
-        "XDRIVE35SDA LIMITED SPORT EDITION",
-        "XDRIVE35SDA LUXE",
-        "XDRIVE35SDA SPORT",
-        "XDRIVE35SDA SPORT DESIGN",
         "XLINE",
-        "XLINE ABSOLUTE EDITION",
-        "XLINE BV6",
+        "XLINE FIRST EDITION",
         "XLINE OPEN EDITION",
-        "XLINE START EDITION",
-        "XLINE START EDITION BV6"
+        "XLINE START EDITION"
       ],
-      "X3 M": [],
+      "X2": [
+        "BUSINESS DESIGN",
+        "EDITION GOLDPLAY",
+        "GOLDPLAY EDITION",
+        "LOUNGE",
+        "LOUNGE PLUS",
+        "M MESH EDITION",
+        "M PERFORMANCE",
+        "M SPORT",
+        "M SPORT X",
+        "PREMIERE"
+      ],
+      "X3": [
+        "BUSINESS",
+        "BUSINESS DESIGN",
+        "BUSINESS OPEN EDITION",
+        "BUSINESS START EDITION",
+        "CONFORT",
+        "EDITION AVANTAGE",
+        "EXCELLIS",
+        "EXCLUSIVE",
+        "EXECUTIVE",
+        "LIMITED SPORT EDITION",
+        "LOUNGE",
+        "LOUNGE PLUS",
+        "LUXE",
+        "LUXURY",
+        "M SPORT",
+        "PREMIERE",
+        "SPORT",
+        "SPORT DESIGN",
+        "XLINE"
+      ],
+      "X3 M": [
+        "COMPETITION"
+      ],
       "X4": [
         "BUSINESS DESIGN",
         "LOUNGE",
@@ -56557,10 +57268,7 @@
         "Competition"
       ],
       "M8": [
-        "Coupé",
-        "Gran Coupé",
-        "Cabriolet",
-        "Competition"
+        "COMPETITION"
       ],
       "M135i": [
         "M Sport"
@@ -56799,6 +57507,10 @@
         "CABRIOLET PACK LUXE",
         "CABRIOLET SEQUENTIELLE",
         "CABRIOLET SPORT DESIGN"
+      ],
+      "Série 8 Coupé": [
+        "M SPORT",
+        "M SPORT TECHNIC"
       ]
     },
     "Mercedes": {
