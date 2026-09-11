@@ -28120,6 +28120,130 @@
           "yearStart": 2022,
           "yearEnd": 2026
         }
+      ],
+      "A3 2e Génération": [
+        {
+          "name": "1.4 TFSI 125",
+          "fuel": "Essence",
+          "yearStart": 2003,
+          "yearEnd": 2012
+        },
+        {
+          "name": "1.6 102",
+          "fuel": "Essence",
+          "yearStart": 2006,
+          "yearEnd": 2009
+        },
+        {
+          "name": "2.0 TFSI 200",
+          "fuel": "Essence",
+          "yearStart": 2005,
+          "yearEnd": 2012
+        },
+        {
+          "name": "1.9 TDI 105",
+          "fuel": "Diesel",
+          "yearStart": 2003,
+          "yearEnd": 2009
+        },
+        {
+          "name": "2.0 TDI 140",
+          "fuel": "Diesel",
+          "yearStart": 2003,
+          "yearEnd": 2012
+        },
+        {
+          "name": "1.2 TFSI 105",
+          "fuel": "Essence",
+          "yearStart": 2010,
+          "yearEnd": 2012
+        },
+        {
+          "name": "1.8 TFSI 160",
+          "fuel": "Essence",
+          "yearStart": 2006,
+          "yearEnd": 2012
+        },
+        {
+          "name": "1.6 TDI 90",
+          "fuel": "Diesel",
+          "yearStart": 2009,
+          "yearEnd": 2012
+        },
+        {
+          "name": "1.6 TDI 105",
+          "fuel": "Diesel",
+          "yearStart": 2006,
+          "yearEnd": 2012
+        },
+        {
+          "name": "2.0 TDI 170",
+          "fuel": "Diesel",
+          "yearStart": 2006,
+          "yearEnd": 2012
+        }
+      ],
+      "A3 Sportback 2e Génération": [
+        {
+          "name": "1.4 TFSI 125",
+          "fuel": "Essence",
+          "yearStart": 2007,
+          "yearEnd": 2012
+        },
+        {
+          "name": "1.6 102",
+          "fuel": "Essence",
+          "yearStart": 2004,
+          "yearEnd": 2012
+        },
+        {
+          "name": "2.0 TFSI 200",
+          "fuel": "Essence",
+          "yearStart": 2006,
+          "yearEnd": 2012
+        },
+        {
+          "name": "1.9 TDI 105",
+          "fuel": "Diesel",
+          "yearStart": 2004,
+          "yearEnd": 2009
+        },
+        {
+          "name": "2.0 TDI 140",
+          "fuel": "Diesel",
+          "yearStart": 2004,
+          "yearEnd": 2013
+        },
+        {
+          "name": "1.2 TFSI 105",
+          "fuel": "Essence",
+          "yearStart": 2010,
+          "yearEnd": 2012
+        },
+        {
+          "name": "1.8 TFSI 160",
+          "fuel": "Essence",
+          "yearStart": 2006,
+          "yearEnd": 2012
+        },
+        {
+          "name": "1.6 TDI 90",
+          "fuel": "Diesel",
+          "yearStart": 2009,
+          "yearEnd": 2012
+        },
+        {
+          "name": "1.6 TDI 105",
+          "fuel": "Diesel",
+          "yearStart": 2009,
+          "yearEnd": 2012
+        },
+        {
+          "name": "2.0 TDI 170",
+          "fuel": "Diesel",
+          "yearStart": 2006,
+          "yearEnd": 2012
+        }
       ]
     },
     "Ford": {
@@ -54859,6 +54983,34 @@
         "S line Competition Plus",
         "Avus",
         "Business Line"
+      ],
+      "A3 2e Génération": [
+        "Advanced Edition",
+        "Advanced Edition Plus",
+        "Ambiente",
+        "Ambition",
+        "Ambition Luxe",
+        "Attraction",
+        "Business Line",
+        "Design Edition",
+        "Exclusive Line",
+        "S Line",
+        "S Line Plus",
+        "Streamline"
+      ],
+      "A3 Sportback 2e Génération": [
+        "Advanced Edition",
+        "Advanced Edition Plus",
+        "Ambiente",
+        "Ambition",
+        "Ambition Luxe",
+        "Attraction",
+        "Business Line",
+        "Design Edition",
+        "Exclusive Line",
+        "S Line",
+        "S Line Plus",
+        "Streamline"
       ]
     },
     "Fiat": {
