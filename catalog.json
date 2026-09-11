@@ -29849,6 +29849,459 @@
           "fuel": "Essence",
           "yearStart": 2025
         }
+      ],
+      "A6 Avant 3e Génération": [
+        {
+          "name": "2.0 TDI 136",
+          "fuel": "Diesel",
+          "yearStart": 2008
+        },
+        {
+          "name": "2.0 TDI 140",
+          "fuel": "Diesel",
+          "yearStart": 2005
+        },
+        {
+          "name": "2.0 TDI 170",
+          "fuel": "Diesel",
+          "yearStart": 2008
+        },
+        {
+          "name": "2.7 TDI 180",
+          "fuel": "Diesel",
+          "yearStart": 2005,
+          "yearEnd": 2008
+        },
+        {
+          "name": "2.7 TDI 190",
+          "fuel": "Diesel",
+          "yearStart": 2008
+        },
+        {
+          "name": "3.0 TDI 224",
+          "fuel": "Diesel",
+          "yearStart": 2006,
+          "yearEnd": 2006
+        },
+        {
+          "name": "3.0 TDI 225",
+          "fuel": "Diesel",
+          "yearStart": 2005,
+          "yearEnd": 2006
+        },
+        {
+          "name": "3.0 TDI 233",
+          "fuel": "Diesel",
+          "yearStart": 2006,
+          "yearEnd": 2008
+        },
+        {
+          "name": "3.0 TDI 240",
+          "fuel": "Diesel",
+          "yearStart": 2008
+        },
+        {
+          "name": "2.0 TFSI 170",
+          "fuel": "Essence",
+          "yearStart": 2005
+        },
+        {
+          "name": "2.8 FSI 190",
+          "fuel": "Essence",
+          "yearStart": 2008
+        },
+        {
+          "name": "2.8 FSI 210",
+          "fuel": "Essence",
+          "yearStart": 2006,
+          "yearEnd": 2008
+        },
+        {
+          "name": "2.8 FSI 220",
+          "fuel": "Essence",
+          "yearStart": 2008
+        },
+        {
+          "name": "3.0 FSI 290",
+          "fuel": "Essence",
+          "yearStart": 2008
+        },
+        {
+          "name": "3.0 TFSI 290",
+          "fuel": "Essence",
+          "yearStart": 2009
+        },
+        {
+          "name": "3.2 FSI 255",
+          "fuel": "Essence",
+          "yearStart": 2007,
+          "yearEnd": 2007
+        },
+        {
+          "name": "3.2 FSI 256",
+          "fuel": "Essence",
+          "yearStart": 2005,
+          "yearEnd": 2007
+        }
+      ],
+      "A6 4e Génération": [
+        {
+          "name": "2.0 TDI 136",
+          "fuel": "Diesel",
+          "yearStart": 2013,
+          "yearEnd": 2014
+        },
+        {
+          "name": "2.0 TDI 150",
+          "fuel": "Diesel",
+          "yearStart": 2014
+        },
+        {
+          "name": "2.0 TDI 177",
+          "fuel": "Diesel",
+          "yearStart": 2011,
+          "yearEnd": 2014
+        },
+        {
+          "name": "2.0 TDI 190",
+          "fuel": "Diesel",
+          "yearStart": 2014
+        },
+        {
+          "name": "3.0 TDI 204",
+          "fuel": "Diesel",
+          "yearStart": 2011,
+          "yearEnd": 2014
+        },
+        {
+          "name": "3.0 TDI 218",
+          "fuel": "Diesel",
+          "yearStart": 2014
+        },
+        {
+          "name": "3.0 TDI 245",
+          "fuel": "Diesel",
+          "yearStart": 2011,
+          "yearEnd": 2014
+        },
+        {
+          "name": "3.0 TDI 272",
+          "fuel": "Diesel",
+          "yearStart": 2014
+        },
+        {
+          "name": "3.0 TDI 320",
+          "fuel": "Diesel",
+          "yearStart": 2014,
+          "yearEnd": 2015
+        },
+        {
+          "name": "1.8 TFSI 190",
+          "fuel": "Essence",
+          "yearStart": 2014,
+          "yearEnd": 2016
+        },
+        {
+          "name": "2.0 TFSI 170",
+          "fuel": "Essence",
+          "yearStart": 2011,
+          "yearEnd": 2011
+        },
+        {
+          "name": "2.0 TFSI 180",
+          "fuel": "Essence",
+          "yearStart": 2011,
+          "yearEnd": 2014
+        },
+        {
+          "name": "2.0 TFSI 252",
+          "fuel": "Essence",
+          "yearStart": 2014
+        },
+        {
+          "name": "2.8 FSI 204",
+          "fuel": "Essence",
+          "yearStart": 2011,
+          "yearEnd": 2014
+        },
+        {
+          "name": "3.0 TFSI 300",
+          "fuel": "Essence",
+          "yearStart": 2011,
+          "yearEnd": 2014
+        },
+        {
+          "name": "3.0 TFSI 310",
+          "fuel": "Essence",
+          "yearStart": 2014,
+          "yearEnd": 2014
+        },
+        {
+          "name": "3.0 TFSI 333",
+          "fuel": "Essence",
+          "yearStart": 2014,
+          "yearEnd": 2016
+        }
+      ],
+      "A6 Avant 4e Génération": [
+        {
+          "name": "2.0 TDI 136",
+          "fuel": "Diesel",
+          "yearStart": 2013,
+          "yearEnd": 2014
+        },
+        {
+          "name": "2.0 TDI 150",
+          "fuel": "Diesel",
+          "yearStart": 2014
+        },
+        {
+          "name": "2.0 TDI 177",
+          "fuel": "Diesel",
+          "yearStart": 2011,
+          "yearEnd": 2014
+        },
+        {
+          "name": "2.0 TDI 190",
+          "fuel": "Diesel",
+          "yearStart": 2014
+        },
+        {
+          "name": "3.0 TDI 204",
+          "fuel": "Diesel",
+          "yearStart": 2011,
+          "yearEnd": 2014
+        },
+        {
+          "name": "3.0 TDI 218",
+          "fuel": "Diesel",
+          "yearStart": 2014
+        },
+        {
+          "name": "3.0 TDI 245",
+          "fuel": "Diesel",
+          "yearStart": 2011,
+          "yearEnd": 2014
+        },
+        {
+          "name": "3.0 TDI 272",
+          "fuel": "Diesel",
+          "yearStart": 2014
+        },
+        {
+          "name": "3.0 TDI 313",
+          "fuel": "Diesel",
+          "yearStart": 2014,
+          "yearEnd": 2015
+        },
+        {
+          "name": "1.8 TFSI 190",
+          "fuel": "Essence",
+          "yearStart": 2014,
+          "yearEnd": 2016
+        },
+        {
+          "name": "2.0 TFSI 180",
+          "fuel": "Essence",
+          "yearStart": 2011,
+          "yearEnd": 2014
+        },
+        {
+          "name": "2.0 TFSI 252",
+          "fuel": "Essence",
+          "yearStart": 2014
+        },
+        {
+          "name": "2.8 FSI 204",
+          "fuel": "Essence",
+          "yearStart": 2011,
+          "yearEnd": 2014
+        },
+        {
+          "name": "3.0 TFSI 300",
+          "fuel": "Essence",
+          "yearStart": 2011,
+          "yearEnd": 2013
+        },
+        {
+          "name": "3.0 TFSI 310",
+          "fuel": "Essence",
+          "yearStart": 2011,
+          "yearEnd": 2014
+        },
+        {
+          "name": "3.0 TFSI 333",
+          "fuel": "Essence",
+          "yearStart": 2014,
+          "yearEnd": 2016
+        }
+      ],
+      "A6 5e Génération": [
+        {
+          "name": "2.0 TDI 163",
+          "fuel": "Diesel",
+          "yearStart": 2019
+        },
+        {
+          "name": "2.0 TDI 204",
+          "fuel": "Diesel",
+          "yearStart": 2018
+        },
+        {
+          "name": "3.0 TDI 231",
+          "fuel": "Diesel",
+          "yearStart": 2018,
+          "yearEnd": 2025
+        },
+        {
+          "name": "3.0 TDI 245",
+          "fuel": "Diesel",
+          "yearStart": 2021
+        },
+        {
+          "name": "3.0 TDI 286",
+          "fuel": "Diesel",
+          "yearStart": 2018
+        },
+        {
+          "name": "2.0 TFSI 245",
+          "fuel": "Essence",
+          "yearStart": 2019,
+          "yearEnd": 2020
+        },
+        {
+          "name": "2.0 TFSI 265",
+          "fuel": "Essence",
+          "yearStart": 2020,
+          "yearEnd": 2025
+        },
+        {
+          "name": "3.0 TFSI 340",
+          "fuel": "Essence",
+          "yearStart": 2018,
+          "yearEnd": 2025
+        }
+      ],
+      "A6 Avant 5e Génération": [
+        {
+          "name": "2.0 TDI 163",
+          "fuel": "Diesel",
+          "yearStart": 2019
+        },
+        {
+          "name": "2.0 TDI 204",
+          "fuel": "Diesel",
+          "yearStart": 2018
+        },
+        {
+          "name": "3.0 TDI 231",
+          "fuel": "Diesel",
+          "yearStart": 2018,
+          "yearEnd": 2025
+        },
+        {
+          "name": "3.0 TDI 245",
+          "fuel": "Diesel",
+          "yearStart": 2021,
+          "yearEnd": 2025
+        },
+        {
+          "name": "3.0 TDI 286",
+          "fuel": "Diesel",
+          "yearStart": 2018,
+          "yearEnd": 2025
+        },
+        {
+          "name": "3.0 TDI 344",
+          "fuel": "Diesel",
+          "yearStart": 2023,
+          "yearEnd": 2025
+        },
+        {
+          "name": "2.0 TFSI 245",
+          "fuel": "Essence",
+          "yearStart": 2019,
+          "yearEnd": 2020
+        },
+        {
+          "name": "2.0 TFSI 265",
+          "fuel": "Essence",
+          "yearStart": 2020
+        },
+        {
+          "name": "3.0 TFSI 340",
+          "fuel": "Essence",
+          "yearStart": 2019,
+          "yearEnd": 2025
+        }
+      ],
+      "A6 Avant 6e Génération": [
+        {
+          "name": "2.0 TDI 204",
+          "fuel": "Diesel",
+          "yearStart": 2025
+        },
+        {
+          "name": "3.0 TDI 299",
+          "fuel": "Diesel",
+          "yearStart": 2025
+        },
+        {
+          "name": "2.0 TFSI 299",
+          "fuel": "Essence",
+          "yearStart": 2025
+        },
+        {
+          "name": "2.0 TFSI 367",
+          "fuel": "Essence",
+          "yearStart": 2025
+        }
+      ],
+      "A6 6e Génération": [
+        {
+          "name": "2.0 TDI 204",
+          "fuel": "Diesel",
+          "yearStart": 2025
+        },
+        {
+          "name": "3.0 TDI 299",
+          "fuel": "Diesel",
+          "yearStart": 2025
+        },
+        {
+          "name": "2.0 TFSI 299",
+          "fuel": "Essence",
+          "yearStart": 2025
+        },
+        {
+          "name": "2.0 TFSI 367",
+          "fuel": "Essence",
+          "yearStart": 2025
+        }
+      ],
+      "A6 e-tron Sportback 6e Génération": [
+        {
+          "name": "E-TRON 285",
+          "fuel": "Électrique",
+          "yearStart": 2024
+        },
+        {
+          "name": "E-TRON 428",
+          "fuel": "Électrique",
+          "yearStart": 2024
+        }
+      ],
+      "A6 e-tron Avant 6e Génération": [
+        {
+          "name": "E-TRON 285",
+          "fuel": "Électrique",
+          "yearStart": 2024
+        },
+        {
+          "name": "E-TRON 428",
+          "fuel": "Électrique",
+          "yearStart": 2024
+        }
       ]
     },
     "Ford": {
@@ -56825,6 +57278,208 @@
       "A5 3e Génération": [
         "BUSINESS EXECUTIVE",
         "DESIGN",
+        "S LINE"
+      ],
+      "A6 Avant 3e Génération": [
+        ". AMBIENTE",
+        ". AMBIENTE PLUS",
+        ". AMBITION",
+        ". AMBITION LUXE",
+        ". ATTRACTION",
+        ". EXCLUSIVE LINE",
+        ". FSI AMBIENTE",
+        ". FSI AMBITION",
+        ". FSI AMBITION LUXE",
+        ". FSI ATTRACTION",
+        ". FSI EXCLUSIVE LINE",
+        ". FSI S LINE",
+        ". S LINE",
+        ". T FSI AMBIENTE",
+        ". T FSI AMBITION",
+        ". T FSI AMBITION LUXE",
+        ". T FSI ATTRACTION",
+        ". TDI AMBIENTE",
+        ". TDI AMBITION",
+        ". TDI AMBITION LUXE",
+        ". TDI ATTRACTION",
+        ". TDI DPF AMBIENTE",
+        ". TDI DPF ATTRACTION",
+        ". TDI DPF AVUS",
+        ". TDI DPF EXCLUSIVE LINE",
+        ". TDI DPF S LINE",
+        ". TDI E AMBITION LUXE",
+        ". TDI E DPF ADVANCED EDITION",
+        ". TDI E DPF ADVANCED EDITION PLUS",
+        ". TDI E DPF AMBIENTE",
+        ". TDI E DPF BUSINESS LINE",
+        ". TDI E DPF S LINE",
+        ". TDI EXCLUSIVE LINE",
+        ". TDI FAP AMBIENTE",
+        ". TDI FAP AMBITION",
+        ". TDI FAP AMBITION LUXE",
+        ". TDI FAP ATTRACTION",
+        ". TDI FAP S LINE",
+        ". TDI S LINE",
+        ". V6 TDI AMBIENTE",
+        ". V6 TDI AMBITION",
+        ". V6 TDI ATTRACTION",
+        ". V6 TDI EXCLUSIVE LINE",
+        ". V8 AMBITION LUXE",
+        ". V8 AVUS",
+        ". V8 EXCLUSIVE LINE",
+        "ADVANCED EDITION",
+        "ADVANCED EDITION PLUS",
+        "AMBIENTE",
+        "AMBIENTE PLUS",
+        "AMBITION",
+        "AMBITION LUXE",
+        "ATTRACTION",
+        "AVUS",
+        "BUSINESS LINE",
+        "DPF",
+        "DPF ADVANCED EDITION",
+        "DPF ADVANCED EDITION PLUS",
+        "DPF AMBIENTE",
+        "DPF AMBIENTE PACK PLUS",
+        "DPF AMBIENTE PLUS",
+        "DPF AMBITION",
+        "DPF AMBITION LUXE",
+        "DPF ATTRACTION",
+        "DPF AVUS",
+        "DPF BUSINESS LINE",
+        "DPF EXCLUSIVE LINE",
+        "DPF S LINE",
+        "DPF S LINE PLUS",
+        "DPF SPORT PLUS EDITION",
+        "EXCLUSIVE LINE",
+        "S LINE",
+        "S LINE PLUS",
+        "SPORT PLUS EDITION"
+      ],
+      "A6 4e Génération": [
+        ". BITDI AMBITION LUXE",
+        ". BITDI AVUS",
+        ". BITDI COMPETITION",
+        ". BITDI S LINE",
+        ". TDI CLEAN DIESEL AMBIENTE",
+        ". TDI CLEAN DIESEL AMBITION LUXE",
+        ". TDI CLEAN DIESEL AVUS",
+        ". TDI CLEAN DIESEL BUSINESS EXECUTIVE",
+        ". TDI CLEAN DIESEL BUSINESS LINE",
+        ". TDI CLEAN DIESEL S LINE",
+        ". TFSI HYBRID",
+        ". TFSI HYBRID AVUS",
+        ". TSI AMBIENTE",
+        ". TSI AVUS",
+        ". TSI S LINE",
+        "AMBIENTE",
+        "AMBITION LUXE",
+        "AVUS",
+        "BUSINESS EXECUTIVE",
+        "BUSINESS LINE",
+        "CLEAN DIESEL AMBITION LUXE",
+        "S LINE",
+        "ULTRA AMBIENTE",
+        "ULTRA AMBITION LUXE",
+        "ULTRA AVUS",
+        "ULTRA BUSINESS EXECUTIVE",
+        "ULTRA BUSINESS LINE",
+        "ULTRA S LINE"
+      ],
+      "A6 Avant 4e Génération": [
+        ". BITDI AMBIENTE",
+        ". BITDI AMBITION LUXE",
+        ". BITDI AVUS",
+        ". BITDI COMPETITION",
+        ". BITDI S LINE",
+        ". TDI CLEAN DIESEL AMBIENTE",
+        ". TDI CLEAN DIESEL AMBITION LUXE",
+        ". TDI CLEAN DIESEL AVUS",
+        ". TDI CLEAN DIESEL BUSINESS EXECUTIVE",
+        ". TDI CLEAN DIESEL BUSINESS LINE",
+        ". TDI CLEAN DIESEL S LINE",
+        "AMBIENTE",
+        "AMBITION LUXE",
+        "AVUS",
+        "BUSINESS EXECUTIVE",
+        "BUSINESS LINE",
+        "CLEAN DIESEL AMBITION LUXE",
+        "S LINE",
+        "ULTRA AMBIENTE",
+        "ULTRA AMBITION LUXE",
+        "ULTRA AVUS",
+        "ULTRA BUSINESS EXECUTIVE",
+        "ULTRA BUSINESS LINE",
+        "ULTRA S LINE"
+      ],
+      "A6 5e Génération": [
+        ". DESIGN",
+        ". TDI V6 DESIGN",
+        ". TFSIE",
+        ". TFSIE AVUS EXTENDED",
+        ". TFSIE BUSINESS EXECUTIVE",
+        ". TFSIE COMPETITION",
+        ". TFSIE S LINE",
+        "152G",
+        "ADVANCED",
+        "AVUS",
+        "AVUS EXTENDED",
+        "BUSINESS EXECUTIVE",
+        "S LINE",
+        "TDI V6 ADVANCED",
+        "TDI V6 AVUS",
+        "TDI V6 BUSINESS EXECUTIVE",
+        "TDI V6 S LINE",
+        "TFSIE",
+        "TFSIE AVUS",
+        "TFSIE AVUS EXTENDED",
+        "TFSIE BUSINESS EXECUTIVE",
+        "TFSIE COMPETITION",
+        "TFSIE S LINE"
+      ],
+      "A6 Avant 5e Génération": [
+        ". DESIGN",
+        ". TDI V6 DESIGN",
+        ". TFSIE",
+        ". TFSIE AVUS EXTENDED",
+        ". TFSIE BUSINESS EXECUTIVE",
+        ". TFSIE COMPETITION",
+        ". TFSIE S LINE",
+        "ADVANCED",
+        "AVUS",
+        "AVUS EXTENDED",
+        "BUSINESS EXECUTIVE",
+        "S LINE",
+        "TDI S LINE",
+        "TDI V6 ADVANCED",
+        "TDI V6 AVUS",
+        "TDI V6 BUSINESS EXECUTIVE",
+        "TDI V6 S LINE",
+        "TFSIE",
+        "TFSIE AVUS",
+        "TFSIE AVUS EXTENDED",
+        "TFSIE BUSINESS EXECUTIVE",
+        "TFSIE COMPETITION",
+        "TFSIE S LINE"
+      ],
+      "A6 Avant 6e Génération": [
+        "BUSINESS EXECUTIVE",
+        "S LINE"
+      ],
+      "A6 6e Génération": [
+        "BUSINESS EXECUTIVE",
+        "S LINE"
+      ],
+      "A6 e-tron Sportback 6e Génération": [
+        "DESIGN",
+        "E-TRON PERFORMANCE DESIGN",
+        "E-TRON PERFORMANCE S LINE",
+        "S LINE"
+      ],
+      "A6 e-tron Avant 6e Génération": [
+        "DESIGN",
+        "E-TRON PERFORMANCE DESIGN",
+        "E-TRON PERFORMANCE S LINE",
         "S LINE"
       ]
     },
