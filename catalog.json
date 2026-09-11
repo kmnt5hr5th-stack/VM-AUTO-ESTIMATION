@@ -16886,6 +16886,34 @@
           "fuel": "Essence",
           "yearStart": 2020
         }
+      ],
+      "X4 F26 (2014-2018)": [
+        {
+          "name": "2.0 TDI 190",
+          "fuel": "Diesel",
+          "yearStart": 2014
+        },
+        {
+          "name": "3.0 TDI 258",
+          "fuel": "Diesel",
+          "yearStart": 2014
+        },
+        {
+          "name": "3.0 TDI 313",
+          "fuel": "Diesel",
+          "yearStart": 2014
+        },
+        {
+          "name": "2.0 i 245",
+          "fuel": "Essence",
+          "yearStart": 2014
+        },
+        {
+          "name": "3.0 i 306",
+          "fuel": "Essence",
+          "yearStart": 2014,
+          "yearEnd": 2015
+        }
       ]
     },
     "Tesla": {
@@ -57662,6 +57690,12 @@
       ],
       "X5 M F95 (2020-2026)": [
         "M COMPETITION"
+      ],
+      "X4 F26 (2014-2018)": [
+        "LOUNGE PLUS",
+        "LOUNGE PLUS BVM6",
+        "XLINE",
+        "XLINE BVM6"
       ]
     },
     "Mercedes": {
