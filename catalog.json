@@ -28839,6 +28839,44 @@
           "yearStart": 2006,
           "yearEnd": 2007
         }
+      ],
+      "A4 Cabriolet 3e Génération": [
+        {
+          "name": "1.8 T 163",
+          "fuel": "Essence",
+          "yearStart": 2006,
+          "yearEnd": 2009
+        },
+        {
+          "name": "2.0 TFSI 200",
+          "fuel": "Essence",
+          "yearStart": 2006,
+          "yearEnd": 2009
+        },
+        {
+          "name": "3.2 FSI 256",
+          "fuel": "Essence",
+          "yearStart": 2006,
+          "yearEnd": 2009
+        },
+        {
+          "name": "2.0 TDI 140",
+          "fuel": "Diesel",
+          "yearStart": 2006,
+          "yearEnd": 2009
+        },
+        {
+          "name": "2.7 TDI 180",
+          "fuel": "Diesel",
+          "yearStart": 2006,
+          "yearEnd": 2009
+        },
+        {
+          "name": "3.0 TDI 233",
+          "fuel": "Diesel",
+          "yearStart": 2006,
+          "yearEnd": 2009
+        }
       ]
     },
     "Ford": {
@@ -55698,6 +55736,13 @@
         "Exclusive Line",
         "S Line",
         "Sélection"
+      ],
+      "A4 Cabriolet 3e Génération": [
+        "Ambiente",
+        "Ambition Luxe",
+        "Attraction",
+        "Design Edition",
+        "S Line"
       ]
     },
     "Fiat": {
