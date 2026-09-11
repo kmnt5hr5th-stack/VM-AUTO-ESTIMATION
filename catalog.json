@@ -31041,6 +31041,118 @@
           "yearStart": 2006,
           "yearEnd": 2010
         }
+      ],
+      "Q7 2e Génération": [
+        {
+          "name": "3.0 TDI 218",
+          "fuel": "Diesel",
+          "yearStart": 2015,
+          "yearEnd": 2018
+        },
+        {
+          "name": "3.0 TDI 231",
+          "fuel": "Diesel",
+          "yearStart": 2018,
+          "yearEnd": 2021
+        },
+        {
+          "name": "3.0 TDI 272",
+          "fuel": "Diesel",
+          "yearStart": 2015,
+          "yearEnd": 2018
+        },
+        {
+          "name": "3.0 TDI 286",
+          "fuel": "Diesel",
+          "yearStart": 2018
+        },
+        {
+          "name": "3.0 TFSI 333",
+          "fuel": "Essence",
+          "yearStart": 2015,
+          "yearEnd": 2016
+        },
+        {
+          "name": "3.0 TFSI 340",
+          "fuel": "Essence",
+          "yearStart": 2019,
+          "yearEnd": 2021
+        },
+        {
+          "name": "3.0 TFSI 341",
+          "fuel": "Essence",
+          "yearStart": 2022
+        },
+        {
+          "name": "3.0 TFSI 354",
+          "fuel": "Essence",
+          "yearStart": 2020
+        },
+        {
+          "name": "4.0 TFSI 460",
+          "fuel": "Essence",
+          "yearStart": 2019,
+          "yearEnd": 2025
+        },
+        {
+          "name": "E-TRON 373",
+          "fuel": "Électrique",
+          "yearStart": 2016,
+          "yearEnd": 2018
+        }
+      ],
+      "Q8 1e Génération": [
+        {
+          "name": "3.0 TDI 231",
+          "fuel": "Diesel",
+          "yearStart": 2019,
+          "yearEnd": 2021
+        },
+        {
+          "name": "3.0 TDI 286",
+          "fuel": "Diesel",
+          "yearStart": 2018,
+          "yearEnd": 2025
+        },
+        {
+          "name": "3.0 TFSI 340",
+          "fuel": "Essence",
+          "yearStart": 2019,
+          "yearEnd": 2021
+        },
+        {
+          "name": "3.0 TFSI 341",
+          "fuel": "Essence",
+          "yearStart": 2022,
+          "yearEnd": 2025
+        },
+        {
+          "name": "3.0 TFSI 381",
+          "fuel": "Essence",
+          "yearStart": 2019
+        },
+        {
+          "name": "3.0 TFSI 394",
+          "fuel": "Essence",
+          "yearStart": 2024
+        },
+        {
+          "name": "3.0 TFSI 490",
+          "fuel": "Essence",
+          "yearStart": 2025
+        },
+        {
+          "name": "4.0 TFSI 462",
+          "fuel": "Essence",
+          "yearStart": 2020,
+          "yearEnd": 2022
+        },
+        {
+          "name": "4.0 TFSI 490",
+          "fuel": "Essence",
+          "yearStart": 2024,
+          "yearEnd": 2025
+        }
       ]
     },
     "Ford": {
@@ -58551,6 +58663,19 @@
         "CLEAN DIESEL SPORT DESIGN 7PL",
         "SPORT DESIGN 6PL",
         "SPORT DESIGN 7PL"
+      ],
+      "Q7 2e Génération": [
+        "ADVANCED",
+        "AMBITION LUXE",
+        "AVUS",
+        "AVUS EXTENDED",
+        "COMPETITION"
+      ],
+      "Q8 1e Génération": [
+        "ADVANCED",
+        "AVUS",
+        "AVUS EXTENDED",
+        "COMPETITION"
       ]
     },
     "Fiat": {
