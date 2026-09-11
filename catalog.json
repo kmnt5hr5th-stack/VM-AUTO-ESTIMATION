@@ -28374,6 +28374,98 @@
           "yearStart": 2017,
           "yearEnd": 2021
         }
+      ],
+      "A3 3e Génération": [
+        {
+          "name": "1.2 TFSI 105",
+          "fuel": "Essence",
+          "yearStart": 2012,
+          "yearEnd": 2014
+        },
+        {
+          "name": "1.2 TFSI 110",
+          "fuel": "Essence",
+          "yearStart": 2014,
+          "yearEnd": 2016
+        },
+        {
+          "name": "1.4 TFSI 122",
+          "fuel": "Essence",
+          "yearStart": 2012,
+          "yearEnd": 2014
+        },
+        {
+          "name": "1.4 TFSI 125",
+          "fuel": "Essence",
+          "yearStart": 2014,
+          "yearEnd": 2016
+        },
+        {
+          "name": "1.4 TFSI 140",
+          "fuel": "Essence",
+          "yearStart": 2013,
+          "yearEnd": 2014
+        },
+        {
+          "name": "1.8 TFSI 180",
+          "fuel": "Essence",
+          "yearStart": 2012,
+          "yearEnd": 2016
+        },
+        {
+          "name": "1.6 TDI 105",
+          "fuel": "Diesel",
+          "yearStart": 2012,
+          "yearEnd": 2014
+        },
+        {
+          "name": "1.6 TDI 110",
+          "fuel": "Diesel",
+          "yearStart": 2014,
+          "yearEnd": 2017
+        },
+        {
+          "name": "2.0 TDI 150",
+          "fuel": "Diesel",
+          "yearStart": 2012,
+          "yearEnd": 2017
+        },
+        {
+          "name": "2.0 TDI 184",
+          "fuel": "Diesel",
+          "yearStart": 2013,
+          "yearEnd": 2017
+        },
+        {
+          "name": "1.0 TFSI 115",
+          "fuel": "Essence",
+          "yearStart": 2016,
+          "yearEnd": 2017
+        },
+        {
+          "name": "1.4 TFSI 150",
+          "fuel": "Essence",
+          "yearStart": 2016,
+          "yearEnd": 2017
+        },
+        {
+          "name": "1.5 TFSI 150",
+          "fuel": "Essence",
+          "yearStart": 2017,
+          "yearEnd": 2017
+        },
+        {
+          "name": "2.0 TFSI 190",
+          "fuel": "Essence",
+          "yearStart": 2016,
+          "yearEnd": 2017
+        },
+        {
+          "name": "1.6 TDI 115",
+          "fuel": "Diesel",
+          "yearStart": 2017,
+          "yearEnd": 2017
+        }
       ]
     },
     "Ford": {
@@ -55161,6 +55253,19 @@
         "S Line",
         "S Line Plus",
         "Sport"
+      ],
+      "A3 3e Génération": [
+        "Advanced",
+        "Ambiente",
+        "Ambition",
+        "Ambition Luxe",
+        "Attraction",
+        "Business Line",
+        "Design",
+        "Design Luxe",
+        "S Line",
+        "Sport",
+        "Sport Design"
       ]
     },
     "Fiat": {
