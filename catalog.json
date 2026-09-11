@@ -14920,6 +14920,18 @@
           "fuel": "Diesel",
           "yearStart": 2015,
           "yearEnd": 2022
+        },
+        {
+          "name": "1.5 d 95",
+          "fuel": "Diesel",
+          "yearStart": 2015,
+          "yearEnd": 2022
+        },
+        {
+          "name": "1.5 i 102",
+          "fuel": "Essence",
+          "yearStart": 2015,
+          "yearEnd": 2019
         }
       ],
       "Série 3 Touring": [
@@ -16544,37 +16556,10 @@
       ],
       "Série 1 Coupé": [
         {
-          "name": "2.0 TDI 143",
-          "fuel": "Diesel",
-          "yearStart": 2009
-        },
-        {
-          "name": "2.0 TDI 177",
-          "fuel": "Diesel",
-          "yearStart": 2007
-        },
-        {
-          "name": "2.0 i 170",
+          "name": "3.0 i 340",
           "fuel": "Essence",
-          "yearStart": 2009,
+          "yearStart": 2011,
           "yearEnd": 2012
-        },
-        {
-          "name": "2.5 i 218",
-          "fuel": "Essence",
-          "yearStart": 2008,
-          "yearEnd": 2012
-        },
-        {
-          "name": "3.0 i 306",
-          "fuel": "Essence",
-          "yearStart": 2007,
-          "yearEnd": 2012
-        },
-        {
-          "name": "? TDI 204",
-          "fuel": "Diesel",
-          "yearStart": 2007
         }
       ],
       "Série 1 Cabriolet": [
@@ -58024,13 +58009,8 @@
         "XLINE BVM6"
       ],
       "Série 1 Coupé": [
-        "COUPE AVANTAGE EDITION",
-        "COUPE CONFORT",
-        "COUPE EXCELLIS",
-        "COUPE LUXE",
-        "COUPE M SPORT",
-        "COUPE PREMIERE",
-        "COUPE SPORT DESIGN"
+        "M",
+        "M CS"
       ],
       "Série 1 Cabriolet": [
         "CABRIOLET AVANTAGE EDITION",
