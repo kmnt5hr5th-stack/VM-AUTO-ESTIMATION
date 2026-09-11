@@ -9736,76 +9736,96 @@
       ],
       "Multivan": [
         {
-          "name": "2.0 180",
-          "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2026
-        },
-        {
-          "name": "2.0 TSI 204",
-          "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2026
-        },
-        {
-          "name": "2.0 TDI 102",
+          "name": "1.9 TDI 84",
           "fuel": "Diesel",
-          "yearStart": 2015,
-          "yearEnd": 2026
+          "yearStart": 2006,
+          "yearEnd": 2007
         },
         {
-          "name": "2.0 TDI 114",
+          "name": "1.9 TDI 104",
           "fuel": "Diesel",
-          "yearStart": 2015,
-          "yearEnd": 2026
+          "yearStart": 2003,
+          "yearEnd": 2007
         },
         {
-          "name": "2.0 TDI 140",
+          "name": "2.5 TDI 102",
           "fuel": "Diesel",
-          "yearStart": 2015,
-          "yearEnd": 2026
-        },
-        {
-          "name": "2.0 TDI 150",
-          "fuel": "Diesel",
-          "yearStart": 2015,
-          "yearEnd": 2026
-        },
-        {
-          "name": "2.0 TDI 180",
-          "fuel": "Diesel",
-          "yearStart": 2015,
-          "yearEnd": 2026
-        },
-        {
-          "name": "2.0 TDI 204",
-          "fuel": "Diesel",
-          "yearStart": 2015,
-          "yearEnd": 2026
+          "yearStart": 2006,
+          "yearEnd": 2007
         },
         {
           "name": "2.5 TDI 130",
           "fuel": "Diesel",
-          "yearStart": 2015,
-          "yearEnd": 2026
+          "yearStart": 2003,
+          "yearEnd": 2011
         },
         {
-          "name": "6.1 TDI 204",
+          "name": "2.5 TDI 174",
           "fuel": "Diesel",
+          "yearStart": 2003,
+          "yearEnd": 2011
+        },
+        {
+          "name": "2.0 TDI 102",
+          "fuel": "Diesel",
+          "yearStart": 2006,
+          "yearEnd": 2020
+        },
+        {
+          "name": "2.0 TDI 140",
+          "fuel": "Diesel",
+          "yearStart": 2003,
+          "yearEnd": 2015
+        },
+        {
+          "name": "2.0 BiTDI 180",
+          "fuel": "Diesel",
+          "yearStart": 2009,
+          "yearEnd": 2015
+        },
+        {
+          "name": "2.0 TDI 110",
+          "fuel": "Diesel",
+          "yearStart": 2020,
+          "yearEnd": 2021
+        },
+        {
+          "name": "2.0 TDI 150",
+          "fuel": "Diesel",
+          "yearStart": 2015
+        },
+        {
+          "name": "2.0 TDI 204",
+          "fuel": "Diesel",
+          "yearStart": 2015
+        },
+        {
+          "name": "2.0 TSI 150",
+          "fuel": "Essence",
           "yearStart": 2015,
-          "yearEnd": 2026
+          "yearEnd": 2018
+        },
+        {
+          "name": "2.0 TSI 204",
+          "fuel": "Essence",
+          "yearStart": 2014,
+          "yearEnd": 2022
         },
         {
           "name": "1.4 eHybrid 218",
           "fuel": "Hybride rechargeable",
+          "yearStart": 2021
+        },
+        {
+          "name": "1.5 TSI 136",
+          "fuel": "Essence",
           "yearStart": 2021,
-          "yearEnd": 2026
+          "yearEnd": 2022
         },
         {
           "name": "1.5 eHybrid 245",
           "fuel": "Hybride rechargeable",
-          "yearStart": 2021,
-          "yearEnd": 2026
+          "yearStart": 2025
         }
       ],
       "California": [
@@ -53305,9 +53325,23 @@
         "Edition"
       ],
       "Multivan": [
+        "Beach",
+        "Business",
+        "Carat",
+        "Carat Edition",
+        "Conceptline",
+        "Confort",
+        "Confortline",
         "Edition",
+        "Energetic",
+        "Generation Six",
+        "Highline",
         "Life",
-        "Style"
+        "Match",
+        "Panamericana",
+        "Startline",
+        "Style",
+        "Trendline"
       ],
       "California": [
         "Confort",
