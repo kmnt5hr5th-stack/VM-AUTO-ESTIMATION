@@ -27958,26 +27958,6 @@
           "yearEnd": 2023
         }
       ],
-      "A3 Allstreet": [
-        {
-          "name": "35 TFSI 150",
-          "fuel": "Essence",
-          "yearStart": 2022,
-          "yearEnd": 2026
-        },
-        {
-          "name": "45 TFSI e 245 PHEV",
-          "fuel": "Hybride rechargeable",
-          "yearStart": 2022,
-          "yearEnd": 2026
-        },
-        {
-          "name": "35 TDI 150",
-          "fuel": "Diesel",
-          "yearStart": 2022,
-          "yearEnd": 2026
-        }
-      ],
       "A4 Cabriolet": [
         {
           "name": "2.0 TFSI 211",
@@ -28093,6 +28073,52 @@
           "fuel": "Essence",
           "yearStart": 2020,
           "yearEnd": 2022
+        }
+      ],
+      "A1 2e Génération Allstreet": [
+        {
+          "name": "1.0 TFSI 95",
+          "fuel": "Essence",
+          "yearStart": 2022,
+          "yearEnd": 2024
+        },
+        {
+          "name": "1.0 TFSI 110",
+          "fuel": "Essence",
+          "yearStart": 2022,
+          "yearEnd": 2024
+        },
+        {
+          "name": "1.0 TFSI 116",
+          "fuel": "Essence",
+          "yearStart": 2024,
+          "yearEnd": 2025
+        },
+        {
+          "name": "1.5 TFSI 150",
+          "fuel": "Essence",
+          "yearStart": 2022,
+          "yearEnd": 2025
+        }
+      ],
+      "A3 Allstreet": [
+        {
+          "name": "35 TFSI 150",
+          "fuel": "Essence",
+          "yearStart": 2022,
+          "yearEnd": 2026
+        },
+        {
+          "name": "45 TFSI e 245 PHEV",
+          "fuel": "Hybride rechargeable",
+          "yearStart": 2022,
+          "yearEnd": 2026
+        },
+        {
+          "name": "35 TDI 150",
+          "fuel": "Diesel",
+          "yearStart": 2022,
+          "yearEnd": 2026
         }
       ]
     },
@@ -54782,15 +54808,6 @@
         "Business",
         "Line"
       ],
-      "A3 Allstreet": [
-        "Advanced",
-        "Design Luxe",
-        "S line",
-        "S line Competition",
-        "S line Competition Plus",
-        "Avus",
-        "Business Line"
-      ],
       "A4 Cabriolet": [
         "Ambition",
         "Attraction",
@@ -54827,6 +54844,21 @@
         "Design",
         "Design Luxe",
         "Edition One"
+      ],
+      "A1 2e Génération Allstreet": [
+        "Advanced",
+        "Avus",
+        "Design",
+        "Design Luxe"
+      ],
+      "A3 Allstreet": [
+        "Advanced",
+        "Design Luxe",
+        "S line",
+        "S line Competition",
+        "S line Competition Plus",
+        "Avus",
+        "Business Line"
       ]
     },
     "Fiat": {
