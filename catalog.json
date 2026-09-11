@@ -8148,28 +8148,37 @@
       ],
       "T-Cross": [
         {
+          "name": "1.0 TSI 95",
+          "fuel": "Essence",
+          "yearStart": 2019
+        },
+        {
           "name": "1.0 TSI 110",
           "fuel": "Essence",
-          "yearStart": 2022,
-          "yearEnd": 2023
+          "yearStart": 2020,
+          "yearEnd": 2025
+        },
+        {
+          "name": "1.0 TSI 115",
+          "fuel": "Essence",
+          "yearStart": 2018,
+          "yearEnd": 2024
+        },
+        {
+          "name": "1.6 TDI 95",
+          "fuel": "Diesel",
+          "yearStart": 2019,
+          "yearEnd": 2020
         },
         {
           "name": "1.0 TSI 116",
           "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2026
-        },
-        {
-          "name": "1.0 TSI 95",
-          "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2019
+          "yearStart": 2023
         },
         {
           "name": "1.5 TSI 150",
           "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2026
+          "yearStart": 2023
         }
       ],
       "Up": [
@@ -53191,10 +53200,21 @@
         "VW Edition"
       ],
       "T-Cross": [
-        "Edition",
+        "Active",
+        "Carat",
+        "First Edition",
         "Life",
+        "Life Business",
+        "Life Plus",
+        "Life Tech",
+        "Lounge",
+        "Lounge Business",
         "R-Line",
-        "Style"
+        "R-Line Edition",
+        "R-Line Tech",
+        "Style",
+        "United",
+        "VW Edition"
       ],
       "Touareg": [
         "Atmosphere",
