@@ -28031,6 +28031,14 @@
           "yearStart": 2025,
           "yearEnd": 2026
         }
+      ],
+      "A1 Quattro": [
+        {
+          "name": "2.0 TFSI 256",
+          "fuel": "Essence",
+          "yearStart": 2012,
+          "yearEnd": 2013
+        }
       ]
     },
     "Ford": {
@@ -54743,6 +54751,9 @@
         "Avus",
         "S line",
         "S6 e-tron"
+      ],
+      "A1 Quattro": [
+        "Quattro"
       ]
     },
     "Fiat": {
