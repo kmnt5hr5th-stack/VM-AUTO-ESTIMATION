@@ -2558,42 +2558,60 @@
       ],
       "107": [
         {
-          "name": "1.0 68ch",
+          "name": "1.0 68",
           "fuel": "Essence",
           "yearStart": 2005,
           "yearEnd": 2014
         },
         {
-          "name": "1.0 70ch",
+          "name": "1.0",
           "fuel": "Essence",
-          "yearStart": 2012,
+          "yearStart": 2005,
           "yearEnd": 2014
         },
         {
-          "name": "1.4 HDi 54ch",
+          "name": "1.4 HDi 54",
           "fuel": "Diesel",
           "yearStart": 2005,
-          "yearEnd": 2012
+          "yearEnd": 2014
+        },
+        {
+          "name": "1.4 HDi",
+          "fuel": "Diesel",
+          "yearStart": 2005,
+          "yearEnd": 2014
         }
       ],
       "108": [
         {
-          "name": "1.0 VTi 68ch",
+          "name": "1.0 68",
           "fuel": "Essence",
           "yearStart": 2014,
-          "yearEnd": 2021
+          "yearEnd": 2022
         },
         {
-          "name": "1.0 VTi 72ch",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2021
-        },
-        {
-          "name": "1.2 PureTech 82ch",
+          "name": "1.0 72",
           "fuel": "Essence",
           "yearStart": 2014,
-          "yearEnd": 2021
+          "yearEnd": 2022
+        },
+        {
+          "name": "1.0 VTi 68",
+          "fuel": "Essence",
+          "yearStart": 2014,
+          "yearEnd": 2022
+        },
+        {
+          "name": "1.0 VTi 72",
+          "fuel": "Essence",
+          "yearStart": 2014,
+          "yearEnd": 2022
+        },
+        {
+          "name": "1.2 PureTech 82",
+          "fuel": "Essence",
+          "yearStart": 2014,
+          "yearEnd": 2022
         }
       ],
       "206": [
@@ -2648,198 +2666,246 @@
       ],
       "207": [
         {
-          "name": "1.4 75ch",
-          "fuel": "Essence",
-          "yearStart": 2006,
-          "yearEnd": 2014
-        },
-        {
-          "name": "1.4 VTi 95ch",
-          "fuel": "Essence",
-          "yearStart": 2007,
-          "yearEnd": 2014
-        },
-        {
-          "name": "1.6 VTi 120ch",
-          "fuel": "Essence",
-          "yearStart": 2007,
-          "yearEnd": 2014
-        },
-        {
-          "name": "1.6 THP 150ch",
-          "fuel": "Essence",
-          "yearStart": 2006,
-          "yearEnd": 2014
-        },
-        {
-          "name": "1.6 THP 175ch RC",
-          "fuel": "Essence",
-          "yearStart": 2007,
-          "yearEnd": 2012
-        },
-        {
-          "name": "1.4 HDi 68ch",
+          "name": "1.6 HDi 110",
           "fuel": "Diesel",
           "yearStart": 2006,
-          "yearEnd": 2014
+          "yearEnd": 2015
         },
         {
-          "name": "1.6 HDi 90ch",
+          "name": "1.6 HDi 112",
           "fuel": "Diesel",
           "yearStart": 2006,
-          "yearEnd": 2014
+          "yearEnd": 2015
         },
         {
-          "name": "1.6 HDi 110ch",
+          "name": "1.6 THP 150",
+          "fuel": "Essence",
+          "yearStart": 2006,
+          "yearEnd": 2015
+        },
+        {
+          "name": "1.6 THP 156",
+          "fuel": "Essence",
+          "yearStart": 2006,
+          "yearEnd": 2015
+        },
+        {
+          "name": "1.6 VTi 120",
+          "fuel": "Essence",
+          "yearStart": 2006,
+          "yearEnd": 2015
+        },
+        {
+          "name": "1.6 VTi",
+          "fuel": "Essence",
+          "yearStart": 2006,
+          "yearEnd": 2015
+        },
+        {
+          "name": "1.4",
+          "fuel": "Essence",
+          "yearStart": 2006,
+          "yearEnd": 2015
+        },
+        {
+          "name": "1.4 HDi 70",
           "fuel": "Diesel",
           "yearStart": 2006,
-          "yearEnd": 2014
+          "yearEnd": 2015
+        },
+        {
+          "name": "1.4 HDi",
+          "fuel": "Diesel",
+          "yearStart": 2006,
+          "yearEnd": 2015
+        },
+        {
+          "name": "1.6 120",
+          "fuel": "Essence",
+          "yearStart": 2006,
+          "yearEnd": 2015
         }
       ],
       "208": [
         {
-          "name": "1.0 VTi 68ch",
+          "name": "1.0 PureTech 68",
           "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2019
+          "yearStart": 2012
         },
         {
-          "name": "1.2 VTi 82ch",
+          "name": "1.2 PureTech 110",
           "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2019
+          "yearStart": 2012
         },
         {
-          "name": "1.2 PureTech 68ch",
+          "name": "1.2 PureTech 68",
           "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2019
+          "yearStart": 2012
         },
         {
-          "name": "1.2 PureTech 75ch",
+          "name": "1.2 PureTech 75",
           "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2026
+          "yearStart": 2012
         },
         {
-          "name": "1.2 PureTech 82ch",
+          "name": "1.2 PureTech 82",
           "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2019
+          "yearStart": 2012
         },
         {
-          "name": "1.2 PureTech 100ch",
-          "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2026
-        },
-        {
-          "name": "1.2 PureTech 110ch",
-          "fuel": "Essence",
-          "yearStart": 2015,
-          "yearEnd": 2019
-        },
-        {
-          "name": "1.2 PureTech 130ch",
-          "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2026
-        },
-        {
-          "name": "1.6 VTi 120ch",
-          "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2019
-        },
-        {
-          "name": "1.6 THP 150ch",
-          "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2019
-        },
-        {
-          "name": "1.6 THP 165ch GTi",
-          "fuel": "Essence",
-          "yearStart": 2013,
-          "yearEnd": 2019
-        },
-        {
-          "name": "1.6 THP 208ch GTi by PS",
-          "fuel": "Essence",
-          "yearStart": 2015,
-          "yearEnd": 2019
-        },
-        {
-          "name": "GTi 200ch",
-          "fuel": "Essence",
-          "yearStart": 2013,
-          "yearEnd": 2019
-        },
-        {
-          "name": "1.4 HDi 68ch",
+          "name": "1.5 BlueHDi 100",
           "fuel": "Diesel",
-          "yearStart": 2012,
-          "yearEnd": 2015
+          "yearStart": 2012
         },
         {
-          "name": "1.6 HDi 75ch",
+          "name": "1.6 BlueHDi 100",
           "fuel": "Diesel",
-          "yearStart": 2012,
-          "yearEnd": 2019
+          "yearStart": 2012
         },
         {
-          "name": "1.5 BlueHDi 100ch",
+          "name": "1.6 BlueHDi 120",
           "fuel": "Diesel",
-          "yearStart": 2019,
-          "yearEnd": 2026
+          "yearStart": 2012
         },
         {
-          "name": "1.6 BlueHDi 75ch",
+          "name": "1.6 BlueHDi 75",
           "fuel": "Diesel",
-          "yearStart": 2014,
-          "yearEnd": 2019
+          "yearStart": 2012
         },
         {
-          "name": "1.6 BlueHDi 100ch",
+          "name": "1.6 THP 165",
+          "fuel": "Essence",
+          "yearStart": 2012
+        },
+        {
+          "name": "1.6 THP 208",
+          "fuel": "Essence",
+          "yearStart": 2012
+        },
+        {
+          "name": "1.0 VTi 68",
+          "fuel": "Essence",
+          "yearStart": 2012
+        },
+        {
+          "name": "1.0 VTi",
+          "fuel": "Essence",
+          "yearStart": 2012
+        },
+        {
+          "name": "1.0 PureTech",
+          "fuel": "Essence",
+          "yearStart": 2012
+        },
+        {
+          "name": "1.2 VTi 82",
+          "fuel": "Essence",
+          "yearStart": 2012
+        },
+        {
+          "name": "1.4 e-HDi",
           "fuel": "Diesel",
-          "yearStart": 2014,
-          "yearEnd": 2019
+          "yearStart": 2012
         },
         {
-          "name": "1.6 BlueHDi 120ch",
+          "name": "1.4 e-HDi 68",
           "fuel": "Diesel",
-          "yearStart": 2015,
-          "yearEnd": 2019
+          "yearStart": 2012
         },
         {
-          "name": "e-208 100kW 136ch",
+          "name": "1.4 HDi 68",
+          "fuel": "Diesel",
+          "yearStart": 2012
+        },
+        {
+          "name": "1.4 HDi",
+          "fuel": "Diesel",
+          "yearStart": 2012
+        },
+        {
+          "name": "1.6 e-HDi 115",
+          "fuel": "Diesel",
+          "yearStart": 2012
+        },
+        {
+          "name": "1.6 e-HDi 92",
+          "fuel": "Diesel",
+          "yearStart": 2012
+        },
+        {
+          "name": "1.6 THP 155",
+          "fuel": "Essence",
+          "yearStart": 2012
+        },
+        {
+          "name": "1.6 THP 200",
+          "fuel": "Essence",
+          "yearStart": 2012
+        },
+        {
+          "name": "1.6 VTi 120",
+          "fuel": "Essence",
+          "yearStart": 2012
+        },
+        {
+          "name": "1.2 100",
+          "fuel": "Essence",
+          "yearStart": 2012
+        },
+        {
+          "name": "1.2 110",
+          "fuel": "Essence",
+          "yearStart": 2012
+        },
+        {
+          "name": "1.2 136",
+          "fuel": "Essence",
+          "yearStart": 2012
+        },
+        {
+          "name": "1.2 145",
+          "fuel": "Essence",
+          "yearStart": 2012
+        },
+        {
+          "name": "1.2 PureTech 100",
+          "fuel": "Essence",
+          "yearStart": 2012
+        },
+        {
+          "name": "électrique 136",
           "fuel": "Électrique",
-          "yearStart": 2019,
-          "yearEnd": 2023
+          "yearStart": 2012
         },
         {
-          "name": "e-208 115kW 156ch",
+          "name": "électrique 156",
           "fuel": "Électrique",
-          "yearStart": 2023,
-          "yearEnd": 2026
+          "yearStart": 2012
         },
         {
-          "name": "1.4 e-HDi 68ch",
-          "fuel": "Diesel",
-          "yearStart": 2012,
-          "yearEnd": 2015
+          "name": "1.2 208",
+          "fuel": "Essence",
+          "yearStart": 2012
         },
         {
-          "name": "1.6 e-HDi 92ch",
-          "fuel": "Diesel",
-          "yearStart": 2012,
-          "yearEnd": 2019
+          "name": "1.2 PureTech 208",
+          "fuel": "Essence",
+          "yearStart": 2012
         },
         {
-          "name": "1.6 e-HDi 112ch",
+          "name": "1.2 PureTech 130",
+          "fuel": "Essence",
+          "yearStart": 2012
+        },
+        {
+          "name": "1.5 BlueHDi 208",
           "fuel": "Diesel",
-          "yearStart": 2012,
-          "yearEnd": 2019
+          "yearStart": 2012
+        },
+        {
+          "name": "électrique 50",
+          "fuel": "Électrique",
+          "yearStart": 2012
         }
       ],
       "301": [
@@ -2970,166 +3036,264 @@
       ],
       "308": [
         {
-          "name": "1.6 VTi 120ch",
+          "name": "1.4 VTi 98",
           "fuel": "Essence",
-          "yearStart": 2007,
-          "yearEnd": 2014
+          "yearStart": 2007
         },
         {
-          "name": "1.6 THP 120ch",
+          "name": "1.6 e-HDi 110",
+          "fuel": "Diesel",
+          "yearStart": 2007
+        },
+        {
+          "name": "1.6 e-HDi 112",
+          "fuel": "Diesel",
+          "yearStart": 2007
+        },
+        {
+          "name": "1.6 e-HDi 115",
+          "fuel": "Diesel",
+          "yearStart": 2007
+        },
+        {
+          "name": "1.6 HDi 92",
+          "fuel": "Diesel",
+          "yearStart": 2007
+        },
+        {
+          "name": "1.6 THP 155",
           "fuel": "Essence",
-          "yearStart": 2007,
-          "yearEnd": 2014
+          "yearStart": 2007
         },
         {
-          "name": "1.6 THP 150ch",
+          "name": "1.6 THP 156",
           "fuel": "Essence",
-          "yearStart": 2007,
-          "yearEnd": 2014
+          "yearStart": 2007
         },
         {
-          "name": "1.6 HDi 90ch",
-          "fuel": "Diesel",
-          "yearStart": 2007,
-          "yearEnd": 2014
-        },
-        {
-          "name": "1.6 HDi 110ch",
-          "fuel": "Diesel",
-          "yearStart": 2007,
-          "yearEnd": 2014
-        },
-        {
-          "name": "2.0 HDi 100ch",
-          "fuel": "Diesel",
-          "yearStart": 2007,
-          "yearEnd": 2014
-        },
-        {
-          "name": "2.0 HDi 136ch",
-          "fuel": "Diesel",
-          "yearStart": 2007,
-          "yearEnd": 2014
-        },
-        {
-          "name": "1.2 PureTech 110ch",
+          "name": "1.6 THP 200",
           "fuel": "Essence",
-          "yearStart": 2013,
-          "yearEnd": 2021
+          "yearStart": 2007
         },
         {
-          "name": "1.2 PureTech 130ch",
+          "name": "1.6 VTi 120",
           "fuel": "Essence",
-          "yearStart": 2013,
-          "yearEnd": 2026
+          "yearStart": 2007
         },
         {
-          "name": "1.2 PureTech 155ch",
+          "name": "2.0 HDi 150",
+          "fuel": "Diesel",
+          "yearStart": 2007
+        },
+        {
+          "name": "2.0 HDi 160",
+          "fuel": "Diesel",
+          "yearStart": 2007
+        },
+        {
+          "name": "2.0 HDi 163",
+          "fuel": "Diesel",
+          "yearStart": 2007
+        },
+        {
+          "name": "1.6 HDi 112",
+          "fuel": "Diesel",
+          "yearStart": 2007
+        },
+        {
+          "name": "2.0 HDi 140",
+          "fuel": "Diesel",
+          "yearStart": 2007
+        },
+        {
+          "name": "e-HDi 115",
+          "fuel": "Diesel",
+          "yearStart": 2007
+        },
+        {
+          "name": "1.4 VTi 95",
           "fuel": "Essence",
-          "yearStart": 2021,
-          "yearEnd": 2026
+          "yearStart": 2007
         },
         {
-          "name": "1.6 THP 125ch",
+          "name": "1.6 110",
           "fuel": "Essence",
-          "yearStart": 2007,
-          "yearEnd": 2015
+          "yearStart": 2007
         },
         {
-          "name": "1.6 THP 156ch",
+          "name": "1.6 HDi 110",
+          "fuel": "Diesel",
+          "yearStart": 2007
+        },
+        {
+          "name": "1.6 HDi 90",
+          "fuel": "Diesel",
+          "yearStart": 2007
+        },
+        {
+          "name": "1.6 THP 140",
           "fuel": "Essence",
-          "yearStart": 2007,
-          "yearEnd": 2015
+          "yearStart": 2007
         },
         {
-          "name": "1.6 THP 200ch GT",
+          "name": "1.6 THP 150",
           "fuel": "Essence",
-          "yearStart": 2014,
-          "yearEnd": 2021
+          "yearStart": 2007
         },
         {
-          "name": "1.6 THP 270ch GTi",
+          "name": "1.6 THP 175",
           "fuel": "Essence",
-          "yearStart": 2015,
-          "yearEnd": 2021
+          "yearStart": 2007
         },
         {
-          "name": "1.5 BlueHDi 100ch",
+          "name": "2.0 HDi 136",
           "fuel": "Diesel",
-          "yearStart": 2018,
-          "yearEnd": 2021
+          "yearStart": 2007
         },
         {
-          "name": "1.5 BlueHDi 130ch",
+          "name": "1.2 PureTech 110",
+          "fuel": "Essence",
+          "yearStart": 2007
+        },
+        {
+          "name": "1.2 PureTech 130",
+          "fuel": "Essence",
+          "yearStart": 2007
+        },
+        {
+          "name": "1.5 BlueHDi 100",
           "fuel": "Diesel",
-          "yearStart": 2018,
-          "yearEnd": 2026
+          "yearStart": 2007
         },
         {
-          "name": "1.6 BlueHDi 100ch",
+          "name": "1.5 BlueHDi 130",
           "fuel": "Diesel",
-          "yearStart": 2013,
-          "yearEnd": 2021
+          "yearStart": 2007
         },
         {
-          "name": "1.6 BlueHDi 120ch",
+          "name": "1.6 BlueHDi 100",
           "fuel": "Diesel",
-          "yearStart": 2013,
-          "yearEnd": 2021
+          "yearStart": 2007
         },
         {
-          "name": "2.0 BlueHDi 150ch",
+          "name": "1.6 BlueHDi 120",
           "fuel": "Diesel",
-          "yearStart": 2014,
-          "yearEnd": 2021
+          "yearStart": 2007
         },
         {
-          "name": "2.0 BlueHDi 180ch GT",
+          "name": "1.6 PureTech 225",
+          "fuel": "Essence",
+          "yearStart": 2007
+        },
+        {
+          "name": "1.6 PureTech 263",
+          "fuel": "Essence",
+          "yearStart": 2007
+        },
+        {
+          "name": "1.6 THP 205",
+          "fuel": "Essence",
+          "yearStart": 2007
+        },
+        {
+          "name": "1.6 THP 270",
+          "fuel": "Essence",
+          "yearStart": 2007
+        },
+        {
+          "name": "2.0 BlueHDi 150",
           "fuel": "Diesel",
-          "yearStart": 2016,
-          "yearEnd": 2021
+          "yearStart": 2007
         },
         {
-          "name": "1.6 Hybrid 180ch",
-          "fuel": "Hybride rechargeable",
-          "yearStart": 2021,
-          "yearEnd": 2026
+          "name": "2.0 BlueHDi 180",
+          "fuel": "Diesel",
+          "yearStart": 2007
         },
         {
-          "name": "1.6 Hybrid 225ch",
-          "fuel": "Hybride rechargeable",
-          "yearStart": 2021,
-          "yearEnd": 2026
+          "name": "1.5 HDi 92",
+          "fuel": "Diesel",
+          "yearStart": 2007
         },
         {
-          "name": "e-308 115kW 156ch",
+          "name": "1.2 THP 130",
+          "fuel": "Essence",
+          "yearStart": 2007
+        },
+        {
+          "name": "1.2 PureTech 82",
+          "fuel": "Essence",
+          "yearStart": 2007
+        },
+        {
+          "name": "1.6 HDi 100",
+          "fuel": "Diesel",
+          "yearStart": 2007
+        },
+        {
+          "name": "1.6 THP 125",
+          "fuel": "Essence",
+          "yearStart": 2007
+        },
+        {
+          "name": "1.2 THP 110",
+          "fuel": "Essence",
+          "yearStart": 2007
+        },
+        {
+          "name": "1.2 145",
+          "fuel": "Essence",
+          "yearStart": 2007
+        },
+        {
+          "name": "1.6 195",
+          "fuel": "Essence",
+          "yearStart": 2007
+        },
+        {
+          "name": "électrique 156",
           "fuel": "Électrique",
-          "yearStart": 2023,
-          "yearEnd": 2026
+          "yearStart": 2007
         },
         {
-          "name": "1.6 e-HDi 90ch",
-          "fuel": "Diesel",
-          "yearStart": 2007,
-          "yearEnd": 2013
+          "name": "1.2 136",
+          "fuel": "Essence",
+          "yearStart": 2007
         },
         {
-          "name": "1.6 e-HDi 92ch",
+          "name": "1.5 BlueHDi",
           "fuel": "Diesel",
-          "yearStart": 2013,
-          "yearEnd": 2021
+          "yearStart": 2007
         },
         {
-          "name": "1.6 e-HDi 115ch",
-          "fuel": "Diesel",
-          "yearStart": 2007,
-          "yearEnd": 2013
+          "name": "1.6 PHEV 180",
+          "fuel": "Hybride rechargeable",
+          "yearStart": 2007
         },
         {
-          "name": "2.0 e-HDi 150ch",
-          "fuel": "Diesel",
-          "yearStart": 2013,
-          "yearEnd": 2021
+          "name": "1.6 PHEV 225",
+          "fuel": "Hybride rechargeable",
+          "yearStart": 2007
+        },
+        {
+          "name": "145",
+          "fuel": "Essence",
+          "yearStart": 2007
+        },
+        {
+          "name": "PHEV 180",
+          "fuel": "Hybride rechargeable",
+          "yearStart": 2007
+        },
+        {
+          "name": "PHEV 225",
+          "fuel": "Hybride rechargeable",
+          "yearStart": 2007
+        },
+        {
+          "name": "PureTech 130",
+          "fuel": "Essence",
+          "yearStart": 2007
         }
       ],
       "406": [
@@ -3234,126 +3398,226 @@
       ],
       "408": [
         {
-          "name": "1.2 PureTech 130ch",
+          "name": "1.2 145",
           "fuel": "Essence",
-          "yearStart": 2022,
-          "yearEnd": 2026
+          "yearStart": 2022
         },
         {
-          "name": "1.6 Hybrid 180ch",
-          "fuel": "Hybride rechargeable",
-          "yearStart": 2022,
-          "yearEnd": 2026
-        },
-        {
-          "name": "1.6 Hybrid 225ch",
-          "fuel": "Hybride rechargeable",
-          "yearStart": 2022,
-          "yearEnd": 2026
-        },
-        {
-          "name": "1.2 PureTech 130ch e-DCS6",
+          "name": "1.6 408",
           "fuel": "Essence",
-          "yearStart": 2024,
-          "yearEnd": 2026
+          "yearStart": 2022
+        },
+        {
+          "name": "électrique 210",
+          "fuel": "Électrique",
+          "yearStart": 2022
+        },
+        {
+          "name": "1.2 136",
+          "fuel": "Essence",
+          "yearStart": 2022
+        },
+        {
+          "name": "1.2 PureTech 130",
+          "fuel": "Essence",
+          "yearStart": 2022
+        },
+        {
+          "name": "1.6 PHEV 180",
+          "fuel": "Hybride rechargeable",
+          "yearStart": 2022
+        },
+        {
+          "name": "1.6 PHEV 225",
+          "fuel": "Hybride rechargeable",
+          "yearStart": 2022
+        },
+        {
+          "name": "1.6 225",
+          "fuel": "Essence",
+          "yearStart": 2022
         }
       ],
       "508": [
         {
-          "name": "1.6 THP 156ch",
+          "name": "1.6 BlueHDi 120",
+          "fuel": "Diesel",
+          "yearStart": 2010,
+          "yearEnd": 2025
+        },
+        {
+          "name": "1.6 e-HDi 115",
+          "fuel": "Diesel",
+          "yearStart": 2010,
+          "yearEnd": 2025
+        },
+        {
+          "name": "1.6 THP 165",
           "fuel": "Essence",
           "yearStart": 2010,
-          "yearEnd": 2018
+          "yearEnd": 2025
         },
         {
-          "name": "1.6 THP 165ch",
+          "name": "1.6 VTi 120",
           "fuel": "Essence",
-          "yearStart": 2014,
-          "yearEnd": 2018
+          "yearStart": 2010,
+          "yearEnd": 2025
         },
         {
-          "name": "1.6 PureTech 180ch",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
+          "name": "2.0 BlueHDi 150",
+          "fuel": "Diesel",
+          "yearStart": 2010,
+          "yearEnd": 2025
         },
         {
-          "name": "1.6 PureTech 225ch",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
+          "name": "2.0 BlueHDi 180",
+          "fuel": "Diesel",
+          "yearStart": 2010,
+          "yearEnd": 2025
         },
         {
-          "name": "1.6 Hybrid 225ch",
+          "name": "2.0 HDi 140",
+          "fuel": "Diesel",
+          "yearStart": 2010,
+          "yearEnd": 2025
+        },
+        {
+          "name": "2.0 HDi 160",
+          "fuel": "Diesel",
+          "yearStart": 2010,
+          "yearEnd": 2025
+        },
+        {
+          "name": "2.0 HDi 163",
+          "fuel": "Diesel",
+          "yearStart": 2010,
+          "yearEnd": 2025
+        },
+        {
+          "name": "2.0 Hybrid4 163",
           "fuel": "Hybride rechargeable",
-          "yearStart": 2019,
-          "yearEnd": 2026
+          "yearStart": 2010,
+          "yearEnd": 2025
         },
         {
-          "name": "1.6 Hybrid4 360ch",
+          "name": "2.2 HDi 200",
+          "fuel": "Diesel",
+          "yearStart": 2010,
+          "yearEnd": 2025
+        },
+        {
+          "name": "1.6 e-HDi 112",
+          "fuel": "Diesel",
+          "yearStart": 2010,
+          "yearEnd": 2025
+        },
+        {
+          "name": "1.6 HDi 112",
+          "fuel": "Diesel",
+          "yearStart": 2010,
+          "yearEnd": 2025
+        },
+        {
+          "name": "1.6 HDi 115",
+          "fuel": "Diesel",
+          "yearStart": 2010,
+          "yearEnd": 2025
+        },
+        {
+          "name": "1.6 THP 155",
+          "fuel": "Essence",
+          "yearStart": 2010,
+          "yearEnd": 2025
+        },
+        {
+          "name": "1.6 THP 156",
+          "fuel": "Essence",
+          "yearStart": 2010,
+          "yearEnd": 2025
+        },
+        {
+          "name": "2.0 HDi",
+          "fuel": "Diesel",
+          "yearStart": 2010,
+          "yearEnd": 2025
+        },
+        {
+          "name": "2.2 HDi 204",
+          "fuel": "Diesel",
+          "yearStart": 2010,
+          "yearEnd": 2025
+        },
+        {
+          "name": "1.5 BlueHDi 130",
+          "fuel": "Diesel",
+          "yearStart": 2010,
+          "yearEnd": 2025
+        },
+        {
+          "name": "1.6 180",
+          "fuel": "Essence",
+          "yearStart": 2010,
+          "yearEnd": 2025
+        },
+        {
+          "name": "1.6 225",
+          "fuel": "Essence",
+          "yearStart": 2010,
+          "yearEnd": 2025
+        },
+        {
+          "name": "1.6 Hybrid4 360",
           "fuel": "Hybride rechargeable",
-          "yearStart": 2019,
-          "yearEnd": 2026
+          "yearStart": 2010,
+          "yearEnd": 2025
         },
         {
-          "name": "PSE 360ch",
-          "fuel": "Hybride rechargeable",
-          "yearStart": 2021,
-          "yearEnd": 2026
+          "name": "1.2 PureTech 130",
+          "fuel": "Essence",
+          "yearStart": 2010,
+          "yearEnd": 2025
         },
         {
-          "name": "1.6 HDi 112ch",
+          "name": "1.6 PureTech 180",
+          "fuel": "Essence",
+          "yearStart": 2010,
+          "yearEnd": 2025
+        },
+        {
+          "name": "1.6 PureTech 225",
+          "fuel": "Essence",
+          "yearStart": 2010,
+          "yearEnd": 2025
+        },
+        {
+          "name": "2.0 BlueHDi 160",
           "fuel": "Diesel",
           "yearStart": 2010,
-          "yearEnd": 2014
+          "yearEnd": 2025
         },
         {
-          "name": "2.0 HDi 140ch",
+          "name": "225",
+          "fuel": "Essence",
+          "yearStart": 2010,
+          "yearEnd": 2025
+        },
+        {
+          "name": "BlueHDi 130",
           "fuel": "Diesel",
           "yearStart": 2010,
-          "yearEnd": 2018
+          "yearEnd": 2025
         },
         {
-          "name": "2.0 HDi 163ch",
-          "fuel": "Diesel",
+          "name": "180",
+          "fuel": "Essence",
           "yearStart": 2010,
-          "yearEnd": 2014
+          "yearEnd": 2025
         },
         {
-          "name": "1.5 BlueHDi 130ch",
-          "fuel": "Diesel",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "2.0 BlueHDi 160ch",
-          "fuel": "Diesel",
-          "yearStart": 2018,
-          "yearEnd": 2024
-        },
-        {
-          "name": "2.0 BlueHDi 180ch",
-          "fuel": "Diesel",
-          "yearStart": 2018,
-          "yearEnd": 2024
-        },
-        {
-          "name": "1.6 e-HDi 112ch",
-          "fuel": "Diesel",
-          "yearStart": 2011,
-          "yearEnd": 2018
-        },
-        {
-          "name": "2.0 e-HDi 140ch",
-          "fuel": "Diesel",
-          "yearStart": 2011,
-          "yearEnd": 2018
-        },
-        {
-          "name": "2.0 e-HDi 163ch",
-          "fuel": "Diesel",
-          "yearStart": 2011,
-          "yearEnd": 2018
+          "name": "électrique",
+          "fuel": "Électrique",
+          "yearStart": 2010,
+          "yearEnd": 2025
         }
       ],
       "607": [
@@ -3647,142 +3911,199 @@
       ],
       "3008": [
         {
-          "name": "1.6 THP 156ch",
+          "name": "1.2 PureTech 130",
           "fuel": "Essence",
-          "yearStart": 2009,
-          "yearEnd": 2016
+          "yearStart": 2009
         },
         {
-          "name": "1.6 THP 170ch",
+          "name": "1.2 PureTech",
           "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2016
+          "yearStart": 2009
         },
         {
-          "name": "1.6 HDi 90ch",
+          "name": "1.6 BlueHDi 120",
           "fuel": "Diesel",
-          "yearStart": 2009,
-          "yearEnd": 2013
+          "yearStart": 2009
         },
         {
-          "name": "1.6 HDi 110ch",
+          "name": "1.6 e-HDi 115",
           "fuel": "Diesel",
-          "yearStart": 2009,
-          "yearEnd": 2016
+          "yearStart": 2009
         },
         {
-          "name": "2.0 HDi 136ch",
+          "name": "1.6 HDi 115",
           "fuel": "Diesel",
-          "yearStart": 2009,
-          "yearEnd": 2013
+          "yearStart": 2009
         },
         {
-          "name": "2.0 HDi 150ch",
-          "fuel": "Diesel",
-          "yearStart": 2009,
-          "yearEnd": 2016
-        },
-        {
-          "name": "2.0 HDi 163ch",
-          "fuel": "Diesel",
-          "yearStart": 2009,
-          "yearEnd": 2016
-        },
-        {
-          "name": "1.6 e-HDi 115ch Hybrid",
-          "fuel": "Hybride",
-          "yearStart": 2011,
-          "yearEnd": 2016
-        },
-        {
-          "name": "1.2 PureTech 130ch",
+          "name": "1.6 THP 156",
           "fuel": "Essence",
-          "yearStart": 2016,
-          "yearEnd": 2026
+          "yearStart": 2009
         },
         {
-          "name": "1.6 THP 165ch",
+          "name": "1.6 THP 165",
           "fuel": "Essence",
-          "yearStart": 2016,
-          "yearEnd": 2021
+          "yearStart": 2009
         },
         {
-          "name": "1.6 PureTech 180ch",
+          "name": "1.6 VTi 120",
           "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2021
+          "yearStart": 2009
         },
         {
-          "name": "1.5 BlueHDi 130ch",
+          "name": "2.0 BlueHDi 150",
           "fuel": "Diesel",
-          "yearStart": 2017,
-          "yearEnd": 2026
+          "yearStart": 2009
         },
         {
-          "name": "1.6 BlueHDi 100ch",
+          "name": "2.0 HDi 150",
           "fuel": "Diesel",
-          "yearStart": 2016,
-          "yearEnd": 2017
+          "yearStart": 2009
         },
         {
-          "name": "1.6 BlueHDi 120ch",
+          "name": "2.0 HDi 163",
           "fuel": "Diesel",
-          "yearStart": 2016,
-          "yearEnd": 2018
+          "yearStart": 2009
         },
         {
-          "name": "2.0 BlueHDi 150ch",
-          "fuel": "Diesel",
-          "yearStart": 2016,
-          "yearEnd": 2021
-        },
-        {
-          "name": "2.0 BlueHDi 180ch",
-          "fuel": "Diesel",
-          "yearStart": 2016,
-          "yearEnd": 2021
-        },
-        {
-          "name": "1.6 Hybrid 225ch",
+          "name": "2.0 Hybrid4",
           "fuel": "Hybride rechargeable",
-          "yearStart": 2020,
-          "yearEnd": 2026
+          "yearStart": 2009
         },
         {
-          "name": "1.6 Hybrid4 300ch AWD",
+          "name": "1.6 e-HDi 112",
+          "fuel": "Diesel",
+          "yearStart": 2009
+        },
+        {
+          "name": "1.6 HDi 110",
+          "fuel": "Diesel",
+          "yearStart": 2009
+        },
+        {
+          "name": "1.6 HDi 112",
+          "fuel": "Diesel",
+          "yearStart": 2009
+        },
+        {
+          "name": "1.6 THP 150",
+          "fuel": "Essence",
+          "yearStart": 2009
+        },
+        {
+          "name": "1.6 THP 155",
+          "fuel": "Essence",
+          "yearStart": 2009
+        },
+        {
+          "name": "2.0 HDi 160",
+          "fuel": "Diesel",
+          "yearStart": 2009
+        },
+        {
+          "name": "2.0 Hybrid4 163",
           "fuel": "Hybride rechargeable",
-          "yearStart": 2020,
-          "yearEnd": 2024
+          "yearStart": 2009
         },
         {
-          "name": "1.2 Hybrid 136ch",
-          "fuel": "Hybride",
-          "yearStart": 2024,
-          "yearEnd": 2026
+          "name": "1.2 136",
+          "fuel": "Essence",
+          "yearStart": 2009
         },
         {
-          "name": "1.2 Hybrid 195ch",
-          "fuel": "Hybride",
-          "yearStart": 2024,
-          "yearEnd": 2026
-        },
-        {
-          "name": "1.6 e-HDi 112ch",
+          "name": "1.5 BlueHDi 130",
           "fuel": "Diesel",
-          "yearStart": 2009,
-          "yearEnd": 2016
+          "yearStart": 2009
         },
         {
-          "name": "2.0 e-HDi 150ch",
+          "name": "1.5 BlueHDi",
           "fuel": "Diesel",
-          "yearStart": 2009,
-          "yearEnd": 2016
+          "yearStart": 2009
         },
         {
-          "name": "2.0 e-HDi 163ch",
+          "name": "1.6 180",
+          "fuel": "Essence",
+          "yearStart": 2009
+        },
+        {
+          "name": "1.6 225",
+          "fuel": "Essence",
+          "yearStart": 2009
+        },
+        {
+          "name": "1.6 Hybrid4 300",
+          "fuel": "Hybride rechargeable",
+          "yearStart": 2009
+        },
+        {
+          "name": "1.6 PureTech 180",
+          "fuel": "Essence",
+          "yearStart": 2009
+        },
+        {
+          "name": "2.0 BlueHDi 180",
           "fuel": "Diesel",
-          "yearStart": 2009,
-          "yearEnd": 2016
+          "yearStart": 2009
+        },
+        {
+          "name": "BlueHDi 130",
+          "fuel": "Diesel",
+          "yearStart": 2009
+        },
+        {
+          "name": "BlueHDi 180",
+          "fuel": "Diesel",
+          "yearStart": 2009
+        },
+        {
+          "name": "PureTech 130",
+          "fuel": "Essence",
+          "yearStart": 2009
+        },
+        {
+          "name": "PureTech 180",
+          "fuel": "Essence",
+          "yearStart": 2009
+        },
+        {
+          "name": "1.6 BlueHDi 100",
+          "fuel": "Diesel",
+          "yearStart": 2009
+        },
+        {
+          "name": "225",
+          "fuel": "Essence",
+          "yearStart": 2009
+        },
+        {
+          "name": "Hybrid4 300",
+          "fuel": "Hybride rechargeable",
+          "yearStart": 2009
+        },
+        {
+          "name": "1.2 145",
+          "fuel": "Essence",
+          "yearStart": 2009
+        },
+        {
+          "name": "1.6 195",
+          "fuel": "Essence",
+          "yearStart": 2009
+        },
+        {
+          "name": "électrique 210",
+          "fuel": "Électrique",
+          "yearStart": 2009
+        },
+        {
+          "name": "électrique 230",
+          "fuel": "Électrique",
+          "yearStart": 2009
+        },
+        {
+          "name": "électrique 325",
+          "fuel": "Électrique",
+          "yearStart": 2009
         }
       ],
       "4007": [
@@ -3827,94 +4148,159 @@
       ],
       "5008": [
         {
-          "name": "1.6 THP 165ch",
+          "name": "1.2 PureTech 130",
           "fuel": "Essence",
-          "yearStart": 2009,
-          "yearEnd": 2017
+          "yearStart": 2009
         },
         {
-          "name": "2.0 155ch",
+          "name": "1.6 BlueHDi 120",
+          "fuel": "Diesel",
+          "yearStart": 2009
+        },
+        {
+          "name": "1.6 HDi 115",
+          "fuel": "Diesel",
+          "yearStart": 2009
+        },
+        {
+          "name": "1.6 THP 165",
           "fuel": "Essence",
-          "yearStart": 2009,
-          "yearEnd": 2013
+          "yearStart": 2009
         },
         {
-          "name": "1.6 HDi 90ch",
+          "name": "2.0 BlueHDi 150",
           "fuel": "Diesel",
-          "yearStart": 2009,
-          "yearEnd": 2014
+          "yearStart": 2009
         },
         {
-          "name": "1.6 HDi 112ch",
+          "name": "1.6 e-HDi 112",
           "fuel": "Diesel",
-          "yearStart": 2009,
-          "yearEnd": 2017
+          "yearStart": 2009
         },
         {
-          "name": "2.0 HDi 150ch",
+          "name": "1.6 e-HDi 115",
           "fuel": "Diesel",
-          "yearStart": 2009,
-          "yearEnd": 2017
+          "yearStart": 2009
         },
         {
-          "name": "2.0 HDi 163ch",
+          "name": "1.6 HDi 110",
           "fuel": "Diesel",
-          "yearStart": 2009,
-          "yearEnd": 2017
+          "yearStart": 2009
         },
         {
-          "name": "1.6 e-HDi 115ch Hybrid",
-          "fuel": "Hybride",
-          "yearStart": 2012,
-          "yearEnd": 2017
+          "name": "1.6 HDi 112",
+          "fuel": "Diesel",
+          "yearStart": 2009
         },
         {
-          "name": "1.2 PureTech 130ch",
+          "name": "1.6 THP 155",
           "fuel": "Essence",
-          "yearStart": 2017,
-          "yearEnd": 2024
+          "yearStart": 2009
         },
         {
-          "name": "1.2 PureTech 155ch",
+          "name": "1.6 THP 156",
           "fuel": "Essence",
-          "yearStart": 2021,
-          "yearEnd": 2024
+          "yearStart": 2009
         },
         {
-          "name": "1.6 THP 165ch",
+          "name": "1.6 VTi 120",
           "fuel": "Essence",
-          "yearStart": 2017,
-          "yearEnd": 2021
+          "yearStart": 2009
         },
         {
-          "name": "1.5 BlueHDi 130ch",
+          "name": "2.0 HDi 150",
           "fuel": "Diesel",
-          "yearStart": 2017,
-          "yearEnd": 2024
+          "yearStart": 2009
         },
         {
-          "name": "2.0 BlueHDi 150ch",
+          "name": "2.0 HDi 163",
           "fuel": "Diesel",
-          "yearStart": 2017,
-          "yearEnd": 2021
+          "yearStart": 2009
         },
         {
-          "name": "2.0 BlueHDi 180ch",
+          "name": "2.0 HDi 160",
           "fuel": "Diesel",
-          "yearStart": 2017,
-          "yearEnd": 2021
+          "yearStart": 2009
         },
         {
-          "name": "1.6 Hybrid 225ch",
-          "fuel": "Hybride rechargeable",
-          "yearStart": 2020,
-          "yearEnd": 2024
+          "name": "1.2 PureTech 136",
+          "fuel": "Essence",
+          "yearStart": 2009
         },
         {
-          "name": "1.6 Hybrid4 300ch AWD",
-          "fuel": "Hybride rechargeable",
-          "yearStart": 2020,
-          "yearEnd": 2024
+          "name": "1.5 BlueHDi 130",
+          "fuel": "Diesel",
+          "yearStart": 2009
+        },
+        {
+          "name": "1.6 PureTech 180",
+          "fuel": "Essence",
+          "yearStart": 2009
+        },
+        {
+          "name": "2.0 BlueHDi 180",
+          "fuel": "Diesel",
+          "yearStart": 2009
+        },
+        {
+          "name": "BlueHDi 130",
+          "fuel": "Diesel",
+          "yearStart": 2009
+        },
+        {
+          "name": "BlueHDi 180",
+          "fuel": "Diesel",
+          "yearStart": 2009
+        },
+        {
+          "name": "136",
+          "fuel": "Essence",
+          "yearStart": 2009
+        },
+        {
+          "name": "PureTech 130",
+          "fuel": "Essence",
+          "yearStart": 2009
+        },
+        {
+          "name": "1.6 BlueHDi 100",
+          "fuel": "Diesel",
+          "yearStart": 2009
+        },
+        {
+          "name": "1.2 136",
+          "fuel": "Essence",
+          "yearStart": 2009
+        },
+        {
+          "name": "1.2 145",
+          "fuel": "Essence",
+          "yearStart": 2009
+        },
+        {
+          "name": "1.6 195",
+          "fuel": "Essence",
+          "yearStart": 2009
+        },
+        {
+          "name": "1.6 225",
+          "fuel": "Essence",
+          "yearStart": 2009
+        },
+        {
+          "name": "électrique 210",
+          "fuel": "Électrique",
+          "yearStart": 2009
+        },
+        {
+          "name": "électrique 230",
+          "fuel": "Électrique",
+          "yearStart": 2009
+        },
+        {
+          "name": "électrique 325",
+          "fuel": "Électrique",
+          "yearStart": 2009
         }
       ],
       "RCZ": [
@@ -3945,34 +4331,64 @@
       ],
       "Rifter": [
         {
-          "name": "1.2 PureTech 110ch",
+          "name": "1.2 110",
           "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
+          "yearStart": 2018
         },
         {
-          "name": "1.2 PureTech 130ch",
+          "name": "1.5 130",
           "fuel": "Essence",
-          "yearStart": 2020,
-          "yearEnd": 2026
+          "yearStart": 2018
         },
         {
-          "name": "1.5 BlueHDi 100ch",
+          "name": "1.5 100",
+          "fuel": "Essence",
+          "yearStart": 2018
+        },
+        {
+          "name": "1.5 BlueHDi 100",
           "fuel": "Diesel",
-          "yearStart": 2018,
-          "yearEnd": 2026
+          "yearStart": 2018
         },
         {
-          "name": "1.5 BlueHDi 130ch",
+          "name": "1.5 BlueHDi 130",
           "fuel": "Diesel",
-          "yearStart": 2018,
-          "yearEnd": 2026
+          "yearStart": 2018
         },
         {
-          "name": "e-Rifter 136ch",
+          "name": "électrique 136",
           "fuel": "Électrique",
-          "yearStart": 2021,
-          "yearEnd": 2026
+          "yearStart": 2018
+        },
+        {
+          "name": "1.2 PureTech 110",
+          "fuel": "Essence",
+          "yearStart": 2018
+        },
+        {
+          "name": "1.2 PureTech 130",
+          "fuel": "Essence",
+          "yearStart": 2018
+        },
+        {
+          "name": "électrique 50",
+          "fuel": "Électrique",
+          "yearStart": 2018
+        },
+        {
+          "name": "électrique 54",
+          "fuel": "Électrique",
+          "yearStart": 2018
+        },
+        {
+          "name": "50",
+          "fuel": "Essence",
+          "yearStart": 2018
+        },
+        {
+          "name": "54",
+          "fuel": "Essence",
+          "yearStart": 2018
         }
       ],
       "Partner": [
@@ -49713,20 +50129,114 @@
         "S16"
       ],
       "107": [
-        "Urban",
-        "Trendy",
-        "Sport",
-        "Féline",
-        "Roland Garros"
+        "12V BLUE LION ACCESS",
+        "12V BLUE LION ACTIVE",
+        "12V BLUE LION ALLURE",
+        "12V BLUE LION ENVY",
+        "12V BLUE LION NAVTEQ",
+        "ACCESS 3P",
+        "ACCESS 5P",
+        "ACTIVE 2-TRONIC 5P",
+        "ACTIVE 3P",
+        "ACTIVE 5P",
+        "ACTIVE ETG5 5P",
+        "BLACK & SILVER 2-TRONIC",
+        "BLACK & SILVER 3P",
+        "BLACK & SILVER 5P",
+        "ENVY 2-TRONIC",
+        "ENVY 5P",
+        "ENVY BLUE LION",
+        "ENVY ETG5",
+        "ENVY ETG5 5P",
+        "ENVY NAV BLUE LION",
+        "GT LINE 3P",
+        "PACK LIMITED 3P",
+        "PACK LIMITED 5P",
+        "SERIE 64 3P",
+        "SERIE 64 5P",
+        "SERIE 64 BLUE LION",
+        "SPORTIUM 2-TRONIC 5P",
+        "SPORTIUM 5P",
+        "TRENDY 2-TRONIC 3P",
+        "TRENDY 2-TRONIC 5P",
+        "TRENDY 3P",
+        "TRENDY 5P",
+        "URBAN 3P",
+        "URBAN 5P",
+        "URBAN MOVE 2-TRONIC 3P",
+        "URBAN MOVE 2-TRONIC 5P",
+        "URBAN MOVE 3P",
+        "URBAN MOVE 5P"
       ],
       "108": [
-        "Like",
-        "Active",
-        "Allure",
-        "Roland Garros",
-        "GT Line",
-        "Collection",
-        "Urban Chic"
+        "3CV ACTIVE 3P",
+        "3CV ACTIVE 5P",
+        "3CV ALLURE 5P",
+        "3CV COLLECTION 5P",
+        "3CV GT LINE 5P",
+        "3CV LIKE 3P",
+        "3CV LIKE 5P",
+        "3CV STYLE 3P",
+        "3CV STYLE 5P",
+        "3CV TOP! COLLECTION 5P",
+        "3CV TOP! ROLAND GARROS",
+        "3CV TOP! STYLE 5P",
+        "ACCESS 3P",
+        "ACCESS 3P E6",
+        "ACCESS 5P",
+        "ACCESS 5P E6",
+        "ACTIVE 3P",
+        "ACTIVE 3P E6",
+        "ACTIVE 5P",
+        "ACTIVE 5P E6",
+        "ACTIVE TOP! 3P",
+        "ACTIVE TOP! 5P",
+        "ACTIVE TOP! ETG5 5P",
+        "ADML ALLURE TOP! 3P",
+        "ADML ALLURE TOP! 5P",
+        "ALLURE 3P",
+        "ALLURE 5P",
+        "ALLURE 5P E6",
+        "ALLURE ETG5 5P",
+        "ALLURE ETG5 5P E6",
+        "ALLURE TOP! 3P",
+        "ALLURE TOP! 5P",
+        "ALLURE TOP! ETG5 5P",
+        "COLLECTION 5P",
+        "COLLECTION 5P E6",
+        "COLLECTION ETG5 5P",
+        "COLLECTION ETG5 5P E6",
+        "COLLECTION TOP!",
+        "ENVY 5P",
+        "ENVY TOP! 5P",
+        "ETG5 ACTIVE 5P",
+        "FELINE 3P",
+        "FELINE 5P",
+        "GT LINE 5P",
+        "GT LINE 5P E6",
+        "GT LINE ETG5 5P",
+        "LIKE 3P",
+        "LIKE 5P",
+        "STYLE +",
+        "STYLE + 5P",
+        "STYLE 3P",
+        "STYLE 3P E6",
+        "STYLE 5P",
+        "STYLE 5P E6",
+        "STYLE ETG5 5P",
+        "STYLE ETG5 5P E6",
+        "STYLE TOP!",
+        "TOP! ALLURE 5P",
+        "TOP! ALLURE ETG5 5P",
+        "TOP! COLLECTION 5P",
+        "TOP! COLLECTION 5P E6",
+        "TOP! COLLECTION ETG5 5P",
+        "TOP! ROLAND GARROS 3P",
+        "TOP! ROLAND GARROS 5P",
+        "TOP! ROLAND GARROS ETG5",
+        "TOP! STYLE 5P",
+        "TOP! STYLE 5P E6",
+        "TOP! STYLE ETG5 5P"
       ],
       "206": [
         "Access",
@@ -49738,29 +50248,146 @@
         "Roland Garros"
       ],
       "207": [
-        "Urban",
-        "Trendy",
-        "Active",
-        "Féline",
-        "GT",
-        "Roland Garros",
-        "Epure"
+        "BLUE LION SERIE 64",
+        "CH ROLAND GARROS",
+        "ESSENCE 3P",
+        "ESSENCE 5P",
+        "FAP FELINE",
+        "FAP FELINE BV6",
+        "FAP GRIFFE",
+        "FAP ROLAND GARROS",
+        "FAP SERIE 64",
+        "FAP SPORT",
+        "FAP SPORT BV6",
+        "FAP SPORT PACK",
+        "FAP SPORT PACK BV6",
+        "FELINE",
+        "GRIFFE",
+        "PACK LIMITED",
+        "ROLAND GARROS",
+        "SERIE 64",
+        "SPORT",
+        "SPORT PACK"
       ],
       "208": [
-        "Access",
-        "Like",
-        "Active",
-        "Allure",
-        "GT Line",
-        "XY",
-        "Féline",
-        "Roland Garros",
-        "GTi",
-        "Active Pack",
-        "Allure Pack",
-        "GT",
-        "GT Premium",
-        "Allure Business"
+        "4CV ALLURE 3P",
+        "4CV ALLURE 5P",
+        "4CV BUSINESS PACK 5P",
+        "4CV FELINE 3P",
+        "4CV FELINE 5P",
+        "4CV XY 3P",
+        "5CV ACTIVE BUSINESS 5P",
+        "5CV ALLURE BUSINESS 5P",
+        "6CV ALLURE 3P",
+        "6CV ALLURE 5P",
+        "6CV ALLURE BUSINESS 5P",
+        "6CV FELINE 5P",
+        "6CV GT LINE 5P",
+        "6CV TECH EDITION 5P",
+        "7CV ALLURE",
+        "7CV GT LINE",
+        "ACCESS 3P",
+        "ACCESS 5P",
+        "ACTIVE",
+        "ACTIVE 3P",
+        "ACTIVE 5P",
+        "ACTIVE 5P E6",
+        "ACTIVE BLUE LION BMP5",
+        "ACTIVE BUSINESS",
+        "ACTIVE BUSINESS 5P",
+        "ACTIVE BUSINESS 5P E6",
+        "ACTIVE BUSINESS BMP5 5P",
+        "ACTIVE BUSINESS ETG5 5P",
+        "ACTIVE BUSINESS MSQ5 5P",
+        "ACTIVE BUSINESS R",
+        "ACTIVE BUSINESS R 2020",
+        "ACTIVE BUSINESS R E6",
+        "ACTIVE BUSINESS R MY21",
+        "ACTIVE E-DCS6",
+        "ACTIVE ETG5 3P",
+        "ACTIVE ETG5 5P",
+        "ACTIVE PACK",
+        "AFFAIRE",
+        "AFFAIRE CONFORT",
+        "AFFAIRE E-DCS6",
+        "AFFAIRE PACK CD CLIM",
+        "AFFAIRE PACK CLIM CONFORT",
+        "ALLURE",
+        "ALLURE 3P",
+        "ALLURE 5P",
+        "ALLURE 5P E6",
+        "ALLURE AUTO 5P",
+        "ALLURE BMP6 5P",
+        "ALLURE BUSINESS",
+        "ALLURE BUSINESS 5P",
+        "ALLURE BUSINESS 5P E6",
+        "ALLURE E-DCS6",
+        "ALLURE ETG6 5P",
+        "ALLURE PACK",
+        "ALLURE PACK MY21",
+        "BLUE LION ACTIVE 3P",
+        "BLUE LION ACTIVE 5P",
+        "BLUE LION AFFAIRE PACK",
+        "BLUE LION ALLURE 3P",
+        "BLUE LION ALLURE 5P",
+        "BLUE LION BUSINESS PACK",
+        "BLUE LION BUSINESS R",
+        "BLUE LION ENVY 5P",
+        "BLUE LION URBAN SOUL",
+        "BUSINESS",
+        "BUSINESS 5P",
+        "BUSINESS BLUE LION BMP5",
+        "BUSINESS E-DCS6",
+        "BUSINESS PACK 5P",
+        "BUSINESS R'",
+        "BUSINESS R' E-DCS6",
+        "CONFORT",
+        "EDITION",
+        "ENVY",
+        "ENVY 5P",
+        "ENVY E-DCS6",
+        "FAP ALLURE BMP6 3P",
+        "FELINE 3P",
+        "FELINE 5P",
+        "FELINE AUTO",
+        "GT E-DCS6",
+        "GT EXCLUSIVE E-DCS6",
+        "GT LINE",
+        "GT LINE 3P",
+        "GT LINE 5P",
+        "GT LINE 5P E6",
+        "GT PACK",
+        "INTUITIVE 3P",
+        "INTUITIVE 5P",
+        "LIGNE S 3P",
+        "LIKE",
+        "LIKE 3P",
+        "LIKE 5P",
+        "PACK CLIM",
+        "PACK CLIM NAV",
+        "PREMIUM",
+        "PREMIUM PACK",
+        "PREMIUM PACK E6",
+        "PRO",
+        "ROADTRIP",
+        "ROLAND GARROS 5P",
+        "ROLAND GARROS AUTO 5P",
+        "SERIE SPECIALE EDITION E-DCS6",
+        "SERIE SPECIALE ENVY",
+        "SERIE SPECIALE ENVY E-DCS6",
+        "SIGNATURE 5P",
+        "STREET 5P",
+        "STYLE",
+        "STYLE 3P",
+        "STYLE 5P",
+        "STYLE 5P E6",
+        "STYLE E-DCS6",
+        "TECH EDITION 5P",
+        "TECH EDITION 5P E6",
+        "URBAN SOUL 5P",
+        "XY 3P",
+        "XY AUTO 3P",
+        "XY JBL 3P"
       ],
       "301": [
         "Access",
@@ -49784,26 +50411,193 @@
         "RC"
       ],
       "308": [
-        "Access",
-        "SR",
-        "Active",
-        "Allure",
-        "Business",
-        "Féline",
-        "GT Line",
-        "Style",
-        "Active Business",
-        "Allure Business",
-        "GT",
-        "Tech Edition",
-        "Roland Garros",
-        "Hybrid4",
-        "Active Pack",
-        "Allure Pack",
-        "GT Pack",
-        "PSE",
-        "Business Pack",
-        "GTi"
+        "5CV ACCESS",
+        "5CV ACTIVE",
+        "5CV ACTIVE BUSINESS",
+        "5CV ALLURE",
+        "5CV STYLE",
+        "5CV TECH EDITION",
+        "6CV ACCESS",
+        "6CV ACTIVE",
+        "6CV ACTIVE BUSINESS",
+        "6CV ACTIVE BUSINESS 108G",
+        "6CV ALLURE",
+        "6CV ALLURE BUSINESS",
+        "6CV ALLURE EURO6",
+        "6CV FELINE",
+        "6CV GT LINE",
+        "6CV GT LINE EURO6",
+        "6CV STYLE",
+        "6CV TECH EDITION",
+        "7CV ACCESS",
+        "7CV ACTIVE",
+        "7CV ACTIVE BUSINESS",
+        "7CV ALLURE",
+        "7CV ALLURE BUSINESS",
+        "7CV ALLURE EURO6",
+        "7CV GT LINE",
+        "7CV GT LINE EURO6",
+        "7CV STYLE",
+        "7CV TECH EDITION",
+        "8 ALLURE PACK",
+        "8 GT PACK",
+        "8 ROADTRIP",
+        "8CV FELINE",
+        "8CV GT LINE",
+        "ACCESS",
+        "ACCESS 5P",
+        "ACCESS BUSINESS",
+        "ACTIVE",
+        "ACTIVE 5P",
+        "ACTIVE BUSINESS",
+        "ACTIVE BUSINESS 108G",
+        "ACTIVE PACK",
+        "ACTIVE PACK AUTO8",
+        "ACTIVE PACK E-",
+        "ACTIVE PACK E-DCS6",
+        "ALLURE",
+        "ALLURE 5P",
+        "ALLURE 7PL",
+        "ALLURE AUTO",
+        "ALLURE AUTO8",
+        "ALLURE BUSINESS",
+        "ALLURE BUSINESS EURO6",
+        "ALLURE E-",
+        "ALLURE E-DCS6",
+        "ALLURE E-DCS7",
+        "ALLURE EURO6",
+        "ALLURE PACK",
+        "ALLURE PACK AUTO8",
+        "ALLURE PACK E-",
+        "AUTO ALLURE",
+        "BUSINESS",
+        "BUSINESS 5P",
+        "BUSINESS E-DCS6",
+        "BUSINESS E-DCS7",
+        "BUSINESS PACK",
+        "BUSINESS PACK 5P",
+        "CH GT E-DCS7",
+        "CONFORT",
+        "CONFORT 3P",
+        "CONFORT 5P",
+        "CONFORT PACK",
+        "CONFORT PACK 5P",
+        "E-STYLE",
+        "EDITION",
+        "EDITION E-DCS6",
+        "EURO 6C ACCESS",
+        "EURO 6C ACTIVE",
+        "EURO 6C ACTIVE BUSINESS",
+        "EURO 6C ALLURE",
+        "EURO6 ACCESS",
+        "EURO6 ACTIVE",
+        "EURO6 ACTIVE BUSINESS",
+        "EURO6 ALLURE",
+        "FAMILY",
+        "FAMILY 7PL",
+        "FAMILY BMP6",
+        "FAMILY BMP6 7PL",
+        "FAP 5CV ACTIVE BMP6",
+        "FAP 5CV ALLURE BMP6",
+        "FAP 5CV BUSINESS PACK",
+        "FAP 5CV FELINE BMP6",
+        "FAP 8CV PREMIUM PACK",
+        "FAP ACCESS",
+        "FAP ACCESS 5P",
+        "FAP ACTIVE",
+        "FAP ACTIVE 5P",
+        "FAP ACTIVE 7PL",
+        "FAP ACTIVE BMP6",
+        "FAP ACTIVE BMP6 5P",
+        "FAP ACTIVE ETG6",
+        "FAP ALLURE",
+        "FAP ALLURE 5P",
+        "FAP ALLURE 7PL",
+        "FAP ALLURE AUTO",
+        "FAP ALLURE BMP6",
+        "FAP ALLURE BMP6 5P",
+        "FAP BLUE LION ACCESS",
+        "FAP BLUE LION ALLURE",
+        "FAP BLUE LION BUSINESS",
+        "FAP BLUE LION STYLE",
+        "FAP BUSINESS",
+        "FAP BUSINESS PACK",
+        "FAP BUSINESS PACK 5P",
+        "FAP BUSINESS PACK BMP6",
+        "FAP CONFORT",
+        "FAP CONFORT 3P",
+        "FAP CONFORT 5P",
+        "FAP CONFORT PACK",
+        "FAP CONFORT PACK 5P",
+        "FAP CONFORT PACK BMP6",
+        "FAP FELINE",
+        "FAP FELINE 3P",
+        "FAP FELINE 5P",
+        "FAP FELINE 7PL",
+        "FAP FELINE AUTO",
+        "FAP FELINE BMP6",
+        "FAP FELINE BMP6 3P",
+        "FAP FELINE BMP6 5P",
+        "FAP FELINE BV6",
+        "FAP FELINE BV6 5P",
+        "FAP NAVTEQ",
+        "FAP NAVTEQ 5P",
+        "FAP NAVTEQ BMP6 5P",
+        "FAP PACK LIMITED",
+        "FAP PACK LIMITED 5P",
+        "FAP PREMIUM",
+        "FAP PREMIUM 3P",
+        "FAP PREMIUM 5P",
+        "FAP PREMIUM BMP6",
+        "FAP PREMIUM BMP6 3P",
+        "FAP PREMIUM BMP6 5P",
+        "FAP PREMIUM BV6",
+        "FAP PREMIUM PACK 5P",
+        "FAP PREMIUM PACK BMP6",
+        "FAP PREMIUM PACK BV6",
+        "FAP SERIE MILLESIM 200",
+        "FAP SPORTIUM",
+        "FAP SPORTIUM 5P",
+        "FAP STYLE",
+        "FAP STYLE 5P",
+        "FAP STYLE BMP6 5P",
+        "FELINE",
+        "FELINE 3P",
+        "FELINE 5P",
+        "FELINE AUTO",
+        "GT AUTO",
+        "GT E-",
+        "GT E-DCS6",
+        "GT E-DCS7",
+        "GT EXCLUSIVE",
+        "GT EXCLUSIVE E-DCS6",
+        "GT EXCLUSIVE E-DCS7",
+        "GT LINE",
+        "GT LINE EURO6",
+        "GT PACK",
+        "GT PACK E-",
+        "NAVTEQ",
+        "NAVTEQ 5P",
+        "PREMIUM",
+        "PREMIUM 3P",
+        "PREMIUM 5P",
+        "PREMIUM PACK",
+        "PREMIUM PACK 5P",
+        "ROADTRIP",
+        "S&SSTYLE",
+        "SENSATION",
+        "SERIE MILLESIM 200",
+        "SERIE MILLESIM 200 5P",
+        "SPORTIUM",
+        "SPORTIUM 5P",
+        "SPORTIUM BV6 5P",
+        "STYLE",
+        "STYLE +",
+        "STYLE 5P",
+        "STYLE BMP6",
+        "STYLE E-DCS6",
+        "STYLE ETG6",
+        "TECH EDITION"
       ],
       "406": [
         "SL",
@@ -49818,28 +50612,106 @@
         "Pack"
       ],
       "408": [
-        "Active Pack",
-        "Allure Pack",
-        "GT",
-        "GT Premium",
-        "GT Line"
+        "ALLURE",
+        "ALLURE BUSINESS E-DCS6",
+        "ALLURE E-",
+        "ALLURE E-DCS6",
+        "ALLURE E-DCS7",
+        "ALLURE PACK",
+        "ALLURE PACK E-",
+        "BUSINESS E-DCS6",
+        "BUSINESS E-DCS7",
+        "GT E-",
+        "GT E-DCS6",
+        "GT E-DCS7",
+        "GT EXCLUSIVE E-DCS6",
+        "GT EXCLUSIVE E-DCS7"
       ],
       "508": [
-        "Access",
-        "Active",
-        "Allure",
-        "GT",
-        "Roland Garros",
-        "Business Pack",
-        "Hybrid4",
-        "Active Pack",
-        "Allure Pack",
-        "GT Premium",
-        "GT Line",
-        "PSE",
-        "Première Edition",
-        "Active Business",
-        "Allure Business"
+        "+ ELECTRIC FELINE 85G",
+        "+ ELECTRIC FELINE ETG6",
+        "10CV ALLURE BUSINESS E-",
+        "10CV ALLURE E-",
+        "10CV GT E-",
+        "10CV GT LINE E-",
+        "12CV GT",
+        "6CV ACTIVE BUSINESS",
+        "6CV ALLURE BUSINESS",
+        "7CV ACTIVE",
+        "7CV ACTIVE BUSINESS",
+        "7CV ALLURE",
+        "7CV ALLURE BUSINESS",
+        "7CV GT LINE",
+        "85G ETG6 + ELECTRIC",
+        "88G ETG6 + ELECTRIC",
+        "9CV ACTIVE",
+        "9CV ACTIVE BUSINESS",
+        "9CV ALLURE",
+        "9CV ALLURE BUSINESS",
+        "9CV GT LINE",
+        "ACCESS",
+        "ACCESS BMP6",
+        "ACCESS ETG6",
+        "ACTIVE",
+        "ACTIVE BMP6",
+        "ACTIVE BUSINESS",
+        "ACTIVE BUSINESS 2022",
+        "ACTIVE ETG6",
+        "ACTIVE PACK",
+        "ACTIVE PACK E-",
+        "ACTIVE PACK E- 2022",
+        "ALLURE",
+        "ALLURE AUTO",
+        "ALLURE BMP6",
+        "ALLURE BUSINESS",
+        "ALLURE BUSINESS 2022",
+        "ALLURE BUSINESS AUTO",
+        "ALLURE BUSINESS E-",
+        "ALLURE E-",
+        "ALLURE ETG6",
+        "ALLURE PACK",
+        "ALLURE PACK E-",
+        "AUTO",
+        "BUSINESS PACK",
+        "BUSINESS PACK BMP6",
+        "BUSINESS PACK ETG6",
+        "CH ALLURE",
+        "CH GT",
+        "E- GT",
+        "FAP 8CV ALLURE",
+        "FAP ACCESS",
+        "FAP ACCESS BMP6",
+        "FAP ACTIVE",
+        "FAP ACTIVE BMP6",
+        "FAP ALLURE",
+        "FAP ALLURE AUTO",
+        "FAP ALLURE BMP6",
+        "FAP BLUE LION ACCESS",
+        "FAP BUSINESS PACK",
+        "FAP BUSINESS PACK BMP6",
+        "FAP FELINE",
+        "FAP FELINE AUTO",
+        "FAP FELINE BMP6",
+        "FAP GT",
+        "FELINE",
+        "FELINE AUTO",
+        "FELINE BMP6",
+        "FELINE ETG6",
+        "GT 10CV E-",
+        "GT 2022",
+        "GT AUTO",
+        "GT E-",
+        "GT E- 2021",
+        "GT LINE",
+        "GT LINE E-",
+        "GT PACK",
+        "GT PACK 2022",
+        "GT PACK E-",
+        "GT PACK E- 2022",
+        "PSE E-",
+        "PSE E- 2020",
+        "PSE E- 2022",
+        "STYLE"
       ],
       "607": [
         "Pack",
@@ -49945,20 +50817,119 @@
         "URBAN CROSS ORANGE"
       ],
       "3008": [
-        "Access",
-        "Active",
-        "Allure",
-        "Féline",
-        "GT",
-        "Roland Garros",
-        "Business",
-        "Allure Business",
-        "GT Line",
-        "GT Pack",
-        "GT Premium",
-        "Hybrid4",
-        "Allure Pack",
-        "Active Pack"
+        "10CV ALLURE BUSINESS E-",
+        "10CV ALLURE E-",
+        "10CV GT",
+        "10CV GT E-",
+        "10CV GT LINE E-",
+        "11CV GT E-",
+        "11CV GT LINE E-",
+        "6CV ALLURE",
+        "7CV ACTIVE",
+        "7CV ACTIVE BUSINESS",
+        "7CV ALLURE",
+        "7CV ALLURE BUSINESS",
+        "7CV ALLURE PACK",
+        "7CV CROSSWAY",
+        "7CV GT",
+        "7CV GT LINE",
+        "7CV STYLE",
+        "8CV ACTIVE BUSINESS",
+        "8CV ALLURE",
+        "8CV FELINE",
+        "ACCESS",
+        "ACCESS BUSINESS",
+        "ACCESS E6",
+        "ACTIVE",
+        "ACTIVE BUSINESS",
+        "ACTIVE BUSINESS E6",
+        "ACTIVE E6",
+        "ACTIVE ETG6",
+        "ACTIVE PACK",
+        "ACTIVE PACK E-",
+        "ACTIVE PACK E-DCS6",
+        "ALLURE",
+        "ALLURE BUSINESS",
+        "ALLURE BUSINESS E-",
+        "ALLURE BUSINESS E-DCS7",
+        "ALLURE BUSINESS E6",
+        "ALLURE E-",
+        "ALLURE E- 2020",
+        "ALLURE E-DCS6",
+        "ALLURE E-DCS7",
+        "ALLURE E6",
+        "ALLURE ETG6",
+        "ALLURE PACK",
+        "ALLURE PACK E-",
+        "ALLURE PACK E-DCS6",
+        "BLUE LION ROLAND GARROS",
+        "BUSINESS",
+        "BUSINESS ACTIVE",
+        "BUSINESS E-DCS6",
+        "BUSINESS E-DCS7",
+        "BUSINESS ETG6",
+        "BUSINESS PACK",
+        "BUSINESS PACK ETG6",
+        "CONFORT PACK",
+        "CROSSWAY",
+        "CROSSWAY E6",
+        "CROSSWAY ETG6",
+        "EURO6 ACTIVE BUSINESS",
+        "EURO6 ALLURE",
+        "EURO6 ALLURE BUSINESS",
+        "FAP + ELECTRIC 37",
+        "FAP ACCESS",
+        "FAP ACTIVE",
+        "FAP ACTIVE BMP6",
+        "FAP ALLURE",
+        "FAP ALLURE BMP6",
+        "FAP ALLURE ETG6",
+        "FAP BUSINESS",
+        "FAP BUSINESS BMP6",
+        "FAP BUSINESS PACK",
+        "FAP BUSINESS PACK BMP6",
+        "FAP CONFORT PACK",
+        "FAP CONFORT PACK BMP6",
+        "FAP CONFORT PACK BV6",
+        "FAP FELINE",
+        "FAP FELINE BMP6",
+        "FAP FELINE BV6",
+        "FAP PREMIUM",
+        "FAP PREMIUM BMP6",
+        "FAP PREMIUM BV6",
+        "FAP PREMIUM PACK",
+        "FAP PREMIUM PACK BMP6",
+        "FAP PREMIUM PACK BV6",
+        "FAP ROLAND GARROS",
+        "FAP STYLE",
+        "FELINE",
+        "FELINE 120G",
+        "FELINE BV6",
+        "FELINE ETG6",
+        "GT E-",
+        "GT E- 2020",
+        "GT E-DCS6",
+        "GT E-DCS7",
+        "GT EXCLUSIVE E-DCS6",
+        "GT EXCLUSIVE E-DCS7",
+        "GT LINE",
+        "GT LINE E-",
+        "GT LINE E6",
+        "GT PACK",
+        "GT PACK E-",
+        "GT PACK E- 2020",
+        "LONG BUSINESS VI",
+        "NAPAPIJRI",
+        "NAPAPIJRI BMP6",
+        "PREMIUM",
+        "PREMIUM BV6",
+        "PREMIUM PACK",
+        "PREMIUM PACK BV6",
+        "ROADTRIP",
+        "ROADTRIP E-",
+        "ROLAND GARROS",
+        "ROLAND GARROS BMP6 BLUE",
+        "STYLE"
       ],
       "4007": [
         "Active",
@@ -49971,28 +50942,151 @@
         "Féline"
       ],
       "5008": [
-        "Access",
-        "Active",
-        "Allure",
-        "Business",
-        "GT Line",
-        "Roland Garros",
-        "Allure Business",
-        "GT",
-        "GT Pack",
-        "GT Premium",
-        "Active Business",
-        "Active Pack",
-        "Allure Pack"
+        "10CV ALLURE",
+        "6CV ACTIVE BUSINESS",
+        "6CV ALLURE BUSINESS",
+        "7CV ACTIVE",
+        "7CV ACTIVE BUSINESS",
+        "7CV ALLURE",
+        "7CV ALLURE BUSINESS",
+        "7CV CROSSWAY",
+        "7CV GT LINE",
+        "7CV STYLE",
+        "8CV ACTIVE",
+        "8CV ACTIVE 7PL",
+        "8CV ACTIVE BUSINESS 7PL",
+        "8CV ALLURE 7PL",
+        "ACCESS",
+        "ACCESS 7PL",
+        "ACCESS BUSINESS",
+        "ACCESS BUSINESS 7PL",
+        "ACCESS E6",
+        "ACTIVE",
+        "ACTIVE 7PL",
+        "ACTIVE BUSINESS",
+        "ACTIVE BUSINESS 7PL",
+        "ACTIVE BUSINESS E6",
+        "ACTIVE E6",
+        "ACTIVE PACK",
+        "ACTIVE PACK E-DCS6",
+        "ALLURE",
+        "ALLURE 7PL",
+        "ALLURE BUSINESS",
+        "ALLURE BUSINESS E-DCS6",
+        "ALLURE BUSINESS E-DCS7",
+        "ALLURE BUSINESS E6",
+        "ALLURE E-DCS6",
+        "ALLURE E-DCS7",
+        "ALLURE E6",
+        "ALLURE PACK",
+        "ALLURE PACK E-DCS6",
+        "BUSINESS",
+        "BUSINESS 7PL",
+        "BUSINESS E-DCS6",
+        "BUSINESS E-DCS7",
+        "BUSINESS PACK",
+        "BUSINESS PACK 7PL",
+        "CONFORT PACK",
+        "CONFORT PACK 7PL",
+        "CROSSWAY",
+        "CROSSWAY E6",
+        "E-DCS6 ACTIVE PACK",
+        "E-DCS6 ALLURE PACK",
+        "FAP ACCESS",
+        "FAP ACCESS 7PL",
+        "FAP ACTIVE",
+        "FAP ACTIVE 5PL",
+        "FAP ACTIVE 7PL",
+        "FAP ACTIVE BMP6",
+        "FAP ACTIVE BMP6 7PL",
+        "FAP ACTIVE ETG6",
+        "FAP ACTIVE ETG6 7PL",
+        "FAP ALLURE",
+        "FAP ALLURE 5PL",
+        "FAP ALLURE 7PL",
+        "FAP ALLURE BMP6",
+        "FAP ALLURE BMP6 7PL",
+        "FAP ALLURE ETG6",
+        "FAP BLUE LION ACTIVE",
+        "FAP BLUE LION ALLURE",
+        "FAP BLUE LION FAMILY",
+        "FAP BUSINESS",
+        "FAP BUSINESS BMP6",
+        "FAP BUSINESS BMP6 7PL",
+        "FAP BUSINESS ETG6",
+        "FAP BUSINESS PACK",
+        "FAP BUSINESS PACK 7PL",
+        "FAP BUSINESS PACK ALU",
+        "FAP BUSINESS PACK BMP6",
+        "FAP CONFORT PACK",
+        "FAP CONFORT PACK BMP6",
+        "FAP CONFORT PACK BV6",
+        "FAP FAMILY",
+        "FAP FAMILY 7PL",
+        "FAP FAMILY BMP6",
+        "FAP PREMIUM",
+        "FAP PREMIUM 7PL",
+        "FAP PREMIUM BMP6",
+        "FAP PREMIUM BMP6 7PL",
+        "FAP PREMIUM BV6",
+        "FAP PREMIUM BV6 7PL",
+        "FAP PREMIUM PACK",
+        "FAP PREMIUM PACK 7PL",
+        "FAP PREMIUM PACK BMP6",
+        "FAP PREMIUM PACK BV6",
+        "FAP STYLE",
+        "FAP STYLE 5PL",
+        "FAP STYLE 7PL",
+        "GT E-DCS6",
+        "GT E-DCS7",
+        "GT EXCLUSIVE E-DCS6",
+        "GT EXCLUSIVE E-DCS7",
+        "GT LINE",
+        "GT LINE E6",
+        "GT PACK",
+        "PREMIUM BV6",
+        "PREMIUM PACK",
+        "PREMIUM PACK 7PL",
+        "PREMIUM PACK BV6",
+        "PREMIUM PACK BV6 7PL",
+        "ROADTRIP",
+        "STYLE",
+        "STYLE 5PL",
+        "STYLE 7PL"
       ],
       "Rifter": [
-        "Active",
-        "Active Pack",
-        "Allure",
-        "Allure Pack",
-        "GT",
-        "GT Pack",
-        "GT Line"
+        "5PL",
+        "ACTIVE",
+        "ACTIVE 7PL",
+        "ACTIVE PACK",
+        "ACTIVE PACK 7PL",
+        "ALLURE",
+        "ALLURE 4PL",
+        "ALLURE 5PL",
+        "ALLURE 7PL",
+        "ALLURE MANUELLE 5PL",
+        "ALLURE PACK",
+        "ALLURE PACK 7PL",
+        "AUTOMATIQUE 5PL ALLURE",
+        "GT 5PL",
+        "GT 7PL",
+        "GT AUTOMATIQUE 5PL",
+        "GT LINE",
+        "GT LINE 7PL",
+        "LONG ACTIVE PACK 7PL",
+        "LONG ALLURE",
+        "LONG ALLURE 7PL",
+        "LONG ALLURE PACK",
+        "LONG ALLURE PACK 7PL",
+        "LONG GT",
+        "LONG GT 7PL",
+        "LONG GT LINE",
+        "LONG GT LINE 7PL",
+        "LONG STYLE",
+        "LONG STYLE 7PL",
+        "MANUELLE 5PL ALLURE",
+        "STYLE",
+        "XL E136 ALLURE 5PL"
       ],
       "Traveller": [
         "Active",
