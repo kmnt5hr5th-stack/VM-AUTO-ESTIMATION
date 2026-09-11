@@ -10432,6 +10432,23 @@
           "yearStart": 2010,
           "yearEnd": 2017
         }
+      ],
+      "ID.Polo": [
+        {
+          "name": "116 37kWh",
+          "fuel": "Électrique",
+          "yearStart": 2025
+        },
+        {
+          "name": "135 37kWh",
+          "fuel": "Électrique",
+          "yearStart": 2025
+        },
+        {
+          "name": "211 52kWh",
+          "fuel": "Électrique",
+          "yearStart": 2025
+        }
       ]
     },
     "Toyota": {
@@ -53443,6 +53460,13 @@
       ],
       "Polo R": [
         "R WRC"
+      ],
+      "ID.Polo": [
+        "Life",
+        "Life Edition",
+        "Style",
+        "Style Exclusive",
+        "Trend"
       ]
     },
     "Toyota": {
