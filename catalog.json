@@ -26596,52 +26596,61 @@
       ],
       "Q2": [
         {
-          "name": "1.0 TFSI 116",
-          "fuel": "Essence",
+          "name": "1.6 TDI 116",
+          "fuel": "Diesel",
           "yearStart": 2016,
-          "yearEnd": 2026
-        },
-        {
-          "name": "1.4 TFSI 150",
-          "fuel": "Essence",
-          "yearStart": 2018,
           "yearEnd": 2018
         },
         {
-          "name": "1.5 TFSI 150",
-          "fuel": "Essence",
-          "yearStart": 2016,
-          "yearEnd": 2026
-        },
-        {
-          "name": "35 TFSI 150 DESIGN",
-          "fuel": "Essence",
-          "yearStart": 2022,
-          "yearEnd": 2022
-        },
-        {
-          "name": "35 TFSI 150 S LINE PLUS",
-          "fuel": "Essence",
-          "yearStart": 2023,
-          "yearEnd": 2023
+          "name": "2.0 TDI 116",
+          "fuel": "Diesel",
+          "yearStart": 2018,
+          "yearEnd": 2025
         },
         {
           "name": "2.0 TDI 150",
           "fuel": "Diesel",
+          "yearStart": 2016
+        },
+        {
+          "name": "2.0 TDI 190",
+          "fuel": "Diesel",
           "yearStart": 2016,
-          "yearEnd": 2026
+          "yearEnd": 2018
         },
         {
-          "name": "30 TDI 116 6CV S LINE S TRONIC",
-          "fuel": "Diesel",
-          "yearStart": 2021,
-          "yearEnd": 2021
+          "name": "1.0 TFSI 116",
+          "fuel": "Essence",
+          "yearStart": 2016,
+          "yearEnd": 2018
         },
         {
-          "name": "35 TDI 150 S LINE QUATTRO S TRONIC 7",
-          "fuel": "Diesel",
-          "yearStart": 2019,
-          "yearEnd": 2019
+          "name": "1.4 TFSI 150",
+          "fuel": "Essence",
+          "yearStart": 2016,
+          "yearEnd": 2018
+        },
+        {
+          "name": "1.5 TFSI 110",
+          "fuel": "Essence",
+          "yearStart": 2020,
+          "yearEnd": 2024
+        },
+        {
+          "name": "1.5 TFSI 116",
+          "fuel": "Essence",
+          "yearStart": 2018
+        },
+        {
+          "name": "2.0 TFSI 150",
+          "fuel": "Essence",
+          "yearStart": 2018
+        },
+        {
+          "name": "2.0 TFSI 190",
+          "fuel": "Essence",
+          "yearStart": 2017,
+          "yearEnd": 2020
         }
       ],
       "Q4 e-tron": [
@@ -30301,6 +30310,201 @@
           "name": "E-TRON 428",
           "fuel": "Électrique",
           "yearStart": 2024
+        }
+      ],
+      "A7 Sportback 1e Génération": [
+        {
+          "name": "3.0 TDI 190",
+          "fuel": "Diesel",
+          "yearStart": 2015
+        },
+        {
+          "name": "3.0 TDI 204",
+          "fuel": "Diesel",
+          "yearStart": 2010,
+          "yearEnd": 2014
+        },
+        {
+          "name": "3.0 TDI 218",
+          "fuel": "Diesel",
+          "yearStart": 2014
+        },
+        {
+          "name": "3.0 TDI 245",
+          "fuel": "Diesel",
+          "yearStart": 2010,
+          "yearEnd": 2014
+        },
+        {
+          "name": "3.0 TDI 272",
+          "fuel": "Diesel",
+          "yearStart": 2014
+        },
+        {
+          "name": "1.8 TFSI 190",
+          "fuel": "Essence",
+          "yearStart": 2015,
+          "yearEnd": 2016
+        },
+        {
+          "name": "2.0 TFSI 252",
+          "fuel": "Essence",
+          "yearStart": 2014
+        },
+        {
+          "name": "2.8 FSI 204",
+          "fuel": "Essence",
+          "yearStart": 2010,
+          "yearEnd": 2014
+        },
+        {
+          "name": "3.0 TFSI 300",
+          "fuel": "Essence",
+          "yearStart": 2010,
+          "yearEnd": 2012
+        },
+        {
+          "name": "3.0 TFSI 310",
+          "fuel": "Essence",
+          "yearStart": 2012,
+          "yearEnd": 2014
+        },
+        {
+          "name": "3.0 TFSI 333",
+          "fuel": "Essence",
+          "yearStart": 2014,
+          "yearEnd": 2016
+        }
+      ],
+      "A7 Sportback 2e Génération": [
+        {
+          "name": "2.0 TDI 204",
+          "fuel": "Diesel",
+          "yearStart": 2018
+        },
+        {
+          "name": "3.0 TDI 231",
+          "fuel": "Diesel",
+          "yearStart": 2018,
+          "yearEnd": 2021
+        },
+        {
+          "name": "3.0 TDI 286",
+          "fuel": "Diesel",
+          "yearStart": 2018
+        },
+        {
+          "name": "2.0 TFSI 245",
+          "fuel": "Essence",
+          "yearStart": 2019
+        },
+        {
+          "name": "2.0 TFSI 265",
+          "fuel": "Essence",
+          "yearStart": 2020
+        },
+        {
+          "name": "3.0 TFSI 340",
+          "fuel": "Essence",
+          "yearStart": 2017
+        }
+      ],
+      "A8 3e Génération": [
+        {
+          "name": "3.0 TDI 204",
+          "fuel": "Diesel",
+          "yearStart": 2011,
+          "yearEnd": 2013
+        },
+        {
+          "name": "3.0 TDI 250",
+          "fuel": "Diesel",
+          "yearStart": 2010,
+          "yearEnd": 2013
+        },
+        {
+          "name": "3.0 TDI 258",
+          "fuel": "Diesel",
+          "yearStart": 2013,
+          "yearEnd": 2015
+        },
+        {
+          "name": "3.0 TDI 262",
+          "fuel": "Diesel",
+          "yearStart": 2015,
+          "yearEnd": 2017
+        },
+        {
+          "name": "4.2 TDI 350",
+          "fuel": "Diesel",
+          "yearStart": 2010,
+          "yearEnd": 2013
+        },
+        {
+          "name": "4.2 TDI 385",
+          "fuel": "Diesel",
+          "yearStart": 2013
+        },
+        {
+          "name": "2.0 TFSI 245",
+          "fuel": "Essence",
+          "yearStart": 2012,
+          "yearEnd": 2013
+        },
+        {
+          "name": "3.0 TFSI 290",
+          "fuel": "Essence",
+          "yearStart": 2010,
+          "yearEnd": 2016
+        },
+        {
+          "name": "3.0 TFSI 310",
+          "fuel": "Essence",
+          "yearStart": 2013,
+          "yearEnd": 2016
+        },
+        {
+          "name": "4.0 TFSI 420",
+          "fuel": "Essence",
+          "yearStart": 2012,
+          "yearEnd": 2013
+        },
+        {
+          "name": "4.0 TFSI 435",
+          "fuel": "Essence",
+          "yearStart": 2013,
+          "yearEnd": 2016
+        },
+        {
+          "name": "4.2 FSI 372",
+          "fuel": "Essence",
+          "yearStart": 2010,
+          "yearEnd": 2012
+        },
+        {
+          "name": "6.3 W12 500",
+          "fuel": "Essence",
+          "yearStart": 2010,
+          "yearEnd": 2013
+        }
+      ],
+      "A8 4e Génération": [
+        {
+          "name": "3.0 TDI 286",
+          "fuel": "Diesel",
+          "yearStart": 2017
+        },
+        {
+          "name": "3.0 TFSI 340",
+          "fuel": "Essence",
+          "yearStart": 2017,
+          "yearEnd": 2022
+        },
+        {
+          "name": "4.0 TFSI 571",
+          "fuel": "Essence",
+          "yearStart": 2020,
+          "yearEnd": 2022
         }
       ]
     },
@@ -56819,9 +57023,43 @@
         "Design"
       ],
       "Q2": [
-        "Business",
-        "Design",
-        "Line"
+        ". BUSINESS EXECUTIVE",
+        ". DESIGN",
+        ". DESIGN BVM6",
+        ". S LINE",
+        ". S LINE BVM6",
+        ". S LINE PLUS",
+        "ADVANCED",
+        "ADVANCED BVM6",
+        "AUDI Q2 DE",
+        "AVUS",
+        "AVUS BVM6",
+        "BLACK EDITION",
+        "BUSINESS EXECUTIVE",
+        "BUSINESS EXECUTIVE BVM6",
+        "BUSINESS LINE",
+        "COD",
+        "COD BUSINESS LINE",
+        "COD DESIGN",
+        "COD DESIGN LUXE",
+        "COD LAUNCH EDITION",
+        "COD LAUNCH EDITION LUXE",
+        "COD S LINE",
+        "COD SPORT",
+        "DESIGN",
+        "DESIGN BVM6",
+        "DESIGN LUXE",
+        "LAUNCH EDITION",
+        "LAUNCH EDITION LUXE",
+        "MIDNIGHT SERIES",
+        "S LINE",
+        "S LINE BVM6",
+        "S LINE PLUS",
+        "SPORT",
+        "SPORT LIMITED",
+        "TFSI COD MIDNIGHT SERIES",
+        "TFSI COD S LINE PLUS",
+        "TFSI COD SPORT LIMITED"
       ],
       "Q3": [
         "Ambition",
@@ -57481,6 +57719,159 @@
         "E-TRON PERFORMANCE DESIGN",
         "E-TRON PERFORMANCE S LINE",
         "S LINE"
+      ],
+      "A7 Sportback 1e Génération": [
+        ". BITDI AMBIENTE",
+        "AMBIENTE",
+        "AMBIENTE 5PL",
+        "AMBITION LUXE",
+        "AMBITION LUXE 5PL",
+        "AUDI A7 SPORTBACK DE",
+        "AVUS",
+        "AVUS 5PL",
+        "S LINE",
+        "S LINE 5PL",
+        "V6 . BITDI AMBIENTE",
+        "V6 . BITDI AMBITION LUXE",
+        "V6 . BITDI AVUS",
+        "V6 . BITDI COMPETITION",
+        "V6 . BITDI S LINE",
+        "V6 . TDI CLEAN DIESEL AMBIENTE",
+        "V6 . TDI CLEAN DIESEL AMBIENTE 5PL",
+        "V6 . TDI CLEAN DIESEL AMBITION LUXE",
+        "V6 . TDI CLEAN DIESEL AMBITION LUXE 5PL",
+        "V6 . TDI CLEAN DIESEL AVUS",
+        "V6 . TDI CLEAN DIESEL AVUS 5PL",
+        "V6 . TDI CLEAN DIESEL S LINE",
+        "V6 . TDI CLEAN DIESEL S LINE 5PL",
+        "V6 AMBIENTE",
+        "V6 AMBITION LUXE",
+        "V6 AVUS",
+        "V6 S LINE",
+        "V6 ULTRA AMBIENTE",
+        "V6 ULTRA AMBITION LUXE",
+        "V6 ULTRA AVUS",
+        "V6 ULTRA S LINE"
+      ],
+      "A7 Sportback 2e Génération": [
+        ". TDI HYBRIDE DESIGN",
+        ". TDI HYBRIDE ULTRA DESIGN",
+        ". TDI V6 HYBRIDE DESIGN",
+        ". TFSI HYBRIDE DESIGN",
+        ". TFSI HYBRIDE ULTRA DESIGN",
+        ". TFSIE",
+        ". TFSIE AVUS",
+        ". TFSIE AVUS EXTENDED",
+        ". TFSIE COMPETITION",
+        ". TFSIE DESIGN",
+        ". TFSIE S LINE",
+        "ADVANCED",
+        "AUDI A7 SPORTBACK DE",
+        "AVUS",
+        "AVUS EXTENDED",
+        "S LINE",
+        "TDI",
+        "TDI AVUS",
+        "TDI AVUS EXTENDED",
+        "TDI S LINE",
+        "TFSI",
+        "TFSI AVUS",
+        "TFSI AVUS EXTENDED",
+        "TFSI S LINE",
+        "TFSIE",
+        "TFSIE ADVANCED",
+        "TFSIE AVUS",
+        "TFSIE AVUS EXTENDED",
+        "TFSIE COMPETITION",
+        "TFSIE S LINE",
+        "ULTRA ADVANCED",
+        "ULTRA AVUS",
+        "ULTRA AVUS EXTENDED",
+        "ULTRA S LINE"
+      ],
+      "A8 3e Génération": [
+        ". TFSI HYBRID",
+        ". TFSI HYBRID AVUS",
+        ". TFSI HYBRID LWB",
+        ". TFSI HYBRID LWB 4PL",
+        ". TFSI HYBRID LWB AVUS",
+        ". TFSI HYBRID LWB AVUS 4PL",
+        ". V8 TDI CLEAN DIESEL AVUS EXTENDED",
+        ". V8 TDI CLEAN DIESEL LWB AVUS EXTENDED",
+        ". V8 TDI CLEAN DIESEL LWB AVUS EXTENDED 4PL",
+        ". W12 FSI",
+        ". W12 FSI LWB",
+        ". W12 TFSI LWB",
+        ". W12 TFSI LWB 4PL",
+        "AVUS",
+        "AVUS EXTENDED",
+        "AVUS LIMOUSINE",
+        "AVUS LIMOUSINE 4PL",
+        "AVUS SPORT",
+        "CLEAN DIESEL",
+        "CLEAN DIESEL AVUS",
+        "HYBRID",
+        "HYBRID AVUS",
+        "HYBRID AVUS LWB",
+        "HYBRID LWB",
+        "LIMOUSINE",
+        "LIMOUSINE 4PL",
+        "LIMOUSINE AVUS",
+        "LIMOUSINE AVUS SPORT",
+        "LIMOUSINE AVUS SPORT 4PL",
+        "LIMOUSINE SPORT",
+        "LIMOUSINE SPORT 4PL",
+        "LWB AVUS EXTENDED",
+        "LWB AVUS EXTENDED 4PL",
+        "SPORT",
+        "V6 AVUS",
+        "V6 CLEAN DIESEL",
+        "V6 CLEAN DIESEL AVUS",
+        "V6 CLEAN DIESEL AVUS EXTENDED",
+        "V6 CLEAN DIESEL AVUS LIMOUSINE",
+        "V6 CLEAN DIESEL AVUS LIMOUSINE 4PL",
+        "V6 CLEAN DIESEL LIMOUSINE",
+        "V6 CLEAN DIESEL LWB AVUS EXTENDED",
+        "V6 CLEAN DIESEL LWB AVUS EXTENDED 4PL",
+        "V6 LIMOUSINE",
+        "V6 LIMOUSINE 4PL",
+        "V6 LIMOUSINE AVUS",
+        "V6 LIMOUSINE AVUS 4PL"
+      ],
+      "A8 4e Génération": [
+        ". L AVUS",
+        ". L AVUS EXTENDED",
+        ". TDI HYBRIDE DESIGN",
+        ". TFSIE DESIGN",
+        "ADVANCED",
+        "AVUS",
+        "AVUS EXTENDED",
+        "AVUS EXTENDED LWB",
+        "AVUS EXTENDED LWB 4PL",
+        "AVUS LWB",
+        "AVUS LWB 4PL",
+        "L AVUS",
+        "L AVUS EXTENDED",
+        "L TFSIE",
+        "L TFSIE ADVANCED",
+        "L TFSIE AVUS",
+        "L TFSIE AVUS EXTENDED",
+        "L TFSIE DESIGN",
+        "LWB",
+        "LWB 4PL",
+        "LWB 4PL 4PL",
+        "LWB AVUS",
+        "LWB AVUS 4PL",
+        "LWB AVUS EXTENDED",
+        "LWB AVUS EXTENDED 4PL",
+        "TFSIE",
+        "TFSIE ADVANCED",
+        "TFSIE AVUS",
+        "TFSIE AVUS EXTENDED",
+        "TFSIE LWB AVUS",
+        "TFSIE LWB AVUS 4PL",
+        "TFSIE LWB AVUS EXTENDED",
+        "TFSIE LWB AVUS EXTENDED 4PL"
       ]
     },
     "Fiat": {
