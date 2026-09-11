@@ -9635,28 +9635,33 @@
       ],
       "Arteon Shooting Brake": [
         {
-          "name": "1.5 TSI 150",
-          "fuel": "Essence",
-          "yearStart": 2020,
-          "yearEnd": 2026
-        },
-        {
-          "name": "2.0 TSI 190 4Motion",
-          "fuel": "Essence",
-          "yearStart": 2020,
-          "yearEnd": 2026
+          "name": "1.4 eHybrid 218",
+          "fuel": "Hybride rechargeable",
+          "yearStart": 2020
         },
         {
           "name": "2.0 TDI 150",
           "fuel": "Diesel",
           "yearStart": 2020,
-          "yearEnd": 2026
+          "yearEnd": 2021
         },
         {
-          "name": "eHybrid 218",
-          "fuel": "Hybride rechargeable",
+          "name": "2.0 TDI 200",
+          "fuel": "Diesel",
           "yearStart": 2020,
-          "yearEnd": 2026
+          "yearEnd": 2021
+        },
+        {
+          "name": "2.0 TSI 190",
+          "fuel": "Essence",
+          "yearStart": 2021,
+          "yearEnd": 2022
+        },
+        {
+          "name": "2.0 TSI 320",
+          "fuel": "Essence",
+          "yearStart": 2021,
+          "yearEnd": 2022
         }
       ],
       "Passat Variant": [
@@ -53307,7 +53312,6 @@
       "Arteon Shooting Brake": [
         "Elegance",
         "R-Line",
-        "R-Line Edition",
         "R"
       ],
       "Taigo": [
