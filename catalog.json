@@ -15140,82 +15140,103 @@
       ],
       "X4": [
         {
-          "name": "(2) M COMPETITION 510",
-          "fuel": "Essence",
-          "yearStart": 2020,
-          "yearEnd": 2020
-        },
-        {
-          "name": "(2) M40D 340",
-          "fuel": "Essence",
-          "yearStart": 2015,
-          "yearEnd": 2026
-        },
-        {
-          "name": "(2) XDRIVE30D 286 M SPORT",
-          "fuel": "Essence",
-          "yearStart": 2015,
-          "yearEnd": 2026
-        },
-        {
-          "name": "M40I 360",
-          "fuel": "Essence",
-          "yearStart": 2015,
-          "yearEnd": 2026
-        },
-        {
-          "name": "XDRIVE20D 190 10CV M SPORT",
-          "fuel": "Essence",
-          "yearStart": 2015,
-          "yearEnd": 2026
-        },
-        {
-          "name": "XDRIVE20I 184 F26 M SPORT A",
-          "fuel": "Essence",
-          "yearStart": 2015,
-          "yearEnd": 2015
-        },
-        {
-          "name": "XDRIVE28I 245 LOUNGE PLUS",
-          "fuel": "Essence",
-          "yearStart": 2015,
-          "yearEnd": 2026
-        },
-        {
-          "name": "XDRIVE30D 258 LOUNGE PLUS",
-          "fuel": "Essence",
-          "yearStart": 2015,
-          "yearEnd": 2026
-        },
-        {
-          "name": "XDRIVE35D 313 LOUNGE PLUS",
-          "fuel": "Essence",
-          "yearStart": 2015,
-          "yearEnd": 2026
-        },
-        {
-          "name": "(2) M40DA 340",
+          "name": "2.0 TDI 190",
           "fuel": "Diesel",
-          "yearStart": 2021,
-          "yearEnd": 2021
+          "yearStart": 2014
         },
         {
-          "name": "M40DA 326",
+          "name": "3.0 TDI 258",
           "fuel": "Diesel",
-          "yearStart": 2019,
+          "yearStart": 2014,
+          "yearEnd": 2017
+        },
+        {
+          "name": "3.0 TDI 313",
+          "fuel": "Diesel",
+          "yearStart": 2014,
+          "yearEnd": 2017
+        },
+        {
+          "name": "2.5 TDI 231",
+          "fuel": "Diesel",
+          "yearStart": 2018,
           "yearEnd": 2019
         },
         {
-          "name": "XDRIVE20DA 190 8CV XLINE",
+          "name": "3.0 TDI 265",
           "fuel": "Diesel",
-          "yearStart": 2019,
+          "yearStart": 2018,
+          "yearEnd": 2020
+        },
+        {
+          "name": "3.0 TDI 286",
+          "fuel": "Diesel",
+          "yearStart": 2020
+        },
+        {
+          "name": "3.0 TDI 326",
+          "fuel": "Diesel",
+          "yearStart": 2018,
+          "yearEnd": 2020
+        },
+        {
+          "name": "3.0 TDI 340",
+          "fuel": "Diesel",
+          "yearStart": 2020
+        },
+        {
+          "name": "2.0 i 245",
+          "fuel": "Essence",
+          "yearStart": 2014,
+          "yearEnd": 2017
+        },
+        {
+          "name": "3.0 i 306",
+          "fuel": "Essence",
+          "yearStart": 2014,
+          "yearEnd": 2015
+        },
+        {
+          "name": "2.0 i 184",
+          "fuel": "Essence",
+          "yearStart": 2018,
+          "yearEnd": 2020
+        },
+        {
+          "name": "3.0 i 245",
+          "fuel": "Essence",
+          "yearStart": 2021,
+          "yearEnd": 2024
+        },
+        {
+          "name": "3.0 i 252",
+          "fuel": "Essence",
+          "yearStart": 2018,
           "yearEnd": 2021
         },
         {
-          "name": "XDRIVE25DA 231 M SPORT",
-          "fuel": "Diesel",
+          "name": "3.0 i 354",
+          "fuel": "Essence",
           "yearStart": 2018,
-          "yearEnd": 2018
+          "yearEnd": 2020
+        },
+        {
+          "name": "3.0 i 360",
+          "fuel": "Essence",
+          "yearStart": 2020,
+          "yearEnd": 2024
+        },
+        {
+          "name": "3.0 i 480",
+          "fuel": "Essence",
+          "yearStart": 2019,
+          "yearEnd": 2020
+        },
+        {
+          "name": "3.0 i 510",
+          "fuel": "Essence",
+          "yearStart": 2019,
+          "yearEnd": 2022
         }
       ],
       "X6": [
@@ -57459,8 +57480,14 @@
         "CS"
       ],
       "X4": [
-        "Lounge",
-        "M Sport"
+        "BUSINESS DESIGN",
+        "LOUNGE",
+        "LOUNGE PLUS",
+        "LOUNGE PLUS BVM6",
+        "M SPORT",
+        "M SPORT X",
+        "XLINE",
+        "XLINE BVM6"
       ],
       "X4 M": [
         "Competition",
