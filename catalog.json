@@ -16800,6 +16800,19 @@
           "fuel": "Essence",
           "yearStart": 2014
         }
+      ],
+      "X5 M G05 (2018-2022)": [
+        {
+          "name": "3.0 TDI 400",
+          "fuel": "Diesel",
+          "yearStart": 2018,
+          "yearEnd": 2020
+        },
+        {
+          "name": "4.4 i 625",
+          "fuel": "Essence",
+          "yearStart": 2019
+        }
       ]
     },
     "Tesla": {
@@ -57557,6 +57570,9 @@
       ],
       "X5 M F85 (2014-2018)": [
         "M",
+        "M COMPETITION"
+      ],
+      "X5 M G05 (2018-2022)": [
         "M COMPETITION"
       ]
     },
