@@ -16549,6 +16549,170 @@
           "yearStart": 2023,
           "yearEnd": 2023
         }
+      ],
+      "X6 E71 (2008-2014)": [
+        {
+          "name": "3.0 TDI 235",
+          "fuel": "Diesel",
+          "yearStart": 2008,
+          "yearEnd": 2010
+        },
+        {
+          "name": "3.0 TDI 245",
+          "fuel": "Diesel",
+          "yearStart": 2010
+        },
+        {
+          "name": "3.0 TDI 286",
+          "fuel": "Diesel",
+          "yearStart": 2008,
+          "yearEnd": 2010
+        },
+        {
+          "name": "3.0 TDI 306",
+          "fuel": "Diesel",
+          "yearStart": 2010
+        },
+        {
+          "name": "3.0 i 306",
+          "fuel": "Essence",
+          "yearStart": 2008
+        },
+        {
+          "name": "4.4 i 407",
+          "fuel": "Essence",
+          "yearStart": 2008
+        },
+        {
+          "name": "ActiveHybrid 485",
+          "fuel": "Essence",
+          "yearStart": 2010,
+          "yearEnd": 2012
+        }
+      ],
+      "X6 M E71 (2010-2014)": [
+        {
+          "name": "4.4 i 555",
+          "fuel": "Essence",
+          "yearStart": 2010
+        }
+      ],
+      "X6 E71 Société": [
+        {
+          "name": "3.0 TDI 245",
+          "fuel": "Diesel",
+          "yearStart": 2010
+        },
+        {
+          "name": "3.0 TDI 306",
+          "fuel": "Diesel",
+          "yearStart": 2010
+        }
+      ],
+      "X6 M F86 (2014-2019)": [
+        {
+          "name": "3.0 TDI 381",
+          "fuel": "Diesel",
+          "yearStart": 2014
+        },
+        {
+          "name": "4.4 i 575",
+          "fuel": "Essence",
+          "yearStart": 2014
+        }
+      ],
+      "X6 F16 (2014-2022)": [
+        {
+          "name": "3.0 TDI 258",
+          "fuel": "Diesel",
+          "yearStart": 2014,
+          "yearEnd": 2019
+        },
+        {
+          "name": "3.0 TDI 313",
+          "fuel": "Diesel",
+          "yearStart": 2014,
+          "yearEnd": 2019
+        },
+        {
+          "name": "3.0 i 306",
+          "fuel": "Essence",
+          "yearStart": 2014,
+          "yearEnd": 2018
+        },
+        {
+          "name": "3.0 i 333",
+          "fuel": "Essence",
+          "yearStart": 2020
+        },
+        {
+          "name": "3.0 i 340",
+          "fuel": "Essence",
+          "yearStart": 2019,
+          "yearEnd": 2020
+        },
+        {
+          "name": "4.4 i 450",
+          "fuel": "Essence",
+          "yearStart": 2014,
+          "yearEnd": 2018
+        },
+        {
+          "name": "4.4 i 530",
+          "fuel": "Essence",
+          "yearStart": 2019,
+          "yearEnd": 2019
+        }
+      ],
+      "X6 G06 (2019-2026)": [
+        {
+          "name": "3.0 TDI 265",
+          "fuel": "Diesel",
+          "yearStart": 2019,
+          "yearEnd": 2020
+        },
+        {
+          "name": "3.0 TDI 286",
+          "fuel": "Diesel",
+          "yearStart": 2020,
+          "yearEnd": 2023
+        },
+        {
+          "name": "3.0 TDI 298",
+          "fuel": "Diesel",
+          "yearStart": 2023
+        },
+        {
+          "name": "3.0 TDI 340",
+          "fuel": "Diesel",
+          "yearStart": 2020,
+          "yearEnd": 2023
+        },
+        {
+          "name": "3.0 TDI 400",
+          "fuel": "Diesel",
+          "yearStart": 2019,
+          "yearEnd": 2020
+        },
+        {
+          "name": "3.0 i 333",
+          "fuel": "Essence",
+          "yearStart": 2020,
+          "yearEnd": 2022
+        },
+        {
+          "name": "4.4 i 530",
+          "fuel": "Essence",
+          "yearStart": 2019
+        }
+      ],
+      "X6 M G06 (2019-2022)": [
+        {
+          "name": "4.4 i 625",
+          "fuel": "Essence",
+          "yearStart": 2019,
+          "yearEnd": 2021
+        }
       ]
     },
     "Tesla": {
@@ -31152,6 +31316,13 @@
           "fuel": "Essence",
           "yearStart": 2024,
           "yearEnd": 2025
+        }
+      ],
+      "RS Q3 Sportback 2e Génération": [
+        {
+          "name": "2.5 TFSI 400",
+          "fuel": "Essence",
+          "yearStart": 2019
         }
       ]
     },
@@ -57239,6 +57410,46 @@
       "Neue Klasse": [
         "Base",
         "M Sport"
+      ],
+      "X6 E71 (2008-2014)": [
+        "EXCLUSIVE",
+        "EXCLUSIVE INDIVIDUAL",
+        "EXCLUSIVE ULTIMATE",
+        "LUXE",
+        "M SPORT",
+        "M SPORT ULTIMATE",
+        "ULTIMATE"
+      ],
+      "X6 M E71 (2010-2014)": [
+        "M",
+        "M COMPETITION"
+      ],
+      "X6 E71 Société": [
+        "EXCLUSIVE",
+        "EXCLUSIVE INDIVIDUAL",
+        "LUXE"
+      ],
+      "X6 M F86 (2014-2019)": [
+        "M",
+        "M COMPETITION"
+      ],
+      "X6 F16 (2014-2022)": [
+        "EDITION",
+        "EXCLUSIVE",
+        "LOUNGE",
+        "LOUNGE PLUS",
+        "M SPORT",
+        "M SPORT PM",
+        "XLINE"
+      ],
+      "X6 G06 (2019-2026)": [
+        "LOUNGE",
+        "M PERFORMANCE",
+        "M SPORT",
+        "XLINE"
+      ],
+      "X6 M G06 (2019-2022)": [
+        "M COMPETITION"
       ]
     },
     "Mercedes": {
@@ -58676,7 +58887,8 @@
         "AVUS",
         "AVUS EXTENDED",
         "COMPETITION"
-      ]
+      ],
+      "RS Q3 Sportback 2e Génération": []
     },
     "Fiat": {
       "500": [
