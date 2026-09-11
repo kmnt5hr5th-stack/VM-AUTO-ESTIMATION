@@ -30840,6 +30840,207 @@
           "yearStart": 2008,
           "yearEnd": 2012
         }
+      ],
+      "Q5 2e Génération": [
+        {
+          "name": "2.0 TDI 150",
+          "fuel": "Diesel",
+          "yearStart": 2016,
+          "yearEnd": 2018
+        },
+        {
+          "name": "2.0 TDI 163",
+          "fuel": "Diesel",
+          "yearStart": 2017
+        },
+        {
+          "name": "2.0 TDI 190",
+          "fuel": "Diesel",
+          "yearStart": 2016,
+          "yearEnd": 2021
+        },
+        {
+          "name": "2.0 TDI 204",
+          "fuel": "Diesel",
+          "yearStart": 2019
+        },
+        {
+          "name": "3.0 TDI 231",
+          "fuel": "Diesel",
+          "yearStart": 2019,
+          "yearEnd": 2021
+        },
+        {
+          "name": "3.0 TDI 286",
+          "fuel": "Diesel",
+          "yearStart": 2017,
+          "yearEnd": 2021
+        },
+        {
+          "name": "2.0 TFSI 245",
+          "fuel": "Essence",
+          "yearStart": 2019,
+          "yearEnd": 2021
+        },
+        {
+          "name": "2.0 TFSI 252",
+          "fuel": "Essence",
+          "yearStart": 2016,
+          "yearEnd": 2018
+        },
+        {
+          "name": "2.0 TFSI 265",
+          "fuel": "Essence",
+          "yearStart": 2020
+        },
+        {
+          "name": "3.0 TFSI 299",
+          "fuel": "Essence",
+          "yearStart": 2019
+        },
+        {
+          "name": "3.0 TFSI 367",
+          "fuel": "Essence",
+          "yearStart": 2019
+        }
+      ],
+      "Q5 Sportback 2e Génération": [
+        {
+          "name": "2.0 TDI 163",
+          "fuel": "Diesel",
+          "yearStart": 2021
+        },
+        {
+          "name": "2.0 TDI 204",
+          "fuel": "Diesel",
+          "yearStart": 2020
+        },
+        {
+          "name": "3.0 TDI 286",
+          "fuel": "Diesel",
+          "yearStart": 2020,
+          "yearEnd": 2021
+        },
+        {
+          "name": "2.0 TFSI 265",
+          "fuel": "Essence",
+          "yearStart": 2020
+        },
+        {
+          "name": "3.0 TFSI 299",
+          "fuel": "Essence",
+          "yearStart": 2021
+        },
+        {
+          "name": "3.0 TFSI 367",
+          "fuel": "Essence",
+          "yearStart": 2021
+        }
+      ],
+      "Q5 3e Génération": [
+        {
+          "name": "2.0 TDI 204",
+          "fuel": "Diesel",
+          "yearStart": 2024
+        },
+        {
+          "name": "3.0 TDI 299",
+          "fuel": "Diesel",
+          "yearStart": 2026
+        },
+        {
+          "name": "2.0 TFSI 204",
+          "fuel": "Essence",
+          "yearStart": 2024
+        },
+        {
+          "name": "2.0 TFSI 299",
+          "fuel": "Essence",
+          "yearStart": 2025
+        },
+        {
+          "name": "2.0 TFSI 367",
+          "fuel": "Essence",
+          "yearStart": 2025
+        }
+      ],
+      "Q5 Sportback 3e Génération": [
+        {
+          "name": "2.0 TDI 204",
+          "fuel": "Diesel",
+          "yearStart": 2024
+        },
+        {
+          "name": "3.0 TDI 299",
+          "fuel": "Diesel",
+          "yearStart": 2026
+        },
+        {
+          "name": "2.0 TFSI 204",
+          "fuel": "Essence",
+          "yearStart": 2024
+        },
+        {
+          "name": "2.0 TFSI 299",
+          "fuel": "Essence",
+          "yearStart": 2025
+        },
+        {
+          "name": "2.0 TFSI 367",
+          "fuel": "Essence",
+          "yearStart": 2025
+        }
+      ],
+      "Q7 1e Génération": [
+        {
+          "name": "3.0 TDI 204",
+          "fuel": "Diesel",
+          "yearStart": 2010
+        },
+        {
+          "name": "3.0 TDI 232",
+          "fuel": "Diesel",
+          "yearStart": 2006,
+          "yearEnd": 2007
+        },
+        {
+          "name": "3.0 TDI 240",
+          "fuel": "Diesel",
+          "yearStart": 2007,
+          "yearEnd": 2011
+        },
+        {
+          "name": "3.0 TDI 245",
+          "fuel": "Diesel",
+          "yearStart": 2011
+        },
+        {
+          "name": "4.2 TDI 326",
+          "fuel": "Diesel",
+          "yearStart": 2007,
+          "yearEnd": 2010
+        },
+        {
+          "name": "4.2 TDI 340",
+          "fuel": "Diesel",
+          "yearStart": 2007
+        },
+        {
+          "name": "3.0 TFSI 272",
+          "fuel": "Essence",
+          "yearStart": 2010
+        },
+        {
+          "name": "3.0 TFSI 333",
+          "fuel": "Essence",
+          "yearStart": 2005
+        },
+        {
+          "name": "3.6 FSI 280",
+          "fuel": "Essence",
+          "yearStart": 2006,
+          "yearEnd": 2010
+        }
       ]
     },
     "Ford": {
@@ -58300,6 +58501,56 @@
         "ULTRA BUSINESS LINE",
         "ULTRA S LINE",
         "ULTRA S LINE COMPETITION PLUS"
+      ],
+      "Q5 2e Génération": [
+        "AVUS",
+        "BLACK EDITION",
+        "BUSINESS EXECUTIVE",
+        "DESIGN",
+        "DESIGN LUXE"
+      ],
+      "Q5 Sportback 2e Génération": [
+        "AVUS",
+        "BUSINESS EXECUTIVE",
+        "DESIGN",
+        "S LINE"
+      ],
+      "Q5 3e Génération": [
+        "BUSINESS EXECUTIVE",
+        "DESIGN",
+        "HYBRIDE BUSINESS EXECUTIVE",
+        "HYBRIDE DESIGN",
+        "HYBRIDE S LINE"
+      ],
+      "Q5 Sportback 3e Génération": [
+        "BUSINESS EXECUTIVE",
+        "DESIGN",
+        "HYBRIDE BUSINESS EXECUTIVE",
+        "HYBRIDE DESIGN",
+        "HYBRIDE S LINE"
+      ],
+      "Q7 1e Génération": [
+        "AMBIENTE 5PL",
+        "AMBIENTE 7PL",
+        "AMBITION LUXE",
+        "AMBITION LUXE 5PL",
+        "AMBITION LUXE 6PL",
+        "AMBITION LUXE 7PL",
+        "AVUS 5PL",
+        "AVUS 6PL",
+        "AVUS 7PL",
+        "AVUS CLEAN DIESEL 5PL",
+        "CLEAN DIESEL AMBIENTE 7PL",
+        "CLEAN DIESEL AMBITION LUXE 6PL",
+        "CLEAN DIESEL AMBITION LUXE 7PL",
+        "CLEAN DIESEL AVUS 6PL",
+        "CLEAN DIESEL AVUS 7PL",
+        "CLEAN DIESEL S LINE 6PL",
+        "CLEAN DIESEL S LINE 7PL",
+        "CLEAN DIESEL SPORT DESIGN 6PL",
+        "CLEAN DIESEL SPORT DESIGN 7PL",
+        "SPORT DESIGN 6PL",
+        "SPORT DESIGN 7PL"
       ]
     },
     "Fiat": {
