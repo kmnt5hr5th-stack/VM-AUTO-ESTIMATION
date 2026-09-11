@@ -28877,6 +28877,122 @@
           "yearStart": 2006,
           "yearEnd": 2009
         }
+      ],
+      "A4 4e Génération": [
+        {
+          "name": "1.8 TFSI 120",
+          "fuel": "Essence",
+          "yearStart": 2008,
+          "yearEnd": 2015
+        },
+        {
+          "name": "1.8 TFSI 160",
+          "fuel": "Essence",
+          "yearStart": 2007,
+          "yearEnd": 2011
+        },
+        {
+          "name": "1.8 TFSI 170",
+          "fuel": "Essence",
+          "yearStart": 2011,
+          "yearEnd": 2015
+        },
+        {
+          "name": "2.0 TFSI 180",
+          "fuel": "Essence",
+          "yearStart": 2008,
+          "yearEnd": 2011
+        },
+        {
+          "name": "2.0 TFSI 211",
+          "fuel": "Essence",
+          "yearStart": 2008,
+          "yearEnd": 2015
+        },
+        {
+          "name": "2.0 TFSI 225",
+          "fuel": "Essence",
+          "yearStart": 2011,
+          "yearEnd": 2015
+        },
+        {
+          "name": "3.0 TFSI 272",
+          "fuel": "Essence",
+          "yearStart": 2011,
+          "yearEnd": 2015
+        },
+        {
+          "name": "2.0 TDI 120",
+          "fuel": "Diesel",
+          "yearStart": 2008,
+          "yearEnd": 2015
+        },
+        {
+          "name": "2.0 TDI 136",
+          "fuel": "Diesel",
+          "yearStart": 2009,
+          "yearEnd": 2015
+        },
+        {
+          "name": "2.0 TDI 140",
+          "fuel": "Diesel",
+          "yearStart": 2009,
+          "yearEnd": 2011
+        },
+        {
+          "name": "2.0 TDI 143",
+          "fuel": "Diesel",
+          "yearStart": 2008,
+          "yearEnd": 2013
+        },
+        {
+          "name": "2.0 TDI 150",
+          "fuel": "Diesel",
+          "yearStart": 2013,
+          "yearEnd": 2015
+        },
+        {
+          "name": "2.0 TDI 163",
+          "fuel": "Diesel",
+          "yearStart": 2014,
+          "yearEnd": 2015
+        },
+        {
+          "name": "2.0 TDI 170",
+          "fuel": "Diesel",
+          "yearStart": 2008,
+          "yearEnd": 2011
+        },
+        {
+          "name": "2.0 TDI 177",
+          "fuel": "Diesel",
+          "yearStart": 2011,
+          "yearEnd": 2014
+        },
+        {
+          "name": "2.0 TDI 190",
+          "fuel": "Diesel",
+          "yearStart": 2014,
+          "yearEnd": 2015
+        },
+        {
+          "name": "3.0 TDI 204",
+          "fuel": "Diesel",
+          "yearStart": 2011,
+          "yearEnd": 2015
+        },
+        {
+          "name": "3.0 TDI 240",
+          "fuel": "Diesel",
+          "yearStart": 2008,
+          "yearEnd": 2010
+        },
+        {
+          "name": "3.0 TDI 245",
+          "fuel": "Diesel",
+          "yearStart": 2011,
+          "yearEnd": 2015
+        }
       ]
     },
     "Ford": {
@@ -55742,6 +55858,15 @@
         "Ambition Luxe",
         "Attraction",
         "Design Edition",
+        "S Line"
+      ],
+      "A4 4e Génération": [
+        "Advanced Edition",
+        "Ambiente",
+        "Ambition",
+        "Ambition Luxe",
+        "Attraction",
+        "Business Line",
         "S Line"
       ]
     },
