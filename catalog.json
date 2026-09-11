@@ -16713,6 +16713,93 @@
           "yearStart": 2019,
           "yearEnd": 2021
         }
+      ],
+      "X6 M F96 (2020-2026)": [
+        {
+          "name": "4.4 i 625",
+          "fuel": "Essence",
+          "yearStart": 2020
+        }
+      ],
+      "X5 M E70 (2009-2013)": [
+        {
+          "name": "3.0 TDI 381",
+          "fuel": "Diesel",
+          "yearStart": 2012
+        },
+        {
+          "name": "4.4 i 555",
+          "fuel": "Essence",
+          "yearStart": 2009
+        }
+      ],
+      "X5 F15 (2013-2020)": [
+        {
+          "name": "2.5 TDI 218",
+          "fuel": "Diesel",
+          "yearStart": 2013,
+          "yearEnd": 2015
+        },
+        {
+          "name": "2.5 TDI 231",
+          "fuel": "Diesel",
+          "yearStart": 2015,
+          "yearEnd": 2018
+        },
+        {
+          "name": "3.0 TDI 258",
+          "fuel": "Diesel",
+          "yearStart": 2013,
+          "yearEnd": 2018
+        },
+        {
+          "name": "3.0 TDI 265",
+          "fuel": "Diesel",
+          "yearStart": 2018,
+          "yearEnd": 2018
+        },
+        {
+          "name": "3.0 TDI 313",
+          "fuel": "Diesel",
+          "yearStart": 2013,
+          "yearEnd": 2018
+        },
+        {
+          "name": "3.0 TDI 381",
+          "fuel": "Diesel",
+          "yearStart": 2013,
+          "yearEnd": 2018
+        },
+        {
+          "name": "3.0 i 306",
+          "fuel": "Essence",
+          "yearStart": 2013,
+          "yearEnd": 2018
+        },
+        {
+          "name": "3.0 i 313",
+          "fuel": "Essence",
+          "yearStart": 2015,
+          "yearEnd": 2018
+        },
+        {
+          "name": "3.0 i 340",
+          "fuel": "Essence",
+          "yearStart": 2018
+        },
+        {
+          "name": "4.4 i 450",
+          "fuel": "Essence",
+          "yearStart": 2013,
+          "yearEnd": 2018
+        }
+      ],
+      "X5 M F85 (2014-2018)": [
+        {
+          "name": "4.4 i 575",
+          "fuel": "Essence",
+          "yearStart": 2014
+        }
       ]
     },
     "Tesla": {
@@ -57449,6 +57536,27 @@
         "XLINE"
       ],
       "X6 M G06 (2019-2022)": [
+        "M COMPETITION"
+      ],
+      "X6 M F96 (2020-2026)": [
+        "M COMPETITION"
+      ],
+      "X5 M E70 (2009-2013)": [],
+      "X5 F15 (2013-2020)": [
+        "EXCLUSIVE",
+        "EXCLUSIVE 7PL",
+        "LOUNGE",
+        "LOUNGE 7PL",
+        "LOUNGE PLUS",
+        "LOUNGE PLUS 7PL",
+        "M SPORT",
+        "M SPORT 7PL",
+        "XLINE",
+        "XLINE 5PL",
+        "XLINE 7PL"
+      ],
+      "X5 M F85 (2014-2018)": [
+        "M",
         "M COMPETITION"
       ]
     },
