@@ -447,22 +447,29 @@
       ],
       "Arkana": [
         {
-          "name": "1.3 TCe 140ch",
+          "name": "1.3 140",
           "fuel": "Essence",
-          "yearStart": 2021,
-          "yearEnd": 2026
+          "yearStart": 2021
         },
         {
-          "name": "1.3 TCe 160ch",
+          "name": "1.3 160",
           "fuel": "Essence",
-          "yearStart": 2021,
-          "yearEnd": 2026
+          "yearStart": 2021
         },
         {
-          "name": "1.6 E-Tech 145ch",
-          "fuel": "Hybride",
-          "yearStart": 2021,
-          "yearEnd": 2026
+          "name": "1.3 TCe 140",
+          "fuel": "Essence",
+          "yearStart": 2021
+        },
+        {
+          "name": "1.3 TCe 160",
+          "fuel": "Essence",
+          "yearStart": 2021
+        },
+        {
+          "name": "1.6 E-Tech 145",
+          "fuel": "Hybride rechargeable",
+          "yearStart": 2021
         }
       ],
       "Austral": [
@@ -4629,130 +4636,239 @@
     "Citroën": {
       "C3": [
         {
-          "name": "1.0 VTi 68ch",
+          "name": "1.1 60",
           "fuel": "Essence",
-          "yearStart": 2009,
-          "yearEnd": 2016
+          "yearStart": 2002
         },
         {
-          "name": "1.1 60ch",
+          "name": "1.1",
           "fuel": "Essence",
-          "yearStart": 2009,
-          "yearEnd": 2013
+          "yearStart": 2002
         },
         {
-          "name": "1.2 PureTech 68ch",
+          "name": "1.4",
           "fuel": "Essence",
-          "yearStart": 2014,
-          "yearEnd": 2020
+          "yearStart": 2002
         },
         {
-          "name": "1.2 PureTech 82ch",
+          "name": "1.4 90",
           "fuel": "Essence",
-          "yearStart": 2016,
-          "yearEnd": 2026
+          "yearStart": 2002
         },
         {
-          "name": "1.2 PureTech 83ch",
+          "name": "1.4 75",
           "fuel": "Essence",
-          "yearStart": 2020,
-          "yearEnd": 2026
+          "yearStart": 2002
         },
         {
-          "name": "1.2 PureTech 110ch",
+          "name": "1.4 HDi 70",
+          "fuel": "Diesel",
+          "yearStart": 2002
+        },
+        {
+          "name": "1.4 HDi",
+          "fuel": "Diesel",
+          "yearStart": 2002
+        },
+        {
+          "name": "1.6",
           "fuel": "Essence",
-          "yearStart": 2016,
-          "yearEnd": 2026
+          "yearStart": 2002
         },
         {
-          "name": "1.4 75ch",
+          "name": "1.6 HDi 92",
+          "fuel": "Diesel",
+          "yearStart": 2002
+        },
+        {
+          "name": "1.6 HDi 110",
+          "fuel": "Diesel",
+          "yearStart": 2002
+        },
+        {
+          "name": "1.1 GPL 60",
+          "fuel": "GPL",
+          "yearStart": 2002
+        },
+        {
+          "name": "1.4 73",
           "fuel": "Essence",
-          "yearStart": 2002,
-          "yearEnd": 2009
+          "yearStart": 2002
         },
         {
-          "name": "1.6 16v 110ch",
+          "name": "1.0 PureTech 68",
           "fuel": "Essence",
-          "yearStart": 2005,
-          "yearEnd": 2009
+          "yearStart": 2002
         },
         {
-          "name": "1.4 VTi 95ch",
+          "name": "1.0 VTi 68",
           "fuel": "Essence",
-          "yearStart": 2009,
-          "yearEnd": 2016
+          "yearStart": 2002
         },
         {
-          "name": "1.6 120ch",
+          "name": "1.2 PureTech 110",
           "fuel": "Essence",
-          "yearStart": 2009,
-          "yearEnd": 2013
+          "yearStart": 2002
         },
         {
-          "name": "1.4 HDi 70ch",
-          "fuel": "Diesel",
-          "yearStart": 2002,
-          "yearEnd": 2009
+          "name": "1.2 VTi 82",
+          "fuel": "Essence",
+          "yearStart": 2002
         },
         {
-          "name": "1.4 HDi 68ch",
-          "fuel": "Diesel",
-          "yearStart": 2009,
-          "yearEnd": 2016
+          "name": "1.2 PureTech 82",
+          "fuel": "Essence",
+          "yearStart": 2002
         },
         {
-          "name": "1.6 HDi 90ch",
+          "name": "1.4 e-HDi 70",
           "fuel": "Diesel",
-          "yearStart": 2005,
-          "yearEnd": 2010
+          "yearStart": 2002
         },
         {
-          "name": "1.6 HDi 92ch",
+          "name": "1.6 BlueHDi 100",
           "fuel": "Diesel",
-          "yearStart": 2010,
-          "yearEnd": 2016
+          "yearStart": 2002
         },
         {
-          "name": "1.6 HDi 110ch",
+          "name": "1.6 BlueHDi 75",
           "fuel": "Diesel",
-          "yearStart": 2009,
-          "yearEnd": 2013
+          "yearStart": 2002
         },
         {
-          "name": "1.6 HDi 112ch",
+          "name": "1.6 e-HDi 115",
           "fuel": "Diesel",
-          "yearStart": 2010,
-          "yearEnd": 2013
+          "yearStart": 2002
         },
         {
-          "name": "1.5 BlueHDi 100ch",
+          "name": "1.6 e-HDi 90",
           "fuel": "Diesel",
-          "yearStart": 2018,
-          "yearEnd": 2026
+          "yearStart": 2002
         },
         {
-          "name": "1.6 BlueHDi 75ch",
+          "name": "1.6 HDi 90",
           "fuel": "Diesel",
-          "yearStart": 2016,
-          "yearEnd": 2018
+          "yearStart": 2002
         },
         {
-          "name": "1.6 BlueHDi 100ch",
-          "fuel": "Diesel",
-          "yearStart": 2016,
-          "yearEnd": 2018
+          "name": "1.6 VTi 120",
+          "fuel": "Essence",
+          "yearStart": 2002
         },
         {
-          "name": "1.6 e-HDi 90ch",
-          "fuel": "Diesel",
-          "yearStart": 2009,
-          "yearEnd": 2016
+          "name": "1.4 95",
+          "fuel": "Essence",
+          "yearStart": 2002
         },
         {
-          "name": "1.6 e-HDi 92ch",
+          "name": "1.4 e-HDi 90",
           "fuel": "Diesel",
-          "yearStart": 2009,
-          "yearEnd": 2016
+          "yearStart": 2002
+        },
+        {
+          "name": "1.4 GPL 69",
+          "fuel": "GPL",
+          "yearStart": 2002
+        },
+        {
+          "name": "1.4 GPL 73",
+          "fuel": "GPL",
+          "yearStart": 2002
+        },
+        {
+          "name": "1.4 VTi 95",
+          "fuel": "Essence",
+          "yearStart": 2002
+        },
+        {
+          "name": "1.6 e-HDi 110",
+          "fuel": "Diesel",
+          "yearStart": 2002
+        },
+        {
+          "name": "e-HDi 70",
+          "fuel": "Diesel",
+          "yearStart": 2002
+        },
+        {
+          "name": "e-HDi 90",
+          "fuel": "Diesel",
+          "yearStart": 2002
+        },
+        {
+          "name": "HDi 90",
+          "fuel": "Diesel",
+          "yearStart": 2002
+        },
+        {
+          "name": "HDi 70",
+          "fuel": "Diesel",
+          "yearStart": 2002
+        },
+        {
+          "name": "1.2 83",
+          "fuel": "Essence",
+          "yearStart": 2002
+        },
+        {
+          "name": "1.2 PureTech 83",
+          "fuel": "Essence",
+          "yearStart": 2002
+        },
+        {
+          "name": "1.5 BlueHDi 100",
+          "fuel": "Diesel",
+          "yearStart": 2002
+        },
+        {
+          "name": "BlueHDi 100",
+          "fuel": "Diesel",
+          "yearStart": 2002
+        },
+        {
+          "name": "83",
+          "fuel": "Essence",
+          "yearStart": 2002
+        },
+        {
+          "name": "PureTech 83",
+          "fuel": "Essence",
+          "yearStart": 2002
+        },
+        {
+          "name": "1.2 PureTech 68",
+          "fuel": "Essence",
+          "yearStart": 2002
+        },
+        {
+          "name": "1.2 GPL 82",
+          "fuel": "GPL",
+          "yearStart": 2002
+        },
+        {
+          "name": "1.2 100",
+          "fuel": "Essence",
+          "yearStart": 2002
+        },
+        {
+          "name": "1.2 110",
+          "fuel": "Essence",
+          "yearStart": 2002
+        },
+        {
+          "name": "1.2 PureTech 100",
+          "fuel": "Essence",
+          "yearStart": 2002
+        },
+        {
+          "name": "électrique 113",
+          "fuel": "Électrique",
+          "yearStart": 2002
+        },
+        {
+          "name": "113",
+          "fuel": "Essence",
+          "yearStart": 2002
         }
       ],
       "C-Elysée": [
@@ -4797,254 +4913,338 @@
       ],
       "C3 Aircross": [
         {
-          "name": "1.2 PureTech 82ch",
+          "name": "1.2 PureTech 110",
           "fuel": "Essence",
-          "yearStart": 2017,
-          "yearEnd": 2024
+          "yearStart": 2017
         },
         {
-          "name": "1.2 PureTech 110ch",
+          "name": "1.2 PureTech 130",
           "fuel": "Essence",
-          "yearStart": 2017,
-          "yearEnd": 2024
+          "yearStart": 2017
         },
         {
-          "name": "1.2 PureTech 130ch",
+          "name": "1.5 BlueHDi 110",
+          "fuel": "Diesel",
+          "yearStart": 2017
+        },
+        {
+          "name": "1.5 BlueHDi 120",
+          "fuel": "Diesel",
+          "yearStart": 2017
+        },
+        {
+          "name": "1.6 BlueHDi 110",
+          "fuel": "Diesel",
+          "yearStart": 2017
+        },
+        {
+          "name": "1.2 PureTech 82",
           "fuel": "Essence",
-          "yearStart": 2021,
-          "yearEnd": 2024
+          "yearStart": 2017
         },
         {
-          "name": "1.5 BlueHDi 100ch",
+          "name": "1.5 BlueHDi 100",
           "fuel": "Diesel",
-          "yearStart": 2018,
-          "yearEnd": 2024
+          "yearStart": 2017
         },
         {
-          "name": "1.5 BlueHDi 110ch",
+          "name": "1.6 BlueHDi 100",
           "fuel": "Diesel",
-          "yearStart": 2021,
-          "yearEnd": 2024
+          "yearStart": 2017
         },
         {
-          "name": "1.5 BlueHDi 120ch",
+          "name": "1.6 BlueHDi 120",
           "fuel": "Diesel",
-          "yearStart": 2017,
-          "yearEnd": 2021
+          "yearStart": 2017
         },
         {
-          "name": "1.6 BlueHDi 100ch",
-          "fuel": "Diesel",
-          "yearStart": 2017,
-          "yearEnd": 2018
-        },
-        {
-          "name": "1.6 BlueHDi 120ch",
-          "fuel": "Diesel",
-          "yearStart": 2017,
-          "yearEnd": 2018
-        },
-        {
-          "name": "1.2 PureTech 155ch",
+          "name": "1.2 110",
           "fuel": "Essence",
-          "yearStart": 2024,
-          "yearEnd": 2026
+          "yearStart": 2017
+        },
+        {
+          "name": "1.2 136",
+          "fuel": "Essence",
+          "yearStart": 2017
+        },
+        {
+          "name": "1.2 145",
+          "fuel": "Essence",
+          "yearStart": 2017
+        },
+        {
+          "name": "1.2 100",
+          "fuel": "Essence",
+          "yearStart": 2017
+        },
+        {
+          "name": "électrique 113",
+          "fuel": "Électrique",
+          "yearStart": 2017
+        },
+        {
+          "name": "113",
+          "fuel": "Essence",
+          "yearStart": 2017
+        },
+        {
+          "name": "électrique 230",
+          "fuel": "Électrique",
+          "yearStart": 2017
         }
       ],
       "C5 Aircross": [
         {
-          "name": "1.2 PureTech 130ch",
+          "name": "1.2 136",
           "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
+          "yearStart": 2018
         },
         {
-          "name": "1.6 PureTech 180ch",
+          "name": "1.2 145",
           "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2022
+          "yearStart": 2018
         },
         {
-          "name": "1.5 BlueHDi 130ch",
+          "name": "1.2 PureTech 130",
+          "fuel": "Essence",
+          "yearStart": 2018
+        },
+        {
+          "name": "1.5 BlueHDi 130",
           "fuel": "Diesel",
-          "yearStart": 2018,
-          "yearEnd": 2026
+          "yearStart": 2018
         },
         {
-          "name": "2.0 BlueHDi 180ch",
+          "name": "1.6 180",
+          "fuel": "Essence",
+          "yearStart": 2018
+        },
+        {
+          "name": "1.6 225",
+          "fuel": "Essence",
+          "yearStart": 2018
+        },
+        {
+          "name": "1.6 PureTech 180",
+          "fuel": "Essence",
+          "yearStart": 2018
+        },
+        {
+          "name": "2.0 BlueHDi 180",
           "fuel": "Diesel",
-          "yearStart": 2018,
-          "yearEnd": 2022
+          "yearStart": 2018
         },
         {
-          "name": "1.6 Hybrid 225ch",
-          "fuel": "Hybride rechargeable",
-          "yearStart": 2020,
-          "yearEnd": 2026
+          "name": "1.6 195",
+          "fuel": "Essence",
+          "yearStart": 2018
+        },
+        {
+          "name": "210",
+          "fuel": "Essence",
+          "yearStart": 2018
         }
       ],
       "C4": [
         {
-          "name": "1.4 16v 90ch",
+          "name": "électrique 136",
+          "fuel": "Électrique",
+          "yearStart": 2008
+        },
+        {
+          "name": "électrique 156",
+          "fuel": "Électrique",
+          "yearStart": 2008
+        },
+        {
+          "name": "1.2 136",
           "fuel": "Essence",
-          "yearStart": 2004,
-          "yearEnd": 2010
+          "yearStart": 2008
         },
         {
-          "name": "1.6 16v 110ch",
+          "name": "1.2 145",
           "fuel": "Essence",
-          "yearStart": 2004,
-          "yearEnd": 2010
+          "yearStart": 2008
         },
         {
-          "name": "2.0 16v 138ch",
+          "name": "1.2 PureTech 130",
           "fuel": "Essence",
-          "yearStart": 2004,
-          "yearEnd": 2010
+          "yearStart": 2008
         },
         {
-          "name": "2.0 VTS 177ch",
+          "name": "1.2 PureTech 110",
           "fuel": "Essence",
-          "yearStart": 2005,
-          "yearEnd": 2010
+          "yearStart": 2008
         },
         {
-          "name": "1.6 HDi 90ch",
-          "fuel": "Diesel",
-          "yearStart": 2004,
-          "yearEnd": 2010
-        },
-        {
-          "name": "1.6 HDi 110ch",
-          "fuel": "Diesel",
-          "yearStart": 2005,
-          "yearEnd": 2010
-        },
-        {
-          "name": "2.0 HDi 110ch",
-          "fuel": "Diesel",
-          "yearStart": 2004,
-          "yearEnd": 2010
-        },
-        {
-          "name": "2.0 HDi 138ch",
-          "fuel": "Diesel",
-          "yearStart": 2004,
-          "yearEnd": 2010
-        },
-        {
-          "name": "1.2 PureTech 100ch",
+          "name": "1.4 VTi 95",
           "fuel": "Essence",
-          "yearStart": 2015,
-          "yearEnd": 2020
+          "yearStart": 2008
         },
         {
-          "name": "1.2 PureTech 130ch",
+          "name": "1.6 BlueHDi 100",
+          "fuel": "Diesel",
+          "yearStart": 2008
+        },
+        {
+          "name": "1.6 BlueHDi 120",
+          "fuel": "Diesel",
+          "yearStart": 2008
+        },
+        {
+          "name": "1.6 e-HDi 115",
+          "fuel": "Diesel",
+          "yearStart": 2008
+        },
+        {
+          "name": "1.6 HDi 90",
+          "fuel": "Diesel",
+          "yearStart": 2008
+        },
+        {
+          "name": "2.0 BlueHDi 150",
+          "fuel": "Diesel",
+          "yearStart": 2008
+        },
+        {
+          "name": "1.6 HDi 115",
+          "fuel": "Diesel",
+          "yearStart": 2008
+        },
+        {
+          "name": "BlueHDi 100",
+          "fuel": "Diesel",
+          "yearStart": 2008
+        },
+        {
+          "name": "BlueHDi 120",
+          "fuel": "Diesel",
+          "yearStart": 2008
+        },
+        {
+          "name": "e-HDi 110",
+          "fuel": "Diesel",
+          "yearStart": 2008
+        },
+        {
+          "name": "HDi 110",
+          "fuel": "Diesel",
+          "yearStart": 2008
+        },
+        {
+          "name": "HDi 90",
+          "fuel": "Diesel",
+          "yearStart": 2008
+        },
+        {
+          "name": "HDi 115",
+          "fuel": "Diesel",
+          "yearStart": 2008
+        },
+        {
+          "name": "THP 130",
           "fuel": "Essence",
-          "yearStart": 2015,
-          "yearEnd": 2020
+          "yearStart": 2008
         },
         {
-          "name": "1.6 THP 150ch",
+          "name": "1.6 HDi 92",
+          "fuel": "Diesel",
+          "yearStart": 2008
+        },
+        {
+          "name": "HDi 150",
+          "fuel": "Diesel",
+          "yearStart": 2008
+        },
+        {
+          "name": "PureTech 130",
           "fuel": "Essence",
-          "yearStart": 2010,
-          "yearEnd": 2018
+          "yearStart": 2008
         },
         {
-          "name": "1.6 THP 165ch",
+          "name": "THP 155",
           "fuel": "Essence",
-          "yearStart": 2010,
-          "yearEnd": 2018
+          "yearStart": 2008
         },
         {
-          "name": "1.6 HDi 90ch",
-          "fuel": "Diesel",
-          "yearStart": 2010,
-          "yearEnd": 2018
-        },
-        {
-          "name": "1.6 HDi 110ch",
-          "fuel": "Diesel",
-          "yearStart": 2010,
-          "yearEnd": 2018
-        },
-        {
-          "name": "2.0 HDi 138ch",
-          "fuel": "Diesel",
-          "yearStart": 2010,
-          "yearEnd": 2016
-        },
-        {
-          "name": "1.6 BlueHDi 100ch",
-          "fuel": "Diesel",
-          "yearStart": 2015,
-          "yearEnd": 2020
-        },
-        {
-          "name": "1.6 BlueHDi 120ch",
-          "fuel": "Diesel",
-          "yearStart": 2015,
-          "yearEnd": 2020
-        },
-        {
-          "name": "2.0 BlueHDi 150ch",
-          "fuel": "Diesel",
-          "yearStart": 2015,
-          "yearEnd": 2020
-        },
-        {
-          "name": "1.2 PureTech 100ch",
+          "name": "VTi 120",
           "fuel": "Essence",
-          "yearStart": 2020,
-          "yearEnd": 2026
+          "yearStart": 2008
         },
         {
-          "name": "1.2 PureTech 130ch",
+          "name": "VTi 95",
           "fuel": "Essence",
-          "yearStart": 2020,
-          "yearEnd": 2026
+          "yearStart": 2008
         },
         {
-          "name": "1.2 PureTech 155ch",
+          "name": "1.2 100",
           "fuel": "Essence",
-          "yearStart": 2021,
-          "yearEnd": 2026
+          "yearStart": 2008
         },
         {
-          "name": "1.5 BlueHDi 110ch",
-          "fuel": "Diesel",
-          "yearStart": 2020,
-          "yearEnd": 2026
+          "name": "1.2 110",
+          "fuel": "Essence",
+          "yearStart": 2008
         },
         {
-          "name": "1.5 BlueHDi 130ch",
-          "fuel": "Diesel",
-          "yearStart": 2020,
-          "yearEnd": 2026
+          "name": "156",
+          "fuel": "Essence",
+          "yearStart": 2008
         },
         {
-          "name": "1.6 e-HDi 90ch",
-          "fuel": "Diesel",
-          "yearStart": 2004,
-          "yearEnd": 2018
+          "name": "136",
+          "fuel": "Essence",
+          "yearStart": 2008
         },
         {
-          "name": "1.6 e-HDi 110ch",
-          "fuel": "Diesel",
-          "yearStart": 2004,
-          "yearEnd": 2018
+          "name": "145",
+          "fuel": "Essence",
+          "yearStart": 2008
         },
         {
-          "name": "1.6 e-HDi 115ch",
-          "fuel": "Diesel",
-          "yearStart": 2010,
-          "yearEnd": 2018
+          "name": "1.2 PureTech 100",
+          "fuel": "Essence",
+          "yearStart": 2008
         },
         {
-          "name": "2.0 e-HDi 150ch",
+          "name": "1.2 PureTech 155",
+          "fuel": "Essence",
+          "yearStart": 2008
+        },
+        {
+          "name": "1.5 BlueHDi 110",
           "fuel": "Diesel",
-          "yearStart": 2010,
-          "yearEnd": 2018
+          "yearStart": 2008
+        },
+        {
+          "name": "1.5 BlueHDi 130",
+          "fuel": "Diesel",
+          "yearStart": 2008
+        },
+        {
+          "name": "électrique 50",
+          "fuel": "Électrique",
+          "yearStart": 2008
+        },
+        {
+          "name": "1.2 130",
+          "fuel": "Essence",
+          "yearStart": 2008
+        },
+        {
+          "name": "BlueHDi 130",
+          "fuel": "Diesel",
+          "yearStart": 2008
+        },
+        {
+          "name": "100",
+          "fuel": "Essence",
+          "yearStart": 2008
+        },
+        {
+          "name": "130",
+          "fuel": "Essence",
+          "yearStart": 2008
         }
       ],
       "C4 X": [
@@ -5500,22 +5700,74 @@
       ],
       "SpaceTourer": [
         {
-          "name": "1.5 BlueHDi 120ch",
-          "fuel": "Diesel",
-          "yearStart": 2016,
-          "yearEnd": 2026
+          "name": "2.2 150",
+          "fuel": "Essence",
+          "yearStart": 2016
         },
         {
-          "name": "2.0 BlueHDi 145ch",
+          "name": "2.0 BlueHDi 145",
           "fuel": "Diesel",
-          "yearStart": 2016,
-          "yearEnd": 2026
+          "yearStart": 2016
         },
         {
-          "name": "2.0 BlueHDi 180ch",
+          "name": "2.0 BlueHDi 180",
           "fuel": "Diesel",
-          "yearStart": 2016,
-          "yearEnd": 2026
+          "yearStart": 2016
+        },
+        {
+          "name": "2.2 180",
+          "fuel": "Essence",
+          "yearStart": 2016
+        },
+        {
+          "name": "1.5 BlueHDi 120",
+          "fuel": "Diesel",
+          "yearStart": 2016
+        },
+        {
+          "name": "1.5 BlueHDi 140",
+          "fuel": "Diesel",
+          "yearStart": 2016
+        },
+        {
+          "name": "1.6 BlueHDi 100",
+          "fuel": "Diesel",
+          "yearStart": 2016
+        },
+        {
+          "name": "1.6 BlueHDi 115",
+          "fuel": "Diesel",
+          "yearStart": 2016
+        },
+        {
+          "name": "1.6 BlueHDi 95",
+          "fuel": "Diesel",
+          "yearStart": 2016
+        },
+        {
+          "name": "électrique 100",
+          "fuel": "Électrique",
+          "yearStart": 2016
+        },
+        {
+          "name": "électrique 136",
+          "fuel": "Électrique",
+          "yearStart": 2016
+        },
+        {
+          "name": "2.0 BlueHDi 140",
+          "fuel": "Diesel",
+          "yearStart": 2016
+        },
+        {
+          "name": "2.0 BlueHDi 150",
+          "fuel": "Diesel",
+          "yearStart": 2016
+        },
+        {
+          "name": "1.5 BlueHDi 145",
+          "fuel": "Diesel",
+          "yearStart": 2016
         }
       ],
       "ë-SpaceTourer": [
@@ -5534,21 +5786,57 @@
       ],
       "C1": [
         {
-          "name": "1.0 VTi 68ch",
+          "name": "1.0 68",
           "fuel": "Essence",
           "yearStart": 2005,
-          "yearEnd": 2014
-        },
-        {
-          "name": "1.0 VTi 72ch",
-          "fuel": "Essence",
-          "yearStart": 2014,
           "yearEnd": 2022
         },
         {
-          "name": "1.2 PureTech 82ch",
+          "name": "1.4 HDi 55",
+          "fuel": "Diesel",
+          "yearStart": 2005,
+          "yearEnd": 2022
+        },
+        {
+          "name": "1.0",
           "fuel": "Essence",
-          "yearStart": 2014,
+          "yearStart": 2005,
+          "yearEnd": 2022
+        },
+        {
+          "name": "1.0 VTi 68",
+          "fuel": "Essence",
+          "yearStart": 2005,
+          "yearEnd": 2022
+        },
+        {
+          "name": "1.0 VTi 72",
+          "fuel": "Essence",
+          "yearStart": 2005,
+          "yearEnd": 2022
+        },
+        {
+          "name": "1.0 VTi",
+          "fuel": "Essence",
+          "yearStart": 2005,
+          "yearEnd": 2022
+        },
+        {
+          "name": "1.2 PureTech 82",
+          "fuel": "Essence",
+          "yearStart": 2005,
+          "yearEnd": 2022
+        },
+        {
+          "name": "1.2 PureTech",
+          "fuel": "Essence",
+          "yearStart": 2005,
+          "yearEnd": 2022
+        },
+        {
+          "name": "1.2 VTi 68",
+          "fuel": "Essence",
+          "yearStart": 2005,
           "yearEnd": 2022
         }
       ],
@@ -5580,120 +5868,186 @@
       ],
       "C4 Cactus": [
         {
-          "name": "1.2 PureTech 82ch",
+          "name": "1.2 PureTech 110",
           "fuel": "Essence",
           "yearStart": 2014,
-          "yearEnd": 2022
+          "yearEnd": 2020
         },
         {
-          "name": "1.2 PureTech 110ch",
+          "name": "1.2 PureTech 130",
           "fuel": "Essence",
           "yearStart": 2014,
-          "yearEnd": 2022
+          "yearEnd": 2020
         },
         {
-          "name": "1.6 BlueHDi 100ch",
+          "name": "1.2 PureTech 82",
+          "fuel": "Essence",
+          "yearStart": 2014,
+          "yearEnd": 2020
+        },
+        {
+          "name": "1.2 PureTech",
+          "fuel": "Essence",
+          "yearStart": 2014,
+          "yearEnd": 2020
+        },
+        {
+          "name": "1.5 BlueHDi 100",
           "fuel": "Diesel",
           "yearStart": 2014,
-          "yearEnd": 2022
+          "yearEnd": 2020
+        },
+        {
+          "name": "1.5 BlueHDi 120",
+          "fuel": "Diesel",
+          "yearStart": 2014,
+          "yearEnd": 2020
+        },
+        {
+          "name": "1.6 BlueHDi 100",
+          "fuel": "Diesel",
+          "yearStart": 2014,
+          "yearEnd": 2020
+        },
+        {
+          "name": "1.2 PureTech 75",
+          "fuel": "Essence",
+          "yearStart": 2014,
+          "yearEnd": 2020
+        },
+        {
+          "name": "1.6 e-HDi 92",
+          "fuel": "Diesel",
+          "yearStart": 2014,
+          "yearEnd": 2020
         }
       ],
       "C3 Picasso": [
         {
-          "name": "1.4 VTi 95ch",
+          "name": "1.2 PureTech 110",
           "fuel": "Essence",
           "yearStart": 2008,
           "yearEnd": 2017
         },
         {
-          "name": "1.6 VTi 120ch",
+          "name": "1.4 VTi 95",
           "fuel": "Essence",
           "yearStart": 2008,
-          "yearEnd": 2013
-        },
-        {
-          "name": "1.2 PureTech 110ch",
-          "fuel": "Essence",
-          "yearStart": 2013,
           "yearEnd": 2017
         },
         {
-          "name": "1.4 HDi 70ch",
+          "name": "1.6 BlueHDi 100",
           "fuel": "Diesel",
           "yearStart": 2008,
-          "yearEnd": 2013
+          "yearEnd": 2017
         },
         {
-          "name": "1.6 HDi 90ch",
+          "name": "1.6 e-HDi 90",
           "fuel": "Diesel",
           "yearStart": 2008,
-          "yearEnd": 2013
+          "yearEnd": 2017
         },
         {
-          "name": "1.6 HDi 110ch",
+          "name": "1.6 HDi 110",
           "fuel": "Diesel",
           "yearStart": 2008,
-          "yearEnd": 2013
+          "yearEnd": 2017
         },
         {
-          "name": "1.6 BlueHDi 100ch",
+          "name": "1.6 HDi 115",
           "fuel": "Diesel",
-          "yearStart": 2013,
+          "yearStart": 2008,
+          "yearEnd": 2017
+        },
+        {
+          "name": "1.6 HDi 90",
+          "fuel": "Diesel",
+          "yearStart": 2008,
+          "yearEnd": 2017
+        },
+        {
+          "name": "1.6 VTi 120",
+          "fuel": "Essence",
+          "yearStart": 2008,
+          "yearEnd": 2017
+        },
+        {
+          "name": "1.6 HDi 92",
+          "fuel": "Diesel",
+          "yearStart": 2008,
           "yearEnd": 2017
         }
       ],
       "C4 Picasso": [
         {
-          "name": "1.2 PureTech 130ch",
+          "name": "1.2 PureTech 110",
           "fuel": "Essence",
           "yearStart": 2013,
           "yearEnd": 2018
         },
         {
-          "name": "1.6 THP 120ch",
+          "name": "1.2 PureTech 130",
           "fuel": "Essence",
-          "yearStart": 2006,
-          "yearEnd": 2013
+          "yearStart": 2013,
+          "yearEnd": 2018
         },
         {
-          "name": "2.0 i 140ch",
-          "fuel": "Essence",
-          "yearStart": 2006,
-          "yearEnd": 2010
-        },
-        {
-          "name": "1.6 HDi 90ch",
-          "fuel": "Diesel",
-          "yearStart": 2006,
-          "yearEnd": 2013
-        },
-        {
-          "name": "1.6 HDi 110ch",
-          "fuel": "Diesel",
-          "yearStart": 2006,
-          "yearEnd": 2013
-        },
-        {
-          "name": "2.0 HDi 138ch",
-          "fuel": "Diesel",
-          "yearStart": 2006,
-          "yearEnd": 2013
-        },
-        {
-          "name": "1.6 BlueHDi 100ch",
+          "name": "1.6 BlueHDi 100",
           "fuel": "Diesel",
           "yearStart": 2013,
           "yearEnd": 2018
         },
         {
-          "name": "1.6 BlueHDi 120ch",
+          "name": "1.6 BlueHDi 120",
           "fuel": "Diesel",
           "yearStart": 2013,
           "yearEnd": 2018
         },
         {
-          "name": "2.0 BlueHDi 150ch",
+          "name": "1.6 THP 165",
+          "fuel": "Essence",
+          "yearStart": 2013,
+          "yearEnd": 2018
+        },
+        {
+          "name": "2.0 BlueHDi 150",
           "fuel": "Diesel",
+          "yearStart": 2013,
+          "yearEnd": 2018
+        },
+        {
+          "name": "1.6 e-HDi 115",
+          "fuel": "Diesel",
+          "yearStart": 2013,
+          "yearEnd": 2018
+        },
+        {
+          "name": "1.6 e-HDi 90",
+          "fuel": "Diesel",
+          "yearStart": 2013,
+          "yearEnd": 2018
+        },
+        {
+          "name": "1.6 HDi 115",
+          "fuel": "Diesel",
+          "yearStart": 2013,
+          "yearEnd": 2018
+        },
+        {
+          "name": "1.6 HDi 90",
+          "fuel": "Diesel",
+          "yearStart": 2013,
+          "yearEnd": 2018
+        },
+        {
+          "name": "1.6 THP 155",
+          "fuel": "Essence",
+          "yearStart": 2013,
+          "yearEnd": 2018
+        },
+        {
+          "name": "1.6 VTi 120",
+          "fuel": "Essence",
           "yearStart": 2013,
           "yearEnd": 2018
         }
@@ -5756,151 +6110,143 @@
       ],
       "C4 SpaceTourer": [
         {
-          "name": "1.2 PureTech 130ch",
+          "name": "1.2 PureTech 110",
           "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2022
+          "yearStart": 2016,
+          "yearEnd": 2021
         },
         {
-          "name": "1.5 BlueHDi 130ch",
+          "name": "1.2 PureTech 130",
+          "fuel": "Essence",
+          "yearStart": 2016,
+          "yearEnd": 2021
+        },
+        {
+          "name": "1.5 BlueHDi 130",
           "fuel": "Diesel",
-          "yearStart": 2018,
-          "yearEnd": 2022
+          "yearStart": 2016,
+          "yearEnd": 2021
         },
         {
-          "name": "2.0 BlueHDi 150ch",
+          "name": "1.6 BlueHDi 100",
           "fuel": "Diesel",
-          "yearStart": 2018,
-          "yearEnd": 2022
+          "yearStart": 2016,
+          "yearEnd": 2021
         },
         {
-          "name": "1.6 Hybrid 225ch",
-          "fuel": "Hybride rechargeable",
-          "yearStart": 2020,
-          "yearEnd": 2022
+          "name": "1.6 BlueHDi 120",
+          "fuel": "Diesel",
+          "yearStart": 2016,
+          "yearEnd": 2021
+        },
+        {
+          "name": "1.6 BlueHDi 130",
+          "fuel": "Diesel",
+          "yearStart": 2016,
+          "yearEnd": 2021
+        },
+        {
+          "name": "1.6 THP 165",
+          "fuel": "Essence",
+          "yearStart": 2016,
+          "yearEnd": 2021
+        },
+        {
+          "name": "2.0 BlueHDi 150",
+          "fuel": "Diesel",
+          "yearStart": 2016,
+          "yearEnd": 2021
+        },
+        {
+          "name": "2.0 BlueHDi 160",
+          "fuel": "Diesel",
+          "yearStart": 2016,
+          "yearEnd": 2021
         }
       ],
       "Grand C4 SpaceTourer": [
         {
-          "name": "1.2 PureTech 130ch",
+          "name": "1.2 PureTech 130",
           "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2022
+          "yearStart": 2016
         },
         {
-          "name": "1.5 BlueHDi 130ch",
+          "name": "1.5 BlueHDi 130",
           "fuel": "Diesel",
-          "yearStart": 2018,
-          "yearEnd": 2022
+          "yearStart": 2016
         },
         {
-          "name": "2.0 BlueHDi 150ch",
+          "name": "1.6 BlueHDi 100",
           "fuel": "Diesel",
-          "yearStart": 2018,
-          "yearEnd": 2022
+          "yearStart": 2016
         },
         {
-          "name": "1.6 Hybrid 225ch",
-          "fuel": "Hybride rechargeable",
-          "yearStart": 2020,
-          "yearEnd": 2022
+          "name": "1.6 BlueHDi 120",
+          "fuel": "Diesel",
+          "yearStart": 2016
+        },
+        {
+          "name": "1.6 PureTech 180",
+          "fuel": "Essence",
+          "yearStart": 2016
+        },
+        {
+          "name": "1.6 THP 165",
+          "fuel": "Essence",
+          "yearStart": 2016
+        },
+        {
+          "name": "2.0 BlueHDi 150",
+          "fuel": "Diesel",
+          "yearStart": 2016
+        },
+        {
+          "name": "2.0 BlueHDi 160",
+          "fuel": "Diesel",
+          "yearStart": 2016
         }
       ],
       "C5": [
         {
-          "name": "1.8 16v 120ch",
-          "fuel": "Essence",
-          "yearStart": 2005,
-          "yearEnd": 2008
-        },
-        {
-          "name": "2.0 143ch",
-          "fuel": "Essence",
-          "yearStart": 2001,
-          "yearEnd": 2008
-        },
-        {
-          "name": "3.0 V6 207ch",
-          "fuel": "Essence",
-          "yearStart": 2005,
-          "yearEnd": 2008
-        },
-        {
-          "name": "1.6 HDi 90ch",
-          "fuel": "Diesel",
-          "yearStart": 2005,
-          "yearEnd": 2008
-        },
-        {
-          "name": "2.0 HDi 110ch",
-          "fuel": "Diesel",
-          "yearStart": 2001,
-          "yearEnd": 2008
-        },
-        {
-          "name": "2.0 HDi 138ch",
-          "fuel": "Diesel",
-          "yearStart": 2001,
-          "yearEnd": 2014
-        },
-        {
-          "name": "2.2 HDi 133ch",
-          "fuel": "Diesel",
-          "yearStart": 2001,
-          "yearEnd": 2005
-        },
-        {
-          "name": "1.6 THP 155ch",
-          "fuel": "Essence",
-          "yearStart": 2008,
-          "yearEnd": 2017
-        },
-        {
-          "name": "2.0 THP 200ch",
-          "fuel": "Essence",
-          "yearStart": 2008,
-          "yearEnd": 2017
-        },
-        {
-          "name": "1.6 HDi 110ch",
-          "fuel": "Diesel",
-          "yearStart": 2008,
-          "yearEnd": 2017
-        },
-        {
-          "name": "2.0 HDi 160ch",
-          "fuel": "Diesel",
-          "yearStart": 2008,
-          "yearEnd": 2014
-        },
-        {
-          "name": "2.0 BlueHDi 150ch",
+          "name": "1.6 e-HDi 115",
           "fuel": "Diesel",
           "yearStart": 2014,
           "yearEnd": 2017
         },
         {
-          "name": "2.2 HDi 170ch",
+          "name": "1.6 HDi 115",
           "fuel": "Diesel",
-          "yearStart": 2005,
-          "yearEnd": 2012
-        },
-        {
-          "name": "1.6 e-HDi 110ch",
-          "fuel": "Diesel",
-          "yearStart": 2008,
+          "yearStart": 2014,
           "yearEnd": 2017
         },
         {
-          "name": "2.0 e-HDi 150ch",
+          "name": "2.0 BlueHDi 180",
           "fuel": "Diesel",
-          "yearStart": 2008,
+          "yearStart": 2014,
           "yearEnd": 2017
         },
         {
-          "name": "2.0 e-HDi 163ch",
+          "name": "2.0 HDi 140",
           "fuel": "Diesel",
-          "yearStart": 2010,
+          "yearStart": 2014,
+          "yearEnd": 2017
+        },
+        {
+          "name": "2.0 HDi 160",
+          "fuel": "Diesel",
+          "yearStart": 2014,
+          "yearEnd": 2017
+        },
+        {
+          "name": "2.2 HDi 200",
+          "fuel": "Diesel",
+          "yearStart": 2014,
+          "yearEnd": 2017
+        },
+        {
+          "name": "2.0 BlueHDi 150",
+          "fuel": "Diesel",
+          "yearStart": 2014,
           "yearEnd": 2017
         }
       ],
@@ -6110,22 +6456,40 @@
       ],
       "Nemo": [
         {
-          "name": "1.4 75ch",
+          "name": "1.2 HDi 75",
+          "fuel": "Diesel",
+          "yearStart": 2008,
+          "yearEnd": 2018
+        },
+        {
+          "name": "1.3 HDi 75",
+          "fuel": "Diesel",
+          "yearStart": 2008,
+          "yearEnd": 2018
+        },
+        {
+          "name": "1.3 HDi 80",
+          "fuel": "Diesel",
+          "yearStart": 2008,
+          "yearEnd": 2018
+        },
+        {
+          "name": "1.4 73",
           "fuel": "Essence",
           "yearStart": 2008,
-          "yearEnd": 2015
+          "yearEnd": 2018
         },
         {
-          "name": "1.3 HDi 75ch",
+          "name": "1.4 HDi 70",
           "fuel": "Diesel",
           "yearStart": 2008,
-          "yearEnd": 2015
+          "yearEnd": 2018
         },
         {
-          "name": "1.3 HDi 80ch",
+          "name": "1.4 HDi 75",
           "fuel": "Diesel",
-          "yearStart": 2012,
-          "yearEnd": 2015
+          "yearStart": 2008,
+          "yearEnd": 2018
         }
       ],
       "Saxo": [
@@ -6194,202 +6558,316 @@
       ],
       "C5 X": [
         {
-          "name": "1.2 PureTech 130ch",
+          "name": "1.2 136",
           "fuel": "Essence",
-          "yearStart": 2022,
-          "yearEnd": 2026
+          "yearStart": 2021
         },
         {
-          "name": "1.6 Hybrid 225ch",
-          "fuel": "Hybride rechargeable",
-          "yearStart": 2022,
-          "yearEnd": 2026
+          "name": "1.2 145",
+          "fuel": "Essence",
+          "yearStart": 2021
         },
         {
-          "name": "1.5 BlueHDi 130ch",
-          "fuel": "Diesel",
-          "yearStart": 2022,
-          "yearEnd": 2026
+          "name": "1.2 PureTech 130",
+          "fuel": "Essence",
+          "yearStart": 2021
+        },
+        {
+          "name": "1.6 225",
+          "fuel": "Essence",
+          "yearStart": 2021
+        },
+        {
+          "name": "1.6 180",
+          "fuel": "Essence",
+          "yearStart": 2021
+        },
+        {
+          "name": "1.6 PureTech 180",
+          "fuel": "Essence",
+          "yearStart": 2021
         }
       ],
       "DS3": [
         {
-          "name": "1.2 PureTech 82ch",
+          "name": "1.2 PureTech 110",
           "fuel": "Essence",
           "yearStart": 2009,
-          "yearEnd": 2019
+          "yearEnd": 2015
         },
         {
-          "name": "1.2 PureTech 110ch",
-          "fuel": "Essence",
-          "yearStart": 2014,
-          "yearEnd": 2019
-        },
-        {
-          "name": "1.6 VTi 120ch",
+          "name": "1.2 PureTech 82",
           "fuel": "Essence",
           "yearStart": 2009,
-          "yearEnd": 2014
+          "yearEnd": 2015
         },
         {
-          "name": "1.6 THP 150ch",
-          "fuel": "Essence",
-          "yearStart": 2009,
-          "yearEnd": 2019
-        },
-        {
-          "name": "1.6 THP 163ch",
-          "fuel": "Essence",
-          "yearStart": 2009,
-          "yearEnd": 2016
-        },
-        {
-          "name": "1.6 THP 165ch",
-          "fuel": "Essence",
-          "yearStart": 2010,
-          "yearEnd": 2014
-        },
-        {
-          "name": "1.6 THP 207ch Racing",
-          "fuel": "Essence",
-          "yearStart": 2011,
-          "yearEnd": 2014
-        },
-        {
-          "name": "1.4 HDi 68ch",
+          "name": "1.4 HDi 70",
           "fuel": "Diesel",
           "yearStart": 2009,
           "yearEnd": 2015
         },
         {
-          "name": "1.6 HDi 90ch",
+          "name": "1.6 BlueHDi 100",
           "fuel": "Diesel",
           "yearStart": 2009,
           "yearEnd": 2015
         },
         {
-          "name": "1.6 BlueHDi 100ch",
+          "name": "1.6 BlueHDi 120",
           "fuel": "Diesel",
-          "yearStart": 2015,
-          "yearEnd": 2019
+          "yearStart": 2009,
+          "yearEnd": 2015
         },
         {
-          "name": "1.6 BlueHDi 120ch",
+          "name": "1.6 e-HDi 90",
           "fuel": "Diesel",
-          "yearStart": 2015,
-          "yearEnd": 2019
+          "yearStart": 2009,
+          "yearEnd": 2015
+        },
+        {
+          "name": "1.6 THP 165",
+          "fuel": "Essence",
+          "yearStart": 2009,
+          "yearEnd": 2015
+        },
+        {
+          "name": "1.6 THP 200",
+          "fuel": "Essence",
+          "yearStart": 2009,
+          "yearEnd": 2015
+        },
+        {
+          "name": "1.6 VTi 120",
+          "fuel": "Essence",
+          "yearStart": 2009,
+          "yearEnd": 2015
+        },
+        {
+          "name": "1.2 VTi 82",
+          "fuel": "Essence",
+          "yearStart": 2009,
+          "yearEnd": 2015
+        },
+        {
+          "name": "1.4 PureTech 82",
+          "fuel": "Essence",
+          "yearStart": 2009,
+          "yearEnd": 2015
+        },
+        {
+          "name": "1.4 VTi 95",
+          "fuel": "Essence",
+          "yearStart": 2009,
+          "yearEnd": 2015
+        },
+        {
+          "name": "1.6 e-HDi 110",
+          "fuel": "Diesel",
+          "yearStart": 2009,
+          "yearEnd": 2015
+        },
+        {
+          "name": "1.6 e-HDi 115",
+          "fuel": "Diesel",
+          "yearStart": 2009,
+          "yearEnd": 2015
+        },
+        {
+          "name": "1.6 HDi 110",
+          "fuel": "Diesel",
+          "yearStart": 2009,
+          "yearEnd": 2015
+        },
+        {
+          "name": "1.6 HDi 90",
+          "fuel": "Diesel",
+          "yearStart": 2009,
+          "yearEnd": 2015
+        },
+        {
+          "name": "1.6 THP 150",
+          "fuel": "Essence",
+          "yearStart": 2009,
+          "yearEnd": 2015
+        },
+        {
+          "name": "1.6 THP 155",
+          "fuel": "Essence",
+          "yearStart": 2009,
+          "yearEnd": 2015
+        },
+        {
+          "name": "1.6 THP 203",
+          "fuel": "Essence",
+          "yearStart": 2009,
+          "yearEnd": 2015
         }
       ],
       "DS4": [
         {
-          "name": "1.2 PureTech 130ch",
+          "name": "1.2 PureTech 130",
           "fuel": "Essence",
           "yearStart": 2011,
-          "yearEnd": 2018
+          "yearEnd": 2014
         },
         {
-          "name": "1.6 THP 155ch",
+          "name": "1.6 160",
           "fuel": "Essence",
           "yearStart": 2011,
-          "yearEnd": 2018
+          "yearEnd": 2014
         },
         {
-          "name": "1.6 THP 163ch",
-          "fuel": "Essence",
-          "yearStart": 2011,
-          "yearEnd": 2016
-        },
-        {
-          "name": "1.6 THP 200ch",
-          "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2018
-        },
-        {
-          "name": "1.6 HDi 90ch",
+          "name": "1.6 BlueHDi 120",
           "fuel": "Diesel",
           "yearStart": 2011,
-          "yearEnd": 2015
+          "yearEnd": 2014
         },
         {
-          "name": "1.6 BlueHDi 115ch",
+          "name": "1.6 e-HDi 110",
           "fuel": "Diesel",
-          "yearStart": 2015,
-          "yearEnd": 2018
+          "yearStart": 2011,
+          "yearEnd": 2014
         },
         {
-          "name": "2.0 BlueHDi 150ch",
+          "name": "1.6 e-HDi 115",
           "fuel": "Diesel",
-          "yearStart": 2015,
-          "yearEnd": 2018
+          "yearStart": 2011,
+          "yearEnd": 2014
         },
         {
-          "name": "2.0 BlueHDi 180ch",
+          "name": "1.6 HDi 110",
           "fuel": "Diesel",
-          "yearStart": 2015,
-          "yearEnd": 2018
+          "yearStart": 2011,
+          "yearEnd": 2014
+        },
+        {
+          "name": "1.6 HDi 90",
+          "fuel": "Diesel",
+          "yearStart": 2011,
+          "yearEnd": 2014
+        },
+        {
+          "name": "1.6 THP 155",
+          "fuel": "Essence",
+          "yearStart": 2011,
+          "yearEnd": 2014
+        },
+        {
+          "name": "1.6 THP 160",
+          "fuel": "Essence",
+          "yearStart": 2011,
+          "yearEnd": 2014
+        },
+        {
+          "name": "1.6 THP 200",
+          "fuel": "Essence",
+          "yearStart": 2011,
+          "yearEnd": 2014
+        },
+        {
+          "name": "1.6 VTi 120",
+          "fuel": "Essence",
+          "yearStart": 2011,
+          "yearEnd": 2014
+        },
+        {
+          "name": "2.0 160",
+          "fuel": "Essence",
+          "yearStart": 2011,
+          "yearEnd": 2014
+        },
+        {
+          "name": "2.0 e-HDi 135",
+          "fuel": "Diesel",
+          "yearStart": 2011,
+          "yearEnd": 2014
+        },
+        {
+          "name": "2.0 HDi 135",
+          "fuel": "Diesel",
+          "yearStart": 2011,
+          "yearEnd": 2014
+        },
+        {
+          "name": "2.0 HDi 160",
+          "fuel": "Diesel",
+          "yearStart": 2011,
+          "yearEnd": 2014
         }
       ],
       "DS5": [
         {
-          "name": "1.6 THP 155ch",
-          "fuel": "Essence",
-          "yearStart": 2011,
-          "yearEnd": 2018
-        },
-        {
-          "name": "1.6 THP 165ch",
-          "fuel": "Essence",
-          "yearStart": 2011,
-          "yearEnd": 2018
-        },
-        {
-          "name": "1.6 THP 200ch",
-          "fuel": "Essence",
-          "yearStart": 2011,
-          "yearEnd": 2018
-        },
-        {
-          "name": "2.0 Hybrid4 200ch",
-          "fuel": "Hybride rechargeable",
-          "yearStart": 2012,
-          "yearEnd": 2018
-        },
-        {
-          "name": "1.6 e-HDi 112ch",
+          "name": "1.6 BlueHDi 120",
           "fuel": "Diesel",
           "yearStart": 2011,
           "yearEnd": 2015
         },
         {
-          "name": "2.0 HDi 110ch",
+          "name": "1.6 e-HDi 115",
           "fuel": "Diesel",
           "yearStart": 2011,
           "yearEnd": 2015
         },
         {
-          "name": "2.0 HDi 160ch",
+          "name": "2.0 BlueHDi 150",
           "fuel": "Diesel",
           "yearStart": 2011,
           "yearEnd": 2015
         },
         {
-          "name": "1.6 BlueHDi 120ch",
+          "name": "2.0 BlueHDi 180",
           "fuel": "Diesel",
-          "yearStart": 2014,
-          "yearEnd": 2018
+          "yearStart": 2011,
+          "yearEnd": 2015
         },
         {
-          "name": "2.0 BlueHDi 150ch",
+          "name": "2.0 HDi 160",
           "fuel": "Diesel",
-          "yearStart": 2015,
-          "yearEnd": 2018
+          "yearStart": 2011,
+          "yearEnd": 2015
         },
         {
-          "name": "2.0 BlueHDi 180ch",
+          "name": "BlueHDi 120",
           "fuel": "Diesel",
-          "yearStart": 2015,
-          "yearEnd": 2018
+          "yearStart": 2011,
+          "yearEnd": 2015
+        },
+        {
+          "name": "BlueHDi 180",
+          "fuel": "Diesel",
+          "yearStart": 2011,
+          "yearEnd": 2015
+        },
+        {
+          "name": "e-HDi 110",
+          "fuel": "Diesel",
+          "yearStart": 2011,
+          "yearEnd": 2015
+        },
+        {
+          "name": "e-HDi 115",
+          "fuel": "Diesel",
+          "yearStart": 2011,
+          "yearEnd": 2015
+        },
+        {
+          "name": "HDi 160",
+          "fuel": "Diesel",
+          "yearStart": 2011,
+          "yearEnd": 2015
+        },
+        {
+          "name": "THP 155",
+          "fuel": "Essence",
+          "yearStart": 2011,
+          "yearEnd": 2015
+        },
+        {
+          "name": "THP 200",
+          "fuel": "Essence",
+          "yearStart": 2011,
+          "yearEnd": 2015
         }
       ],
       "Berlingo Electric": [
@@ -6546,6 +7024,38 @@
           "fuel": "Essence",
           "yearStart": 1992,
           "yearEnd": 2000
+        }
+      ],
+      "C4 Aircross": [
+        {
+          "name": "1.6 e-HDi 115",
+          "fuel": "Diesel",
+          "yearStart": 2012,
+          "yearEnd": 2018
+        },
+        {
+          "name": "1.6 HDi 115",
+          "fuel": "Diesel",
+          "yearStart": 2012,
+          "yearEnd": 2018
+        },
+        {
+          "name": "1.6",
+          "fuel": "Essence",
+          "yearStart": 2012,
+          "yearEnd": 2018
+        },
+        {
+          "name": "1.8 e-HDi 150",
+          "fuel": "Diesel",
+          "yearStart": 2012,
+          "yearEnd": 2018
+        },
+        {
+          "name": "1.8 HDi 150",
+          "fuel": "Diesel",
+          "yearStart": 2012,
+          "yearEnd": 2018
         }
       ]
     },
@@ -46806,14 +47316,21 @@
         "Initiale"
       ],
       "Arkana": [
-        "Life",
-        "Zen",
-        "Business",
-        "Intens",
-        "RS Line",
-        "Esprit Alpine",
-        "Equilibre",
-        "Techno"
+        "BUSINESS",
+        "EQUILIBRE 22",
+        "ESPRIT ALPINE - 23",
+        "ESPRIT ALPINE GSR2 -",
+        "EVOLUTION - 23",
+        "EVOLUTION 22",
+        "EVOLUTION GSR2 - 24",
+        "FAP INTENS 21B",
+        "FAP TECHNO 22",
+        "INTENS",
+        "INTENS 21B",
+        "TECHNO - 23",
+        "TECHNO 22",
+        "TECHNO GSR2 - 24",
+        "ZEN"
       ],
       "Austral": [
         "Equilibre",
@@ -47350,16 +47867,99 @@
     },
     "Citroën": {
       "C1": [
-        "Vibe",
-        "Tendance",
-        "Exclusive",
-        "Connexion",
-        "Feel",
-        "Feel Edition",
-        "Shine",
-        "Shine Edition",
-        "Urban Ride",
-        "Urban Ride Edition"
+        "4CV FEEL 3P",
+        "4CV FEEL 5P",
+        "4CV LIVE 3P",
+        "4CV LIVE 5P",
+        "4CV MILLENIUM 5P",
+        "4CV ORIGINS 5P",
+        "4CV SHINE 3P",
+        "4CV SHINE 5P",
+        "4CV URBAN RIDE 5P",
+        "AIRDREAM SHINE 3P",
+        "AIRDREAM SHINE 5P",
+        "AIRDREAM SHINE EDITION 3P",
+        "AIRPLAY 3P",
+        "AIRPLAY 5P",
+        "ATTRACTION 3P",
+        "ATTRACTION 5P",
+        "CHRONO 3P",
+        "CHRONO 5P",
+        "CHRONO SENSODRIVE 3P",
+        "CHRONO SENSODRIVE 5P",
+        "COLLECTION 3P",
+        "COLLECTION 5P",
+        "COLLECTION ETG 3P",
+        "COLLECTION ETG 5P",
+        "CONFORT 3P",
+        "CONFORT 5P",
+        "CONFORT BMP 3P",
+        "CONFORT BMP 5P",
+        "CONFORT ETG 3P",
+        "CONFORT ETG 5P",
+        "CONFORT SENSODRIVE 3P",
+        "CONFORT SENSODRIVE 5P",
+        "ELLE 5P",
+        "ELLE ETG 5P",
+        "EXCLUSIVE 3P",
+        "EXCLUSIVE 5P",
+        "EXCLUSIVE BMP 3P",
+        "EXCLUSIVE BMP 5P",
+        "EXCLUSIVE SENSODRIVE 3P",
+        "EXCLUSIVE SENSODRIVE 5P",
+        "FEEL 3P",
+        "FEEL 5P",
+        "FEEL EDITION",
+        "FEEL ETG 3P",
+        "FEEL ETG 5P",
+        "JCC+ 5P",
+        "LEADER PACK 3P",
+        "LIVE 3P",
+        "LIVE 5P",
+        "MENTOS 3P",
+        "MENTOS 5P",
+        "MILLENIUM",
+        "MILLENIUM 3P",
+        "MILLENIUM 5P",
+        "MILLENIUM BMP 3P",
+        "MILLENIUM BMP 5P",
+        "MILLENIUM ETG",
+        "MILLENIUM ETG 3P",
+        "MILLENIUM ETG 5P",
+        "MUSIC TOUCH 3P",
+        "MUSIC TOUCH 5P",
+        "MUSICBOX",
+        "MUSICBOX 5P",
+        "MUSICBOX ETG 3P",
+        "MUSICBOX ETG 5P",
+        "ORIGINS 5P",
+        "PACK",
+        "PACK 3P",
+        "PACK 5P",
+        "PACK SENSODRIVE 3P",
+        "PACK SENSODRIVE 5P",
+        "PASSION BLEUS 3P",
+        "PS VITA 3P",
+        "PS VITA 5P",
+        "ROSSIGNOL 3P",
+        "ROSSIGNOL 5P",
+        "ROSSIGNOL BMP 3P",
+        "ROSSIGNOL BMP 5P",
+        "SHINE 3P",
+        "SHINE 5P",
+        "SHINE EDITION",
+        "SHINE EDITION 3P",
+        "SHINE EDITION 5P",
+        "SHINE EDITION ETG 3P",
+        "SHINE ETG 3P",
+        "SHINE ETG 5P",
+        "START 3P",
+        "URBAN RIDE 3P",
+        "URBAN RIDE 5P",
+        "URBAN RIDE ETG 3P",
+        "URBAN RIDE ETG 5P",
+        "VITAMINE 3P",
+        "VITAMINE 5P"
       ],
       "C2": [
         "SX",
@@ -47368,85 +47968,456 @@
         "Furio"
       ],
       "C3": [
-        "SX",
-        "Exclusive",
-        "Attraction",
-        "Tendance",
-        "Collection",
-        "Feel",
-        "Feel Pack",
-        "Shine",
-        "Shine Pack",
-        "Origins",
-        "You!",
-        "C-Series",
-        "Max",
-        "Plus"
+        "105G FEEL BUSINESS",
+        "16S EXCLUSIVE",
+        "16S EXCLUSIVE SENSODRIVE",
+        "16S GRAPHIT SENSODRIVE",
+        "16S PACK AMBIANCE SENSODRIVE",
+        "16S PACK CLIM",
+        "16S PACK CLIM SENSODRIVE",
+        "16S STOP & START",
+        "16S SX PACK AMBIANCE",
+        "16S SX PACK CLIM",
+        "16S VTR",
+        "16S XTR",
+        "16S XTR SENSODRIVE",
+        "5CV SHINE",
+        "5CV SHINE BUSINESS",
+        "6CV CLUB ENTREPRISE",
+        "6CV FEEL BV6",
+        "6CV GRAPHIC BV6V",
+        "6CV ORIGINS BV6",
+        "6CV SHINE",
+        "6CV SHINE BUSINESS",
+        "6CV SHINE BUSINESS BV6",
+        "6CV SHINE BV6",
+        "6V PS VITA",
+        "79G BUSINESS",
+        "79G CONFORT BUSINESS",
+        "83G FEEL BUSINESS",
+        "8CV CLUB ENTREPRISE",
+        "99G CONFORT BUSINESS",
+        "AIRDREAM",
+        "AIRDREAM BMP",
+        "AIRDREAM BUSINESS",
+        "AIRDREAM BUSINESS BMP",
+        "AIRDREAM CLUB ENTREPRISE",
+        "AIRDREAM COLLECTION",
+        "AIRDREAM COLLECTION BMP",
+        "AIRDREAM COLLECTION BMP5",
+        "AIRDREAM CONFORT",
+        "AIRDREAM CONFORT BMP",
+        "AIRDREAM CONFORT BMP5",
+        "AIRDREAM CONFORT BMP6",
+        "AIRDREAM EXCLUSIVE",
+        "AIRDREAM EXCLUSIVE BMP",
+        "AIRDREAM EXCLUSIVE BMP5",
+        "AIRDREAM EXCLUSIVE BMP6",
+        "AIRDREAM FEEL EDITION BMP",
+        "AIRDREAM MUSIC TOUCH",
+        "AIRDREAM MUSIC TOUCH BMP",
+        "AIRDREAM MUSICBOX BMP",
+        "AIRDREAM PS VITA",
+        "AIRDREAM ROSSIGNOL",
+        "AIRDREAM ROSSIGNOL BMP",
+        "AIRDREAM SELECTION BMP",
+        "AIRPLAY",
+        "ATTRACTION",
+        "ATTRACTION BMP",
+        "AUTOMATIQUE",
+        "AUTONOMIE CONFORT COLLECTION",
+        "BLUE NOTE",
+        "BUSINESS",
+        "BUSINESS AUTOMATIQUE",
+        "BUSINESS BMP",
+        "BUSINESS E-DCS6",
+        "C-SERIES",
+        "C-SERIES BV6",
+        "CLASSIC ENTREPRISE",
+        "CLUB ENTREPRISE",
+        "CLUB ENTREPRISE BMP",
+        "COLLECTION",
+        "COLLECTION AUTOMATIQUE",
+        "COLLECTION ETG",
+        "CONFORT",
+        "CONFORT 79G",
+        "CONFORT BMP",
+        "CONFORT BUSINESS",
+        "CONFORT BUSINESS ETG",
+        "CONFORT ETG",
+        "CONFORT ETG6",
+        "ELLE",
+        "ELLE BV6",
+        "ENTREPRISE",
+        "ENTREPRISE BMP",
+        "EXCLUSIVE",
+        "EXCLUSIVE BMP",
+        "EXCLUSIVE ETG",
+        "EXCLUSIVE ETG6",
+        "EXCLUSIVE SENSODRIVE",
+        "FAP",
+        "FAP 5CV CONFORT",
+        "FAP AIRPLAY",
+        "FAP AIRPLAY 5P",
+        "FAP ATTRACTION",
+        "FAP BUSINESS",
+        "FAP CLUB ENTREPRISE",
+        "FAP COLLECTION",
+        "FAP CONFORT",
+        "FAP ENTREPRISE",
+        "FAP EXCLUSIVE",
+        "FAP EXCLUSIVE 109G",
+        "FAP FEEL EDITION",
+        "FAP MUSIC TOUCH",
+        "FAP MUSICBOX",
+        "FAP PASSION BLEUS",
+        "FAP ROSSIGNOL",
+        "FAP SELECTION",
+        "FAP VITAMINE",
+        "FAP VTR",
+        "FEEL",
+        "FEEL 3",
+        "FEEL BUSINESS",
+        "FEEL BUSINESS BV5",
+        "FEEL BUSINESS BV6",
+        "FEEL BUSINESS R",
+        "FEEL BUSINESS R BV5",
+        "FEEL BUSINESS R BV6",
+        "FEEL BV5",
+        "FEEL BV6",
+        "FEEL EDITION",
+        "FEEL EDITION ETG",
+        "FEEL NAV",
+        "FEEL NAV BV5",
+        "FEEL NAV BV6",
+        "FEEL PACK",
+        "FEEL PACK BV6",
+        "FURIO",
+        "GENERATION",
+        "GNV PACK AMBIANCE",
+        "GRAPHIC",
+        "GRAPHIC BV5",
+        "GRAPHIC BV6",
+        "JCC+",
+        "LIVE",
+        "LIVE 105G",
+        "LIVE 109G",
+        "LIVE 83G",
+        "LIVE 87G",
+        "MAX",
+        "MAX E-DCS6",
+        "MUSIC TOUCH",
+        "MUSICBOX",
+        "OPEN WAY",
+        "ORIGINS",
+        "ORIGINS BV6",
+        "PACK",
+        "PACK AMBIANCE",
+        "PACK CLIM",
+        "PACK CLIM SENSODRIVE",
+        "PACK CLIM STOP &",
+        "PACK COLLECTION",
+        "PASSION BLEUS",
+        "PLUS",
+        "PLUS AVEC PACK BUSINESS",
+        "PLUS E-DCS6",
+        "PRO",
+        "PRO BUSINESS R",
+        "PRO BUSINESS R E-DCS6",
+        "PRO E-DCS6",
+        "PRO PLUS",
+        "PS VITA",
+        "PULP",
+        "RED BLOCK 5P",
+        "ROSSIGNOL",
+        "SAINT JAMES",
+        "SELECTION",
+        "SELECTION ETG",
+        "SHINE",
+        "SHINE BUSINESS",
+        "SHINE BUSINESS BV5",
+        "SHINE BUSINESS BV6",
+        "SHINE BV5",
+        "SHINE BV6",
+        "SHINE PACK",
+        "SHINE PACK BV6",
+        "SO CHIC",
+        "SX PACK AMBIANCE",
+        "SX PACK CLIM",
+        "TIC TAC",
+        "TONIC",
+        "VIRGINMEGA",
+        "VITAMINE",
+        "VITAMINE 5P",
+        "VITAMINE BV5",
+        "XTR",
+        "XTR 2",
+        "YOU",
+        "YOU + PACK PLUS",
+        "YOU!"
       ],
       "C3 Aircross": [
-        "Feel",
-        "Feel Pack",
-        "Shine",
-        "Shine Pack",
-        "Max",
-        "C-Series",
-        "Rip Curl",
-        "S Pack",
-        "Feel Business",
-        "Origins",
-        "Plus"
+        "6CV FEEL BUSINESS BV6",
+        "6CV FEEL BV6",
+        "6CV FEEL PACK BUSINESS",
+        "6CV LIVE BV6",
+        "6CV SHINE BUSINESS BV6",
+        "6CV SHINE BV6",
+        "7CV SHINE",
+        "7CV SHINE BUSINESS",
+        "96G FEEL BUSINESS",
+        "96G SHINE BUSINESS",
+        "AUTONOMIE ETENDUE COLLECTION",
+        "BUSINESS",
+        "BUSINESS AUTOMATIQUE",
+        "BUSINESS BV6",
+        "C-SERIES",
+        "C-SERIES BV6",
+        "COLLECTION",
+        "COLLECTION AUTOMATIQUE",
+        "FEEL",
+        "FEEL BUSINESS",
+        "FEEL BUSINESS BV6",
+        "FEEL BV6",
+        "FEEL PACK",
+        "FEEL PACK BUSINESS",
+        "FEEL PACK BUSINESS BV6",
+        "FEEL PACK BV6",
+        "LIVE",
+        "LIVE BV6",
+        "MAX",
+        "MAX E-DCS6",
+        "MAX E-DCS6 5PL",
+        "MAX E-DCS6 7PL",
+        "ORIGINS",
+        "ORIGINS BV6",
+        "PLUS",
+        "PLUS AUTOMATIQUE",
+        "PLUS E-DCS6",
+        "PLUS E-DCS6 5PL",
+        "PLUS E-DCS6 7PL",
+        "RIP CURL",
+        "RIP CURL BV6",
+        "SHINE",
+        "SHINE BUSINESS",
+        "SHINE BUSINESS BV6",
+        "SHINE BV6",
+        "SHINE PACK",
+        "SHINE PACK BV6",
+        "SUNSHINE",
+        "SUNSHINE BV6",
+        "YOU",
+        "YOU + PACK PLUS",
+        "YOU AUTOMATIQUE",
+        "YOU!"
       ],
       "C4": [
-        "Attraction",
-        "Tendance",
-        "Exclusive",
-        "Business",
-        "Feel",
-        "Feel Business",
-        "Shine",
-        "Shine Business",
-        "Max",
-        "C-Series",
-        "Origins",
-        "Rip Curl"
+        "86G BUSINESS",
+        "86G MILLENIUM BUSINESS",
+        "AIRDREAM BMP6",
+        "AIRDREAM BUSINESS",
+        "AIRDREAM BUSINESS BMP6",
+        "AIRDREAM CLUB ENTREPRISE",
+        "AIRDREAM COLLECTION BMP6",
+        "AIRDREAM CONFORT BMP6",
+        "AIRDREAM CONFORT BV6",
+        "AIRDREAM EXCLUSIVE",
+        "AIRDREAM EXCLUSIVE +",
+        "AIRDREAM EXCLUSIVE + BMP6",
+        "AIRDREAM EXCLUSIVE BMP6",
+        "AIRDREAM MILLENIUM BMP6",
+        "AIRDREAM MILLENIUM BUSINESS",
+        "AIRDREAM MUSIC TOUCH BMP6",
+        "AIRDREAM ROSSIGNOL BMP6",
+        "AIRDREAM SELECTION BMP6",
+        "ATTRACTION",
+        "AUTOMATIQUE",
+        "AUTONOMIE CONFORT PRO BUSINESS",
+        "AUTONOMIE ETENDUE COLLECTION AUTOMATIQUE",
+        "BUSINESS",
+        "BUSINESS E-DCS6",
+        "BUSINESS ETG6",
+        "BUSINESS R FEEL NAV",
+        "C-SERIES",
+        "CH LIVE",
+        "COLLECTION",
+        "COLLECTION E-DCS6",
+        "COLLECTION ETG6",
+        "CONFORT",
+        "CONFORT ETG6",
+        "DYNAMIC",
+        "DYNAMIC ETG6",
+        "E-DSC6 PRO BUSINESS R",
+        "ELECTRIC FEEL NAV BUSINESS",
+        "EXCLUSIVE",
+        "EXCLUSIVE +",
+        "EXCLUSIVE + ETG6",
+        "EXCLUSIVE BMP6",
+        "EXCLUSIVE ETG6",
+        "FAP",
+        "FAP ATTRACTION",
+        "FAP BUSINESS",
+        "FAP CLUB ENTREPRISE",
+        "FAP COLLECTION",
+        "FAP CONFORT",
+        "FAP ENTREPRISE",
+        "FAP EXCLUSIVE",
+        "FAP EXCLUSIVE +",
+        "FAP LIVE",
+        "FAP MILLENIUM BUSINESS",
+        "FEEL",
+        "FEEL BV6",
+        "FEEL ETG6",
+        "FEEL NAV BUSINESS R",
+        "FEEL PACK",
+        "FEEL PACK BUSINESS",
+        "FEEL PACK BUSINESS BV6",
+        "FEEL PACK BV6",
+        "LIVE",
+        "LIVE BV6",
+        "LIVE PACK BUSINESS",
+        "LIVE PACK BUSINESS BV6",
+        "LIVE PACK BUSINESS R",
+        "MAX",
+        "MAX E-DCS6",
+        "MILLENIUM",
+        "MILLENIUM BUSINESS",
+        "MILLENIUM BUSINESS BV6",
+        "MILLENIUM BUSINESS ETG6",
+        "MILLENIUM BV6",
+        "MILLENIUM ETG6",
+        "MUSIC TOUCH",
+        "MUSICBOX",
+        "MUSICBOX ETG6",
+        "PASSION BLEUS",
+        "PLUS",
+        "PLUS E-DCS6",
+        "PRO BUSINESS R",
+        "PRO BUSINESS R E-DSC6",
+        "ROSSIGNOL",
+        "SELECTION",
+        "SHINE",
+        "SHINE BV6",
+        "SHINE ETG6",
+        "SHINE PACK",
+        "VITAMINE",
+        "YOU",
+        "YOU E-DCS6"
       ],
       "C4 Cactus": [
-        "Feel",
-        "Feel Business",
-        "Shine",
-        "Shine Business",
-        "Origins",
-        "Rip Curl",
-        "Edition",
-        "Shine Edition"
+        "7CV SHINE",
+        "7CV SHINE BUSINESS",
+        "AIRDREAM BUSINESS 82G",
+        "AIRDREAM FEEL BUSINESS 82G",
+        "BUSINESS",
+        "BUSINESS ETG6",
+        "C-SERIES",
+        "C-SERIES BV6",
+        "FEEL",
+        "FEEL BUSINESS",
+        "FEEL BUSINESS BV6",
+        "FEEL BUSINESS ETG6",
+        "FEEL BV6",
+        "FEEL EDITION",
+        "FEEL EDITION ETG",
+        "FEEL EDITION ETG6",
+        "FEEL ETG",
+        "FEEL ETG6",
+        "FEEL NAV",
+        "LIVE",
+        "LIVE BV6",
+        "LIVE ETG6",
+        "ONETONE",
+        "ONETONE ETG6",
+        "ORIGINS",
+        "ORIGINS BV6",
+        "RIP CURL",
+        "SHINE",
+        "SHINE BUSINESS",
+        "SHINE BUSINESS BV6",
+        "SHINE BV6",
+        "SHINE EDITION",
+        "SHINE EDITION ETG",
+        "SHINE EDITION ETG6",
+        "SHINE ETG",
+        "SHINE ETG6",
+        "START"
       ],
       "C5": [
-        "Attraction",
-        "Tendance",
-        "Exclusive",
-        "Millenium",
-        "VS Design"
+        "7CV MILLENIUM",
+        "AIRDREAM MILLENIUM BMP6",
+        "EXCLUSIVE",
+        "HYDRACTIVE EXCLUSIVE",
+        "HYDRACTIVE EXCLUSIVE BV6",
+        "HYDRACTIVE EXCLUSIVE BV6 115G",
+        "MILLENIUM"
       ],
       "C5 Aircross": [
-        "Feel",
-        "Feel Business",
-        "Shine",
-        "Shine Business",
-        "Shine Pack",
-        "Max",
-        "C-Series",
-        "Rip Curl",
-        "Origins",
-        "Business",
-        "Feel Pack",
-        "Plus"
+        "7CV BUSINESS",
+        "7CV BUSINESS +",
+        "7CV BUSINESS + BV6",
+        "7CV BUSINESS BV6",
+        "7CV FEEL",
+        "7CV FEEL BV6",
+        "7CV LIVE",
+        "7CV LIVE BV6",
+        "7CV SHINE",
+        "7CV SHINE BV6",
+        "BUSINESS",
+        "BUSINESS +",
+        "BUSINESS + BV6",
+        "BUSINESS + E-",
+        "BUSINESS BV6",
+        "BUSINESS E-",
+        "BUSINESS E-DCS6",
+        "C-SERIES",
+        "C-SERIES BV6",
+        "C-SERIES E-",
+        "E-SERIES E-",
+        "E-SERIES E-DCS6",
+        "FEEL",
+        "FEEL BV6",
+        "FEEL E-",
+        "FEEL PACK",
+        "FEEL PACK E-",
+        "LIVE",
+        "LIVE BV6",
+        "MAX",
+        "MAX E-",
+        "MAX E-DCS6",
+        "PLUS",
+        "PLUS E-",
+        "PLUS E-DCS6",
+        "SHINE",
+        "SHINE BV6",
+        "SHINE E-",
+        "SHINE PACK",
+        "SHINE PACK BV6",
+        "SHINE PACK E-",
+        "START BV6",
+        "YOU",
+        "YOU E-",
+        "YOU E-DCS6"
       ],
       "C5 X": [
-        "Feel",
-        "Shine",
-        "Max",
-        "C-Series",
-        "Plus"
+        "FEEL",
+        "FEEL BUSINESS",
+        "FEEL BUSINESS E-",
+        "FEEL PACK",
+        "FEEL PACK E-",
+        "HYPNOS E-",
+        "MAX E-",
+        "MAX E-DCS6",
+        "PLUS",
+        "PLUS E-",
+        "PLUS E-DCS6",
+        "SHINE",
+        "SHINE E-",
+        "SHINE PACK",
+        "SHINE PACK E-",
+        "YOU",
+        "YOU E-",
+        "YOU E-DCS6"
       ],
       "Berlingo": [
         "20 20L1 CLUB",
@@ -47686,16 +48657,95 @@
         "XL"
       ],
       "SpaceTourer": [
-        "Business",
-        "Feel",
-        "Shine",
-        "Plus"
+        "5CV BUSINESS BV6",
+        "6CV BUSINESS",
+        "6CV FEEL",
+        "6CV RIP CURL",
+        "9CV BUSINESS",
+        "9CV BUSINESS LOUNGE",
+        "9CV BUSINESS LOUNGE 8PL",
+        "9CV FEEL",
+        "9CV RIP CURL",
+        "9CV SHINE",
+        "BOITE AUTOMATIQUE",
+        "BOITE MANUELLE",
+        "BUS LOUNGE",
+        "BUS LOUNGE 8PL",
+        "BUSINESS",
+        "BUSINESS 9PL",
+        "BUSINESS AUTOMATIQUE",
+        "BUSINESS BV6",
+        "BUSINESS BV6 9PL",
+        "BUSINESS ETG6",
+        "BUSINESS ETG6 9PL",
+        "BUSINESS LOUNGE",
+        "BUSINESS LOUNGE 8PL",
+        "BUSINESS LOUNGE BV6",
+        "BUSINESS LOUNGE BV6 8PL",
+        "BUSINESS M",
+        "BUSINESS MANUELLE",
+        "BUSINESS PACK",
+        "BUSINESS PACK AUTOMATIQUE",
+        "FEEL",
+        "FEEL 8PL",
+        "FEEL BV6",
+        "FEEL BV6 2021",
+        "FEEL BV6 8PL",
+        "FEEL ETG6",
+        "FEEL ETG6 8PL",
+        "RIP CURL",
+        "RIP CURL BV6",
+        "SHINE",
+        "SHINE 7PL",
+        "SHINE BV6",
+        "SHINE M"
       ],
       "C3 Picasso": [
-        "Attraction",
-        "Tendance",
-        "Exclusive",
-        "Collection"
+        "5CV CONFORT",
+        "6CV CONFORT BMP6",
+        "AIRDREAM MUSIC TOUCH BMP6",
+        "ATTRACTION",
+        "BUSINESS",
+        "BUSINESS BMP6",
+        "COLLECTION",
+        "COLLECTION BMP6",
+        "CONFORT",
+        "CONFORT 101G",
+        "CONFORT BMP6",
+        "EXCLUSIVE",
+        "EXCLUSIVE 101G",
+        "EXCLUSIVE BLACK PACK",
+        "EXCLUSIVE BMP6",
+        "FAP ATTRACTION",
+        "FAP BUSINESS",
+        "FAP COLLECTION",
+        "FAP CONFORT",
+        "FAP CONFORT BV6",
+        "FAP EXCLUSIVE",
+        "FAP EXCLUSIVE BLACK PACK",
+        "FAP EXCLUSIVE BV6",
+        "FAP FEEL EDITION",
+        "FAP MILLENIUM",
+        "FAP MILLENIUM BV5",
+        "FAP MUSIC TOUCH",
+        "FAP MUSICBOX",
+        "FAP ROSSIGNOL",
+        "FAP SELECTION",
+        "FEEL EDITION",
+        "FEEL EDITION BMP6",
+        "FEEL EDITION BUSINESS",
+        "MILLENIUM",
+        "MILLENIUM BMP6",
+        "MILLENIUM BUSINESS",
+        "MILLENIUM BV5",
+        "MUSIC TOUCH",
+        "MUSICBOX",
+        "MUSICBOX BMP6",
+        "PASSION BLEUS",
+        "ROSSIGNOL",
+        "SELECTION",
+        "SELECTION BMP6",
+        "VITAMINE"
       ],
       "Grand C4 Picasso": [
         "Attraction",
@@ -47707,28 +48757,108 @@
         "Shine"
       ],
       "Grand C4 SpaceTourer": [
-        "Feel",
-        "Feel Business",
-        "Shine",
-        "Shine Pack",
-        "Business"
+        "6CV BUSINESS",
+        "6CV BUSINESS +",
+        "6CV FEEL",
+        "6CV ORIGINS",
+        "6CV SHINE",
+        "7CV BUSINESS",
+        "7CV BUSINESS +",
+        "7CV BUSINESS + BV6",
+        "7CV BUSINESS BV6",
+        "7CV C-SERIES",
+        "7CV FEEL",
+        "7CV FEEL BV6",
+        "7CV SHINE",
+        "7CV SHINE BV6",
+        "7CV SHINE PACK",
+        "7CV SHINE PACK BV6",
+        "98G BUSINESS + BV6",
+        "98G BUSINESS BV6",
+        "BUSINESS",
+        "BUSINESS +",
+        "BUSINESS + BV6",
+        "BUSINESS BV6",
+        "C-SERIES",
+        "FEEL",
+        "FEEL BV6",
+        "LIVE",
+        "LIVE BV6",
+        "ORIGINS",
+        "ORIGINS BV6",
+        "RIP CURL",
+        "RIP CURL BV6",
+        "SHINE",
+        "SHINE BV6",
+        "SHINE PACK",
+        "SHINE PACK BV6"
       ],
       "C4 Picasso": [
-        "Attraction",
-        "Tendance",
-        "Exclusive",
-        "Business",
-        "Millenium",
-        "Feel",
-        "Shine"
+        "94G BUSINESS",
+        "94G BUSINESS +",
+        "94G BUSINESS + BV6",
+        "96G BUSINESS",
+        "96G BUSINESS +",
+        "96G BUSINESS + BV6",
+        "96G BUSINESS BV6",
+        "AIRDREAM ATTRACTION ETG6",
+        "AIRDREAM BUSINESS ETG6",
+        "AIRDREAM CONFORT ETG6",
+        "AIRDREAM MUSICBOX ETG6",
+        "ATTRACTION",
+        "ATTRACTION BV6",
+        "ATTRACTION ETG6",
+        "BUSINESS",
+        "BUSINESS +",
+        "BUSINESS + BV6",
+        "BUSINESS + ETG6",
+        "BUSINESS BV6",
+        "BUSINESS ETG6",
+        "COLLECTION",
+        "COLLECTION ETG6",
+        "CONFORT",
+        "CONFORT BV6",
+        "CONFORT ETG6",
+        "EXCLUSIVE",
+        "EXCLUSIVE BV6",
+        "EXCLUSIVE ETG6",
+        "FEEL",
+        "FEEL BV6",
+        "FEEL EDITION",
+        "FEEL EDITION BV6",
+        "FEEL EDITION ETG6",
+        "INTENSIVE",
+        "INTENSIVE BV6",
+        "INTENSIVE ETG6",
+        "LIVE",
+        "LIVE BV6",
+        "MUSICBOX",
+        "MUSICBOX ETG6",
+        "RIP CURL",
+        "RIP CURL BV6",
+        "SELECTION",
+        "SELECTION BV6",
+        "SELECTION ETG6",
+        "SHINE",
+        "SHINE BV6"
       ],
       "C4 SpaceTourer": [
-        "Feel",
-        "Feel Business",
-        "Shine",
-        "Shine Business",
-        "Shine Pack",
-        "Business"
+        "94G BUSINESS + BV6",
+        "BUSINESS",
+        "BUSINESS +",
+        "BUSINESS + BV6",
+        "BUSINESS BV6",
+        "FEEL",
+        "FEEL BV6",
+        "LIVE",
+        "LIVE BV6",
+        "ORIGINS",
+        "ORIGINS BV6",
+        "RIP CURL",
+        "RIP CURL BV6",
+        "SHINE",
+        "SHINE B",
+        "SHINE BV6"
       ],
       "C4 X": [
         "Feel",
@@ -47842,8 +48972,21 @@
         "Confort"
       ],
       "Nemo": [
-        "Access",
-        "Confort"
+        "ATTRACTION",
+        "CONFORT",
+        "CONFORT SENSODRIVE",
+        "FAP ATTRACTION",
+        "FAP CONFORT",
+        "FAP CONFORT BMP5",
+        "FAP CONFORT BMP6",
+        "FAP CONFORT BMV5",
+        "FAP MUSIC TOUCH",
+        "FAP MUSICBOX",
+        "FAP ROSSIGNOL",
+        "FAP XTR",
+        "PASSION BLEUS",
+        "VITAMINE",
+        "XTR"
       ],
       "XM": [
         "SX",
@@ -47851,22 +48994,139 @@
         "Activa"
       ],
       "DS3": [
-        "So Chic",
-        "DSign",
-        "Sport Chic",
-        "Performance Line"
+        "6CV SO CHIC",
+        "79G EXECUTIVE",
+        "AIRDREAM CHIC",
+        "AIRDREAM EXECUTIVE",
+        "AIRDREAM GRAPHIC ART",
+        "AIRDREAM GRAPHIC ART BMP6",
+        "AIRDREAM JUST MAT",
+        "AIRDREAM OPERA BLUE",
+        "AIRDREAM OPERA BLUE BMP6",
+        "AIRDREAM OPERA BLUE ETG6",
+        "AIRDREAM RED EDITION",
+        "AIRDREAM RED EDITION BMP6",
+        "AIRDREAM SO CHIC",
+        "AIRDREAM SO CHIC ETG6",
+        "AIRDREAM SPORT CHIC",
+        "AIRDREAM ULTRA PRESTIGE",
+        "BE CHIC",
+        "BE CHIC ETG",
+        "BE CHIC ETG6",
+        "CHIC",
+        "CHIC BMP",
+        "CHIC ETG",
+        "DARK ROSE",
+        "DARK ROSE ETG6",
+        "EXECUTIVE",
+        "FAP 109G SERIE NOIRE",
+        "FAP 118G SERIE NOIRE",
+        "FAP 6CV AIRDREAM SPORT",
+        "FAP 99G AIRDREAM SO",
+        "FAP AIRDREAM SO CHIC",
+        "FAP AIRDREAM SPORT CHIC",
+        "FAP SPORT CHIC 109G",
+        "GRAPHIC ART",
+        "JUST MAT",
+        "MATIERE GRISE",
+        "OPERA BLUE",
+        "RACING",
+        "RACING GOLD MAT",
+        "RACING S. LOEB",
+        "RED EDITION",
+        "SERIE NOIRE SPORT CHIC",
+        "SO CHIC",
+        "SO CHIC ETG",
+        "SO CHIC ETG6",
+        "SO IRRESISTIBLE",
+        "SO IRRESISTIBLE ETG6",
+        "SPORT CHIC",
+        "ULTRA PRESTIGE"
       ],
       "DS4": [
-        "So Chic",
-        "Sport Chic",
-        "DSign",
-        "Performance Line"
+        "AIRDREAM CHIC",
+        "AIRDREAM CHIC BMP6",
+        "AIRDREAM SO CHIC",
+        "AIRDREAM SO CHIC BMP6",
+        "AIRDREAM URBAN SHOW BMP6",
+        "BE CHIC",
+        "CHIC",
+        "CHIC BMP6",
+        "CHIC ETG6",
+        "ELECTRO SHOT",
+        "ELECTRO SHOT ETG6",
+        "EXECUTIVE",
+        "EXECUTIVE BMP6",
+        "EXECUTIVE BV6",
+        "EXECUTIVE ETG6",
+        "FAP CHIC",
+        "FAP EXECUTIVE",
+        "FAP JUST MAT",
+        "FAP PURE PEARL",
+        "FAP SO CHIC",
+        "FAP SPORT CHIC",
+        "JUST MAT",
+        "PURE PEARL",
+        "SO CHIC",
+        "SO CHIC BMP6",
+        "SO CHIC BV6",
+        "SO CHIC ETG6",
+        "SPORT CHIC",
+        "URBAN SHOW",
+        "URBAN SHOW BV6",
+        "URBAN SHOW ETG6",
+        "WIFI ON BOARD",
+        "WIFI ON BOARD BV6",
+        "WIFI ON BOARD ETG6"
       ],
       "DS5": [
-        "So Chic",
-        "Sport Chic",
-        "Ligne Platine",
-        "Hybrid4"
+        "AIRDREAM CHIC BMP6",
+        "AIRDREAM EXECUTIVE BMP6",
+        "AIRDREAM SO CHIC BMP6",
+        "BE CHIC",
+        "BE CHIC ETG6",
+        "BUSINESS",
+        "BUSINESS BV6",
+        "BUSINESS ETG6",
+        "CHIC",
+        "CHIC ETG6",
+        "EXECUTIVE",
+        "EXECUTIVE BV6",
+        "EXECUTIVE ETG6",
+        "PURE PEARL",
+        "SO CHIC",
+        "SO CHIC ETG6",
+        "SPORT CHIC",
+        "SPORT CHIC BV6",
+        "URBAN SHOW",
+        "URBAN SHOW ETG6"
+      ],
+      "C4 Aircross": [
+        "4X2 BUSINESS BV6",
+        "4X2 COLLECTION",
+        "4X2 COLLECTION BV6",
+        "4X2 CONFORT BV6",
+        "4X2 EXCLUSIVE BV6",
+        "4X2 FEEL EDITION BV6",
+        "4X2 MUSICBOX",
+        "ATTRACTION 4X2",
+        "BUSINESS BV6",
+        "COLLECTION",
+        "COLLECTION BV6",
+        "CONFORT",
+        "CONFORT 4X2",
+        "CONFORT 4X2 BV6",
+        "CONFORT BV6",
+        "EXCLUSIVE",
+        "EXCLUSIVE 4X2",
+        "EXCLUSIVE 4X2 BV6",
+        "EXCLUSIVE BV6",
+        "FEEL EDITION BV6",
+        "I ATTRACTION 4X2",
+        "I CONFORT 4X2",
+        "MUSIC TOUCH",
+        "MUSIC TOUCH 4X2",
+        "MUSICBOX"
       ]
     },
     "DS": {
