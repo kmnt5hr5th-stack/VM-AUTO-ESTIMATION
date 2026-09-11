@@ -12701,7 +12701,7 @@
           "name": "1.5 TDI 114",
           "fuel": "Diesel",
           "yearStart": 2012,
-          "yearEnd": 2019
+          "yearEnd": 2020
         },
         {
           "name": "1.5 TDI 95",
@@ -12719,7 +12719,7 @@
           "name": "1.6 TDI 115",
           "fuel": "Diesel",
           "yearStart": 2009,
-          "yearEnd": 2011
+          "yearEnd": 2012
         },
         {
           "name": "1.6 TDI 116",
@@ -12734,20 +12734,20 @@
         {
           "name": "1.6 i 115",
           "fuel": "Essence",
-          "yearStart": 2004,
-          "yearEnd": 2012
+          "yearStart": 2005,
+          "yearEnd": 2008
         },
         {
           "name": "1.6 i 116",
           "fuel": "Essence",
-          "yearStart": 2004,
+          "yearStart": 2005,
           "yearEnd": 2023
         },
         {
           "name": "1.6 i 122",
           "fuel": "Essence",
           "yearStart": 2006,
-          "yearEnd": 2011
+          "yearEnd": 2012
         },
         {
           "name": "1.6 i 136",
@@ -12764,13 +12764,20 @@
         {
           "name": "2.0 TDI 120",
           "fuel": "Diesel",
-          "yearStart": 2012
+          "yearStart": 2013,
+          "yearEnd": 2022
         },
         {
           "name": "2.0 TDI 122",
           "fuel": "Diesel",
-          "yearStart": 2004,
-          "yearEnd": 2012
+          "yearStart": 2005,
+          "yearEnd": 2007
+        },
+        {
+          "name": "2.0 TDI 123",
+          "fuel": "Diesel",
+          "yearStart": 2008,
+          "yearEnd": 2008
         },
         {
           "name": "2.0 TDI 143",
@@ -12786,14 +12793,13 @@
         {
           "name": "2.0 TDI 163",
           "fuel": "Diesel",
-          "yearStart": 2004,
-          "yearEnd": 2012
+          "yearStart": 2005
         },
         {
           "name": "2.0 TDI 177",
           "fuel": "Diesel",
           "yearStart": 2007,
-          "yearEnd": 2011
+          "yearEnd": 2013
         },
         {
           "name": "2.0 TDI 184",
@@ -12805,6 +12811,12 @@
           "name": "2.0 TDI 190",
           "fuel": "Diesel",
           "yearStart": 2019
+        },
+        {
+          "name": "2.0 TDI 204",
+          "fuel": "Diesel",
+          "yearStart": 2007,
+          "yearEnd": 2013
         },
         {
           "name": "2.0 i 118",
@@ -12820,8 +12832,8 @@
         {
           "name": "2.0 i 129",
           "fuel": "Essence",
-          "yearStart": 2004,
-          "yearEnd": 2012
+          "yearStart": 2005,
+          "yearEnd": 2007
         },
         {
           "name": "2.0 i 136",
@@ -12838,18 +12850,18 @@
           "name": "2.0 i 143",
           "fuel": "Essence",
           "yearStart": 2007,
-          "yearEnd": 2011
+          "yearEnd": 2013
         },
         {
           "name": "2.0 i 150",
           "fuel": "Essence",
-          "yearStart": 2004,
-          "yearEnd": 2012
+          "yearStart": 2005,
+          "yearEnd": 2007
         },
         {
           "name": "2.0 i 170",
           "fuel": "Essence",
-          "yearStart": 2004,
+          "yearStart": 2005,
           "yearEnd": 2015
         },
         {
@@ -12884,7 +12896,7 @@
         {
           "name": "2.5 i 218",
           "fuel": "Essence",
-          "yearStart": 2012,
+          "yearStart": 2008,
           "yearEnd": 2016
         },
         {
@@ -12909,7 +12921,7 @@
           "name": "3.0 i 258",
           "fuel": "Essence",
           "yearStart": 2005,
-          "yearEnd": 2011
+          "yearEnd": 2012
         },
         {
           "name": "3.0 i 265",
@@ -12918,10 +12930,10 @@
           "yearEnd": 2011
         },
         {
-          "name": "? TDI 204",
-          "fuel": "Diesel",
-          "yearStart": 2007,
-          "yearEnd": 2011
+          "name": "3.0 i 306",
+          "fuel": "Essence",
+          "yearStart": 2008,
+          "yearEnd": 2013
         }
       ],
       "Série 2 Active Tourer": [
@@ -13022,8 +13034,7 @@
         {
           "name": "2.0 TDI 190",
           "fuel": "Diesel",
-          "yearStart": 2015,
-          "yearEnd": 2024
+          "yearStart": 2015
         },
         {
           "name": "2.0 e 204",
@@ -13057,14 +13068,13 @@
         {
           "name": "2.0 i 184",
           "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2022
+          "yearStart": 2012
         },
         {
           "name": "2.0 i 245",
           "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2014
+          "yearStart": 2011,
+          "yearEnd": 2016
         },
         {
           "name": "2.5 TDI 197",
@@ -13109,10 +13119,22 @@
           "yearEnd": 2018
         },
         {
+          "name": "3.0 TDI 265",
+          "fuel": "Diesel",
+          "yearStart": 2019,
+          "yearEnd": 2020
+        },
+        {
           "name": "3.0 TDI 286",
           "fuel": "Diesel",
           "yearStart": 2006,
-          "yearEnd": 2011
+          "yearEnd": 2024
+        },
+        {
+          "name": "3.0 TDI 313",
+          "fuel": "Diesel",
+          "yearStart": 2013,
+          "yearEnd": 2018
         },
         {
           "name": "3.0 e 252",
@@ -13132,10 +13154,16 @@
           "yearEnd": 2022
         },
         {
+          "name": "3.0 i 252",
+          "fuel": "Essence",
+          "yearStart": 2015,
+          "yearEnd": 2018
+        },
+        {
           "name": "3.0 i 258",
           "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2021
+          "yearStart": 2018,
+          "yearEnd": 2022
         },
         {
           "name": "3.0 i 272",
@@ -13147,7 +13175,7 @@
           "name": "3.0 i 306",
           "fuel": "Essence",
           "yearStart": 2006,
-          "yearEnd": 2014
+          "yearEnd": 2016
         },
         {
           "name": "3.0 i 326",
@@ -13156,10 +13184,10 @@
           "yearEnd": 2018
         },
         {
-          "name": "ActiveHybrid",
+          "name": "3.0 i 360",
           "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2013
+          "yearStart": 2015,
+          "yearEnd": 2018
         }
       ],
       "X1": [
@@ -13651,40 +13679,21 @@
       ],
       "i3": [
         {
-          "name": "URBANLIFE PROLONGATEUR D AUTONOMIE REX",
-          "fuel": "Hybride",
-          "yearStart": 2014,
-          "yearEnd": 2014
-        },
-        {
-          "name": "22kWh 22",
-          "fuel": "Électrique",
-          "yearStart": 2015,
-          "yearEnd": 2015
-        },
-        {
-          "name": "33kWh 94",
-          "fuel": "Électrique",
-          "yearStart": 2018,
-          "yearEnd": 2018
-        },
-        {
-          "name": "42kWh 184",
-          "fuel": "Électrique",
-          "yearStart": 2022,
-          "yearEnd": 2022
-        },
-        {
-          "name": "Électrique",
+          "name": "électrique",
           "fuel": "Électrique",
           "yearStart": 2013,
-          "yearEnd": 2022
+          "yearEnd": 2020
         },
         {
-          "name": "Électrique 120",
+          "name": "électrique 120",
           "fuel": "Électrique",
-          "yearStart": 2020,
-          "yearEnd": 2021
+          "yearStart": 2018
+        },
+        {
+          "name": "électrique 170",
+          "fuel": "Électrique",
+          "yearStart": 2017,
+          "yearEnd": 2018
         }
       ],
       "i4": [
@@ -13930,6 +13939,12 @@
           "yearEnd": 2019
         },
         {
+          "name": "3.0 i",
+          "fuel": "Essence",
+          "yearStart": 2016,
+          "yearEnd": 2018
+        },
+        {
           "name": "3.0 i 245",
           "fuel": "Essence",
           "yearStart": 2024
@@ -13939,6 +13954,29 @@
           "fuel": "Essence",
           "yearStart": 2016,
           "yearEnd": 2019
+        },
+        {
+          "name": "3.0 i 326",
+          "fuel": "Essence",
+          "yearStart": 2014,
+          "yearEnd": 2016
+        },
+        {
+          "name": "3.0 i 340",
+          "fuel": "Essence",
+          "yearStart": 2016,
+          "yearEnd": 2021
+        },
+        {
+          "name": "3.0 i 374",
+          "fuel": "Essence",
+          "yearStart": 2021,
+          "yearEnd": 2025
+        },
+        {
+          "name": "3.0 i 392",
+          "fuel": "Essence",
+          "yearStart": 2025
         }
       ],
       "Neue Klasse": [
@@ -14264,7 +14302,18 @@
           "name": "3.0 TDI 265",
           "fuel": "Diesel",
           "yearStart": 2015,
-          "yearEnd": 2019
+          "yearEnd": 2020
+        },
+        {
+          "name": "3.0 TDI 286",
+          "fuel": "Diesel",
+          "yearStart": 2020,
+          "yearEnd": 2022
+        },
+        {
+          "name": "3.0 TDI 299",
+          "fuel": "Diesel",
+          "yearStart": 2022
         },
         {
           "name": "3.0 TDI 306",
@@ -14276,12 +14325,25 @@
           "name": "3.0 TDI 313",
           "fuel": "Diesel",
           "yearStart": 2012,
-          "yearEnd": 2014
+          "yearEnd": 2015
+        },
+        {
+          "name": "3.0 TDI 320",
+          "fuel": "Diesel",
+          "yearStart": 2015,
+          "yearEnd": 2020
+        },
+        {
+          "name": "3.0 TDI 340",
+          "fuel": "Diesel",
+          "yearStart": 2021,
+          "yearEnd": 2022
         },
         {
           "name": "3.0 e 394",
           "fuel": "Électrique",
-          "yearStart": 2019
+          "yearStart": 2019,
+          "yearEnd": 2022
         },
         {
           "name": "3.0 i 320",
@@ -14296,6 +14358,24 @@
           "yearEnd": 2018
         },
         {
+          "name": "4.4 TDI 380",
+          "fuel": "Diesel",
+          "yearStart": 2012,
+          "yearEnd": 2014
+        },
+        {
+          "name": "4.4 TDI 381",
+          "fuel": "Diesel",
+          "yearStart": 2014,
+          "yearEnd": 2014
+        },
+        {
+          "name": "4.4 TDI 400",
+          "fuel": "Diesel",
+          "yearStart": 2016,
+          "yearEnd": 2020
+        },
+        {
           "name": "4.4 i 407",
           "fuel": "Essence",
           "yearStart": 2008,
@@ -14305,7 +14385,13 @@
           "name": "4.4 i 450",
           "fuel": "Essence",
           "yearStart": 2012,
-          "yearEnd": 2012
+          "yearEnd": 2018
+        },
+        {
+          "name": "4.4 i 530",
+          "fuel": "Essence",
+          "yearStart": 2019,
+          "yearEnd": 2021
         },
         {
           "name": "4.4 i 544",
@@ -14314,16 +14400,16 @@
           "yearEnd": 2014
         },
         {
-          "name": "ActiveHybrid 354",
-          "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2014
+          "name": "électrique 544",
+          "fuel": "Électrique",
+          "yearStart": 2022,
+          "yearEnd": 2024
         },
         {
-          "name": "ActiveHybrid 465",
-          "fuel": "Essence",
-          "yearStart": 2010,
-          "yearEnd": 2012
+          "name": "électrique 660",
+          "fuel": "Électrique",
+          "yearStart": 2023,
+          "yearEnd": 2024
         }
       ],
       "X4": [
@@ -14899,8 +14985,7 @@
         {
           "name": "2.0 TDI 190",
           "fuel": "Diesel",
-          "yearStart": 2015,
-          "yearEnd": 2024
+          "yearStart": 2015
         },
         {
           "name": "2.0 e 204",
@@ -14985,10 +15070,22 @@
           "yearEnd": 2019
         },
         {
+          "name": "3.0 TDI 265",
+          "fuel": "Diesel",
+          "yearStart": 2019,
+          "yearEnd": 2020
+        },
+        {
           "name": "3.0 TDI 286",
           "fuel": "Diesel",
           "yearStart": 2007,
-          "yearEnd": 2012
+          "yearEnd": 2024
+        },
+        {
+          "name": "3.0 TDI 313",
+          "fuel": "Diesel",
+          "yearStart": 2013,
+          "yearEnd": 2019
         },
         {
           "name": "3.0 e 292",
@@ -14996,10 +15093,16 @@
           "yearStart": 2020
         },
         {
+          "name": "3.0 i 252",
+          "fuel": "Essence",
+          "yearStart": 2015,
+          "yearEnd": 2019
+        },
+        {
           "name": "3.0 i 258",
           "fuel": "Essence",
           "yearStart": 2019,
-          "yearEnd": 2021
+          "yearEnd": 2022
         },
         {
           "name": "3.0 i 272",
@@ -15016,7 +15119,7 @@
         {
           "name": "3.0 i 326",
           "fuel": "Essence",
-          "yearStart": 2018,
+          "yearStart": 2015,
           "yearEnd": 2019
         }
       ],
@@ -15042,7 +15145,13 @@
         {
           "name": "2.0 TDI 190",
           "fuel": "Diesel",
-          "yearStart": 2014
+          "yearStart": 2014,
+          "yearEnd": 2024
+        },
+        {
+          "name": "2.0 TDI 197",
+          "fuel": "Diesel",
+          "yearStart": 2024
         },
         {
           "name": "2.0 e 204",
@@ -15053,7 +15162,19 @@
         {
           "name": "2.0 i 184",
           "fuel": "Essence",
-          "yearStart": 2011
+          "yearStart": 2011,
+          "yearEnd": 2024
+        },
+        {
+          "name": "2.0 i 204",
+          "fuel": "Essence",
+          "yearStart": 2010,
+          "yearEnd": 2011
+        },
+        {
+          "name": "2.0 i 208",
+          "fuel": "Essence",
+          "yearStart": 2024
         },
         {
           "name": "2.0 i 245",
@@ -15101,7 +15222,7 @@
           "name": "3.0 TDI 286",
           "fuel": "Diesel",
           "yearStart": 2020,
-          "yearEnd": 2021
+          "yearEnd": 2024
         },
         {
           "name": "3.0 TDI 300",
@@ -15110,10 +15231,21 @@
           "yearEnd": 2011
         },
         {
+          "name": "3.0 TDI 303",
+          "fuel": "Diesel",
+          "yearStart": 2024
+        },
+        {
           "name": "3.0 TDI 313",
           "fuel": "Diesel",
           "yearStart": 2011,
-          "yearEnd": 2013
+          "yearEnd": 2017
+        },
+        {
+          "name": "3.0 TDI 320",
+          "fuel": "Diesel",
+          "yearStart": 2017,
+          "yearEnd": 2020
         },
         {
           "name": "3.0 e 292",
@@ -15125,7 +15257,7 @@
           "name": "3.0 i 252",
           "fuel": "Essence",
           "yearStart": 2017,
-          "yearEnd": 2019
+          "yearEnd": 2020
         },
         {
           "name": "3.0 i 272",
@@ -15137,100 +15269,151 @@
           "name": "3.0 i 306",
           "fuel": "Essence",
           "yearStart": 2010,
-          "yearEnd": 2013
+          "yearEnd": 2017
+        },
+        {
+          "name": "3.0 i 340",
+          "fuel": "Essence",
+          "yearStart": 2017,
+          "yearEnd": 2020
         },
         {
           "name": "4.4 i 407",
           "fuel": "Essence",
           "yearStart": 2011,
           "yearEnd": 2012
-        },
-        {
-          "name": "? i 204",
-          "fuel": "Essence",
-          "yearStart": 2010,
-          "yearEnd": 2011
         }
       ],
       "M2": [
         {
-          "name": "3.0 TwinPower Turbo 370",
+          "name": "3.0 i",
           "fuel": "Essence",
-          "yearStart": 2016,
+          "yearStart": 2015,
           "yearEnd": 2021
         },
         {
-          "name": "3.0 TwinPower Turbo 460",
+          "name": "3.0 i 460",
           "fuel": "Essence",
           "yearStart": 2022,
-          "yearEnd": 2026
+          "yearEnd": 2024
+        },
+        {
+          "name": "3.0 i 480",
+          "fuel": "Essence",
+          "yearStart": 2024
+        },
+        {
+          "name": "3.0 i 530",
+          "fuel": "Essence",
+          "yearStart": 2025
         }
       ],
       "M3": [
         {
-          "name": "3.0 TwinPower Turbo 480",
+          "name": "3.0 i 420",
           "fuel": "Essence",
-          "yearStart": 2021,
-          "yearEnd": 2026
+          "yearStart": 2008,
+          "yearEnd": 2012
         },
         {
-          "name": "3.0 TwinPower Turbo 510 Competition",
-          "fuel": "Essence",
-          "yearStart": 2021,
-          "yearEnd": 2026
-        },
-        {
-          "name": "3.0 TwinPower Turbo 431",
+          "name": "3.0 i 431",
           "fuel": "Essence",
           "yearStart": 2014,
-          "yearEnd": 2020
+          "yearEnd": 2018
+        },
+        {
+          "name": "3.0 i 450",
+          "fuel": "Essence",
+          "yearStart": 2011,
+          "yearEnd": 2018
+        },
+        {
+          "name": "3.0 i 510",
+          "fuel": "Essence",
+          "yearStart": 2020
+        },
+        {
+          "name": "3.0 i 530",
+          "fuel": "Essence",
+          "yearStart": 2024
+        },
+        {
+          "name": "3.0 i 550",
+          "fuel": "Essence",
+          "yearStart": 2023
         }
       ],
       "M5": [
         {
-          "name": "4.4 V8 TwinPower Turbo 600",
+          "name": "4.4 i 560",
           "fuel": "Essence",
           "yearStart": 2013,
-          "yearEnd": 2021
+          "yearEnd": 2016
         },
         {
-          "name": "4.4 V8 TwinPower Turbo 625 Competition",
+          "name": "4.4 i 575",
           "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2021
+          "yearStart": 2015,
+          "yearEnd": 2015
         },
         {
-          "name": "4.4 V8 PHEV 727",
-          "fuel": "Hybride rechargeable",
-          "yearStart": 2024,
-          "yearEnd": 2026
+          "name": "4.4 i 600",
+          "fuel": "Essence",
+          "yearStart": 2017,
+          "yearEnd": 2020
+        },
+        {
+          "name": "4.4 i 625",
+          "fuel": "Essence",
+          "yearStart": 2018
         }
       ],
       "Série 2 Gran Coupé": [
         {
           "name": "1.6 TDI 116",
           "fuel": "Diesel",
-          "yearStart": 2022
+          "yearStart": 2022,
+          "yearEnd": 2024
         },
         {
           "name": "2.0 TDI 150",
           "fuel": "Diesel",
-          "yearStart": 2022
+          "yearStart": 2022,
+          "yearEnd": 2024
+        },
+        {
+          "name": "2.0 TDI 163",
+          "fuel": "Diesel",
+          "yearStart": 2024
         },
         {
           "name": "2.0 TDI 190",
           "fuel": "Diesel",
-          "yearStart": 2022
+          "yearStart": 2022,
+          "yearEnd": 2024
         },
         {
           "name": "2.0 i 136",
           "fuel": "Essence",
-          "yearStart": 2022
+          "yearStart": 2022,
+          "yearEnd": 2024
         },
         {
           "name": "2.0 i 178",
           "fuel": "Essence",
-          "yearStart": 2021
+          "yearStart": 2021,
+          "yearEnd": 2024
+        },
+        {
+          "name": "3.0 i 300",
+          "fuel": "Essence",
+          "yearStart": 2024
+        },
+        {
+          "name": "3.0 i 306",
+          "fuel": "Essence",
+          "yearStart": 2019,
+          "yearEnd": 2024
         }
       ],
       "Série 3 Gran Turismo": [
@@ -15276,15 +15459,73 @@
       ],
       "Série 4 Gran Coupé": [
         {
+          "name": "2.0 TDI 150",
+          "fuel": "Diesel",
+          "yearStart": 2015,
+          "yearEnd": 2021
+        },
+        {
+          "name": "2.0 TDI 184",
+          "fuel": "Diesel",
+          "yearStart": 2014,
+          "yearEnd": 2015
+        },
+        {
           "name": "2.0 TDI 190",
           "fuel": "Diesel",
-          "yearStart": 2021,
-          "yearEnd": 2024
+          "yearStart": 2015
         },
         {
           "name": "2.0 i 184",
           "fuel": "Essence",
-          "yearStart": 2021
+          "yearStart": 2016
+        },
+        {
+          "name": "2.0 i 245",
+          "fuel": "Essence",
+          "yearStart": 2014,
+          "yearEnd": 2016
+        },
+        {
+          "name": "3.0 TDI 258",
+          "fuel": "Diesel",
+          "yearStart": 2014,
+          "yearEnd": 2021
+        },
+        {
+          "name": "3.0 TDI 286",
+          "fuel": "Diesel",
+          "yearStart": 2022
+        },
+        {
+          "name": "3.0 TDI 313",
+          "fuel": "Diesel",
+          "yearStart": 2014,
+          "yearEnd": 2019
+        },
+        {
+          "name": "3.0 i 252",
+          "fuel": "Essence",
+          "yearStart": 2016,
+          "yearEnd": 2020
+        },
+        {
+          "name": "3.0 i 306",
+          "fuel": "Essence",
+          "yearStart": 2014,
+          "yearEnd": 2016
+        },
+        {
+          "name": "3.0 i 326",
+          "fuel": "Essence",
+          "yearStart": 2016,
+          "yearEnd": 2021
+        },
+        {
+          "name": "3.0 i 360",
+          "fuel": "Essence",
+          "yearStart": 2016,
+          "yearEnd": 2021
         }
       ],
       "Série 4 Cabriolet": [
@@ -15319,7 +15560,20 @@
         {
           "name": "3.0 TDI 258",
           "fuel": "Diesel",
-          "yearStart": 2014
+          "yearStart": 2014,
+          "yearEnd": 2020
+        },
+        {
+          "name": "3.0 TDI 286",
+          "fuel": "Diesel",
+          "yearStart": 2021,
+          "yearEnd": 2024
+        },
+        {
+          "name": "3.0 TDI 313",
+          "fuel": "Diesel",
+          "yearStart": 2014,
+          "yearEnd": 2019
         },
         {
           "name": "3.0 i 252",
@@ -15336,7 +15590,8 @@
         {
           "name": "3.0 i 326",
           "fuel": "Essence",
-          "yearStart": 2016
+          "yearStart": 2016,
+          "yearEnd": 2020
         }
       ],
       "Série 5": [
@@ -15361,8 +15616,7 @@
         {
           "name": "2.0 TDI 190",
           "fuel": "Diesel",
-          "yearStart": 2013,
-          "yearEnd": 2023
+          "yearStart": 2013
         },
         {
           "name": "2.0 TDI 197",
@@ -15379,7 +15633,13 @@
           "name": "2.0 i 184",
           "fuel": "Essence",
           "yearStart": 2011,
-          "yearEnd": 2023
+          "yearEnd": 2025
+        },
+        {
+          "name": "2.0 i 204",
+          "fuel": "Essence",
+          "yearStart": 2010,
+          "yearEnd": 2011
         },
         {
           "name": "2.0 i 208",
@@ -15425,14 +15685,13 @@
         {
           "name": "3.0 TDI 265",
           "fuel": "Diesel",
-          "yearStart": 2017,
+          "yearStart": 2016,
           "yearEnd": 2020
         },
         {
           "name": "3.0 TDI 286",
           "fuel": "Diesel",
-          "yearStart": 2020,
-          "yearEnd": 2023
+          "yearStart": 2020
         },
         {
           "name": "3.0 TDI 300",
@@ -15441,10 +15700,27 @@
           "yearEnd": 2011
         },
         {
+          "name": "3.0 TDI 303",
+          "fuel": "Diesel",
+          "yearStart": 2024
+        },
+        {
           "name": "3.0 TDI 313",
           "fuel": "Diesel",
           "yearStart": 2011,
           "yearEnd": 2016
+        },
+        {
+          "name": "3.0 TDI 320",
+          "fuel": "Diesel",
+          "yearStart": 2017,
+          "yearEnd": 2020
+        },
+        {
+          "name": "3.0 TDI 340",
+          "fuel": "Diesel",
+          "yearStart": 2021,
+          "yearEnd": 2025
         },
         {
           "name": "3.0 e 252",
@@ -15461,7 +15737,7 @@
         {
           "name": "3.0 i 252",
           "fuel": "Essence",
-          "yearStart": 2017,
+          "yearStart": 2016,
           "yearEnd": 2020
         },
         {
@@ -15479,7 +15755,7 @@
         {
           "name": "3.0 i 340",
           "fuel": "Essence",
-          "yearStart": 2017,
+          "yearStart": 2016,
           "yearEnd": 2020
         },
         {
@@ -15487,24 +15763,6 @@
           "fuel": "Essence",
           "yearStart": 2010,
           "yearEnd": 2012
-        },
-        {
-          "name": "? i 204",
-          "fuel": "Essence",
-          "yearStart": 2010,
-          "yearEnd": 2011
-        },
-        {
-          "name": "ActiveHybrid",
-          "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2016
-        },
-        {
-          "name": "ActiveHybrid 340",
-          "fuel": "Essence",
-          "yearStart": 2014,
-          "yearEnd": 2016
         }
       ],
       "Série 5 Gran Turismo": [
@@ -15696,22 +15954,33 @@
       ],
       "M4": [
         {
-          "name": "3.0 TwinPower Turbo 480",
+          "name": "3.0 i 431",
           "fuel": "Essence",
-          "yearStart": 2021,
-          "yearEnd": 2026
+          "yearStart": 2014,
+          "yearEnd": 2020
         },
         {
-          "name": "3.0 TwinPower Turbo 510 Competition",
+          "name": "3.0 i 450",
           "fuel": "Essence",
-          "yearStart": 2021,
-          "yearEnd": 2026
+          "yearStart": 2016,
+          "yearEnd": 2020
         },
         {
-          "name": "3.0 TwinPower Turbo 530 CSL",
+          "name": "3.0 i 500",
           "fuel": "Essence",
-          "yearStart": 2022,
-          "yearEnd": 2024
+          "yearStart": 2015,
+          "yearEnd": 2016
+        },
+        {
+          "name": "3.0 i 510",
+          "fuel": "Essence",
+          "yearStart": 2020
+        },
+        {
+          "name": "3.0 i 550",
+          "fuel": "Essence",
+          "yearStart": 2024,
+          "yearEnd": 2025
         }
       ],
       "M6": [
@@ -16391,19 +16660,89 @@
           "fuel": "Essence",
           "yearStart": 2018,
           "yearEnd": 2019
+        },
+        {
+          "name": "3.0 i 326",
+          "fuel": "Essence",
+          "yearStart": 2015,
+          "yearEnd": 2016
+        },
+        {
+          "name": "3.0 i 340",
+          "fuel": "Essence",
+          "yearStart": 2018
         }
       ],
       "Série 4 Coupé": [
         {
+          "name": "2.0 TDI 150",
+          "fuel": "Diesel",
+          "yearStart": 2015,
+          "yearEnd": 2017
+        },
+        {
+          "name": "2.0 TDI 184",
+          "fuel": "Diesel",
+          "yearStart": 2013,
+          "yearEnd": 2015
+        },
+        {
           "name": "2.0 TDI 190",
           "fuel": "Diesel",
-          "yearStart": 2020,
-          "yearEnd": 2025
+          "yearStart": 2015
         },
         {
           "name": "2.0 i 184",
           "fuel": "Essence",
-          "yearStart": 2020
+          "yearStart": 2013
+        },
+        {
+          "name": "2.0 i 245",
+          "fuel": "Essence",
+          "yearStart": 2013,
+          "yearEnd": 2016
+        },
+        {
+          "name": "2.5 TDI 218",
+          "fuel": "Diesel",
+          "yearStart": 2014,
+          "yearEnd": 2016
+        },
+        {
+          "name": "3.0 TDI 258",
+          "fuel": "Diesel",
+          "yearStart": 2013,
+          "yearEnd": 2020
+        },
+        {
+          "name": "3.0 TDI 286",
+          "fuel": "Diesel",
+          "yearStart": 2021,
+          "yearEnd": 2025
+        },
+        {
+          "name": "3.0 TDI 313",
+          "fuel": "Diesel",
+          "yearStart": 2013,
+          "yearEnd": 2019
+        },
+        {
+          "name": "3.0 i 252",
+          "fuel": "Essence",
+          "yearStart": 2016,
+          "yearEnd": 2019
+        },
+        {
+          "name": "3.0 i 306",
+          "fuel": "Essence",
+          "yearStart": 2013,
+          "yearEnd": 2016
+        },
+        {
+          "name": "3.0 i 326",
+          "fuel": "Essence",
+          "yearStart": 2016,
+          "yearEnd": 2020
         }
       ],
       "Série 6 Cabriolet": [
@@ -16475,6 +16814,121 @@
           "name": "4.4 i 530",
           "fuel": "Essence",
           "yearStart": 2018
+        }
+      ],
+      "Série 3 Coupé": [
+        {
+          "name": "2.0 TDI 177",
+          "fuel": "Diesel",
+          "yearStart": 2007,
+          "yearEnd": 2010
+        },
+        {
+          "name": "2.0 TDI 184",
+          "fuel": "Diesel",
+          "yearStart": 2010
+        },
+        {
+          "name": "2.0 i 170",
+          "fuel": "Essence",
+          "yearStart": 2007
+        },
+        {
+          "name": "2.5 TDI 197",
+          "fuel": "Diesel",
+          "yearStart": 2007,
+          "yearEnd": 2010
+        },
+        {
+          "name": "2.5 TDI 204",
+          "fuel": "Diesel",
+          "yearStart": 2010
+        },
+        {
+          "name": "2.5 i 218",
+          "fuel": "Essence",
+          "yearStart": 2006
+        },
+        {
+          "name": "3.0 TDI 231",
+          "fuel": "Diesel",
+          "yearStart": 2006,
+          "yearEnd": 2008
+        },
+        {
+          "name": "3.0 TDI 245",
+          "fuel": "Diesel",
+          "yearStart": 2008
+        },
+        {
+          "name": "3.0 TDI 286",
+          "fuel": "Diesel",
+          "yearStart": 2006
+        },
+        {
+          "name": "3.0 i 272",
+          "fuel": "Essence",
+          "yearStart": 2007
+        },
+        {
+          "name": "3.0 i 306",
+          "fuel": "Essence",
+          "yearStart": 2007
+        }
+      ],
+      "Série 3 Cabriolet": [
+        {
+          "name": "2.0 TDI 177",
+          "fuel": "Diesel",
+          "yearStart": 2008,
+          "yearEnd": 2010
+        },
+        {
+          "name": "2.0 TDI 184",
+          "fuel": "Diesel",
+          "yearStart": 2010
+        },
+        {
+          "name": "2.0 i 170",
+          "fuel": "Essence",
+          "yearStart": 2008
+        },
+        {
+          "name": "2.5 TDI 197",
+          "fuel": "Diesel",
+          "yearStart": 2008,
+          "yearEnd": 2010
+        },
+        {
+          "name": "2.5 TDI 204",
+          "fuel": "Diesel",
+          "yearStart": 2010
+        },
+        {
+          "name": "2.5 i 218",
+          "fuel": "Essence",
+          "yearStart": 2008
+        },
+        {
+          "name": "3.0 TDI 231",
+          "fuel": "Diesel",
+          "yearStart": 2007,
+          "yearEnd": 2009
+        },
+        {
+          "name": "3.0 TDI 245",
+          "fuel": "Diesel",
+          "yearStart": 2009
+        },
+        {
+          "name": "3.0 i 272",
+          "fuel": "Essence",
+          "yearStart": 2008
+        },
+        {
+          "name": "3.0 i 306",
+          "fuel": "Essence",
+          "yearStart": 2008
         }
       ]
     },
@@ -56352,133 +56806,32 @@
     },
     "BMW": {
       "Série 1": [
-        "128TI",
-        "AVANTAGE EDITION 5P",
+        "AVANTAGE EDITION",
         "BUSINESS",
-        "BUSINESS 3P",
-        "BUSINESS 5P",
-        "BUSINESS ABSOLUTE EDITION 3P",
-        "BUSINESS ABSOLUTE EDITION 5P",
         "BUSINESS DESIGN",
-        "BUSINESS OPEN EDITION 3P",
-        "BUSINESS OPEN EDITION 5P",
-        "BUSINESS START EDITION 3P",
-        "BUSINESS START EDITION 5P",
-        "CONFORT 5P",
-        "CONFORT PACK SPORT M 5P",
-        "EDITION 5P",
-        "EDITION BLACK &AMP; WHITE 5P",
-        "EDITION BLACK &AMP; WHITE SPORT 5P",
-        "EDITION BUSINESS 5P",
-        "EDITION CONFORT 5P",
-        "EDITION CONNECTEDDRIVE 5P",
-        "EDITION EXECUTIVE 5P",
-        "EDITION LUXE 5P",
+        "CH M SPORT",
+        "CH M SPORT DESIGN",
+        "CONFORT",
+        "EDITION EXCLUSIVE",
         "EDITION M SPORT PRO",
         "EDITION SPORT",
-        "EDITION SPORT 5P",
-        "EFFICIENTDYNAMICS EDITION BUSINESS 3P",
-        "EFFICIENTDYNAMICS EDITION BUSINESS 5P",
         "EFFICIENTDYNAMICS EDITION BUSINESS DESIGN",
         "EFFICIENTDYNAMICS EDITION EXECUTIVE",
-        "EFFICIENTDYNAMICS EDITION EXECUTIVE 3P",
-        "EFFICIENTDYNAMICS EDITION EXECUTIVE 5P",
-        "EFFICIENTDYNAMICS EDITION LOUNGE 3P",
-        "EFFICIENTDYNAMICS EDITION LOUNGE 5P",
-        "EFFICIENTDYNAMICS EDITION LOUNGE PLUS 3P",
-        "EFFICIENTDYNAMICS EDITION LOUNGE PLUS 5P",
-        "EFFICIENTDYNAMICS EDITION PREMIERE 3P",
-        "EFFICIENTDYNAMICS EDITION PREMIERE 5P",
-        "EFFICIENTDYNAMICS EDITION SPORT 3P",
-        "EFFICIENTDYNAMICS EDITION SPORT 5P",
-        "EFFICIENTDYNAMICS EDITION URBANCHIC 3P",
-        "EFFICIENTDYNAMICS EDITION URBANCHIC 5P",
-        "EFFICIENTDYNAMICS EDITION URBANLIFE 3P",
-        "EFFICIENTDYNAMICS EDITION URBANLIFE 5P",
-        "EXCELLIS 5P",
-        "EXCELLIS OR 5P",
+        "EXCELLIS",
         "EXECUTIVE",
-        "EXECUTIVE 3P",
-        "EXECUTIVE 5P",
-        "EXECUTIVE ABSOLUTE EDITION 3P",
-        "EXECUTIVE ABSOLUTE EDITION 5P",
-        "EXECUTIVE OPEN EDITION 3P",
-        "EXECUTIVE OPEN EDITION 5P",
-        "EXECUTIVE START EDITION 5P",
-        "GRAND TOURISME 5P",
         "LOUNGE",
-        "LOUNGE 3P",
-        "LOUNGE 5P",
-        "LOUNGE ABSOLUTE EDITION 3P",
-        "LOUNGE ABSOLUTE EDITION 5P",
-        "LOUNGE OPEN EDITION 3P",
-        "LOUNGE OPEN EDITION 5P",
         "LOUNGE PLUS",
-        "LOUNGE PLUS 3P",
-        "LOUNGE PLUS 5P",
-        "LOUNGE PLUS ABSOLUTE EDITION 3P",
-        "LOUNGE PLUS ABSOLUTE EDITION 5P",
-        "LOUNGE PLUS OPEN EDITION 3P",
-        "LOUNGE PLUS OPEN EDITION 5P",
-        "LOUNGE PLUS START EDITION 3P",
-        "LOUNGE PLUS START EDITION 5P",
-        "LOUNGE START EDITION 3P",
-        "LOUNGE START EDITION 5P",
-        "LUXE 5P",
+        "LUXE",
         "LUXURY",
         "M DESIGN",
-        "M DESIGN 3P",
-        "M DESIGN 5P",
-        "M PERFORMANCE 3P",
-        "M PERFORMANCE 5P",
+        "M PERFORMANCE",
         "M SPORT",
-        "M SPORT 3P",
-        "M SPORT 5P",
-        "M SPORT 5P 122G",
-        "M SPORT 5P 126G",
-        "M SPORT ABSOLUTE EDITION 3P",
-        "M SPORT ABSOLUTE EDITION 5P",
+        "M SPORT DESIGN",
         "M SPORT ULTIMATE",
-        "M SPORT ULTIMATE 3P",
-        "M SPORT ULTIMATE 5P",
-        "M135I",
-        "M135I 5P",
-        "M135I EDITION M SPORT PRO",
-        "M135I M PERFORMANCE",
         "PREMIERE",
-        "PREMIERE 3P",
-        "PREMIERE 5P",
-        "PREMIERE OPEN EDITION 3P",
-        "PREMIERE OPEN EDITION 5P",
-        "PREMIERE OR 5P",
-        "PREMIERE OR2 5P",
-        "PREMIERE PACK SPORT M 5P",
-        "PREMIERE START EDITION 3P",
-        "PREMIERE START EDITION 5P",
         "SPORT",
-        "SPORT 3P",
-        "SPORT 5P",
-        "SPORT ABSOLUTE EDITION 3P",
-        "SPORT ABSOLUTE EDITION 5P",
-        "SPORT DESIGN 5P",
-        "SPORT OPEN EDITION 3P",
-        "SPORT OPEN EDITION 5P",
-        "SPORT PACK SPORT M 5P",
-        "SPORT START EDITION 3P",
-        "SPORT START EDITION 5P",
-        "URBANCHIC 3P",
-        "URBANCHIC 5P",
-        "URBANCHIC START EDITION 3P",
-        "URBANCHIC START EDITION 5P",
-        "URBANLIFE",
-        "URBANLIFE 3P",
-        "URBANLIFE 5P",
-        "URBANLIFE ABSOLUTE EDITION 3P",
-        "URBANLIFE ABSOLUTE EDITION 5P",
-        "URBANLIFE OPEN EDITION 3P",
-        "URBANLIFE OPEN EDITION 5P",
-        "URBANLIFE START EDITION 3P",
-        "URBANLIFE START EDITION 5P"
+        "SPORT DESIGN",
+        "URBANLIFE"
       ],
       "Série 2": [
         "Business",
@@ -56489,31 +56842,14 @@
         "Sport"
       ],
       "Série 2 Coupé": [
-        "COUPE",
-        "COUPE LOUNGE",
-        "COUPE LUXURY",
-        "COUPE M SPORT",
-        "COUPE M240I M PERFORMANCE",
-        "COUPE SPORT",
+        "LOUNGE",
+        "LUXURY",
+        "M PERFORMANCE",
         "M SPORT",
-        "M240I",
-        "M240I M PERFORMANCE"
+        "SPORT"
       ],
       "Série 2 Active Tourer": [
         "ACTIVE TOURER",
-        "ACTIVE TOURER 225XE BUSINESS",
-        "ACTIVE TOURER 225XE EXECUTIVE",
-        "ACTIVE TOURER 225XE IPERFORMANCE BUSINESS DESIGN",
-        "ACTIVE TOURER 225XE IPERFORMANCE LOUNGE",
-        "ACTIVE TOURER 225XE IPERFORMANCE LUXURY",
-        "ACTIVE TOURER 225XE IPERFORMANCE M SPORT",
-        "ACTIVE TOURER 225XE IPERFORMANCE PREMIERE",
-        "ACTIVE TOURER 225XE IPERFORMANCE SPORT",
-        "ACTIVE TOURER 225XE LOUNGE",
-        "ACTIVE TOURER 225XE LUXURY",
-        "ACTIVE TOURER 225XE M SPORT",
-        "ACTIVE TOURER 225XE PREMIERE",
-        "ACTIVE TOURER 225XE SPORT",
         "ACTIVE TOURER BUSINESS",
         "ACTIVE TOURER BUSINESS DESIGN",
         "ACTIVE TOURER EXECUTIVE",
@@ -56524,7 +56860,16 @@
         "ACTIVE TOURER M SPORT EDITION HELLO FUTURE",
         "ACTIVE TOURER PREMIERE",
         "ACTIVE TOURER SPORT",
-        "ACTIVE TOURER SPORT EDITION HELLO FUTURE"
+        "ACTIVE TOURER SPORT EDITION HELLO FUTURE",
+        "SOCIETE BUSINESS",
+        "SOCIETE BUSINESS DESIGN",
+        "SOCIETE BUSINESS DESIGN DESIGN",
+        "SOCIETE EXECUTIVE",
+        "SOCIETE LOUNGE",
+        "SOCIETE LUXURY",
+        "SOCIETE M SPORT",
+        "SOCIETE PREMIERE",
+        "SOCIETE SPORT"
       ],
       "Série 2 Gran Tourer": [
         "Lounge",
@@ -56533,88 +56878,13 @@
         "M Sport"
       ],
       "Série 2 Gran Coupé": [
-        "GRAN COUPE",
-        "GRAN COUPE 7",
-        "GRAN COUPE 8",
-        "GRAN COUPE BUSINESS DESIGN",
-        "GRAN COUPE BUSINESS DESIGN 7",
-        "GRAN COUPE BUSINESS DESIGN 8",
-        "GRAN COUPE EDITION M SPORT PRO",
-        "GRAN COUPE LUXURY",
-        "GRAN COUPE LUXURY 7",
-        "GRAN COUPE LUXURY 8",
-        "GRAN COUPE M SPORT",
-        "GRAN COUPE M SPORT 7",
-        "GRAN COUPE M SPORT 8",
-        "GRAN COUPE M235I",
-        "GRAN COUPE M235I EDITION M SPORT PRO",
-        "GRAN COUPE M235I M PERFORMANCE"
+        "BUSINESS DESIGN",
+        "EDITION M SPORT PRO",
+        "LUXURY",
+        "M SPORT",
+        "M SPORT DESIGN"
       ],
       "Série 3": [
-        "292CH EDITION SPORT HYBRIDE",
-        "292CH LOUNGE HYBRIDE",
-        "3 LOUNGE",
-        "3 LUXURY",
-        "3 M SPORT",
-        "3 MODERN",
-        "3 SPORT",
-        "320SI",
-        "325XI CONFORT",
-        "325XI CONFORT PACK SPORT M",
-        "325XI EDITION",
-        "325XI LUXE",
-        "325XI PREMIERE",
-        "325XI PREMIERE PACK SPORT M",
-        "325XI SPORT",
-        "325XI SPORT DESIGN",
-        "325XI SPORT PACK SPORT M",
-        "325XIA CONFORT",
-        "325XIA CONFORT PACK SPORT M",
-        "325XIA EDITION",
-        "325XIA LUXE",
-        "325XIA PREMIERE",
-        "325XIA PREMIERE PACK SPORT M",
-        "325XIA SPORT DESIGN",
-        "325XIA SPORT PACK SPORT M",
-        "330XD CONFORT",
-        "330XD CONFORT PACK SPORT M",
-        "330XD EDITION",
-        "330XD LUXE",
-        "330XD PREMIERE",
-        "330XD PREMIERE PACK SPORT M",
-        "330XD SPORT",
-        "330XD SPORT DESIGN",
-        "330XD SPORT PACK SPORT M",
-        "330XDA",
-        "330XDA CONFORT PACK SPORT M",
-        "330XDA EDITION",
-        "330XDA LUXE",
-        "330XDA PREMIERE PACK SPORT M",
-        "330XDA SPORT DESIGN",
-        "330XI CONFORT",
-        "330XI CONFORT PACK SPORT M",
-        "330XI EDITION",
-        "330XI LUXE",
-        "330XI PREMIERE",
-        "330XI PREMIERE PACK SPORT M",
-        "330XI SPORT",
-        "330XI SPORT DESIGN",
-        "330XI SPORT PACK SPORT M",
-        "330XIA CONFORT",
-        "330XIA CONFORT PACK SPORT M",
-        "330XIA EDITION",
-        "330XIA LUXE",
-        "330XIA PREMIERE",
-        "330XIA PREMIERE PACK SPORT M",
-        "330XIA SPORT DESIGN",
-        "330XIA SPORT PACK SPORT M",
-        "335XI CONFORT",
-        "335XI EDITION",
-        "335XI LUXE",
-        "335XI SPORT DESIGN",
-        "335XIA EDITION",
-        "335XIA LUXE",
-        "335XIA SPORT DESIGN",
         "AVANTAGE EDITION",
         "BUSINESS",
         "BUSINESS DESIGN",
@@ -56623,6 +56893,16 @@
         "BUSINESS START EDITION",
         "CONFORT",
         "CONFORT PACK SPORT M",
+        "DPF CONFORT",
+        "DPF CONFORT PACK SPORT M",
+        "DPF LUXE",
+        "DPF PACK BUSINESS",
+        "DPF PREMIERE",
+        "DPF PREMIERE PACK SPORT M",
+        "DPF PREMIERE PACK SPORT M DPF",
+        "DPF SPORT",
+        "DPF SPORT PACK SPORT M",
+        "DPF SPORT PACK SPORT M DPF",
         "EDITION",
         "EDITION BLACK &AMP; WHITE",
         "EDITION BLACK &AMP; WHITE SPORT",
@@ -56664,10 +56944,8 @@
         "HYBRIDE SPORT",
         "HYBRIDE SPORT ULTIMATE",
         "LOUNGE",
-        "LOUNGE ABSOLUTE",
         "LOUNGE HYBRIDE",
         "LOUNGE OPEN",
-        "LOUNGE OPEN 2012",
         "LOUNGE PLUS",
         "LOUNGE PLUS EDITION HELLO FUTURE",
         "LOUNGE PLUS START EDITION",
@@ -56675,35 +56953,23 @@
         "LOUNGE START EDITION",
         "LUXE",
         "LUXURY",
-        "LUXURY ABSOLUTE",
         "LUXURY EDITION HELLO FUTURE",
         "LUXURY HYBRIDE",
         "LUXURY OPEN",
         "LUXURY START EDITION",
         "LUXURY ULTIMATE",
-        "M PERFORMANCE",
         "M SPORT",
-        "M SPORT ABSOLUTE",
         "M SPORT EDITION HELLO FUTURE",
-        "M SPORT HELLO FUTURE",
         "M SPORT HYBRIDE",
         "M SPORT ULTIMATE",
-        "M340D",
-        "M340D M PERFORMANCE",
-        "M340I",
-        "M340I H",
-        "M340I M PERFORMANCE",
         "MODERN",
-        "MODERN ABSOLUTE",
         "MODERN OPEN",
         "MODERN START EDITION",
         "PACK BUSINESS",
         "PACK LUXE",
         "PREMIERE",
-        "PREMIERE OR2",
         "PREMIERE PACK SPORT M",
         "SPORT",
-        "SPORT ABSOLUTE",
         "SPORT DESIGN",
         "SPORT EDITION HELLO FUTURE",
         "SPORT OPEN",
@@ -56713,169 +56979,91 @@
         "TECHNO DESIGN"
       ],
       "Série 3 Touring": [
+        "AVANTAGE EDITION",
+        "BUSINESS",
+        "BUSINESS DESIGN",
+        "BUSINESS DESIGN HYBRIDE",
+        "BUSINESS OPEN",
+        "BUSINESS START EDITION",
+        "CONFORT",
+        "CONFORT OR",
+        "CONFORT PACK SPORT M",
+        "DPF CONFORT",
+        "DPF CONFORT PACK SPORT M",
+        "DPF LUXE",
+        "DPF PREMIERE",
+        "DPF PREMIERE PACK SPORT M",
+        "DPF SPORT",
+        "DPF SPORT PACK SPORT M",
+        "EDITION",
+        "EDITION BUSINESS",
+        "EDITION CONFORT",
+        "EDITION CONNECTDRIVE",
+        "EDITION EXCLUSIVE",
+        "EDITION EXECUTIVE",
+        "EDITION LUXE",
+        "EDITION SPORT",
+        "EDITION SPORT HYBRIDE",
+        "EDITION WORLDLINE",
+        "EFFICIENTDYNAMICS BUSINESS",
+        "EFFICIENTDYNAMICS BUSINESS DESIGN",
+        "EFFICIENTDYNAMICS EDITION",
+        "EFFICIENTDYNAMICS EDITION BUSINESS",
+        "EFFICIENTDYNAMICS EDITION CONFORT",
+        "EFFICIENTDYNAMICS EDITION EXECUTIVE",
+        "EFFICIENTDYNAMICS EDITION WORLDLINE",
+        "EFFICIENTDYNAMICS EXECUTIVE",
+        "EFFICIENTDYNAMICS LOUNGE",
+        "EFFICIENTDYNAMICS LOUNGE PLUS",
+        "EFFICIENTDYNAMICS LUXURY",
+        "EFFICIENTDYNAMICS LUXURY ULTIMATE",
+        "EFFICIENTDYNAMICS MODERN",
+        "EFFICIENTDYNAMICS SPORT",
+        "EFFICIENTDYNAMICS SPORT ULTIMATE",
+        "EXECUTIVE",
+        "EXECUTIVE OPEN",
+        "EXECUTIVE START EDITION",
+        "HYBRIDE BUSINESS DESIGN",
+        "HYBRIDE EDITION SPORT",
+        "HYBRIDE LOUNGE",
+        "HYBRIDE LUXURY",
+        "HYBRIDE M SPORT",
+        "LOUNGE",
+        "LOUNGE HYBRIDE",
+        "LOUNGE OPEN",
+        "LOUNGE PLUS",
+        "LOUNGE PLUS HELLO FUTURE",
+        "LOUNGE PLUS START EDITION",
+        "LOUNGE PLUS STARTEDITION",
+        "LOUNGE START EDITION",
+        "LUXE",
+        "LUXE PACK SPORT M",
+        "LUXURY",
+        "LUXURY EDITION HELLO FUTURE",
+        "LUXURY OPEN",
+        "LUXURY START EDITION",
+        "LUXURY ULTIMATE",
+        "M SPORT",
+        "M SPORT EDITION HELLO FUTURE",
         "M SPORT ULTIMATE",
-        "M340I",
-        "TOURING",
-        "TOURING 320XD CONFORT",
-        "TOURING 320XD LUXE",
-        "TOURING 320XD PREMIERE",
-        "TOURING 320XD SPORT DESIGN",
-        "TOURING 325XI CONFORT",
-        "TOURING 325XI CONFORT PACK SPORT M",
-        "TOURING 325XI EDITION",
-        "TOURING 325XI LUXE",
-        "TOURING 325XI PREMIERE",
-        "TOURING 325XI PREMIERE PACK SPORT M",
-        "TOURING 325XI SPORT DESIGN",
-        "TOURING 325XI SPORT PACK SPORT M",
-        "TOURING 325XIA CONFORT",
-        "TOURING 325XIA CONFORT PACK SPORT M",
-        "TOURING 325XIA EDITION",
-        "TOURING 325XIA LUXE",
-        "TOURING 325XIA PREMIERE",
-        "TOURING 325XIA PREMIERE PACK SPORT M",
-        "TOURING 325XIA SPORT DESIGN",
-        "TOURING 325XIA SPORT PACK SPORT M",
-        "TOURING 330XD CONFORT",
-        "TOURING 330XD CONFORT PACK SPORT M",
-        "TOURING 330XD EDITION",
-        "TOURING 330XD LUXE",
-        "TOURING 330XD PREMIERE",
-        "TOURING 330XD PREMIERE PACK SPORT M",
-        "TOURING 330XD SPORT",
-        "TOURING 330XD SPORT DESIGN",
-        "TOURING 330XD SPORT PACK SPORT M",
-        "TOURING 330XDA CONFORT PACK SPORT M",
-        "TOURING 330XDA EDITION",
-        "TOURING 330XDA EDITION LUXE",
-        "TOURING 330XDA LUXE",
-        "TOURING 330XDA PREMIERE PACK SPORT M",
-        "TOURING 330XDA SPORT DESIGN",
-        "TOURING 330XDA SPORT PACK SPORT M",
-        "TOURING 330XI CONFORT",
-        "TOURING 330XI CONFORT PACK SPORT M",
-        "TOURING 330XI EDITION",
-        "TOURING 330XI LUXE",
-        "TOURING 330XI PREMIERE",
-        "TOURING 330XI PREMIERE PACK SPORT M",
-        "TOURING 330XI SPORT DESIGN",
-        "TOURING 330XI SPORT PACK SPORT M",
-        "TOURING 330XIA CONFORT",
-        "TOURING 330XIA CONFORT PACK SPORT M",
-        "TOURING 330XIA EDITION",
-        "TOURING 330XIA LUXE",
-        "TOURING 330XIA PREMIERE",
-        "TOURING 330XIA PREMIERE PACK SPORT M",
-        "TOURING 330XIA SPORT DESIGN",
-        "TOURING 330XIA SPORT PACK SPORT M",
-        "TOURING 335XI CONFORT",
-        "TOURING 335XI EDITION",
-        "TOURING 335XI LUXE",
-        "TOURING 335XI SPORT",
-        "TOURING 335XI SPORT DESIGN",
-        "TOURING 335XI SPORT PACK SPORT M",
-        "TOURING 335XIA CONFORT",
-        "TOURING 335XIA EDITION",
-        "TOURING 335XIA LUXE",
-        "TOURING 335XIA SPORT",
-        "TOURING 335XIA SPORT PACK SPORT M",
-        "TOURING AVANTAGE EDITION",
-        "TOURING BUSINESS",
-        "TOURING BUSINESS DESIGN",
-        "TOURING BUSINESS DESIGN HYBRIDE",
-        "TOURING BUSINESS OPEN",
-        "TOURING BUSINESS START EDITION",
-        "TOURING CONFORT",
-        "TOURING CONFORT OR",
-        "TOURING CONFORT PACK SPORT M",
-        "TOURING EDITION",
-        "TOURING EDITION BUSINESS",
-        "TOURING EDITION CONFORT",
-        "TOURING EDITION CONNECTDRIVE",
-        "TOURING EDITION EXCLUSIVE",
-        "TOURING EDITION EXECUTIVE",
-        "TOURING EDITION LUXE",
+        "MODERN",
+        "MODERN OPEN",
+        "MODERN START EDITION",
+        "PREMIERE",
+        "PREMIERE OR",
+        "PREMIERE PACK SPORT M",
+        "SPORT",
+        "SPORT DESIGN",
+        "SPORT EDITION HELLO FUTURE",
+        "SPORT HELLO FUTURE",
+        "SPORT OPEN",
+        "SPORT PACK SPORT M",
+        "SPORT START EDITION",
+        "SPORT ULTIMATE",
+        "TECHNO DESIGN",
         "TOURING EDITION SPORT",
-        "TOURING EDITION SPORT HYBRIDE",
-        "TOURING EDITION WORLDLINE",
-        "TOURING EFFICIENTDYNAMICS BUSINESS",
-        "TOURING EFFICIENTDYNAMICS BUSINESS DESIGN",
-        "TOURING EFFICIENTDYNAMICS EDITION",
-        "TOURING EFFICIENTDYNAMICS EDITION BUSINESS",
-        "TOURING EFFICIENTDYNAMICS EDITION CONFORT",
-        "TOURING EFFICIENTDYNAMICS EDITION EXECUTIVE",
-        "TOURING EFFICIENTDYNAMICS EDITION WORLDLINE",
-        "TOURING EFFICIENTDYNAMICS EXECUTIVE",
-        "TOURING EFFICIENTDYNAMICS LOUNGE",
-        "TOURING EFFICIENTDYNAMICS LOUNGE PLUS",
-        "TOURING EFFICIENTDYNAMICS LUXURY",
-        "TOURING EFFICIENTDYNAMICS LUXURY ULTIMATE",
-        "TOURING EFFICIENTDYNAMICS MODERN",
-        "TOURING EFFICIENTDYNAMICS SPORT",
-        "TOURING EFFICIENTDYNAMICS SPORT ULTIMATE",
-        "TOURING EXECUTIVE",
-        "TOURING EXECUTIVE OPEN",
-        "TOURING EXECUTIVE START EDITION",
-        "TOURING H M SPORT",
-        "TOURING HELLO FUTURE",
-        "TOURING HYBRIDE BUSINESS DESIGN",
-        "TOURING HYBRIDE EDITION SPORT",
-        "TOURING HYBRIDE LOUNGE",
-        "TOURING HYBRIDE LUXURY",
-        "TOURING HYBRIDE M SPORT",
-        "TOURING LOUNGE",
-        "TOURING LOUNGE 8",
-        "TOURING LOUNGE ABSOLUTE",
-        "TOURING LOUNGE HYBRIDE",
-        "TOURING LOUNGE OPEN",
-        "TOURING LOUNGE PLUS",
-        "TOURING LOUNGE PLUS FUTURE",
-        "TOURING LOUNGE PLUS HELLO FUTURE",
-        "TOURING LOUNGE PLUS START EDITION",
-        "TOURING LOUNGE PLUS STARTEDITION",
-        "TOURING LOUNGE START EDITION",
-        "TOURING LUXE",
-        "TOURING LUXE PACK SPORT M",
-        "TOURING LUXURY",
-        "TOURING LUXURY ABSOLUTE",
-        "TOURING LUXURY EDITION HELLO FUTURE",
         "TOURING LUXURY HYBRIDE",
-        "TOURING LUXURY OPEN",
-        "TOURING LUXURY START EDITION",
-        "TOURING LUXURY ULTIMATE",
-        "TOURING M SPORT",
-        "TOURING M SPORT ABSOLUTE",
-        "TOURING M SPORT EDITION HELLO FUTURE",
-        "TOURING M SPORT HYBRIDE",
-        "TOURING M SPORT ULTIMATE",
-        "TOURING M340D",
-        "TOURING M340D M PERFORMANCE",
-        "TOURING M340I H",
-        "TOURING M340I M PERFORMANCE",
-        "TOURING MODERN",
-        "TOURING MODERN ABSOLUTE",
-        "TOURING MODERN OPEN",
-        "TOURING MODERN START EDITION",
-        "TOURING PREMIERE",
-        "TOURING PREMIERE OR",
-        "TOURING PREMIERE OR2",
-        "TOURING PREMIERE PACK SPORT M",
-        "TOURING SPORT",
-        "TOURING SPORT ABSOLUTE",
-        "TOURING SPORT DESIGN",
-        "TOURING SPORT EDITION HELLO FUTURE",
-        "TOURING SPORT EDITION HELLO FUTURE 2016",
-        "TOURING SPORT HELLO FUTURE",
-        "TOURING SPORT OPEN",
-        "TOURING SPORT PACK SPORT M",
-        "TOURING SPORT START EDITION",
-        "TOURING SPORT ULTIMATE",
-        "TOURING TECHNO DESIGN",
-        "TOURING TOURING EDITION SPORT",
-        "TOURING TOURING HYBRIDE BUSINESS DESIGN",
-        "TOURING TOURING HYBRIDE LOUNGE",
-        "TOURING TOURING LUXURY HYBRIDE",
-        "TOURING TOURING M SPORT HYBRIDE"
+        "TOURING M SPORT HYBRIDE"
       ],
       "Série 3 Gran Turismo": [
         "BUSINESS",
@@ -56899,42 +57087,33 @@
         "Sport"
       ],
       "Série 4 Gran Coupé": [
-        "GRAN COUPE",
-        "GRAN COUPE BUSINESS DESIGN",
-        "GRAN COUPE M SPORT",
-        "GRAN COUPE M SPORT LIMITED",
-        "GRAN COUPE M440I",
-        "GRAN COUPE M440I M PERFORMANCE",
+        "BUSINESS",
+        "BUSINESS DESIGN",
+        "BUSINESS START EDITION",
+        "BUSINESS TR",
+        "LOUNGE",
+        "LOUNGE START EDITION",
+        "LUXURY",
+        "LUXURY START EDITION",
         "M SPORT",
-        "M440I M PERFORMANCE"
+        "M SPORT LIMITED",
+        "M SPORT START EDITION",
+        "MODERN",
+        "SPORT",
+        "SPORT START EDITION",
+        "TECHNO DESIGN"
       ],
       "Série 4 Cabriolet": [
-        "CABRIOLET 184CH LOUNGE",
-        "CABRIOLET LOUNGE",
-        "CABRIOLET LOUNGE BV6",
-        "CABRIOLET LUXURY",
-        "CABRIOLET LUXURY BV6",
-        "CABRIOLET LUXURY PACK TECHNO",
-        "CABRIOLET LUXURY PACK TECHNO BV6",
-        "CABRIOLET M SPORT",
-        "CABRIOLET M SPORT BV6",
-        "CABRIOLET M SPORT PACK TECHNO",
-        "CABRIOLET M SPORT PACK TECHNO BV6",
-        "CABRIOLET MODERN",
-        "CABRIOLET MODERN BV6",
-        "CABRIOLET SPORT",
-        "CABRIOLET SPORT BV6",
-        "CABRIOLET SPORT PACK TECHNO",
-        "CABRIOLET SPORT PACK TECHNO BV6"
+        "LOUNGE",
+        "LUXURY",
+        "LUXURY PACK TECHNO",
+        "M SPORT",
+        "M SPORT PACK TECHNO",
+        "MODERN",
+        "SPORT",
+        "SPORT PACK TECHNO"
       ],
       "Série 5": [
-        "218CH LUXURY",
-        "5 EXCLUSIVE",
-        "5 LOUNGE PLUS",
-        "5 LUXE",
-        "5 LUXURY",
-        "5 M SPORT",
-        "5 MODERN",
         "BUSINESS",
         "BUSINESS ABSOLUTE EDITION",
         "BUSINESS DESIGN",
@@ -56981,17 +57160,11 @@
         "M SPORT",
         "M SPORT ABSOLUTE EDITION",
         "M SPORT START EDITION",
-        "M550D",
-        "M550DA",
-        "M550I",
-        "M550IA",
         "MODERN",
         "MODERN ABSOLUTE EDITION",
         "MODERN OPEN EDITION",
         "PHEV",
         "PHEV M SPORT",
-        "PHEV SERIE 5",
-        "SERIE 5",
         "SPORT",
         "SPORT DESIGN",
         "TWINPOWER TURBO BUSINESS DESIGN",
@@ -57000,53 +57173,39 @@
         "TWINPOWER TURBO M SPORT"
       ],
       "Série 5 Touring": [
-        "TOURING 340CH BUSINESS DESIGN",
-        "TOURING 340CH LOUNGE",
-        "TOURING 340CH LUXURY",
-        "TOURING 340CH M SPORT",
-        "TOURING ABSOLUTE BUSINESS EDITION",
-        "TOURING BUSINESS",
-        "TOURING BUSINESS DESIGN",
-        "TOURING BUSINESS OPEN EDITION",
-        "TOURING BUSINESS START EDITION",
-        "TOURING CONFORT",
-        "TOURING EDITION TECHNODESIGN",
-        "TOURING EDITION TECHNODESIGN BV6",
-        "TOURING EXCELLIS",
-        "TOURING EXCLUSIVE",
-        "TOURING EXECUTIVE",
-        "TOURING EXECUTIVE ABSOLUTE EDITION",
-        "TOURING EXECUTIVE OPEN EDITION",
-        "TOURING EXECUTIVE START EDITION",
-        "TOURING H LUXURY",
-        "TOURING H M SPORT",
-        "TOURING LOUNGE",
-        "TOURING LOUNGE OPEN EDITION",
-        "TOURING LOUNGE PLUS",
-        "TOURING LOUNGE PLUS ABSOLUTE EDITION",
-        "TOURING LOUNGE PLUS OPEN EDITION",
-        "TOURING LOUNGE PLUS START EDITION",
-        "TOURING LOUNGE START EDITION",
-        "TOURING LUXE",
-        "TOURING LUXURY",
-        "TOURING LUXURY ABSOLUTE EDITION",
-        "TOURING LUXURY OPEN EDITION",
-        "TOURING LUXURY START EDITION",
-        "TOURING M SPORT",
-        "TOURING M SPORT ABSOLUTE EDITION",
-        "TOURING M SPORT START EDITION",
-        "TOURING M550D",
-        "TOURING M550DA",
-        "TOURING MODERN",
-        "TOURING MODERN ABSOLUTE EDITION",
-        "TOURING MODERN OPEN EDITION",
-        "TOURING SPORT",
-        "TOURING SPORT 156G",
-        "TOURING SPORT DESIGN",
-        "TOURING TWINPOWER TURBO BUSINESS DESIGN",
-        "TOURING TWINPOWER TURBO LOUNGE",
-        "TOURING TWINPOWER TURBO LUXURY",
-        "TOURING TWINPOWER TURBO M SPORT"
+        "BUSINESS",
+        "BUSINESS DESIGN",
+        "BUSINESS OPEN EDITION",
+        "BUSINESS START EDITION",
+        "CONFORT",
+        "EDITION TECHNODESIGN",
+        "EXCELLIS",
+        "EXCLUSIVE",
+        "EXECUTIVE",
+        "EXECUTIVE OPEN EDITION",
+        "EXECUTIVE START EDITION",
+        "LOUNGE",
+        "LOUNGE OPEN EDITION",
+        "LOUNGE PLUS",
+        "LOUNGE PLUS OPEN EDITION",
+        "LOUNGE PLUS START EDITION",
+        "LOUNGE START EDITION",
+        "LUXE",
+        "LUXURY",
+        "LUXURY OPEN EDITION",
+        "LUXURY START EDITION",
+        "M SPORT",
+        "M SPORT START EDITION",
+        "MODERN",
+        "MODERN OPEN EDITION",
+        "PHEV",
+        "PHEV M SPORT",
+        "SPORT",
+        "SPORT DESIGN",
+        "TWINPOWER TURBO BUSINESS DESIGN",
+        "TWINPOWER TURBO LOUNGE",
+        "TWINPOWER TURBO LUXURY",
+        "TWINPOWER TURBO M SPORT"
       ],
       "Série 5 Gran Turismo": [
         "EXCELLIS",
@@ -57082,33 +57241,16 @@
         "M Sport"
       ],
       "Série 7": [
-        "7 EDITION INDIVIDUAL",
-        "7 EDITION INDIVIDUAL ULTIMATE",
-        "7 EXCLUSIVE",
-        "7 EXCLUSIVE INDIVIDUAL",
-        "7 EXCLUSIVE ULTIMATE",
-        "7 LUXE",
-        "730LDA",
-        "730LDA 4PL",
-        "730LDA EXCLUSIVE",
-        "730LDA EXCLUSIVE 4PL",
-        "730LDA H 4PL",
-        "730LDA H EXCLUSIVE 4PL",
         "EDITION INDIVIDUAL",
         "EDITION INDIVIDUAL ULTIMATE",
-        "EDITION ULTIMATE",
         "EXCLUSIVE",
         "EXCLUSIVE INDIVIDUAL",
         "EXCLUSIVE ULTIMATE",
-        "I7 M70 M PERFORMANCE KWH",
-        "I7 XDRIVE60 KWH",
-        "I7 XDRIVE60 M SPORT KWH",
         "IPERFORMANCE",
         "IPERFORMANCE EXCLUSIVE",
         "IPERFORMANCE M SPORT",
         "LUXE",
-        "M SPORT",
-        "M760E M PERFORMANCE"
+        "M SPORT"
       ],
       "Série 8": [
         "M Sport"
@@ -57238,28 +57380,32 @@
         "M SPORT 6PL",
         "M SPORT 7PL"
       ],
-      "M2": [
-        "Coupé",
-        "Competition",
-        "CS"
-      ],
+      "M2": [],
       "M3": [
-        "Berline",
-        "Competition",
-        "CS",
-        "Touring"
+        "BLACK &AMP; WHITE",
+        "COMPETITION",
+        "COMPETITION M",
+        "CS M",
+        "DAKAR YELLOW",
+        "DRIVELOGIC",
+        "EDITION COMPETITION",
+        "JAHRE",
+        "JAHRE M",
+        "MONTE CARLO BLUE",
+        "PACK COMPETITION",
+        "WHITE &AMP; BLACK"
       ],
       "M4": [
-        "Coupé",
-        "Competition",
-        "CS",
-        "Cabriolet"
+        "COMPETITION",
+        "COMPETITION M",
+        "CS M",
+        "GTS M",
+        "PACK COMPETITION"
       ],
       "M5": [
-        "Berline",
-        "Competition",
-        "CS",
-        "Touring"
+        "COMPETITION",
+        "COMPETITION A",
+        "PHEV"
       ],
       "M6": [
         "Coupé",
@@ -57308,7 +57454,77 @@
         "M Sport Pro"
       ],
       "i3": [
-        "Edition"
+        "AH +CONNECTED ATELIER KWH",
+        "AH +CONNECTED LODGE KWH",
+        "AH +CONNECTED LOFT KWH",
+        "AH +CONNECTED SUITE KWH",
+        "AH +EDITION ATELIER KWH",
+        "AH +EDITION LODGE KWH",
+        "AH +EDITION LOFT KWH",
+        "AH +EDITION SUITE KWH",
+        "AH ATELIER AVEC PROLONGATEUR D AUTONOMIE REX",
+        "AH ATELIER KWH",
+        "AH ILIFE ATELIER KWH",
+        "AH ILIFE LODGE KWH",
+        "AH ILIFE LOFT KWH",
+        "AH ILIFE SUITE KWH",
+        "AH PROLONGATEUR AUTONOMIE +CONNECTED LODGE",
+        "AH PROLONGATEUR AUTONOMIE +CONNECTED LOFT",
+        "AH PROLONGATEUR AUTONOMIE +CONNECTED SUITE",
+        "AH PROLONGATEUR D AUTONOMIE REX +EDITION LODGE",
+        "AH PROLONGATEUR D AUTONOMIE REX +EDITION LOFT",
+        "AH PROLONGATEUR D AUTONOMIE REX +EDITION SUITE",
+        "AH PROLONGATEUR D AUTONOMIE REX ATELIER",
+        "AH PROLONGATEUR D AUTONOMIE REX ILIFE LODGE",
+        "AH PROLONGATEUR D AUTONOMIE REX ILIFE LOFT",
+        "AH PROLONGATEUR D AUTONOMIE REX ILIFE SUITE",
+        "ATELIER KWH",
+        "AVEC PROLONGATEUR D AUTONOMIE REX LODGE",
+        "AVEC PROLONGATEUR D AUTONOMIE REX LOFT",
+        "AVEC PROLONGATEUR D AUTONOMIE REX SUITE",
+        "BLACKEDITION ATELIER KWH",
+        "BLACKEDITION LODGE KWH",
+        "BLACKEDITION LOFT KWH",
+        "BLACKEDITION SUITE KWH",
+        "LODGE KWH",
+        "LOFT KWH",
+        "PROLONGATEUR AUTONOMIE +CONNECTED ATELIER",
+        "PROLONGATEUR D AUTONOMIE REX",
+        "PROLONGATEUR D AUTONOMIE REX +EDITION ATELIER",
+        "PROLONGATEUR D AUTONOMIE REX BLACKEDITION ATELIER",
+        "PROLONGATEUR D AUTONOMIE REX BLACKEDITION LODGE",
+        "PROLONGATEUR D AUTONOMIE REX BLACKEDITION LOFT",
+        "PROLONGATEUR D AUTONOMIE REX BLACKEDITION SUITE",
+        "PROLONGATEUR D AUTONOMIE REX ILIFE ATELIER",
+        "PROLONGATEUR D AUTONOMIE REX URBANLIFE ATELIER",
+        "PROLONGATEUR D AUTONOMIE REX URBANLIFE LODGE",
+        "PROLONGATEUR D AUTONOMIE REX URBANLIFE LOFT",
+        "PROLONGATEUR D AUTONOMIE REX URBANLIFE SUITE",
+        "S AH +CONNECTED ATELIER S KWH",
+        "S AH +CONNECTED LODGE S KWH",
+        "S AH +CONNECTED LOFT S KWH",
+        "S AH +CONNECTED SUITE S KWH",
+        "S AH ATELIER KWH",
+        "S AH ILIFE ATELIER KWH",
+        "S AH ILIFE LODGE KWH",
+        "S AH ILIFE LOFT KWH",
+        "S AH ILIFE SUITE KWH",
+        "S AH PROLONGATEUR AUTONOMIE +CONNECTED LODGE",
+        "S AH PROLONGATEUR AUTONOMIE +CONNECTED LOFT",
+        "S AH PROLONGATEUR AUTONOMIE +CONNECTED SUITE",
+        "S AH PROLONGATEUR AUTONOMIE ILIFE LODGE",
+        "S AH PROLONGATEUR AUTONOMIE ILIFE LOFT",
+        "S AH PROLONGATEUR AUTONOMIE ILIFE SUITE",
+        "S AH PROLONGATEUR D'AUTONOMIE ATELIER",
+        "S PROLONGATEUR AUTONOMIE +CONNECTED ATELIER S",
+        "S PROLONGATEUR AUTONOMIE ILIFE ATELIER S",
+        "SUITE KWH",
+        "URBANLIFE ATELIER KWH",
+        "URBANLIFE KWH",
+        "URBANLIFE LODGE KWH",
+        "URBANLIFE LOFT KWH",
+        "URBANLIFE PROLONGATEUR D AUTONOMIE REX",
+        "URBANLIFE SUITE KWH"
       ],
       "i4": [
         "Edition",
@@ -57471,19 +57687,17 @@
         "CABRIOLET SPORT DESIGN"
       ],
       "Série 2 Cabriolet": [
-        "CABRIOLET LOUNGE",
-        "CABRIOLET LUXURY",
-        "CABRIOLET M SPORT",
-        "CABRIOLET M240IA",
-        "CABRIOLET SPORT"
+        "LOUNGE",
+        "LUXURY",
+        "M SPORT",
+        "SPORT"
       ],
       "Série 4 Coupé": [
-        "COUPE",
-        "COUPE LOUNGE",
-        "COUPE M SPORT",
-        "COUPE M440D",
-        "COUPE M440I",
-        "COUPE M440I M PERFORMANCE"
+        "LOUNGE",
+        "LUXURY",
+        "M SPORT",
+        "MODERN",
+        "SPORT"
       ],
       "Série 6 Cabriolet": [
         "CABRIOLET",
@@ -57511,6 +57725,28 @@
       "Série 8 Coupé": [
         "M SPORT",
         "M SPORT TECHNIC"
+      ],
+      "Série 3 Coupé": [
+        "CONFORT",
+        "EDITION EXCELLIS",
+        "EXCELLIS",
+        "EXCLUSIVE",
+        "LIMITED SPORT EDITION",
+        "LUXE",
+        "M SPORT",
+        "MODERN",
+        "SPORT",
+        "SPORT DESIGN"
+      ],
+      "Série 3 Cabriolet": [
+        "CONFORT",
+        "EDITION EXCELLIS",
+        "EXCELLIS",
+        "EXCLUSIVE",
+        "LIMITED SPORT EDITION",
+        "LUXE",
+        "M SPORT",
+        "SPORT DESIGN"
       ]
     },
     "Mercedes": {
