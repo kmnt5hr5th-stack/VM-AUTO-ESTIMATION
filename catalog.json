@@ -29109,6 +29109,161 @@
           "yearStart": 2011,
           "yearEnd": 2015
         }
+      ],
+      "A4 Avant 4e Génération Société": [
+        {
+          "name": "1.8 TFSI 120",
+          "fuel": "Essence",
+          "yearStart": 2010,
+          "yearEnd": 2010
+        },
+        {
+          "name": "1.8 TFSI 160",
+          "fuel": "Essence",
+          "yearStart": 2010,
+          "yearEnd": 2010
+        },
+        {
+          "name": "2.0 TFSI 180",
+          "fuel": "Essence",
+          "yearStart": 2010,
+          "yearEnd": 2010
+        },
+        {
+          "name": "2.0 TFSI 211",
+          "fuel": "Essence",
+          "yearStart": 2010,
+          "yearEnd": 2010
+        },
+        {
+          "name": "3.2 FSI 265",
+          "fuel": "Essence",
+          "yearStart": 2010,
+          "yearEnd": 2010
+        },
+        {
+          "name": "2.0 TDI 120",
+          "fuel": "Diesel",
+          "yearStart": 2010,
+          "yearEnd": 2010
+        },
+        {
+          "name": "2.0 TDI 136",
+          "fuel": "Diesel",
+          "yearStart": 2010,
+          "yearEnd": 2010
+        },
+        {
+          "name": "2.0 TDI 143",
+          "fuel": "Diesel",
+          "yearStart": 2010,
+          "yearEnd": 2010
+        },
+        {
+          "name": "2.0 TDI 170",
+          "fuel": "Diesel",
+          "yearStart": 2010,
+          "yearEnd": 2010
+        }
+      ],
+      "A4 5e Génération": [
+        {
+          "name": "1.4 TFSI 150",
+          "fuel": "Essence",
+          "yearStart": 2015,
+          "yearEnd": 2018
+        },
+        {
+          "name": "2.0 TFSI 252",
+          "fuel": "Essence",
+          "yearStart": 2015,
+          "yearEnd": 2018
+        },
+        {
+          "name": "2.0 TDI 122",
+          "fuel": "Diesel",
+          "yearStart": 2016,
+          "yearEnd": 2019
+        },
+        {
+          "name": "2.0 TDI 150",
+          "fuel": "Diesel",
+          "yearStart": 2015,
+          "yearEnd": 2019
+        },
+        {
+          "name": "2.0 TDI 190",
+          "fuel": "Diesel",
+          "yearStart": 2015,
+          "yearEnd": 2020
+        },
+        {
+          "name": "3.0 TDI 218",
+          "fuel": "Diesel",
+          "yearStart": 2015,
+          "yearEnd": 2018
+        },
+        {
+          "name": "3.0 TDI 272",
+          "fuel": "Diesel",
+          "yearStart": 2015,
+          "yearEnd": 2018
+        },
+        {
+          "name": "1.5 TFSI 150",
+          "fuel": "Essence",
+          "yearStart": 2019
+        },
+        {
+          "name": "2.0 TFSI 190",
+          "fuel": "Essence",
+          "yearStart": 2019,
+          "yearEnd": 2022
+        },
+        {
+          "name": "2.0 TFSI 204",
+          "fuel": "Essence",
+          "yearStart": 2020
+        },
+        {
+          "name": "2.0 TFSI 245",
+          "fuel": "Essence",
+          "yearStart": 2019,
+          "yearEnd": 2020
+        },
+        {
+          "name": "2.0 TFSI 265",
+          "fuel": "Essence",
+          "yearStart": 2020,
+          "yearEnd": 2020
+        },
+        {
+          "name": "2.0 TDI 136",
+          "fuel": "Diesel",
+          "yearStart": 2019
+        },
+        {
+          "name": "2.0 TDI 163",
+          "fuel": "Diesel",
+          "yearStart": 2019
+        },
+        {
+          "name": "2.0 TDI 204",
+          "fuel": "Diesel",
+          "yearStart": 2020
+        },
+        {
+          "name": "3.0 TDI 231",
+          "fuel": "Diesel",
+          "yearStart": 2019,
+          "yearEnd": 2021
+        },
+        {
+          "name": "3.0 TDI 286",
+          "fuel": "Diesel",
+          "yearStart": 2019,
+          "yearEnd": 2020
+        }
       ]
     },
     "Ford": {
@@ -55993,6 +56148,25 @@
         "Attraction",
         "Business Line",
         "S Line"
+      ],
+      "A4 Avant 4e Génération Société": [
+        "Ambiente",
+        "Ambition Luxe",
+        "Attraction",
+        "Business Line",
+        "S Line"
+      ],
+      "A4 5e Génération": [
+        "Avus",
+        "Business Executive",
+        "Business Line",
+        "Business Line Plus",
+        "Competition",
+        "Design",
+        "Design Luxe",
+        "S Edition",
+        "S Line",
+        "Sport"
       ]
     },
     "Fiat": {
