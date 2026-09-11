@@ -8702,118 +8702,75 @@
       ],
       "Touareg": [
         {
-          "name": "3.2",
+          "name": "3.6 V6 FSI 280",
           "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2026
+          "yearStart": 2010,
+          "yearEnd": 2013
         },
         {
-          "name": "6.0 450",
-          "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2026
+          "name": "3.0 V6 TFSI 380",
+          "fuel": "Hybride",
+          "yearStart": 2010,
+          "yearEnd": 2014
         },
         {
-          "name": "2.5 TDI",
+          "name": "3.0 V6 TDI 204",
           "fuel": "Diesel",
           "yearStart": 2011,
-          "yearEnd": 2026
+          "yearEnd": 2018
         },
         {
-          "name": "3.0 TDI",
+          "name": "3.0 V6 TDI 240",
           "fuel": "Diesel",
           "yearStart": 2011,
-          "yearEnd": 2026
+          "yearEnd": 2014
         },
         {
-          "name": "3.0 TDI 204",
-          "fuel": "Diesel",
-          "yearStart": 2016,
-          "yearEnd": 2016
-        },
-        {
-          "name": "3.0 TDI 225",
+          "name": "3.0 V6 TDI 245",
           "fuel": "Diesel",
           "yearStart": 2011,
-          "yearEnd": 2026
+          "yearEnd": 2014
+        },
+        {
+          "name": "3.0 V6 TDI 262",
+          "fuel": "Diesel",
+          "yearStart": 2014,
+          "yearEnd": 2018
+        },
+        {
+          "name": "4.2 V8 TDI 340",
+          "fuel": "Diesel",
+          "yearStart": 2011,
+          "yearEnd": 2015
         },
         {
           "name": "3.0 TDI 231",
           "fuel": "Diesel",
-          "yearStart": 2019,
-          "yearEnd": 2019
-        },
-        {
-          "name": "3.0 TDI 240",
-          "fuel": "Diesel",
-          "yearStart": 2011,
-          "yearEnd": 2011
-        },
-        {
-          "name": "3.0 TDI 245",
-          "fuel": "Diesel",
-          "yearStart": 2013,
-          "yearEnd": 2013
-        },
-        {
-          "name": "3.0 TDI 262",
-          "fuel": "Diesel",
-          "yearStart": 2015,
-          "yearEnd": 2016
+          "yearStart": 2018,
+          "yearEnd": 2022
         },
         {
           "name": "3.0 TDI 286",
           "fuel": "Diesel",
           "yearStart": 2018,
-          "yearEnd": 2019
+          "yearEnd": 2022
         },
         {
-          "name": "4.2 TDI 340",
-          "fuel": "Diesel",
-          "yearStart": 2011,
-          "yearEnd": 2026
-        },
-        {
-          "name": "5.0 TDI",
-          "fuel": "Diesel",
-          "yearStart": 2011,
-          "yearEnd": 2026
-        },
-        {
-          "name": "5.0 TDI 313",
-          "fuel": "Diesel",
-          "yearStart": 2011,
-          "yearEnd": 2026
-        },
-        {
-          "name": "V6 TDI 286 CV R-LINE TIPTRONIC",
-          "fuel": "Diesel",
-          "yearStart": 2018,
-          "yearEnd": 2018
-        },
-        {
-          "name": "V8 TDI 421 R-LINE AUTOMATIQUE",
+          "name": "4.0 TDI 421",
           "fuel": "Diesel",
           "yearStart": 2019,
-          "yearEnd": 2019
+          "yearEnd": 2022
         },
         {
-          "name": "3.0 TFSI 380",
-          "fuel": "Hybride",
-          "yearStart": 2011,
-          "yearEnd": 2011
+          "name": "3.0 TSI 340",
+          "fuel": "Essence",
+          "yearStart": 2019,
+          "yearEnd": 2022
         },
         {
-          "name": "3.0 eHybrid 381",
+          "name": "3.0 TSI eHybrid 381",
           "fuel": "Hybride rechargeable",
-          "yearStart": 2020,
-          "yearEnd": 2026
-        },
-        {
-          "name": "3.0 eHybrid 462",
-          "fuel": "Hybride rechargeable",
-          "yearStart": 2021,
-          "yearEnd": 2021
+          "yearStart": 2020
         }
       ],
       "Caddy": [
@@ -53367,10 +53324,17 @@
         "Style"
       ],
       "Touareg": [
+        "Atmosphere",
+        "Carat",
+        "Carat Edition",
+        "Carat Exclusive",
         "Edition",
         "Elegance",
-        "Exclusive",
-        "R-Line"
+        "R-Exclusive",
+        "R-Line",
+        "R-Line Edition",
+        "R-Line Exclusive",
+        "Ultimate"
       ],
       "Touran": [
         "Active",
