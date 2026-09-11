@@ -28759,6 +28759,86 @@
           "fuel": "Diesel",
           "yearStart": 2021
         }
+      ],
+      "A4 3e Génération": [
+        {
+          "name": "1.6 102",
+          "fuel": "Essence",
+          "yearStart": 2004,
+          "yearEnd": 2007
+        },
+        {
+          "name": "1.8 T 163",
+          "fuel": "Essence",
+          "yearStart": 2004,
+          "yearEnd": 2007
+        },
+        {
+          "name": "2.0 130",
+          "fuel": "Essence",
+          "yearStart": 2004,
+          "yearEnd": 2007
+        },
+        {
+          "name": "2.0 TFSI 170",
+          "fuel": "Essence",
+          "yearStart": 2006,
+          "yearEnd": 2007
+        },
+        {
+          "name": "2.0 TFSI 200",
+          "fuel": "Essence",
+          "yearStart": 2004,
+          "yearEnd": 2007
+        },
+        {
+          "name": "3.2 FSI 256",
+          "fuel": "Essence",
+          "yearStart": 2004,
+          "yearEnd": 2007
+        },
+        {
+          "name": "1.9 TDI 116",
+          "fuel": "Diesel",
+          "yearStart": 2004,
+          "yearEnd": 2007
+        },
+        {
+          "name": "2.0 TDI 140",
+          "fuel": "Diesel",
+          "yearStart": 2004,
+          "yearEnd": 2007
+        },
+        {
+          "name": "2.0 TDI 170",
+          "fuel": "Diesel",
+          "yearStart": 2006,
+          "yearEnd": 2007
+        },
+        {
+          "name": "2.5 TDI 163",
+          "fuel": "Diesel",
+          "yearStart": 2004,
+          "yearEnd": 2006
+        },
+        {
+          "name": "2.7 TDI 180",
+          "fuel": "Diesel",
+          "yearStart": 2006,
+          "yearEnd": 2007
+        },
+        {
+          "name": "3.0 TDI 204",
+          "fuel": "Diesel",
+          "yearStart": 2004,
+          "yearEnd": 2007
+        },
+        {
+          "name": "3.0 TDI 233",
+          "fuel": "Diesel",
+          "yearStart": 2006,
+          "yearEnd": 2007
+        }
       ]
     },
     "Ford": {
@@ -55608,6 +55688,16 @@
         "Design",
         "Design Luxe",
         "S Line"
+      ],
+      "A4 3e Génération": [
+        "Advance Edition",
+        "Ambiente",
+        "Ambition",
+        "Ambition Luxe",
+        "Attraction",
+        "Exclusive Line",
+        "S Line",
+        "Sélection"
       ]
     },
     "Fiat": {
