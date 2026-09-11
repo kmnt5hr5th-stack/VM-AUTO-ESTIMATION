@@ -8382,340 +8382,172 @@
       ],
       "Passat": [
         {
+          "name": "1.6 102",
+          "fuel": "Essence",
+          "yearStart": 2005,
+          "yearEnd": 2007
+        },
+        {
+          "name": "1.6 FSI 115",
+          "fuel": "Essence",
+          "yearStart": 2006,
+          "yearEnd": 2007
+        },
+        {
+          "name": "2.0 FSI 150",
+          "fuel": "Essence",
+          "yearStart": 2005,
+          "yearEnd": 2010
+        },
+        {
           "name": "1.4 TSI 120",
           "fuel": "Essence",
-          "yearStart": 2014,
-          "yearEnd": 2026
+          "yearStart": 2007,
+          "yearEnd": 2010
         },
         {
           "name": "1.4 TSI 122",
           "fuel": "Essence",
-          "yearStart": 2014,
-          "yearEnd": 2026
-        },
-        {
-          "name": "1.4 TSI 160",
-          "fuel": "Essence",
-          "yearStart": 2011,
-          "yearEnd": 2011
-        },
-        {
-          "name": "1.6",
-          "fuel": "Essence",
-          "yearStart": 2014,
-          "yearEnd": 2026
-        },
-        {
-          "name": "1.8",
-          "fuel": "Essence",
-          "yearStart": 2014,
-          "yearEnd": 2026
+          "yearStart": 2007,
+          "yearEnd": 2014
         },
         {
           "name": "1.8 TSI 160",
           "fuel": "Essence",
-          "yearStart": 2014,
-          "yearEnd": 2026
-        },
-        {
-          "name": "2.0",
-          "fuel": "Essence",
-          "yearStart": 2014,
-          "yearEnd": 2026
-        },
-        {
-          "name": "2.0 130",
-          "fuel": "Essence",
-          "yearStart": 2014,
-          "yearEnd": 2026
-        },
-        {
-          "name": "2.0 150",
-          "fuel": "Essence",
-          "yearStart": 2014,
-          "yearEnd": 2026
-        },
-        {
-          "name": "2.0 200",
-          "fuel": "Essence",
-          "yearStart": 2014,
-          "yearEnd": 2026
+          "yearStart": 2005,
+          "yearEnd": 2012
         },
         {
           "name": "2.0 TSI 200",
           "fuel": "Essence",
-          "yearStart": 2014,
-          "yearEnd": 2026
-        },
-        {
-          "name": "3.2 250",
-          "fuel": "Essence",
-          "yearStart": 2014,
-          "yearEnd": 2026
-        },
-        {
-          "name": "3.6 300",
-          "fuel": "Essence",
-          "yearStart": 2014,
-          "yearEnd": 2026
-        },
-        {
-          "name": "BREAK V5 4MOTION CARAT",
-          "fuel": "Essence",
-          "yearStart": 2014,
-          "yearEnd": 2026
-        },
-        {
-          "name": "BREAK V5 CARAT",
-          "fuel": "Essence",
-          "yearStart": 2014,
-          "yearEnd": 2026
-        },
-        {
-          "name": "BREAK V5 CARAT TIPTRONIC",
-          "fuel": "Essence",
-          "yearStart": 2014,
-          "yearEnd": 2026
-        },
-        {
-          "name": "BREAK V5 CONFORT",
-          "fuel": "Essence",
-          "yearStart": 2014,
-          "yearEnd": 2026
-        },
-        {
-          "name": "BREAK V6 4MOTION CARAT",
-          "fuel": "Essence",
-          "yearStart": 2014,
-          "yearEnd": 2026
-        },
-        {
-          "name": "BREAK V6 SYNCRO",
-          "fuel": "Essence",
-          "yearStart": 2014,
-          "yearEnd": 2026
-        },
-        {
-          "name": "BREAK V6 SYNCRO CARAT",
-          "fuel": "Essence",
-          "yearStart": 2014,
-          "yearEnd": 2026
-        },
-        {
-          "name": "BREAK W8",
-          "fuel": "Essence",
-          "yearStart": 2014,
-          "yearEnd": 2026
-        },
-        {
-          "name": "BREAK W8 TIPTRONIC",
-          "fuel": "Essence",
-          "yearStart": 2014,
-          "yearEnd": 2026
-        },
-        {
-          "name": "V6 4MOTION CARAT",
-          "fuel": "Essence",
-          "yearStart": 2014,
-          "yearEnd": 2026
-        },
-        {
-          "name": "V6 4MOTION CARAT TIPTRONIC",
-          "fuel": "Essence",
-          "yearStart": 2014,
-          "yearEnd": 2026
-        },
-        {
-          "name": "1.6 TDI 105",
-          "fuel": "Diesel",
-          "yearStart": 2014,
-          "yearEnd": 2026
-        },
-        {
-          "name": "1.9 TDI 100",
-          "fuel": "Diesel",
-          "yearStart": 2014,
-          "yearEnd": 2026
+          "yearStart": 2009,
+          "yearEnd": 2010
         },
         {
           "name": "1.9 TDI 105",
           "fuel": "Diesel",
-          "yearStart": 2014,
-          "yearEnd": 2026
+          "yearStart": 2005,
+          "yearEnd": 2008
         },
         {
-          "name": "1.9 TDI 130",
+          "name": "1.6 TDI 105",
           "fuel": "Diesel",
-          "yearStart": 2014,
-          "yearEnd": 2026
-        },
-        {
-          "name": "2.0 TDI",
-          "fuel": "Diesel",
-          "yearStart": 2014,
-          "yearEnd": 2026
+          "yearStart": 2008,
+          "yearEnd": 2014
         },
         {
           "name": "2.0 TDI 110",
           "fuel": "Diesel",
-          "yearStart": 2014,
-          "yearEnd": 2026
+          "yearStart": 2008,
+          "yearEnd": 2010
         },
         {
-          "name": "2.0 TDI 122",
+          "name": "2.0 TDI 120",
           "fuel": "Diesel",
-          "yearStart": 2014,
-          "yearEnd": 2026
-        },
-        {
-          "name": "2.0 TDI 136",
-          "fuel": "Diesel",
-          "yearStart": 2014,
-          "yearEnd": 2026
+          "yearStart": 2006,
+          "yearEnd": 2006
         },
         {
           "name": "2.0 TDI 140",
           "fuel": "Diesel",
-          "yearStart": 2013,
-          "yearEnd": 2013
+          "yearStart": 2005,
+          "yearEnd": 2014
         },
         {
           "name": "2.0 TDI 143",
           "fuel": "Diesel",
-          "yearStart": 2014,
-          "yearEnd": 2026
+          "yearStart": 2009,
+          "yearEnd": 2010
         },
         {
           "name": "2.0 TDI 170",
           "fuel": "Diesel",
-          "yearStart": 2011,
-          "yearEnd": 2011
+          "yearStart": 2006,
+          "yearEnd": 2014
+        },
+        {
+          "name": "1.4 TSI 160",
+          "fuel": "Essence",
+          "yearStart": 2010,
+          "yearEnd": 2013
+        },
+        {
+          "name": "2.0 TSI 210",
+          "fuel": "Essence",
+          "yearStart": 2010,
+          "yearEnd": 2012
+        },
+        {
+          "name": "3.6 FSI 300",
+          "fuel": "Essence",
+          "yearStart": 2012,
+          "yearEnd": 2013
         },
         {
           "name": "2.0 TDI 177",
           "fuel": "Diesel",
-          "yearStart": 2013,
-          "yearEnd": 2013
+          "yearStart": 2012,
+          "yearEnd": 2014
         },
         {
-          "name": "BREAK TDI 100",
-          "fuel": "Diesel",
+          "name": "1.4 TSI 125",
+          "fuel": "Essence",
           "yearStart": 2014,
-          "yearEnd": 2026
+          "yearEnd": 2018
         },
         {
-          "name": "BREAK TDI 100 CONFORT",
-          "fuel": "Diesel",
+          "name": "1.4 TSI ACT 150",
+          "fuel": "Essence",
           "yearStart": 2014,
-          "yearEnd": 2026
+          "yearEnd": 2018
         },
         {
-          "name": "BREAK TDI 110",
-          "fuel": "Diesel",
-          "yearStart": 2014,
-          "yearEnd": 2026
+          "name": "1.5 TSI 150",
+          "fuel": "Essence",
+          "yearStart": 2019,
+          "yearEnd": 2022
         },
         {
-          "name": "BREAK TDI 110 CONFORT",
-          "fuel": "Diesel",
-          "yearStart": 2014,
-          "yearEnd": 2026
+          "name": "2.0 TSI 190",
+          "fuel": "Essence",
+          "yearStart": 2019,
+          "yearEnd": 2022
         },
         {
-          "name": "BREAK TDI 110 SPORT",
-          "fuel": "Diesel",
-          "yearStart": 2014,
-          "yearEnd": 2026
+          "name": "1.4 TSI GTE 218",
+          "fuel": "Hybride rechargeable",
+          "yearStart": 2015,
+          "yearEnd": 2022
         },
         {
-          "name": "BREAK TDI 130",
+          "name": "1.6 TDI 120",
           "fuel": "Diesel",
           "yearStart": 2014,
-          "yearEnd": 2026
+          "yearEnd": 2020
         },
         {
-          "name": "BREAK TDI 130 4MOTION",
+          "name": "2.0 TDI 150",
           "fuel": "Diesel",
           "yearStart": 2014,
-          "yearEnd": 2026
+          "yearEnd": 2022
         },
         {
-          "name": "BREAK TDI 130 CARAT",
+          "name": "2.0 TDI 190",
           "fuel": "Diesel",
           "yearStart": 2014,
-          "yearEnd": 2026
+          "yearEnd": 2020
         },
         {
-          "name": "BREAK TDI 130 CARAT TIPTRONIC",
+          "name": "2.0 TDI 200",
           "fuel": "Diesel",
-          "yearStart": 2014,
-          "yearEnd": 2026
+          "yearStart": 2020,
+          "yearEnd": 2022
         },
         {
-          "name": "BREAK TDI 130 CONFORT",
+          "name": "2.0 TDI 240",
           "fuel": "Diesel",
           "yearStart": 2014,
-          "yearEnd": 2026
-        },
-        {
-          "name": "BREAK TDI 130 SPORT",
-          "fuel": "Diesel",
-          "yearStart": 2014,
-          "yearEnd": 2026
-        },
-        {
-          "name": "BREAK TDI 130 SPORT TIPTRONIC",
-          "fuel": "Diesel",
-          "yearStart": 2014,
-          "yearEnd": 2026
-        },
-        {
-          "name": "BREAK TDI 130 TIPTRONIC",
-          "fuel": "Diesel",
-          "yearStart": 2014,
-          "yearEnd": 2026
-        },
-        {
-          "name": "BREAK TDI 90",
-          "fuel": "Diesel",
-          "yearStart": 2014,
-          "yearEnd": 2026
-        },
-        {
-          "name": "BREAK TDI 90 CONFORT",
-          "fuel": "Diesel",
-          "yearStart": 2014,
-          "yearEnd": 2026
-        },
-        {
-          "name": "BREAK V6 TDI 4MOTION CARAT",
-          "fuel": "Diesel",
-          "yearStart": 2014,
-          "yearEnd": 2026
-        },
-        {
-          "name": "BREAK V6 TDI CARAT",
-          "fuel": "Diesel",
-          "yearStart": 2014,
-          "yearEnd": 2026
-        },
-        {
-          "name": "BREAK V6 TDI CARAT TIPTRONIC",
-          "fuel": "Diesel",
-          "yearStart": 2014,
-          "yearEnd": 2026
-        },
-        {
-          "name": "V6 TDI 163 CARAT",
-          "fuel": "Diesel",
-          "yearStart": 2014,
-          "yearEnd": 2026
-        },
-        {
-          "name": "V6 TDI 180 4MOTION CARAT",
-          "fuel": "Diesel",
-          "yearStart": 2014,
-          "yearEnd": 2026
+          "yearEnd": 2018
         }
       ],
       "Touareg": [
@@ -53263,16 +53095,26 @@
       ],
       "Passat": [
         "Business",
+        "Carat",
+        "Carat Edition",
+        "Carat Exclusive",
         "Confort",
-        "Edition",
+        "Confortline",
+        "Confortline Business",
+        "Connect",
+        "Design Edition",
         "Elegance",
-        "Exclusive",
-        "Life",
+        "Embassy",
+        "GTE",
         "Lounge",
         "R-Line",
+        "R-Line Edition",
         "Sport",
-        "Style",
-        "Trend"
+        "Sportline",
+        "Trend",
+        "Trendline",
+        "Trendline Business",
+        "Ultimate"
       ],
       "Passat Variant": [
         "Trendline",
