@@ -7838,94 +7838,153 @@
       ],
       "Tiguan": [
         {
+          "name": "1.4 TSI 122",
+          "fuel": "Essence",
+          "yearStart": 2011,
+          "yearEnd": 2015
+        },
+        {
           "name": "1.4 TSI 125",
           "fuel": "Essence",
-          "yearStart": 2016,
-          "yearEnd": 2026
+          "yearStart": 2011,
+          "yearEnd": 2018
         },
         {
           "name": "1.4 TSI 150",
           "fuel": "Essence",
-          "yearStart": 2016,
-          "yearEnd": 2026
+          "yearStart": 2007,
+          "yearEnd": 2018
         },
         {
           "name": "1.4 TSI 160",
           "fuel": "Essence",
-          "yearStart": 2016,
-          "yearEnd": 2026
+          "yearStart": 2013,
+          "yearEnd": 2016
+        },
+        {
+          "name": "2.0 TSI 200",
+          "fuel": "Essence",
+          "yearStart": 2008,
+          "yearEnd": 2011
+        },
+        {
+          "name": "2.0 TSI 210",
+          "fuel": "Essence",
+          "yearStart": 2011,
+          "yearEnd": 2013
         },
         {
           "name": "1.5 TSI 130",
           "fuel": "Essence",
-          "yearStart": 2016,
-          "yearEnd": 2026
+          "yearStart": 2019
         },
         {
-          "name": "1.5 eTSI 131",
+          "name": "1.5 TSI 150",
           "fuel": "Essence",
-          "yearStart": 2016,
-          "yearEnd": 2026
-        },
-        {
-          "name": "1.5 eTSI 150",
-          "fuel": "Essence",
-          "yearStart": 2021,
+          "yearStart": 2018,
           "yearEnd": 2023
+        },
+        {
+          "name": "2.0 TSI 180",
+          "fuel": "Essence",
+          "yearStart": 2016,
+          "yearEnd": 2018
+        },
+        {
+          "name": "2.0 TSI 190",
+          "fuel": "Essence",
+          "yearStart": 2018,
+          "yearEnd": 2020
         },
         {
           "name": "2.0 TSI 320",
           "fuel": "Essence",
-          "yearStart": 2016,
-          "yearEnd": 2026
+          "yearStart": 2021,
+          "yearEnd": 2022
+        },
+        {
+          "name": "1.5 eTSI 130",
+          "fuel": "Essence",
+          "yearStart": 2024
+        },
+        {
+          "name": "1.5 eTSI 150",
+          "fuel": "Essence",
+          "yearStart": 2024
         },
         {
           "name": "2.0 TDI 110",
           "fuel": "Diesel",
-          "yearStart": 2015,
-          "yearEnd": 2015
+          "yearStart": 2010,
+          "yearEnd": 2016
         },
         {
           "name": "2.0 TDI 140",
           "fuel": "Diesel",
-          "yearStart": 2011,
-          "yearEnd": 2014
+          "yearStart": 2007,
+          "yearEnd": 2015
         },
         {
           "name": "2.0 TDI 150",
           "fuel": "Diesel",
-          "yearStart": 2017,
-          "yearEnd": 2023
+          "yearStart": 2011
+        },
+        {
+          "name": "2.0 TDI 170",
+          "fuel": "Diesel",
+          "yearStart": 2008,
+          "yearEnd": 2015
+        },
+        {
+          "name": "2.0 TDI 177",
+          "fuel": "Diesel",
+          "yearStart": 2012,
+          "yearEnd": 2015
         },
         {
           "name": "2.0 TDI 184",
           "fuel": "Diesel",
+          "yearStart": 2012,
+          "yearEnd": 2016
+        },
+        {
+          "name": "2.0 TDI 115",
+          "fuel": "Diesel",
           "yearStart": 2016,
-          "yearEnd": 2026
+          "yearEnd": 2018
+        },
+        {
+          "name": "2.0 TDI 190",
+          "fuel": "Diesel",
+          "yearStart": 2016,
+          "yearEnd": 2020
+        },
+        {
+          "name": "2.0 TDI 200",
+          "fuel": "Diesel",
+          "yearStart": 2020,
+          "yearEnd": 2023
         },
         {
           "name": "2.0 TDI 193",
           "fuel": "Diesel",
-          "yearStart": 2016,
-          "yearEnd": 2026
+          "yearStart": 2024
         },
         {
           "name": "1.4 eHybrid 245",
           "fuel": "Hybride rechargeable",
-          "yearStart": 2023,
-          "yearEnd": 2023
+          "yearStart": 2020,
+          "yearEnd": 2024
         },
         {
           "name": "1.5 eHybrid 204",
           "fuel": "Hybride rechargeable",
-          "yearStart": 2020,
-          "yearEnd": 2026
+          "yearStart": 2024
         },
         {
           "name": "1.5 eHybrid 272",
           "fuel": "Hybride rechargeable",
-          "yearStart": 2020,
-          "yearEnd": 2026
+          "yearStart": 2024
         }
       ],
       "ID.3": [
@@ -53254,16 +53313,41 @@
         "Alltrack"
       ],
       "Tiguan": [
+        "Active",
+        "Black R-Line",
         "Business",
-        "Edition",
+        "Carat",
+        "Carat Edition",
+        "Carat Exclusive",
+        "Confortline",
+        "Confortline Business",
+        "Connect",
+        "Cup",
+        "Edition 20",
         "Elegance",
-        "Exclusive",
+        "Elegance Exclusive",
+        "IQ.Drive",
         "Life",
+        "Life Business",
+        "Life Plus",
         "Lounge",
+        "Match",
+        "Offroad",
+        "R-Exclusive",
         "R-Line",
-        "Sport",
+        "R-Line Edition",
+        "R-Line Exclusive",
+        "Sound",
+        "Sport & Style",
+        "Sportline",
+        "Sportline Business",
         "Style",
-        "Trend"
+        "Tiguan Edition",
+        "Track & Field",
+        "Trackline",
+        "Trendline",
+        "Trendline Business",
+        "VW Edition"
       ],
       "Tiguan Allspace": [
         "Elegance",
