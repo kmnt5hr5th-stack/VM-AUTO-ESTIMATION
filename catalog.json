@@ -28558,6 +28558,86 @@
           "yearStart": 2017,
           "yearEnd": 2019
         }
+      ],
+      "A3 Berline 3e Génération": [
+        {
+          "name": "1.4 TFSI 125",
+          "fuel": "Essence",
+          "yearStart": 2013,
+          "yearEnd": 2016
+        },
+        {
+          "name": "1.4 TFSI 140",
+          "fuel": "Essence",
+          "yearStart": 2013,
+          "yearEnd": 2014
+        },
+        {
+          "name": "1.8 TFSI 180",
+          "fuel": "Essence",
+          "yearStart": 2013,
+          "yearEnd": 2016
+        },
+        {
+          "name": "1.6 TDI 110",
+          "fuel": "Diesel",
+          "yearStart": 2014,
+          "yearEnd": 2017
+        },
+        {
+          "name": "2.0 TDI 150",
+          "fuel": "Diesel",
+          "yearStart": 2013,
+          "yearEnd": 2019
+        },
+        {
+          "name": "2.0 TDI 184",
+          "fuel": "Diesel",
+          "yearStart": 2014,
+          "yearEnd": 2020
+        },
+        {
+          "name": "1.0 TFSI 115",
+          "fuel": "Essence",
+          "yearStart": 2016,
+          "yearEnd": 2018
+        },
+        {
+          "name": "1.0 TFSI 116",
+          "fuel": "Essence",
+          "yearStart": 2019,
+          "yearEnd": 2020
+        },
+        {
+          "name": "1.4 TFSI 150",
+          "fuel": "Essence",
+          "yearStart": 2016,
+          "yearEnd": 2020
+        },
+        {
+          "name": "1.5 TFSI 150",
+          "fuel": "Essence",
+          "yearStart": 2017,
+          "yearEnd": 2019
+        },
+        {
+          "name": "2.0 TFSI 190",
+          "fuel": "Essence",
+          "yearStart": 2016,
+          "yearEnd": 2020
+        },
+        {
+          "name": "1.6 TDI 115",
+          "fuel": "Diesel",
+          "yearStart": 2017,
+          "yearEnd": 2017
+        },
+        {
+          "name": "1.6 TDI 116",
+          "fuel": "Diesel",
+          "yearStart": 2017,
+          "yearEnd": 2019
+        }
       ]
     },
     "Ford": {
@@ -55370,6 +55450,19 @@
         "Design Luxe",
         "Midnight Series",
         "S Line",
+        "Sport",
+        "Sport Limited"
+      ],
+      "A3 Berline 3e Génération": [
+        "Advanced",
+        "Ambiente",
+        "Ambition",
+        "Ambition Luxe",
+        "Attraction",
+        "Business Line",
+        "Business Luxe",
+        "Design",
+        "Design Luxe",
         "Sport",
         "Sport Limited"
       ]
