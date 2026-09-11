@@ -22888,794 +22888,246 @@
       ],
       "A1 Sportback": [
         {
-          "name": "1.2 TFSI 86",
-          "fuel": "Essence",
-          "yearStart": 2011,
-          "yearEnd": 2015
-        },
-        {
-          "name": "1.4 TFSI 122",
-          "fuel": "Essence",
-          "yearStart": 2011,
-          "yearEnd": 2015
-        },
-        {
-          "name": "1.4 TFSI 140",
-          "fuel": "Essence",
-          "yearStart": 2013,
-          "yearEnd": 2015
-        },
-        {
-          "name": "1.4 TFSI 185",
-          "fuel": "Essence",
-          "yearStart": 2011,
-          "yearEnd": 2018
-        },
-        {
-          "name": "1.6 TDI 90",
-          "fuel": "Diesel",
-          "yearStart": 2011,
-          "yearEnd": 2015
-        },
-        {
-          "name": "1.6 TDI 105",
-          "fuel": "Diesel",
-          "yearStart": 2011,
-          "yearEnd": 2015
-        },
-        {
-          "name": "2.0 TDI 143",
-          "fuel": "Diesel",
-          "yearStart": 2012,
-          "yearEnd": 2015
-        },
-        {
-          "name": "1.0 TFSI 82",
-          "fuel": "Essence",
-          "yearStart": 2016,
-          "yearEnd": 2018
-        },
-        {
-          "name": "1.0 TFSI 95",
-          "fuel": "Essence",
-          "yearStart": 2014,
-          "yearEnd": 2023
-        },
-        {
-          "name": "1.4 TFSI 125",
-          "fuel": "Essence",
-          "yearStart": 2014,
-          "yearEnd": 2018
-        },
-        {
-          "name": "1.4 TFSI 150",
-          "fuel": "Essence",
-          "yearStart": 2014,
-          "yearEnd": 2016
-        },
-        {
-          "name": "1.8 TFSI 192",
-          "fuel": "Essence",
-          "yearStart": 2014,
-          "yearEnd": 2018
-        },
-        {
-          "name": "1.4 TDI 90",
-          "fuel": "Diesel",
-          "yearStart": 2016,
-          "yearEnd": 2018
-        },
-        {
-          "name": "1.6 TDI 116",
-          "fuel": "Diesel",
-          "yearStart": 2014,
-          "yearEnd": 2018
-        },
-        {
-          "name": "1.0 TFSI 110",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2023
-        },
-        {
           "name": "1.5 TFSI 150",
           "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2023
+          "yearStart": 2018
         },
         {
-          "name": "2.0 TFSI 207",
+          "name": "2.0 TFSI 204",
           "fuel": "Essence",
           "yearStart": 2018,
-          "yearEnd": 2022
-        },
-        {
-          "name": "2.0 TDI 116",
-          "fuel": "Diesel",
-          "yearStart": 2018,
-          "yearEnd": 2021
-        },
-        {
-          "name": "2.0 TDI 150",
-          "fuel": "Diesel",
-          "yearStart": 2018,
-          "yearEnd": 2023
+          "yearEnd": 2025
         }
       ],
       "A3": [
         {
           "name": "1.0 TFSI 115",
           "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2026
+          "yearStart": 2016
         },
         {
-          "name": "1.4 125",
+          "name": "1.2 TFSI 105",
           "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2026
+          "yearStart": 2010,
+          "yearEnd": 2014
         },
         {
-          "name": "1.4 TFSI",
+          "name": "1.2 TFSI 110",
           "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2026
+          "yearStart": 2014,
+          "yearEnd": 2016
         },
         {
           "name": "1.4 TFSI 122",
           "fuel": "Essence",
-          "yearStart": 2013,
-          "yearEnd": 2013
+          "yearStart": 2012,
+          "yearEnd": 2014
         },
         {
           "name": "1.4 TFSI 125",
           "fuel": "Essence",
-          "yearStart": 2010,
-          "yearEnd": 2012
+          "yearStart": 2007,
+          "yearEnd": 2016
+        },
+        {
+          "name": "1.4 TFSI 140",
+          "fuel": "Essence",
+          "yearStart": 2013,
+          "yearEnd": 2014
         },
         {
           "name": "1.4 TFSI 150",
           "fuel": "Essence",
-          "yearStart": 2016,
-          "yearEnd": 2017
+          "yearStart": 2014
         },
         {
           "name": "1.5 TFSI 150",
           "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2019
+          "yearStart": 2017
         },
         {
-          "name": "1.6",
+          "name": "1.6 FSI 102",
           "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2026
+          "yearStart": 2004,
+          "yearEnd": 2007
         },
         {
-          "name": "1.8",
-          "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2026
+          "name": "1.6 TDI 105",
+          "fuel": "Diesel",
+          "yearStart": 2006,
+          "yearEnd": 2014
         },
         {
-          "name": "1.8 150",
-          "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2026
+          "name": "1.6 TDI 110",
+          "fuel": "Diesel",
+          "yearStart": 2013
         },
         {
-          "name": "1.8 180",
-          "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2026
+          "name": "1.6 TDI 115",
+          "fuel": "Diesel",
+          "yearStart": 2017
+        },
+        {
+          "name": "1.6 TDI 90",
+          "fuel": "Diesel",
+          "yearStart": 2009,
+          "yearEnd": 2012
         },
         {
           "name": "1.8 TFSI 160",
           "fuel": "Essence",
-          "yearStart": 2010,
-          "yearEnd": 2011
+          "yearStart": 2006,
+          "yearEnd": 2012
         },
         {
           "name": "1.8 TFSI 180",
           "fuel": "Essence",
           "yearStart": 2012,
-          "yearEnd": 2015
-        },
-        {
-          "name": "2.0",
-          "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2026
-        },
-        {
-          "name": "2.0 150",
-          "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2026
-        },
-        {
-          "name": "2.0 TFSI 190",
-          "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2019
-        },
-        {
-          "name": "2.0 TFSI 200",
-          "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2012
-        },
-        {
-          "name": "BERLINE 35 TFSI 150 COD SPORT S TRONIC 7",
-          "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2020
-        },
-        {
-          "name": "BERLINE 40 TFSI 190 S LINE PLUS QUATTRO S TRONIC",
-          "fuel": "Essence",
-          "yearStart": 2020,
-          "yearEnd": 2020
-        },
-        {
-          "name": "CABRIOLET 35 TFSI 150",
-          "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2026
-        },
-        {
-          "name": "CABRIOLET 40 TFSI 190 11CV QUATTRO S TRONIC",
-          "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2026
-        },
-        {
-          "name": "1.4 TDI 136",
-          "fuel": "Diesel",
-          "yearStart": 2013,
-          "yearEnd": 2026
-        },
-        {
-          "name": "1.6 TDI 105",
-          "fuel": "Diesel",
-          "yearStart": 2010,
-          "yearEnd": 2013
-        },
-        {
-          "name": "1.6 TDI 110",
-          "fuel": "Diesel",
-          "yearStart": 2013,
-          "yearEnd": 2026
-        },
-        {
-          "name": "1.6 TDI 115",
-          "fuel": "Diesel",
-          "yearStart": 2013,
-          "yearEnd": 2026
-        },
-        {
-          "name": "1.6 TDI 116",
-          "fuel": "Diesel",
-          "yearStart": 2019,
-          "yearEnd": 2019
-        },
-        {
-          "name": "1.6 TDI 90",
-          "fuel": "Diesel",
-          "yearStart": 2010,
-          "yearEnd": 2010
+          "yearEnd": 2016
         },
         {
           "name": "1.9 TDI 105",
           "fuel": "Diesel",
-          "yearStart": 2013,
-          "yearEnd": 2026
+          "yearStart": 2003,
+          "yearEnd": 2009
         },
         {
-          "name": "2.0 TDI 136",
+          "name": "1.9 TDI 150",
           "fuel": "Diesel",
-          "yearStart": 2013,
-          "yearEnd": 2026
+          "yearStart": 2007,
+          "yearEnd": 2008
+        },
+        {
+          "name": "2.0 FSI 150",
+          "fuel": "Essence",
+          "yearStart": 2003,
+          "yearEnd": 2006
         },
         {
           "name": "2.0 TDI 140",
           "fuel": "Diesel",
-          "yearStart": 2011,
+          "yearStart": 2003,
           "yearEnd": 2012
         },
         {
           "name": "2.0 TDI 150",
           "fuel": "Diesel",
-          "yearStart": 2013,
-          "yearEnd": 2018
+          "yearStart": 2012
         },
         {
           "name": "2.0 TDI 170",
           "fuel": "Diesel",
-          "yearStart": 2013,
-          "yearEnd": 2026
+          "yearStart": 2006,
+          "yearEnd": 2012
         },
         {
           "name": "2.0 TDI 184",
           "fuel": "Diesel",
-          "yearStart": 2013,
-          "yearEnd": 2026
+          "yearStart": 2013
         },
         {
-          "name": "BERLINE 35 TDI 150 DESIGN LUXE S TRONIC 7",
+          "name": "2.0 TFSI 190",
+          "fuel": "Essence",
+          "yearStart": 2016
+        },
+        {
+          "name": "2.0 TFSI 200",
+          "fuel": "Essence",
+          "yearStart": 2005,
+          "yearEnd": 2012
+        }
+      ],
+      "A4": [
+        {
+          "name": "1.4 TFSI 150",
+          "fuel": "Essence",
+          "yearStart": 2015,
+          "yearEnd": 2018
+        },
+        {
+          "name": "1.5 TFSI 150",
+          "fuel": "Essence",
+          "yearStart": 2018
+        },
+        {
+          "name": "2.0 TDI 122",
+          "fuel": "Diesel",
+          "yearStart": 2016,
+          "yearEnd": 2018
+        },
+        {
+          "name": "2.0 TDI 136",
+          "fuel": "Diesel",
+          "yearStart": 2018
+        },
+        {
+          "name": "2.0 TDI 150",
+          "fuel": "Diesel",
+          "yearStart": 2015,
+          "yearEnd": 2018
+        },
+        {
+          "name": "2.0 TDI 163",
+          "fuel": "Diesel",
+          "yearStart": 2018
+        },
+        {
+          "name": "2.0 TDI 190",
+          "fuel": "Diesel",
+          "yearStart": 2015,
+          "yearEnd": 2018
+        },
+        {
+          "name": "2.0 TDI 204",
+          "fuel": "Diesel",
+          "yearStart": 2018
+        },
+        {
+          "name": "2.0 TFSI 190",
+          "fuel": "Essence",
+          "yearStart": 2015,
+          "yearEnd": 2018
+        },
+        {
+          "name": "2.0 TFSI 204",
+          "fuel": "Essence",
+          "yearStart": 2018
+        },
+        {
+          "name": "2.0 TFSI 245",
+          "fuel": "Essence",
+          "yearStart": 2019,
+          "yearEnd": 2021
+        },
+        {
+          "name": "2.0 TFSI 252",
+          "fuel": "Essence",
+          "yearStart": 2015,
+          "yearEnd": 2018
+        },
+        {
+          "name": "3.0 TDI 218",
+          "fuel": "Diesel",
+          "yearStart": 2015,
+          "yearEnd": 2018
+        },
+        {
+          "name": "3.0 TDI 231",
           "fuel": "Diesel",
           "yearStart": 2019,
           "yearEnd": 2020
         },
         {
-          "name": "TDI 110 AMBIENTE",
+          "name": "3.0 TDI 272",
           "fuel": "Diesel",
-          "yearStart": 2013,
-          "yearEnd": 2026
+          "yearStart": 2015,
+          "yearEnd": 2018
         },
         {
-          "name": "TDI 110 AMBIENTE 3P",
+          "name": "3.0 TDI 286",
           "fuel": "Diesel",
-          "yearStart": 2013,
-          "yearEnd": 2026
-        },
-        {
-          "name": "TDI 110 AMBIENTE 3P 6CV",
-          "fuel": "Diesel",
-          "yearStart": 2013,
-          "yearEnd": 2026
-        },
-        {
-          "name": "TDI 110 AMBIENTE 5P",
-          "fuel": "Diesel",
-          "yearStart": 2013,
-          "yearEnd": 2026
-        },
-        {
-          "name": "TDI 110 AMBITION",
-          "fuel": "Diesel",
-          "yearStart": 2013,
-          "yearEnd": 2026
-        },
-        {
-          "name": "TDI 110 AMBITION 3P",
-          "fuel": "Diesel",
-          "yearStart": 2013,
-          "yearEnd": 2026
-        },
-        {
-          "name": "TDI 110 AMBITION 3P 6CV",
-          "fuel": "Diesel",
-          "yearStart": 2013,
-          "yearEnd": 2026
-        },
-        {
-          "name": "TDI 110 AMBITION 5P",
-          "fuel": "Diesel",
-          "yearStart": 2013,
-          "yearEnd": 2026
-        },
-        {
-          "name": "TDI 130 AMBIENTE 3P",
-          "fuel": "Diesel",
-          "yearStart": 2013,
-          "yearEnd": 2026
-        },
-        {
-          "name": "TDI 130 AMBIENTE 5P",
-          "fuel": "Diesel",
-          "yearStart": 2013,
-          "yearEnd": 2026
-        },
-        {
-          "name": "TDI 130 AMBITION 3P",
-          "fuel": "Diesel",
-          "yearStart": 2013,
-          "yearEnd": 2026
-        },
-        {
-          "name": "TDI 130 AMBITION 5P",
-          "fuel": "Diesel",
-          "yearStart": 2013,
-          "yearEnd": 2026
-        },
-        {
-          "name": "TDI 130 PACK SPORT 3P",
-          "fuel": "Diesel",
-          "yearStart": 2013,
-          "yearEnd": 2026
-        },
-        {
-          "name": "TDI 90 AMBIENTE",
-          "fuel": "Diesel",
-          "yearStart": 2013,
-          "yearEnd": 2026
-        },
-        {
-          "name": "TDI 90 AMBIENTE 3P",
-          "fuel": "Diesel",
-          "yearStart": 2013,
-          "yearEnd": 2026
-        },
-        {
-          "name": "TDI 90 AMBIENTE 5P",
-          "fuel": "Diesel",
-          "yearStart": 2013,
-          "yearEnd": 2026
-        },
-        {
-          "name": "TDI 90 ATTRACTION 3P",
-          "fuel": "Diesel",
-          "yearStart": 2013,
-          "yearEnd": 2026
-        }
-      ],
-      "A4": [
-        {
-          "name": "1.6",
-          "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2026
-        },
-        {
-          "name": "1.8",
-          "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2026
-        },
-        {
-          "name": "1.8 163",
-          "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2026
-        },
-        {
-          "name": "1.8 TFSI 120",
-          "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2026
-        },
-        {
-          "name": "1.8 TFSI 160",
-          "fuel": "Essence",
-          "yearStart": 2011,
-          "yearEnd": 2011
-        },
-        {
-          "name": "1.8 TFSI 170",
-          "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2026
-        },
-        {
-          "name": "2.0",
-          "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2026
-        },
-        {
-          "name": "2.0 136",
-          "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2026
-        },
-        {
-          "name": "2.0 TFSI",
-          "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2026
-        },
-        {
-          "name": "2.0 TFSI 180",
-          "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2026
-        },
-        {
-          "name": "2.0 TFSI 200",
-          "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2026
-        },
-        {
-          "name": "2.0 TFSI 211",
-          "fuel": "Essence",
-          "yearStart": 2011,
-          "yearEnd": 2011
-        },
-        {
-          "name": "2.0 TFSI 225",
-          "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2026
-        },
-        {
-          "name": "2.4",
-          "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2026
-        },
-        {
-          "name": "2.8",
-          "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2026
-        },
-        {
-          "name": "3.0",
-          "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2026
-        },
-        {
-          "name": "3.0 TFSI 272",
-          "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2026
-        },
-        {
-          "name": "3.2",
-          "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2026
-        },
-        {
-          "name": "3.2 256",
-          "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2026
-        },
-        {
-          "name": "3.2 265",
-          "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2026
-        },
-        {
-          "name": "1.9 TDI 110",
-          "fuel": "Diesel",
-          "yearStart": 2010,
-          "yearEnd": 2024
-        },
-        {
-          "name": "1.9 TDI 130",
-          "fuel": "Diesel",
-          "yearStart": 2010,
-          "yearEnd": 2024
-        },
-        {
-          "name": "1.9 TDI 90",
-          "fuel": "Diesel",
-          "yearStart": 2010,
-          "yearEnd": 2024
-        },
-        {
-          "name": "2.0 TDI",
-          "fuel": "Diesel",
-          "yearStart": 2010,
-          "yearEnd": 2024
-        },
-        {
-          "name": "2.0 TDI 120",
-          "fuel": "Diesel",
-          "yearStart": 2010,
-          "yearEnd": 2024
-        },
-        {
-          "name": "2.0 TDI 136",
-          "fuel": "Diesel",
-          "yearStart": 2010,
-          "yearEnd": 2024
-        },
-        {
-          "name": "2.0 TDI 140",
-          "fuel": "Diesel",
-          "yearStart": 2010,
-          "yearEnd": 2024
-        },
-        {
-          "name": "2.0 TDI 143",
-          "fuel": "Diesel",
-          "yearStart": 2010,
-          "yearEnd": 2010
-        },
-        {
-          "name": "2.0 TDI 150",
-          "fuel": "Diesel",
-          "yearStart": 2010,
-          "yearEnd": 2024
-        },
-        {
-          "name": "2.0 TDI 163",
-          "fuel": "Diesel",
-          "yearStart": 2010,
-          "yearEnd": 2024
-        },
-        {
-          "name": "2.0 TDI 170",
-          "fuel": "Diesel",
-          "yearStart": 2010,
-          "yearEnd": 2024
-        },
-        {
-          "name": "2.0 TDI 190",
-          "fuel": "Diesel",
-          "yearStart": 2010,
-          "yearEnd": 2024
-        },
-        {
-          "name": "2.5 TDI",
-          "fuel": "Diesel",
-          "yearStart": 2010,
-          "yearEnd": 2024
-        },
-        {
-          "name": "2.5 TDI 155",
-          "fuel": "Diesel",
-          "yearStart": 2010,
-          "yearEnd": 2024
-        },
-        {
-          "name": "2.5 TDI 163",
-          "fuel": "Diesel",
-          "yearStart": 2010,
-          "yearEnd": 2024
-        },
-        {
-          "name": "2.7 TDI",
-          "fuel": "Diesel",
-          "yearStart": 2010,
-          "yearEnd": 2024
-        },
-        {
-          "name": "2.7 TDI 180",
-          "fuel": "Diesel",
-          "yearStart": 2010,
-          "yearEnd": 2024
-        },
-        {
-          "name": "2.7 TDI 190",
-          "fuel": "Diesel",
-          "yearStart": 2010,
-          "yearEnd": 2024
-        },
-        {
-          "name": "3.0 TDI",
-          "fuel": "Diesel",
-          "yearStart": 2010,
-          "yearEnd": 2024
-        },
-        {
-          "name": "3.0 TDI 204",
-          "fuel": "Diesel",
-          "yearStart": 2010,
-          "yearEnd": 2024
-        },
-        {
-          "name": "3.0 TDI 233",
-          "fuel": "Diesel",
-          "yearStart": 2010,
-          "yearEnd": 2024
-        },
-        {
-          "name": "3.0 TDI 240",
-          "fuel": "Diesel",
-          "yearStart": 2010,
-          "yearEnd": 2024
-        },
-        {
-          "name": "3.0 TDI 245",
-          "fuel": "Diesel",
-          "yearStart": 2010,
-          "yearEnd": 2024
-        },
-        {
-          "name": "TDI 115 PACK",
-          "fuel": "Diesel",
-          "yearStart": 2010,
-          "yearEnd": 2024
-        },
-        {
-          "name": "TDI 115 PACK PLUS",
-          "fuel": "Diesel",
-          "yearStart": 2010,
-          "yearEnd": 2024
-        },
-        {
-          "name": "TDI 115 PACK PLUS TIPTRONIC",
-          "fuel": "Diesel",
-          "yearStart": 2010,
-          "yearEnd": 2024
-        },
-        {
-          "name": "TDI 115 PACK TIPTRONIC",
-          "fuel": "Diesel",
-          "yearStart": 2010,
-          "yearEnd": 2024
-        },
-        {
-          "name": "TDI 115 QUATTRO PACK",
-          "fuel": "Diesel",
-          "yearStart": 2010,
-          "yearEnd": 2024
-        },
-        {
-          "name": "TDI 115 REFERENCE",
-          "fuel": "Diesel",
-          "yearStart": 2010,
-          "yearEnd": 2024
-        },
-        {
-          "name": "TDI 90",
-          "fuel": "Diesel",
-          "yearStart": 2010,
-          "yearEnd": 2024
-        },
-        {
-          "name": "TDI 90 PACK CLIM",
-          "fuel": "Diesel",
-          "yearStart": 2010,
-          "yearEnd": 2024
-        },
-        {
-          "name": "TDI 90 REFERENCE",
-          "fuel": "Diesel",
-          "yearStart": 2010,
-          "yearEnd": 2024
-        },
-        {
-          "name": "V6 TDI PACK",
-          "fuel": "Diesel",
-          "yearStart": 2010,
-          "yearEnd": 2024
-        },
-        {
-          "name": "V6 TDI PACK PLUS BV6 9CV",
-          "fuel": "Diesel",
-          "yearStart": 2010,
-          "yearEnd": 2024
-        },
-        {
-          "name": "V6 TDI PACK PLUS TIPTRONIC",
-          "fuel": "Diesel",
-          "yearStart": 2010,
-          "yearEnd": 2024
-        },
-        {
-          "name": "V6 TDI PACK SPORT 2 TIPTRONIC",
-          "fuel": "Diesel",
-          "yearStart": 2010,
-          "yearEnd": 2024
-        },
-        {
-          "name": "V6 TDI PACK TIPTRONIC",
-          "fuel": "Diesel",
-          "yearStart": 2010,
-          "yearEnd": 2024
-        },
-        {
-          "name": "V6 TDI QUATTRO PACK BV6",
-          "fuel": "Diesel",
-          "yearStart": 2010,
-          "yearEnd": 2024
-        },
-        {
-          "name": "V6 TDI QUATTRO PACK PLUS BV6",
-          "fuel": "Diesel",
-          "yearStart": 2010,
-          "yearEnd": 2024
-        },
-        {
-          "name": "V6 TDI QUATTRO PACK TIPTRONIC",
-          "fuel": "Diesel",
-          "yearStart": 2010,
-          "yearEnd": 2024
-        },
-        {
-          "name": "V6 TDI REFERENCE",
-          "fuel": "Diesel",
-          "yearStart": 2010,
-          "yearEnd": 2024
+          "yearStart": 2019,
+          "yearEnd": 2021
         }
       ],
       "A5": [
@@ -24654,124 +24106,103 @@
       ],
       "A4 Allroad": [
         {
-          "name": "2.0 TFSI 211",
-          "fuel": "Essence",
-          "yearStart": 2010,
-          "yearEnd": 2010
-        },
-        {
-          "name": "2.0 TFSI 225",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2024
-        },
-        {
-          "name": "2.0 TFSI 252",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2018
-        },
-        {
-          "name": "45 TFSI 245 DESIGN QUATTRO S TRONIC",
-          "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2019
-        },
-        {
-          "name": "45 TFSI 265 AVUS QUATTRO S TRONIC",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2024
-        },
-        {
-          "name": "45 TFSI 265 DESIGN QUATTRO S TRONIC",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2024
-        },
-        {
-          "name": "45 TFSI 265 DESIGN QUATTRO S TRONIC 7",
-          "fuel": "Essence",
-          "yearStart": 2021,
-          "yearEnd": 2021
-        },
-        {
           "name": "2.0 TDI 143",
           "fuel": "Diesel",
-          "yearStart": 2019,
-          "yearEnd": 2024
+          "yearStart": 2009,
+          "yearEnd": 2013
         },
         {
           "name": "2.0 TDI 150",
           "fuel": "Diesel",
-          "yearStart": 2019,
-          "yearEnd": 2024
+          "yearStart": 2013,
+          "yearEnd": 2016
+        },
+        {
+          "name": "2.0 TDI 163",
+          "fuel": "Diesel",
+          "yearStart": 2016,
+          "yearEnd": 2018
         },
         {
           "name": "2.0 TDI 170",
           "fuel": "Diesel",
-          "yearStart": 2011,
+          "yearStart": 2009,
           "yearEnd": 2011
         },
         {
           "name": "2.0 TDI 177",
           "fuel": "Diesel",
-          "yearStart": 2014,
+          "yearStart": 2011,
           "yearEnd": 2014
         },
         {
           "name": "2.0 TDI 190",
           "fuel": "Diesel",
+          "yearStart": 2014,
+          "yearEnd": 2018
+        },
+        {
+          "name": "2.0 TDI 204",
+          "fuel": "Diesel",
+          "yearStart": 2018
+        },
+        {
+          "name": "2.0 TFSI 211",
+          "fuel": "Essence",
+          "yearStart": 2009,
+          "yearEnd": 2013
+        },
+        {
+          "name": "2.0 TFSI 225",
+          "fuel": "Essence",
+          "yearStart": 2013,
+          "yearEnd": 2016
+        },
+        {
+          "name": "2.0 TFSI 245",
+          "fuel": "Essence",
+          "yearStart": 2019
+        },
+        {
+          "name": "2.0 TFSI 252",
+          "fuel": "Essence",
+          "yearStart": 2016,
+          "yearEnd": 2018
+        },
+        {
+          "name": "3.0 TDI 218",
+          "fuel": "Diesel",
+          "yearStart": 2016,
+          "yearEnd": 2018
+        },
+        {
+          "name": "3.0 TDI 231",
+          "fuel": "Diesel",
           "yearStart": 2019,
-          "yearEnd": 2024
+          "yearEnd": 2020
         },
         {
           "name": "3.0 TDI 240",
           "fuel": "Diesel",
-          "yearStart": 2019,
-          "yearEnd": 2024
+          "yearStart": 2009,
+          "yearEnd": 2011
         },
         {
           "name": "3.0 TDI 245",
           "fuel": "Diesel",
-          "yearStart": 2013,
-          "yearEnd": 2013
+          "yearStart": 2011,
+          "yearEnd": 2016
         },
         {
           "name": "3.0 TDI 272",
           "fuel": "Diesel",
-          "yearStart": 2017,
-          "yearEnd": 2017
+          "yearStart": 2016,
+          "yearEnd": 2018
         },
         {
-          "name": "40 TDI 204 AVUS QUATTRO S TRONIC",
+          "name": "3.0 TDI 286",
           "fuel": "Diesel",
-          "yearStart": 2019,
-          "yearEnd": 2024
-        },
-        {
-          "name": "40 TDI 204 DESIGN QUATTRO S TRONIC",
-          "fuel": "Diesel",
-          "yearStart": 2019,
-          "yearEnd": 2024
-        },
-        {
-          "name": "45 TDI 231 AVUS QUATTRO TIPTRONIC",
-          "fuel": "Diesel",
-          "yearStart": 2020,
-          "yearEnd": 2020
-        },
-        {
-          "name": "50 TDI 286 AVUS QUATTRO TIPTRONIC",
-          "fuel": "Diesel",
-          "yearStart": 2019,
-          "yearEnd": 2024
-        },
-        {
-          "name": "40 TDI 204 S TRONIC 7 QUATTRO DESIGN",
-          "fuel": "Hybride",
-          "yearStart": 2022,
-          "yearEnd": 2022
+          "yearStart": 2020
         }
       ],
       "A8 L": [
@@ -25600,29 +25031,6 @@
       ],
       "Q2": [
         {
-          "name": "1.6 TDI 116",
-          "fuel": "Diesel",
-          "yearStart": 2016,
-          "yearEnd": 2018
-        },
-        {
-          "name": "2.0 TDI 116",
-          "fuel": "Diesel",
-          "yearStart": 2018,
-          "yearEnd": 2025
-        },
-        {
-          "name": "2.0 TDI 150",
-          "fuel": "Diesel",
-          "yearStart": 2016
-        },
-        {
-          "name": "2.0 TDI 190",
-          "fuel": "Diesel",
-          "yearStart": 2016,
-          "yearEnd": 2018
-        },
-        {
           "name": "1.0 TFSI 116",
           "fuel": "Essence",
           "yearStart": 2016,
@@ -25635,25 +25043,55 @@
           "yearEnd": 2018
         },
         {
-          "name": "1.5 TFSI 110",
-          "fuel": "Essence",
-          "yearStart": 2020,
-          "yearEnd": 2024
-        },
-        {
-          "name": "1.5 TFSI 116",
+          "name": "1.5 TFSI 150",
           "fuel": "Essence",
           "yearStart": 2018
         },
         {
-          "name": "2.0 TFSI 150",
-          "fuel": "Essence",
+          "name": "1.6 TDI 116",
+          "fuel": "Diesel",
+          "yearStart": 2016,
+          "yearEnd": 2018
+        },
+        {
+          "name": "2.0 TDI 136",
+          "fuel": "Diesel",
+          "yearStart": 2018,
+          "yearEnd": 2025
+        },
+        {
+          "name": "2.0 TDI 150",
+          "fuel": "Diesel",
+          "yearStart": 2016,
+          "yearEnd": 2018
+        },
+        {
+          "name": "2.0 TDI 163",
+          "fuel": "Diesel",
           "yearStart": 2018
+        },
+        {
+          "name": "2.0 TDI 190",
+          "fuel": "Diesel",
+          "yearStart": 2016,
+          "yearEnd": 2018
+        },
+        {
+          "name": "2.0 TDI 204",
+          "fuel": "Diesel",
+          "yearStart": 2018,
+          "yearEnd": 2018
         },
         {
           "name": "2.0 TFSI 190",
           "fuel": "Essence",
           "yearStart": 2017,
+          "yearEnd": 2018
+        },
+        {
+          "name": "2.0 TFSI 204",
+          "fuel": "Essence",
+          "yearStart": 2018,
           "yearEnd": 2020
         }
       ],
@@ -25691,16 +25129,19 @@
       ],
       "Q4 Sportback e-tron": [
         {
-          "name": "Q4 40 Sportback 204",
+          "name": "E-TRON 204",
           "fuel": "Électrique",
-          "yearStart": 2021,
-          "yearEnd": 2026
+          "yearStart": 2026
         },
         {
-          "name": "Q4 50 Sportback 299 quattro",
+          "name": "E-TRON 286",
           "fuel": "Électrique",
-          "yearStart": 2021,
-          "yearEnd": 2026
+          "yearStart": 2026
+        },
+        {
+          "name": "E-TRON 340",
+          "fuel": "Électrique",
+          "yearStart": 2026
         }
       ],
       "Q6 e-tron": [
@@ -26015,40 +25456,124 @@
       ],
       "A4 Avant": [
         {
-          "name": "35 TFSI 150",
+          "name": "1.8 TFSI 120",
           "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2024
+          "yearStart": 2008
         },
         {
-          "name": "40 TFSI 204",
+          "name": "1.8 TFSI 160",
           "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2024
+          "yearStart": 2008,
+          "yearEnd": 2011
         },
         {
-          "name": "40 TFSI 204 MHEV",
-          "fuel": "Hybride",
-          "yearStart": 2020,
-          "yearEnd": 2024
+          "name": "1.8 TFSI 170",
+          "fuel": "Essence",
+          "yearStart": 2011
         },
         {
-          "name": "35 TDI 163",
+          "name": "2.0 TDI 120",
           "fuel": "Diesel",
-          "yearStart": 2019,
-          "yearEnd": 2024
+          "yearStart": 2008
         },
         {
-          "name": "40 TDI 204 quattro",
+          "name": "2.0 TDI 136",
           "fuel": "Diesel",
-          "yearStart": 2019,
-          "yearEnd": 2024
+          "yearStart": 2009
         },
         {
-          "name": "50 TDI 286 quattro",
+          "name": "2.0 TDI 140",
           "fuel": "Diesel",
-          "yearStart": 2019,
-          "yearEnd": 2024
+          "yearStart": 2009,
+          "yearEnd": 2011
+        },
+        {
+          "name": "2.0 TDI 143",
+          "fuel": "Diesel",
+          "yearStart": 2008,
+          "yearEnd": 2013
+        },
+        {
+          "name": "2.0 TDI 150",
+          "fuel": "Diesel",
+          "yearStart": 2013
+        },
+        {
+          "name": "2.0 TDI 163",
+          "fuel": "Diesel",
+          "yearStart": 2014
+        },
+        {
+          "name": "2.0 TDI 170",
+          "fuel": "Diesel",
+          "yearStart": 2008,
+          "yearEnd": 2011
+        },
+        {
+          "name": "2.0 TDI 177",
+          "fuel": "Diesel",
+          "yearStart": 2011,
+          "yearEnd": 2014
+        },
+        {
+          "name": "2.0 TDI 190",
+          "fuel": "Diesel",
+          "yearStart": 2014
+        },
+        {
+          "name": "2.0 TFSI 180",
+          "fuel": "Essence",
+          "yearStart": 2008,
+          "yearEnd": 2011
+        },
+        {
+          "name": "2.0 TFSI 211",
+          "fuel": "Essence",
+          "yearStart": 2008
+        },
+        {
+          "name": "2.0 TFSI 225",
+          "fuel": "Essence",
+          "yearStart": 2013
+        },
+        {
+          "name": "2.7 TDI 190",
+          "fuel": "Diesel",
+          "yearStart": 2008,
+          "yearEnd": 2010
+        },
+        {
+          "name": "3.0 TDI 204",
+          "fuel": "Diesel",
+          "yearStart": 2011
+        },
+        {
+          "name": "3.0 TDI 240",
+          "fuel": "Diesel",
+          "yearStart": 2008,
+          "yearEnd": 2010
+        },
+        {
+          "name": "3.0 TDI 245",
+          "fuel": "Diesel",
+          "yearStart": 2011
+        },
+        {
+          "name": "3.0 TFSI 272",
+          "fuel": "Essence",
+          "yearStart": 2011
+        },
+        {
+          "name": "3.2 FSI 18",
+          "fuel": "Essence",
+          "yearStart": 2008,
+          "yearEnd": 2010
+        },
+        {
+          "name": "3.2 FSI 265",
+          "fuel": "Essence",
+          "yearStart": 2008,
+          "yearEnd": 2010
         }
       ],
       "A7 Sportback": [
@@ -26973,22 +26498,29 @@
       ],
       "A4 Cabriolet": [
         {
-          "name": "2.0 TFSI 211",
-          "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2013
-        },
-        {
-          "name": "3.2 FSI V6 265",
-          "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2013
-        },
-        {
-          "name": "2.7 TDI V6 190",
+          "name": "2.0 TDI 140",
           "fuel": "Diesel",
-          "yearStart": 2012,
-          "yearEnd": 2013
+          "yearStart": 2001
+        },
+        {
+          "name": "2.0 TFSI 200",
+          "fuel": "Essence",
+          "yearStart": 2001
+        },
+        {
+          "name": "2.7 TDI 180",
+          "fuel": "Diesel",
+          "yearStart": 2001
+        },
+        {
+          "name": "3.0 TDI 233",
+          "fuel": "Diesel",
+          "yearStart": 2001
+        },
+        {
+          "name": "3.2 FSI 256",
+          "fuel": "Essence",
+          "yearStart": 2001
         }
       ],
       "A5 Avant": [
@@ -58963,34 +58495,142 @@
         "Urban Sport"
       ],
       "A1 Sportback": [
-        "Active",
-        "Advanced",
-        "Ambiente",
-        "Ambition",
-        "Ambition Luxe",
-        "Amplified",
-        "Attraction",
-        "Avus",
-        "Black Edition",
-        "Business Line",
-        "Competition",
-        "Competition Line",
-        "Edition One",
-        "Entry",
-        "Metropolitan",
-        "Midnight Series",
-        "S Edition",
-        "S Line",
-        "S Line Competition",
-        "Style",
-        "Urban Sport"
+        "II 1.0 TFSI ADVANCED",
+        "II 1.0 TFSI AVUS",
+        "II 1.0 TFSI AVUS BVM6",
+        "II 1.0 TFSI BLACK EDITION",
+        "II 1.0 TFSI CDESIGN BVM6",
+        "II 1.0 TFSI DESIGN",
+        "II 1.0 TFSI DESIGN BVM5",
+        "II 1.0 TFSI S LINE",
+        "II 1.0 TFSI S LINE PLUS",
+        "II 1.5 ADVANCED",
+        "II 1.5 ADVANCED 2",
+        "II 1.5 AVUS",
+        "II 1.5 BLACK EDITION",
+        "II 1.5 S LINE PLUS",
+        "II 2.0 BLACK EDITION",
+        "II 2.0 S LINE PLUS",
+        "II BUSINESS LINE",
+        "II COMPETITION",
+        "II DESIGN",
+        "II DESIGN LUXE",
+        "II S LINE",
+        "II TFSI",
+        "II TFSI ADVANCED",
+        "II TFSI ADVANCED 2",
+        "II TFSI ADVANCED BVM5",
+        "II TFSI ADVANCED BVM6",
+        "II TFSI AVUS",
+        "II TFSI AVUS BVM6",
+        "II TFSI BUSINESS LINE",
+        "II TFSI DESIGN",
+        "II TFSI DESIGN LUXE",
+        "II TFSI ENTRY",
+        "II TFSI S LINE",
+        "II TFSI S LINE BVM6",
+        "II TFSI TURBO BLUE EDITION"
       ],
       "A3": [
-        "Ambition",
-        "Business",
-        "Design",
-        "Line",
-        "Sport"
+        "II (2) 1.6 AMBIENTE",
+        "II (2) 1.6 AMBITION",
+        "II (2) 1.6 AMBITION LUXE",
+        "II (2) 1.6 DESIGN EDITION",
+        "II (2) 1.6 DESIGN EDITION TIP6",
+        "II (2) 10CV AMBIENTE",
+        "II (2) 10CV AMBITION",
+        "II (2) 10CV S LINE",
+        "II (2) 3.2 V6 AMBITION",
+        "II (2) 3.2 V6 AMBITION LUXE",
+        "II (2) 3.2 V6 EXCLUSIVE LINE",
+        "II (2) AMBIENTE",
+        "II (2) AMBITION",
+        "II (2) AMBITION LUXE",
+        "II (2) ATTRACTION",
+        "II (2) DESIGN EDITION",
+        "II (2) E",
+        "II (2) EXCLUSIVE LINE",
+        "II (2) EXCLUSIVE LINE 6",
+        "II (2) S LINE",
+        "II (3) 1.6 ATTRACTION",
+        "II (3) 1.6 TDIE ATTRACTION",
+        "II (3) 1.6 TDIE BUSINESS LINE",
+        "II (3) 1.9 TDIE AMBIENTE",
+        "II (3) 1.9 TDIE AMBITION",
+        "II (3) 3.2 V6 AMBITION",
+        "II (3) 3.2 V6 AMBITION LUXE",
+        "II (3) 3.2 V6 S LINE",
+        "II (3) 7CV AMBIENTE",
+        "II (3) 7CV AMBITION",
+        "II (3) 7CV AMBITION LUXE",
+        "II (3) 7CV ATTRACTION",
+        "II (3) ADVANCED EDITION",
+        "II (3) ADVANCED EDITION PLUS",
+        "II (3) AMBIENTE",
+        "II (3) AMBITION",
+        "II (3) AMBITION LUXE",
+        "II (3) ATTRACTION",
+        "II (3) BUSINESS LINE",
+        "II (3) DESIGN EDITION",
+        "II (3) E AMBITION LUXE",
+        "II (3) E ATTRACTION",
+        "II (3) E STREAMLINE",
+        "II (3) S LINE",
+        "II (3) S LINE PLUS",
+        "II (3) STEAMLINE",
+        "II 1.4 AMBIENTE",
+        "II 1.6 AMBIENTE",
+        "II 1.6 AMBITION",
+        "II 1.6 AMBITION LUXE",
+        "II 1.6 PACK ATTRACTION",
+        "II 1.6 S LINE",
+        "II 3.2 V6 AMBITION",
+        "II 3.2 V6 AMBITION LUXE",
+        "II 3.2 V6 S LINE",
+        "II 3.2 V6 S LINE DSG",
+        "II AMBIENTE",
+        "II AMBITION",
+        "II AMBITION LUXE",
+        "II ATTRACTION",
+        "II PACK ATTRACTION",
+        "II S LINE",
+        "III (2)",
+        "III (2) BUSINESS LINE",
+        "III (2) DESIGN",
+        "III (2) DESIGN LUXE",
+        "III (2) S LINE",
+        "III (2) SPORT",
+        "III 5CV AMBIENTE",
+        "III 5CV AMBITION",
+        "III 5CV AMBITION LUXE",
+        "III 5CV ATTRACTION",
+        "III 5CV BUSINESS LINE",
+        "III 5CV S LINE",
+        "III 6CV AMBIENTE",
+        "III 6CV AMBITION",
+        "III 6CV AMBITION LUXE",
+        "III 6CV ATTRACTION",
+        "III 6CV BUSINESS LINE",
+        "III 6CV S LINE",
+        "III 7CV AMBIENTE",
+        "III 7CV AMBITION",
+        "III 7CV AMBITION LUXE",
+        "III 7CV ATTRACTION",
+        "III 7CV BUSINESS LINE",
+        "III 7CV S LINE",
+        "III 7CV ULTRA AMBIENTE",
+        "III 7CV ULTRA AMBITION",
+        "III 8CV AMBITION LUXE",
+        "III 9CV AMBIENTE",
+        "III 9CV AMBITION",
+        "III ADVANCED",
+        "III AMBIENTE",
+        "III AMBITION",
+        "III AMBITION LUXE",
+        "III ATTRACTION",
+        "III BUSINESS LINE",
+        "III S LINE",
+        "III SPORT DESIGN"
       ],
       "A3 Sportback": [
         "Attraction",
@@ -59027,28 +58667,232 @@
         "Design"
       ],
       "A4": [
-        "Advance",
-        "Ambition",
-        "Black Edition",
-        "Business",
-        "Design",
-        "Edition",
-        "Line",
-        "Pack"
+        "V (2)",
+        "V (2) 2.0 BUSINESS LINE",
+        "V (2) A4 AVUS",
+        "V (2) A4 COMPETITION",
+        "V (2) A4 S LINE",
+        "V (2) AVUS",
+        "V (2) BUSINESS EXECUTIVE",
+        "V (2) BUSINESS LINE",
+        "V (2) COMPETITION",
+        "V (2) DESIGN",
+        "V (2) DESIGN LUXE",
+        "V (2) S LINE",
+        "V (2) ULTRA",
+        "V (2) ULTRA BUSINESS LINE",
+        "V (2) ULTRA DESIGN",
+        "V (2) ULTRA DESIGN LUXE",
+        "V (2) ULTRA S LINE",
+        "V (3)",
+        "V (3) 16CV S LINE",
+        "V (3) 7CV",
+        "V (3) 7CV BUSINESS LINE",
+        "V (3) 7CV DESIGN",
+        "V (3) 7CV DESIGN LUXE",
+        "V (3) 7CV S LINE",
+        "V (3) 8CV AVUS",
+        "V (3) 8CV BUSINESS LINE",
+        "V (3) 8CV DESIGN",
+        "V (3) 8CV S LINE",
+        "V (3) 9CV AVUS",
+        "V (3) 9CV BUSINESS LINE",
+        "V (3) 9CV DESIGN",
+        "V (3) 9CV S LINE",
+        "V (3) AVUS",
+        "V (3) AVUS 8",
+        "V (3) BUSINESS LINE",
+        "V (3) BUSINESS LINE PLUS",
+        "V (3) DESIGN",
+        "V (3) DESIGN LUXE",
+        "V (3) S EDITION",
+        "V (3) S LINE",
+        "V (3) S LINE 8",
+        "V (3) ULTRA AVUS",
+        "V (3) ULTRA BUSINESS LINE",
+        "V (3) ULTRA DESIGN",
+        "V (3) ULTRA S LINE",
+        "V BUSINESS LINE",
+        "V DESIGN",
+        "V DESIGN 8",
+        "V DESIGN LUXE",
+        "V DESIGN LUXE 8",
+        "V EDITION",
+        "V S LINE",
+        "V S LINE 8",
+        "V SPORT",
+        "V ULTRA",
+        "V ULTRA BUSINESS LINE",
+        "V ULTRA DESIGN",
+        "V ULTRA DESIGN LUXE",
+        "V ULTRA S LINE",
+        "V ULTRA SPORT",
+        "V V6 DESIGN",
+        "V V6 DESIGN LUXE",
+        "V V6 S LINE",
+        "V V6 SPORT"
       ],
       "A4 Avant": [
-        "Attraction",
-        "Ambition",
-        "Design",
-        "S line",
-        "Advanced",
-        "Competition",
-        "Ambiente"
+        "IV (2) AVANT 2.0 TDIE AMBIENTE",
+        "IV (2) AVANT 2.0 TDIE AMBITION LUXE",
+        "IV (2) AVANT 2.0 TDIE ATTRACTION",
+        "IV (2) AVANT 2.0 TDIE BUSINESS LINE",
+        "IV (2) AVANT 2.0 TDIE S LINE",
+        "IV (2) AVANT 3.0 V6 TDI AMBIENTE",
+        "IV (2) AVANT 3.0 V6 TDI AMBIENTE CLEAN DIESEL",
+        "IV (2) AVANT 3.0 V6 TDI AMBIENTE MULTITRONIC",
+        "IV (2) AVANT 3.0 V6 TDI AMBIENTE PLUS 5PL",
+        "IV (2) AVANT 3.0 V6 TDI AMBITION LUXE",
+        "IV (2) AVANT 3.0 V6 TDI AMBITION LUXE CLEAN DIESEL",
+        "IV (2) AVANT 3.0 V6 TDI AMBITION LUXE MULTITRONIC",
+        "IV (2) AVANT 3.0 V6 TDI BUSINESS LINE",
+        "IV (2) AVANT 3.0 V6 TDI BUSINESS LINE CLEAN DIESEL",
+        "IV (2) AVANT 3.0 V6 TDI BUSINESS LINE MULTITRONIC",
+        "IV (2) AVANT 3.0 V6 TDI CD AMBIENTE",
+        "IV (2) AVANT 3.0 V6 TDI CD AMBITION LUXE",
+        "IV (2) AVANT 3.0 V6 TDI CD BUSINESS LINE",
+        "IV (2) AVANT 3.0 V6 TDI CD S LINE",
+        "IV (2) AVANT 3.0 V6 TDI S LINE",
+        "IV (2) AVANT 3.0 V6 TDI S LINE CLEAN DIESEL",
+        "IV (2) AVANT 3.0 V6 TDI S LINE MULTITRONIC",
+        "IV (2) AVANT 3.0 V6 TFSI 17CV AMBIENTE",
+        "IV (2) AVANT 3.0 V6 TFSI 17CV AMBITION LUXE",
+        "IV (2) AVANT 3.0 V6 TFSI 17CV BUSINESS LINE",
+        "IV (2) AVANT 3.0 V6 TFSI 17CV S LINE",
+        "IV (2) AVANT 3.0 V6 TFSI AMBIENTE",
+        "IV (2) AVANT 3.0 V6 TFSI AMBITION LUXE",
+        "IV (2) AVANT 3.0 V6 TFSI BUSINESS LINE",
+        "IV (2) AVANT 3.0 V6 TFSI S LINE",
+        "IV (2) AVANT 7CV AMBIENTE MULTITRONIC",
+        "IV (2) AVANT 7CV S LINE MULTITRONIC",
+        "IV (2) AVANT ADVANCED",
+        "IV (2) AVANT AMBIENTE",
+        "IV (2) AVANT AMBIENTE MULTITRONIC",
+        "IV (2) AVANT AMBIENTE MULTITRONIC EURO6",
+        "IV (2) AVANT AMBIENTE PLUS",
+        "IV (2) AVANT AMBIENTE PLUS MULTITRONIC",
+        "IV (2) AVANT AMBITION LUXE",
+        "IV (2) AVANT AMBITION LUXE MULTITRONIC",
+        "IV (2) AVANT AMBITION LUXE MULTITRONIC EURO6",
+        "IV (2) AVANT ATTRACTION",
+        "IV (2) AVANT ATTRACTION MULTITRONIC",
+        "IV (2) AVANT ATTRACTION MULTITRONIC EURO6",
+        "IV (2) AVANT BUSINESS LINE",
+        "IV (2) AVANT BUSINESS LINE MULTITRONIC",
+        "IV (2) AVANT BUSINESS LINE MULTITRONIC EURO6",
+        "IV (2) AVANT CD 10CV AMBIENTE",
+        "IV (2) AVANT CD 10CV AMBIENTE MULTITRONIC",
+        "IV (2) AVANT CD 10CV AMBITION LUXE",
+        "IV (2) AVANT CD 10CV AMBITION LUXE MULTITRONIC",
+        "IV (2) AVANT CD 10CV ATTRACTION",
+        "IV (2) AVANT CD 10CV ATTRACTION MULTITRONIC",
+        "IV (2) AVANT CD 10CV BUSINESS LINE",
+        "IV (2) AVANT CD 10CV BUSINESS LINE MULTITRONIC",
+        "IV (2) AVANT CD 10CV S LINE",
+        "IV (2) AVANT CD 10CV S LINE MULTITRONIC",
+        "IV (2) AVANT CD ADVANCED",
+        "IV (2) AVANT CD ADVANCED MULTITRONIC",
+        "IV (2) AVANT CD AMBIENTE",
+        "IV (2) AVANT CD AMBIENTE MULTITRONIC",
+        "IV (2) AVANT CD AMBITION LUXE",
+        "IV (2) AVANT CD AMBITION LUXE MULTITRONIC",
+        "IV (2) AVANT CD ATTRACTION",
+        "IV (2) AVANT CD ATTRACTION MULTITRONIC",
+        "IV (2) AVANT CD BUSINESS LINE",
+        "IV (2) AVANT CD BUSINESS LINE MULTITRONIC",
+        "IV (2) AVANT CD S LINE",
+        "IV (2) AVANT CD S LINE MULTITRONIC",
+        "IV (2) AVANT S LINE",
+        "IV (2) AVANT S LINE MULTITRONIC",
+        "IV (2) AVANT S LINE MULTITRONIC EURO6",
+        "IV (2) AVANT ULTRA 8CV AMBIENTE",
+        "IV (2) AVANT ULTRA 8CV ATTRACTION",
+        "IV (2) AVANT ULTRA 8CV BUSINESS LINE",
+        "IV (2) AVANT ULTRA AMBIENTE",
+        "IV (2) AVANT ULTRA ATTRACTION",
+        "IV (2) AVANT ULTRA BUSINESS LINE",
+        "IV AVANT 2.0 TDIE ADVANCED EDITION",
+        "IV AVANT 2.0 TDIE ADVANCED EDITION PLUS",
+        "IV AVANT 2.0 TDIE AMBIENTE",
+        "IV AVANT 2.0 TDIE ATTRACTION",
+        "IV AVANT 2.0 TDIE BUSINESS LINE",
+        "IV AVANT 2.7 V6 TDI AMBIENTE",
+        "IV AVANT 2.7 V6 TDI AMBIENTE MULTITRONIC",
+        "IV AVANT 2.7 V6 TDI AMBITION LUXE",
+        "IV AVANT 2.7 V6 TDI AMBITION LUXE MULTITRONIC",
+        "IV AVANT 2.7 V6 TDI BUSINESS LINE",
+        "IV AVANT 2.7 V6 TDI BUSINESS LINE MULTITRONIC",
+        "IV AVANT 2.7 V6 TDI S LINE",
+        "IV AVANT 2.7 V6 TDI S LINE MULTITRONIC",
+        "IV AVANT 2.7 V6 TDI S LINE PLUS",
+        "IV AVANT 2.7 V6 TDI S LINE PLUS MULTITRONIC",
+        "IV AVANT 3.0 V6 TDI AMBIENTE",
+        "IV AVANT 3.0 V6 TDI AMBIENTE 7",
+        "IV AVANT 3.0 V6 TDI AMBITION LUXE",
+        "IV AVANT 3.0 V6 TDI AMBITION LUXE 7",
+        "IV AVANT 3.0 V6 TDI BUSINESS LINE",
+        "IV AVANT 3.0 V6 TDI CLEAN DIESEL AMBIENTE",
+        "IV AVANT 3.0 V6 TDI CLEAN DIESEL AMBITION LUXE",
+        "IV AVANT 3.0 V6 TDI CLEAN DIESEL BUSINESS LINE",
+        "IV AVANT 3.0 V6 TDI CLEAN DIESEL S LINE",
+        "IV AVANT 3.0 V6 TDI CLEAN DIESEL S LINE PLUS",
+        "IV AVANT 3.0 V6 TDI S LINE",
+        "IV AVANT 3.0 V6 TDI S LINE PLUS",
+        "IV AVANT 3.2 V6 FSI 18CV AMBIENTE",
+        "IV AVANT 3.2 V6 FSI 18CV AMBITION LUXE",
+        "IV AVANT 3.2 V6 FSI 18CV S LINE",
+        "IV AVANT 3.2 V6 FSI AMBIENTE MULTITRONIC",
+        "IV AVANT 3.2 V6 FSI AMBITION LUXE MULTITRONIC",
+        "IV AVANT 3.2 V6 FSI BUSINESS LINE",
+        "IV AVANT 3.2 V6 FSI BUSINESS LINE MULTITRONIC",
+        "IV AVANT 3.2 V6 FSI S LINE MULTITRONIC",
+        "IV AVANT 3.2 V6 FSI S LINE PLUS",
+        "IV AVANT 3.2 V6 FSI S LINE PLUS MULTITRONIC",
+        "IV AVANT 7CV AMBIENTE MULTITRONIC",
+        "IV AVANT 7CV S LINE MULTITRONIC",
+        "IV AVANT 9CV AMBITION LUXE",
+        "IV AVANT 9CV S LINE",
+        "IV AVANT ADVANCED EDITION",
+        "IV AVANT ADVANCED EDITION PLUS",
+        "IV AVANT AMBIENTE",
+        "IV AVANT AMBIENTE MULTITRONIC",
+        "IV AVANT AMBITION LUXE",
+        "IV AVANT AMBITION LUXE MULTITRONIC",
+        "IV AVANT AMBITION LUXE MULTITRONIC 7CV",
+        "IV AVANT ATTRACTION",
+        "IV AVANT ATTRACTION MULTITRONIC",
+        "IV AVANT BUSINESS LINE",
+        "IV AVANT BUSINESS LINE MULTITRONIC",
+        "IV AVANT S LINE",
+        "IV AVANT S LINE MULTITRONIC",
+        "IV AVANT S LINE PLUS",
+        "IV AVANT S LINE PLUS MULTITRONIC"
       ],
       "A4 Allroad": [
-        "Ambition",
-        "Business",
-        "Design"
+        "(2) 3.0 V6 TDI AMBIENTE",
+        "(2) 3.0 V6 TDI AMBITION LUXE",
+        "(2) 3.0 V6 TDI CLEAN DIESEL AMBIENTE",
+        "(2) 3.0 V6 TDI CLEAN DIESEL AMBITION LUXE",
+        "(2) AMBIENTE",
+        "(2) AMBITION LUXE",
+        "(2) BUSINESS LINE",
+        "(2) BUSINESS LINE EU6",
+        "(2) CLEAN DIESEL AMBIENTE",
+        "(2) CLEAN DIESEL AMBITION LUXE",
+        "(2) CLEAN DIESEL BUSINESS LINE",
+        "3.0 V6 TDI AMBIENTE",
+        "3.0 V6 TDI AMBITION LUXE",
+        "AMBIENTE",
+        "AMBITION AMBIENTE",
+        "AMBITION LUXE",
+        "II (2) AVUS",
+        "II (2) DESIGN",
+        "II DESIGN",
+        "II DESIGN LUXE",
+        "II ULTRA DESIGN",
+        "II ULTRA DESIGN LUXE",
+        "II V6 DESIGN",
+        "II V6 DESIGN LUXE"
       ],
       "A5": [
         "Ambition",
@@ -59116,43 +58960,66 @@
         "Design"
       ],
       "Q2": [
-        ". BUSINESS EXECUTIVE",
-        ". DESIGN",
-        ". DESIGN BVM6",
-        ". S LINE",
-        ". S LINE BVM6",
-        ". S LINE PLUS",
-        "ADVANCED",
-        "ADVANCED BVM6",
-        "AUDI Q2 DE",
-        "AVUS",
-        "AVUS BVM6",
-        "BLACK EDITION",
-        "BUSINESS EXECUTIVE",
-        "BUSINESS EXECUTIVE BVM6",
+        "(2)",
+        "(2) 1.0 TFSI DESIGN BVM6",
+        "(2) 1.5 DESIGN",
+        "(2) 1.5 DESIGN BVM6",
+        "(2) 1.5 S LINE",
+        "(2) 1.5 S LINE BVM6",
+        "(2) 1.5 S LINE PLUS",
+        "(2) 2.0 BUSINESS EXECUTIVE",
+        "(2) 2.0 DESIGN",
+        "(2) 2.0 DESIGN BVM6",
+        "(2) 2.0 S LINE",
+        "(2) 2.0 S LINE PLUS",
+        "(2) 6CV ADVANCED",
+        "(2) 6CV BUSINESS LINE",
+        "(2) 6CV DESIGN",
+        "(2) 6CV DESIGN LUXE",
+        "(2) 6CV S LINE",
+        "(2) 6CV S LINE PLUS",
+        "(2) ADVANCED",
+        "(2) ADVANCED BVM6",
+        "(2) AVUS",
+        "(2) AVUS BVM6",
+        "(2) BLACK EDITION",
+        "(2) BUSINESS EXECUTIVE",
+        "(2) BUSINESS EXECUTIVE BVM6",
+        "(2) BUSINESS LINE",
+        "(2) DESIGN",
+        "(2) DESIGN BVM6",
+        "(2) DESIGN LUXE",
+        "(2) S LINE",
+        "(2) S LINE BVM6",
+        "(2) S LINE PLUS",
+        "(2) TFSI",
+        "(2) TFSI ADVANCED",
+        "(2) TFSI BUSINESS EXECUTIVE BVM6",
+        "(2) TFSI BUSINESS LINE",
+        "(2) TFSI DESIGN",
+        "(2) TFSI DESIGN BVM6",
+        "(2) TFSI DESIGN LUXE",
+        "(2) TFSI S LINE",
+        "(2) TFSI S LINE PLUS",
         "BUSINESS LINE",
-        "COD",
-        "COD BUSINESS LINE",
-        "COD DESIGN",
-        "COD DESIGN LUXE",
-        "COD LAUNCH EDITION",
-        "COD LAUNCH EDITION LUXE",
-        "COD S LINE",
-        "COD SPORT",
         "DESIGN",
-        "DESIGN BVM6",
         "DESIGN LUXE",
         "LAUNCH EDITION",
         "LAUNCH EDITION LUXE",
         "MIDNIGHT SERIES",
         "S LINE",
-        "S LINE BVM6",
         "S LINE PLUS",
         "SPORT",
         "SPORT LIMITED",
-        "TFSI COD MIDNIGHT SERIES",
-        "TFSI COD S LINE PLUS",
-        "TFSI COD SPORT LIMITED"
+        "TFSI",
+        "TFSI BUSINESS LINE",
+        "TFSI DESIGN",
+        "TFSI DESIGN LUXE",
+        "TFSI MIDNIGHT SERIES",
+        "TFSI S LINE",
+        "TFSI S LINE PLUS",
+        "TFSI SPORT",
+        "TFSI SPORT LIMITED"
       ],
       "Q3": [
         "Ambition",
@@ -59205,10 +59072,38 @@
         "S line Competition"
       ],
       "Q4 Sportback e-tron": [
-        "Design",
-        "S line",
-        "S line Competition",
-        "Black Edition"
+        "(2) SPORTBACK",
+        "(2) SPORTBACK BUSINESS EXECUTIVE",
+        "(2) SPORTBACK KWH",
+        "(2) SPORTBACK PERFORMANCE BUSINESS EXECUTIVE KWH",
+        "(2) SPORTBACK PERFORMANCE KWH",
+        "(2) SPORTBACK PERFORMANCE S LINE KWH",
+        "(2) SPORTBACK S LINE",
+        "(2) SPORTBACK S LINE KWH",
+        "55KWH",
+        "55KWH DESIGN LUXE",
+        "55KWH EDITION ONE",
+        "55KWH EXECUTIVE",
+        "55KWH S LINE",
+        "82KWH AVUS",
+        "82KWH BUSINESS EXECUTIVE",
+        "82KWH DESIGN",
+        "82KWH S LINE",
+        "CH KWH AVUS",
+        "CH KWH BUSINESS EXECUTIVE",
+        "CH KWH S LINE",
+        "DESIGN LUXE KWH",
+        "EXECUTIVE KWH",
+        "KW KWH",
+        "KWH",
+        "KWH AVUS",
+        "KWH BUSINESS EXECUTIVE",
+        "KWH DESIGN",
+        "KWH DESIGN LUXE",
+        "KWH EDITION ONE",
+        "KWH EXECUTIVE",
+        "KWH S LINE",
+        "S LINE KWH"
       ],
       "TT": [
         "Ambition",
@@ -59322,10 +59217,25 @@
         "Line"
       ],
       "A4 Cabriolet": [
-        "Ambition",
-        "Attraction",
-        "S line",
-        "S4"
+        "1.8 T AMBIENTE",
+        "1.8 T AMBIENTE MULTITRONIC",
+        "1.8 T DESIGN EDITION",
+        "1.8 T DESIGN EDITION MULTITRONIC",
+        "2.0 T FSI AMBIENTE MULTITRONIC",
+        "2.0 T FSI AMBITION LUXE MULTITRONIC",
+        "2.0 T FSI ATTRACTION MULTITRONIC",
+        "2.0 T FSI S LINE MULTITRONIC",
+        "AMBIENTE",
+        "AMBIENTE MULTITRONIC",
+        "AMBITION LUXE",
+        "AMBITION LUXE MULTITRONIC",
+        "ATTRACTION",
+        "ATTRACTION MULTITRONIC",
+        "DESIGN EDITION",
+        "DESIGN EDITION MULTITRONIC",
+        "DESIGN MULTITRONIC",
+        "S LINE",
+        "S LINE MULTITRONIC"
       ],
       "A5 Avant": [
         "S line",
