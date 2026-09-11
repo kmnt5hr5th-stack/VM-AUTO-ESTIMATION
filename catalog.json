@@ -28244,6 +28244,62 @@
           "yearStart": 2006,
           "yearEnd": 2012
         }
+      ],
+      "A3 Cabriolet 2e Génération": [
+        {
+          "name": "1.6 102",
+          "fuel": "Essence",
+          "yearStart": 2008,
+          "yearEnd": 2009
+        },
+        {
+          "name": "1.2 TFSI 105",
+          "fuel": "Essence",
+          "yearStart": 2010,
+          "yearEnd": 2013
+        },
+        {
+          "name": "1.4 TFSI 125",
+          "fuel": "Essence",
+          "yearStart": 2011,
+          "yearEnd": 2012
+        },
+        {
+          "name": "1.8 TFSI 160",
+          "fuel": "Essence",
+          "yearStart": 2008,
+          "yearEnd": 2013
+        },
+        {
+          "name": "2.0 TFSI 200",
+          "fuel": "Essence",
+          "yearStart": 2008,
+          "yearEnd": 2013
+        },
+        {
+          "name": "1.9 TDI 105",
+          "fuel": "Diesel",
+          "yearStart": 2008,
+          "yearEnd": 2009
+        },
+        {
+          "name": "1.6 TDI 105",
+          "fuel": "Diesel",
+          "yearStart": 2009,
+          "yearEnd": 2013
+        },
+        {
+          "name": "1.6 TDI 110",
+          "fuel": "Diesel",
+          "yearStart": 2014,
+          "yearEnd": 2014
+        },
+        {
+          "name": "2.0 TDI 140",
+          "fuel": "Diesel",
+          "yearStart": 2008,
+          "yearEnd": 2014
+        }
       ]
     },
     "Ford": {
@@ -55008,6 +55064,15 @@
         "Business Line",
         "Design Edition",
         "Exclusive Line",
+        "S Line",
+        "S Line Plus",
+        "Streamline"
+      ],
+      "A3 Cabriolet 2e Génération": [
+        "Ambiente",
+        "Ambition",
+        "Ambition Luxe",
+        "Attraction",
         "S Line",
         "S Line Plus",
         "Streamline"
