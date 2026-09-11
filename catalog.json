@@ -28638,6 +28638,28 @@
           "yearStart": 2017,
           "yearEnd": 2019
         }
+      ],
+      "A3 4e Génération Allstreet": [
+        {
+          "name": "1.5 TFSI 150",
+          "fuel": "Essence",
+          "yearStart": 2024
+        },
+        {
+          "name": "2.0 TDI 150",
+          "fuel": "Diesel",
+          "yearStart": 2024
+        },
+        {
+          "name": "1.4 TFSIe 204",
+          "fuel": "Hybride rechargeable",
+          "yearStart": 2024
+        },
+        {
+          "name": "1.5 TFSIe 204",
+          "fuel": "Hybride rechargeable",
+          "yearStart": 2026
+        }
       ]
     },
     "Ford": {
@@ -55465,6 +55487,10 @@
         "Design Luxe",
         "Sport",
         "Sport Limited"
+      ],
+      "A3 4e Génération Allstreet": [
+        "Avus",
+        "Design"
       ]
     },
     "Fiat": {
