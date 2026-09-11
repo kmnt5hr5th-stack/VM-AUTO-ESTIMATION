@@ -7776,64 +7776,82 @@
       ],
       "T-Roc": [
         {
-          "name": "1.0 TSI 110",
-          "fuel": "Essence",
-          "yearStart": 2022,
-          "yearEnd": 2026
-        },
-        {
-          "name": "1.0 TSI 116",
+          "name": "1.0 TSI 115",
           "fuel": "Essence",
           "yearStart": 2017,
-          "yearEnd": 2026
+          "yearEnd": 2020
         },
         {
           "name": "1.5 TSI 150",
           "fuel": "Essence",
-          "yearStart": 2021,
-          "yearEnd": 2026
+          "yearStart": 2017,
+          "yearEnd": 2020
         },
         {
-          "name": "2.0 TSI 300",
+          "name": "2.0 TSI 190",
           "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2019
+          "yearStart": 2017,
+          "yearEnd": 2022
+        },
+        {
+          "name": "1.0 TSI 110",
+          "fuel": "Essence",
+          "yearStart": 2020,
+          "yearEnd": 2024
+        },
+        {
+          "name": "1.0 TSI 116",
+          "fuel": "Essence",
+          "yearStart": 2024
+        },
+        {
+          "name": "1.5 TSI EVO 150",
+          "fuel": "Essence",
+          "yearStart": 2021
         },
         {
           "name": "1.6 TDI 115",
           "fuel": "Diesel",
           "yearStart": 2018,
-          "yearEnd": 2018
+          "yearEnd": 2021
+        },
+        {
+          "name": "2.0 TDI 115",
+          "fuel": "Diesel",
+          "yearStart": 2021,
+          "yearEnd": 2023
+        },
+        {
+          "name": "2.0 TDI 116",
+          "fuel": "Diesel",
+          "yearStart": 2022,
+          "yearEnd": 2025
         },
         {
           "name": "2.0 TDI 150",
           "fuel": "Diesel",
-          "yearStart": 2022,
-          "yearEnd": 2026
+          "yearStart": 2017,
+          "yearEnd": 2025
         },
         {
-          "name": "1.5 136",
-          "fuel": "Hybride",
-          "yearStart": 2012,
-          "yearEnd": 2026
+          "name": "1.5 eTSI EVO2 116",
+          "fuel": "Essence",
+          "yearStart": 2025
         },
         {
-          "name": "1.5 170",
-          "fuel": "Hybride",
-          "yearStart": 2012,
-          "yearEnd": 2026
+          "name": "1.5 eTSI EVO2 150",
+          "fuel": "Essence",
+          "yearStart": 2025
         },
         {
-          "name": "1.5 eTSI 116",
+          "name": "1.5 Hybrid 136",
           "fuel": "Hybride",
-          "yearStart": 2012,
-          "yearEnd": 2026
+          "yearStart": 2025
         },
         {
-          "name": "1.5 eTSI 150",
+          "name": "1.5 Hybrid 170",
           "fuel": "Hybride",
-          "yearStart": 2012,
-          "yearEnd": 2026
+          "yearStart": 2025
         }
       ],
       "Tiguan": [
@@ -53309,13 +53327,26 @@
         "R-Line"
       ],
       "T-Roc": [
-        "Edition",
-        "Exclusive",
+        "Active",
+        "Business",
+        "Carat",
+        "Carat Exclusive",
+        "First Edition",
+        "IQ.Drive",
         "Life",
+        "Life Business",
+        "Life Plus",
         "Lounge",
+        "Lounge Business",
         "R-Line",
+        "R-Line Edition",
         "Style",
-        "Trend"
+        "Style Edition",
+        "Style Exclusive",
+        "T-Roc",
+        "Trend",
+        "United",
+        "VW Edition"
       ],
       "T-Cross": [
         "Edition",
