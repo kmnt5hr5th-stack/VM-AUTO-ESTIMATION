@@ -29576,6 +29576,279 @@
           "yearStart": 2011,
           "yearEnd": 2016
         }
+      ],
+      "A5 2e Génération": [
+        {
+          "name": "2.0 TDI 150",
+          "fuel": "Diesel",
+          "yearStart": 2017,
+          "yearEnd": 2018
+        },
+        {
+          "name": "2.0 TDI 163",
+          "fuel": "Diesel",
+          "yearStart": 2018
+        },
+        {
+          "name": "2.0 TDI 190",
+          "fuel": "Diesel",
+          "yearStart": 2016,
+          "yearEnd": 2018
+        },
+        {
+          "name": "2.0 TDI 204",
+          "fuel": "Diesel",
+          "yearStart": 2018
+        },
+        {
+          "name": "3.0 TDI 218",
+          "fuel": "Diesel",
+          "yearStart": 2016,
+          "yearEnd": 2018
+        },
+        {
+          "name": "3.0 TDI 231",
+          "fuel": "Diesel",
+          "yearStart": 2019,
+          "yearEnd": 2020
+        },
+        {
+          "name": "3.0 TDI 272",
+          "fuel": "Diesel",
+          "yearStart": 2017,
+          "yearEnd": 2017
+        },
+        {
+          "name": "3.0 TDI 286",
+          "fuel": "Diesel",
+          "yearStart": 2017,
+          "yearEnd": 2021
+        },
+        {
+          "name": "1.4 TFSI 150",
+          "fuel": "Essence",
+          "yearStart": 2017,
+          "yearEnd": 2018
+        },
+        {
+          "name": "1.5 TFSI 150",
+          "fuel": "Essence",
+          "yearStart": 2018,
+          "yearEnd": 2024
+        },
+        {
+          "name": "2.0 TFSI 190",
+          "fuel": "Essence",
+          "yearStart": 2016,
+          "yearEnd": 2018
+        },
+        {
+          "name": "2.0 TFSI 204",
+          "fuel": "Essence",
+          "yearStart": 2018
+        },
+        {
+          "name": "2.0 TFSI 245",
+          "fuel": "Essence",
+          "yearStart": 2019,
+          "yearEnd": 2021
+        },
+        {
+          "name": "2.0 TFSI 252",
+          "fuel": "Essence",
+          "yearStart": 2016,
+          "yearEnd": 2018
+        }
+      ],
+      "A5 Sportback 2e Génération": [
+        {
+          "name": "2.0 TDI 150",
+          "fuel": "Diesel",
+          "yearStart": 2017,
+          "yearEnd": 2018
+        },
+        {
+          "name": "2.0 TDI 163",
+          "fuel": "Diesel",
+          "yearStart": 2018,
+          "yearEnd": 2025
+        },
+        {
+          "name": "2.0 TDI 190",
+          "fuel": "Diesel",
+          "yearStart": 2016,
+          "yearEnd": 2018
+        },
+        {
+          "name": "2.0 TDI 204",
+          "fuel": "Diesel",
+          "yearStart": 2019
+        },
+        {
+          "name": "3.0 TDI 218",
+          "fuel": "Diesel",
+          "yearStart": 2016,
+          "yearEnd": 2018
+        },
+        {
+          "name": "3.0 TDI 231",
+          "fuel": "Diesel",
+          "yearStart": 2019,
+          "yearEnd": 2020
+        },
+        {
+          "name": "3.0 TDI 272",
+          "fuel": "Diesel",
+          "yearStart": 2017,
+          "yearEnd": 2017
+        },
+        {
+          "name": "3.0 TDI 286",
+          "fuel": "Diesel",
+          "yearStart": 2017,
+          "yearEnd": 2021
+        },
+        {
+          "name": "1.4 TFSI 150",
+          "fuel": "Essence",
+          "yearStart": 2017,
+          "yearEnd": 2018
+        },
+        {
+          "name": "1.5 TFSI 150",
+          "fuel": "Essence",
+          "yearStart": 2019,
+          "yearEnd": 2024
+        },
+        {
+          "name": "2.0 TFSI 190",
+          "fuel": "Essence",
+          "yearStart": 2017,
+          "yearEnd": 2018
+        },
+        {
+          "name": "2.0 TFSI 204",
+          "fuel": "Essence",
+          "yearStart": 2019,
+          "yearEnd": 2025
+        },
+        {
+          "name": "2.0 TFSI 245",
+          "fuel": "Essence",
+          "yearStart": 2019,
+          "yearEnd": 2021
+        },
+        {
+          "name": "2.0 TFSI 252",
+          "fuel": "Essence",
+          "yearStart": 2016,
+          "yearEnd": 2018
+        }
+      ],
+      "A5 Cabriolet 2e Génération": [
+        {
+          "name": "2.0 TDI 163",
+          "fuel": "Diesel",
+          "yearStart": 2020
+        },
+        {
+          "name": "2.0 TDI 190",
+          "fuel": "Diesel",
+          "yearStart": 2017,
+          "yearEnd": 2018
+        },
+        {
+          "name": "2.0 TDI 204",
+          "fuel": "Diesel",
+          "yearStart": 2018
+        },
+        {
+          "name": "3.0 TDI 218",
+          "fuel": "Diesel",
+          "yearStart": 2017,
+          "yearEnd": 2018
+        },
+        {
+          "name": "3.0 TDI 286",
+          "fuel": "Diesel",
+          "yearStart": 2017
+        },
+        {
+          "name": "2.0 TFSI 190",
+          "fuel": "Essence",
+          "yearStart": 2017,
+          "yearEnd": 2018
+        },
+        {
+          "name": "2.0 TFSI 204",
+          "fuel": "Essence",
+          "yearStart": 2018
+        },
+        {
+          "name": "2.0 TFSI 245",
+          "fuel": "Essence",
+          "yearStart": 2019
+        },
+        {
+          "name": "2.0 TFSI 252",
+          "fuel": "Essence",
+          "yearStart": 2017,
+          "yearEnd": 2018
+        }
+      ],
+      "A5 3e Génération Avant": [
+        {
+          "name": "2.0 TDI 204",
+          "fuel": "Diesel",
+          "yearStart": 2024
+        },
+        {
+          "name": "2.0 TFSI 150",
+          "fuel": "Essence",
+          "yearStart": 2024
+        },
+        {
+          "name": "2.0 TFSI 204",
+          "fuel": "Essence",
+          "yearStart": 2024
+        },
+        {
+          "name": "2.0 TFSI 299",
+          "fuel": "Essence",
+          "yearStart": 2025
+        },
+        {
+          "name": "2.0 TFSI 367",
+          "fuel": "Essence",
+          "yearStart": 2025
+        }
+      ],
+      "A5 3e Génération": [
+        {
+          "name": "2.0 TDI 204",
+          "fuel": "Diesel",
+          "yearStart": 2024
+        },
+        {
+          "name": "2.0 TFSI 150",
+          "fuel": "Essence",
+          "yearStart": 2024
+        },
+        {
+          "name": "2.0 TFSI 204",
+          "fuel": "Essence",
+          "yearStart": 2024
+        },
+        {
+          "name": "2.0 TFSI 299",
+          "fuel": "Essence",
+          "yearStart": 2025
+        },
+        {
+          "name": "2.0 TFSI 367",
+          "fuel": "Essence",
+          "yearStart": 2025
+        }
       ]
     },
     "Ford": {
@@ -56502,6 +56775,57 @@
         "Avus",
         "Business Line",
         "S Line"
+      ],
+      "A5 2e Génération": [
+        "AVUS",
+        "COMPETITION",
+        "DESIGN",
+        "DESIGN LUXE",
+        "S EDITION",
+        "S LINE",
+        "ULTRA",
+        "ULTRA AVUS",
+        "ULTRA DESIGN",
+        "ULTRA DESIGN LUXE",
+        "ULTRA S LINE"
+      ],
+      "A5 Sportback 2e Génération": [
+        "AVUS",
+        "BUSINESS EXECUTIVE",
+        "BUSINESS LINE",
+        "COMPETITION",
+        "DESIGN",
+        "DESIGN LUXE",
+        "S EDITION",
+        "S LINE",
+        "ULTRA",
+        "ULTRA AVUS",
+        "ULTRA BUSINESS LINE",
+        "ULTRA DESIGN",
+        "ULTRA DESIGN LUXE",
+        "ULTRA S LINE"
+      ],
+      "A5 Cabriolet 2e Génération": [
+        "AMBIENTE",
+        "AVUS",
+        "DESIGN",
+        "DESIGN LUXE",
+        "S LINE",
+        "ULTRA",
+        "ULTRA AVUS",
+        "ULTRA DESIGN",
+        "ULTRA DESIGN LUXE",
+        "ULTRA S LINE"
+      ],
+      "A5 3e Génération Avant": [
+        "BUSINESS EXECUTIVE",
+        "DESIGN",
+        "S LINE"
+      ],
+      "A5 3e Génération": [
+        "BUSINESS EXECUTIVE",
+        "DESIGN",
+        "S LINE"
       ]
     },
     "Fiat": {
