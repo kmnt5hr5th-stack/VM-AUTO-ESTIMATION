@@ -29264,6 +29264,318 @@
           "yearStart": 2019,
           "yearEnd": 2020
         }
+      ],
+      "A5 1re Génération": [
+        {
+          "name": "1.8 TFSI 160",
+          "fuel": "Essence",
+          "yearStart": 2009,
+          "yearEnd": 2011
+        },
+        {
+          "name": "1.8 TFSI 170",
+          "fuel": "Essence",
+          "yearStart": 2007,
+          "yearEnd": 2015
+        },
+        {
+          "name": "1.8 TFSI 177",
+          "fuel": "Essence",
+          "yearStart": 2015,
+          "yearEnd": 2016
+        },
+        {
+          "name": "2.0 TFSI 180",
+          "fuel": "Essence",
+          "yearStart": 2008,
+          "yearEnd": 2011
+        },
+        {
+          "name": "2.0 TFSI 211",
+          "fuel": "Essence",
+          "yearStart": 2008,
+          "yearEnd": 2013
+        },
+        {
+          "name": "2.0 TFSI 225",
+          "fuel": "Essence",
+          "yearStart": 2013,
+          "yearEnd": 2015
+        },
+        {
+          "name": "2.0 TFSI 230",
+          "fuel": "Essence",
+          "yearStart": 2015,
+          "yearEnd": 2016
+        },
+        {
+          "name": "3.0 TFSI 272",
+          "fuel": "Essence",
+          "yearStart": 2011,
+          "yearEnd": 2016
+        },
+        {
+          "name": "2.0 TDI 170",
+          "fuel": "Diesel",
+          "yearStart": 2008,
+          "yearEnd": 2011
+        },
+        {
+          "name": "2.0 TDI 177",
+          "fuel": "Diesel",
+          "yearStart": 2011,
+          "yearEnd": 2014
+        },
+        {
+          "name": "2.0 TDI 163",
+          "fuel": "Diesel",
+          "yearStart": 2014,
+          "yearEnd": 2016
+        },
+        {
+          "name": "2.0 TDI 190",
+          "fuel": "Diesel",
+          "yearStart": 2014,
+          "yearEnd": 2016
+        },
+        {
+          "name": "3.0 TDI 240",
+          "fuel": "Diesel",
+          "yearStart": 2008,
+          "yearEnd": 2011
+        },
+        {
+          "name": "3.0 TDI 204",
+          "fuel": "Diesel",
+          "yearStart": 2011,
+          "yearEnd": 2015
+        },
+        {
+          "name": "3.0 TDI 218",
+          "fuel": "Diesel",
+          "yearStart": 2015,
+          "yearEnd": 2016
+        },
+        {
+          "name": "3.0 TDI 245",
+          "fuel": "Diesel",
+          "yearStart": 2011,
+          "yearEnd": 2016
+        }
+      ],
+      "A5 Cabriolet 1re Génération": [
+        {
+          "name": "1.8 TFSI 160",
+          "fuel": "Essence",
+          "yearStart": 2009,
+          "yearEnd": 2011
+        },
+        {
+          "name": "1.8 TFSI 170",
+          "fuel": "Essence",
+          "yearStart": 2011,
+          "yearEnd": 2015
+        },
+        {
+          "name": "1.8 TFSI 177",
+          "fuel": "Essence",
+          "yearStart": 2015,
+          "yearEnd": 2017
+        },
+        {
+          "name": "2.0 TFSI 180",
+          "fuel": "Essence",
+          "yearStart": 2009,
+          "yearEnd": 2011
+        },
+        {
+          "name": "2.0 TFSI 211",
+          "fuel": "Essence",
+          "yearStart": 2009,
+          "yearEnd": 2013
+        },
+        {
+          "name": "2.0 TFSI 225",
+          "fuel": "Essence",
+          "yearStart": 2013,
+          "yearEnd": 2015
+        },
+        {
+          "name": "2.0 TFSI 230",
+          "fuel": "Essence",
+          "yearStart": 2015,
+          "yearEnd": 2017
+        },
+        {
+          "name": "3.0 TFSI 272",
+          "fuel": "Essence",
+          "yearStart": 2011,
+          "yearEnd": 2017
+        },
+        {
+          "name": "2.0 TDI 170",
+          "fuel": "Diesel",
+          "yearStart": 2009,
+          "yearEnd": 2011
+        },
+        {
+          "name": "2.0 TDI 143",
+          "fuel": "Diesel",
+          "yearStart": 2011,
+          "yearEnd": 2013
+        },
+        {
+          "name": "2.0 TDI 177",
+          "fuel": "Diesel",
+          "yearStart": 2011,
+          "yearEnd": 2014
+        },
+        {
+          "name": "2.0 TDI 150",
+          "fuel": "Diesel",
+          "yearStart": 2013,
+          "yearEnd": 2017
+        },
+        {
+          "name": "2.0 TDI 190",
+          "fuel": "Diesel",
+          "yearStart": 2014,
+          "yearEnd": 2017
+        },
+        {
+          "name": "3.0 TDI 240",
+          "fuel": "Diesel",
+          "yearStart": 2009,
+          "yearEnd": 2011
+        },
+        {
+          "name": "3.0 TDI 204",
+          "fuel": "Diesel",
+          "yearStart": 2011,
+          "yearEnd": 2015
+        },
+        {
+          "name": "3.0 TDI 245",
+          "fuel": "Diesel",
+          "yearStart": 2011,
+          "yearEnd": 2017
+        }
+      ],
+      "A5 Sportback 1re Génération": [
+        {
+          "name": "1.8 TFSI 160",
+          "fuel": "Essence",
+          "yearStart": 2009,
+          "yearEnd": 2011
+        },
+        {
+          "name": "1.8 TFSI 170",
+          "fuel": "Essence",
+          "yearStart": 2011,
+          "yearEnd": 2015
+        },
+        {
+          "name": "1.8 TFSI 177",
+          "fuel": "Essence",
+          "yearStart": 2015,
+          "yearEnd": 2016
+        },
+        {
+          "name": "2.0 TFSI 180",
+          "fuel": "Essence",
+          "yearStart": 2009,
+          "yearEnd": 2011
+        },
+        {
+          "name": "2.0 TFSI 211",
+          "fuel": "Essence",
+          "yearStart": 2009,
+          "yearEnd": 2013
+        },
+        {
+          "name": "2.0 TFSI 225",
+          "fuel": "Essence",
+          "yearStart": 2013,
+          "yearEnd": 2015
+        },
+        {
+          "name": "2.0 TFSI 230",
+          "fuel": "Essence",
+          "yearStart": 2015,
+          "yearEnd": 2016
+        },
+        {
+          "name": "3.0 TFSI 272",
+          "fuel": "Essence",
+          "yearStart": 2011,
+          "yearEnd": 2016
+        },
+        {
+          "name": "2.0 TDI 136",
+          "fuel": "Diesel",
+          "yearStart": 2014,
+          "yearEnd": 2016
+        },
+        {
+          "name": "2.0 TDI 143",
+          "fuel": "Diesel",
+          "yearStart": 2009,
+          "yearEnd": 2014
+        },
+        {
+          "name": "2.0 TDI 150",
+          "fuel": "Diesel",
+          "yearStart": 2013,
+          "yearEnd": 2016
+        },
+        {
+          "name": "2.0 TDI 163",
+          "fuel": "Diesel",
+          "yearStart": 2014,
+          "yearEnd": 2016
+        },
+        {
+          "name": "2.0 TDI 170",
+          "fuel": "Diesel",
+          "yearStart": 2009,
+          "yearEnd": 2011
+        },
+        {
+          "name": "2.0 TDI 177",
+          "fuel": "Diesel",
+          "yearStart": 2011,
+          "yearEnd": 2014
+        },
+        {
+          "name": "2.0 TDI 190",
+          "fuel": "Diesel",
+          "yearStart": 2014,
+          "yearEnd": 2016
+        },
+        {
+          "name": "3.0 TDI 240",
+          "fuel": "Diesel",
+          "yearStart": 2009,
+          "yearEnd": 2011
+        },
+        {
+          "name": "3.0 TDI 204",
+          "fuel": "Diesel",
+          "yearStart": 2011,
+          "yearEnd": 2015
+        },
+        {
+          "name": "3.0 TDI 218",
+          "fuel": "Diesel",
+          "yearStart": 2015,
+          "yearEnd": 2016
+        },
+        {
+          "name": "3.0 TDI 245",
+          "fuel": "Diesel",
+          "yearStart": 2011,
+          "yearEnd": 2016
+        }
       ]
     },
     "Ford": {
@@ -56167,6 +56479,29 @@
         "S Edition",
         "S Line",
         "Sport"
+      ],
+      "A5 1re Génération": [
+        "Ambiente",
+        "Ambition Luxe",
+        "Attraction",
+        "Avus",
+        "S Line",
+        "Sport Design"
+      ],
+      "A5 Cabriolet 1re Génération": [
+        "Ambiente",
+        "Ambition Luxe",
+        "Avus",
+        "S Line"
+      ],
+      "A5 Sportback 1re Génération": [
+        "Ambiente",
+        "Ambiente Plus",
+        "Ambition Luxe",
+        "Attraction",
+        "Avus",
+        "Business Line",
+        "S Line"
       ]
     },
     "Fiat": {
