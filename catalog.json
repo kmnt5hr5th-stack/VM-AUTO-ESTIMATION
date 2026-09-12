@@ -11614,51 +11614,105 @@
       ],
       "Auris": [
         {
-          "name": "1.33 VVT-i 99ch",
+          "name": "VVT-i 100",
           "fuel": "Essence",
           "yearStart": 2007,
-          "yearEnd": 2012
-        },
-        {
-          "name": "1.6 VVT-i 132ch",
-          "fuel": "Essence",
-          "yearStart": 2007,
-          "yearEnd": 2015
-        },
-        {
-          "name": "2.0 VVT-i 156ch",
-          "fuel": "Essence",
-          "yearStart": 2007,
-          "yearEnd": 2015
-        },
-        {
-          "name": "1.4 D-4D 90ch",
-          "fuel": "Diesel",
-          "yearStart": 2007,
-          "yearEnd": 2015
-        },
-        {
-          "name": "2.2 D-4D 150ch",
-          "fuel": "Diesel",
-          "yearStart": 2007,
-          "yearEnd": 2012
-        },
-        {
-          "name": "2.2 D-CAT 177ch",
-          "fuel": "Diesel",
-          "yearStart": 2007,
-          "yearEnd": 2010
-        },
-        {
-          "name": "1.2 T 116ch",
-          "fuel": "Essence",
-          "yearStart": 2015,
           "yearEnd": 2019
         },
         {
-          "name": "1.8 Hybrid 136ch",
+          "name": "D-4D 126",
+          "fuel": "Diesel",
+          "yearStart": 2007,
+          "yearEnd": 2019
+        },
+        {
+          "name": "VVT-i 132",
+          "fuel": "Essence",
+          "yearStart": 2007,
+          "yearEnd": 2019
+        },
+        {
+          "name": "136",
+          "fuel": "Essence",
+          "yearStart": 2007,
+          "yearEnd": 2019
+        },
+        {
+          "name": "VVT-i 136",
+          "fuel": "Essence",
+          "yearStart": 2007,
+          "yearEnd": 2019
+        },
+        {
+          "name": "D-4D 177",
+          "fuel": "Diesel",
+          "yearStart": 2007,
+          "yearEnd": 2019
+        },
+        {
+          "name": "D-4D 90",
+          "fuel": "Diesel",
+          "yearStart": 2007,
+          "yearEnd": 2019
+        },
+        {
+          "name": "VVT-i 124",
+          "fuel": "Essence",
+          "yearStart": 2007,
+          "yearEnd": 2019
+        },
+        {
+          "name": "VVT-i 97",
+          "fuel": "Essence",
+          "yearStart": 2007,
+          "yearEnd": 2019
+        },
+        {
+          "name": "116",
+          "fuel": "Essence",
+          "yearStart": 2007,
+          "yearEnd": 2019
+        },
+        {
+          "name": "1.3 VVT-i 100",
+          "fuel": "Essence",
+          "yearStart": 2007,
+          "yearEnd": 2019
+        },
+        {
+          "name": "1.4 D-4D 90",
+          "fuel": "Diesel",
+          "yearStart": 2007,
+          "yearEnd": 2019
+        },
+        {
+          "name": "1.6 D-4D 112",
+          "fuel": "Diesel",
+          "yearStart": 2007,
+          "yearEnd": 2019
+        },
+        {
+          "name": "1.8 Hybride 136",
           "fuel": "Hybride",
-          "yearStart": 2012,
+          "yearStart": 2007,
+          "yearEnd": 2019
+        },
+        {
+          "name": "D-4D 112",
+          "fuel": "Diesel",
+          "yearStart": 2007,
+          "yearEnd": 2019
+        },
+        {
+          "name": "D-4D 124",
+          "fuel": "Diesel",
+          "yearStart": 2007,
+          "yearEnd": 2019
+        },
+        {
+          "name": "Hybride 136",
+          "fuel": "Hybride",
+          "yearStart": 2007,
           "yearEnd": 2019
         }
       ],
@@ -39947,158 +40001,224 @@
       ],
       "DS 3 Crossback": [
         {
-          "name": "1.2 PureTech 100ch",
+          "name": "1.2 PureTech 100",
           "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2023
+          "yearStart": 2018
         },
         {
-          "name": "1.2 PureTech 130ch",
+          "name": "1.2 PureTech 130",
           "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2023
+          "yearStart": 2018
         },
         {
-          "name": "1.2 PureTech 155ch",
+          "name": "1.2 PureTech 155",
           "fuel": "Essence",
-          "yearStart": 2021,
-          "yearEnd": 2023
+          "yearStart": 2018
         },
         {
-          "name": "1.5 BlueHDi 100ch",
+          "name": "1.5 BlueHDi 100",
           "fuel": "Diesel",
-          "yearStart": 2019,
-          "yearEnd": 2022
+          "yearStart": 2018
         },
         {
-          "name": "1.5 BlueHDi 130ch",
+          "name": "1.5 BlueHDi 110",
           "fuel": "Diesel",
-          "yearStart": 2019,
-          "yearEnd": 2023
+          "yearStart": 2018
         },
         {
-          "name": "E-Tense 136ch",
+          "name": "1.5 BlueHDi 130",
+          "fuel": "Diesel",
+          "yearStart": 2018
+        },
+        {
+          "name": "électrique 50",
           "fuel": "Électrique",
-          "yearStart": 2019,
-          "yearEnd": 2023
+          "yearStart": 2018
+        },
+        {
+          "name": "1.2 Hybride 136",
+          "fuel": "Hybride",
+          "yearStart": 2018
+        },
+        {
+          "name": "1.2 Hybride 145",
+          "fuel": "Hybride",
+          "yearStart": 2018
+        },
+        {
+          "name": "électrique 156",
+          "fuel": "Électrique",
+          "yearStart": 2018
+        },
+        {
+          "name": "156",
+          "fuel": "Essence",
+          "yearStart": 2018
+        },
+        {
+          "name": "électrique 54",
+          "fuel": "Électrique",
+          "yearStart": 2018
         }
       ],
       "DS 4": [
         {
-          "name": "1.6 THP 155ch",
+          "name": "1.2 PureTech 130",
           "fuel": "Essence",
-          "yearStart": 2011,
-          "yearEnd": 2015
+          "yearStart": 2015
         },
         {
-          "name": "1.6 THP 182ch",
-          "fuel": "Essence",
-          "yearStart": 2011,
-          "yearEnd": 2015
-        },
-        {
-          "name": "1.6 e-HDi 110ch",
+          "name": "1.6 BlueHDi 100",
           "fuel": "Diesel",
-          "yearStart": 2011,
-          "yearEnd": 2015
+          "yearStart": 2015
         },
         {
-          "name": "2.0 HDi 135ch",
+          "name": "1.6 BlueHDi 120",
           "fuel": "Diesel",
-          "yearStart": 2011,
-          "yearEnd": 2015
+          "yearStart": 2015
         },
         {
-          "name": "2.0 HDi 163ch",
+          "name": "1.6 THP 165",
+          "fuel": "Essence",
+          "yearStart": 2015
+        },
+        {
+          "name": "1.6 THP 210",
+          "fuel": "Essence",
+          "yearStart": 2015
+        },
+        {
+          "name": "2.0 BlueHDi 150",
           "fuel": "Diesel",
-          "yearStart": 2011,
-          "yearEnd": 2015
+          "yearStart": 2015
         },
         {
-          "name": "1.2 PureTech 130ch",
-          "fuel": "Essence",
-          "yearStart": 2021,
-          "yearEnd": 2026
-        },
-        {
-          "name": "1.6 PureTech 180ch",
-          "fuel": "Essence",
-          "yearStart": 2021,
-          "yearEnd": 2026
-        },
-        {
-          "name": "1.6 PureTech 225ch",
-          "fuel": "Essence",
-          "yearStart": 2021,
-          "yearEnd": 2026
-        },
-        {
-          "name": "1.5 BlueHDi 130ch",
+          "name": "2.0 BlueHDi 180",
           "fuel": "Diesel",
-          "yearStart": 2021,
-          "yearEnd": 2026
+          "yearStart": 2015
         },
         {
-          "name": "E-Tense 225ch PHEV",
-          "fuel": "Hybride rechargeable",
-          "yearStart": 2021,
-          "yearEnd": 2026
+          "name": "1.6 e-HDi 115",
+          "fuel": "Diesel",
+          "yearStart": 2015
         },
         {
-          "name": "E-Tense 4x4 360ch PHEV",
-          "fuel": "Hybride rechargeable",
-          "yearStart": 2023,
-          "yearEnd": 2026
+          "name": "1.6 HDi 90",
+          "fuel": "Diesel",
+          "yearStart": 2015
+        },
+        {
+          "name": "1.6 THP 200",
+          "fuel": "Essence",
+          "yearStart": 2015
+        },
+        {
+          "name": "1.2 BlueHDi 130",
+          "fuel": "Diesel",
+          "yearStart": 2015
+        },
+        {
+          "name": "1.2 Hybride 136",
+          "fuel": "Hybride",
+          "yearStart": 2015
+        },
+        {
+          "name": "1.2 Hybride 145",
+          "fuel": "Hybride",
+          "yearStart": 2015
+        },
+        {
+          "name": "1.5 BlueHDi 130",
+          "fuel": "Diesel",
+          "yearStart": 2015
+        },
+        {
+          "name": "1.6 225",
+          "fuel": "Essence",
+          "yearStart": 2015
+        },
+        {
+          "name": "1.6 Hybride 225",
+          "fuel": "Hybride",
+          "yearStart": 2015
+        },
+        {
+          "name": "1.6 PureTech 180",
+          "fuel": "Essence",
+          "yearStart": 2015
+        },
+        {
+          "name": "1.6 PureTech 225",
+          "fuel": "Essence",
+          "yearStart": 2015
         }
       ],
       "DS 5": [
         {
-          "name": "1.6 THP 155ch",
-          "fuel": "Essence",
-          "yearStart": 2011,
-          "yearEnd": 2018
-        },
-        {
-          "name": "1.6 THP 165ch",
-          "fuel": "Essence",
-          "yearStart": 2011,
-          "yearEnd": 2018
-        },
-        {
-          "name": "1.6 THP 200ch",
-          "fuel": "Essence",
-          "yearStart": 2011,
-          "yearEnd": 2018
-        },
-        {
-          "name": "2.0 Hybrid4 200ch",
-          "fuel": "Hybride rechargeable",
-          "yearStart": 2011,
-          "yearEnd": 2018
-        },
-        {
-          "name": "1.6 e-HDi 110ch",
-          "fuel": "Diesel",
-          "yearStart": 2011,
-          "yearEnd": 2015
-        },
-        {
-          "name": "2.0 HDi 160ch",
-          "fuel": "Diesel",
-          "yearStart": 2011,
-          "yearEnd": 2015
-        },
-        {
-          "name": "2.0 BlueHDi 150ch",
+          "name": "1.6 BlueHDi 120",
           "fuel": "Diesel",
           "yearStart": 2015,
-          "yearEnd": 2018
+          "yearEnd": 2020
         },
         {
-          "name": "2.0 BlueHDi 180ch",
+          "name": "1.6 e-HDi 115",
           "fuel": "Diesel",
           "yearStart": 2015,
-          "yearEnd": 2018
+          "yearEnd": 2020
+        },
+        {
+          "name": "1.6 THP 155",
+          "fuel": "Essence",
+          "yearStart": 2015,
+          "yearEnd": 2020
+        },
+        {
+          "name": "1.6 THP 165",
+          "fuel": "Essence",
+          "yearStart": 2015,
+          "yearEnd": 2020
+        },
+        {
+          "name": "1.6 THP 200",
+          "fuel": "Essence",
+          "yearStart": 2015,
+          "yearEnd": 2020
+        },
+        {
+          "name": "1.6 THP 210",
+          "fuel": "Essence",
+          "yearStart": 2015,
+          "yearEnd": 2020
+        },
+        {
+          "name": "2.0 BlueHDi 150",
+          "fuel": "Diesel",
+          "yearStart": 2015,
+          "yearEnd": 2020
+        },
+        {
+          "name": "2.0 BlueHDi 180",
+          "fuel": "Diesel",
+          "yearStart": 2015,
+          "yearEnd": 2020
+        },
+        {
+          "name": "2.0 HDi 160",
+          "fuel": "Diesel",
+          "yearStart": 2015,
+          "yearEnd": 2020
+        },
+        {
+          "name": "2.0 Hybride",
+          "fuel": "Hybride",
+          "yearStart": 2015,
+          "yearEnd": 2020
+        },
+        {
+          "name": "2.0",
+          "fuel": "Essence",
+          "yearStart": 2015,
+          "yearEnd": 2020
         }
       ],
       "DS 7 Crossback": [
@@ -40141,60 +40261,133 @@
       ],
       "DS 7": [
         {
-          "name": "1.2 PureTech 130ch",
+          "name": "1.2 PureTech 130",
           "fuel": "Essence",
-          "yearStart": 2022,
-          "yearEnd": 2026
+          "yearStart": 2017
         },
         {
-          "name": "1.6 PureTech 180ch",
-          "fuel": "Essence",
-          "yearStart": 2022,
-          "yearEnd": 2026
-        },
-        {
-          "name": "1.6 PureTech 225ch",
-          "fuel": "Essence",
-          "yearStart": 2022,
-          "yearEnd": 2026
-        },
-        {
-          "name": "1.5 BlueHDi 130ch",
+          "name": "1.5 BlueHDi 130",
           "fuel": "Diesel",
-          "yearStart": 2022,
-          "yearEnd": 2026
+          "yearStart": 2017
         },
         {
-          "name": "E-Tense 225ch PHEV",
-          "fuel": "Hybride rechargeable",
-          "yearStart": 2022,
-          "yearEnd": 2026
+          "name": "1.6 225",
+          "fuel": "Essence",
+          "yearStart": 2017
         },
         {
-          "name": "E-Tense 360ch PHEV 4x4",
-          "fuel": "Hybride rechargeable",
-          "yearStart": 2022,
-          "yearEnd": 2026
+          "name": "1.6 300",
+          "fuel": "Essence",
+          "yearStart": 2017
+        },
+        {
+          "name": "1.6",
+          "fuel": "Essence",
+          "yearStart": 2017
+        },
+        {
+          "name": "1.6 Hybride 360",
+          "fuel": "Hybride",
+          "yearStart": 2017
+        },
+        {
+          "name": "1.6 Hybride 225",
+          "fuel": "Hybride",
+          "yearStart": 2017
+        },
+        {
+          "name": "1.6 Hybride 300",
+          "fuel": "Hybride",
+          "yearStart": 2017
+        },
+        {
+          "name": "1.6 PureTech 180",
+          "fuel": "Essence",
+          "yearStart": 2017
+        },
+        {
+          "name": "1.6 PureTech 225",
+          "fuel": "Essence",
+          "yearStart": 2017
+        },
+        {
+          "name": "2.0 BlueHDi 180",
+          "fuel": "Diesel",
+          "yearStart": 2017
         }
       ],
       "DS 9": [
         {
-          "name": "1.6 PureTech 225ch",
+          "name": "1.6 Hybride 250",
+          "fuel": "Hybride",
+          "yearStart": 2020
+        },
+        {
+          "name": "1.6 Hybride 360",
+          "fuel": "Hybride",
+          "yearStart": 2020
+        },
+        {
+          "name": "1.6 PureTech 225",
           "fuel": "Essence",
-          "yearStart": 2020,
-          "yearEnd": 2026
+          "yearStart": 2020
         },
         {
-          "name": "E-Tense 225ch PHEV",
-          "fuel": "Hybride rechargeable",
-          "yearStart": 2020,
-          "yearEnd": 2026
+          "name": "225",
+          "fuel": "Essence",
+          "yearStart": 2020
         },
         {
-          "name": "E-Tense 360ch PHEV 4x4",
+          "name": "360",
+          "fuel": "Essence",
+          "yearStart": 2020
+        }
+      ],
+      "DS 8": [
+        {
+          "name": "1.2 Hybride 145",
+          "fuel": "Hybride",
+          "yearStart": 2025
+        },
+        {
+          "name": "1.5 BlueHDi 130",
+          "fuel": "Diesel",
+          "yearStart": 2025
+        },
+        {
+          "name": "1.6 Hybride 225",
+          "fuel": "Hybride",
+          "yearStart": 2025
+        },
+        {
+          "name": "1.6 Hybride 240",
+          "fuel": "Hybride",
+          "yearStart": 2025
+        },
+        {
+          "name": "1.6 PHEV 225",
           "fuel": "Hybride rechargeable",
-          "yearStart": 2020,
-          "yearEnd": 2026
+          "yearStart": 2025
+        },
+        {
+          "name": "230",
+          "fuel": "Essence",
+          "yearStart": 2025
+        },
+        {
+          "name": "245",
+          "fuel": "Essence",
+          "yearStart": 2025
+        },
+        {
+          "name": "350",
+          "fuel": "Essence",
+          "yearStart": 2025
+        },
+        {
+          "name": "213",
+          "fuel": "Essence",
+          "yearStart": 2025
         }
       ]
     },
@@ -53073,44 +53266,156 @@
         "ULTRA PRESTIGE ETG6"
       ],
       "DS 3 Crossback": [
-        "So Chic",
-        "Grand Chic",
-        "Performance Line",
-        "La Première",
-        "Rivoli",
-        "Opera",
-        "Bastille",
-        "Business"
+        "ANTOINE DE SAINT EXUPERY",
+        "BASTILLE",
+        "BASTILLE 6",
+        "BASTILLE E-DCT6",
+        "BUSINESS",
+        "CHIC",
+        "CONNECTED CHIC",
+        "E-TENSE PALLAS CRISTAL",
+        "EDITION FRANCE",
+        "EDITION FRANCE E-DCT6",
+        "ESPRIT DE VOYAGE",
+        "ETOILE",
+        "ETOILE E-DCT6",
+        "FAUBOURG",
+        "GRAND CHIC",
+        "INES DE LA FRESSANGE",
+        "JULES VERNE E-DCT6",
+        "LA PREMIERE",
+        "LOUVRE",
+        "MAISON SARAH LAVOINE E-DCT6",
+        "MONTMARTRE",
+        "OPERA",
+        "OPERA E-DCT6",
+        "PALLAS",
+        "PALLAS CRISTAL E-DCT6",
+        "PALLAS E-DCT6",
+        "PALLAS LIGNE BUSINESS E-DCT6",
+        "PERFORMANCE LINE",
+        "PERFORMANCE LINE +",
+        "PERFORMANCE LINE E-DCT6",
+        "RIVOLI",
+        "SO CHIC",
+        "TOITS DE PARIS"
       ],
       "DS 4": [
-        "Trocadero",
-        "Rivoli",
-        "La Première",
-        "Opera",
-        "Bastille",
-        "Louvre",
-        "Montmartre",
-        "Chic",
-        "Performance Line",
-        "So Chic",
-        "Sport Chic"
+        "1955 BV6",
+        "ANTOINE DE SAINT EXUPERY",
+        "BASTILLE",
+        "BASTILLE+",
+        "BE CHIC",
+        "BE CHIC 102G",
+        "BE CHIC BV6",
+        "BUSINESS",
+        "BUSINESS BV6",
+        "CHIC",
+        "CHIC BV6",
+        "CHIC ETG6",
+        "CONNECTED CHIC",
+        "CONNECTED CHIC BV6",
+        "CROSS OPERA",
+        "CROSS RIVOLI",
+        "CROSS TROCADERO",
+        "ESPRIT DE VOYAGE",
+        "ETOILE ALCANTARA",
+        "ETOILE ALCANTARA E-DCT6",
+        "ETOILE CUIR NAPPA",
+        "ETOILE CUIR NAPPA E-DCT6",
+        "ETOILE E-DCT6",
+        "ETOILE NAPPA E-DCT6",
+        "EXECUTIVE",
+        "EXECUTIVE BV6",
+        "EXECUTIVE ETG6",
+        "LA PREMIERE",
+        "LIGNE OR",
+        "LIGNE OR E-DCT6",
+        "MOONDUST",
+        "MOONDUST BV6",
+        "OPERA",
+        "OPERA BLUE",
+        "OPERA BLUE BV6",
+        "PALLAS",
+        "PALLAS E-DCT6",
+        "PALLAS LIGNE BUSINESS",
+        "PALLAS LIGNE BUSINESS E-DCT6",
+        "PERFORMANCE LINE",
+        "PERFORMANCE LINE +",
+        "PERFORMANCE LINE BV6",
+        "RIVOLI",
+        "SO CHIC",
+        "SO CHIC BV6",
+        "SO CHIC ETG6",
+        "SPORT CHIC",
+        "SPORT CHIC BV6",
+        "SPORT CHIC BV6 111G",
+        "TERRE ROUGE",
+        "TROCADERO",
+        "URBAN SHOW",
+        "URBAN SHOW BV6",
+        "URBAN SHOW ETG6"
       ],
       "DS 5": [
-        "So Chic",
-        "Sport Chic",
-        "Ligne Platine",
-        "Hybrid4",
-        "Performance Line"
+        "1955 BV6",
+        "BE CHIC",
+        "BE CHIC BV6",
+        "BE CHIC ETG6",
+        "BUSINESS",
+        "BUSINESS BV6",
+        "BUSINESS ETG6",
+        "CHIC",
+        "CHIC BV6",
+        "CHIC ETG6",
+        "EXECUTIVE",
+        "EXECUTIVE BV6",
+        "EXECUTIVE ETG6",
+        "PERFORMANCE LINE",
+        "PERFORMANCE LINE BV6",
+        "PRESTIGE",
+        "SO CHIC",
+        "SO CHIC BV6",
+        "SO CHIC ETG6",
+        "SPORT CHIC",
+        "SPORT CHIC 113G",
+        "SPORT CHIC BV6",
+        "SPORT CHIC BV6 113G"
       ],
       "DS 7": [
-        "So Chic",
-        "Grand Chic",
-        "Rivoli",
-        "Rivoli+",
-        "La Première",
-        "Opera",
-        "Bastille",
-        "Performance Line"
+        "ANTOINE DE SAINT EXUPERY",
+        "BASTILLE",
+        "BASTILLE +",
+        "BUSINESS",
+        "CHIC",
+        "DRIVE EFFICIENT BUSINESS",
+        "DRIVE EFFICIENT CHIC",
+        "DRIVE EFFICIENT EXECUTIVE",
+        "DRIVE EFFICIENT PERFORMANCE LINE",
+        "DRIVE EFFICIENT SO CHIC",
+        "E-TENSE ANTOINE DE SAINT",
+        "E-TENSE EXECUTIVE",
+        "E-TENSE GRAND CHIC",
+        "E-TENSE PERFORMANCE LINE",
+        "E-TENSE PERFORMANCE LINE +",
+        "E-TENSE SO CHIC",
+        "EDITION FRANCE",
+        "ESPRIT DE VOYAGE",
+        "ETOILE",
+        "EXECUTIVE",
+        "GRAND CHIC",
+        "JULES VERNE",
+        "LA PREMIERE",
+        "LIGNE NOIRE",
+        "LOUVRE",
+        "OPERA",
+        "PALLAS",
+        "PALLAS LIGNE BUSINESS",
+        "PERFORMANCE",
+        "PERFORMANCE LINE",
+        "PERFORMANCE LINE +",
+        "RIVOLI",
+        "RIVOLI 2021",
+        "SO CHIC"
       ],
       "DS 7 Crossback": [
         "So Chic",
@@ -53123,10 +53428,27 @@
         "Performance Line"
       ],
       "DS 9": [
-        "Rivoli",
-        "Rivoli+",
-        "Opera",
-        "La Première"
+        "ESPRIT DE VOYAGE",
+        "OPERA",
+        "OPERA PREMIERE",
+        "PERFORMANCE LINE +",
+        "RIVOLI +"
+      ],
+      "DS 8": [
+        "ETOILE - ALCANTARA",
+        "ETOILE - ALCANTARA E-DCT6",
+        "ETOILE - CUIR NAPPA",
+        "ETOILE ALCANTARA",
+        "ETOILE CUIR NAPPA",
+        "JULES VERNE",
+        "JULES VERNE E-DCT6",
+        "PALLAS",
+        "PALLAS E-DCT6",
+        "PALLAS LIGNE BUSINESS",
+        "PALLAS LIGNE BUSINESS E-DCT6",
+        "PERFORMANCE LINE",
+        "PERFORMANCE LINE DCT7",
+        "PERFORMANCE LINE E-DCT6"
       ]
     },
     "Volkswagen": {
@@ -54705,12 +55027,76 @@
         "Lounge"
       ],
       "Auris": [
-        "Active",
-        "Dynamic",
-        "Design",
-        "Collection",
-        "Sport",
-        "HSD"
+        "1.2T DESIGN",
+        "1.2T DESIGN 16",
+        "1.2T DESIGN BUSINESS",
+        "1.2T DYNAMIC",
+        "1.2T EXECUTIVE",
+        "1.2T TECHNOLINE",
+        "ACTIVE",
+        "ACTIVE PRO",
+        "BUSINESS",
+        "BUSINESS 15\"",
+        "BUSINESS LINE",
+        "CLEAN POWER",
+        "CLEAN POWER 2009",
+        "CLEAN POWER SPORTLINE",
+        "COLLECTION",
+        "CONNECT",
+        "CONNECT 15\"",
+        "CONNECT 17\"",
+        "CONNECT MULTIMODE",
+        "DESIGN",
+        "DESIGN 16",
+        "DESIGN BUSINESS",
+        "DYNAMIC",
+        "DYNAMIC BUSINESS",
+        "DYNAMIC MULTIMODE",
+        "DYNAMIC PACK GPS",
+        "DYNAMIC PACK GPS MULTIMODE",
+        "ECO ACTIVE",
+        "ECO BUSINESS",
+        "ECO DYNAMIC",
+        "EXECUTIVE",
+        "EXECUTIVE CONNECT",
+        "EXECUTIVE MULTIMODE",
+        "FEEL",
+        "FREESTYLE",
+        "G/KM",
+        "HSD DYNAMIC 15\"",
+        "HSD DYNAMIC 17\"",
+        "HSD EXECUTIVE",
+        "HSD LOUNGE",
+        "HSD MILLENIUM 15\"",
+        "LES BLEUS",
+        "LES BLEUS MMT",
+        "LIMITED EDITION",
+        "LINEA LUNA",
+        "LINEA SOL",
+        "LINEA TERRA",
+        "LOUNGE",
+        "LUNA PACK",
+        "LUNA PACK MMT",
+        "MILLENIUM",
+        "MILLENIUM 15\"",
+        "MILLENIUM 17\"",
+        "MILLENIUM PACK",
+        "SALOMON",
+        "SERIE LIMITEE LUNA PACK",
+        "SKYBLUE",
+        "SPORTLINE",
+        "SPORTLINE CONNECT",
+        "SPORTLINE CONNECT MULTIMODE",
+        "SPORTLINE MULTIMODE",
+        "STYLE",
+        "TECHNOLINE",
+        "TENDANCE",
+        "TENDANCE BUSINESS",
+        "TOURING SPORTS 1.2T COLLECTION",
+        "TOURING SPORTS 1.2T DESIGN",
+        "TOURING SPORTS 1.2T DYNAMIC",
+        "TOURING SPORTS 1.2T EXECUTIVE",
+        "TOURING SPORTS 1.2T TECHNOLINE"
       ],
       "Avensis": [
         "Life",
