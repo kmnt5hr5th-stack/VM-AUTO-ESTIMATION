@@ -4911,154 +4911,109 @@
     "Dacia": {
       "Sandero": [
         {
-          "name": "1.2 16v 75ch",
-          "fuel": "Essence",
-          "yearStart": 2008,
-          "yearEnd": 2012
-        },
-        {
-          "name": "1.4 MPI 75ch",
-          "fuel": "Essence",
-          "yearStart": 2008,
-          "yearEnd": 2012
-        },
-        {
-          "name": "1.6 MPI 87ch",
-          "fuel": "Essence",
-          "yearStart": 2008,
-          "yearEnd": 2012
-        },
-        {
-          "name": "1.6 MPI 90ch",
-          "fuel": "Essence",
-          "yearStart": 2008,
-          "yearEnd": 2012
-        },
-        {
-          "name": "1.6 16v 105ch",
-          "fuel": "Essence",
-          "yearStart": 2010,
-          "yearEnd": 2012
-        },
-        {
-          "name": "1.5 dCi 68ch",
-          "fuel": "Diesel",
-          "yearStart": 2008,
-          "yearEnd": 2012
-        },
-        {
-          "name": "1.5 dCi 70ch",
-          "fuel": "Diesel",
-          "yearStart": 2008,
-          "yearEnd": 2012
-        },
-        {
-          "name": "1.5 dCi 85ch",
-          "fuel": "Diesel",
-          "yearStart": 2010,
-          "yearEnd": 2012
-        },
-        {
-          "name": "1.6 MPI 85ch GPL",
+          "name": "0.9 ECO-G 100",
           "fuel": "GPL",
-          "yearStart": 2009,
-          "yearEnd": 2012
+          "yearStart": 2009
         },
         {
-          "name": "1.0 SCe 75ch",
-          "fuel": "Essence",
-          "yearStart": 2016,
-          "yearEnd": 2020
-        },
-        {
-          "name": "1.2 16v 75ch",
-          "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2016
-        },
-        {
-          "name": "0.9 TCe 90ch",
-          "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2020
-        },
-        {
-          "name": "1.0 TCe 100ch",
-          "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2020
-        },
-        {
-          "name": "1.6 16v 105ch",
-          "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2016
-        },
-        {
-          "name": "1.5 dCi 75ch",
-          "fuel": "Diesel",
-          "yearStart": 2012,
-          "yearEnd": 2020
-        },
-        {
-          "name": "1.5 dCi 90ch",
-          "fuel": "Diesel",
-          "yearStart": 2012,
-          "yearEnd": 2020
-        },
-        {
-          "name": "1.5 Blue dCi 95ch",
-          "fuel": "Diesel",
-          "yearStart": 2019,
-          "yearEnd": 2020
-        },
-        {
-          "name": "0.9 TCe 90ch LPG",
+          "name": "0.9 ECO-G 90",
           "fuel": "GPL",
-          "yearStart": 2017,
-          "yearEnd": 2020
+          "yearStart": 2009
         },
         {
-          "name": "1.0 SCe 65ch",
+          "name": "0.9 TCe 90",
           "fuel": "Essence",
-          "yearStart": 2020,
-          "yearEnd": 2026
+          "yearStart": 2009
         },
         {
-          "name": "1.0 SCe 75ch",
-          "fuel": "Essence",
-          "yearStart": 2020,
-          "yearEnd": 2026
-        },
-        {
-          "name": "1.0 TCe 90ch",
-          "fuel": "Essence",
-          "yearStart": 2020,
-          "yearEnd": 2026
-        },
-        {
-          "name": "1.0 TCe 100ch",
-          "fuel": "Essence",
-          "yearStart": 2020,
-          "yearEnd": 2024
-        },
-        {
-          "name": "1.0 TCe 110ch",
-          "fuel": "Essence",
-          "yearStart": 2021,
-          "yearEnd": 2026
-        },
-        {
-          "name": "1.5 Blue dCi 95ch",
-          "fuel": "Diesel",
-          "yearStart": 2020,
-          "yearEnd": 2022
-        },
-        {
-          "name": "1.0 TCe 100ch ECO-G GPL",
+          "name": "0.9 GPL 90",
           "fuel": "GPL",
-          "yearStart": 2020,
-          "yearEnd": 2026
+          "yearStart": 2009
+        },
+        {
+          "name": "1.0 ECO-G 100",
+          "fuel": "GPL",
+          "yearStart": 2009
+        },
+        {
+          "name": "1.0 SCe 75",
+          "fuel": "Essence",
+          "yearStart": 2009
+        },
+        {
+          "name": "1.0 TCe 100",
+          "fuel": "Essence",
+          "yearStart": 2009
+        },
+        {
+          "name": "1.5 dCi 75",
+          "fuel": "Diesel",
+          "yearStart": 2009
+        },
+        {
+          "name": "1.5 dCi 95",
+          "fuel": "Diesel",
+          "yearStart": 2009
+        },
+        {
+          "name": "1.5 dCi 90",
+          "fuel": "Diesel",
+          "yearStart": 2009
+        },
+        {
+          "name": "1.2",
+          "fuel": "Essence",
+          "yearStart": 2009
+        },
+        {
+          "name": "1.2 75",
+          "fuel": "Essence",
+          "yearStart": 2009
+        },
+        {
+          "name": "1.2 GPL",
+          "fuel": "GPL",
+          "yearStart": 2009
+        },
+        {
+          "name": "1.0 SCe 65",
+          "fuel": "Essence",
+          "yearStart": 2009
+        },
+        {
+          "name": "1.0 TCe 110",
+          "fuel": "Essence",
+          "yearStart": 2009
+        },
+        {
+          "name": "1.0 TCe 90",
+          "fuel": "Essence",
+          "yearStart": 2009
+        },
+        {
+          "name": "1.2 ECO-G 120",
+          "fuel": "GPL",
+          "yearStart": 2009
+        },
+        {
+          "name": "1.8 155",
+          "fuel": "Essence",
+          "yearStart": 2009
+        },
+        {
+          "name": "ECO-G 100",
+          "fuel": "GPL",
+          "yearStart": 2009
+        },
+        {
+          "name": "1.5 dCi 70",
+          "fuel": "Diesel",
+          "yearStart": 2009
+        },
+        {
+          "name": "1.6",
+          "fuel": "Essence",
+          "yearStart": 2009
         }
       ],
       "Sandero Stepway": [
@@ -27169,556 +27124,645 @@
     "Ford": {
       "Fiesta": [
         {
-          "name": "1.25 75ch",
+          "name": "1.0 80",
           "fuel": "Essence",
-          "yearStart": 2005,
-          "yearEnd": 2008
+          "yearStart": 2006
         },
         {
-          "name": "1.4 80ch",
+          "name": "1.0 EcoBoost 100",
           "fuel": "Essence",
-          "yearStart": 2005,
-          "yearEnd": 2008
+          "yearStart": 2006
         },
         {
-          "name": "1.6 100ch",
+          "name": "1.0 EcoBoost 125",
           "fuel": "Essence",
-          "yearStart": 2005,
-          "yearEnd": 2008
+          "yearStart": 2006
         },
         {
-          "name": "1.6 ST 150ch",
+          "name": "1.0 EcoBoost 140",
           "fuel": "Essence",
-          "yearStart": 2005,
-          "yearEnd": 2008
+          "yearStart": 2006
         },
         {
-          "name": "1.4 TDCi 68ch",
+          "name": "1.25 60",
+          "fuel": "Essence",
+          "yearStart": 2006
+        },
+        {
+          "name": "1.25 82",
+          "fuel": "Essence",
+          "yearStart": 2006
+        },
+        {
+          "name": "1.5 TDCi 75",
           "fuel": "Diesel",
-          "yearStart": 2005,
-          "yearEnd": 2008
+          "yearStart": 2006
         },
         {
-          "name": "1.6 TDCi 90ch",
+          "name": "1.5 TDCi 95",
           "fuel": "Diesel",
-          "yearStart": 2005,
-          "yearEnd": 2008
+          "yearStart": 2006
         },
         {
-          "name": "1.6 TDCi 100ch",
+          "name": "1.6 105",
+          "fuel": "Essence",
+          "yearStart": 2006
+        },
+        {
+          "name": "1.6 EcoBoost 182",
+          "fuel": "Essence",
+          "yearStart": 2006
+        },
+        {
+          "name": "1.6 EcoBoost 200",
+          "fuel": "Essence",
+          "yearStart": 2006
+        },
+        {
+          "name": "1.6 TDCi 95",
           "fuel": "Diesel",
-          "yearStart": 2005,
-          "yearEnd": 2008
+          "yearStart": 2006
         },
         {
-          "name": "1.25 60ch",
+          "name": "60",
           "fuel": "Essence",
-          "yearStart": 2008,
-          "yearEnd": 2017
+          "yearStart": 2006
         },
         {
-          "name": "1.25 82ch",
+          "name": "75",
           "fuel": "Essence",
-          "yearStart": 2008,
-          "yearEnd": 2017
+          "yearStart": 2006
         },
         {
-          "name": "1.4 96ch",
+          "name": "82",
           "fuel": "Essence",
-          "yearStart": 2008,
-          "yearEnd": 2017
+          "yearStart": 2006
         },
         {
-          "name": "1.6 120ch",
+          "name": "80",
           "fuel": "Essence",
-          "yearStart": 2008,
-          "yearEnd": 2017
+          "yearStart": 2006
         },
         {
-          "name": "1.0 EcoBoost 80ch",
+          "name": "96",
           "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2017
+          "yearStart": 2006
         },
         {
-          "name": "1.0 EcoBoost 100ch",
+          "name": "97",
           "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2017
+          "yearStart": 2006
         },
         {
-          "name": "1.0 EcoBoost 125ch",
-          "fuel": "Essence",
-          "yearStart": 2013,
-          "yearEnd": 2017
-        },
-        {
-          "name": "1.6 EcoBoost 182ch ST",
-          "fuel": "Essence",
-          "yearStart": 2013,
-          "yearEnd": 2017
-        },
-        {
-          "name": "1.4 TDCi 68ch",
+          "name": "TDCi 68",
           "fuel": "Diesel",
-          "yearStart": 2008,
-          "yearEnd": 2017
+          "yearStart": 2006
         },
         {
-          "name": "1.5 TDCi 75ch",
+          "name": "TDCi 70",
           "fuel": "Diesel",
-          "yearStart": 2013,
-          "yearEnd": 2017
+          "yearStart": 2006
         },
         {
-          "name": "1.5 TDCi 95ch",
+          "name": "TDCi 71",
           "fuel": "Diesel",
-          "yearStart": 2013,
-          "yearEnd": 2017
+          "yearStart": 2006
         },
         {
-          "name": "1.6 TDCi 95ch",
+          "name": "120",
+          "fuel": "Essence",
+          "yearStart": 2006
+        },
+        {
+          "name": "TDCi 120",
           "fuel": "Diesel",
-          "yearStart": 2008,
-          "yearEnd": 2013
+          "yearStart": 2006
         },
         {
-          "name": "1.0 EcoBoost 75ch",
+          "name": "134",
           "fuel": "Essence",
-          "yearStart": 2017,
-          "yearEnd": 2023
+          "yearStart": 2006
         },
         {
-          "name": "1.0 EcoBoost 95ch",
-          "fuel": "Essence",
-          "yearStart": 2017,
-          "yearEnd": 2023
-        },
-        {
-          "name": "1.0 EcoBoost 100ch",
-          "fuel": "Essence",
-          "yearStart": 2020,
-          "yearEnd": 2023
-        },
-        {
-          "name": "1.0 EcoBoost 125ch",
-          "fuel": "Essence",
-          "yearStart": 2017,
-          "yearEnd": 2023
-        },
-        {
-          "name": "1.0 EcoBoost 140ch ST-Line",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2023
-        },
-        {
-          "name": "1.0 EcoBoost 155ch mHEV",
-          "fuel": "Essence",
-          "yearStart": 2020,
-          "yearEnd": 2023
-        },
-        {
-          "name": "1.5 EcoBoost 200ch ST",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2023
-        },
-        {
-          "name": "1.5 TDCi 85ch",
+          "name": "TDCi 90",
           "fuel": "Diesel",
-          "yearStart": 2017,
-          "yearEnd": 2023
+          "yearStart": 2006
         },
         {
-          "name": "1.5 EcoBlue 85ch",
+          "name": "TDCi 95",
           "fuel": "Diesel",
-          "yearStart": 2018,
-          "yearEnd": 2023
+          "yearStart": 2006
+        },
+        {
+          "name": "1.0 MHEV 125",
+          "fuel": "Hybride",
+          "yearStart": 2006
+        },
+        {
+          "name": "1.0 MHEV 155",
+          "fuel": "Hybride",
+          "yearStart": 2006
+        },
+        {
+          "name": "1.0 95",
+          "fuel": "Essence",
+          "yearStart": 2006
+        },
+        {
+          "name": "1.1 75",
+          "fuel": "Essence",
+          "yearStart": 2006
+        },
+        {
+          "name": "1.0 MHEV",
+          "fuel": "Hybride",
+          "yearStart": 2006
+        },
+        {
+          "name": "1.0 EcoBoost 85",
+          "fuel": "Essence",
+          "yearStart": 2006
+        },
+        {
+          "name": "1.0 EcoBoost 95",
+          "fuel": "Essence",
+          "yearStart": 2006
+        },
+        {
+          "name": "1.1 70",
+          "fuel": "Essence",
+          "yearStart": 2006
+        },
+        {
+          "name": "1.1 85",
+          "fuel": "Essence",
+          "yearStart": 2006
+        },
+        {
+          "name": "1.5 EcoBoost 200",
+          "fuel": "Essence",
+          "yearStart": 2006
+        },
+        {
+          "name": "1.5 TDCi 120",
+          "fuel": "Diesel",
+          "yearStart": 2006
+        },
+        {
+          "name": "1.5 TDCi 85",
+          "fuel": "Diesel",
+          "yearStart": 2006
         }
       ],
       "Focus": [
         {
-          "name": "1.4 80ch",
+          "name": "1.0 EcoBoost 100",
           "fuel": "Essence",
-          "yearStart": 2004,
-          "yearEnd": 2011
+          "yearStart": 2011
         },
         {
-          "name": "1.6 100ch",
+          "name": "1.0 EcoBoost 125",
           "fuel": "Essence",
-          "yearStart": 2004,
-          "yearEnd": 2011
+          "yearStart": 2011
         },
         {
-          "name": "1.6 Ti-VCT 115ch",
+          "name": "1.5 EcoBoost 150",
           "fuel": "Essence",
-          "yearStart": 2005,
-          "yearEnd": 2011
+          "yearStart": 2011
         },
         {
-          "name": "1.8 125ch",
+          "name": "1.5 EcoBoost 182",
           "fuel": "Essence",
-          "yearStart": 2004,
-          "yearEnd": 2011
+          "yearStart": 2011
         },
         {
-          "name": "2.0 145ch",
-          "fuel": "Essence",
-          "yearStart": 2004,
-          "yearEnd": 2011
-        },
-        {
-          "name": "2.5 ST 225ch",
-          "fuel": "Essence",
-          "yearStart": 2005,
-          "yearEnd": 2011
-        },
-        {
-          "name": "RS 305ch",
-          "fuel": "Essence",
-          "yearStart": 2009,
-          "yearEnd": 2011
-        },
-        {
-          "name": "1.6 TDCi 90ch",
+          "name": "1.5 TDCi 105",
           "fuel": "Diesel",
-          "yearStart": 2004,
-          "yearEnd": 2011
+          "yearStart": 2011
         },
         {
-          "name": "1.6 TDCi 109ch",
+          "name": "1.5 TDCi 120",
           "fuel": "Diesel",
-          "yearStart": 2007,
-          "yearEnd": 2011
+          "yearStart": 2011
         },
         {
-          "name": "1.8 TDCi 115ch",
+          "name": "1.5 TDCi 95",
           "fuel": "Diesel",
-          "yearStart": 2004,
-          "yearEnd": 2011
+          "yearStart": 2011
         },
         {
-          "name": "2.0 TDCi 136ch",
+          "name": "1.6 TDCi 115",
           "fuel": "Diesel",
-          "yearStart": 2004,
-          "yearEnd": 2011
+          "yearStart": 2011
         },
         {
-          "name": "1.0 EcoBoost 100ch",
+          "name": "1.6 125",
           "fuel": "Essence",
-          "yearStart": 2011,
-          "yearEnd": 2018
+          "yearStart": 2011
         },
         {
-          "name": "1.0 EcoBoost 125ch",
+          "name": "1.6 85",
           "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2018
+          "yearStart": 2011
         },
         {
-          "name": "1.0 EcoBoost 140ch",
-          "fuel": "Essence",
-          "yearStart": 2014,
-          "yearEnd": 2018
-        },
-        {
-          "name": "1.6 Ti-VCT 85ch",
-          "fuel": "Essence",
-          "yearStart": 2011,
-          "yearEnd": 2014
-        },
-        {
-          "name": "1.6 Ti-VCT 105ch",
-          "fuel": "Essence",
-          "yearStart": 2011,
-          "yearEnd": 2018
-        },
-        {
-          "name": "1.6 EcoBoost 150ch",
-          "fuel": "Essence",
-          "yearStart": 2011,
-          "yearEnd": 2014
-        },
-        {
-          "name": "1.6 EcoBoost 182ch",
-          "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2015
-        },
-        {
-          "name": "2.0 EcoBoost 250ch ST",
-          "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2018
-        },
-        {
-          "name": "1.5 TDCi 95ch",
+          "name": "2.0 EcoBlue 150",
           "fuel": "Diesel",
-          "yearStart": 2014,
-          "yearEnd": 2018
+          "yearStart": 2011
         },
         {
-          "name": "1.5 TDCi 120ch",
-          "fuel": "Diesel",
-          "yearStart": 2014,
-          "yearEnd": 2018
-        },
-        {
-          "name": "1.6 TDCi 95ch",
-          "fuel": "Diesel",
-          "yearStart": 2011,
-          "yearEnd": 2014
-        },
-        {
-          "name": "1.6 TDCi 115ch",
-          "fuel": "Diesel",
-          "yearStart": 2011,
-          "yearEnd": 2014
-        },
-        {
-          "name": "2.0 TDCi 115ch",
-          "fuel": "Diesel",
-          "yearStart": 2011,
-          "yearEnd": 2015
-        },
-        {
-          "name": "2.0 TDCi 140ch",
-          "fuel": "Diesel",
-          "yearStart": 2011,
-          "yearEnd": 2018
-        },
-        {
-          "name": "2.0 TDCi 163ch",
-          "fuel": "Diesel",
-          "yearStart": 2011,
-          "yearEnd": 2015
-        },
-        {
-          "name": "1.0 EcoBoost 100ch",
+          "name": "2.0 EcoBoost 250",
           "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
+          "yearStart": 2011
         },
         {
-          "name": "1.0 EcoBoost 125ch",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "1.0 EcoBoost 155ch mHEV",
-          "fuel": "Essence",
-          "yearStart": 2020,
-          "yearEnd": 2026
-        },
-        {
-          "name": "1.5 EcoBoost 150ch",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "1.5 EcoBoost 182ch",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2022
-        },
-        {
-          "name": "2.3 EcoBoost 280ch ST",
-          "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2026
-        },
-        {
-          "name": "1.5 EcoBlue 95ch",
+          "name": "2.0 TDCi 150",
           "fuel": "Diesel",
-          "yearStart": 2018,
-          "yearEnd": 2026
+          "yearStart": 2011
         },
         {
-          "name": "1.5 EcoBlue 120ch",
+          "name": "2.0 TDCi 185",
           "fuel": "Diesel",
-          "yearStart": 2018,
-          "yearEnd": 2026
+          "yearStart": 2011
         },
         {
-          "name": "2.0 EcoBlue 150ch",
+          "name": "2.3 EcoBoost 350",
+          "fuel": "Essence",
+          "yearStart": 2011
+        },
+        {
+          "name": "électrique 142",
+          "fuel": "Électrique",
+          "yearStart": 2011
+        },
+        {
+          "name": "1.6 TDCi 95",
           "fuel": "Diesel",
-          "yearStart": 2018,
-          "yearEnd": 2022
+          "yearStart": 2011
+        },
+        {
+          "name": "1.6 120",
+          "fuel": "Essence",
+          "yearStart": 2011
+        },
+        {
+          "name": "1.6 EcoBoost 150",
+          "fuel": "Essence",
+          "yearStart": 2011
+        },
+        {
+          "name": "1.6 EcoBoost 182",
+          "fuel": "Essence",
+          "yearStart": 2011
+        },
+        {
+          "name": "1.6 TDCi 105",
+          "fuel": "Diesel",
+          "yearStart": 2011
+        },
+        {
+          "name": "105",
+          "fuel": "Essence",
+          "yearStart": 2011
+        },
+        {
+          "name": "120",
+          "fuel": "Essence",
+          "yearStart": 2011
+        },
+        {
+          "name": "125",
+          "fuel": "Essence",
+          "yearStart": 2011
+        },
+        {
+          "name": "EcoBoost 150",
+          "fuel": "Essence",
+          "yearStart": 2011
+        },
+        {
+          "name": "EcoBoost 182",
+          "fuel": "Essence",
+          "yearStart": 2011
+        },
+        {
+          "name": "85",
+          "fuel": "Essence",
+          "yearStart": 2011
+        },
+        {
+          "name": "TDCi 115",
+          "fuel": "Diesel",
+          "yearStart": 2011
+        },
+        {
+          "name": "TDCi 95",
+          "fuel": "Diesel",
+          "yearStart": 2011
+        },
+        {
+          "name": "2.0 TDCi 115",
+          "fuel": "Diesel",
+          "yearStart": 2011
+        },
+        {
+          "name": "2.0 TDCi 140",
+          "fuel": "Diesel",
+          "yearStart": 2011
+        },
+        {
+          "name": "2.0 TDCi 163",
+          "fuel": "Diesel",
+          "yearStart": 2011
+        },
+        {
+          "name": "TDCi 140",
+          "fuel": "Diesel",
+          "yearStart": 2011
+        },
+        {
+          "name": "TDCi 163",
+          "fuel": "Diesel",
+          "yearStart": 2011
+        },
+        {
+          "name": "1.6 105",
+          "fuel": "Essence",
+          "yearStart": 2011
+        },
+        {
+          "name": "1.0 MHEV 125",
+          "fuel": "Hybride",
+          "yearStart": 2011
+        },
+        {
+          "name": "1.0 MHEV 155",
+          "fuel": "Hybride",
+          "yearStart": 2011
+        },
+        {
+          "name": "1.5 EcoBlue 115",
+          "fuel": "Diesel",
+          "yearStart": 2011
+        },
+        {
+          "name": "1.5 EcoBlue 120",
+          "fuel": "Diesel",
+          "yearStart": 2011
+        },
+        {
+          "name": "1.5 EcoBlue 95",
+          "fuel": "Diesel",
+          "yearStart": 2011
+        },
+        {
+          "name": "1.5 MHEV 155",
+          "fuel": "Hybride",
+          "yearStart": 2011
+        },
+        {
+          "name": "2.3 EcoBoost 280",
+          "fuel": "Essence",
+          "yearStart": 2011
+        },
+        {
+          "name": "1.0 MHEV 150",
+          "fuel": "Hybride",
+          "yearStart": 2011
+        },
+        {
+          "name": "1.0 EcoBoost 85",
+          "fuel": "Essence",
+          "yearStart": 2011
+        },
+        {
+          "name": "1.0 Hybride 125",
+          "fuel": "Hybride",
+          "yearStart": 2011
+        },
+        {
+          "name": "1.5 EcoBlue",
+          "fuel": "Diesel",
+          "yearStart": 2011
+        },
+        {
+          "name": "2.0 EcoBlue 190",
+          "fuel": "Diesel",
+          "yearStart": 2011
+        },
+        {
+          "name": "1.0 EcoBoost",
+          "fuel": "Essence",
+          "yearStart": 2011
         }
       ],
       "Puma": [
         {
-          "name": "1.0 EcoBoost 95ch",
-          "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2026
+          "name": "1.0 MHEV 125",
+          "fuel": "Hybride",
+          "yearStart": 2019
         },
         {
-          "name": "1.0 EcoBoost 125ch",
-          "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2026
+          "name": "1.0 MHEV 155",
+          "fuel": "Hybride",
+          "yearStart": 2019
         },
         {
-          "name": "1.0 EcoBoost 125ch mHEV",
-          "fuel": "Essence",
-          "yearStart": 2020,
-          "yearEnd": 2026
+          "name": "1.0 MHEV 170",
+          "fuel": "Hybride",
+          "yearStart": 2019
         },
         {
-          "name": "1.0 EcoBoost 155ch mHEV",
-          "fuel": "Essence",
-          "yearStart": 2020,
-          "yearEnd": 2026
+          "name": "électrique 168",
+          "fuel": "Électrique",
+          "yearStart": 2019
         },
         {
-          "name": "1.5 EcoBoost 200ch ST",
+          "name": "1.0 EcoBoost 125",
           "fuel": "Essence",
-          "yearStart": 2020,
-          "yearEnd": 2026
+          "yearStart": 2019
         },
         {
-          "name": "1.5 EcoBlue 120ch",
+          "name": "1.0 Hybride 125",
+          "fuel": "Hybride",
+          "yearStart": 2019
+        },
+        {
+          "name": "1.0 Hybride 155",
+          "fuel": "Hybride",
+          "yearStart": 2019
+        },
+        {
+          "name": "1.0 125",
+          "fuel": "Essence",
+          "yearStart": 2019
+        },
+        {
+          "name": "1.0 MHEV",
+          "fuel": "Hybride",
+          "yearStart": 2019
+        },
+        {
+          "name": "1.5 EcoBlue 120",
           "fuel": "Diesel",
-          "yearStart": 2019,
-          "yearEnd": 2022
+          "yearStart": 2019
+        },
+        {
+          "name": "1.5 EcoBoost 200",
+          "fuel": "Essence",
+          "yearStart": 2019
         }
       ],
       "Kuga": [
         {
-          "name": "1.6 EcoBoost 150ch",
+          "name": "2.0 TDCi 140",
+          "fuel": "Diesel",
+          "yearStart": 2008
+        },
+        {
+          "name": "2.0 TDCi 163",
+          "fuel": "Diesel",
+          "yearStart": 2008
+        },
+        {
+          "name": "200",
           "fuel": "Essence",
-          "yearStart": 2008,
-          "yearEnd": 2012
+          "yearStart": 2008
         },
         {
-          "name": "2.5 T 200ch 4WD",
+          "name": "2.5 200",
           "fuel": "Essence",
-          "yearStart": 2008,
-          "yearEnd": 2012
+          "yearStart": 2008
         },
         {
-          "name": "2.0 TDCi 136ch",
-          "fuel": "Diesel",
-          "yearStart": 2008,
-          "yearEnd": 2012
-        },
-        {
-          "name": "2.0 TDCi 136ch 4WD",
-          "fuel": "Diesel",
-          "yearStart": 2008,
-          "yearEnd": 2012
-        },
-        {
-          "name": "2.0 TDCi 140ch 4WD",
-          "fuel": "Diesel",
-          "yearStart": 2010,
-          "yearEnd": 2012
-        },
-        {
-          "name": "1.5 EcoBoost 120ch",
+          "name": "1.5 EcoBoost 120",
           "fuel": "Essence",
-          "yearStart": 2016,
-          "yearEnd": 2019
+          "yearStart": 2008
         },
         {
-          "name": "1.5 EcoBoost 150ch",
+          "name": "1.5 EcoBoost 150",
           "fuel": "Essence",
-          "yearStart": 2013,
-          "yearEnd": 2019
+          "yearStart": 2008
         },
         {
-          "name": "1.5 EcoBoost 182ch",
+          "name": "1.5 EcoBoost 182",
           "fuel": "Essence",
-          "yearStart": 2016,
-          "yearEnd": 2019
+          "yearStart": 2008
         },
         {
-          "name": "1.6 EcoBoost 150ch",
+          "name": "1.5 150",
           "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2016
+          "yearStart": 2008
         },
         {
-          "name": "1.5 TDCi 120ch",
+          "name": "1.5 TDCi 120",
           "fuel": "Diesel",
-          "yearStart": 2016,
-          "yearEnd": 2019
+          "yearStart": 2008
         },
         {
-          "name": "2.0 TDCi 120ch",
-          "fuel": "Diesel",
-          "yearStart": 2012,
-          "yearEnd": 2016
-        },
-        {
-          "name": "2.0 TDCi 140ch",
-          "fuel": "Diesel",
-          "yearStart": 2012,
-          "yearEnd": 2016
-        },
-        {
-          "name": "2.0 TDCi 150ch",
-          "fuel": "Diesel",
-          "yearStart": 2016,
-          "yearEnd": 2019
-        },
-        {
-          "name": "2.0 TDCi 150ch 4WD",
-          "fuel": "Diesel",
-          "yearStart": 2012,
-          "yearEnd": 2019
-        },
-        {
-          "name": "2.0 TDCi 180ch 4WD",
-          "fuel": "Diesel",
-          "yearStart": 2016,
-          "yearEnd": 2019
-        },
-        {
-          "name": "1.5 EcoBoost 120ch",
+          "name": "EcoBoost 120",
           "fuel": "Essence",
-          "yearStart": 2020,
-          "yearEnd": 2026
+          "yearStart": 2008
         },
         {
-          "name": "1.5 EcoBoost 150ch",
+          "name": "EcoBoost 150",
           "fuel": "Essence",
-          "yearStart": 2020,
-          "yearEnd": 2026
+          "yearStart": 2008
         },
         {
-          "name": "2.5 Duratec 190ch FHEV",
-          "fuel": "Hybride",
-          "yearStart": 2020,
-          "yearEnd": 2026
+          "name": "EcoBoost 182",
+          "fuel": "Essence",
+          "yearStart": 2008
         },
         {
-          "name": "1.5 EcoBlue 120ch",
+          "name": "2.0 TDCi 120",
           "fuel": "Diesel",
-          "yearStart": 2020,
-          "yearEnd": 2026
+          "yearStart": 2008
         },
         {
-          "name": "2.0 EcoBlue 150ch",
+          "name": "2.0 TDCi 150",
           "fuel": "Diesel",
-          "yearStart": 2020,
-          "yearEnd": 2026
+          "yearStart": 2008
         },
         {
-          "name": "2.0 EcoBlue 190ch",
+          "name": "2.0 TDCi 180",
           "fuel": "Diesel",
-          "yearStart": 2020,
-          "yearEnd": 2022
+          "yearStart": 2008
         },
         {
-          "name": "2.5 Duratec 225ch PHEV",
+          "name": "2.5 PHEV 225",
           "fuel": "Hybride rechargeable",
-          "yearStart": 2020,
-          "yearEnd": 2026
+          "yearStart": 2008
+        },
+        {
+          "name": "1.6 EcoBoost 150",
+          "fuel": "Essence",
+          "yearStart": 2008
+        },
+        {
+          "name": "1.6 EcoBoost 182",
+          "fuel": "Essence",
+          "yearStart": 2008
+        },
+        {
+          "name": "2.0 TDCi 115",
+          "fuel": "Diesel",
+          "yearStart": 2008
+        },
+        {
+          "name": "2.5 Hybride 180",
+          "fuel": "Hybride",
+          "yearStart": 2008
+        },
+        {
+          "name": "2.5 Hybride 183",
+          "fuel": "Hybride",
+          "yearStart": 2008
+        },
+        {
+          "name": "2.5 PHEV 243",
+          "fuel": "Hybride rechargeable",
+          "yearStart": 2008
+        },
+        {
+          "name": "1.5 EcoBlue 120",
+          "fuel": "Diesel",
+          "yearStart": 2008
+        },
+        {
+          "name": "Hybride 190",
+          "fuel": "Hybride",
+          "yearStart": 2008
+        },
+        {
+          "name": "2.0 MHEV 150",
+          "fuel": "Hybride",
+          "yearStart": 2008
+        },
+        {
+          "name": "2.0 EcoBlue 150",
+          "fuel": "Diesel",
+          "yearStart": 2008
+        },
+        {
+          "name": "2.0 EcoBlue 190",
+          "fuel": "Diesel",
+          "yearStart": 2008
+        },
+        {
+          "name": "2.5 Hybride 190",
+          "fuel": "Hybride",
+          "yearStart": 2008
+        },
+        {
+          "name": "2.5 Hybride",
+          "fuel": "Hybride",
+          "yearStart": 2008
+        },
+        {
+          "name": "2.5 Hybride 225",
+          "fuel": "Hybride",
+          "yearStart": 2008
         }
       ],
       "Ka": [
@@ -27965,28 +28009,64 @@
       ],
       "EcoSport": [
         {
-          "name": "1.0 EcoBoost 100ch",
+          "name": "1.0 EcoBoost 100",
           "fuel": "Essence",
-          "yearStart": 2014,
-          "yearEnd": 2022
+          "yearStart": 2014
         },
         {
-          "name": "1.0 EcoBoost 125ch",
+          "name": "1.0 EcoBoost 125",
           "fuel": "Essence",
-          "yearStart": 2014,
-          "yearEnd": 2022
+          "yearStart": 2014
         },
         {
-          "name": "1.5 Ti-VCT 112ch",
+          "name": "1.0 EcoBoost 140",
           "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2022
+          "yearStart": 2014
         },
         {
-          "name": "1.5 TDCi 100ch",
+          "name": "1.5 EcoBlue 100",
           "fuel": "Diesel",
-          "yearStart": 2014,
-          "yearEnd": 2022
+          "yearStart": 2014
+        },
+        {
+          "name": "1.5 EcoBlue 120",
+          "fuel": "Diesel",
+          "yearStart": 2014
+        },
+        {
+          "name": "1.5 EcoBlue 125",
+          "fuel": "Diesel",
+          "yearStart": 2014
+        },
+        {
+          "name": "1.5 EcoBlue 95",
+          "fuel": "Diesel",
+          "yearStart": 2014
+        },
+        {
+          "name": "1.5 TDCi 100",
+          "fuel": "Diesel",
+          "yearStart": 2014
+        },
+        {
+          "name": "1.5 TDCi 95",
+          "fuel": "Diesel",
+          "yearStart": 2014
+        },
+        {
+          "name": "1.5 112",
+          "fuel": "Essence",
+          "yearStart": 2014
+        },
+        {
+          "name": "1.5 110",
+          "fuel": "Essence",
+          "yearStart": 2014
+        },
+        {
+          "name": "1.5 TDCi 90",
+          "fuel": "Diesel",
+          "yearStart": 2014
         }
       ],
       "Mondeo": [
@@ -28221,118 +28301,70 @@
       ],
       "Galaxy": [
         {
-          "name": "2.0 145ch",
-          "fuel": "Essence",
-          "yearStart": 2000,
-          "yearEnd": 2006
-        },
-        {
-          "name": "2.3 145ch",
-          "fuel": "Essence",
-          "yearStart": 2000,
-          "yearEnd": 2006
-        },
-        {
-          "name": "2.8 V6 174ch",
-          "fuel": "Essence",
-          "yearStart": 2000,
-          "yearEnd": 2006
-        },
-        {
-          "name": "1.9 TDI 90ch",
-          "fuel": "Diesel",
-          "yearStart": 2000,
-          "yearEnd": 2006
-        },
-        {
-          "name": "1.9 TDI 115ch",
-          "fuel": "Diesel",
-          "yearStart": 2000,
-          "yearEnd": 2006
-        },
-        {
-          "name": "1.9 TDI 130ch",
-          "fuel": "Diesel",
-          "yearStart": 2003,
-          "yearEnd": 2006
-        },
-        {
-          "name": "2.0 EcoBoost 203ch",
-          "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2015
-        },
-        {
-          "name": "1.8 TDCi 100ch",
-          "fuel": "Diesel",
-          "yearStart": 2006,
-          "yearEnd": 2010
-        },
-        {
-          "name": "2.0 TDCi 115ch",
-          "fuel": "Diesel",
-          "yearStart": 2006,
-          "yearEnd": 2015
-        },
-        {
-          "name": "2.0 TDCi 130ch",
-          "fuel": "Diesel",
-          "yearStart": 2006,
-          "yearEnd": 2015
-        },
-        {
-          "name": "2.0 TDCi 140ch",
-          "fuel": "Diesel",
-          "yearStart": 2006,
-          "yearEnd": 2015
-        },
-        {
-          "name": "2.0 TDCi 163ch",
-          "fuel": "Diesel",
-          "yearStart": 2010,
-          "yearEnd": 2015
-        },
-        {
-          "name": "1.5 EcoBoost 160ch",
-          "fuel": "Essence",
-          "yearStart": 2015,
-          "yearEnd": 2022
-        },
-        {
-          "name": "2.0 EcoBoost 240ch",
-          "fuel": "Essence",
-          "yearStart": 2015,
-          "yearEnd": 2022
-        },
-        {
-          "name": "2.0 TDCi 120ch",
+          "name": "2.0 EcoBlue 150",
           "fuel": "Diesel",
           "yearStart": 2015,
-          "yearEnd": 2022
+          "yearEnd": 2023
         },
         {
-          "name": "2.0 TDCi 150ch",
+          "name": "2.0 EcoBlue 190",
           "fuel": "Diesel",
           "yearStart": 2015,
-          "yearEnd": 2022
+          "yearEnd": 2023
         },
         {
-          "name": "2.0 TDCi 180ch",
+          "name": "2.5 Hybride 190",
+          "fuel": "Hybride",
+          "yearStart": 2015,
+          "yearEnd": 2023
+        },
+        {
+          "name": "1.5 EcoBoost 160",
+          "fuel": "Essence",
+          "yearStart": 2015,
+          "yearEnd": 2023
+        },
+        {
+          "name": "1.5 EcoBoost 165",
+          "fuel": "Essence",
+          "yearStart": 2015,
+          "yearEnd": 2023
+        },
+        {
+          "name": "2.0 EcoBlue 120",
           "fuel": "Diesel",
           "yearStart": 2015,
-          "yearEnd": 2022
+          "yearEnd": 2023
         },
         {
-          "name": "2.0 TDCi 210ch",
+          "name": "2.0 EcoBlue 240",
           "fuel": "Diesel",
           "yearStart": 2015,
-          "yearEnd": 2022
+          "yearEnd": 2023
         },
         {
-          "name": "2.5 PHEV 190ch",
-          "fuel": "Hybride rechargeable",
-          "yearStart": 2020,
-          "yearEnd": 2022
+          "name": "2.0 TDCi 120",
+          "fuel": "Diesel",
+          "yearStart": 2015,
+          "yearEnd": 2023
+        },
+        {
+          "name": "2.0 TDCi 150",
+          "fuel": "Diesel",
+          "yearStart": 2015,
+          "yearEnd": 2023
+        },
+        {
+          "name": "2.0 TDCi 180",
+          "fuel": "Diesel",
+          "yearStart": 2015,
+          "yearEnd": 2023
+        },
+        {
+          "name": "2.0 TDCi 210",
+          "fuel": "Diesel",
+          "yearStart": 2015,
+          "yearEnd": 2023
         }
       ],
       "Edge": [
@@ -28765,6 +28797,239 @@
           "fuel": "Essence",
           "yearStart": 2020,
           "yearEnd": 2026
+        }
+      ],
+      "B-Max": [
+        {
+          "name": "1.0 EcoBoost 125",
+          "fuel": "Essence",
+          "yearStart": 2012,
+          "yearEnd": 2018
+        },
+        {
+          "name": "1.0 EcoBoost 140",
+          "fuel": "Essence",
+          "yearStart": 2012,
+          "yearEnd": 2018
+        },
+        {
+          "name": "1.0 EcoBoost 100",
+          "fuel": "Essence",
+          "yearStart": 2012,
+          "yearEnd": 2018
+        },
+        {
+          "name": "1.0 EcoBoost 120",
+          "fuel": "Essence",
+          "yearStart": 2012,
+          "yearEnd": 2018
+        },
+        {
+          "name": "1.4 90",
+          "fuel": "Essence",
+          "yearStart": 2012,
+          "yearEnd": 2018
+        },
+        {
+          "name": "1.5 TDCi 75",
+          "fuel": "Diesel",
+          "yearStart": 2012,
+          "yearEnd": 2018
+        },
+        {
+          "name": "1.5 TDCi 95",
+          "fuel": "Diesel",
+          "yearStart": 2012,
+          "yearEnd": 2018
+        },
+        {
+          "name": "1.6 105",
+          "fuel": "Essence",
+          "yearStart": 2012,
+          "yearEnd": 2018
+        },
+        {
+          "name": "1.6 TDCi 95",
+          "fuel": "Diesel",
+          "yearStart": 2012,
+          "yearEnd": 2018
+        }
+      ],
+      "C-Max": [
+        {
+          "name": "1.0 EcoBoost 100",
+          "fuel": "Essence",
+          "yearStart": 2010,
+          "yearEnd": 2020
+        },
+        {
+          "name": "1.0 EcoBoost 125",
+          "fuel": "Essence",
+          "yearStart": 2010,
+          "yearEnd": 2020
+        },
+        {
+          "name": "1.5 EcoBoost 150",
+          "fuel": "Essence",
+          "yearStart": 2010,
+          "yearEnd": 2020
+        },
+        {
+          "name": "1.5 TDCi 105",
+          "fuel": "Diesel",
+          "yearStart": 2010,
+          "yearEnd": 2020
+        },
+        {
+          "name": "1.5 TDCi 120",
+          "fuel": "Diesel",
+          "yearStart": 2010,
+          "yearEnd": 2020
+        },
+        {
+          "name": "1.5 TDCi 95",
+          "fuel": "Diesel",
+          "yearStart": 2010,
+          "yearEnd": 2020
+        },
+        {
+          "name": "2.0 TDCi 150",
+          "fuel": "Diesel",
+          "yearStart": 2010,
+          "yearEnd": 2020
+        },
+        {
+          "name": "2.0 TDCi 170",
+          "fuel": "Diesel",
+          "yearStart": 2010,
+          "yearEnd": 2020
+        },
+        {
+          "name": "1.6 105",
+          "fuel": "Essence",
+          "yearStart": 2010,
+          "yearEnd": 2020
+        },
+        {
+          "name": "1.6 120",
+          "fuel": "Essence",
+          "yearStart": 2010,
+          "yearEnd": 2020
+        },
+        {
+          "name": "1.6 125",
+          "fuel": "Essence",
+          "yearStart": 2010,
+          "yearEnd": 2020
+        },
+        {
+          "name": "1.6 EcoBoost 150",
+          "fuel": "Essence",
+          "yearStart": 2010,
+          "yearEnd": 2020
+        },
+        {
+          "name": "1.6 EcoBoost 182",
+          "fuel": "Essence",
+          "yearStart": 2010,
+          "yearEnd": 2020
+        },
+        {
+          "name": "1.6 TDCi 115",
+          "fuel": "Diesel",
+          "yearStart": 2010,
+          "yearEnd": 2020
+        },
+        {
+          "name": "1.6 TDCi 95",
+          "fuel": "Diesel",
+          "yearStart": 2010,
+          "yearEnd": 2020
+        },
+        {
+          "name": "2.0 TDCi 115",
+          "fuel": "Diesel",
+          "yearStart": 2010,
+          "yearEnd": 2020
+        },
+        {
+          "name": "2.0 TDCi 140",
+          "fuel": "Diesel",
+          "yearStart": 2010,
+          "yearEnd": 2020
+        },
+        {
+          "name": "2.0 TDCi 163",
+          "fuel": "Diesel",
+          "yearStart": 2010,
+          "yearEnd": 2020
+        }
+      ],
+      "S-Max": [
+        {
+          "name": "2.0 EcoBlue 150",
+          "fuel": "Diesel",
+          "yearStart": 2015
+        },
+        {
+          "name": "2.0 EcoBlue 190",
+          "fuel": "Diesel",
+          "yearStart": 2015
+        },
+        {
+          "name": "2.5 Hybride 190",
+          "fuel": "Hybride",
+          "yearStart": 2015
+        },
+        {
+          "name": "1.5 EcoBoost 160",
+          "fuel": "Essence",
+          "yearStart": 2015
+        },
+        {
+          "name": "1.5 EcoBoost 165",
+          "fuel": "Essence",
+          "yearStart": 2015
+        },
+        {
+          "name": "2.0 EcoBlue 120",
+          "fuel": "Diesel",
+          "yearStart": 2015
+        },
+        {
+          "name": "2.0 EcoBlue 180",
+          "fuel": "Diesel",
+          "yearStart": 2015
+        },
+        {
+          "name": "2.0 EcoBlue 240",
+          "fuel": "Diesel",
+          "yearStart": 2015
+        },
+        {
+          "name": "2.0 EcoBoost 240",
+          "fuel": "Essence",
+          "yearStart": 2015
+        },
+        {
+          "name": "2.0 TDCi 120",
+          "fuel": "Diesel",
+          "yearStart": 2015
+        },
+        {
+          "name": "2.0 TDCi 150",
+          "fuel": "Diesel",
+          "yearStart": 2015
+        },
+        {
+          "name": "2.0 TDCi 180",
+          "fuel": "Diesel",
+          "yearStart": 2015
+        },
+        {
+          "name": "2.0 TDCi 210",
+          "fuel": "Diesel",
+          "yearStart": 2015
         }
       ]
     },
@@ -50034,14 +50299,89 @@
     },
     "Dacia": {
       "Sandero": [
-        "Ambiance",
-        "Laureate",
-        "Access",
-        "Prestige",
-        "Essential",
-        "Expression",
-        "Extreme",
-        "Journey"
+        "- 22 CONFORT",
+        "- 22 ESSENTIEL",
+        "15 ANS",
+        "15 ANS 2020",
+        "15 ANS EASY-R",
+        "ACCESS",
+        "ADVANCE",
+        "ADVANCE E6C",
+        "ADVANCE EASY-R",
+        "AMBIANCE",
+        "AMBIANCE E6",
+        "AMBIANCE E6C",
+        "AMBIANCE ECO2",
+        "AMBIANCE EURO6",
+        "BIOETHANOL",
+        "BLUE",
+        "BLUE AMBIANCE",
+        "BLUE LAUREATE",
+        "BLUE TECHROAD",
+        "CITY+",
+        "CONFORT",
+        "CONFORT - 22",
+        "CONFORT 2022",
+        "CONFORT 22",
+        "CONFORT EASY-R",
+        "E6C",
+        "EASY-R",
+        "ECO2",
+        "ESCAPE",
+        "ESSENTIAL",
+        "ESSENTIAL GSR2 - 24",
+        "ESSENTIEL",
+        "ESSENTIEL 2022",
+        "ESSENTIEL 22",
+        "EURO6",
+        "EVASION",
+        "EXPLORER",
+        "EXPLORER EASY-R",
+        "EXPRESSION",
+        "EXPRESSION +",
+        "EXPRESSION GSR2 - 24",
+        "EXTREME",
+        "EXTREME +",
+        "GRS2 -24 EXTREME +",
+        "GSR2 ESSENTIAL",
+        "GSR2 EXPRESSION",
+        "GSR2 EXTREME",
+        "GSR2 JOURNEY",
+        "JOURNEY",
+        "LAUREATE",
+        "LAUREATE 17",
+        "LAUREATE 18",
+        "LAUREATE 19",
+        "LAUREATE BLACK TOUCH",
+        "LAUREATE E6",
+        "LAUREATE E6C",
+        "LAUREATE EASY-R",
+        "LAUREATE EASY-R E6",
+        "LAUREATE ECO2",
+        "LAUREATE EURO6",
+        "NAVY",
+        "PRESTIGE",
+        "PRESTIGE E6",
+        "PRESTIGE EASY-R E6",
+        "PRESTIGE EURO5",
+        "PRESTIGE EURO6",
+        "SANDERO",
+        "SANDERO E6",
+        "SL 10 ANS",
+        "SL 10 ANS E6",
+        "SL 10 ANS EURO6",
+        "SL MUSIC E6",
+        "SL MUSIC EASY-R E6",
+        "STEPWAY ESSENTIAL",
+        "STEPWAY EXPRESSION",
+        "STEPWAY EXPRESSION +",
+        "STEPWAY EXTREME",
+        "STEPWAY EXTREME +",
+        "TECHROAD",
+        "TECHROAD EASY-R",
+        "URBAN",
+        "URBAN E6",
+        "URBAN EASY-R E6"
       ],
       "Sandero Stepway": [
         "Ambiance",
@@ -58760,54 +59100,235 @@
         "Titanium"
       ],
       "Fiesta": [
-        "Style",
-        "Trend",
-        "Titanium",
-        "Sport",
-        "ST",
-        "Active",
-        "Vignale",
-        "Cool & Connect",
-        "Ambiente",
-        "Edition",
-        "ST-Line"
+        "1250 FUN",
+        "1250 GHIA",
+        "1250 SENSO PLUS",
+        "1400 GHIA",
+        "1600 GHIA",
+        "1600 S",
+        "ACTIVE",
+        "ACTIVE AT",
+        "ACTIVE PACK",
+        "ACTIVE PLUS",
+        "ACTIVE X",
+        "AMBIENTE",
+        "AT ACTIVE X",
+        "B&O PLAY FIRST EDITION",
+        "BLACK",
+        "BLACK EDITION",
+        "BUSINESS",
+        "CONNECT BUSINESS",
+        "COOL & CONNECT",
+        "DPF ECONETIC",
+        "DPF GHIA",
+        "DPF SPORT",
+        "DPF TITANIUM",
+        "DPF TREND",
+        "ECONETIC",
+        "ECONETIC BUSINESS",
+        "ECONETIC TITANIUM",
+        "ECONETIC TREND",
+        "EDITION",
+        "EDITION POWERSHIFT",
+        "ESSENTIAL",
+        "FIESTA",
+        "FUN",
+        "GHIA",
+        "ICE",
+        "POWERSHIFT ST-LINE",
+        "RED EDITION",
+        "S/S BUSINESS",
+        "S/S CONNECT BUSINESS",
+        "S/S COOL & CONNECT",
+        "S/S ST-LINE",
+        "S/S ST-LINE X",
+        "S/S TITANIUM",
+        "S/S TITANIUM X",
+        "SENSO DURASHIFT",
+        "SENSO PLUS",
+        "SENSO PLUS DURASHIFT",
+        "SPORT",
+        "SPORT B",
+        "SPORT PLATINIUM",
+        "ST LINE BLACK EDITION",
+        "ST PACK",
+        "ST PLUS",
+        "ST-LINE",
+        "ST-LINE RED EDITION",
+        "ST-LINE X",
+        "ST200",
+        "TECHNO EDITION",
+        "TITANIUM",
+        "TITANIUM +",
+        "TITANIUM BUSINESS",
+        "TITANIUM POWERSHIF",
+        "TITANIUM POWERSHIFT",
+        "TITANIUM VIGNALE",
+        "TITANIUM X",
+        "TITANIUM X POWERSHIF",
+        "TREND",
+        "TREND BUSINESS",
+        "TREND PACK",
+        "TREND POWERSHIF",
+        "TREND POWERSHIFT",
+        "TREND+",
+        "VIGNALE",
+        "WHITE"
       ],
       "Focus": [
-        "Trend",
-        "Titanium",
-        "ST-Line",
-        "Active",
-        "Vignale",
-        "RS",
-        "ST",
-        "Cool & Connect",
-        "ST-Line X",
-        "Titanium X"
+        "ACTE ACTIVE X POWERSHIFT",
+        "ACTIVE",
+        "ACTIVE BUSINESS",
+        "ACTIVE V",
+        "ACTIVE X",
+        "ACTIVE X POWERSHIFT",
+        "BLACK",
+        "BLACK BV6",
+        "BUSINESS",
+        "BUSINESS POWERSHIFT",
+        "ECO TECH BUSINESS",
+        "ECO TECHNO BUSINESS",
+        "ECONETIC 88 TREND",
+        "ECONETIC 99 TREND",
+        "ECONETIC BUSINESS",
+        "ECONETIC EXECUTIVE",
+        "ECONETIC TECHNOLOGY BUSINESS",
+        "ECONETIC TECHNOLOGY TITANIUM",
+        "ECONETIC TECHNOLOGY TREND",
+        "ECONETIC TITANIUM",
+        "ECONETIC TITANIUM SOCIETE",
+        "ECONETIC TREND",
+        "ECONETIC TREND SOCIETE",
+        "EDITION",
+        "EDITION FLEXIFUEL",
+        "EDITION POWERSHIF",
+        "EDITION POWERSHIFT",
+        "EXECUTIVE",
+        "EXECUTIVE POWERSHIFT",
+        "FLEXIFUEL EDITION",
+        "FLEXIFUEL TITANIUM",
+        "FLEXIFUEL TREND",
+        "FLEXIFUEL TREND BMV5",
+        "POWERSHIFT ST POWERSHIFT",
+        "RED",
+        "RED BV6",
+        "RS LAST EDITION",
+        "RS PACK PERFORMANCE",
+        "ST BV6",
+        "ST LINE",
+        "ST LINE BLACK",
+        "ST LINE BUSINESS",
+        "ST LINE POWERSHIFT",
+        "ST LINE RED",
+        "ST LINE X",
+        "ST POWERSHIFT",
+        "ST-LINE",
+        "ST-LINE BUSINESS",
+        "ST-LINE X",
+        "ST-LINE X POWERSHIFT",
+        "SYNC EDITION",
+        "TITANIUM",
+        "TITANIUM BV6",
+        "TITANIUM POWERSHIFT",
+        "TITANIUM SOCIETE",
+        "TITANIUM SOCIETE POWERSHIFT",
+        "TITANIUM X",
+        "TITANIUM X BUSINESS",
+        "TITANIUM X BUSINESS POWERSHIFT",
+        "TITANIUM X POWERSHIF",
+        "TITANIUM X POWERSHIFT",
+        "TREND",
+        "TREND BUSINESS",
+        "TREND BV6",
+        "TREND POWERSHIFT",
+        "TREND SOCIETE",
+        "VIGNALE"
       ],
       "Puma": [
-        "Trend",
-        "Titanium",
-        "ST-Line",
-        "ST-Line X",
-        "Vignale",
-        "Gold Edition",
-        "ST",
-        "Premium"
+        "AVANCE ST-LINE",
+        "AVANCE ST-LINE DCT7",
+        "AVANCE ST-LINE V",
+        "AVANCE ST-LINE X",
+        "AVANCE TITANIUM",
+        "AVANCE TITANIUM DCT7",
+        "ST GOLD EDITION",
+        "ST-LINE",
+        "ST-LINE DCT7",
+        "ST-LINE DESIGN",
+        "ST-LINE DESIGN 2",
+        "ST-LINE V DCT7",
+        "ST-LINE VIGNALE",
+        "ST-LINE VIGNALE DCT7",
+        "ST-LINE X",
+        "ST-LINE X DCT7",
+        "TITANIUM",
+        "TITANIUM BUSINESS",
+        "TITANIUM BUSINESS DCT7",
+        "TITANIUM DCT7",
+        "TITANIUM DESIGN",
+        "TITANIUM DESIGN 2",
+        "TITANIUM X",
+        "TITANIUM X DCT7"
       ],
       "Kuga": [
-        "Trend",
-        "Titanium",
-        "Vignale",
-        "ST-Line",
-        "4WD",
-        "ST-Line X",
-        "Titanium X",
-        "PHEV"
+        "BUSINESS",
+        "BUSINESS EDITION POWERSHIFT",
+        "BUSINESS POWERSHIFT",
+        "CH PSHIFT VIGNALE",
+        "DPF TITANIUM",
+        "DPF TREND",
+        "EXECUTIVE",
+        "EXECUTIVE POWERSHIFT",
+        "INDIVIDUAL",
+        "INDIVIDUAL POWERSHIFT",
+        "INTELLIGENT ST-LINE",
+        "INTELLIGENT ST-LINE X",
+        "INTELLIGENT TITANIUM",
+        "INTELLIGENT VIGNALE",
+        "POWERSHIFT ST-LINE",
+        "POWERSHIFT TITANIUM",
+        "POWERSHIT ST-LINE BUSINESS",
+        "S/S ST-LINE",
+        "S/S ST-LINE BLACK &",
+        "S/S TREND",
+        "S/S TREND BUSINESS",
+        "S/S TREND BUSINESS POWERSHIFT",
+        "S/S VIGNALE",
+        "S/S VIGNALE POWERSHIFT",
+        "SPORT PLATINIUM",
+        "SPORT PLATINIUM POWERSHIFT",
+        "ST-LINE",
+        "ST-LINE BLACK & SILVER",
+        "ST-LINE BUSINESS",
+        "ST-LINE BUSINESS POWERSHIFT",
+        "ST-LINE POWERSHIFT",
+        "ST-LINE X",
+        "ST-LINE X POWERSHIFT",
+        "TITANIUM",
+        "TITANIUM BUSINESS",
+        "TITANIUM BUSINESS POWERSHIFT",
+        "TITANIUM POWERSHIFT",
+        "TREND",
+        "TREND BUSINESS",
+        "TREND POWERSHIFT",
+        "VIGNALE",
+        "VIGNALE POWERSHIFT"
       ],
       "EcoSport": [
-        "Trend",
-        "Titanium",
-        "ST-Line"
+        "ACTIVE",
+        "B&O PLAY EDITION",
+        "EXECUTIVE",
+        "LIMITED EDITION",
+        "ST LINE",
+        "ST LINE NOIR/JAUNE",
+        "ST LINE NOIR/JAUNEAUTO",
+        "ST LINE NOIR/TIGER",
+        "ST-LINE",
+        "TITANIUM",
+        "TITANIUM BUSINESS",
+        "TITANIUM POWERSHIFT",
+        "TITANIUM S",
+        "TREND"
       ],
       "Mustang": [
         "EcoBoost",
@@ -58840,9 +59361,27 @@
         "Titanium X"
       ],
       "Galaxy": [
-        "Trend",
-        "Titanium",
-        "Vignale"
+        "BUSINESS",
+        "BUSINESS BV6",
+        "BUSINESS POWERSHIFT",
+        "I- BUSINESS BV6",
+        "I- TITANIUM",
+        "I- TITANIUM BV6",
+        "I- TITANIUM POWERSHIFT",
+        "I- TREND BUSINESS BV6",
+        "I- TREND BV6",
+        "S/S TREND BUSINESS",
+        "TITANIUM",
+        "TITANIUM BUSINESS",
+        "TITANIUM BUSINESS BV6",
+        "TITANIUM BV6",
+        "TITANIUM POWERSHIFT",
+        "TREND",
+        "TREND BUSINESS",
+        "TREND BUSINESS BV6",
+        "TREND BUSINESS POWERSHIFT",
+        "TREND BV6",
+        "TREND POWERSHIFT"
       ],
       "C-MAX": [
         "Trend",
@@ -58949,6 +59488,89 @@
         "Trend",
         "Titanium",
         "Active"
+      ],
+      "B-Max": [
+        "AMBIENTE",
+        "BUSINESS",
+        "COLOR EDITION",
+        "COLOR EDITION POWERSHIFT",
+        "EDITION",
+        "EDITION POWERSHIFT",
+        "FUN",
+        "TITANIUM",
+        "TITANIUM POWERSHIFT",
+        "TITANIUM X",
+        "TITANIUM X POWERSHIFT",
+        "TREND",
+        "TREND POWERSHIFT"
+      ],
+      "C-Max": [
+        "BUSINESS",
+        "BUSINESS BV6",
+        "BUSINESS POWERSHIFT",
+        "BV6",
+        "DPF BUSINESS POWERSHIFT",
+        "ECONETIC BUSINESS BV6",
+        "ECONETIC TITANIUM BV6",
+        "ECONETIC TREND BUSINESS BV6",
+        "ECONETIC TREND BV6",
+        "EDITION",
+        "EDITION POWERSHIFT",
+        "FLEXIFUEL BUSINESS",
+        "FLEXIFUEL TITANIUM",
+        "FLEXIFUEL TREND",
+        "SPORT",
+        "SPORT BV6",
+        "SPORT POWERSHIFT",
+        "TITANIUM",
+        "TITANIUM BV6",
+        "TITANIUM POWERSHIFT",
+        "TITANIUM X",
+        "TITANIUM X BV6",
+        "TITANIUM X POWERSHIFT",
+        "TREND",
+        "TREND BUSINESS BV6",
+        "TREND BUSINESS POWERSHIFT",
+        "TREND BV6",
+        "TREND POWERSHIFT"
+      ],
+      "S-Max": [
+        "BUSINESS",
+        "BUSINESS BV6",
+        "BUSINESS POWERSHIFT",
+        "ECVT TITANIUM BUSINESS",
+        "EXECUTIVE BV6",
+        "EXECUTIVE POWERSHIFT",
+        "I- BUSINESS BV6",
+        "I- EXECUTIVE BV6",
+        "I- TITANIUM",
+        "I- TITANIUM 5PL",
+        "I- TITANIUM 7PL",
+        "I- TITANIUM BV6",
+        "I- TITANIUM POWERSHIFT",
+        "I- TREND BV6",
+        "I- VIGNALE",
+        "I- VIGNALE POWERSHIFT",
+        "S/S ST-LINE POWERSHIFT",
+        "ST-LINE",
+        "ST-LINE POWERSHIFT",
+        "TITANIUM",
+        "TITANIUM 5PL",
+        "TITANIUM 7PL",
+        "TITANIUM BUSINESS",
+        "TITANIUM BV6",
+        "TITANIUM BV6 5PL",
+        "TITANIUM BV6 7PL",
+        "TITANIUM POWERSHIFT",
+        "TITANIUM POWERSHIFT 5PL",
+        "TITANIUM POWERSHIFT 7PL",
+        "TREND BUSINESS",
+        "TREND BUSINESS POWERSHIFT",
+        "TREND BV6",
+        "TREND POWERSHIFT",
+        "VIGNALE",
+        "VIGNALE BV6",
+        "VIGNALE POWERSHIFT"
       ]
     },
     "Hyundai": {
