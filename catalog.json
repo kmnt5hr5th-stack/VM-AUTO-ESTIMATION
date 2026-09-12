@@ -33921,6 +33921,33 @@
           "yearStart": 2004,
           "yearEnd": 2010
         }
+      ],
+      "Grande Panda": [
+        {
+          "name": "1.2 Hybride 100",
+          "fuel": "Hybride",
+          "yearStart": 2024
+        },
+        {
+          "name": "1.2 Hybride 110",
+          "fuel": "Hybride",
+          "yearStart": 2024
+        },
+        {
+          "name": "1.2 100",
+          "fuel": "Essence",
+          "yearStart": 2024
+        },
+        {
+          "name": "électrique 44 kWh 113",
+          "fuel": "Électrique",
+          "yearStart": 2024
+        },
+        {
+          "name": "électrique 43.8 kWh 113",
+          "fuel": "Électrique",
+          "yearStart": 2024
+        }
       ]
     },
     "Jeep": {
@@ -57531,13 +57558,56 @@
         "Sport"
       ],
       "Punto": [
-        "Pop",
-        "Young",
-        "Business",
-        "Street",
-        "Stars",
-        "Easy",
-        "Sound"
+        "/70 S/S ITALIA",
+        "/70 S/S ITALIA BUSINESS",
+        "/70 S/S STEEL",
+        "/70 S/S STEEL BUSINESS",
+        "CULT",
+        "EASY",
+        "EASY BUSINESS",
+        "EASY BUSINESS PACK TECHNO",
+        "EASY BUSINESS PM",
+        "EASY ENTREPRISE",
+        "EASY ENTREPRISE PACK",
+        "GNV EASY BUSINESS",
+        "ITALIA",
+        "ITALIA BUSINESS",
+        "LOUNGE",
+        "POP",
+        "S/S EASY",
+        "S/S EASY 90G",
+        "S/S EASY BUSINESS",
+        "S/S EASY BUSINESS 90G",
+        "S/S EASY BUSINESS DUALOGIC",
+        "S/S EASY BUSINESS PACK",
+        "S/S EASY BUSINESS PM",
+        "S/S EASY DUALOGIC",
+        "S/S EASY ENTREPRISE",
+        "S/S EASY ENTREPRISE 90G",
+        "S/S EASY ENTREPRISE PACK",
+        "S/S ITALIA",
+        "S/S ITALIA 90G",
+        "S/S ITALIA BUSINESS",
+        "S/S LOUNGE",
+        "S/S LOUNGE 90G",
+        "S/S LOUNGE DUALOGIC",
+        "S/S POP",
+        "S/S POP 90G",
+        "S/S STEEL",
+        "S/S STEEL BUSINESS",
+        "S/S STEEL PACK",
+        "S/S YOUNG",
+        "STEEL",
+        "STEEL BUSINESS",
+        "TWINAIR EASY",
+        "TWINAIR S/S",
+        "TWINAIR S/S EASY",
+        "TWINAIR S/S ITALIA",
+        "TWINAIR S/S LOUNGE",
+        "TWINAIR S/S STEEL",
+        "TWINAIR S/S STEEL PACK",
+        "TWINAIR S/S YOUNG",
+        "YOUNG"
       ],
       "Tipo": [
         "Pop",
@@ -57580,10 +57650,19 @@
         "Dolcevita"
       ],
       "500e": [
-        "Action",
-        "Icon",
-        "La Prima",
-        "500+"
+        "(RED)",
+        "ACTION",
+        "ACTION PLUS",
+        "FRANCE EDITION",
+        "ICONE",
+        "ICONE 21",
+        "ICONE PLUS",
+        "ICONE PLUS 21",
+        "LA PRIMA",
+        "OCEAN GREEN",
+        "PASSION",
+        "RED",
+        "YACHT CLUB CAPRI BSG"
       ],
       "600e": [
         "Red",
@@ -57655,6 +57734,15 @@
         "Dynamic",
         "Emotion",
         "ELX"
+      ],
+      "Grande Panda": [
+        "EDCT6",
+        "ICONE",
+        "ICONE EDCT6",
+        "LA PRIMA",
+        "LA PRIMA EDCT6",
+        "POP",
+        "POP EDCT6"
       ]
     },
     "Opel": {
