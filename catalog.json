@@ -5104,300 +5104,211 @@
       ],
       "Duster": [
         {
-          "name": "1.6 16v 105ch",
+          "name": "1.2 TCe 125",
           "fuel": "Essence",
-          "yearStart": 2010,
-          "yearEnd": 2017
+          "yearStart": 2010
         },
         {
-          "name": "1.6 16v 110ch",
-          "fuel": "Essence",
-          "yearStart": 2015,
-          "yearEnd": 2017
-        },
-        {
-          "name": "1.2 TCe 125ch",
-          "fuel": "Essence",
-          "yearStart": 2013,
-          "yearEnd": 2017
-        },
-        {
-          "name": "2.0 16v 135ch 4x4",
-          "fuel": "Essence",
-          "yearStart": 2010,
-          "yearEnd": 2015
-        },
-        {
-          "name": "1.5 dCi 85ch",
+          "name": "1.5 dCi 110",
           "fuel": "Diesel",
-          "yearStart": 2010,
-          "yearEnd": 2013
+          "yearStart": 2010
         },
         {
-          "name": "1.5 dCi 90ch",
+          "name": "1.5 dCi 90",
           "fuel": "Diesel",
-          "yearStart": 2010,
-          "yearEnd": 2017
+          "yearStart": 2010
         },
         {
-          "name": "1.5 dCi 109ch",
-          "fuel": "Diesel",
-          "yearStart": 2010,
-          "yearEnd": 2013
-        },
-        {
-          "name": "1.5 dCi 110ch",
-          "fuel": "Diesel",
-          "yearStart": 2010,
-          "yearEnd": 2017
-        },
-        {
-          "name": "1.5 dCi 110ch 4x4",
-          "fuel": "Diesel",
-          "yearStart": 2010,
-          "yearEnd": 2017
-        },
-        {
-          "name": "1.6 16v LPG 105ch",
+          "name": "1.6 GPL 105",
           "fuel": "GPL",
-          "yearStart": 2010,
-          "yearEnd": 2015
+          "yearStart": 2010
         },
         {
-          "name": "1.0 TCe 100ch",
+          "name": "1.6 SCe 115",
           "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2021
+          "yearStart": 2010
         },
         {
-          "name": "1.3 TCe 130ch",
-          "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2024
-        },
-        {
-          "name": "1.3 TCe 150ch",
-          "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2024
-        },
-        {
-          "name": "1.3 TCe 150ch 4x4",
-          "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2024
-        },
-        {
-          "name": "1.6 SCe 115ch",
-          "fuel": "Essence",
-          "yearStart": 2017,
-          "yearEnd": 2019
-        },
-        {
-          "name": "1.5 dCi 90ch",
-          "fuel": "Diesel",
-          "yearStart": 2017,
-          "yearEnd": 2019
-        },
-        {
-          "name": "1.5 dCi 110ch",
-          "fuel": "Diesel",
-          "yearStart": 2017,
-          "yearEnd": 2019
-        },
-        {
-          "name": "1.5 Blue dCi 95ch",
-          "fuel": "Diesel",
-          "yearStart": 2019,
-          "yearEnd": 2021
-        },
-        {
-          "name": "1.5 Blue dCi 115ch",
-          "fuel": "Diesel",
-          "yearStart": 2019,
-          "yearEnd": 2024
-        },
-        {
-          "name": "1.5 Blue dCi 115ch 4x4",
-          "fuel": "Diesel",
-          "yearStart": 2019,
-          "yearEnd": 2024
-        },
-        {
-          "name": "1.0 TCe 100ch ECO-G GPL",
+          "name": "1.6 GPL 115",
           "fuel": "GPL",
-          "yearStart": 2020,
-          "yearEnd": 2024
+          "yearStart": 2010
         },
         {
-          "name": "1.0 TCe 90ch",
+          "name": "1.5 dCi 85",
+          "fuel": "Diesel",
+          "yearStart": 2010
+        },
+        {
+          "name": "1.6 105",
           "fuel": "Essence",
-          "yearStart": 2024,
-          "yearEnd": 2026
+          "yearStart": 2010
         },
         {
-          "name": "1.2 TCe 130ch",
+          "name": "1.6 110",
           "fuel": "Essence",
-          "yearStart": 2024,
-          "yearEnd": 2026
+          "yearStart": 2010
         },
         {
-          "name": "1.2 TCe 130ch 4x4",
+          "name": "1.0 ECO-G 100",
+          "fuel": "GPL",
+          "yearStart": 2010
+        },
+        {
+          "name": "1.3 TCe 130",
           "fuel": "Essence",
-          "yearStart": 2024,
-          "yearEnd": 2026
+          "yearStart": 2010
         },
         {
-          "name": "1.2 TCe 130ch Hybrid",
+          "name": "1.3 TCe 150",
+          "fuel": "Essence",
+          "yearStart": 2010
+        },
+        {
+          "name": "1.5 dCi 115",
+          "fuel": "Diesel",
+          "yearStart": 2010
+        },
+        {
+          "name": "ECO-G 100",
+          "fuel": "GPL",
+          "yearStart": 2010
+        },
+        {
+          "name": "1.0 TCe 100",
+          "fuel": "Essence",
+          "yearStart": 2010
+        },
+        {
+          "name": "1.0 TCe 90",
+          "fuel": "Essence",
+          "yearStart": 2010
+        },
+        {
+          "name": "1.5 dCi 95",
+          "fuel": "Diesel",
+          "yearStart": 2010
+        },
+        {
+          "name": "1.6 ECO-G 115",
+          "fuel": "GPL",
+          "yearStart": 2010
+        },
+        {
+          "name": "TCe 100",
+          "fuel": "Essence",
+          "yearStart": 2010
+        },
+        {
+          "name": "1.2 ECO-G 120",
+          "fuel": "GPL",
+          "yearStart": 2010
+        },
+        {
+          "name": "1.2 Hybride 150",
           "fuel": "Hybride",
-          "yearStart": 2024,
-          "yearEnd": 2026
+          "yearStart": 2010
         },
         {
-          "name": "1.0 TCe 100ch ECO-G GPL",
-          "fuel": "GPL",
-          "yearStart": 2024,
-          "yearEnd": 2026
+          "name": "1.2 Hybride 130",
+          "fuel": "Hybride",
+          "yearStart": 2010
+        },
+        {
+          "name": "1.2 Hybride 140",
+          "fuel": "Hybride",
+          "yearStart": 2010
+        },
+        {
+          "name": "1.2 TCe 130",
+          "fuel": "Essence",
+          "yearStart": 2010
+        },
+        {
+          "name": "1.2 150",
+          "fuel": "Essence",
+          "yearStart": 2010
+        },
+        {
+          "name": "1.6 Hybride 140",
+          "fuel": "Hybride",
+          "yearStart": 2010
+        },
+        {
+          "name": "1.8 Hybride 155",
+          "fuel": "Hybride",
+          "yearStart": 2010
         }
       ],
       "Logan": [
         {
-          "name": "1.4 MPI 75ch",
-          "fuel": "Essence",
-          "yearStart": 2004,
-          "yearEnd": 2012
-        },
-        {
-          "name": "1.6 MPI 87ch",
-          "fuel": "Essence",
-          "yearStart": 2004,
-          "yearEnd": 2012
-        },
-        {
-          "name": "1.6 MPI 90ch",
-          "fuel": "Essence",
-          "yearStart": 2004,
-          "yearEnd": 2012
-        },
-        {
-          "name": "1.6 16v 105ch",
-          "fuel": "Essence",
-          "yearStart": 2006,
-          "yearEnd": 2012
-        },
-        {
-          "name": "1.5 dCi 65ch",
-          "fuel": "Diesel",
-          "yearStart": 2005,
-          "yearEnd": 2010
-        },
-        {
-          "name": "1.5 dCi 68ch",
-          "fuel": "Diesel",
-          "yearStart": 2004,
-          "yearEnd": 2012
-        },
-        {
-          "name": "1.5 dCi 70ch",
-          "fuel": "Diesel",
-          "yearStart": 2007,
-          "yearEnd": 2012
-        },
-        {
-          "name": "1.5 dCi 85ch",
-          "fuel": "Diesel",
-          "yearStart": 2007,
-          "yearEnd": 2012
-        },
-        {
-          "name": "1.6 MPI 85ch GPL",
+          "name": "0.9 ECO-G 100",
           "fuel": "GPL",
-          "yearStart": 2008,
-          "yearEnd": 2012
+          "yearStart": 2012
         },
         {
-          "name": "1.2 16v 75ch",
-          "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2016
-        },
-        {
-          "name": "1.0 SCe 75ch",
-          "fuel": "Essence",
-          "yearStart": 2016,
-          "yearEnd": 2020
-        },
-        {
-          "name": "0.9 TCe 90ch",
-          "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2020
-        },
-        {
-          "name": "1.0 TCe 100ch",
-          "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2020
-        },
-        {
-          "name": "1.5 dCi 75ch",
-          "fuel": "Diesel",
-          "yearStart": 2012,
-          "yearEnd": 2020
-        },
-        {
-          "name": "1.5 dCi 90ch",
-          "fuel": "Diesel",
-          "yearStart": 2012,
-          "yearEnd": 2020
-        },
-        {
-          "name": "1.5 Blue dCi 95ch",
-          "fuel": "Diesel",
-          "yearStart": 2019,
-          "yearEnd": 2020
-        },
-        {
-          "name": "0.9 TCe 90ch LPG",
+          "name": "0.9 ECO-G 90",
           "fuel": "GPL",
-          "yearStart": 2017,
-          "yearEnd": 2020
+          "yearStart": 2012
         },
         {
-          "name": "1.0 SCe 65ch",
+          "name": "0.9 TCe 90",
           "fuel": "Essence",
-          "yearStart": 2020,
-          "yearEnd": 2026
+          "yearStart": 2012
         },
         {
-          "name": "1.0 TCe 90ch",
-          "fuel": "Essence",
-          "yearStart": 2020,
-          "yearEnd": 2026
-        },
-        {
-          "name": "1.0 TCe 100ch",
-          "fuel": "Essence",
-          "yearStart": 2020,
-          "yearEnd": 2024
-        },
-        {
-          "name": "1.0 TCe 110ch",
-          "fuel": "Essence",
-          "yearStart": 2021,
-          "yearEnd": 2026
-        },
-        {
-          "name": "1.5 Blue dCi 95ch",
-          "fuel": "Diesel",
-          "yearStart": 2020,
-          "yearEnd": 2022
-        },
-        {
-          "name": "1.0 TCe 100ch ECO-G GPL",
+          "name": "0.9 GPL 90",
           "fuel": "GPL",
-          "yearStart": 2020,
-          "yearEnd": 2026
+          "yearStart": 2012
+        },
+        {
+          "name": "1.0 SCe 75",
+          "fuel": "Essence",
+          "yearStart": 2012
+        },
+        {
+          "name": "1.5 dCi 75",
+          "fuel": "Diesel",
+          "yearStart": 2012
+        },
+        {
+          "name": "1.5 dCi 95",
+          "fuel": "Diesel",
+          "yearStart": 2012
+        },
+        {
+          "name": "1.5 dCi 90",
+          "fuel": "Diesel",
+          "yearStart": 2012
+        },
+        {
+          "name": "1.0 TCe 100",
+          "fuel": "Essence",
+          "yearStart": 2012
+        },
+        {
+          "name": "ECO-G 90",
+          "fuel": "GPL",
+          "yearStart": 2012
+        },
+        {
+          "name": "GPL 90",
+          "fuel": "GPL",
+          "yearStart": 2012
+        },
+        {
+          "name": "1.2 75",
+          "fuel": "Essence",
+          "yearStart": 2012
+        },
+        {
+          "name": "0.9 dCi 90",
+          "fuel": "Diesel",
+          "yearStart": 2012
+        },
+        {
+          "name": "dCi 75",
+          "fuel": "Diesel",
+          "yearStart": 2012
         }
       ],
       "Logan MCV": [
@@ -5488,180 +5399,240 @@
       ],
       "Lodgy": [
         {
-          "name": "1.2 TCe 115ch",
+          "name": "1.3 TCe 100",
           "fuel": "Essence",
           "yearStart": 2012,
-          "yearEnd": 2016
-        },
-        {
-          "name": "1.6 SCe 100ch",
-          "fuel": "Essence",
-          "yearStart": 2015,
-          "yearEnd": 2020
-        },
-        {
-          "name": "1.0 TCe 100ch",
-          "fuel": "Essence",
-          "yearStart": 2019,
           "yearEnd": 2022
         },
         {
-          "name": "1.3 TCe 130ch",
+          "name": "1.3 TCe 130",
           "fuel": "Essence",
-          "yearStart": 2019,
+          "yearStart": 2012,
           "yearEnd": 2022
         },
         {
-          "name": "1.5 dCi 90ch",
+          "name": "1.5 dCi 115",
           "fuel": "Diesel",
           "yearStart": 2012,
           "yearEnd": 2022
         },
         {
-          "name": "1.5 dCi 107ch",
-          "fuel": "Diesel",
-          "yearStart": 2012,
-          "yearEnd": 2016
-        },
-        {
-          "name": "1.5 dCi 110ch",
-          "fuel": "Diesel",
-          "yearStart": 2012,
-          "yearEnd": 2019
-        },
-        {
-          "name": "1.5 Blue dCi 95ch",
-          "fuel": "Diesel",
-          "yearStart": 2019,
-          "yearEnd": 2022
-        },
-        {
-          "name": "1.5 Blue dCi 115ch",
-          "fuel": "Diesel",
-          "yearStart": 2019,
-          "yearEnd": 2022
-        },
-        {
-          "name": "1.6 MPI 85ch GPL",
+          "name": "1.0 ECO-G 100",
           "fuel": "GPL",
           "yearStart": 2012,
-          "yearEnd": 2015
+          "yearEnd": 2022
+        },
+        {
+          "name": "1.2 TCe 115",
+          "fuel": "Essence",
+          "yearStart": 2012,
+          "yearEnd": 2022
+        },
+        {
+          "name": "1.5 dCi 95",
+          "fuel": "Diesel",
+          "yearStart": 2012,
+          "yearEnd": 2022
+        },
+        {
+          "name": "1.5 dCi 110",
+          "fuel": "Diesel",
+          "yearStart": 2012,
+          "yearEnd": 2022
+        },
+        {
+          "name": "1.5 dCi 90",
+          "fuel": "Diesel",
+          "yearStart": 2012,
+          "yearEnd": 2022
+        },
+        {
+          "name": "1.6 ECO-G 100",
+          "fuel": "GPL",
+          "yearStart": 2012,
+          "yearEnd": 2022
+        },
+        {
+          "name": "1.6 GPL 82",
+          "fuel": "GPL",
+          "yearStart": 2012,
+          "yearEnd": 2022
+        },
+        {
+          "name": "1.6 85",
+          "fuel": "Essence",
+          "yearStart": 2012,
+          "yearEnd": 2022
+        },
+        {
+          "name": "1.6 GPL 85",
+          "fuel": "GPL",
+          "yearStart": 2012,
+          "yearEnd": 2022
+        },
+        {
+          "name": "1.6 GPL 100",
+          "fuel": "GPL",
+          "yearStart": 2012,
+          "yearEnd": 2022
+        },
+        {
+          "name": "1.6 SCe 100",
+          "fuel": "Essence",
+          "yearStart": 2012,
+          "yearEnd": 2022
+        },
+        {
+          "name": "TCe 130",
+          "fuel": "Essence",
+          "yearStart": 2012,
+          "yearEnd": 2022
         }
       ],
       "Dokker": [
         {
-          "name": "1.2 TCe 115ch",
+          "name": "1.2 TCe 115",
           "fuel": "Essence",
           "yearStart": 2012,
-          "yearEnd": 2016
+          "yearEnd": 2020
         },
         {
-          "name": "1.6 SCe 100ch",
+          "name": "1.3 TCe 100",
           "fuel": "Essence",
-          "yearStart": 2015,
-          "yearEnd": 2019
+          "yearStart": 2012,
+          "yearEnd": 2020
         },
         {
-          "name": "1.3 TCe 130ch",
+          "name": "1.3 TCe 130",
           "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2021
+          "yearStart": 2012,
+          "yearEnd": 2020
         },
         {
-          "name": "1.5 dCi 75ch",
+          "name": "1.5 dCi 95",
           "fuel": "Diesel",
           "yearStart": 2012,
-          "yearEnd": 2019
+          "yearEnd": 2020
         },
         {
-          "name": "1.5 dCi 90ch",
+          "name": "1.5 dCi 75",
           "fuel": "Diesel",
           "yearStart": 2012,
-          "yearEnd": 2021
+          "yearEnd": 2020
         },
         {
-          "name": "1.5 Blue dCi 95ch",
+          "name": "1.5 dCi 90",
           "fuel": "Diesel",
-          "yearStart": 2019,
-          "yearEnd": 2021
+          "yearStart": 2012,
+          "yearEnd": 2020
         },
         {
-          "name": "1.6 MPI 85ch GPL",
+          "name": "1.6 ECO-G 100",
           "fuel": "GPL",
           "yearStart": 2012,
-          "yearEnd": 2015
+          "yearEnd": 2020
+        },
+        {
+          "name": "1.6 85",
+          "fuel": "Essence",
+          "yearStart": 2012,
+          "yearEnd": 2020
+        },
+        {
+          "name": "1.6 GPL 85",
+          "fuel": "GPL",
+          "yearStart": 2012,
+          "yearEnd": 2020
+        },
+        {
+          "name": "1.6 SCe 100",
+          "fuel": "Essence",
+          "yearStart": 2012,
+          "yearEnd": 2020
+        },
+        {
+          "name": "1.6 GPL 100",
+          "fuel": "GPL",
+          "yearStart": 2012,
+          "yearEnd": 2020
+        },
+        {
+          "name": "TCe 130",
+          "fuel": "Essence",
+          "yearStart": 2012,
+          "yearEnd": 2020
         }
       ],
       "Jogger": [
         {
-          "name": "1.0 SCe 75ch",
-          "fuel": "Essence",
-          "yearStart": 2021,
-          "yearEnd": 2023
-        },
-        {
-          "name": "1.0 TCe 100ch",
-          "fuel": "Essence",
-          "yearStart": 2021,
-          "yearEnd": 2026
-        },
-        {
-          "name": "1.0 TCe 110ch",
-          "fuel": "Essence",
-          "yearStart": 2022,
-          "yearEnd": 2026
-        },
-        {
-          "name": "1.0 TCe 100ch ECO-G GPL",
+          "name": "1.0 ECO-G 100",
           "fuel": "GPL",
-          "yearStart": 2022,
-          "yearEnd": 2026
+          "yearStart": 2021
         },
         {
-          "name": "1.6 Hybrid 140ch",
+          "name": "1.0 TCe 110",
+          "fuel": "Essence",
+          "yearStart": 2021
+        },
+        {
+          "name": "1.2 ECO-G 120",
+          "fuel": "GPL",
+          "yearStart": 2021
+        },
+        {
+          "name": "1.6 Hybride 140",
           "fuel": "Hybride",
-          "yearStart": 2023,
-          "yearEnd": 2026
+          "yearStart": 2021
+        },
+        {
+          "name": "1.8 Hybride 155",
+          "fuel": "Hybride",
+          "yearStart": 2021
         }
       ],
       "Spring": [
         {
-          "name": "33kW 45ch",
+          "name": "électrique 31",
           "fuel": "Électrique",
           "yearStart": 2021,
-          "yearEnd": 2024
-        },
-        {
-          "name": "48kW 65ch",
-          "fuel": "Électrique",
-          "yearStart": 2024,
-          "yearEnd": 2026
+          "yearEnd": 2025
         }
       ],
       "Bigster": [
         {
-          "name": "1.2 TCe 130ch",
+          "name": "1.2 150",
           "fuel": "Essence",
-          "yearStart": 2025,
-          "yearEnd": 2026
+          "yearStart": 2025
         },
         {
-          "name": "1.2 TCe 130ch Hybrid",
+          "name": "1.2 Hybride 150",
           "fuel": "Hybride",
-          "yearStart": 2025,
-          "yearEnd": 2026
+          "yearStart": 2025
         },
         {
-          "name": "1.2 TCe 155ch Hybrid 4x4",
+          "name": "1.2 Hybride 130",
           "fuel": "Hybride",
-          "yearStart": 2025,
-          "yearEnd": 2026
+          "yearStart": 2025
         },
         {
-          "name": "1.0 TCe 140ch ECO-G GPL",
-          "fuel": "GPL",
-          "yearStart": 2025,
-          "yearEnd": 2026
+          "name": "1.2 Hybride 140",
+          "fuel": "Hybride",
+          "yearStart": 2025
+        },
+        {
+          "name": "1.2 TCe 130",
+          "fuel": "Essence",
+          "yearStart": 2025
+        },
+        {
+          "name": "1.2 TCe 140",
+          "fuel": "Essence",
+          "yearStart": 2025
+        },
+        {
+          "name": "1.8 Hybride 155",
+          "fuel": "Hybride",
+          "yearStart": 2025
         }
       ]
     },
@@ -39902,64 +39873,76 @@
     "DS": {
       "DS 3": [
         {
-          "name": "1.2 VTi 82ch",
-          "fuel": "Essence",
-          "yearStart": 2010,
-          "yearEnd": 2016
-        },
-        {
-          "name": "1.4 VTi 95ch",
-          "fuel": "Essence",
-          "yearStart": 2010,
-          "yearEnd": 2014
-        },
-        {
-          "name": "1.6 THP 155ch",
-          "fuel": "Essence",
-          "yearStart": 2010,
-          "yearEnd": 2016
-        },
-        {
-          "name": "1.6 THP 165ch",
-          "fuel": "Essence",
-          "yearStart": 2013,
-          "yearEnd": 2016
-        },
-        {
-          "name": "1.6 THP Performance 208ch",
+          "name": "1.2 PureTech 110",
           "fuel": "Essence",
           "yearStart": 2015,
-          "yearEnd": 2016
+          "yearEnd": 2020
         },
         {
-          "name": "1.2 PureTech 82ch",
+          "name": "1.2 PureTech 130",
           "fuel": "Essence",
-          "yearStart": 2014,
-          "yearEnd": 2019
+          "yearStart": 2015,
+          "yearEnd": 2020
         },
         {
-          "name": "1.2 PureTech 110ch",
+          "name": "1.2 PureTech 82",
           "fuel": "Essence",
-          "yearStart": 2014,
-          "yearEnd": 2019
+          "yearStart": 2015,
+          "yearEnd": 2020
         },
         {
-          "name": "1.6 e-HDi 90ch",
-          "fuel": "Diesel",
-          "yearStart": 2010,
-          "yearEnd": 2014
+          "name": "1.2 THP 165",
+          "fuel": "Essence",
+          "yearStart": 2015,
+          "yearEnd": 2020
         },
         {
-          "name": "1.6 BlueHDi 100ch",
+          "name": "1.4 HDi 70",
           "fuel": "Diesel",
-          "yearStart": 2014,
-          "yearEnd": 2019
+          "yearStart": 2015,
+          "yearEnd": 2020
         },
         {
-          "name": "1.6 BlueHDi 120ch",
+          "name": "1.6 BlueHDi 100",
           "fuel": "Diesel",
-          "yearStart": 2014,
-          "yearEnd": 2019
+          "yearStart": 2015,
+          "yearEnd": 2020
+        },
+        {
+          "name": "1.6 BlueHDi 120",
+          "fuel": "Diesel",
+          "yearStart": 2015,
+          "yearEnd": 2020
+        },
+        {
+          "name": "1.6 e-HDi 90",
+          "fuel": "Diesel",
+          "yearStart": 2015,
+          "yearEnd": 2020
+        },
+        {
+          "name": "1.6 THP 165",
+          "fuel": "Essence",
+          "yearStart": 2015,
+          "yearEnd": 2020
+        },
+        {
+          "name": "1.6 THP 208",
+          "fuel": "Essence",
+          "yearStart": 2015,
+          "yearEnd": 2020
+        },
+        {
+          "name": "1.6 VTi 120",
+          "fuel": "Essence",
+          "yearStart": 2015,
+          "yearEnd": 2020
+        },
+        {
+          "name": "1.6 PureTech 110",
+          "fuel": "Essence",
+          "yearStart": 2015,
+          "yearEnd": 2020
         }
       ],
       "DS 3 Crossback": [
@@ -50394,52 +50377,260 @@
         "Journey"
       ],
       "Logan": [
-        "Access",
-        "Ambiance",
-        "Laureate",
-        "Prestige",
-        "Essential",
-        "Expression",
-        "Extreme",
-        "Journey"
+        "15 ANS",
+        "15 ANS EASY-R",
+        "ACCESS",
+        "ADVANCE",
+        "ADVANCE E6C",
+        "ADVANCE EASY-R",
+        "AMBIANCE",
+        "AMBIANCE E6",
+        "AMBIANCE E6C",
+        "AMBIANCE ECO2",
+        "AMBIANCE ECO2 E6",
+        "AMBIANCE EURO6",
+        "BLACKLINE",
+        "BLACKLINE E6",
+        "BLACKLINE EASY-R",
+        "BLACKLINE EURO6",
+        "BLUE AMBIANCE",
+        "BLUE ESSENTIEL",
+        "BLUE LAUREATE",
+        "BLUE SILVERLINE",
+        "BLUE STEPWAY",
+        "BLUE TECHROAD",
+        "CONFORT",
+        "CONFORT E6C",
+        "ECO2 AMBIANCE ECO2",
+        "ECO2 AMBIANCE EURO6",
+        "ECO2 LAUREATE ECO2",
+        "ECO2 LAUREATE EURO6",
+        "ECO2 PRESTIGE ECO2",
+        "ECO2 PRESTIGE EURO6",
+        "ESSENTIEL",
+        "ESSENTIEL EASY-R",
+        "EXPLORER",
+        "EXPLORER E6",
+        "EXPLORER EASY-R",
+        "EXPLORER STEPWAY",
+        "LAUREATE",
+        "LAUREATE E6",
+        "LAUREATE E6 EASY-R",
+        "LAUREATE E6C",
+        "LAUREATE EASY-R",
+        "LAUREATE EASY-R E6",
+        "LAUREATE ECO2",
+        "LAUREATE ECO2 E6",
+        "LAUREATE EURO6",
+        "LOGAN",
+        "LOGAN E6",
+        "LOGAN ECO2",
+        "LOGAN EURO6",
+        "PRESTIGE",
+        "PRESTIGE E6 EASY-R",
+        "PRESTIGE EASY-R E6",
+        "PRESTIGE ECO2 E6",
+        "SILVERLINE",
+        "SILVERLINE E6C",
+        "SILVERLINE EASY-R",
+        "SL 10 ANS",
+        "SL 10 ANS E6",
+        "SL 10 ANS ECO2",
+        "SL 10 ANS EURO6",
+        "SL BLACK TOUCH",
+        "STEPWAY",
+        "STEPWAY E6C",
+        "STEPWAY EASY-R",
+        "TECHROAD",
+        "TECHROAD EASY-R"
       ],
       "Duster": [
-        "Ambiance",
-        "Laureate",
-        "Prestige",
-        "Ambiance+",
-        "Laureate+",
-        "Prestige+",
-        "Outdoor",
-        "SE Summit",
-        "Black Shadow",
-        "Essential",
-        "Access",
-        "Confort",
-        "Techroad",
-        "Black Collector",
-        "Journey",
-        "Extreme SE",
-        "Expression",
-        "Extreme"
+        "15 ANS 2020",
+        "15 ANS E6",
+        "15 ANS EU6",
+        "2020 JV163458",
+        "ACCESS",
+        "ACCESS 2019",
+        "ACCESS E6",
+        "ACCESS EU6",
+        "AMBIANCE",
+        "AMBIANCE E6",
+        "AMBIANCE EURO4",
+        "AMBIANCE EURO6",
+        "AMBIANCE PLUS",
+        "AMBIANCE PLUS EURO6",
+        "AMBIANCE PRO",
+        "AVENTURE",
+        "BIOETHANOL",
+        "BIOETHANOL AMBIANCE",
+        "BIOETHANOL DELSEY",
+        "BIOETHANOL DUSTER",
+        "BIOETHANOL LAUREATE",
+        "BIOETHANOL LAUREATE 2",
+        "BIOETHANOL LAUREATE ECO2",
+        "BIOETHANOL PRESTIGE",
+        "BIOETHANOL PRESTIGE ECO2",
+        "BLACK COLLECTOR",
+        "BLACK TOUCH",
+        "BLUE ACCESS",
+        "BLUE ACCESS EU6",
+        "BLUE CONFORT",
+        "BLUE CONFORT E6U",
+        "BLUE DUSTER",
+        "BLUE ESSENTIEL",
+        "BLUE ESSENTIEL E6U",
+        "BLUE ESSENTIEL EU6",
+        "BLUE PRESTIGE",
+        "BLUE PRESTIGE E6U",
+        "BLUE TECHROAD",
+        "CONFORT",
+        "CONFORT 2019",
+        "CONFORT E6",
+        "CONFORT E6U",
+        "CONFORT EU6",
+        "DELSEY",
+        "DUSTER",
+        "DUSTER BV6",
+        "ESF",
+        "ESF GRAND PUBLIC",
+        "ESSENTIAL",
+        "ESSENTIEL",
+        "ESSENTIEL 2019",
+        "ESSENTIEL E6",
+        "ESSENTIEL EU6",
+        "EU6",
+        "EURO6",
+        "EVASION EU6",
+        "EXPLORER",
+        "EXPRESSION",
+        "EXTREME",
+        "EXTREME +",
+        "GARMIN",
+        "JOURNEY",
+        "JOURNEY +",
+        "LAUREATE",
+        "LAUREATE 2",
+        "LAUREATE E6",
+        "LAUREATE EURO4",
+        "LAUREATE EURO6",
+        "LAUREATE PLUS",
+        "PRESTIGE",
+        "PRESTIGE +",
+        "PRESTIGE 2",
+        "PRESTIGE 2019",
+        "PRESTIGE 2020",
+        "PRESTIGE E6",
+        "PRESTIGE E6U",
+        "PRESTIGE EU6",
+        "PRESTIGE EURO6",
+        "PRESTIGE PLUS",
+        "SILVER LINE",
+        "SL 10 ANS",
+        "SL 10 ANS E6",
+        "SL AIR",
+        "SL AVENTURE",
+        "SL EXTREME",
+        "SL MAT EDITION",
+        "SL STEEL",
+        "SL STEEL E6",
+        "TECHROAD"
       ],
-      "Spring": [
-        "Access",
-        "Confort",
-        "Business",
-        "Extreme"
-      ],
+      "Spring": [],
       "Jogger": [
-        "Essential",
-        "Expression",
-        "Extreme",
-        "Hybrid"
+        "CONFORT 5PL",
+        "CONFORT 5PL 2022",
+        "CONFORT 7PL",
+        "CONFORT 7PL 2022",
+        "ESSENTIAL 5PL",
+        "ESSENTIAL 7PL",
+        "ESSENTIEL 5PL",
+        "ESSENTIEL 5PL 2022",
+        "ESSENTIEL 7PL",
+        "ESSENTIEL 7PL 2022",
+        "EXPRESSION 5PL",
+        "EXPRESSION 7PL",
+        "GSR2 ESSENTIAL 5PL",
+        "GSR2 ESSENTIAL 7PL",
+        "GSR2 EXPRESSION 5PL",
+        "GSR2 EXPRESSION 7PL",
+        "GSR2 EXTREME + 5PL",
+        "GSR2 SL EXTREME +",
+        "GSR2 SL EXTREME 5PL",
+        "GSR2 SL EXTREME 7PL",
+        "JOURNEY 5PL",
+        "JOURNEY 7PL",
+        "SL EXTREME + 5PL",
+        "SL EXTREME + 7PL",
+        "SL EXTREME 5PL",
+        "SL EXTREME 5PL 2022",
+        "SL EXTREME 7PL",
+        "SL EXTREME 7PL 2022"
       ],
       "Lodgy": [
-        "Access",
-        "Ambiance",
-        "Laureate",
-        "Stepway"
+        "15 ANS",
+        "15 ANS 2020 5PL",
+        "15 ANS 2020 7PL",
+        "15 ANS 5PL",
+        "15 ANS EU6 5PL",
+        "15 ANS EU6 7PL",
+        "5PL",
+        "5PL E6",
+        "5PL EURO6",
+        "7PL",
+        "7PL E6",
+        "7PL EURO6",
+        "ACCESS 5PL",
+        "ADVANCE 5PL",
+        "ADVANCE 7PL",
+        "AMBIANCE 5PL",
+        "AMBIANCE 5PL ECO2",
+        "AMBIANCE 7PL",
+        "AMBIANCE 7PL ECO2",
+        "BLACK LINE 5PL ECO2",
+        "BLACK LINE 5PL EURO6",
+        "BLACK LINE 7PL ECO2",
+        "BLACK LINE 7PL EURO6",
+        "BLUE 5PL",
+        "BLUE 7PL",
+        "BLUE ESSENTIEL 5PL",
+        "BLUE ESSENTIEL 7PL",
+        "BLUE ESSENTIEL BV6 5PL",
+        "BLUE ESSENTIEL BV6 7PL",
+        "BLUE ESSENTIEL BV6 EU6",
+        "BLUE ESSENTIEL EU6 5PL",
+        "BLUE EU6 5PL",
+        "BLUE EU6 7PL",
+        "BLUE SILVER LINE 5PL",
+        "BLUE SILVER LINE 7PL",
+        "BLUE SILVER LINE BV6",
+        "BLUE TECHROAD 5PL",
+        "BLUE TECHROAD 7PL",
+        "ESSENTIEL",
+        "ESSENTIEL 5PL",
+        "ESSENTIEL 7PL",
+        "EXPLORER 5PL",
+        "EXPLORER 7PL",
+        "LAUREATE 5PL",
+        "LAUREATE 5PL ECO2",
+        "LAUREATE 7PL",
+        "LAUREATE 7PL ECO2",
+        "LODGY 5PL",
+        "LODGY 5PL EURO6",
+        "PRESTIGE 5PL",
+        "PRESTIGE 5PL ECO2",
+        "PRESTIGE 7PL",
+        "PRESTIGE 7PL ECO2",
+        "SILVER LINE",
+        "SILVER LINE 5PL",
+        "SILVER LINE 5PL EURO6",
+        "SILVER LINE 7PL",
+        "SILVER LINE 7PL EURO6",
+        "SILVER LINE BV6 5PL",
+        "SILVER LINE BV6 7PL",
+        "SL 10 ANS 5PL",
+        "SL 10 ANS 7PL",
+        "TECHROAD 5PL",
+        "TECHROAD 7PL"
       ],
       "Logan MCV": [
         "Ambiance",
@@ -50448,15 +50639,35 @@
         "Stepway"
       ],
       "Dokker": [
-        "Access",
-        "Ambiance",
-        "Laureate",
-        "Stepway"
+        "ADVANCE",
+        "AMBIANCE",
+        "AMBIANCE E6",
+        "AMBIANCE ECO2",
+        "BLUE",
+        "BLUE ESSENTIEL",
+        "BLUE SILVER LINE",
+        "BLUE TECHROAD",
+        "DOKKER",
+        "DOKKER E6",
+        "ECO2",
+        "ESSENTIEL",
+        "EXPLORER",
+        "LAUREATE",
+        "LAUREATE ECO2",
+        "SILVER LINE",
+        "SILVER LINE E6",
+        "SL 10 ANS",
+        "SL 10 ANS E6",
+        "SL 10 ANS ECO2",
+        "SL EMBLEME",
+        "SL EMBLEME ECO2",
+        "TECHROAD"
       ],
       "Bigster": [
-        "Expression",
-        "Extreme",
-        "Journey"
+        "ESSENTIAL",
+        "EXPRESSION",
+        "EXTREME",
+        "JOURNEY"
       ]
     },
     "Peugeot": {
@@ -52811,12 +53022,55 @@
     },
     "DS": {
       "DS 3": [
-        "So Chic",
-        "DSign",
-        "Sport Chic",
-        "Performance",
-        "Performance Line",
-        "Rivoli"
+        "1955 BV6",
+        "BE CHIC",
+        "BE CHIC BV6",
+        "BE CHIC ETG",
+        "BE CHIC ETG6",
+        "BLACK LEZARD",
+        "BLACK LEZARD BV6",
+        "CAFE RACER",
+        "CHIC",
+        "CHIC ETG",
+        "CONNECTED CHIC",
+        "CREME PARTHENON",
+        "DARK LIGHT",
+        "DARK LIGHT BV6",
+        "DARK SIDE",
+        "DARK SIDE BV6",
+        "DRIVE EFFICIENCY BE CHIC",
+        "DRIVE EFFICIENCY EXECUTIVE",
+        "DRIVE EFFICIENCY SO CHIC",
+        "EMERAUDE ADDICT",
+        "EMERAUDE ADDICT ETG",
+        "EMERAUDE ADDICT ETG6",
+        "EXECUTIVE",
+        "FOREVER",
+        "GIVENCHY LE MAKEUP",
+        "GIVENCHY LE MAKEUP BV6",
+        "INES DE LA FRESSANGE",
+        "LE MAKEUP",
+        "LE MAKEUP BV6",
+        "PERFORMANCE",
+        "PERFORMANCE BLACK SPECIAL",
+        "PERFORMANCE BLACK SPECIAL BV6",
+        "PERFORMANCE BRM CHRONOGRAPHES BV6",
+        "PERFORMANCE BV6",
+        "PERFORMANCE LINE",
+        "PERFORMANCE LINE BV6",
+        "SO CHIC",
+        "SO CHIC BV6",
+        "SO CHIC ETG",
+        "SO CHIC ETG6",
+        "SO IRRESISTIBLE",
+        "SO IRRESISTIBLE BV6",
+        "SO IRRESISTIBLE ETG6",
+        "SPORT CHIC",
+        "SPORT CHIC BV6",
+        "SPORT CHIC ETG6",
+        "ULTRA PRESTIGE",
+        "ULTRA PRESTIGE BV6",
+        "ULTRA PRESTIGE ETG6"
       ],
       "DS 3 Crossback": [
         "So Chic",
