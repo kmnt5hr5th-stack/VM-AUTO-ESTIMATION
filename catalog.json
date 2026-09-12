@@ -10770,344 +10770,208 @@
     "Toyota": {
       "Yaris": [
         {
-          "name": "1.0 VVT-i 68ch",
+          "name": "VVT-i 100",
           "fuel": "Essence",
-          "yearStart": 1999,
-          "yearEnd": 2005
+          "yearStart": 2006
         },
         {
-          "name": "1.3 VVT-i 86ch",
+          "name": "VVT-i 133",
           "fuel": "Essence",
-          "yearStart": 1999,
-          "yearEnd": 2005
+          "yearStart": 2006
         },
         {
-          "name": "1.5 VVT-i 106ch TS",
+          "name": "VVT-i 69",
           "fuel": "Essence",
-          "yearStart": 2001,
-          "yearEnd": 2005
+          "yearStart": 2006
         },
         {
-          "name": "1.4 D-4D 75ch",
+          "name": "D-4D 90",
           "fuel": "Diesel",
-          "yearStart": 2001,
-          "yearEnd": 2005
+          "yearStart": 2006
         },
         {
-          "name": "1.0 VVT-i 69ch",
+          "name": "VVT-i 132",
           "fuel": "Essence",
-          "yearStart": 2005,
-          "yearEnd": 2011
+          "yearStart": 2006
         },
         {
-          "name": "1.33 VVT-i 99ch",
+          "name": "VVT-i 87",
           "fuel": "Essence",
-          "yearStart": 2008,
-          "yearEnd": 2011
+          "yearStart": 2006
         },
         {
-          "name": "1.3 VVT-i 87ch",
+          "name": "100",
           "fuel": "Essence",
-          "yearStart": 2005,
-          "yearEnd": 2008
+          "yearStart": 2006
         },
         {
-          "name": "1.8 VVT-i 133ch TS",
+          "name": "VVT-i 110",
           "fuel": "Essence",
-          "yearStart": 2006,
-          "yearEnd": 2011
+          "yearStart": 2006
         },
         {
-          "name": "1.4 D-4D 90ch",
-          "fuel": "Diesel",
-          "yearStart": 2005,
-          "yearEnd": 2011
-        },
-        {
-          "name": "1.0 VVT-i 69ch",
-          "fuel": "Essence",
-          "yearStart": 2011,
-          "yearEnd": 2020
-        },
-        {
-          "name": "1.33 VVT-i 99ch",
-          "fuel": "Essence",
-          "yearStart": 2011,
-          "yearEnd": 2020
-        },
-        {
-          "name": "1.5 VVT-i 111ch",
-          "fuel": "Essence",
-          "yearStart": 2017,
-          "yearEnd": 2020
-        },
-        {
-          "name": "1.5 Hybrid 100ch",
+          "name": "Hybride 100",
           "fuel": "Hybride",
-          "yearStart": 2012,
-          "yearEnd": 2020
+          "yearStart": 2006
         },
         {
-          "name": "1.4 D-4D 90ch",
-          "fuel": "Diesel",
-          "yearStart": 2011,
-          "yearEnd": 2018
-        },
-        {
-          "name": "1.0 VVT-i 72ch",
+          "name": "1.0 VVT-i 70",
           "fuel": "Essence",
-          "yearStart": 2020,
-          "yearEnd": 2024
+          "yearStart": 2006
         },
         {
-          "name": "1.5 VVT-i 111ch",
-          "fuel": "Hybride",
-          "yearStart": 2020,
-          "yearEnd": 2026
-        },
-        {
-          "name": "1.5 VVT-i 125ch",
+          "name": "1.5 VVT-i 110",
           "fuel": "Essence",
-          "yearStart": 2020,
-          "yearEnd": 2026
+          "yearStart": 2006
         },
         {
-          "name": "1.5 Hybrid 116ch",
+          "name": "1.5 Hybride 100",
           "fuel": "Hybride",
-          "yearStart": 2020,
-          "yearEnd": 2026
+          "yearStart": 2006
         },
         {
-          "name": "1.5 Hybrid 130ch",
+          "name": "VVT-i 70",
+          "fuel": "Essence",
+          "yearStart": 2006
+        },
+        {
+          "name": "VVT-i 72",
+          "fuel": "Essence",
+          "yearStart": 2006
+        },
+        {
+          "name": "1.6",
+          "fuel": "Essence",
+          "yearStart": 2006
+        },
+        {
+          "name": "1.5 VVT-i 120",
+          "fuel": "Essence",
+          "yearStart": 2006
+        },
+        {
+          "name": "1.5 130",
+          "fuel": "Essence",
+          "yearStart": 2006
+        },
+        {
+          "name": "1.5 Hybride 116",
           "fuel": "Hybride",
-          "yearStart": 2020,
-          "yearEnd": 2026
+          "yearStart": 2006
+        },
+        {
+          "name": "1.5 Hybride 130",
+          "fuel": "Hybride",
+          "yearStart": 2006
+        },
+        {
+          "name": "1.6 VVT-i 261",
+          "fuel": "Essence",
+          "yearStart": 2006
+        },
+        {
+          "name": "Hybride 114",
+          "fuel": "Hybride",
+          "yearStart": 2006
+        },
+        {
+          "name": "116",
+          "fuel": "Essence",
+          "yearStart": 2006
+        },
+        {
+          "name": "Hybride 116",
+          "fuel": "Hybride",
+          "yearStart": 2006
+        },
+        {
+          "name": "VVT-i 120",
+          "fuel": "Essence",
+          "yearStart": 2006
         }
       ],
       "Yaris Cross": [
         {
-          "name": "1.5 VVT-i 125ch",
+          "name": "1.5 Hybride 116",
+          "fuel": "Hybride",
+          "yearStart": 2021
+        },
+        {
+          "name": "1.5 Hybride 130",
+          "fuel": "Hybride",
+          "yearStart": 2021
+        },
+        {
+          "name": "1.5 130",
           "fuel": "Essence",
-          "yearStart": 2021,
-          "yearEnd": 2026
+          "yearStart": 2021
         },
         {
-          "name": "1.5 Hybrid 116ch",
-          "fuel": "Hybride",
-          "yearStart": 2021,
-          "yearEnd": 2026
-        },
-        {
-          "name": "1.5 Hybrid 130ch",
-          "fuel": "Hybride",
-          "yearStart": 2023,
-          "yearEnd": 2026
-        },
-        {
-          "name": "1.5 Hybrid 130ch AWD-i",
-          "fuel": "Hybride",
-          "yearStart": 2021,
-          "yearEnd": 2026
+          "name": "1.5 116",
+          "fuel": "Essence",
+          "yearStart": 2021
         }
       ],
       "Corolla": [
         {
-          "name": "1.3 86ch",
-          "fuel": "Essence",
-          "yearStart": 1997,
-          "yearEnd": 2002
-        },
-        {
-          "name": "1.4 VVT-i 97ch",
-          "fuel": "Essence",
-          "yearStart": 2000,
-          "yearEnd": 2002
-        },
-        {
-          "name": "1.6 110ch",
-          "fuel": "Essence",
-          "yearStart": 1997,
-          "yearEnd": 2002
-        },
-        {
-          "name": "1.8 110ch",
-          "fuel": "Essence",
-          "yearStart": 1997,
-          "yearEnd": 2002
-        },
-        {
-          "name": "2.0 D 72ch",
-          "fuel": "Diesel",
-          "yearStart": 1997,
-          "yearEnd": 2002
-        },
-        {
-          "name": "1.4 VVT-i 97ch",
-          "fuel": "Essence",
-          "yearStart": 2002,
-          "yearEnd": 2007
-        },
-        {
-          "name": "1.6 VVT-i 110ch",
-          "fuel": "Essence",
-          "yearStart": 2002,
-          "yearEnd": 2007
-        },
-        {
-          "name": "1.8 VVT-i 135ch",
-          "fuel": "Essence",
-          "yearStart": 2002,
-          "yearEnd": 2007
-        },
-        {
-          "name": "1.8 VVTL-i 192ch TS",
-          "fuel": "Essence",
-          "yearStart": 2002,
-          "yearEnd": 2007
-        },
-        {
-          "name": "1.4 D-4D 90ch",
-          "fuel": "Diesel",
-          "yearStart": 2004,
-          "yearEnd": 2007
-        },
-        {
-          "name": "2.0 D-4D 90ch",
-          "fuel": "Diesel",
-          "yearStart": 2002,
-          "yearEnd": 2004
-        },
-        {
-          "name": "2.0 D-4D 116ch",
-          "fuel": "Diesel",
-          "yearStart": 2002,
-          "yearEnd": 2007
-        },
-        {
-          "name": "1.33 VVT-i 99ch",
-          "fuel": "Essence",
-          "yearStart": 2007,
-          "yearEnd": 2013
-        },
-        {
-          "name": "1.4 VVT-i 97ch",
-          "fuel": "Essence",
-          "yearStart": 2007,
-          "yearEnd": 2013
-        },
-        {
-          "name": "1.6 VVT-i 124ch",
-          "fuel": "Essence",
-          "yearStart": 2007,
-          "yearEnd": 2013
-        },
-        {
-          "name": "1.8 VVT-i 140ch",
-          "fuel": "Essence",
-          "yearStart": 2007,
-          "yearEnd": 2013
-        },
-        {
-          "name": "2.0 VVT-i 143ch",
-          "fuel": "Essence",
-          "yearStart": 2007,
-          "yearEnd": 2013
-        },
-        {
-          "name": "1.4 D-4D 90ch",
-          "fuel": "Diesel",
-          "yearStart": 2007,
-          "yearEnd": 2013
-        },
-        {
-          "name": "2.0 D-4D 126ch",
-          "fuel": "Diesel",
-          "yearStart": 2007,
-          "yearEnd": 2013
-        },
-        {
-          "name": "2.2 D-4D 136ch",
-          "fuel": "Diesel",
-          "yearStart": 2007,
-          "yearEnd": 2009
-        },
-        {
-          "name": "2.2 D-CAT 177ch",
-          "fuel": "Diesel",
-          "yearStart": 2007,
-          "yearEnd": 2013
-        },
-        {
-          "name": "1.33 VVT-i 99ch",
-          "fuel": "Essence",
-          "yearStart": 2013,
-          "yearEnd": 2019
-        },
-        {
-          "name": "1.2 Turbo 116ch",
-          "fuel": "Essence",
-          "yearStart": 2015,
-          "yearEnd": 2019
-        },
-        {
-          "name": "1.6 Valvematic 132ch",
-          "fuel": "Essence",
-          "yearStart": 2013,
-          "yearEnd": 2018
-        },
-        {
-          "name": "1.8 Hybrid 136ch",
+          "name": "1.8 Hybride 122",
           "fuel": "Hybride",
-          "yearStart": 2013,
-          "yearEnd": 2019
+          "yearStart": 2018
         },
         {
-          "name": "1.4 D-4D 90ch",
-          "fuel": "Diesel",
-          "yearStart": 2013,
-          "yearEnd": 2018
+          "name": "1.8 Hybride 140",
+          "fuel": "Hybride",
+          "yearStart": 2018
         },
         {
-          "name": "1.6 D-4D 112ch",
-          "fuel": "Diesel",
-          "yearStart": 2015,
-          "yearEnd": 2018
+          "name": "1.8 Hybride 196",
+          "fuel": "Hybride",
+          "yearStart": 2018
         },
         {
-          "name": "2.0 D-4D 143ch",
-          "fuel": "Diesel",
-          "yearStart": 2013,
-          "yearEnd": 2018
+          "name": "Hybride 122",
+          "fuel": "Hybride",
+          "yearStart": 2018
         },
         {
-          "name": "1.2 Turbo 116ch",
+          "name": "184",
           "fuel": "Essence",
-          "yearStart": 2019,
-          "yearEnd": 2026
+          "yearStart": 2018
         },
         {
-          "name": "1.8 Hybrid 122ch",
+          "name": "2.0 Hybride 184",
           "fuel": "Hybride",
-          "yearStart": 2019,
-          "yearEnd": 2023
+          "yearStart": 2018
         },
         {
-          "name": "1.8 Hybrid 140ch",
+          "name": "2.0 Hybride 196",
           "fuel": "Hybride",
-          "yearStart": 2023,
-          "yearEnd": 2026
+          "yearStart": 2018
         },
         {
-          "name": "2.0 Hybrid 180ch",
+          "name": "Hybride 140",
           "fuel": "Hybride",
-          "yearStart": 2019,
-          "yearEnd": 2023
+          "yearStart": 2018
         },
         {
-          "name": "2.0 Hybrid 196ch",
+          "name": "Hybride 196",
           "fuel": "Hybride",
-          "yearStart": 2023,
-          "yearEnd": 2026
+          "yearStart": 2018
+        },
+        {
+          "name": "Hybride 184",
+          "fuel": "Hybride",
+          "yearStart": 2018
+        },
+        {
+          "name": "2.0 Hybride 178",
+          "fuel": "Hybride",
+          "yearStart": 2018
+        },
+        {
+          "name": "Hybride 180",
+          "fuel": "Hybride",
+          "yearStart": 2018
         }
       ],
       "Corolla Cross": [
@@ -11132,186 +10996,216 @@
       ],
       "C-HR": [
         {
-          "name": "1.2 Turbo 116ch",
+          "name": "1.8 Hybride 122",
+          "fuel": "Hybride",
+          "yearStart": 2016
+        },
+        {
+          "name": "1.8 Hybride",
+          "fuel": "Hybride",
+          "yearStart": 2016
+        },
+        {
+          "name": "2.0 Hybride 184",
+          "fuel": "Hybride",
+          "yearStart": 2016
+        },
+        {
+          "name": "2.0 Hybride",
+          "fuel": "Hybride",
+          "yearStart": 2016
+        },
+        {
+          "name": "1.2 116",
           "fuel": "Essence",
-          "yearStart": 2016,
-          "yearEnd": 2023
+          "yearStart": 2016
         },
         {
-          "name": "1.2 Turbo 116ch 4x4",
+          "name": "1.2",
           "fuel": "Essence",
-          "yearStart": 2016,
-          "yearEnd": 2019
+          "yearStart": 2016
         },
         {
-          "name": "1.8 Hybrid 122ch",
+          "name": "électrique 58",
+          "fuel": "Électrique",
+          "yearStart": 2016
+        },
+        {
+          "name": "électrique",
+          "fuel": "Électrique",
+          "yearStart": 2016
+        },
+        {
+          "name": "électrique 77",
+          "fuel": "Électrique",
+          "yearStart": 2016
+        },
+        {
+          "name": "1.8 Hybride 140",
           "fuel": "Hybride",
-          "yearStart": 2016,
-          "yearEnd": 2023
+          "yearStart": 2016
         },
         {
-          "name": "2.0 Hybrid 184ch",
+          "name": "1.8 Hybride 200",
           "fuel": "Hybride",
-          "yearStart": 2019,
-          "yearEnd": 2023
+          "yearStart": 2016
         },
         {
-          "name": "1.8 Hybrid 140ch",
+          "name": "1.8 Hybride 225",
           "fuel": "Hybride",
-          "yearStart": 2023,
-          "yearEnd": 2026
+          "yearStart": 2016
         },
         {
-          "name": "2.0 Hybrid 197ch",
+          "name": "2.0 Hybride 200",
           "fuel": "Hybride",
-          "yearStart": 2023,
-          "yearEnd": 2026
+          "yearStart": 2016
         },
         {
-          "name": "2.0 Hybrid 197ch AWD-i",
+          "name": "2.0 Hybride 225",
           "fuel": "Hybride",
-          "yearStart": 2023,
-          "yearEnd": 2026
-        },
-        {
-          "name": "2.0 Hybrid 223ch PHEV",
-          "fuel": "Hybride rechargeable",
-          "yearStart": 2023,
-          "yearEnd": 2026
+          "yearStart": 2016
         }
       ],
       "RAV4": [
         {
-          "name": "2.0 16v 129ch",
-          "fuel": "Essence",
-          "yearStart": 1994,
-          "yearEnd": 2000
-        },
-        {
-          "name": "2.0 16v 128ch 4x4",
-          "fuel": "Essence",
-          "yearStart": 1994,
-          "yearEnd": 2000
-        },
-        {
-          "name": "1.8 VVT-i 125ch",
-          "fuel": "Essence",
-          "yearStart": 2000,
-          "yearEnd": 2005
-        },
-        {
-          "name": "2.0 VVT-i 150ch",
-          "fuel": "Essence",
-          "yearStart": 2000,
-          "yearEnd": 2005
-        },
-        {
-          "name": "2.0 D-4D 116ch",
+          "name": "D-4D 150",
           "fuel": "Diesel",
-          "yearStart": 2001,
-          "yearEnd": 2005
+          "yearStart": 2006
         },
         {
-          "name": "2.0 VVT-i 152ch",
+          "name": "150",
           "fuel": "Essence",
-          "yearStart": 2005,
-          "yearEnd": 2012
+          "yearStart": 2006
         },
         {
-          "name": "2.4 VVT-i 170ch",
+          "name": "VVT-i 158",
           "fuel": "Essence",
-          "yearStart": 2005,
-          "yearEnd": 2008
+          "yearStart": 2006
         },
         {
-          "name": "3.5 V6 269ch",
+          "name": "177",
           "fuel": "Essence",
-          "yearStart": 2005,
-          "yearEnd": 2012
+          "yearStart": 2006
         },
         {
-          "name": "2.0 D-4D 116ch",
+          "name": "D-4D 136",
           "fuel": "Diesel",
-          "yearStart": 2005,
-          "yearEnd": 2009
+          "yearStart": 2006
         },
         {
-          "name": "2.2 D-4D 136ch",
-          "fuel": "Diesel",
-          "yearStart": 2005,
-          "yearEnd": 2012
-        },
-        {
-          "name": "2.2 D-4D 150ch",
-          "fuel": "Diesel",
-          "yearStart": 2005,
-          "yearEnd": 2012
-        },
-        {
-          "name": "2.2 D-CAT 177ch",
-          "fuel": "Diesel",
-          "yearStart": 2006,
-          "yearEnd": 2012
-        },
-        {
-          "name": "2.0 VVT-i 151ch",
+          "name": "VVT-i 152",
           "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2018
+          "yearStart": 2006
         },
         {
-          "name": "2.5 VVT-i 180ch",
+          "name": "D-4D 177",
+          "fuel": "Diesel",
+          "yearStart": 2006
+        },
+        {
+          "name": "D-4D 143",
+          "fuel": "Diesel",
+          "yearStart": 2006
+        },
+        {
+          "name": "VVT-i 151",
           "fuel": "Essence",
-          "yearStart": 2012,
-          "yearEnd": 2018
+          "yearStart": 2006
         },
         {
-          "name": "2.0 D-4D 124ch",
-          "fuel": "Diesel",
-          "yearStart": 2012,
-          "yearEnd": 2018
-        },
-        {
-          "name": "2.2 D-4D 150ch",
-          "fuel": "Diesel",
-          "yearStart": 2012,
-          "yearEnd": 2018
-        },
-        {
-          "name": "2.5 Hybrid 197ch",
+          "name": "2.5 Hybride 197",
           "fuel": "Hybride",
-          "yearStart": 2016,
-          "yearEnd": 2018
+          "yearStart": 2006
         },
         {
-          "name": "2.0 VVT-i 175ch",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2026
-        },
-        {
-          "name": "2.5 VVT-i 203ch",
-          "fuel": "Essence",
-          "yearStart": 2018,
-          "yearEnd": 2022
-        },
-        {
-          "name": "2.5 Hybrid 218ch",
+          "name": "Hybride 197",
           "fuel": "Hybride",
-          "yearStart": 2018,
-          "yearEnd": 2026
+          "yearStart": 2006
         },
         {
-          "name": "2.5 Hybrid 222ch AWD-i",
+          "name": "D-4D 124",
+          "fuel": "Diesel",
+          "yearStart": 2006
+        },
+        {
+          "name": "2.5 222",
+          "fuel": "Essence",
+          "yearStart": 2006
+        },
+        {
+          "name": "2.5",
+          "fuel": "Essence",
+          "yearStart": 2006
+        },
+        {
+          "name": "2.5 Hybride 218",
           "fuel": "Hybride",
-          "yearStart": 2018,
-          "yearEnd": 2026
+          "yearStart": 2006
         },
         {
-          "name": "2.5 Hybrid 306ch PHEV AWD",
-          "fuel": "Hybride rechargeable",
-          "yearStart": 2020,
-          "yearEnd": 2026
+          "name": "2.5 Hybride 222",
+          "fuel": "Hybride",
+          "yearStart": 2006
+        },
+        {
+          "name": "2.5 Hybride",
+          "fuel": "Hybride",
+          "yearStart": 2006
+        },
+        {
+          "name": "2.5 Hybride 306",
+          "fuel": "Hybride",
+          "yearStart": 2006
+        },
+        {
+          "name": "2.5 Hybride 185",
+          "fuel": "Hybride",
+          "yearStart": 2006
+        },
+        {
+          "name": "218",
+          "fuel": "Essence",
+          "yearStart": 2006
+        },
+        {
+          "name": "222",
+          "fuel": "Essence",
+          "yearStart": 2006
+        },
+        {
+          "name": "Hybride 218",
+          "fuel": "Hybride",
+          "yearStart": 2006
+        },
+        {
+          "name": "Hybride 222",
+          "fuel": "Hybride",
+          "yearStart": 2006
+        },
+        {
+          "name": "2.5 183",
+          "fuel": "Essence",
+          "yearStart": 2006
+        },
+        {
+          "name": "2.5 185",
+          "fuel": "Essence",
+          "yearStart": 2006
+        },
+        {
+          "name": "2.5 191",
+          "fuel": "Essence",
+          "yearStart": 2006
+        },
+        {
+          "name": "2.5 194",
+          "fuel": "Essence",
+          "yearStart": 2006
+        },
+        {
+          "name": "2.5 309",
+          "fuel": "Essence",
+          "yearStart": 2006
         }
       ],
       "Land Cruiser": [
@@ -11360,22 +11254,19 @@
       ],
       "Camry": [
         {
-          "name": "2.5 VVT-i 178ch",
+          "name": "2.5 230",
           "fuel": "Essence",
-          "yearStart": 2011,
-          "yearEnd": 2017
+          "yearStart": 2019
         },
         {
-          "name": "2.5 Hybrid 205ch",
+          "name": "2.5 Hybride",
           "fuel": "Hybride",
-          "yearStart": 2011,
-          "yearEnd": 2017
+          "yearStart": 2019
         },
         {
-          "name": "2.5 Hybrid 218ch",
+          "name": "2.5 Hybride 218",
           "fuel": "Hybride",
-          "yearStart": 2018,
-          "yearEnd": 2026
+          "yearStart": 2019
         }
       ],
       "Prius": [
@@ -11464,10 +11355,14 @@
       ],
       "Aygo X": [
         {
-          "name": "1.0 VVT-i 72ch",
+          "name": "1.0 VVT-i 72",
           "fuel": "Essence",
-          "yearStart": 2022,
-          "yearEnd": 2026
+          "yearStart": 2022
+        },
+        {
+          "name": "1.5 116",
+          "fuel": "Essence",
+          "yearStart": 2022
         }
       ],
       "Highlander": [
@@ -54879,74 +54774,272 @@
         "Dynamic"
       ],
       "Aygo X": [
-        "Limited",
-        "GR Sport",
-        "Undercover",
-        "Pulse"
+        "ACTIVE",
+        "ACTIVE BUSINESS",
+        "AIR COLLECTION",
+        "AIR COLLECTION S-",
+        "AIR DESIGN",
+        "AIR DESIGN S-",
+        "AIR JBL EDITION S-",
+        "AIR LIMITED S-",
+        "COLLECTION",
+        "COLLECTION S-",
+        "DESIGN",
+        "DESIGN S-",
+        "DYNAMIC",
+        "DYNAMIC S-",
+        "GR SPORT",
+        "GRAPHIC",
+        "JBL EDITION S-",
+        "PRO ACTIVE BUSINESS",
+        "S- AIR COLLECTION",
+        "S- AIR DESIGN",
+        "S- COLLECTION",
+        "S- DESIGN",
+        "S- DYNAMIC",
+        "UNDERCOVER",
+        "UNDERCOVER AVEC JBL S-"
       ],
       "Yaris": [
-        "Dynamic",
-        "Tendance",
-        "Active",
-        "Signature",
-        "Design",
-        "Dynamic Business",
-        "Feel",
-        "Premium",
-        "Collection",
-        "Design Business",
-        "GR Sport",
-        "Premiere",
-        "Iconic",
-        "GR",
-        "Style"
+        "20EME ANNIVERSAIRE",
+        "ACTIVE",
+        "ATTITUDE",
+        "BUSINESS",
+        "CACHAREL",
+        "CHIC",
+        "COLLECTION",
+        "COLLECTION 2022",
+        "COLLECTION JAUNE EL",
+        "CONFORT",
+        "CONFORT PACK",
+        "CONFORT PACK MULTIMODE",
+        "CREATION",
+        "CYAN EDITION",
+        "DESIGN",
+        "DESIGN 2022",
+        "DESIGN CONNECT",
+        "DESIGN Y20",
+        "DYNAMIC",
+        "DYNAMIC 2022",
+        "DYNAMIC BUSINESS",
+        "DYNAMIC BUSINESS + PROGRAMME",
+        "DYNAMIC BUSINESS STAGE ACADEMY",
+        "DYNAMIC MMT",
+        "EXCELIA",
+        "EXCELIA PACK",
+        "EXCELIA PACK MULTIMODE",
+        "FRANCE",
+        "FRANCE BUSINESS",
+        "FRANCE BUSINESS + PROGRAMME",
+        "FRANCE BUSINESS STAGE ACADEMY",
+        "FRANCE CONNECT",
+        "GR AERO",
+        "GR EDITION OGIER",
+        "GR EDITION ROVANPERA",
+        "GR PACK PREMIUM",
+        "GR SPORT",
+        "GR TRACK",
+        "GRAPHIC",
+        "ICONIC",
+        "ICONIC 2022",
+        "LES BLEUS",
+        "LES BLEUS MULTIMODE",
+        "LIMITED EDITION",
+        "LIMITED EDITION LES BLEUS",
+        "LOUNGE",
+        "LOUNGE MMT",
+        "LUNA",
+        "LUNA MULTIMODE",
+        "LUNA PACK",
+        "LUNA PACK MULTIMODE",
+        "MILLENIUM",
+        "MULTIMEDIA",
+        "MULTIMEDIA MULTIMODE",
+        "NAVIMEDIA",
+        "NAVIMEDIA MMT",
+        "PREMIERE",
+        "SERIE LIMITEE TECHNO",
+        "SKYBLUE",
+        "SOL",
+        "SOL MULTIMODE",
+        "STOP & START CONFORT",
+        "STOP & START EXCELIA",
+        "STOP & START IN",
+        "STOP & START LOUNGE",
+        "STYLE",
+        "STYLE MMT",
+        "TECHNO",
+        "TECHNO MULTIMODE",
+        "TECHNOLINE",
+        "TENDANCE",
+        "ULTIMATE"
       ],
       "Yaris Cross": [
-        "Dynamic",
-        "Active",
-        "Design",
-        "Design Business",
-        "Collection",
-        "GR Sport",
-        "Premiere"
+        "-I COLLECTION",
+        "-I DESIGN",
+        "-I DESIGN BUSINESS +",
+        "-I DYNAMIC BUSINESS +",
+        "-I PREMIERE",
+        "-I TRAIL",
+        "-I TRAIL (MARCHEPIEDS STANDARDISES)",
+        "COLLECTION",
+        "DESIGN",
+        "DESIGN BUSINESS + PROGRAMME",
+        "DYNAMIC",
+        "DYNAMIC BUSINESS + PROGRAMME",
+        "GR SPORT",
+        "PREMIERE",
+        "TRAIL",
+        "TRAIL (MARCHEPIEDS STANDARDISES)"
       ],
       "C-HR": [
-        "Dynamic",
-        "Business",
-        "Dynamic Business",
-        "Graphic",
-        "Design",
-        "Design Business",
-        "Collection",
-        "GR Sport",
-        "Active",
-        "Team D",
-        "Edition",
-        "Premium"
+        "-I GR SPORT",
+        "-I GR SPORT PREMIERE",
+        "COLLECTION",
+        "COLLECTION PREMIERE",
+        "DESIGN",
+        "DESIGN BUSINESS",
+        "DESIGN ULTIMATE",
+        "DISTINCTIVE",
+        "DYNAMIC",
+        "DYNAMIC BUSINESS",
+        "DYNAMIC BUSINESS + PROGRAMME",
+        "DYNAMIC BUSINESS STAGE ACADEMY",
+        "DYNAMIC ULTIMATE",
+        "EDITION",
+        "EDITION 2021",
+        "GR SPORT",
+        "GR SPORT MAT EDITION",
+        "GR SPORT PREMIERE",
+        "GR-SPORT",
+        "GRAPHIC",
+        "GRAPHIC 2021",
+        "JBL EDITION",
+        "PREMIERE",
+        "PRO DYNAMIC BUSINESS +",
+        "T ACTIVE",
+        "T DISTINCTIVE",
+        "T DYNAMIC",
+        "T GRAPHIC"
       ],
       "RAV4": [
-        "Dynamic",
-        "Active",
-        "Design",
-        "Collection",
-        "Dynamic 4WD",
-        "Active 4WD",
-        "Design 4WD",
-        "Collection 4WD",
-        "Plug-in",
-        "Plug-in Design",
-        "GR Sport"
+        "-I 30 YEARS",
+        "-I BLACK EDITION",
+        "-I COLLECTION",
+        "-I COLLECTION ACCESS",
+        "-I DESIGN",
+        "-I DESIGN BUSINESS",
+        "-I DESIGN BUSINESS+ BEYOND",
+        "-I DYNAMIC",
+        "-I DYNAMIC BUSINESS +",
+        "-I GR SPORT",
+        "-I GRAPHIC",
+        "-I LOUNGE",
+        "-I TRAIL",
+        "222CH LOUNGE",
+        "30 YEARS",
+        "A2WD BLACK EDITION",
+        "A2WD COLLECTION",
+        "A2WD DYNAMIC EDITION",
+        "A2WD DYNAMIC EDITION BUSINESS",
+        "A2WD SILVER EDITION",
+        "AAWD BLACK EDITION",
+        "AAWD COLLECTION",
+        "AAWD LOUNGE",
+        "ACTIVE",
+        "BLACK EDITION",
+        "BUSINESS",
+        "CLEAN POWER",
+        "CLEAN POWER 2008",
+        "CLEAN POWER PACK TECHNO",
+        "CLUB EDITION",
+        "CLUB EDITION MULTIDRIVE S",
+        "COLLECTION",
+        "COLLECTION ACCESS",
+        "D-CAT CLEAN POWER",
+        "D-CAT CLUB EDITION",
+        "D-CAT LIFE",
+        "D-CAT LIFE EDITION",
+        "D-CAT LIMITED EDITION",
+        "D-CAT LOUNGE",
+        "D-CAT LOUNGE BV6",
+        "D-CAT SPORT EDITION",
+        "D-CAT WHITE EDITION",
+        "DESIGN",
+        "DESIGN BUSINESS",
+        "DESIGN MULTIDRIVE S",
+        "DESIGN TSS BUSINESS",
+        "DYNAMIC",
+        "DYNAMIC BUSINESS",
+        "DYNAMIC BUSINESS + \"TOYOTA",
+        "DYNAMIC BUSINESS + BEYOND",
+        "DYNAMIC BUSINESS + PROGRAMME",
+        "DYNAMIC BUSINESS EDITION",
+        "DYNAMIC BUSINESS EDITION MULTIDRIVE",
+        "DYNAMIC BUSINESS MULTIDRIVE S",
+        "DYNAMIC EDITION",
+        "DYNAMIC EDITION BUSINESS",
+        "DYNAMIC EDITION MULTIDRIVE S",
+        "DYNAMIC MULTIDRIVE S",
+        "DYNAMIC TSS BUSINESS",
+        "EXCLUSIVE",
+        "GRAPHIC",
+        "H LOUNGE",
+        "LE CAP",
+        "LE CAP BV6",
+        "LECAP",
+        "LIFE",
+        "LIFE BV6",
+        "LIFE EDITION",
+        "LIFE EDITION MULTIDRIVE S",
+        "LIFE MULTIDRIVE 7S",
+        "LIFE MULTIDRIVE S",
+        "LIFE MULTIDRIVE S 7",
+        "LIMITED EDITION",
+        "LIMITED EDITION MULTIDRIVE S",
+        "LOUNGE",
+        "LOUNGE MULTIDRIVE 7S",
+        "LOUNGE MULTIDRIVE S",
+        "LOUNGE MULTIDRIVE S 7",
+        "MULTIDRIVE S 7 LIMITED",
+        "MULTIDRIVE S ACTIVE",
+        "ONE",
+        "PREMIERE EDITION",
+        "SILVER EDITION",
+        "SPORT EDITION",
+        "SPORT EDITION MULTIDRIVE S",
+        "TENDANCE",
+        "VXE",
+        "VXV",
+        "WHITE EDITION",
+        "WHITE EDITION MULTIDRIVE S"
       ],
       "Corolla": [
-        "Dynamic",
-        "Active",
-        "Design",
-        "GR Sport",
-        "Collection",
-        "Touring Sports",
-        "TS",
-        "Hybrid",
-        "Dynamic Business"
+        "ACTIVE",
+        "ACTIVE 2020",
+        "ACTIVE 2022",
+        "COLLECTION",
+        "COLLECTION 2020",
+        "COLLECTION 2022",
+        "DESIGN",
+        "DESIGN 2020",
+        "DESIGN 2022",
+        "DYNAMIC",
+        "DYNAMIC 2020",
+        "DYNAMIC 2022",
+        "DYNAMIC BUSINESS",
+        "DYNAMIC BUSINESS (AVEC SUPPORT",
+        "DYNAMIC BUSINESS + PROGRAMME",
+        "DYNAMIC BUSINESS 2020",
+        "DYNAMIC BUSINESS STAGE ACAD",
+        "DYNAMIC BUSINESS STAGE ACADEMY",
+        "DYNAMIC BUSINESS SUPP LOMB",
+        "GR SPORT",
+        "GR SPORT 2020",
+        "GR SPORT 2022",
+        "JBL EDITION",
+        "PRO DYNAMIC BUSINESS +",
+        "TREK"
       ],
       "Prius": [
         "Dynamic",
@@ -54959,10 +55052,12 @@
         "GR Sport"
       ],
       "Camry": [
-        "Dynamic",
-        "Business",
-        "Design",
-        "Executive"
+        "BUSINESS EXECUTIVE + PROGRAMME",
+        "CONFORT BUSINESS",
+        "DESIGN",
+        "DYNAMIC",
+        "DYNAMIC BUSINESS + PROGRAMME",
+        "LOUNGE"
       ],
       "Supra": [
         "Première",
