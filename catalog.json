@@ -35063,6 +35063,273 @@
           "yearStart": 2024,
           "yearEnd": 2026
         }
+      ],
+      "Mini Countryman": [
+        {
+          "name": "112",
+          "fuel": "Essence",
+          "yearStart": 2010
+        },
+        {
+          "name": "122",
+          "fuel": "Essence",
+          "yearStart": 2010
+        },
+        {
+          "name": "184",
+          "fuel": "Essence",
+          "yearStart": 2010
+        },
+        {
+          "name": "190",
+          "fuel": "Essence",
+          "yearStart": 2010
+        },
+        {
+          "name": "192",
+          "fuel": "Essence",
+          "yearStart": 2010
+        },
+        {
+          "name": "143",
+          "fuel": "Essence",
+          "yearStart": 2010
+        },
+        {
+          "name": "98",
+          "fuel": "Essence",
+          "yearStart": 2010
+        },
+        {
+          "name": "90",
+          "fuel": "Essence",
+          "yearStart": 2010
+        },
+        {
+          "name": "1.5 102",
+          "fuel": "Essence",
+          "yearStart": 2010
+        },
+        {
+          "name": "1.5 116",
+          "fuel": "Essence",
+          "yearStart": 2010
+        },
+        {
+          "name": "électrique 125",
+          "fuel": "Électrique",
+          "yearStart": 2010
+        },
+        {
+          "name": "1.5 136",
+          "fuel": "Essence",
+          "yearStart": 2010
+        },
+        {
+          "name": "116",
+          "fuel": "Essence",
+          "yearStart": 2010
+        },
+        {
+          "name": "136",
+          "fuel": "Essence",
+          "yearStart": 2010
+        },
+        {
+          "name": "150",
+          "fuel": "Essence",
+          "yearStart": 2010
+        },
+        {
+          "name": "178",
+          "fuel": "Essence",
+          "yearStart": 2010
+        },
+        {
+          "name": "2.0 150",
+          "fuel": "Essence",
+          "yearStart": 2010
+        },
+        {
+          "name": "2.0 178",
+          "fuel": "Essence",
+          "yearStart": 2010
+        },
+        {
+          "name": "2.0 190",
+          "fuel": "Essence",
+          "yearStart": 2010
+        },
+        {
+          "name": "306",
+          "fuel": "Essence",
+          "yearStart": 2010
+        },
+        {
+          "name": "102",
+          "fuel": "Essence",
+          "yearStart": 2010
+        },
+        {
+          "name": "224",
+          "fuel": "Essence",
+          "yearStart": 2010
+        },
+        {
+          "name": "électrique 136",
+          "fuel": "Électrique",
+          "yearStart": 2010
+        },
+        {
+          "name": "1.5 170",
+          "fuel": "Essence",
+          "yearStart": 2010
+        },
+        {
+          "name": "163",
+          "fuel": "Essence",
+          "yearStart": 2010
+        },
+        {
+          "name": "170",
+          "fuel": "Essence",
+          "yearStart": 2010
+        },
+        {
+          "name": "2.0 218",
+          "fuel": "Essence",
+          "yearStart": 2010
+        },
+        {
+          "name": "2.0 300",
+          "fuel": "Essence",
+          "yearStart": 2010
+        },
+        {
+          "name": "2.0 163",
+          "fuel": "Essence",
+          "yearStart": 2010
+        },
+        {
+          "name": "204",
+          "fuel": "Essence",
+          "yearStart": 2010
+        },
+        {
+          "name": "électrique 66.5 kWh 204",
+          "fuel": "Électrique",
+          "yearStart": 2010
+        },
+        {
+          "name": "218",
+          "fuel": "Essence",
+          "yearStart": 2010
+        },
+        {
+          "name": "300",
+          "fuel": "Essence",
+          "yearStart": 2010
+        },
+        {
+          "name": "électrique 66.5 kWh 313",
+          "fuel": "Électrique",
+          "yearStart": 2010
+        }
+      ],
+      "Mini Paceman": [
+        {
+          "name": "1.6 112",
+          "fuel": "Essence",
+          "yearStart": 2013,
+          "yearEnd": 2016
+        },
+        {
+          "name": "1.6 122",
+          "fuel": "Essence",
+          "yearStart": 2013,
+          "yearEnd": 2016
+        },
+        {
+          "name": "1.6 190",
+          "fuel": "Essence",
+          "yearStart": 2013,
+          "yearEnd": 2016
+        },
+        {
+          "name": "1.6 218",
+          "fuel": "Essence",
+          "yearStart": 2013,
+          "yearEnd": 2016
+        },
+        {
+          "name": "2.0 112",
+          "fuel": "Essence",
+          "yearStart": 2013,
+          "yearEnd": 2016
+        },
+        {
+          "name": "2.0 143",
+          "fuel": "Essence",
+          "yearStart": 2013,
+          "yearEnd": 2016
+        },
+        {
+          "name": "190",
+          "fuel": "Essence",
+          "yearStart": 2013,
+          "yearEnd": 2016
+        },
+        {
+          "name": "143",
+          "fuel": "Essence",
+          "yearStart": 2013,
+          "yearEnd": 2016
+        },
+        {
+          "name": "1.6",
+          "fuel": "Essence",
+          "yearStart": 2013,
+          "yearEnd": 2016
+        },
+        {
+          "name": "1.6 184",
+          "fuel": "Essence",
+          "yearStart": 2013,
+          "yearEnd": 2016
+        },
+        {
+          "name": "2.0",
+          "fuel": "Essence",
+          "yearStart": 2013,
+          "yearEnd": 2016
+        }
+      ],
+      "Mini Aceman": [
+        {
+          "name": "électrique 54.2 kWh 258",
+          "fuel": "Électrique",
+          "yearStart": 2024
+        },
+        {
+          "name": "électrique 42.5 kWh 184",
+          "fuel": "Électrique",
+          "yearStart": 2024
+        },
+        {
+          "name": "184",
+          "fuel": "Essence",
+          "yearStart": 2024
+        },
+        {
+          "name": "218",
+          "fuel": "Essence",
+          "yearStart": 2024
+        },
+        {
+          "name": "électrique 54.2 kWh 218",
+          "fuel": "Électrique",
+          "yearStart": 2024
+        }
       ]
     },
     "Land Rover": {
@@ -62777,6 +63044,248 @@
         "Level 1",
         "Level 2",
         "Level 3"
+      ],
+      "Mini Countryman": [
+        "+88",
+        "+88 ALL4 LONGSTONE",
+        "+95",
+        "+95 ALL4 EDITION NORTHWOOD",
+        "+95 ESSENTIAL",
+        "+95 FINITION CLASSIC",
+        "+95CH",
+        "ALL 4 BUSINESS CALL",
+        "ALL EDITION EDITION NORTHWOOD",
+        "ALL EDITION LONGSTONE",
+        "ALL EDITION NORTHWOOD",
+        "ALL4",
+        "ALL4 BUSINESS DESIGN",
+        "ALL4 BUSINESS DESIGN BV6",
+        "ALL4 BV6",
+        "ALL4 COOPER BUSINESS DESIGN",
+        "ALL4 COOPER D BUSINESS",
+        "ALL4 COOPER D CLASSIC",
+        "ALL4 COOPER D ESSENTIAL",
+        "ALL4 COOPER D FINITION",
+        "ALL4 COOPER EDITION NORTHWOOD",
+        "ALL4 COOPER FINITION JCW",
+        "ALL4 COOPER FINITION MINI",
+        "ALL4 COOPER S BUSINESS",
+        "ALL4 COOPER S EDITION",
+        "ALL4 COOPER S FINITION",
+        "ALL4 COOPER SD BUSINESS",
+        "ALL4 COOPER SD CLASSIC",
+        "ALL4 COOPER SD EDITION",
+        "ALL4 COOPER SD ESSENTIAL",
+        "ALL4 COOPER SD FINITION",
+        "ALL4 COOPER SD JCW",
+        "ALL4 COOPER SD MINI",
+        "ALL4 EDITION EDITION NORTHWOOD",
+        "ALL4 EDITION LONGSTONE",
+        "ALL4 EDITION LONGSTONE BV6",
+        "ALL4 EDITION NORTHWOOD",
+        "ALL4 EDITION OAKWOOD",
+        "ALL4 EDITION OAKWOOD BV6",
+        "ALL4 EXQUISITE",
+        "ALL4 EXQUISITE BV6",
+        "ALL4 FINITION CHILI",
+        "ALL4 FINITION CHILI BV6",
+        "ALL4 FINITION CHILI+",
+        "ALL4 FINITION CHILI+ BV6",
+        "ALL4 FINITION CLASSIC",
+        "ALL4 FINITION JCW",
+        "ALL4 FINITION JCW BV6",
+        "ALL4 FINITION RED HOT",
+        "ALL4 FINITION SALT -ECOLE",
+        "ALL4 FINITION YOURS",
+        "ALL4 FINITION YOURS BV6",
+        "ALL4 LONGSTONE",
+        "ALL4 PACK CHILI III",
+        "ALL4 PACK JCW EXTERIEUR",
+        "ALL4 PACK JCW INTERIEUR",
+        "ALL4 PACK RED HOT",
+        "BRICK LANE",
+        "BRICK LANE BV6",
+        "BUSINESS",
+        "BUSINESS CALL",
+        "BUSINESS DESIGN",
+        "BUSINESS DESIGN BV6",
+        "BUSINESS TRIP",
+        "BV6",
+        "C BLACKYARD",
+        "C CLASSIC",
+        "C ESSENTIAL",
+        "CH ALL4 COOPER S",
+        "CH COOPER EDITION UNTAMED",
+        "CH COOPER ESSENTIAL",
+        "CLASSIC + PACK XS",
+        "COOPER BUSINESS CALL",
+        "COOPER BUSINESS DESIGN",
+        "COOPER BUSINESS TRIP",
+        "COOPER D",
+        "COOPER D ALL4",
+        "COOPER D ALL4 BUSINESS",
+        "COOPER D ALL4 PACK",
+        "COOPER D BUSINESS CALL",
+        "COOPER D BUSINESS DESIGN",
+        "COOPER D BUSINESS TRIP",
+        "COOPER D CLASSIC",
+        "COOPER D EDITION HIGHLANDS",
+        "COOPER D EDITION NORTHWOOD",
+        "COOPER D EDITION UNTAMED",
+        "COOPER D ESSENTIAL",
+        "COOPER D FINITION JCW",
+        "COOPER D FINITION RED",
+        "COOPER D JCW",
+        "COOPER D MINI YOURS",
+        "COOPER D PACK CHILI",
+        "COOPER D PACK RED",
+        "COOPER EDITION HIGHLANDS",
+        "COOPER EDITION NORTHWOOD",
+        "COOPER EDITION PREMIUM",
+        "COOPER EDITION PREMIUM PLUS",
+        "COOPER EDITION UNTAMED",
+        "COOPER ESSENTIAL",
+        "COOPER FINITION CLASSIC",
+        "COOPER FINITION JCW",
+        "COOPER FINITION RED HOT",
+        "COOPER PACK CHILI",
+        "COOPER PACK RED HOT",
+        "COOPER S",
+        "COOPER S ALL4",
+        "COOPER S ALL4 PACK",
+        "COOPER S BUSINESS DESIGN",
+        "COOPER S EDITION HIGHLANDS",
+        "COOPER S EDITION NORTHWOOD",
+        "COOPER S EDITION UNTAMED",
+        "COOPER S ESSENTIAL",
+        "COOPER S FINITION MINI",
+        "COOPER S FINITON JCW",
+        "COOPER S JCW",
+        "COOPER S PACK RED",
+        "COOPER SD BUSINESS DESIGN",
+        "COOPER SD CLASSIC",
+        "COOPER SD EDITION NORTHWOOD",
+        "COOPER SD ESSENTIAL",
+        "COOPER SD FINITION JCW",
+        "COOPER SD MINI FINITION",
+        "D CLASSIC",
+        "D CLASSIC + PACK",
+        "D ESSENTIAL",
+        "D FAVOURED",
+        "D FAVOURED + PACK",
+        "D JCW FINITION",
+        "D JCW FINITION +",
+        "E BLACKYARD",
+        "E ESSENTIAL",
+        "EDITION BRICK LANE",
+        "EDITION BRICK LANE BV6",
+        "EDITION EDITION NORTHWOOD",
+        "EDITION EDITION NORTHWOOD BV6",
+        "EDITION HIGHLANDS",
+        "EDITION LONGSTONE",
+        "EDITION LONGSTONE BV6",
+        "EDITION NORTHWOOD",
+        "EDITION NORTHWOOD BV6",
+        "EDITION OAKWOOD",
+        "EDITION OAKWOOD BV6",
+        "EDITION PREMIUM PLUS",
+        "ESSENTIAL",
+        "ESSENTIAL ALL4",
+        "ESSENTIAL BV6",
+        "ESSENTIAL5P",
+        "EXQUISITE",
+        "FAVOURED",
+        "FAVOURED + PACK S",
+        "FINITION BUSINESS CALL",
+        "FINITION CHILI",
+        "FINITION CHILI+",
+        "FINITION CHILI+ BV6",
+        "FINITION CLASSIC",
+        "FINITION CLASSIC BV6",
+        "FINITION JCW",
+        "FINITION MINI YOURS",
+        "FINITION RED HOT CHILI",
+        "FINITION SALT",
+        "FINITION SALT -ECOLE",
+        "FINITION SALT -ECOLE BV6",
+        "FINITION YOURS",
+        "FINITION YOURS BV6",
+        "GETAWAY",
+        "JCW FINITION",
+        "JCW FINITION + PACK",
+        "JCW FINITION JCW",
+        "ONE",
+        "ONE BUSINESS CALL",
+        "ONE BUSINESS TRIP",
+        "ONE D",
+        "ONE D BUSINESS CALL",
+        "ONE D BUSINESS DESIGN",
+        "ONE D BUSINESS TRIP",
+        "ONE D CLASSIC",
+        "ONE D EDITION HIGHLANDS",
+        "ONE D EDITION NORTHWOOD",
+        "ONE D ESSENTIAL",
+        "ONE D PACK CHILI",
+        "ONE D PACK SALT",
+        "ONE EDITION HIGHLANDS",
+        "ONE EDITION NORTHWOOD",
+        "ONE ESSENTIAL",
+        "ONE PACK CHILI",
+        "ONE PACK SALT",
+        "PACK CHILI",
+        "PACK CHILI III",
+        "PACK JCW",
+        "PACK JCW EXTERIEUR",
+        "PACK JCW INTERIEUR",
+        "PACK RED HOT CHILI",
+        "PACK SALT",
+        "RED HOT CHILI",
+        "S ALL4 CLASSIC",
+        "S ALL4 CLASSIC +",
+        "S ALL4 ESSENTIAL",
+        "S ALL4 FAVOURED",
+        "S ALL4 FAVOURED +",
+        "S ALL4 JCW FINITION",
+        "SALT -ECOLE",
+        "SALT -ECOLE BV6",
+        "SE LONGSTONE WHITE SILVER"
+      ],
+      "Mini Paceman": [
+        "ALL4",
+        "ALL4 FINITION CHILI",
+        "ALL4 FINITION RED HOT",
+        "ALL4 PACK CHILI",
+        "ALL4 PACK JCW EXTERIEUR",
+        "ALL4 PACK JCW INTERIEUR",
+        "ALL4 PACK RED HOT",
+        "BV6",
+        "COOPER",
+        "COOPER D",
+        "COOPER D ALL4",
+        "COOPER D ALL4 PACK",
+        "COOPER D PACK CHILI",
+        "COOPER D PACK RED",
+        "COOPER PACK CHILI",
+        "COOPER PACK RED HOT",
+        "COOPER S",
+        "COOPER S ALL4",
+        "COOPER S ALL4 PACK",
+        "COOPER S PACK RED",
+        "COOPER S STEPTRONIC 6",
+        "COOPER SD",
+        "COOPER SD ALL4",
+        "COOPER SD ALL4 PACK",
+        "COOPER SD PACK RED",
+        "FINITION CHILI",
+        "FINITION RED HOT CHILI",
+        "PACK CHILI",
+        "PACK JCW EXTERIEUR",
+        "PACK JCW INTERIEUR",
+        "PACK RED HOT CHILI"
+      ],
+      "Mini Aceman": [
+        "BLACKYARD",
+        "ESSENTIAL"
       ]
     },
     "Smart": {
