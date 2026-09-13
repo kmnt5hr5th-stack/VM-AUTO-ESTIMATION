@@ -65148,12 +65148,20 @@
         "Base"
       ],
       "Cayenne": [
-        "Base",
-        "S",
+        "BLACK EDITION",
         "GTS",
-        "Turbo",
-        "Turbo S",
-        "E-Hybrid"
+        "GTS TIPTRONIC",
+        "PLATINIUM EDITION TIPTRONIC",
+        "PLATINUM EDITION TIPTRONIC",
+        "S DIESEL PLATINUM EDITION",
+        "S PLATINUM EDITION TIPTRONIC",
+        "S TIPTRONIC",
+        "S TIPTRONIC S",
+        "TD PLATINUM EDITION TIPTRONIC",
+        "TIPTRONIC",
+        "TIPTRONIC S",
+        "TIPTRONIC S 8",
+        "V6 519 S BLACK"
       ],
       "Cayenne Coupé": [
         "S",
@@ -66234,9 +66242,10 @@
     },
     "Tesla": {
       "Model 3": [
-        "Standard Range",
-        "Long Range",
-        "Performance"
+        "AUTONOMIE STANDARD RWD PREMIUM",
+        "PERFORMANCE",
+        "RWD",
+        "STANDARD RANGE RWD PREMIUM"
       ],
       "Model 3 Long Range": [
         "Base",
