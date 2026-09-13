@@ -13926,6 +13926,25 @@
           "yearStart": 2023,
           "yearEnd": 2026
         }
+      ],
+      "MG3": [
+        {
+          "name": "1.5 Hybride 195",
+          "fuel": "Hybride",
+          "yearStart": 2024
+        }
+      ],
+      "MGS5 EV": [
+        {
+          "name": "électrique 49 kWh 125",
+          "fuel": "Électrique",
+          "yearStart": 2025
+        },
+        {
+          "name": "électrique 64 kWh 170",
+          "fuel": "Électrique",
+          "yearStart": 2025
+        }
       ]
     },
     "Volvo": {
@@ -65160,10 +65179,14 @@
         "Base"
       ],
       "Macan": [
-        "Base",
-        "S",
         "GTS",
-        "Turbo"
+        "GTS PDK",
+        "PDK",
+        "S PDK",
+        "T PDK",
+        "V6 GTS",
+        "V6 S",
+        "V6 S DIESEL"
       ],
       "Macan S": [
         "Base"
@@ -66930,10 +66953,11 @@
         "PHEV"
       ],
       "MG4": [
-        "Standard",
-        "Comfort",
-        "Luxury",
-        "Trophy"
+        "KW COMFORT",
+        "KW LUXURY",
+        "KW PREMIUM",
+        "KW STANDARD",
+        "KW XPOWER"
       ],
       "MG5": [
         "Comfort",
@@ -66958,6 +66982,15 @@
       ],
       "MG7": [
         "Base"
+      ],
+      "MG3": [
+        "COMFORT",
+        "LUXURY",
+        "STANDARD"
+      ],
+      "MGS5 EV": [
+        "KW COMFORT",
+        "KW LUXURY"
       ]
     },
     "Polestar": {
