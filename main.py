@@ -99,6 +99,7 @@ class EstimationRequest(BaseModel):
     boite: Optional[str] = Field(None, example="mecanique")
     carburant: Optional[str] = Field(None, example="diesel")
     type_vehicule: Optional[str] = Field(None, example="utilitaire")  # "voiture" ou "utilitaire"
+    carrosserie: Optional[str] = Field(None, example="Coupé")  # Berline, Break, Coupé, Cabriolet, SUV / 4x4, Monospace
 
 
 @app.get("/")
@@ -132,6 +133,7 @@ async def _run_estimation(req: EstimationRequest) -> dict:
         finition=req.finition, carburant=req.carburant,
         boite=req.boite, motorisation=req.motorisation,
         type_vehicule=type_vehicule,
+        carrosserie=req.carrosserie,
     )
 
     all_prices: list[int] = []

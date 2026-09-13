@@ -218,9 +218,18 @@ _PROBLEM_KEYWORDS = [
 ]
 
 
+_CARROSSERIE_KEYWORDS: dict[str, list[str]] = {
+    "break":      ["sw", "break", "touring", "estate", "combi", "avant", "sport tourer", "wagon"],
+    "coupé":      ["coup", "coupé"],
+    "cabriolet":  ["cabrio", "décap", "spider", "roadster", "convertible"],
+    "suv / 4x4":  ["suv", "4x4", "crossover"],
+    "monospace":  ["monospace", " van ", "7 pl", "7pl", "mpv"],
+}
+
+
 def _extract_prix(ads: list, modele: str, marque: str = None, carburant: str = None,
                    boite: str = None, target_hp: int = None, km_cible: int = None,
-                   finition: str = None) -> list[int]:
+                   finition: str = None, carrosserie: str = None) -> list[int]:
     modele_lower = (modele or "").lower()
     marque_lower = (marque or "").lower()
     finition_lower = (finition or "").lower()
@@ -319,6 +328,18 @@ def _extract_prix(ads: list, modele: str, marque: str = None, carburant: str = N
             else:
                 logger.info(f"[leboncoin] Finition '{finition}' trop peu d'annonces ({len(filtered)}) → pas de filtre")
 
+    # Filtre carrosserie (soft): si >= 3 annonces matchent, on filtre
+    if carrosserie and prix:
+        car_key = carrosserie.lower().strip()
+        keywords = _CARROSSERIE_KEYWORDS.get(car_key)
+        if keywords:
+            filtered = [p for t, p in prix if any(kw in t for kw in keywords)]
+            if len(filtered) >= 3:
+                logger.info(f"[leboncoin] Filtre carrosserie '{carrosserie}': {len(filtered)}/{len(prix)} annonces")
+                return filtered
+            else:
+                logger.info(f"[leboncoin] Carrosserie '{carrosserie}' trop peu d'annonces ({len(filtered)}) → pas de filtre")
+
     return [p for _, p in prix]
 
 
@@ -327,7 +348,7 @@ class LeboncoinScraper(BaseScraper):
 
     async def _fetch_mobile_api(self, marque, modele, annee, km, page,
                                  carburant=None, boite=None, type_vehicule=None,
-                                 target_hp=None, finition=None) -> list[int]:
+                                 target_hp=None, finition=None, carrosserie=None) -> list[int]:
         ua, impersonate, headers = _mobile_ua()
         # Utilise _build_camoufox_payload : année ±1, km ±10k, boite numérique "1"/"2"
         # curl_cffi avec ce payload n'est pas bloqué par DataDome (~1-2s)
@@ -345,11 +366,11 @@ class LeboncoinScraper(BaseScraper):
             raise Exception(f"API {r.status_code}")
         return _extract_prix(r.json().get("ads", []), modele, marque=marque,
                              carburant=carburant, boite=boite, target_hp=target_hp, km_cible=km,
-                             finition=finition)
+                             finition=finition, carrosserie=carrosserie)
 
     async def _playwright_search(self, marque, modele, annee, km,
                                   carburant=None, boite=None, type_vehicule=None,
-                                  target_hp=None, finition=None) -> list[int]:
+                                  target_hp=None, finition=None, carrosserie=None) -> list[int]:
         """Appel API LBC depuis un vrai contexte Playwright — contourne DataDome."""
         payload = _build_lbc_payload(marque, modele, annee, km, 1,
                                       carburant=carburant, boite=boite,
@@ -394,7 +415,7 @@ class LeboncoinScraper(BaseScraper):
                 ads = result["data"].get("ads", [])
                 prix = _extract_prix(ads, modele, marque=marque, carburant=carburant,
                                      boite=boite, target_hp=target_hp, km_cible=km,
-                                     finition=finition)
+                                     finition=finition, carrosserie=carrosserie)
                 logger.info(f"[leboncoin] Playwright → {len(prix)} prix")
                 return prix
             except Exception as e:
@@ -405,7 +426,7 @@ class LeboncoinScraper(BaseScraper):
 
     async def _camoufox_search(self, marque, modele, annee, km,
                                 carburant=None, boite=None, type_vehicule=None,
-                                target_hp=None, finition=None) -> list[int]:
+                                target_hp=None, finition=None, carrosserie=None) -> list[int]:
         """Camoufox + proxy résidentiel — filtre km natif (±10k), boite numérique."""
         try:
             from camoufox.async_api import AsyncCamoufox
@@ -460,7 +481,7 @@ class LeboncoinScraper(BaseScraper):
 
                 prix = _extract_prix(ads, modele, marque=marque, carburant=carburant,
                                      boite=boite, target_hp=target_hp, km_cible=km,
-                                     finition=finition)
+                                     finition=finition, carrosserie=carrosserie)
                 logger.info(f"[leboncoin] Camoufox → {len(prix)} prix filtrés")
                 return prix
             finally:
@@ -468,7 +489,7 @@ class LeboncoinScraper(BaseScraper):
 
     async def get_prices(self, marque, modele, annee, kilometrage, max_pages=2,
                           finition=None, carburant=None, boite=None,
-                          motorisation=None, type_vehicule=None):
+                          motorisation=None, type_vehicule=None, carrosserie=None):
         target_hp = _extraire_cv(motorisation) if motorisation else None
 
         # Stratégie : Mobile d'abord (5-10s), Camoufox seulement si Mobile vide/bloqué.
@@ -482,7 +503,7 @@ class LeboncoinScraper(BaseScraper):
                         marque, modele, annee, kilometrage, page_num,
                         carburant=carburant, boite=boite,
                         type_vehicule=type_vehicule, target_hp=target_hp,
-                        finition=finition,
+                        finition=finition, carrosserie=carrosserie,
                     )
                     prix.extend(p)
                     if not p:
@@ -514,7 +535,7 @@ class LeboncoinScraper(BaseScraper):
                             marque, modele, annee, km_retry, page_num,
                             carburant=carburant, boite=boite,
                             type_vehicule=type_vehicule, target_hp=target_hp,
-                            finition=finition,
+                            finition=finition, carrosserie=carrosserie,
                         )
                         prix.extend(p)
                         if not p:
@@ -541,7 +562,7 @@ class LeboncoinScraper(BaseScraper):
                     marque, modele, annee, kilometrage,
                     carburant=carburant, boite=boite,
                     type_vehicule=type_vehicule, target_hp=target_hp,
-                    finition=finition,
+                    finition=finition, carrosserie=carrosserie,
                 ),
                 timeout=30,
             )
@@ -560,6 +581,7 @@ class LeboncoinScraper(BaseScraper):
                 marque, modele, annee, kilometrage,
                 carburant=carburant, boite=boite,
                 type_vehicule=type_vehicule, target_hp=target_hp,
+                finition=finition, carrosserie=carrosserie,
             )
             return prix
         except Exception as e:
