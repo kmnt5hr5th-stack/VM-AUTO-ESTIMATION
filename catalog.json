@@ -37866,6 +37866,255 @@
           "fuel": "Hybride",
           "yearStart": 2003
         }
+      ],
+      "Mazda 3": [
+        {
+          "name": "1.4",
+          "fuel": "Essence",
+          "yearStart": 2003
+        },
+        {
+          "name": "1.6 105",
+          "fuel": "Essence",
+          "yearStart": 2003
+        },
+        {
+          "name": "1.6",
+          "fuel": "Essence",
+          "yearStart": 2003
+        },
+        {
+          "name": "1.6 110",
+          "fuel": "Essence",
+          "yearStart": 2003
+        },
+        {
+          "name": "1.6 90",
+          "fuel": "Essence",
+          "yearStart": 2003
+        },
+        {
+          "name": "2.0 150",
+          "fuel": "Essence",
+          "yearStart": 2003
+        },
+        {
+          "name": "2.0 143",
+          "fuel": "Essence",
+          "yearStart": 2003
+        },
+        {
+          "name": "2.0",
+          "fuel": "Essence",
+          "yearStart": 2003
+        },
+        {
+          "name": "1.6 115",
+          "fuel": "Essence",
+          "yearStart": 2003
+        },
+        {
+          "name": "1.6 116",
+          "fuel": "Essence",
+          "yearStart": 2003
+        },
+        {
+          "name": "2.2 185",
+          "fuel": "Essence",
+          "yearStart": 2003
+        },
+        {
+          "name": "2.2 190",
+          "fuel": "Essence",
+          "yearStart": 2003
+        },
+        {
+          "name": "2.2",
+          "fuel": "Essence",
+          "yearStart": 2003
+        },
+        {
+          "name": "1.5 Skyactiv-D 105",
+          "fuel": "Diesel",
+          "yearStart": 2003
+        },
+        {
+          "name": "2.0 Skyactiv-G 120",
+          "fuel": "Essence",
+          "yearStart": 2003
+        },
+        {
+          "name": "2.0 Skyactiv-G 165",
+          "fuel": "Essence",
+          "yearStart": 2003
+        },
+        {
+          "name": "2.2 Skyactiv-D 150",
+          "fuel": "Diesel",
+          "yearStart": 2003
+        },
+        {
+          "name": "1.5 Skyactiv-G 100",
+          "fuel": "Essence",
+          "yearStart": 2003
+        },
+        {
+          "name": "2.0 Hybride 186",
+          "fuel": "Hybride",
+          "yearStart": 2003
+        },
+        {
+          "name": "2.5 Hybride 140",
+          "fuel": "Hybride",
+          "yearStart": 2003
+        },
+        {
+          "name": "2.0 Hybride 140",
+          "fuel": "Hybride",
+          "yearStart": 2003
+        },
+        {
+          "name": "1.8 Skyactiv-D 116",
+          "fuel": "Diesel",
+          "yearStart": 2003
+        },
+        {
+          "name": "Skyactiv-D 116",
+          "fuel": "Diesel",
+          "yearStart": 2003
+        },
+        {
+          "name": "2.0 Hybride 122",
+          "fuel": "Hybride",
+          "yearStart": 2003
+        },
+        {
+          "name": "2.0 Hybride 150",
+          "fuel": "Hybride",
+          "yearStart": 2003
+        },
+        {
+          "name": "2.0 Hybride 180",
+          "fuel": "Hybride",
+          "yearStart": 2003
+        },
+        {
+          "name": "2.0 122",
+          "fuel": "Essence",
+          "yearStart": 2003
+        },
+        {
+          "name": "2.0 186",
+          "fuel": "Essence",
+          "yearStart": 2003
+        },
+        {
+          "name": "2.0 Hybride",
+          "fuel": "Hybride",
+          "yearStart": 2003
+        },
+        {
+          "name": "Hybride 186",
+          "fuel": "Hybride",
+          "yearStart": 2003
+        },
+        {
+          "name": "122",
+          "fuel": "Essence",
+          "yearStart": 2003
+        },
+        {
+          "name": "186",
+          "fuel": "Essence",
+          "yearStart": 2003
+        },
+        {
+          "name": "Hybride 122",
+          "fuel": "Hybride",
+          "yearStart": 2003
+        }
+      ],
+      "Mazda 6": [
+        {
+          "name": "2.0 140",
+          "fuel": "Essence",
+          "yearStart": 2008
+        },
+        {
+          "name": "2.2 125",
+          "fuel": "Essence",
+          "yearStart": 2008
+        },
+        {
+          "name": "2.2 129",
+          "fuel": "Essence",
+          "yearStart": 2008
+        },
+        {
+          "name": "2.2 130",
+          "fuel": "Essence",
+          "yearStart": 2008
+        },
+        {
+          "name": "2.2 163",
+          "fuel": "Essence",
+          "yearStart": 2008
+        },
+        {
+          "name": "2.2 175",
+          "fuel": "Essence",
+          "yearStart": 2008
+        },
+        {
+          "name": "2.2 180",
+          "fuel": "Essence",
+          "yearStart": 2008
+        },
+        {
+          "name": "2.0 Skyactiv-G 165",
+          "fuel": "Essence",
+          "yearStart": 2008
+        },
+        {
+          "name": "2.2 Skyactiv-D 150",
+          "fuel": "Diesel",
+          "yearStart": 2008
+        },
+        {
+          "name": "2.2 Skyactiv-D 175",
+          "fuel": "Diesel",
+          "yearStart": 2008
+        },
+        {
+          "name": "2.2 Skyactiv-D 184",
+          "fuel": "Diesel",
+          "yearStart": 2008
+        },
+        {
+          "name": "2.2 D 150",
+          "fuel": "Diesel",
+          "yearStart": 2008
+        },
+        {
+          "name": "2.5 Skyactiv-G 192",
+          "fuel": "Essence",
+          "yearStart": 2008
+        },
+        {
+          "name": "2.5 Skyactiv-G 194",
+          "fuel": "Essence",
+          "yearStart": 2008
+        },
+        {
+          "name": "électrique 80 kWh 245",
+          "fuel": "Électrique",
+          "yearStart": 2008
+        },
+        {
+          "name": "électrique 68.8 kWh 258",
+          "fuel": "Électrique",
+          "yearStart": 2008
+        }
       ]
     },
     "Alfa Romeo": {
@@ -62437,29 +62686,117 @@
         "Takumi"
       ],
       "CX-30": [
-        "Elegance",
-        "Dynamique",
-        "GT",
-        "Skyactiv-X",
-        "Homura"
+        "100EME ANNIVERSAIRE",
+        "BUSINESS EXECUTIVE",
+        "BUSINESS EXECUTIVE PACK CUIR",
+        "CENTRE-LINE",
+        "E-SKYACTIV X M HYD",
+        "EXCLUSIVE",
+        "EXCLUSIVE BOSE",
+        "EXCLUSIVE CUIR PURE-WHITE",
+        "EXCLUSIVE CUIR PURE-WHITE BOSE",
+        "EXCLUSIVE-LINE",
+        "HOMURA",
+        "HOMURA PLUS",
+        "INSPIRATION",
+        "MAKOTO",
+        "NAGISA",
+        "PRIME-LINE",
+        "SKYACTIV-X M 100EME ANNIVERSAIRE",
+        "SPORTLINE",
+        "SPORTLINE BOSE",
+        "SPORTLINE BOSE SANS ALH",
+        "SPORTLINE SANS ALH",
+        "SPORTLINE TOIT OUVRANT",
+        "SPORTLINE TOIT OUVRANT BOSE",
+        "STYLE",
+        "TAKUMI",
+        "TOIT OUVRANT SPORTLINE"
       ],
       "CX-60": [
-        "Prime-Line",
-        "Exclusive-Line",
-        "Takumi",
-        "Homura"
+        "EXCLUSIVE-LINE",
+        "EXCLUSIVE-LINE 2022",
+        "EXCLUSIVE-LINE 2023",
+        "EXCLUSIVE-LINE BVA8B",
+        "HOMURA",
+        "HOMURA 2022",
+        "HOMURA 2024",
+        "HOMURA PLUS",
+        "PRIME-LINE",
+        "PRIME-LINE 2022",
+        "PRIME-LINE 2023",
+        "TAKUMI",
+        "TAKUMI PLUS"
       ],
       "MX-5": [
-        "Elegance",
-        "Dynamique",
-        "Selection",
-        "R",
-        "RF",
-        "Homura"
+        "100EME ANNIVERSAIRE",
+        "30EME ANNIVERSAIRE",
+        "3E GENERATION",
+        "ACTIVEMATIC",
+        "AKI EDITION",
+        "BLACK BY MX5",
+        "CHERRY TOP",
+        "DYNAMIQUE",
+        "ELEGANCE",
+        "ELEGANCE CUIR",
+        "ELEGANCE PACK",
+        "ELEGANCE RF",
+        "EUNOS EDITION",
+        "EXCLUSIVE-LINE",
+        "EXCLUSIVE-LINE 2025",
+        "EXCLUSIVE-LINE EURO6E",
+        "EXCLUSIVE-LINE SANS BSM",
+        "FIRST EDITION",
+        "HAMAKI",
+        "HOMURA",
+        "HOMURA SANS BSM",
+        "KAZARI",
+        "KAZARI EURO6E",
+        "KAZARI SANS BSM",
+        "KAZARI SANS BSM 2022",
+        "KIZUNA",
+        "KIZUNA SANS BSM",
+        "KIZUNA SANS BSM 2022",
+        "NEKKI",
+        "PERFORMANCE",
+        "PERFORMANCE PACK",
+        "PRIME-LINE",
+        "PRIME-LINE EURO6E",
+        "RACING BY MX-5",
+        "SEIZA EDITION",
+        "SELECTION",
+        "SELECTION 2018",
+        "SELECTION BV6",
+        "SELECTION CUIR BLANC",
+        "SELECTION CUIR BLANC TOIT",
+        "SELECTION CUIR PURE-WHITE",
+        "SELECTION CUIR PURE-WHITE TS",
+        "SELECTION CUIR TERACOTTA",
+        "SELECTION CUIR TERACOTTA TOIT",
+        "SELECTION CUIR TERRACOTTA",
+        "SELECTION CUIR TERRACOTTA TS",
+        "SELECTION EDITION SPECIALE",
+        "SELECTION PACK SPORT",
+        "SELECTION PACK SPORT TOIT",
+        "SELECTION PACK SPORT TS",
+        "SELECTION RF",
+        "SELECTION TOIT BLEU",
+        "SELECTION TOIT ROUGE",
+        "SELECTION TS BLEU",
+        "SELECTION TS ROUGE",
+        "SHIZUKA",
+        "YAKUDO"
       ],
       "MX-30": [
-        "Prime-Line",
-        "Exclusive-Line"
+        "EDITION R",
+        "EXCLUSIVE-LINE",
+        "MAKOTO",
+        "MAKOTO INDUSTRIAL VINTAGE",
+        "MAKOTO MODERN CONFIDENCE",
+        "MAKOTO PLUS",
+        "MAKOTO URBAN EXPRESSION",
+        "NAGISA",
+        "PRIME-LINE"
       ],
       "RX-8": [
         "Base",
@@ -62534,6 +62871,116 @@
         "SIGNATURE",
         "SPORT",
         "STANDARD POWER"
+      ],
+      "Mazda 3": [
+        "100EME ANNIVERSAIRE",
+        "ACTIVEMATIC",
+        "BUSINESS EXCLUSIVE",
+        "BUSINESS EXCLUSIVE AT",
+        "BUSINESS EXCLUSIVE BV6",
+        "BUSINESS EXECUTIVE",
+        "BUSINESS EXECUTIVE 102G",
+        "BUSINESS EXECUTIVE 2020",
+        "BUSINESS EXECUTIVE AT",
+        "BUSINESS EXECUTIVE AT 117G",
+        "BUSINESS EXECUTIVE BV6",
+        "BV6",
+        "CENTRE-LINE",
+        "CONFORT",
+        "DYNAMIQUE",
+        "DYNAMIQUE BV6",
+        "EDITION SPECIALE",
+        "ELEGANCE",
+        "ELEGANCE BV6",
+        "ELEGANCE EDITION SPECIALE",
+        "ELEGANCE GPS",
+        "EXCLUSIVE",
+        "EXCLUSIVE 102",
+        "EXCLUSIVE 103G",
+        "EXCLUSIVE 2020",
+        "EXCLUSIVE AT",
+        "EXCLUSIVE AT 117G",
+        "EXCLUSIVE BOSE",
+        "EXCLUSIVE BOSE AT",
+        "EXCLUSIVE CUIR",
+        "EXCLUSIVE CUIR AT",
+        "EXCLUSIVE CUIR BURGUNDY",
+        "EXCLUSIVE CUIR BURGUNDY BOSE",
+        "EXCLUSIVE CUIR PURE-WHITE",
+        "EXCLUSIVE CUIR PURE-WHITE BOSE",
+        "EXCLUSIVE-LINE",
+        "GRAPHITE BV6",
+        "HARMONIE",
+        "HARMONIE BV6",
+        "HOMURA",
+        "HOMURA AT",
+        "HOMURA PLUS",
+        "I-STOP SPORT",
+        "IMPULSION BV6",
+        "INSPIRATION",
+        "INSPIRATION 123G",
+        "INSPIRATION 2020",
+        "INSPIRATION BV6",
+        "INSTINCT",
+        "KAMAE",
+        "KIZUNA",
+        "MAZDA3",
+        "MZ-CD DYNAMIQUE",
+        "MZ-CD ELEGANCE",
+        "MZ-CD ELEGANCE GPS",
+        "MZ-CD HARMONIE",
+        "MZ-CD INSTINCT",
+        "MZ-CD PERFORMANCE",
+        "MZ-CD PERFORMANCE PACK",
+        "MZ-CD PRO-FORM",
+        "MZR 90TH ANNIVERSARY",
+        "MZR DISI I-STOP DYNAMIQUE",
+        "MZR HARMONIE",
+        "MZR PERFORMANCE",
+        "MZR- ACTIVEMATIC",
+        "MZR-CD DYNAMIQUE",
+        "MZR105 CONFORT",
+        "MZR105 ELEGANCE",
+        "NAGISA",
+        "PERFORMANCE",
+        "PERFORMANCE PACK",
+        "PRIME-LINE",
+        "PRO-FORM",
+        "SELECTION",
+        "SELECTION BV6",
+        "SHIZUKA",
+        "SIGNATURE BV6",
+        "SPORT",
+        "SPORTLINE",
+        "SPORTLINE 103G",
+        "SPORTLINE 2020",
+        "SPORTLINE AT",
+        "SPORTLINE BOSE",
+        "SPORTLINE BOSE AT",
+        "SPORTLINE BOSE BV6",
+        "SPORTLINE BV6",
+        "SPORTLINE TOIT OUVRANT",
+        "SPORTLINE TOIT OUVRANT AT",
+        "SPORTLINE TOIT OUVRANT BOSE",
+        "STYLE",
+        "STYLE 2020",
+        "STYLE BV6",
+        "TAKUMI",
+        "TOIT OUVRANT SPORTLINE",
+        "TROPHEE ANDROS"
+      ],
+      "Mazda 6": [
+        "CONFORT",
+        "DYNAMIQUE",
+        "ELEGANCE",
+        "ELEGANCE DRIVE",
+        "HARMONIE",
+        "PERFORMANCE",
+        "SELECTION",
+        "SELECTION DRIVE",
+        "SHIZUKA",
+        "SPORT",
+        "TAKUMI"
       ]
     },
     "Volvo": {
@@ -64867,11 +65314,29 @@
         "Sport"
       ],
       "Outlander": [
-        "Invite",
-        "Instyle",
-        "Sport",
-        "Plug-in Hybrid",
-        "Intense"
+        "BLACK EDITION",
+        "DI-D BLACK COLLECTION",
+        "DI-D BLACK COLLECTION+",
+        "DI-D INTENSE NAVI",
+        "DI-D INTENSE NAVI 7PL",
+        "DI-D INVITE",
+        "INFORM",
+        "INSTYLE",
+        "INSTYLE A/T",
+        "INSTYLE TC-SST",
+        "INSTYLE+",
+        "INTENSE",
+        "INTENSE NAVI",
+        "INVITE",
+        "INVITE+",
+        "RECHARG INTENSE STYLE",
+        "TWIN MOTOR BUSINESS",
+        "TWIN MOTOR BUSINESS 2020",
+        "TWIN MOTOR INSTYLE",
+        "TWIN MOTOR INSTYLE 2020",
+        "TWIN MOTOR INTENSE",
+        "TWIN MOTOR INTENSE 2020",
+        "TWIN MOTOR INVITE"
       ],
       "Eclipse Cross": [
         "Business",
