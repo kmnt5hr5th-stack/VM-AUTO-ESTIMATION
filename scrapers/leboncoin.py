@@ -139,11 +139,12 @@ def _build_lbc_payload(marque, modele, annee, km, page=1, carburant=None, boite=
     }
     if target_hp:
         ranges["horse_power_din"] = {"min": target_hp - 5, "max": target_hp + 5}
+    keyword_modele = re.sub(r'\bsportback\b', '', modele, flags=re.IGNORECASE).strip()
     return {
         "filters": {
             "category": {"id": cat_id},
             "enums": enums,
-            "keywords": {"text": f"{marque} {modele}"},
+            "keywords": {"text": f"{marque} {keyword_modele}"},
             "ranges": ranges,
         },
         "limit": 35,
@@ -189,11 +190,12 @@ def _build_camoufox_payload(marque, modele, annee, km, boite=None,
         ranges["mileage"] = {"min": max(0, km - 10_000), "max": km + 10_000}
     if target_hp:
         ranges["horse_power_din"] = {"min": target_hp - 5, "max": target_hp + 5}
+    keyword_modele = re.sub(r'\bsportback\b', '', modele, flags=re.IGNORECASE).strip()
     return {
         "filters": {
             "category": {"id": cat_id},
             "enums": enums,
-            "keywords": {"text": f"{marque} {modele}"},
+            "keywords": {"text": f"{marque} {keyword_modele}"},
             "ranges": ranges,
         },
         "limit": 35,
