@@ -26,6 +26,27 @@ def _extraire_cv(motorisation: str) -> Optional[int]:
     return candidates[-1] if candidates else None
 
 
+def _extraire_code_moteur(motorisation: str) -> Optional[str]:
+    """Extrait le code moteur alphanumérique pour affiner le keyword LBC.
+    Ex: '318d 136ch' → '318d', '2.0 GTI 200ch' → 'GTI', 'TDI 190ch' → 'TDI'.
+    Le filtre horse_power_din de l'API LBC est peu fiable — ce code permet de
+    discriminer les variantes (318d vs 320d vs 330d) via le keyword de recherche."""
+    if not motorisation:
+        return None
+    # BMW/Mercedes style: 3-4 chiffres + lettre(s) (318d, 320i, 330e, C220d…)
+    m = re.search(r'\b(\d{3,4}[dDiIeE]{1,2})\b', motorisation)
+    if m:
+        return m.group(1).lower()
+    # Codes moteur generiques (VW/Renault/Peugeot/etc.)
+    m = re.search(
+        r'\b(TFSI|TDI|TDCI|TSI|THP|dCi|HDi|CDTi|BlueHDi|CDTI|SDTi|GTI|GTE|GTD|GTS)\b',
+        motorisation, re.IGNORECASE,
+    )
+    if m:
+        return m.group(1)
+    return None
+
+
 API_URL = "https://api.leboncoin.fr/finder/search"
 HOMEPAGE = "https://www.leboncoin.fr/"
 
@@ -402,7 +423,12 @@ class LeboncoinScraper(BaseScraper):
                     """async (payload) => {
                         const r = await fetch("https://api.leboncoin.fr/finder/search", {
                             method: "POST",
-                            headers: {"Content-Type": "application/json", "Accept": "application/json"},
+                            credentials: "include",
+                            headers: {
+                                "Content-Type": "application/json",
+                                "Accept": "application/json",
+                                "api_key": "ba0c2dad52b3ec"
+                            },
                             body: JSON.stringify(payload)
                         });
                         return {status: r.status, data: await r.json()};
@@ -455,9 +481,11 @@ class LeboncoinScraper(BaseScraper):
                         try {
                             const r = await fetch(url, {
                                 method: "POST",
+                                credentials: "include",
                                 headers: {
                                     "Content-Type": "application/json",
                                     "Accept": "application/json",
+                                    "api_key": "ba0c2dad52b3ec",
                                     "Origin": "https://www.leboncoin.fr",
                                     "Referer": "https://www.leboncoin.fr/"
                                 },
@@ -491,6 +519,7 @@ class LeboncoinScraper(BaseScraper):
                           finition=None, carburant=None, boite=None,
                           motorisation=None, type_vehicule=None, carrosserie=None):
         target_hp = _extraire_cv(motorisation) if motorisation else None
+        engine_code = _extraire_code_moteur(motorisation) if motorisation else None
 
         # Stratégie : Mobile d'abord (5-10s), Camoufox seulement si Mobile vide/bloqué.
         logger.info("[leboncoin] Essai Mobile API (rapide)")
@@ -521,6 +550,39 @@ class LeboncoinScraper(BaseScraper):
         if mobile_prix:
             logger.info(f"[leboncoin] Mobile API → {len(mobile_prix)} prix")
             return mobile_prix
+
+        # Retry avec code moteur dans le keyword (horse_power_din API peu fiable pour BMW, VW…)
+        # Ex: modele="Serie 3 Touring" + engine_code="318d" → keyword "Serie 3 Touring 318d"
+        if target_hp and engine_code and engine_code.lower() not in modele.lower():
+            modele_engine = f"{modele} {engine_code}"
+            logger.info(f"[leboncoin] HP filter → 0 résultats, retry code moteur '{modele_engine}'")
+
+            async def _mobile_engine_code():
+                prix = []
+                for page_num in range(1, max_pages + 1):
+                    try:
+                        p = await self._fetch_mobile_api(
+                            marque, modele_engine, annee, kilometrage, page_num,
+                            carburant=carburant, boite=boite,
+                            type_vehicule=type_vehicule, target_hp=None,
+                            finition=finition, carrosserie=carrosserie,
+                        )
+                        prix.extend(p)
+                        if not p:
+                            break
+                    except Exception:
+                        break
+                return prix
+
+            try:
+                engine_prix = await asyncio.wait_for(_mobile_engine_code(), timeout=20)
+            except Exception as e:
+                logger.warning(f"[leboncoin] Engine code retry erreur: {e}")
+                engine_prix = []
+
+            if engine_prix:
+                logger.info(f"[leboncoin] Engine code retry → {len(engine_prix)} prix")
+                return engine_prix
 
         # Retry Mobile avec km élargi à 50 000 si km original trop bas/élevé → 0 résultats
         km_retry = 50_000
