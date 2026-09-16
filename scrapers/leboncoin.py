@@ -525,6 +525,10 @@ class LeboncoinScraper(BaseScraper):
         target_hp = _extraire_cv(motorisation) if motorisation else None
         engine_code = _extraire_code_moteur(motorisation) if motorisation else None
 
+        # Pour les modèles avec suffixe "Sportback" : on l'enlève du keyword LBC
+        # mais on garde l'original pour le filtre post-hoc _extract_prix
+        modele_api = re.sub(r'\bsportback\b', '', modele, flags=re.IGNORECASE).strip()
+
         # Stratégie : Mobile d'abord (5-10s), Camoufox seulement si Mobile vide/bloqué.
         logger.info("[leboncoin] Essai Mobile API (rapide)")
 
@@ -533,7 +537,7 @@ class LeboncoinScraper(BaseScraper):
             for page_num in range(1, max_pages + 1):
                 try:
                     p = await self._fetch_mobile_api(
-                        marque, modele, annee, kilometrage, page_num,
+                        marque, modele_api, annee, kilometrage, page_num,
                         carburant=carburant, boite=boite,
                         type_vehicule=type_vehicule, target_hp=target_hp,
                         finition=finition, carrosserie=carrosserie,
@@ -557,8 +561,8 @@ class LeboncoinScraper(BaseScraper):
 
         # Retry avec code moteur dans le keyword (horse_power_din API peu fiable pour BMW, VW…)
         # Ex: modele="Serie 3 Touring" + engine_code="318d" → keyword "Serie 3 Touring 318d"
-        if target_hp and engine_code and engine_code.lower() not in modele.lower():
-            modele_engine = f"{modele} {engine_code}"
+        if target_hp and engine_code and engine_code.lower() not in modele_api.lower():
+            modele_engine = f"{modele_api} {engine_code}"
             logger.info(f"[leboncoin] HP filter → 0 résultats, retry code moteur '{modele_engine}'")
 
             async def _mobile_engine_code():
@@ -598,7 +602,7 @@ class LeboncoinScraper(BaseScraper):
                 for page_num in range(1, max_pages + 1):
                     try:
                         p = await self._fetch_mobile_api(
-                            marque, modele, annee, km_retry, page_num,
+                            marque, modele_api, annee, km_retry, page_num,
                             carburant=carburant, boite=boite,
                             type_vehicule=type_vehicule, target_hp=target_hp,
                             finition=finition, carrosserie=carrosserie,
@@ -625,7 +629,7 @@ class LeboncoinScraper(BaseScraper):
         try:
             camoufox_prix = await asyncio.wait_for(
                 self._camoufox_search(
-                    marque, modele, annee, kilometrage,
+                    marque, modele_api, annee, kilometrage,
                     carburant=carburant, boite=boite,
                     type_vehicule=type_vehicule, target_hp=target_hp,
                     finition=finition, carrosserie=carrosserie,
@@ -644,7 +648,7 @@ class LeboncoinScraper(BaseScraper):
         logger.info("[leboncoin] Fallback Playwright")
         try:
             prix = await self._playwright_search(
-                marque, modele, annee, kilometrage,
+                marque, modele_api, annee, kilometrage,
                 carburant=carburant, boite=boite,
                 type_vehicule=type_vehicule, target_hp=target_hp,
                 finition=finition, carrosserie=carrosserie,
