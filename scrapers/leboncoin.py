@@ -84,6 +84,7 @@ def _mobile_ua() -> tuple[str, str, dict]:
             "X-LBC-DEVICE-ID": device_id,
             "X-LBC-VERSION": lbc,
             "X-LBC-PLATFORM": "ios",
+            "api_key": "ba0c2dad52b3ec",
             "Origin": "https://www.leboncoin.fr",
             "Referer": "https://www.leboncoin.fr/",
         }
@@ -100,6 +101,7 @@ def _mobile_ua() -> tuple[str, str, dict]:
             "X-LBC-DEVICE-ID": device_id,
             "X-LBC-VERSION": lbc,
             "X-LBC-PLATFORM": "android",
+            "api_key": "ba0c2dad52b3ec",
             "Origin": "https://www.leboncoin.fr",
             "Referer": "https://www.leboncoin.fr/",
         }
