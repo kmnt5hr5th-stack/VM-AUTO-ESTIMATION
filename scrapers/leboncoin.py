@@ -523,25 +523,6 @@ class LeboncoinScraper(BaseScraper):
         target_hp = _extraire_cv(motorisation) if motorisation else None
         engine_code = _extraire_code_moteur(motorisation) if motorisation else None
 
-        # Si motorisation avec HP → Camoufox en premier avec timeout élargi (filtre HP fiable)
-        if target_hp:
-            logger.info(f"[leboncoin] Motorisation ({target_hp}ch) → Camoufox en premier (timeout 75s)")
-            try:
-                camoufox_prix = await asyncio.wait_for(
-                    self._camoufox_search(
-                        marque, modele, annee, kilometrage,
-                        carburant=carburant, boite=boite,
-                        type_vehicule=type_vehicule, target_hp=target_hp,
-                        finition=finition, carrosserie=carrosserie,
-                    ),
-                    timeout=75,
-                )
-                if camoufox_prix:
-                    logger.info(f"[leboncoin] Camoufox HP → {len(camoufox_prix)} prix")
-                    return camoufox_prix
-            except Exception as e:
-                logger.warning(f"[leboncoin] Camoufox HP erreur: {e}")
-
         # Stratégie : Mobile d'abord (5-10s), Camoufox seulement si Mobile vide/bloqué.
         logger.info("[leboncoin] Essai Mobile API (rapide)")
 
