@@ -1,6 +1,7 @@
 import asyncio
 import datetime
 import logging
+import time as _time
 import uuid
 import random
 import re
@@ -13,6 +14,74 @@ from .base import BaseScraper
 from ._proxy import LBC_PROXY_URL
 
 logger = logging.getLogger(__name__)
+
+# ── Cookie DataDome mis en cache (valide ~2h, lié à l'IP du serveur) ─────────
+_datadome_cache: dict = {"cookie": None, "at": 0.0}
+_datadome_lock = asyncio.Lock()
+_DATADOME_TTL = 7_200  # 2 heures
+
+
+async def _fetch_datadome_via_playwright() -> Optional[str]:
+    """Visite LBC homepage avec Playwright et extrait tous les cookies de session."""
+    try:
+        async with async_playwright() as p:
+            browser = await p.chromium.launch(
+                headless=True,
+                args=["--no-sandbox", "--disable-setuid-sandbox", "--disable-dev-shm-usage",
+                      "--disable-blink-features=AutomationControlled"],
+            )
+            context = await browser.new_context(
+                user_agent=(
+                    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                    "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+                ),
+                locale="fr-FR",
+                extra_http_headers={"Accept-Language": "fr-FR,fr;q=0.9"},
+            )
+            await context.add_init_script(
+                "Object.defineProperty(navigator, 'webdriver', {get: () => undefined})"
+            )
+            page = await context.new_page()
+            try:
+                await page.goto(HOMEPAGE, wait_until="domcontentloaded", timeout=25_000)
+                await asyncio.sleep(2)  # laisser DataDome initialiser la session
+                cookies = await context.cookies()
+                cookie_str = "; ".join(
+                    f"{c['name']}={c['value']}" for c in cookies
+                    if any(c.get("domain", "").endswith(d) for d in [".leboncoin.fr", "leboncoin.fr"])
+                )
+                names = [c["name"] for c in cookies if "leboncoin" in c.get("domain", "")]
+                logger.info(f"[leboncoin] Cookies récupérés : {names}")
+                return cookie_str or None
+            finally:
+                await page.close()
+                await browser.close()
+    except Exception as e:
+        logger.error(f"[leboncoin] Playwright cookie fetch erreur : {e}")
+        return None
+
+
+async def _ensure_datadome_cookie() -> Optional[str]:
+    """Retourne le cookie DataDome mis en cache ; lance Playwright si expiré."""
+    if _datadome_cache["cookie"] and (_time.monotonic() - _datadome_cache["at"]) < _DATADOME_TTL:
+        return _datadome_cache["cookie"]
+    async with _datadome_lock:
+        # Double-check après acquisition du verrou
+        if _datadome_cache["cookie"] and (_time.monotonic() - _datadome_cache["at"]) < _DATADOME_TTL:
+            return _datadome_cache["cookie"]
+        logger.info("[leboncoin] Rafraîchissement cookie DataDome via Playwright…")
+        cookie = await asyncio.wait_for(_fetch_datadome_via_playwright(), timeout=35)
+        if cookie:
+            _datadome_cache["cookie"] = cookie
+            _datadome_cache["at"] = _time.monotonic()
+            logger.info(f"[leboncoin] Cookie DataDome mis en cache ({len(cookie)} chars)")
+        return cookie
+
+
+def _invalidate_datadome_cookie() -> None:
+    """Force le rafraîchissement du cookie au prochain appel."""
+    _datadome_cache["cookie"] = None
+    _datadome_cache["at"] = 0.0
 
 
 def _extraire_cv(motorisation: str) -> Optional[int]:
@@ -375,18 +444,23 @@ class LeboncoinScraper(BaseScraper):
                                  carburant=None, boite=None, type_vehicule=None,
                                  target_hp=None, finition=None, carrosserie=None) -> list[int]:
         ua, impersonate, headers = _mobile_ua()
-        # Utilise _build_camoufox_payload : année ±1, km ±10k, boite numérique "1"/"2"
-        # curl_cffi avec ce payload n'est pas bloqué par DataDome (~1-2s)
         base = _build_camoufox_payload(marque, modele, annee, km, boite=boite,
                                         type_vehicule=type_vehicule, target_hp=target_hp)
         payload = {**base, "offset": 35 * (page - 1),
                    "listing_source": "direct-search" if page == 1 else "pagination"}
-        proxies = _webshare_proxies()
-        async with AsyncSession(impersonate=impersonate, proxies=proxies) as s:
-            await s.get(HOMEPAGE, headers=headers, timeout=15)
+
+        # Cookie DataDome mis en cache — même IP que Playwright (serveur Render)
+        # → pas de proxy, cookie valide, filtre HP fonctionnel
+        cookie = await _ensure_datadome_cookie()
+        if cookie:
+            headers["Cookie"] = cookie
+
+        async with AsyncSession(impersonate=impersonate) as s:
             r = await s.post(API_URL, json=payload, headers=headers, timeout=30)
+
         if r.status_code == 403:
-            raise Exception("DataDome 403")
+            _invalidate_datadome_cookie()
+            raise Exception("DataDome 403 — cookie invalidé, sera rafraîchi")
         if not r.ok:
             raise Exception(f"API {r.status_code}")
         return _extract_prix(r.json().get("ads", []), modele, marque=marque,
