@@ -657,19 +657,26 @@ class LeboncoinScraper(BaseScraper):
         engine_code = _extraire_code_moteur(motorisation) if motorisation else None
         modele_api = re.sub(r'\bsportback\b', '', modele, flags=re.IGNORECASE).strip()
 
-        kw_args = dict(marque=marque, carburant=carburant, boite=boite,
-                       type_vehicule=type_vehicule, finition=finition, carrosserie=carrosserie)
+        # kw_args pour _search_via_context uniquement (inclut marque)
+        ctx_args = dict(marque=marque, carburant=carburant, boite=boite,
+                        type_vehicule=type_vehicule, finition=finition, carrosserie=carrosserie)
 
         async def _mobile_pages(mod, km, hp):
+            """mod = modele (keyword LBC), km = km cible, hp = target_hp ou None."""
             prix = []
             for pg in range(1, max_pages + 1):
                 try:
-                    p = await self._fetch_mobile_api(mod, modele_api if mod == modele_api else mod,
-                                                     annee, km, pg, target_hp=hp, **kw_args)
+                    p = await self._fetch_mobile_api(
+                        marque, mod, annee, km, pg,
+                        carburant=carburant, boite=boite,
+                        type_vehicule=type_vehicule, target_hp=hp,
+                        finition=finition, carrosserie=carrosserie,
+                    )
                     prix.extend(p)
                     if not p:
                         break
-                except Exception:
+                except Exception as e:
+                    logger.debug(f"[leboncoin] _mobile_pages erreur pg{pg}: {e}")
                     break
             return prix
 
@@ -690,7 +697,7 @@ class LeboncoinScraper(BaseScraper):
                                              type_vehicule=type_vehicule, target_hp=target_hp)
             try:
                 prix = await asyncio.wait_for(
-                    self._search_via_context(payload_hp, modele_api, km_cible=kilometrage, **kw_args),
+                    self._search_via_context(payload_hp, modele_api, km_cible=kilometrage, **ctx_args),
                     timeout=25,
                 )
             except Exception as e:
@@ -728,7 +735,7 @@ class LeboncoinScraper(BaseScraper):
                                             type_vehicule=type_vehicule, target_hp=None)
         try:
             prix = await asyncio.wait_for(
-                self._search_via_context(payload_no_hp, modele_api, km_cible=kilometrage, **kw_args),
+                self._search_via_context(payload_no_hp, modele_api, km_cible=kilometrage, **ctx_args),
                 timeout=25,
             )
         except Exception as e:
