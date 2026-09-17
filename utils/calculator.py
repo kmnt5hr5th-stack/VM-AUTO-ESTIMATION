@@ -180,6 +180,10 @@ def get_rachat_pct(
         pct = 0.72
         parts.append(f"km très élevé ({km // 1000}k) → 72%")
         apply_km_adjust = False
+    elif km > 150_000 and age > 10:
+        pct = 0.70
+        parts.append(f"km élevé ({km // 1000}k) + ancien ({age} ans) → 70%")
+        apply_km_adjust = False
     elif km > 150_000:
         pct = 0.76
         parts.append(f"km élevé ({km // 1000}k) → 76%")

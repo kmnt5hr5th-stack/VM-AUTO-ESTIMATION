@@ -395,7 +395,12 @@ def _extract_prix(ads: list, modele: str, marque: str = None, carburant: str = N
             except (ValueError, TypeError):
                 ad_km = None
             if ad_km is not None:
-                km_tolerance = max(50_000, int(km_cible * 0.25))
+                # Tolérance plus serrée pour véhicules très kilométrés pour éviter de mixer
+                # avec des voitures nettement moins kilométrées qui faussent la médiane vers le haut
+                if km_cible > 150_000:
+                    km_tolerance = max(25_000, int(km_cible * 0.13))
+                else:
+                    km_tolerance = max(50_000, int(km_cible * 0.25))
                 if abs(ad_km - km_cible) > km_tolerance:
                     continue
 
