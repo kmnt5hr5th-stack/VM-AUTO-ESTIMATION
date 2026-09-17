@@ -630,6 +630,20 @@ async def _lat_lng_to_dept(lat: float, lng: float) -> Optional[str]:
         return None
 
 
+@app.get("/test-lacentrale")
+async def test_lacentrale(marque: str = "Renault", modele: str = "Clio", annee: int = 2020, km: int = 50000):
+    """Test direct La Centrale get_prices() — pour vérifier que le scraper fonctionne."""
+    lc = LaCentraleScraper()
+    try:
+        prices = await asyncio.wait_for(
+            lc.get_prices(marque, modele, annee, km),
+            timeout=60,
+        )
+        return {"marque": marque, "modele": modele, "annee": annee, "km": km, "prix": prices, "nb": len(prices)}
+    except Exception as e:
+        return {"erreur": str(e)}
+
+
 @app.post("/scan-lacentrale")
 async def scan_lacentrale(req: LaCentraleScanRequest):
     dept = req.dept_code
