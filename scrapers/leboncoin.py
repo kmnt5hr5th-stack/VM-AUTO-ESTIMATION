@@ -1,7 +1,6 @@
 import asyncio
 import datetime
 import logging
-import time as _time
 import uuid
 import random
 import re
@@ -15,73 +14,78 @@ from ._proxy import LBC_PROXY_URL
 
 logger = logging.getLogger(__name__)
 
-# ── Cookie DataDome mis en cache (valide ~2h, lié à l'IP du serveur) ─────────
-_datadome_cache: dict = {"cookie": None, "at": 0.0}
-_datadome_lock = asyncio.Lock()
-_DATADOME_TTL = 7_200  # 2 heures
+# ── Contexte Playwright persistant (partagé entre toutes les requêtes) ────────
+_pw: dict = {"playwright": None, "browser": None, "context": None}
+_pw_lock = asyncio.Lock()
+_pw_sem: Optional[asyncio.Semaphore] = None   # initialisé à la 1ère utilisation
 
 
-async def _fetch_datadome_via_playwright() -> Optional[str]:
-    """Visite LBC homepage avec Playwright et extrait tous les cookies de session."""
+async def _init_pw_context() -> None:
+    """Lance un navigateur Playwright persistant et initialise la session DataDome."""
+    global _pw_sem
+    for key in ("context", "browser", "playwright"):
+        try:
+            obj = _pw.get(key)
+            if obj:
+                await obj.close() if key != "playwright" else await obj.stop()
+        except Exception:
+            pass
+        _pw[key] = None
+
+    pw = await async_playwright().start()
+    browser = await pw.chromium.launch(
+        headless=True,
+        args=["--no-sandbox", "--disable-setuid-sandbox", "--disable-dev-shm-usage",
+              "--disable-blink-features=AutomationControlled"],
+    )
+    context = await browser.new_context(
+        user_agent=(
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+            "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+        ),
+        locale="fr-FR",
+        extra_http_headers={"Accept-Language": "fr-FR,fr;q=0.9"},
+    )
+    await context.add_init_script(
+        "Object.defineProperty(navigator, 'webdriver', {get: () => undefined})"
+    )
+    # Visite homepage pour initialiser la session DataDome dans ce contexte
+    page = await context.new_page()
     try:
-        async with async_playwright() as p:
-            browser = await p.chromium.launch(
-                headless=True,
-                args=["--no-sandbox", "--disable-setuid-sandbox", "--disable-dev-shm-usage",
-                      "--disable-blink-features=AutomationControlled"],
-            )
-            context = await browser.new_context(
-                user_agent=(
-                    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-                    "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
-                ),
-                locale="fr-FR",
-                extra_http_headers={"Accept-Language": "fr-FR,fr;q=0.9"},
-            )
-            await context.add_init_script(
-                "Object.defineProperty(navigator, 'webdriver', {get: () => undefined})"
-            )
-            page = await context.new_page()
-            try:
-                await page.goto(HOMEPAGE, wait_until="domcontentloaded", timeout=25_000)
-                await asyncio.sleep(2)  # laisser DataDome initialiser la session
-                cookies = await context.cookies()
-                cookie_str = "; ".join(
-                    f"{c['name']}={c['value']}" for c in cookies
-                    if any(c.get("domain", "").endswith(d) for d in [".leboncoin.fr", "leboncoin.fr"])
-                )
-                names = [c["name"] for c in cookies if "leboncoin" in c.get("domain", "")]
-                logger.info(f"[leboncoin] Cookies récupérés : {names}")
-                return cookie_str or None
-            finally:
-                await page.close()
-                await browser.close()
+        await page.goto(HOMEPAGE, wait_until="domcontentloaded", timeout=25_000)
+        await asyncio.sleep(1.5)
+    finally:
+        await page.close()
+
+    _pw["playwright"] = pw
+    _pw["browser"] = browser
+    _pw["context"] = context
+    if _pw_sem is None:
+        _pw_sem = asyncio.Semaphore(2)  # max 2 pages Playwright en parallèle
+    logger.info("[leboncoin] Contexte Playwright persistant prêt")
+
+
+async def _get_pw_context():
+    """Retourne le contexte Playwright, le réinitialise si nécessaire."""
+    ctx = _pw.get("context")
+    if ctx and not ctx.is_closed():
+        return ctx
+    async with _pw_lock:
+        ctx = _pw.get("context")
+        if ctx and not ctx.is_closed():
+            return ctx
+        logger.info("[leboncoin] Réinitialisation contexte Playwright…")
+        await _init_pw_context()
+        return _pw["context"]
+
+
+async def warm_up_playwright() -> None:
+    """Pré-charge le contexte Playwright au démarrage du serveur."""
+    try:
+        await asyncio.wait_for(_get_pw_context(), timeout=40)
+        logger.info("[leboncoin] Contexte Playwright prêt au démarrage")
     except Exception as e:
-        logger.error(f"[leboncoin] Playwright cookie fetch erreur : {e}")
-        return None
-
-
-async def _ensure_datadome_cookie() -> Optional[str]:
-    """Retourne le cookie DataDome mis en cache ; lance Playwright si expiré."""
-    if _datadome_cache["cookie"] and (_time.monotonic() - _datadome_cache["at"]) < _DATADOME_TTL:
-        return _datadome_cache["cookie"]
-    async with _datadome_lock:
-        # Double-check après acquisition du verrou
-        if _datadome_cache["cookie"] and (_time.monotonic() - _datadome_cache["at"]) < _DATADOME_TTL:
-            return _datadome_cache["cookie"]
-        logger.info("[leboncoin] Rafraîchissement cookie DataDome via Playwright…")
-        cookie = await asyncio.wait_for(_fetch_datadome_via_playwright(), timeout=35)
-        if cookie:
-            _datadome_cache["cookie"] = cookie
-            _datadome_cache["at"] = _time.monotonic()
-            logger.info(f"[leboncoin] Cookie DataDome mis en cache ({len(cookie)} chars)")
-        return cookie
-
-
-def _invalidate_datadome_cookie() -> None:
-    """Force le rafraîchissement du cookie au prochain appel."""
-    _datadome_cache["cookie"] = None
-    _datadome_cache["at"] = 0.0
+        logger.warning(f"[leboncoin] Warmup Playwright échoué : {e}")
 
 
 def _extraire_cv(motorisation: str) -> Optional[int]:
@@ -448,24 +452,77 @@ class LeboncoinScraper(BaseScraper):
                                         type_vehicule=type_vehicule, target_hp=target_hp)
         payload = {**base, "offset": 35 * (page - 1),
                    "listing_source": "direct-search" if page == 1 else "pagination"}
-
-        # Cookie DataDome mis en cache — même IP que Playwright (serveur Render)
-        # → pas de proxy, cookie valide, filtre HP fonctionnel
-        cookie = await _ensure_datadome_cookie()
-        if cookie:
-            headers["Cookie"] = cookie
-
-        async with AsyncSession(impersonate=impersonate) as s:
+        proxies = _webshare_proxies()
+        async with AsyncSession(impersonate=impersonate, proxies=proxies) as s:
+            await s.get(HOMEPAGE, headers=headers, timeout=15)
             r = await s.post(API_URL, json=payload, headers=headers, timeout=30)
-
         if r.status_code == 403:
-            _invalidate_datadome_cookie()
-            raise Exception("DataDome 403 — cookie invalidé, sera rafraîchi")
+            raise Exception("DataDome 403")
         if not r.ok:
             raise Exception(f"API {r.status_code}")
         return _extract_prix(r.json().get("ads", []), modele, marque=marque,
                              carburant=carburant, boite=boite, target_hp=target_hp, km_cible=km,
                              finition=finition, carrosserie=carrosserie)
+
+    async def _search_via_context(self, payload: dict, modele: str, marque: str = None,
+                                   carburant: str = None, boite: str = None,
+                                   target_hp: int = None, km_cible: int = None,
+                                   finition: str = None, carrosserie: str = None) -> list[int]:
+        """Recherche LBC via le contexte Playwright persistant — DataDome natif, filtre HP fiable."""
+        global _pw_sem
+        if _pw_sem is None:
+            _pw_sem = asyncio.Semaphore(2)
+
+        for attempt in range(2):
+            try:
+                ctx = await _get_pw_context()
+                async with _pw_sem:
+                    page = await ctx.new_page()
+                    try:
+                        result = await asyncio.wait_for(
+                            page.evaluate(
+                                """async ([payload, url]) => {
+                                    try {
+                                        const r = await fetch(url, {
+                                            method: "POST",
+                                            credentials: "include",
+                                            headers: {
+                                                "Content-Type": "application/json",
+                                                "Accept": "application/json",
+                                                "api_key": "ba0c2dad52b3ec"
+                                            },
+                                            body: JSON.stringify(payload)
+                                        });
+                                        const data = await r.json();
+                                        return {status: r.status, ads: data.ads || []};
+                                    } catch(e) {
+                                        return {status: 0, ads: [], error: String(e)};
+                                    }
+                                }""",
+                                [payload, API_URL],
+                            ),
+                            timeout=20,
+                        )
+                        status = result.get("status", 0)
+                        ads = result.get("ads", [])
+                        logger.info(f"[leboncoin] Context status={status} → {len(ads)} annonces brutes")
+                        if status == 403:
+                            _pw["context"] = None  # force réinitialisation
+                            if attempt == 0:
+                                continue
+                            return []
+                        return _extract_prix(ads, modele, marque=marque, carburant=carburant,
+                                            boite=boite, target_hp=target_hp, km_cible=km_cible,
+                                            finition=finition, carrosserie=carrosserie)
+                    finally:
+                        await page.close()
+            except Exception as e:
+                logger.warning(f"[leboncoin] Context search erreur (attempt {attempt}): {e}")
+                _pw["context"] = None
+                if attempt == 0:
+                    continue
+                return []
+        return []
 
     async def _playwright_search(self, marque, modele, annee, km,
                                   carburant=None, boite=None, type_vehicule=None,
@@ -598,24 +655,17 @@ class LeboncoinScraper(BaseScraper):
                           motorisation=None, type_vehicule=None, carrosserie=None):
         target_hp = _extraire_cv(motorisation) if motorisation else None
         engine_code = _extraire_code_moteur(motorisation) if motorisation else None
-
-        # Pour les modèles avec suffixe "Sportback" : on l'enlève du keyword LBC
-        # mais on garde l'original pour le filtre post-hoc _extract_prix
         modele_api = re.sub(r'\bsportback\b', '', modele, flags=re.IGNORECASE).strip()
 
-        # Stratégie : Mobile d'abord (5-10s), Camoufox seulement si Mobile vide/bloqué.
-        logger.info("[leboncoin] Essai Mobile API (rapide)")
+        kw_args = dict(marque=marque, carburant=carburant, boite=boite,
+                       type_vehicule=type_vehicule, finition=finition, carrosserie=carrosserie)
 
-        async def _mobile_all_pages():
+        async def _mobile_pages(mod, km, hp):
             prix = []
-            for page_num in range(1, max_pages + 1):
+            for pg in range(1, max_pages + 1):
                 try:
-                    p = await self._fetch_mobile_api(
-                        marque, modele_api, annee, kilometrage, page_num,
-                        carburant=carburant, boite=boite,
-                        type_vehicule=type_vehicule, target_hp=target_hp,
-                        finition=finition, carrosserie=carrosserie,
-                    )
+                    p = await self._fetch_mobile_api(mod, modele_api if mod == modele_api else mod,
+                                                     annee, km, pg, target_hp=hp, **kw_args)
                     prix.extend(p)
                     if not p:
                         break
@@ -623,114 +673,84 @@ class LeboncoinScraper(BaseScraper):
                     break
             return prix
 
+        # ── 1. Mobile API avec HP ─────────────────────────────────────────────
+        logger.info("[leboncoin] Mobile API (avec HP)")
         try:
-            mobile_prix = await asyncio.wait_for(_mobile_all_pages(), timeout=20)
-        except Exception as e:
-            logger.warning(f"[leboncoin] Mobile API erreur: {e}")
-            mobile_prix = []
+            prix = await asyncio.wait_for(_mobile_pages(modele_api, kilometrage, target_hp), timeout=22)
+        except Exception:
+            prix = []
+        if prix:
+            return prix
 
-        if mobile_prix:
-            logger.info(f"[leboncoin] Mobile API → {len(mobile_prix)} prix")
-            return mobile_prix
+        # ── 2. Contexte Playwright avec HP (DataDome natif → filtre HP fiable) ─
+        if target_hp:
+            logger.info("[leboncoin] Context Playwright avec HP")
+            payload_hp = _build_lbc_payload(marque, modele_api, annee, kilometrage, 1,
+                                             carburant=carburant, boite=boite,
+                                             type_vehicule=type_vehicule, target_hp=target_hp)
+            try:
+                prix = await asyncio.wait_for(
+                    self._search_via_context(payload_hp, modele_api, km_cible=kilometrage, **kw_args),
+                    timeout=25,
+                )
+            except Exception as e:
+                logger.warning(f"[leboncoin] Context HP erreur: {e}")
+                prix = []
+            if prix:
+                logger.info(f"[leboncoin] Context HP → {len(prix)} prix")
+                return prix
 
-        # Retry avec code moteur dans le keyword (horse_power_din API peu fiable pour BMW, VW…)
-        # Ex: modele="Serie 3 Touring" + engine_code="318d" → keyword "Serie 3 Touring 318d"
+        # ── 3. Engine code retry (BMW 318d, VW GTI…) ─────────────────────────
         if target_hp and engine_code and engine_code.lower() not in modele_api.lower():
             modele_engine = f"{modele_api} {engine_code}"
-            logger.info(f"[leboncoin] HP filter → 0 résultats, retry code moteur '{modele_engine}'")
-
-            async def _mobile_engine_code():
+            logger.info(f"[leboncoin] Retry code moteur '{modele_engine}'")
+            try:
+                prix = await asyncio.wait_for(_mobile_pages(modele_engine, kilometrage, None), timeout=22)
+            except Exception:
                 prix = []
-                for page_num in range(1, max_pages + 1):
-                    try:
-                        p = await self._fetch_mobile_api(
-                            marque, modele_engine, annee, kilometrage, page_num,
-                            carburant=carburant, boite=boite,
-                            type_vehicule=type_vehicule, target_hp=None,
-                            finition=finition, carrosserie=carrosserie,
-                        )
-                        prix.extend(p)
-                        if not p:
-                            break
-                    except Exception:
-                        break
+            if prix:
                 return prix
 
+        # ── 4. Mobile API SANS HP (élargissement) ────────────────────────────
+        if target_hp:
+            logger.info("[leboncoin] Retry Mobile sans HP")
             try:
-                engine_prix = await asyncio.wait_for(_mobile_engine_code(), timeout=20)
-            except Exception as e:
-                logger.warning(f"[leboncoin] Engine code retry erreur: {e}")
-                engine_prix = []
+                prix = await asyncio.wait_for(_mobile_pages(modele_api, kilometrage, None), timeout=22)
+            except Exception:
+                prix = []
+            if prix:
+                return prix
 
-            if engine_prix:
-                logger.info(f"[leboncoin] Engine code retry → {len(engine_prix)} prix")
-                return engine_prix
+        # ── 5. Contexte Playwright SANS HP ────────────────────────────────────
+        logger.info("[leboncoin] Context Playwright sans HP")
+        payload_no_hp = _build_lbc_payload(marque, modele_api, annee, kilometrage, 1,
+                                            carburant=carburant, boite=boite,
+                                            type_vehicule=type_vehicule, target_hp=None)
+        try:
+            prix = await asyncio.wait_for(
+                self._search_via_context(payload_no_hp, modele_api, km_cible=kilometrage, **kw_args),
+                timeout=25,
+            )
+        except Exception as e:
+            logger.warning(f"[leboncoin] Context sans HP erreur: {e}")
+            prix = []
+        if prix:
+            logger.info(f"[leboncoin] Context sans HP → {len(prix)} prix")
+            return prix
 
-        # Retry Mobile avec km élargi à 50 000 si km original trop bas/élevé → 0 résultats
+        # ── 6. Retry km=50k (véhicule rare ou km atypique) ───────────────────
         km_retry = 50_000
         if kilometrage != km_retry:
-            logger.info(f"[leboncoin] Mobile 0 résultats → retry km={km_retry}")
-
-            async def _mobile_retry():
+            logger.info(f"[leboncoin] Retry km={km_retry}")
+            try:
+                prix = await asyncio.wait_for(_mobile_pages(modele_api, km_retry, None), timeout=22)
+            except Exception:
                 prix = []
-                for page_num in range(1, max_pages + 1):
-                    try:
-                        p = await self._fetch_mobile_api(
-                            marque, modele_api, annee, km_retry, page_num,
-                            carburant=carburant, boite=boite,
-                            type_vehicule=type_vehicule, target_hp=target_hp,
-                            finition=finition, carrosserie=carrosserie,
-                        )
-                        prix.extend(p)
-                        if not p:
-                            break
-                    except Exception:
-                        break
+            if prix:
                 return prix
 
-            try:
-                mobile_retry_prix = await asyncio.wait_for(_mobile_retry(), timeout=20)
-            except Exception as e:
-                logger.warning(f"[leboncoin] Mobile retry erreur: {e}")
-                mobile_retry_prix = []
-
-            if mobile_retry_prix:
-                logger.info(f"[leboncoin] Mobile retry km={km_retry} → {len(mobile_retry_prix)} prix")
-                return mobile_retry_prix
-
-        # Fallback : Camoufox (DataDome a bloqué le mobile ou 0 résultats)
-        logger.info("[leboncoin] Mobile vide → fallback Camoufox")
-        try:
-            camoufox_prix = await asyncio.wait_for(
-                self._camoufox_search(
-                    marque, modele_api, annee, kilometrage,
-                    carburant=carburant, boite=boite,
-                    type_vehicule=type_vehicule, target_hp=target_hp,
-                    finition=finition, carrosserie=carrosserie,
-                ),
-                timeout=30,
-            )
-            if camoufox_prix:
-                logger.info(f"[leboncoin] Camoufox → {len(camoufox_prix)} prix")
-                return camoufox_prix
-        except Exception as e:
-            logger.warning(f"[leboncoin] Camoufox erreur: {e}")
-            # Laisse asyncio nettoyer les tâches annulées avant de démarrer Playwright
-            await asyncio.sleep(1)
-
-        # Dernier recours : Playwright
-        logger.info("[leboncoin] Fallback Playwright")
-        try:
-            prix = await self._playwright_search(
-                marque, modele_api, annee, kilometrage,
-                carburant=carburant, boite=boite,
-                type_vehicule=type_vehicule, target_hp=target_hp,
-                finition=finition, carrosserie=carrosserie,
-            )
-            return prix
-        except Exception as e:
-            logger.warning(f"[leboncoin] Playwright échoué: {e}")
-            return []
+        logger.warning(f"[leboncoin] Aucun résultat pour {marque} {modele} {annee}")
+        return []
 
     async def _scrape(self, context: BrowserContext, marque, modele, annee, kilometrage,
                        max_pages, finition=None) -> list[int]:

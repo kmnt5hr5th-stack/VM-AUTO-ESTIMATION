@@ -19,7 +19,7 @@ from scrapers.histovec import get_histovec_pdf
 from scrapers.leboncoin import (
     LeboncoinScraper,
     _mobile_ua, _webshare_proxies,
-    _ensure_datadome_cookie,
+    warm_up_playwright,
     API_URL as LBC_API_URL, HOMEPAGE as LBC_HOMEPAGE,
 )
 from scrapers.lacentrale import LaCentraleScraper
@@ -84,15 +84,8 @@ app = FastAPI(
 
 @app.on_event("startup")
 async def _warmup():
-    """Pré-charge le cookie DataDome au démarrage pour que la 1ère estimation soit rapide."""
-    try:
-        cookie = await asyncio.wait_for(_ensure_datadome_cookie(), timeout=40)
-        if cookie:
-            logger.info("[startup] Cookie DataDome prêt")
-        else:
-            logger.warning("[startup] Cookie DataDome non disponible au démarrage")
-    except Exception as e:
-        logger.warning(f"[startup] Warmup cookie échoué : {e}")
+    """Lance le contexte Playwright persistant au démarrage."""
+    await warm_up_playwright()
 
 
 app.add_middleware(
