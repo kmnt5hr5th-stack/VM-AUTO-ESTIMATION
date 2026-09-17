@@ -23,7 +23,6 @@ from scrapers.leboncoin import (
     API_URL as LBC_API_URL, HOMEPAGE as LBC_HOMEPAGE,
 )
 from scrapers.lacentrale import LaCentraleScraper
-from scrapers.lacentrale import LaCentraleScraper
 from utils.calculator import calculate_estimation
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(name)s %(levelname)s %(message)s")
@@ -160,26 +159,6 @@ async def _run_estimation(req: EstimationRequest) -> dict:
     except Exception as e:
         logger.error(f"[leboncoin] Erreur : {e}")
         sources_detail["leboncoin"] = {"annonces": 0, "erreur": str(e)}
-
-    # ── Fallback La Centrale si LBC a moins de 4 annonces ───────────────────
-    _MIN_ANNONCES = 4
-    if len(all_prices) < _MIN_ANNONCES:
-        logger.info(f"[lacentrale] Fallback activé ({len(all_prices)} annonces LBC < {_MIN_ANNONCES})")
-        lc = LaCentraleScraper()
-        try:
-            lc_prices = await asyncio.wait_for(
-                lc.get_prices(marque_search, req.modele, req.annee, req.kilometrage),
-                timeout=50,
-            )
-            if lc_prices:
-                sources_detail["lacentrale"] = {"annonces": len(lc_prices)}
-                all_prices.extend(lc_prices)
-                logger.info(f"[lacentrale] {len(lc_prices)} prix en fallback")
-            else:
-                sources_detail["lacentrale"] = {"annonces": 0}
-        except Exception as e:
-            logger.warning(f"[lacentrale] Fallback erreur: {e}")
-            sources_detail["lacentrale"] = {"annonces": 0, "erreur": str(e)}
 
     if not all_prices:
         raise HTTPException(
@@ -628,20 +607,6 @@ async def _lat_lng_to_dept(lat: float, lng: float) -> Optional[str]:
     except Exception as e:
         logger.error(f"[nominatim] Erreur géocodage inverse: {e}")
         return None
-
-
-@app.get("/test-lacentrale")
-async def test_lacentrale(marque: str = "Renault", modele: str = "Clio", annee: int = 2020, km: int = 50000):
-    """Test direct La Centrale get_prices() — pour vérifier que le scraper fonctionne."""
-    lc = LaCentraleScraper()
-    try:
-        prices = await asyncio.wait_for(
-            lc.get_prices(marque, modele, annee, km),
-            timeout=60,
-        )
-        return {"marque": marque, "modele": modele, "annee": annee, "km": km, "prix": prices, "nb": len(prices)}
-    except Exception as e:
-        return {"erreur": str(e)}
 
 
 @app.post("/scan-lacentrale")
