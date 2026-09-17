@@ -21,6 +21,15 @@ _lc_pw_lock = asyncio.Lock()
 _lc_pw_sem: Optional[asyncio.Semaphore] = None
 
 
+_WEBSHARE_HOST = "p.webshare.io:80"
+_WEBSHARE_USER = "lmgdmysu"
+_WEBSHARE_PASS = "nomkg04o6fsd"
+
+def _webshare_proxy_url() -> str:
+    session = random.randint(1000000, 9999999)
+    return f"http://{_WEBSHARE_USER}-fr-{session}:{_WEBSHARE_PASS}@{_WEBSHARE_HOST}"
+
+
 async def _init_lc_pw_context() -> None:
     global _lc_pw_sem
     for key in ("context", "browser", "playwright"):
@@ -32,9 +41,15 @@ async def _init_lc_pw_context() -> None:
             pass
         _lc_pw[key] = None
 
+    session = random.randint(1000000, 9999999)
     pw = await async_playwright().start()
     browser = await pw.chromium.launch(
         headless=True,
+        proxy={
+            "server": f"http://{_WEBSHARE_HOST}",
+            "username": f"{_WEBSHARE_USER}-fr-{session}",
+            "password": _WEBSHARE_PASS,
+        },
         args=["--no-sandbox", "--disable-setuid-sandbox", "--disable-dev-shm-usage",
               "--disable-blink-features=AutomationControlled"],
     )
@@ -49,7 +64,7 @@ async def _init_lc_pw_context() -> None:
     await context.add_init_script(
         "Object.defineProperty(navigator, 'webdriver', {get: () => undefined})"
     )
-    # Visite homepage pour initialiser la session DataDome
+    # Visite homepage pour initialiser la session DataDome via proxy
     page = await context.new_page()
     try:
         await page.goto(LC_HOMEPAGE, wait_until="domcontentloaded", timeout=25_000)
@@ -62,7 +77,7 @@ async def _init_lc_pw_context() -> None:
     _lc_pw["context"] = context
     if _lc_pw_sem is None:
         _lc_pw_sem = asyncio.Semaphore(1)
-    logger.info("[lacentrale] Contexte Playwright persistant prêt")
+    logger.info("[lacentrale] Contexte Playwright + Webshare proxy prêt")
 
 
 async def _get_lc_pw_context():
@@ -179,9 +194,6 @@ class LaCentraleScraper(BaseScraper):
 
     async def scan_by_dept(self, dept_code: str, prix_max: int = 25000, km_max: int = 180000, max_pages: int = 5) -> list[dict]:
         """Scan La Centrale par département via Playwright + Webshare (bypass DataDome)."""
-        _WEBSHARE_HOST = "p.webshare.io:80"
-        _WEBSHARE_USER = "lmgdmysu"
-        _WEBSHARE_PASS = "nomkg04o6fsd"
 
         listings: list[dict] = []
         seen_ids: set = set()
