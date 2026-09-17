@@ -1,3 +1,4 @@
+import asyncio
 import logging
 import json
 import re
@@ -9,24 +10,79 @@ from bs4 import BeautifulSoup
 from playwright.async_api import async_playwright, BrowserContext
 
 from .base import BaseScraper, extraire_prix_texte
-from ._proxy import proxy_available, build_url, service_name  # ZenRows/ScraperAPI
-
-_WEBSHARE_HOST = "p.webshare.io:80"
-_WEBSHARE_USER = "lmgdmysu"
-_WEBSHARE_PASS = "nomkg04o6fsd"
-
-def _webshare_proxy_url() -> str:
-    session = random.randint(1000000, 9999999)
-    return f"http://{_WEBSHARE_USER}-fr-{session}:{_WEBSHARE_PASS}@{_WEBSHARE_HOST}"
 
 logger = logging.getLogger(__name__)
+
+LC_HOMEPAGE = "https://www.lacentrale.fr/"
+
+# ── Contexte Playwright persistant La Centrale (lazy — initialisé au 1er besoin) ─
+_lc_pw: dict = {"playwright": None, "browser": None, "context": None}
+_lc_pw_lock = asyncio.Lock()
+_lc_pw_sem: Optional[asyncio.Semaphore] = None
+
+
+async def _init_lc_pw_context() -> None:
+    global _lc_pw_sem
+    for key in ("context", "browser", "playwright"):
+        try:
+            obj = _lc_pw.get(key)
+            if obj:
+                await obj.close() if key != "playwright" else await obj.stop()
+        except Exception:
+            pass
+        _lc_pw[key] = None
+
+    pw = await async_playwright().start()
+    browser = await pw.chromium.launch(
+        headless=True,
+        args=["--no-sandbox", "--disable-setuid-sandbox", "--disable-dev-shm-usage",
+              "--disable-blink-features=AutomationControlled"],
+    )
+    context = await browser.new_context(
+        user_agent=(
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+            "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+        ),
+        locale="fr-FR",
+        extra_http_headers={"Accept-Language": "fr-FR,fr;q=0.9"},
+    )
+    await context.add_init_script(
+        "Object.defineProperty(navigator, 'webdriver', {get: () => undefined})"
+    )
+    # Visite homepage pour initialiser la session DataDome
+    page = await context.new_page()
+    try:
+        await page.goto(LC_HOMEPAGE, wait_until="domcontentloaded", timeout=25_000)
+        await asyncio.sleep(2)
+    finally:
+        await page.close()
+
+    _lc_pw["playwright"] = pw
+    _lc_pw["browser"] = browser
+    _lc_pw["context"] = context
+    if _lc_pw_sem is None:
+        _lc_pw_sem = asyncio.Semaphore(1)
+    logger.info("[lacentrale] Contexte Playwright persistant prêt")
+
+
+async def _get_lc_pw_context():
+    ctx = _lc_pw.get("context")
+    if ctx and not ctx.is_closed():
+        return ctx
+    async with _lc_pw_lock:
+        ctx = _lc_pw.get("context")
+        if ctx and not ctx.is_closed():
+            return ctx
+        logger.info("[lacentrale] Initialisation contexte Playwright (lazy)…")
+        await _init_lc_pw_context()
+        return _lc_pw["context"]
 
 
 class LaCentraleScraper(BaseScraper):
     name = "lacentrale"
 
     def _build_url(self, marque: str, modele: str, annee: int, km: int) -> str:
-        km_delta = max(30_000, int(km * 0.15)) if km > 150_000 else 10_000
+        km_delta = max(30_000, int(km * 0.20)) if km > 150_000 else 20_000
         params = {
             "makesModelsCommercialNames": f"{marque.upper()}:{modele.upper()}",
             "yearMin": str(annee - 1),
@@ -36,42 +92,47 @@ class LaCentraleScraper(BaseScraper):
         }
         return f"https://www.lacentrale.fr/listing?{urlencode(params, quote_via=quote)}"
 
-    async def get_prices(self, marque, modele, annee, kilometrage, max_pages=2, finition=None, carburant=None, boite=None, motorisation=None, type_vehicule=None):
-        if not proxy_available():
-            logger.warning("[lacentrale] Aucun proxy configuré (ZENROWS_KEY ou SCRAPERAPI_KEY) — source ignorée")
-            return []
-
-        logger.info(f"[lacentrale] Service: {service_name()}")
+    async def get_prices(
+        self, marque: str, modele: str, annee: int, kilometrage: int,
+        max_pages: int = 2, finition=None, carburant=None, boite=None,
+        motorisation=None, type_vehicule=None, carrosserie=None,
+    ) -> list[int]:
+        """Récupère les prix via Playwright persistant (fallback LBC)."""
         prix: list[int] = []
+        url = self._build_url(marque, modele, annee, kilometrage)
 
-        for page_num in range(1, max_pages + 1):
-            target = self._build_url(marque, modele, annee, kilometrage)
-            if page_num > 1:
-                target += f"&page={page_num}"
+        try:
+            ctx = await asyncio.wait_for(_get_lc_pw_context(), timeout=45)
+            sem = _lc_pw_sem
 
-            api_url = build_url(target, js_render=True)
-            logger.info(f"[lacentrale] Requête p{page_num}…")
+            async with sem:
+                page = await ctx.new_page()
+                try:
+                    for page_num in range(1, max_pages + 1):
+                        page_url = url if page_num == 1 else url + f"&page={page_num}"
+                        logger.info(f"[lacentrale] Navigation p{page_num}: {page_url}")
 
-            try:
-                async with AsyncSession(impersonate="chrome131") as s:
-                    r = await s.get(api_url, timeout=30)
+                        await page.goto(page_url, wait_until="domcontentloaded", timeout=30_000)
+                        await asyncio.sleep(1.5)
 
-                logger.info(f"[lacentrale] p{page_num} status={r.status_code}  len={len(r.text)}")
-                if r.status_code != 200:
-                    logger.error(f"[lacentrale] Erreur {r.status_code}: {r.text[:300]}")
-                    break
+                        html = await page.content()
+                        prix_page = self._parse_html(html)
+                        logger.info(f"[lacentrale] p{page_num}: {len(prix_page)} prix → {prix_page[:5]}")
+                        prix.extend(prix_page)
 
-                prix_page = self._parse_html(r.text)
-                logger.info(f"[lacentrale] p{page_num} → {len(prix_page)} prix : {prix_page[:5]}")
-                prix.extend(prix_page)
-                if not prix_page:
-                    break
+                        if not prix_page:
+                            break
+                except Exception as e:
+                    logger.warning(f"[lacentrale] Erreur navigation: {e}")
+                    _lc_pw["context"] = None  # force réinit au prochain appel
+                finally:
+                    try:
+                        await page.close()
+                    except Exception:
+                        pass
 
-            except Exception as e:
-                # La Centrale bloque les IPs proxy connues (ZenRows, ScraperAPI, etc.)
-                # au niveau réseau → timeout immédiat sans données
-                logger.warning(f"[lacentrale] Inaccessible via proxy ({type(e).__name__}) — source ignorée")
-                break
+        except Exception as e:
+            logger.warning(f"[lacentrale] Erreur contexte Playwright: {e}")
 
         return prix
 
@@ -79,7 +140,7 @@ class LaCentraleScraper(BaseScraper):
         prix: set[int] = set()
         soup = BeautifulSoup(html, "lxml")
 
-        # 1) __NEXT_DATA__ SSR (La Centrale = Next.js)
+        # 1) __NEXT_DATA__ SSR
         tag = soup.find("script", {"id": "__NEXT_DATA__"})
         if tag and tag.string:
             try:
@@ -112,16 +173,19 @@ class LaCentraleScraper(BaseScraper):
         return list(prix)
 
     async def _scrape(self, context: BrowserContext, *args, **kwargs) -> list[int]:
-        return []  # La Centrale ne supporte pas Playwright
+        return []
 
     # ─── Scan géographique par département ───────────────────────────────────
 
     async def scan_by_dept(self, dept_code: str, prix_max: int = 25000, km_max: int = 180000, max_pages: int = 5) -> list[dict]:
         """Scan La Centrale par département via Playwright + Webshare (bypass DataDome)."""
+        _WEBSHARE_HOST = "p.webshare.io:80"
+        _WEBSHARE_USER = "lmgdmysu"
+        _WEBSHARE_PASS = "nomkg04o6fsd"
+
         listings: list[dict] = []
         seen_ids: set = set()
 
-        proxy_url = _webshare_proxy_url()
         logger.info(f"[lacentrale-geo] Démarrage Playwright (dept={dept_code})")
 
         try:
@@ -231,7 +295,6 @@ class LaCentraleScraper(BaseScraper):
         if not marque or not modele:
             return None
 
-        # Année
         year = ad.get("year") or ad.get("registrationYear") or ad.get("annee")
         if not year:
             for k in ("firstCirculationDate", "firstRegistrationDate", "dateCirculation"):
@@ -247,7 +310,6 @@ class LaCentraleScraper(BaseScraper):
         except (TypeError, ValueError):
             year = None
 
-        # Kilométrage
         km = ad.get("mileage") or ad.get("kilometrage") or ad.get("km")
         try:
             km = int(km) if km is not None else None
@@ -256,7 +318,6 @@ class LaCentraleScraper(BaseScraper):
 
         ad_id = str(ad.get("adId") or ad.get("id") or ad.get("listingId") or "")
 
-        # URL
         url = ad.get("url") or ad.get("slug") or ad.get("link") or ""
         if url and not url.startswith("http"):
             url = f"https://www.lacentrale.fr{url}"
@@ -264,14 +325,12 @@ class LaCentraleScraper(BaseScraper):
             slug = f"{year}+{marque}+{modele}".replace(" ", "+")
             url = f"https://www.lacentrale.fr/auto-annonce-occasion-{slug}-{ad_id}.html"
 
-        # Localisation
         location = ad.get("location") or ad.get("localisation") or {}
         if isinstance(location, str):
             location = {}
         city = location.get("city") or location.get("ville") or ad.get("city") or ad.get("ville") or ""
         region = location.get("region") or ad.get("region") or ""
 
-        # Image
         photos = ad.get("photos") or ad.get("images") or ad.get("pictures") or []
         image_url = None
         if photos:
@@ -281,7 +340,6 @@ class LaCentraleScraper(BaseScraper):
             elif isinstance(img, dict):
                 image_url = img.get("url") or img.get("src") or img.get("href")
 
-        # Vendeur
         seller = str(ad.get("sellerType") or ad.get("ownerType") or ad.get("typeVendeur") or "").lower()
         is_pro = seller in ("pro", "professional", "dealer", "marchand", "garage")
 
