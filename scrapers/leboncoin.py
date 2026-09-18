@@ -679,12 +679,17 @@ class LeboncoinScraper(BaseScraper):
         target_hp = _extraire_cv(motorisation) if motorisation else None
         engine_code = _extraire_code_moteur(motorisation) if motorisation else None
         displacement = _extraire_displacement(motorisation) if motorisation else None
-        # Combined motor keyword: "2.0 TDI", "1.2 PURETECH", "330d", "1.0 SCE", etc.
+        # Combined motor keyword with HP for precise LBC matching:
+        # "2.0 TDI 150", "1.2 PURETECH 130", "330d", "1.0 SCE 75", etc.
         motor_kw: Optional[str] = None
-        if engine_code and displacement:
-            motor_kw = f"{displacement} {engine_code}"
-        elif engine_code:
-            motor_kw = engine_code
+        if engine_code:
+            parts = []
+            if displacement:
+                parts.append(displacement)
+            parts.append(engine_code)
+            if target_hp:
+                parts.append(str(target_hp))
+            motor_kw = " ".join(parts)
         modele_api = re.sub(r'\bsportback\b', '', modele, flags=re.IGNORECASE).strip()
         # Include motor keyword from the start for precise matching (e.g. "Serie 3 330d",
         # "308 1.2 PURETECH"), unless the model name already contains it.
