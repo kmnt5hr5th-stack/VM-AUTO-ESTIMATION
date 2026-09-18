@@ -668,7 +668,8 @@ class LeboncoinScraper(BaseScraper):
 
     async def _fetch_mobile_api(self, marque, modele, annee, km, page,
                                  carburant=None, boite=None, type_vehicule=None,
-                                 target_hp=None, finition=None, carrosserie=None) -> list[int]:
+                                 target_hp=None, finition=None, carrosserie=None,
+                                 return_details: bool = False):
         ua, impersonate, headers = _mobile_ua()
         base = _build_camoufox_payload(marque, modele, annee, km, boite=boite,
                                         type_vehicule=type_vehicule, target_hp=target_hp)
@@ -682,7 +683,12 @@ class LeboncoinScraper(BaseScraper):
             raise Exception("DataDome 403")
         if not r.ok:
             raise Exception(f"API {r.status_code}")
-        return _extract_prix(r.json().get("ads", []), modele, marque=marque,
+        ads = r.json().get("ads", [])
+        if return_details:
+            return _extract_annonces(ads, modele, marque=marque, carburant=carburant,
+                                     boite=boite, target_hp=target_hp, km_cible=km,
+                                     finition=finition, carrosserie=carrosserie)
+        return _extract_prix(ads, modele, marque=marque,
                              carburant=carburant, boite=boite, target_hp=target_hp, km_cible=km,
                              finition=finition, carrosserie=carrosserie)
 
@@ -1125,14 +1131,40 @@ class LeboncoinScraper(BaseScraper):
         if listings:
             return listings
 
-        # Fallback : utilise get_prices (chaîne complète) et retourne des dicts basiques
-        logger.info("[leboncoin] get_listings fallback → get_prices")
+        # Fallback : mobile API avec return_details=True (km + titre + url disponibles)
+        logger.info("[leboncoin] get_listings fallback → mobile API details")
+        target_hp = _extraire_cv(motorisation) if motorisation else None
+        all_listings: list[dict] = []
+        for pg in range(1, 4):  # 3 pages max en fallback
+            try:
+                page_listings = await asyncio.wait_for(
+                    self._fetch_mobile_api(
+                        marque, modele_api, annee, kilometrage, pg,
+                        carburant=carburant, boite=boite,
+                        type_vehicule=type_vehicule, target_hp=target_hp,
+                        finition=finition, carrosserie=carrosserie,
+                        return_details=True,
+                    ),
+                    timeout=35,
+                )
+                all_listings.extend(page_listings)
+                if not page_listings:
+                    break
+            except Exception as e:
+                logger.debug(f"[leboncoin] mobile details pg{pg}: {e}")
+                break
+
+        if all_listings:
+            return all_listings
+
+        # Dernier recours : prix bruts sans détails
+        logger.info("[leboncoin] get_listings dernier recours → get_prices")
         prices = await self.get_prices(
             marque, modele, annee, kilometrage,
             finition=finition, carburant=carburant, boite=boite,
             motorisation=motorisation, type_vehicule=type_vehicule, carrosserie=carrosserie,
         )
-        return [{"prix": p, "km": None, "titre": "", "url": ""} for p in prices]
+        return [{"prix": p, "km": None, "titre": "", "url": "", "vendeur_type": "particulier", "vendeur_nom": "", "age_jours": None} for p in prices]
 
     async def _scrape(self, context: BrowserContext, marque, modele, annee, kilometrage,
                        max_pages, finition=None) -> list[int]:
