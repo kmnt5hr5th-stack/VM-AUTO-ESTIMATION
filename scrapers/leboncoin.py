@@ -722,8 +722,10 @@ class LeboncoinScraper(BaseScraper):
 
     async def _url_search(self, marque, modele, annee, kilometrage,
                            carburant=None, boite=None, motorisation=None,
-                           type_vehicule=None, finition=None, carrosserie=None) -> list[int]:
-        """Navigue vers l'URL de recherche LBC et intercepte la réponse API finder/search."""
+                           type_vehicule=None, finition=None, carrosserie=None,
+                           max_pages: int = 10) -> list[int]:
+        """Navigue sur l'URL LBC, intercepte le payload API page 1,
+        puis pagine jusqu'à max_pages en réutilisant ce payload avec offset."""
         global _pw_sem
         if _pw_sem is None:
             _pw_sem = asyncio.Semaphore(2)
@@ -739,16 +741,75 @@ class LeboncoinScraper(BaseScraper):
                 async with _pw_sem:
                     page = await ctx.new_page()
                     try:
+                        # Capturer le payload exact utilisé par LBC pour page 1
+                        first_payload: dict = {}
+
+                        def on_request(req):
+                            if "finder/search" in req.url and req.method == "POST":
+                                try:
+                                    first_payload.update(_json.loads(req.post_data or "{}"))
+                                except Exception:
+                                    pass
+
+                        page.on("request", on_request)
+
+                        # Naviguer page 1 et intercepter la réponse
                         async with page.expect_response(
                             lambda r: "finder/search" in r.url and r.status == 200,
                             timeout=20_000,
                         ) as resp_info:
                             await page.goto(url, wait_until="domcontentloaded", timeout=20_000)
-                        response = await resp_info.value
-                        data = await response.json()
-                        ads = data.get("ads", [])
-                        logger.info(f"[leboncoin] URL search → {len(ads)} annonces brutes")
-                        return _extract_prix(ads, modele, marque=marque, carburant=carburant,
+
+                        page.remove_listener("request", on_request)
+
+                        resp = await resp_info.value
+                        data = await resp.json()
+                        all_ads = list(data.get("ads", []))
+                        logger.info(f"[leboncoin] Page 1 → {len(all_ads)} annonces")
+
+                        # Pages 2…max_pages via fetch() depuis le contexte Playwright
+                        for pg in range(2, max_pages + 1):
+                            if len(data.get("ads", [])) < 35:
+                                break  # moins de 35 résultats → dernière page
+                            payload_next = {
+                                **first_payload,
+                                "offset": 35 * (pg - 1),
+                                "listing_source": "pagination",
+                                "disable_total": True,
+                            }
+                            result = await asyncio.wait_for(
+                                page.evaluate(
+                                    """async ([payload, apiUrl]) => {
+                                        try {
+                                            const r = await fetch(apiUrl, {
+                                                method: "POST",
+                                                credentials: "include",
+                                                headers: {
+                                                    "Content-Type": "application/json",
+                                                    "Accept": "application/json",
+                                                    "api_key": "ba0c2dad52b3ec"
+                                                },
+                                                body: JSON.stringify(payload)
+                                            });
+                                            const d = await r.json();
+                                            return {status: r.status, ads: d.ads || []};
+                                        } catch(e) {
+                                            return {status: 0, ads: []};
+                                        }
+                                    }""",
+                                    [payload_next, API_URL],
+                                ),
+                                timeout=15,
+                            )
+                            page_ads = result.get("ads", [])
+                            logger.info(f"[leboncoin] Page {pg} → {len(page_ads)} annonces")
+                            all_ads.extend(page_ads)
+                            data = result  # pour vérifier len() à la prochaine itération
+                            if not page_ads:
+                                break
+
+                        logger.info(f"[leboncoin] URL search total → {len(all_ads)} annonces brutes")
+                        return _extract_prix(all_ads, modele, marque=marque, carburant=carburant,
                                              boite=boite, target_hp=target_hp, km_cible=kilometrage,
                                              finition=finition, carrosserie=carrosserie)
                     finally:
