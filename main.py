@@ -276,21 +276,27 @@ async def estimation_details(req: EstimationRequest):
 
 @app.get("/debug/lbc-raw")
 async def debug_lbc_raw(marque: str = "Audi", modele: str = "Q2", annee: int = 2018, km: int = 101000):
-    """Endpoint debug temporaire — retourne les 3 premiers ads bruts de _url_search."""
-    from scrapers.leboncoin import _build_search_url, _get_pw_context, API_URL, _json as lbc_json
+    """Debug — log toutes les requêtes POST faites par LBC pendant une recherche."""
+    from scrapers.leboncoin import _build_search_url, _get_pw_context
     import asyncio as _asyncio
-    import json as _j
-    lbc = LeboncoinScraper()
+    ctx = await _asyncio.wait_for(_get_pw_context(), timeout=40)
+    page = await ctx.new_page()
+    captured_requests = []
+    def on_req(req):
+        if req.method == "POST":
+            captured_requests.append({
+                "url": req.url,
+                "method": req.method,
+                "body_preview": (req.post_data or "")[:200],
+            })
+    page.on("request", on_req)
+    url = _build_search_url(marque, modele, annee)
     try:
-        result = await _asyncio.wait_for(
-            lbc._url_search(marque, modele, annee, km, max_pages=1, return_details=False),
-            timeout=120,
-        )
-        return {"status": "ok", "prices_count": len(result), "prices_sample": result[:5]}
-    except _asyncio.TimeoutError:
-        return {"status": "timeout", "error": "120s dépassé — Playwright trop lent"}
+        await page.goto(url, wait_until="networkidle", timeout=40_000)
     except Exception as e:
-        return {"status": "error", "error": str(e), "type": type(e).__name__}
+        pass
+    await page.close()
+    return {"url_used": url, "post_requests": captured_requests}
 
 
 # ─── Immatriculation lookup ───────────────────────────────────────────────────
