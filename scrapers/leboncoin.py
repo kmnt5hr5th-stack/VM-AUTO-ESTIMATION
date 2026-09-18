@@ -205,6 +205,59 @@ def _build_search_url(marque: str, modele: str, annee: int, carburant: str = Non
 
     return f"{SEARCH_URL}?{urllib.parse.urlencode(params)}"
 
+def _build_structured_payload(marque: str, modele: str, annee: int,
+                               carburant: str = None, boite: str = None,
+                               target_hp: int = None, kilometrage: int = None,
+                               type_vehicule: str = None, page: int = 1) -> dict:
+    """Payload finder/search avec les enums structurés LBC (u_car_brand, u_car_model).
+    Plus précis qu'une recherche par mots-clés."""
+    FUEL_MAP = {
+        "diesel": "diesel", "gazole": "diesel",
+        "essence": "petrol", "sp95": "petrol", "sp98": "petrol",
+        "hybride": "hybrid", "electrique": "electric", "électrique": "electric",
+        "gpl": "lpg",
+    }
+    GEAR_CODE = {
+        "manuelle": "1", "mécanique": "1", "mecanique": "1", "bvm": "1", "bm": "1",
+        "automatique": "2", "auto": "2", "bva": "2", "dsg": "2", "edr": "2",
+    }
+    is_util = type_vehicule and type_vehicule.lower() in ("utilitaire", "fourgon", "van", "camionnette")
+    brand_code = _lbc_code(marque)
+    model_code = f"{brand_code}_{_lbc_code(modele)}"
+
+    enums: dict = {"ad_type": ["offer"], "u_car_brand": [brand_code], "u_car_model": [model_code]}
+    if carburant:
+        fuel = FUEL_MAP.get(carburant.lower().strip())
+        if fuel:
+            enums["fuel"] = [fuel]
+    if boite:
+        gear = GEAR_CODE.get(boite.lower().strip())
+        if gear:
+            enums["gearbox"] = [gear]
+
+    ranges: dict = {"regdate": {"min": annee, "max": annee}}
+    if kilometrage:
+        margin = 15_000 if kilometrage <= 100_000 else 25_000
+        ranges["mileage"] = {"min": max(0, kilometrage - margin), "max": kilometrage + margin}
+    if target_hp:
+        ranges["horse_power_din"] = {"min": target_hp - 5, "max": target_hp + 5}
+
+    return {
+        "filters": {
+            "category": {"id": "5" if is_util else "2"},
+            "enums": enums,
+            "ranges": ranges,
+        },
+        "limit": 35,
+        "offset": 35 * (page - 1),
+        "sort_by": "price",
+        "sort_order": "asc",
+        "disable_total": True,
+        "extend": True,
+        "listing_source": "direct-search" if page == 1 else "pagination",
+    }
+
+
 _WEBSHARE_HOST = "p.webshare.io:80"
 _WEBSHARE_USER = "lmgdmysu"
 _WEBSHARE_PASS = "nomkg04o6fsd"
@@ -665,6 +718,45 @@ def _extract_annonces(ads: list, modele: str, marque: str = None, carburant: str
     return annonces
 
 
+async def _fetch_structured_api_pages(marque, modele, annee, kilometrage,
+                                       carburant=None, boite=None, target_hp=None,
+                                       type_vehicule=None, finition=None, carrosserie=None,
+                                       max_pages=10, return_details=False) -> list:
+    """Appelle finder/search avec les enums structurés LBC via curl_cffi (bypass DataDome).
+    Plus précis que la recherche par mots-clés, parcourt jusqu'à max_pages pages."""
+    ua, impersonate, headers = _mobile_ua()
+    proxies = _webshare_proxies()
+    all_results = []
+    extract_args = dict(marque=marque, carburant=carburant, boite=boite,
+                        target_hp=target_hp, km_cible=kilometrage,
+                        finition=finition, carrosserie=carrosserie)
+    async with AsyncSession(impersonate=impersonate, proxies=proxies) as s:
+        await s.get(HOMEPAGE, headers=headers, timeout=15)
+        for pg in range(1, max_pages + 1):
+            payload = _build_structured_payload(
+                marque, modele, annee,
+                carburant=carburant, boite=boite, target_hp=target_hp,
+                kilometrage=kilometrage, type_vehicule=type_vehicule, page=pg,
+            )
+            r = await s.post(API_URL, json=payload, headers=headers, timeout=30)
+            if r.status_code == 403:
+                logger.warning(f"[leboncoin] structured API 403 page {pg}")
+                break
+            if not r.ok:
+                logger.warning(f"[leboncoin] structured API {r.status_code} page {pg}")
+                break
+            ads = r.json().get("ads", [])
+            logger.info(f"[leboncoin] structured API page {pg} → {len(ads)} annonces brutes")
+            if return_details:
+                page_results = _extract_annonces(ads, modele, **extract_args)
+            else:
+                page_results = _extract_prix(ads, modele, **extract_args)
+            all_results.extend(page_results)
+            if len(ads) < 35:
+                break  # dernière page
+    return all_results
+
+
 class LeboncoinScraper(BaseScraper):
     name = "leboncoin"
 
@@ -1115,29 +1207,33 @@ class LeboncoinScraper(BaseScraper):
                             finition=None, carburant=None, boite=None,
                             motorisation=None, type_vehicule=None, carrosserie=None) -> list[dict]:
         """Retourne la liste complète des annonces LBC avec prix, km, titre et url.
-        Fallback sur get_prices (sans détails) si l'URL search ne trouve rien."""
+        Utilise l'API structurée (curl_cffi, bypass DataDome) avec les enums u_car_brand/u_car_model."""
         modele_api = re.sub(r'\bsportback\b', '', modele, flags=re.IGNORECASE).strip()
+        target_hp = _extraire_cv(motorisation) if motorisation else None
+
+        # ── Recherche structurée via curl_cffi (bypass DataDome, enums précis) ───
+        logger.info("[leboncoin] get_listings → structured API (curl_cffi)")
         try:
             listings = await asyncio.wait_for(
-                self._url_search(
+                _fetch_structured_api_pages(
                     marque, modele_api, annee, kilometrage,
-                    carburant=carburant, boite=boite, motorisation=motorisation,
+                    carburant=carburant, boite=boite, target_hp=target_hp,
                     type_vehicule=type_vehicule, finition=finition, carrosserie=carrosserie,
                     max_pages=10, return_details=True,
                 ),
-                timeout=115,
+                timeout=90,
             )
-        except Exception:
+        except Exception as e:
+            logger.warning(f"[leboncoin] structured API erreur: {e}")
             listings = []
 
         if listings:
             return listings
 
-        # Fallback : mobile API avec return_details=True (km + titre + url disponibles)
+        # Fallback : mobile API keyword (km + titre + url disponibles)
         logger.info("[leboncoin] get_listings fallback → mobile API details")
-        target_hp = _extraire_cv(motorisation) if motorisation else None
         all_listings: list[dict] = []
-        for pg in range(1, 4):  # 3 pages max en fallback
+        for pg in range(1, 4):
             try:
                 page_listings = await asyncio.wait_for(
                     self._fetch_mobile_api(
