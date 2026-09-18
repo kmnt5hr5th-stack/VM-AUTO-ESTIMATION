@@ -274,6 +274,23 @@ async def estimation_details(req: EstimationRequest):
         raise HTTPException(status_code=500, detail=str(e))
 
 
+@app.get("/debug/lbc-raw")
+async def debug_lbc_raw(marque: str = "Audi", modele: str = "Q2", annee: int = 2018, km: int = 101000):
+    """Endpoint debug temporaire — retourne les 3 premiers ads bruts de _url_search."""
+    from scrapers.leboncoin import _build_search_url, _get_pw_context, API_URL, _json as lbc_json
+    import asyncio as _asyncio
+    import json as _j
+    lbc = LeboncoinScraper()
+    try:
+        result = await _asyncio.wait_for(
+            lbc._url_search(marque, modele, annee, km, max_pages=1, return_details=False),
+            timeout=45,
+        )
+        return {"status": "ok", "prices_count": len(result), "prices_sample": result[:5]}
+    except Exception as e:
+        return {"status": "error", "error": str(e)}
+
+
 # ─── Immatriculation lookup ───────────────────────────────────────────────────
 
 IMMAT_API_USERNAME = os.getenv("IMMAT_API_USERNAME", "Macken97")
