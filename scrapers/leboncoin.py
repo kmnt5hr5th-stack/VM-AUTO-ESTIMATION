@@ -678,25 +678,7 @@ class LeboncoinScraper(BaseScraper):
                           motorisation=None, type_vehicule=None, carrosserie=None):
         target_hp = _extraire_cv(motorisation) if motorisation else None
         engine_code = _extraire_code_moteur(motorisation) if motorisation else None
-        displacement = _extraire_displacement(motorisation) if motorisation else None
-        # Combined motor keyword with HP for precise LBC matching:
-        # "2.0 TDI 150", "1.2 PURETECH 130", "330d", "1.0 SCE 75", etc.
-        motor_kw: Optional[str] = None
-        if engine_code:
-            parts = []
-            if displacement:
-                parts.append(displacement)
-            parts.append(engine_code)
-            if target_hp:
-                parts.append(str(target_hp))
-            motor_kw = " ".join(parts)
         modele_api = re.sub(r'\bsportback\b', '', modele, flags=re.IGNORECASE).strip()
-        # Include motor keyword from the start for precise matching (e.g. "Serie 3 330d",
-        # "308 1.2 PURETECH"), unless the model name already contains it.
-        if motor_kw and motor_kw.lower() not in modele_api.lower():
-            modele_precise = f"{modele_api} {motor_kw}"
-        else:
-            modele_precise = modele_api
 
         # kw_args pour _search_via_context uniquement (inclut marque)
         ctx_args = dict(marque=marque, carburant=carburant, boite=boite,
@@ -721,10 +703,10 @@ class LeboncoinScraper(BaseScraper):
                     break
             return prix
 
-        # ── 1. Mobile API avec motor_kw + HP ──────────────────────────────────
-        logger.info(f"[leboncoin] Mobile API ('{modele_precise}', HP={target_hp})")
+        # ── 1. Mobile API avec HP ─────────────────────────────────────────────
+        logger.info("[leboncoin] Mobile API (avec HP)")
         try:
-            prix = await asyncio.wait_for(_mobile_pages(modele_precise, kilometrage, target_hp), timeout=22)
+            prix = await asyncio.wait_for(_mobile_pages(modele_api, kilometrage, target_hp), timeout=22)
         except Exception:
             prix = []
         if prix:
@@ -733,7 +715,7 @@ class LeboncoinScraper(BaseScraper):
         # ── 2. Contexte Playwright avec HP (DataDome natif → filtre HP fiable) ─
         if target_hp:
             logger.info("[leboncoin] Context Playwright avec HP")
-            payload_hp = _build_lbc_payload(marque, modele_precise, annee, kilometrage, 1,
+            payload_hp = _build_lbc_payload(marque, modele_api, annee, kilometrage, 1,
                                              carburant=carburant, boite=boite,
                                              type_vehicule=type_vehicule, target_hp=target_hp)
             try:
@@ -748,20 +730,20 @@ class LeboncoinScraper(BaseScraper):
                 logger.info(f"[leboncoin] Context HP → {len(prix)} prix")
                 return prix
 
-        # ── 3. Motor keyword retry sans HP ────────────────────────────────────
-        # HP filter may be too strict (LBC data often missing/wrong) — retry without it
-        if target_hp and modele_precise != modele_api:
-            logger.info(f"[leboncoin] Retry motor_kw sans HP '{modele_precise}'")
+        # ── 3. Engine code retry (BMW 318d, VW GTI…) ─────────────────────────
+        if target_hp and engine_code and engine_code.lower() not in modele_api.lower():
+            modele_engine = f"{modele_api} {engine_code}"
+            logger.info(f"[leboncoin] Retry code moteur '{modele_engine}'")
             try:
-                prix = await asyncio.wait_for(_mobile_pages(modele_precise, kilometrage, None), timeout=22)
+                prix = await asyncio.wait_for(_mobile_pages(modele_engine, kilometrage, None), timeout=22)
             except Exception:
                 prix = []
             if prix:
                 return prix
 
-        # ── 4. Mobile API SANS motor_kw ni HP (élargissement) ────────────────
-        if modele_precise != modele_api or target_hp:
-            logger.info("[leboncoin] Retry Mobile large (sans motor_kw, sans HP)")
+        # ── 4. Mobile API SANS HP (élargissement) ────────────────────────────
+        if target_hp:
+            logger.info("[leboncoin] Retry Mobile sans HP")
             try:
                 prix = await asyncio.wait_for(_mobile_pages(modele_api, kilometrage, None), timeout=22)
             except Exception:
