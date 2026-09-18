@@ -1065,17 +1065,33 @@ class LeboncoinScraper(BaseScraper):
     async def get_listings(self, marque, modele, annee, kilometrage,
                             finition=None, carburant=None, boite=None,
                             motorisation=None, type_vehicule=None, carrosserie=None) -> list[dict]:
-        """Retourne la liste complète des annonces LBC avec prix, km, titre et url."""
+        """Retourne la liste complète des annonces LBC avec prix, km, titre et url.
+        Fallback sur get_prices (sans détails) si l'URL search ne trouve rien."""
         modele_api = re.sub(r'\bsportback\b', '', modele, flags=re.IGNORECASE).strip()
-        return await asyncio.wait_for(
-            self._url_search(
-                marque, modele_api, annee, kilometrage,
-                carburant=carburant, boite=boite, motorisation=motorisation,
-                type_vehicule=type_vehicule, finition=finition, carrosserie=carrosserie,
-                max_pages=10, return_details=True,
-            ),
-            timeout=60,
+        try:
+            listings = await asyncio.wait_for(
+                self._url_search(
+                    marque, modele_api, annee, kilometrage,
+                    carburant=carburant, boite=boite, motorisation=motorisation,
+                    type_vehicule=type_vehicule, finition=finition, carrosserie=carrosserie,
+                    max_pages=10, return_details=True,
+                ),
+                timeout=60,
+            )
+        except Exception:
+            listings = []
+
+        if listings:
+            return listings
+
+        # Fallback : utilise get_prices (chaîne complète) et retourne des dicts basiques
+        logger.info("[leboncoin] get_listings fallback → get_prices")
+        prices = await self.get_prices(
+            marque, modele, annee, kilometrage,
+            finition=finition, carburant=carburant, boite=boite,
+            motorisation=motorisation, type_vehicule=type_vehicule, carrosserie=carrosserie,
         )
+        return [{"prix": p, "km": None, "titre": "", "url": ""} for p in prices]
 
     async def _scrape(self, context: BrowserContext, marque, modele, annee, kilometrage,
                        max_pages, finition=None) -> list[int]:
