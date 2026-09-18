@@ -289,14 +289,30 @@ async def debug_lbc_raw(marque: str = "Audi", modele: str = "Q2", annee: int = 2
                 "method": req.method,
                 "body_preview": (req.post_data or "")[:200],
             })
+    all_requests = []
+    def on_req(req):
+        all_requests.append({"url": req.url[:120], "method": req.method})
     page.on("request", on_req)
     url = _build_search_url(marque, modele, annee)
+    page_title = ""
+    page_html_preview = ""
     try:
         await page.goto(url, wait_until="networkidle", timeout=40_000)
+        page_title = await page.title()
+        page_html_preview = (await page.content())[:500]
     except Exception as e:
-        pass
+        page_title = f"ERROR: {e}"
     await page.close()
-    return {"url_used": url, "post_requests": captured_requests}
+    post_reqs = [r for r in all_requests if r["method"] == "POST"]
+    api_reqs = [r for r in all_requests if "api.leboncoin" in r["url"] or "finder" in r["url"]]
+    return {
+        "url_used": url,
+        "page_title": page_title,
+        "page_html_preview": page_html_preview,
+        "post_requests": post_reqs,
+        "api_related_requests": api_reqs,
+        "total_requests": len(all_requests),
+    }
 
 
 # ─── Immatriculation lookup ───────────────────────────────────────────────────
