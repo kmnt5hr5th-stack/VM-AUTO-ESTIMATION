@@ -537,7 +537,14 @@ def _extract_annonces(ads: list, modele: str, marque: str = None, carburant: str
     exclude = [v for v in VARIANTS if v not in modele_lower and v not in finition_lower]
     is_coupe_search = "coup" in modele_lower.replace("é", "e")
     annonces = []
-    _debug_logged = False
+    logger.info(f"[debug] _extract_annonces reçu {len(ads)} ads bruts")
+    if ads:
+        first = ads[0]
+        logger.info(f"[debug] Premier ad keys: {list(first.keys())}")
+        logger.info(f"[debug] subject: {first.get('subject','')!r}")
+        logger.info(f"[debug] price: {first.get('price')}")
+        raw_attrs = first.get("attributes", [])
+        logger.info(f"[debug] attributes[0:5]: {raw_attrs[:5]}")
     for ad in ads:
         title = ad.get("subject", "").lower().replace("é", "e").replace("è", "e").replace("ê", "e")
         titre_original = ad.get("subject", "")
@@ -552,11 +559,6 @@ def _extract_annonces(ads: list, modele: str, marque: str = None, carburant: str
 
         attrs = {a["key"]: a.get("value_label", a.get("value", ""))
                  for a in ad.get("attributes", [])}
-        if not _debug_logged:
-            _debug_logged = True
-            logger.info(f"[debug] Premier ad keys: {list(ad.keys())}")
-            logger.info(f"[debug] attrs: {attrs}")
-            logger.info(f"[debug] subject: {titre_original}")
 
         if marque_lower:
             brand_attr = str(attrs.get("brand", "")).lower()
