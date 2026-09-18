@@ -122,6 +122,12 @@ async def health():
     return {"status": "healthy"}
 
 
+@app.get("/catalog/versions")
+async def catalog_versions(marque: str = "", modele: str = "", annee: int = 0, carburant: str = ""):
+    versions = _get_caradisiac_versions(marque, modele, annee, carburant)
+    return {"versions": versions, "count": len(versions)}
+
+
 DS_CITROEN_MODELS = {"DS3", "DS4", "DS5"}
 
 def _resolve_brand(marque: str, modele: str) -> str:
@@ -224,12 +230,59 @@ try:
 except Exception as _e:
     logger.warning(f"[catalog] non chargé: {_e}")
 
+# Caradisiac catalog (versions par marque/modele/annee/carburant)
+_caradisiac_catalog: dict = {}
+try:
+    _caradisiac_path = os.path.join(os.path.dirname(__file__), "caradisiac_catalog.json")
+    with open(_caradisiac_path, encoding="utf-8") as _f:
+        _caradisiac_catalog = _json.load(_f)
+    _total_v = sum(len(vs) for b in _caradisiac_catalog.values() for m in b.values() for y in m.values() for vs in y.values())
+    logger.info(f"[caradisiac] chargé ({len(_caradisiac_catalog)} marques, {_total_v} versions)")
+except Exception as _e:
+    logger.warning(f"[caradisiac] non chargé: {_e}")
+
 def _normalize(s: str) -> str:
     """Normalise un nom pour comparaison souple (lowercase, sans accents ni tirets)."""
     import unicodedata
     s = unicodedata.normalize("NFD", s.lower())
     s = "".join(c for c in s if unicodedata.category(c) != "Mn")
     return s.replace("-", " ").replace("_", " ").strip()
+
+_CARADISIAC_FUEL_MAP = {
+    "essence": "essence",
+    "diesel": "diesel",
+    "hybride": "hybride",
+    "hybride rechargeable": "hybride",
+    "électrique": "electrique",
+    "electrique": "electrique",
+    "gpl": "gpl",
+    "gnv": "gpl",
+}
+
+def _get_caradisiac_versions(brand: str, model: str, annee: int, carburant: str) -> list[str]:
+    """Retourne les versions Caradisiac pour brand/model/annee/carburant."""
+    if not _caradisiac_catalog or not brand or not model or not annee:
+        return []
+    fuel_key = _CARADISIAC_FUEL_MAP.get(carburant.lower(), "essence")
+    year_str = str(annee)
+    b_norm = _normalize(brand)
+    m_norm = _normalize(model)
+    brand_data = None
+    for b_key in _caradisiac_catalog:
+        if _normalize(b_key) == b_norm:
+            brand_data = _caradisiac_catalog[b_key]
+            break
+    if not brand_data:
+        return []
+    versions = []
+    for cat_model, year_data in brand_data.items():
+        cat_m_norm = _normalize(cat_model)
+        if not cat_m_norm.startswith(m_norm):
+            continue
+        year_entry = year_data.get(year_str, {})
+        versions.extend(year_entry.get(fuel_key, []))
+    return sorted(set(versions))
+
 
 def _get_finitions_from_catalog(brand: str, model: str) -> list[str]:
     finitions_db = _catalog.get("finitions", {})
