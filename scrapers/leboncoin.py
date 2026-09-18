@@ -100,24 +100,42 @@ def _extraire_cv(motorisation: str) -> Optional[int]:
 
 
 def _extraire_code_moteur(motorisation: str) -> Optional[str]:
-    """Extrait le code moteur alphanumérique pour affiner le keyword LBC.
-    Ex: '318d 136ch' → '318d', '2.0 GTI 200ch' → 'GTI', 'TDI 190ch' → 'TDI'.
-    Le filtre horse_power_din de l'API LBC est peu fiable — ce code permet de
-    discriminer les variantes (318d vs 320d vs 330d) via le keyword de recherche."""
+    """Extrait le code moteur alphanumérique pour affiner le keyword LBC."""
     if not motorisation:
         return None
-    # BMW/Mercedes style: 3-4 chiffres + lettre(s) (318d, 320i, 330e, C220d…)
+    # BMW/Mercedes/Audi style: 3-4 chiffres + lettre(s) (318d, 320i, 330e, C220d, Q2 30…)
     m = re.search(r'\b(\d{3,4}[dDiIeE]{1,2})\b', motorisation)
     if m:
         return m.group(1).lower()
-    # Codes moteur generiques (VW/Renault/Peugeot/etc.)
+    # Codes moteur complets — ordre : du plus spécifique au plus générique
     m = re.search(
-        r'\b(TFSI|TDI|TDCI|TSI|THP|dCi|HDi|CDTi|BlueHDi|CDTI|SDTi|GTI|GTE|GTD|GTS)\b',
+        r'\b('
+        # VW/Audi/Skoda
+        r'TFSI|TDI|TDCI|TSI|ETSI|'
+        # Peugeot/Citroën/DS/Opel
+        r'PURETECH|PURE TECH|BLUEHDI|BLUE HDI|CDTI|HDI|'
+        # Renault/Dacia
+        r'SCE|TCE|DCI|BLUE DCI|E-TECH|'
+        # Toyota/Lexus
+        r'HSD|TNGA|'
+        # Ford/Mazda
+        r'ECOBOOST|SKYACTIV|'
+        # Divers
+        r'MHEV|PHEV|THP|GTI|GTE|GTD|GTS|SDTi|CRDI|'
+        # Hybride Renault (sans tiret)
+        r'ETECH'
+        r')\b',
         motorisation, re.IGNORECASE,
     )
     if m:
-        return m.group(1)
+        return m.group(1).upper()
     return None
+
+
+def _extraire_displacement(motorisation: str) -> Optional[str]:
+    """Extrait la cylindrée (ex: '1.5', '2.0') depuis une version Caradisiac."""
+    m = re.search(r'\b(\d\.\d)\b', motorisation)
+    return m.group(1) if m else None
 
 
 API_URL = "https://api.leboncoin.fr/finder/search"
@@ -660,7 +678,20 @@ class LeboncoinScraper(BaseScraper):
                           motorisation=None, type_vehicule=None, carrosserie=None):
         target_hp = _extraire_cv(motorisation) if motorisation else None
         engine_code = _extraire_code_moteur(motorisation) if motorisation else None
+        displacement = _extraire_displacement(motorisation) if motorisation else None
+        # Combined motor keyword: "2.0 TDI", "1.2 PURETECH", "330d", "1.0 SCE", etc.
+        motor_kw: Optional[str] = None
+        if engine_code and displacement:
+            motor_kw = f"{displacement} {engine_code}"
+        elif engine_code:
+            motor_kw = engine_code
         modele_api = re.sub(r'\bsportback\b', '', modele, flags=re.IGNORECASE).strip()
+        # Include motor keyword from the start for precise matching (e.g. "Serie 3 330d",
+        # "308 1.2 PURETECH"), unless the model name already contains it.
+        if motor_kw and motor_kw.lower() not in modele_api.lower():
+            modele_precise = f"{modele_api} {motor_kw}"
+        else:
+            modele_precise = modele_api
 
         # kw_args pour _search_via_context uniquement (inclut marque)
         ctx_args = dict(marque=marque, carburant=carburant, boite=boite,
@@ -685,10 +716,10 @@ class LeboncoinScraper(BaseScraper):
                     break
             return prix
 
-        # ── 1. Mobile API avec HP ─────────────────────────────────────────────
-        logger.info("[leboncoin] Mobile API (avec HP)")
+        # ── 1. Mobile API avec motor_kw + HP ──────────────────────────────────
+        logger.info(f"[leboncoin] Mobile API ('{modele_precise}', HP={target_hp})")
         try:
-            prix = await asyncio.wait_for(_mobile_pages(modele_api, kilometrage, target_hp), timeout=22)
+            prix = await asyncio.wait_for(_mobile_pages(modele_precise, kilometrage, target_hp), timeout=22)
         except Exception:
             prix = []
         if prix:
@@ -697,7 +728,7 @@ class LeboncoinScraper(BaseScraper):
         # ── 2. Contexte Playwright avec HP (DataDome natif → filtre HP fiable) ─
         if target_hp:
             logger.info("[leboncoin] Context Playwright avec HP")
-            payload_hp = _build_lbc_payload(marque, modele_api, annee, kilometrage, 1,
+            payload_hp = _build_lbc_payload(marque, modele_precise, annee, kilometrage, 1,
                                              carburant=carburant, boite=boite,
                                              type_vehicule=type_vehicule, target_hp=target_hp)
             try:
@@ -712,20 +743,20 @@ class LeboncoinScraper(BaseScraper):
                 logger.info(f"[leboncoin] Context HP → {len(prix)} prix")
                 return prix
 
-        # ── 3. Engine code retry (BMW 318d, VW GTI…) ─────────────────────────
-        if target_hp and engine_code and engine_code.lower() not in modele_api.lower():
-            modele_engine = f"{modele_api} {engine_code}"
-            logger.info(f"[leboncoin] Retry code moteur '{modele_engine}'")
+        # ── 3. Motor keyword retry sans HP ────────────────────────────────────
+        # HP filter may be too strict (LBC data often missing/wrong) — retry without it
+        if target_hp and modele_precise != modele_api:
+            logger.info(f"[leboncoin] Retry motor_kw sans HP '{modele_precise}'")
             try:
-                prix = await asyncio.wait_for(_mobile_pages(modele_engine, kilometrage, None), timeout=22)
+                prix = await asyncio.wait_for(_mobile_pages(modele_precise, kilometrage, None), timeout=22)
             except Exception:
                 prix = []
             if prix:
                 return prix
 
-        # ── 4. Mobile API SANS HP (élargissement) ────────────────────────────
-        if target_hp:
-            logger.info("[leboncoin] Retry Mobile sans HP")
+        # ── 4. Mobile API SANS motor_kw ni HP (élargissement) ────────────────
+        if modele_precise != modele_api or target_hp:
+            logger.info("[leboncoin] Retry Mobile large (sans motor_kw, sans HP)")
             try:
                 prix = await asyncio.wait_for(_mobile_pages(modele_api, kilometrage, None), timeout=22)
             except Exception:
