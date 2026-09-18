@@ -140,6 +140,53 @@ def _extraire_displacement(motorisation: str) -> Optional[str]:
 
 API_URL = "https://api.leboncoin.fr/finder/search"
 HOMEPAGE = "https://www.leboncoin.fr/"
+SEARCH_URL = "https://www.leboncoin.fr/recherche"
+
+
+def _build_search_url(marque: str, modele: str, annee: int, carburant: str = None,
+                       boite: str = None, motorisation: str = None,
+                       type_vehicule: str = None) -> str:
+    """Construit l'URL de recherche LBC avec tous les paramètres du véhicule."""
+    import urllib.parse
+    FUEL_MAP = {
+        "diesel": "diesel", "gazole": "diesel",
+        "essence": "petrol", "sp95": "petrol", "sp98": "petrol",
+        "hybride": "hybrid", "electrique": "electric", "électrique": "electric",
+        "gpl": "lpg",
+    }
+    GEAR_MAP = {
+        "manuelle": "manual", "mécanique": "manual", "mecanique": "manual",
+        "bvm": "manual", "bm": "manual",
+        "automatique": "automatic", "auto": "automatic", "bva": "automatic", "dsg": "automatic",
+    }
+    is_util = type_vehicule and type_vehicule.lower() in ("utilitaire", "fourgon", "van", "camionnette")
+    # Texte de recherche : marque + modele + cylindrée + code moteur + CV
+    text_parts = [marque, modele]
+    if motorisation:
+        disp = _extraire_displacement(motorisation)
+        code = _extraire_code_moteur(motorisation)
+        hp = _extraire_cv(motorisation)
+        if disp:
+            text_parts.append(disp)
+        if code:
+            text_parts.append(code)
+        if hp:
+            text_parts.append(str(hp))
+    params: dict = {
+        "category": "5" if is_util else "2",
+        "text": " ".join(text_parts),
+        "regdate_min": str(annee),
+        "regdate_max": str(annee),
+    }
+    if carburant:
+        fuel = FUEL_MAP.get(carburant.lower().strip())
+        if fuel:
+            params["fuel"] = fuel
+    if boite:
+        gear = GEAR_MAP.get(boite.lower().strip())
+        if gear:
+            params["gearbox"] = gear
+    return f"{SEARCH_URL}?{urllib.parse.urlencode(params)}"
 
 _WEBSHARE_HOST = "p.webshare.io:80"
 _WEBSHARE_USER = "lmgdmysu"
@@ -673,6 +720,47 @@ class LeboncoinScraper(BaseScraper):
             finally:
                 await page.close()
 
+    async def _url_search(self, marque, modele, annee, kilometrage,
+                           carburant=None, boite=None, motorisation=None,
+                           type_vehicule=None, finition=None, carrosserie=None) -> list[int]:
+        """Navigue vers l'URL de recherche LBC et intercepte la réponse API finder/search."""
+        global _pw_sem
+        if _pw_sem is None:
+            _pw_sem = asyncio.Semaphore(2)
+
+        target_hp = _extraire_cv(motorisation) if motorisation else None
+        url = _build_search_url(marque, modele, annee, carburant=carburant, boite=boite,
+                                 motorisation=motorisation, type_vehicule=type_vehicule)
+        logger.info(f"[leboncoin] URL search: {url}")
+
+        for attempt in range(2):
+            try:
+                ctx = await _get_pw_context()
+                async with _pw_sem:
+                    page = await ctx.new_page()
+                    try:
+                        async with page.expect_response(
+                            lambda r: "finder/search" in r.url and r.status == 200,
+                            timeout=20_000,
+                        ) as resp_info:
+                            await page.goto(url, wait_until="domcontentloaded", timeout=20_000)
+                        response = await resp_info.value
+                        data = await response.json()
+                        ads = data.get("ads", [])
+                        logger.info(f"[leboncoin] URL search → {len(ads)} annonces brutes")
+                        return _extract_prix(ads, modele, marque=marque, carburant=carburant,
+                                             boite=boite, target_hp=target_hp, km_cible=kilometrage,
+                                             finition=finition, carrosserie=carrosserie)
+                    finally:
+                        await page.close()
+            except Exception as e:
+                logger.warning(f"[leboncoin] URL search erreur (attempt {attempt}): {e}")
+                _pw["context"] = None
+                if attempt == 0:
+                    continue
+                return []
+        return []
+
     async def get_prices(self, marque, modele, annee, kilometrage, max_pages=2,
                           finition=None, carburant=None, boite=None,
                           motorisation=None, type_vehicule=None, carrosserie=None):
@@ -703,7 +791,23 @@ class LeboncoinScraper(BaseScraper):
                     break
             return prix
 
-        # ── 1. Mobile API avec HP ─────────────────────────────────────────────
+        # ── 1. URL search via Playwright (motorisation dans le texte) ───────────
+        if motorisation:
+            logger.info("[leboncoin] URL search (Playwright)")
+            try:
+                prix = await asyncio.wait_for(
+                    self._url_search(marque, modele_api, annee, kilometrage,
+                                     carburant=carburant, boite=boite, motorisation=motorisation,
+                                     type_vehicule=type_vehicule, finition=finition,
+                                     carrosserie=carrosserie),
+                    timeout=30,
+                )
+            except Exception:
+                prix = []
+            if prix:
+                return prix
+
+        # ── 2. Mobile API avec HP ─────────────────────────────────────────────
         logger.info("[leboncoin] Mobile API (avec HP)")
         try:
             prix = await asyncio.wait_for(_mobile_pages(modele_api, kilometrage, target_hp), timeout=22)
@@ -712,7 +816,7 @@ class LeboncoinScraper(BaseScraper):
         if prix:
             return prix
 
-        # ── 2. Contexte Playwright avec HP (DataDome natif → filtre HP fiable) ─
+        # ── 3. Contexte Playwright avec HP (DataDome natif → filtre HP fiable) ─
         if target_hp:
             logger.info("[leboncoin] Context Playwright avec HP")
             payload_hp = _build_lbc_payload(marque, modele_api, annee, kilometrage, 1,
@@ -730,7 +834,7 @@ class LeboncoinScraper(BaseScraper):
                 logger.info(f"[leboncoin] Context HP → {len(prix)} prix")
                 return prix
 
-        # ── 3. Engine code retry (BMW 318d, VW GTI…) ─────────────────────────
+        # ── 4. Engine code retry (BMW 318d, VW GTI…) ─────────────────────────
         if target_hp and engine_code and engine_code.lower() not in modele_api.lower():
             modele_engine = f"{modele_api} {engine_code}"
             logger.info(f"[leboncoin] Retry code moteur '{modele_engine}'")
@@ -741,7 +845,7 @@ class LeboncoinScraper(BaseScraper):
             if prix:
                 return prix
 
-        # ── 4. Mobile API SANS HP (élargissement) ────────────────────────────
+        # ── 5. Mobile API SANS HP (élargissement) ────────────────────────────
         if target_hp:
             logger.info("[leboncoin] Retry Mobile sans HP")
             try:
@@ -751,7 +855,7 @@ class LeboncoinScraper(BaseScraper):
             if prix:
                 return prix
 
-        # ── 5. Contexte Playwright SANS HP ────────────────────────────────────
+        # ── 6. Contexte Playwright SANS HP ────────────────────────────────────
         logger.info("[leboncoin] Context Playwright sans HP")
         payload_no_hp = _build_lbc_payload(marque, modele_api, annee, kilometrage, 1,
                                             carburant=carburant, boite=boite,
@@ -768,7 +872,7 @@ class LeboncoinScraper(BaseScraper):
             logger.info(f"[leboncoin] Context sans HP → {len(prix)} prix")
             return prix
 
-        # ── 6. Retry km=50k (véhicule rare ou km atypique) ───────────────────
+        # ── 7. Retry km=50k (véhicule rare ou km atypique) ───────────────────
         km_retry = 50_000
         if kilometrage != km_retry:
             logger.info(f"[leboncoin] Retry km={km_retry}")
