@@ -610,11 +610,28 @@ def _extract_annonces(ads: list, modele: str, marque: str = None, carburant: str
         if p and 500 <= int(p) <= 150_000:
             list_id = ad.get("list_id", "")
             url = ad.get("url") or (f"https://www.leboncoin.fr/voitures/{list_id}.htm" if list_id else "")
+            # Type vendeur
+            owner = ad.get("owner", {})
+            vendeur_type = "pro" if str(owner.get("type", "")).lower() in ("pro", "professional") else "particulier"
+            vendeur_nom = owner.get("name") or owner.get("store_name") or ""
+            # Âge de l'annonce en jours
+            pub_date_str = ad.get("first_publication_date") or ad.get("index_date") or ""
+            age_jours = None
+            if pub_date_str:
+                try:
+                    import datetime as _dt
+                    pub_date = _dt.datetime.fromisoformat(pub_date_str.replace("Z", "+00:00"))
+                    age_jours = ((_dt.datetime.now(_dt.timezone.utc) - pub_date).days)
+                except Exception:
+                    pass
             annonces.append({
                 "prix": int(p),
                 "km": ad_km,
                 "titre": titre_original,
                 "url": url,
+                "vendeur_type": vendeur_type,
+                "vendeur_nom": vendeur_nom,
+                "age_jours": age_jours,
             })
 
     # Filtre finition soft
