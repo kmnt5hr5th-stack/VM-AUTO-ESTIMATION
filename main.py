@@ -215,6 +215,65 @@ async def estimation(req: EstimationRequest):
         raise HTTPException(status_code=500, detail=str(e))
 
 
+@app.post("/estimation/details")
+async def estimation_details(req: EstimationRequest):
+    """Comme /estimation mais retourne aussi la liste brute des annonces LBC (prix, km, titre, url)."""
+    async def _run():
+        type_vehicule = req.type_vehicule or _detect_type_vehicule(req.modele)
+        marque_search = _resolve_brand(req.marque, req.modele)
+        lbc_args = dict(
+            finition=req.finition, carburant=req.carburant,
+            boite=req.boite, motorisation=req.motorisation,
+            type_vehicule=type_vehicule, carrosserie=req.carrosserie,
+        )
+        lbc = LeboncoinScraper()
+        try:
+            listings = await lbc.get_listings(marque_search, req.modele, req.annee, req.kilometrage, **lbc_args)
+        except Exception as e:
+            logger.error(f"[estimation/details] LBC erreur: {e}")
+            listings = []
+
+        if not listings:
+            raise HTTPException(status_code=404, detail="Aucune annonce trouvée pour ce véhicule.")
+
+        prices = [a["prix"] for a in listings]
+        calc = calculate_estimation(prices, req.marque, req.modele, req.motorisation, req.finition, req.boite, req.annee, req.kilometrage)
+
+        return {
+            "vehicule": {
+                "marque": req.marque.upper(),
+                "modele": req.modele.upper(),
+                "annee": req.annee,
+                "kilometrage": req.kilometrage,
+                "motorisation": req.motorisation or None,
+                "boite": req.boite or None,
+                "carburant": req.carburant or None,
+            },
+            "marche": {
+                "nb_annonces": calc["nb_annonces"],
+                "prix_moyen": calc["prix_moyen"],
+                "prix_median": calc["prix_median"],
+                "fourchette_basse": calc["fourchette_basse"],
+                "fourchette_haute": calc["fourchette_haute"],
+            },
+            "estimation_rachat": {
+                "prix_suggere": calc["prix_rachat"],
+                "methode": calc["methode"],
+            },
+            "listings": listings,
+        }
+
+    try:
+        return await asyncio.wait_for(_run(), timeout=120)
+    except asyncio.TimeoutError:
+        raise HTTPException(status_code=504, detail="Délai de scraping dépassé.")
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"[estimation/details] Erreur: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+
 # ─── Immatriculation lookup ───────────────────────────────────────────────────
 
 IMMAT_API_USERNAME = os.getenv("IMMAT_API_USERNAME", "Macken97")

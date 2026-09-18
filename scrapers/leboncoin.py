@@ -511,6 +511,118 @@ def _extract_prix(ads: list, modele: str, marque: str = None, carburant: str = N
     return [p for _, p in prix]
 
 
+def _extract_annonces(ads: list, modele: str, marque: str = None, carburant: str = None,
+                       boite: str = None, target_hp: int = None, km_cible: int = None,
+                       finition: str = None, carrosserie: str = None) -> list[dict]:
+    """Même filtrage que _extract_prix mais retourne les détails complets de chaque annonce."""
+    modele_lower = (modele or "").lower()
+    marque_lower = (marque or "").lower()
+    finition_lower = (finition or "").lower()
+    VARIANTS = ["stepway", "stepway 2", "rs", "sport", "gt"]
+    exclude = [v for v in VARIANTS if v not in modele_lower and v not in finition_lower]
+    is_coupe_search = "coup" in modele_lower.replace("é", "e")
+    annonces = []
+    for ad in ads:
+        title = ad.get("subject", "").lower().replace("é", "e").replace("è", "e").replace("ê", "e")
+        titre_original = ad.get("subject", "")
+        if any(v in title for v in exclude):
+            continue
+        if any(kw in title for kw in _PROBLEM_KEYWORDS):
+            continue
+        if is_coupe_search and "coup" not in title.replace("é", "e"):
+            continue
+        if not is_coupe_search and "coup" in title.replace("é", "e") and "suv" not in title and modele_lower in ["glc", "gle", "q3", "q5"]:
+            continue
+
+        attrs = {a["key"]: a.get("value_label", a.get("value", ""))
+                 for a in ad.get("attributes", [])}
+
+        if marque_lower:
+            brand_attr = str(attrs.get("brand", "")).lower()
+            if brand_attr and marque_lower not in brand_attr and brand_attr not in marque_lower:
+                continue
+        if modele_lower:
+            model_attr = str(attrs.get("model", "")).lower()
+            if model_attr and model_attr not in ("autres", "other"):
+                modele_norm = modele_lower.replace(" ", "").replace("-", "")
+                model_attr_norm = model_attr.replace(" ", "").replace("-", "")
+                if modele_norm not in model_attr_norm and model_attr_norm not in modele_norm:
+                    continue
+                is_sportback_search = "sportback" in modele_lower
+                ad_is_sportback = "sportback" in model_attr
+                if is_sportback_search and not ad_is_sportback:
+                    continue
+                if not is_sportback_search and ad_is_sportback:
+                    continue
+
+        if carburant:
+            fuel_val = str(attrs.get("fuel", ""))
+            if fuel_val and not _match_fuel(fuel_val, carburant):
+                continue
+        if boite:
+            gear_val = str(attrs.get("gearbox", ""))
+            if gear_val and not _match_gear(gear_val, boite):
+                continue
+
+        mileage_raw = (
+            attrs.get("mileage") or attrs.get("km") or
+            ad.get("mileage") or ad.get("kilometrage") or ""
+        )
+        try:
+            ad_km = int(re.sub(r"[^\d]", "", str(mileage_raw))) if mileage_raw else None
+        except (ValueError, TypeError):
+            ad_km = None
+
+        if km_cible is not None and ad_km is not None:
+            if km_cible > 150_000:
+                km_tolerance = max(25_000, int(km_cible * 0.13))
+            else:
+                km_tolerance = max(50_000, int(km_cible * 0.25))
+            if abs(ad_km - km_cible) > km_tolerance:
+                continue
+
+        if target_hp:
+            hp_raw = attrs.get("horse_power_din") or attrs.get("power") or ""
+            try:
+                hp = int(re.sub(r"[^\d]", "", str(hp_raw))) if hp_raw else None
+            except (ValueError, TypeError):
+                hp = None
+            if hp and abs(hp - target_hp) > 3:
+                continue
+
+        raw = ad.get("price", [])
+        p = raw[0] if isinstance(raw, list) and raw else (raw if isinstance(raw, (int, float)) else None)
+        if p and 500 <= int(p) <= 150_000:
+            list_id = ad.get("list_id", "")
+            url = ad.get("url") or (f"https://www.leboncoin.fr/voitures/{list_id}.htm" if list_id else "")
+            annonces.append({
+                "prix": int(p),
+                "km": ad_km,
+                "titre": titre_original,
+                "url": url,
+            })
+
+    # Filtre finition soft
+    if finition and annonces:
+        fin_norm = finition.lower().replace("-", " ").replace("_", " ")
+        fin_words = [w for w in fin_norm.split() if len(w) > 2]
+        if fin_words:
+            filtered = [a for a in annonces if all(w in a["titre"].lower() for w in fin_words)]
+            if len(filtered) >= 5:
+                annonces = filtered
+
+    # Filtre carrosserie soft
+    if carrosserie and annonces:
+        car_key = carrosserie.lower().strip()
+        keywords = _CARROSSERIE_KEYWORDS.get(car_key)
+        if keywords:
+            filtered = [a for a in annonces if any(kw in a["titre"].lower() for kw in keywords)]
+            if len(filtered) >= 3:
+                annonces = filtered
+
+    return annonces
+
+
 class LeboncoinScraper(BaseScraper):
     name = "leboncoin"
 
@@ -723,7 +835,7 @@ class LeboncoinScraper(BaseScraper):
     async def _url_search(self, marque, modele, annee, kilometrage,
                            carburant=None, boite=None, motorisation=None,
                            type_vehicule=None, finition=None, carrosserie=None,
-                           max_pages: int = 10) -> list[int]:
+                           max_pages: int = 10, return_details: bool = False) -> list:
         """Navigue sur l'URL LBC, intercepte le payload API page 1,
         puis pagine jusqu'à max_pages en réutilisant ce payload avec offset."""
         global _pw_sem
@@ -809,9 +921,12 @@ class LeboncoinScraper(BaseScraper):
                                 break
 
                         logger.info(f"[leboncoin] URL search total → {len(all_ads)} annonces brutes")
-                        return _extract_prix(all_ads, modele, marque=marque, carburant=carburant,
-                                             boite=boite, target_hp=target_hp, km_cible=kilometrage,
-                                             finition=finition, carrosserie=carrosserie)
+                        extract_args = dict(marque=marque, carburant=carburant, boite=boite,
+                                            target_hp=target_hp, km_cible=kilometrage,
+                                            finition=finition, carrosserie=carrosserie)
+                        if return_details:
+                            return _extract_annonces(all_ads, modele, **extract_args)
+                        return _extract_prix(all_ads, modele, **extract_args)
                     finally:
                         await page.close()
             except Exception as e:
@@ -946,6 +1061,21 @@ class LeboncoinScraper(BaseScraper):
 
         logger.warning(f"[leboncoin] Aucun résultat pour {marque} {modele} {annee}")
         return []
+
+    async def get_listings(self, marque, modele, annee, kilometrage,
+                            finition=None, carburant=None, boite=None,
+                            motorisation=None, type_vehicule=None, carrosserie=None) -> list[dict]:
+        """Retourne la liste complète des annonces LBC avec prix, km, titre et url."""
+        modele_api = re.sub(r'\bsportback\b', '', modele, flags=re.IGNORECASE).strip()
+        return await asyncio.wait_for(
+            self._url_search(
+                marque, modele_api, annee, kilometrage,
+                carburant=carburant, boite=boite, motorisation=motorisation,
+                type_vehicule=type_vehicule, finition=finition, carrosserie=carrosserie,
+                max_pages=10, return_details=True,
+            ),
+            timeout=60,
+        )
 
     async def _scrape(self, context: BrowserContext, marque, modele, annee, kilometrage,
                        max_pages, finition=None) -> list[int]:
