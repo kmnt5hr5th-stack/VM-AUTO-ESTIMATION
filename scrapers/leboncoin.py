@@ -143,49 +143,64 @@ HOMEPAGE = "https://www.leboncoin.fr/"
 SEARCH_URL = "https://www.leboncoin.fr/recherche"
 
 
+def _lbc_code(s: str) -> str:
+    """Normalise une chaîne en code LBC : majuscules, sans accents, espaces → underscores."""
+    import unicodedata
+    s = unicodedata.normalize("NFD", s)
+    s = "".join(c for c in s if unicodedata.category(c) != "Mn")
+    return re.sub(r'[\s\-]+', '_', s).upper()
+
+
 def _build_search_url(marque: str, modele: str, annee: int, carburant: str = None,
                        boite: str = None, motorisation: str = None,
-                       type_vehicule: str = None) -> str:
-    """Construit l'URL de recherche LBC avec tous les paramètres du véhicule."""
+                       type_vehicule: str = None, kilometrage: int = None) -> str:
+    """Construit l'URL de recherche LBC avec les paramètres structurés voiture."""
     import urllib.parse
+
     FUEL_MAP = {
         "diesel": "diesel", "gazole": "diesel",
         "essence": "petrol", "sp95": "petrol", "sp98": "petrol",
         "hybride": "hybrid", "electrique": "electric", "électrique": "electric",
         "gpl": "lpg",
     }
-    GEAR_MAP = {
-        "manuelle": "manual", "mécanique": "manual", "mecanique": "manual",
-        "bvm": "manual", "bm": "manual",
-        "automatique": "automatic", "auto": "automatic", "bva": "automatic", "dsg": "automatic",
+    # LBC gearbox : 1 = manuelle, 2 = automatique
+    GEAR_CODE = {
+        "manuelle": "1", "mécanique": "1", "mecanique": "1", "bvm": "1", "bm": "1",
+        "automatique": "2", "auto": "2", "bva": "2", "dsg": "2", "edr": "2",
     }
+
     is_util = type_vehicule and type_vehicule.lower() in ("utilitaire", "fourgon", "van", "camionnette")
-    # Texte de recherche : marque + modele + cylindrée + code moteur + CV
-    text_parts = [marque, modele]
-    if motorisation:
-        disp = _extraire_displacement(motorisation)
-        code = _extraire_code_moteur(motorisation)
-        hp = _extraire_cv(motorisation)
-        if disp:
-            text_parts.append(disp)
-        if code:
-            text_parts.append(code)
-        if hp:
-            text_parts.append(str(hp))
+    brand_code = _lbc_code(marque)
+    model_code = f"{brand_code}_{_lbc_code(modele)}"
+
     params: dict = {
         "category": "5" if is_util else "2",
-        "text": " ".join(text_parts),
-        "regdate_min": str(annee),
-        "regdate_max": str(annee),
+        "u_car_brand": brand_code,
+        "u_car_model": model_code,
+        "regdate": f"{annee}-{annee}",
+        "sort": "price",
+        "order": "asc",
     }
+
     if carburant:
         fuel = FUEL_MAP.get(carburant.lower().strip())
         if fuel:
             params["fuel"] = fuel
+
     if boite:
-        gear = GEAR_MAP.get(boite.lower().strip())
+        gear = GEAR_CODE.get(boite.lower().strip())
         if gear:
             params["gearbox"] = gear
+
+    if motorisation:
+        hp = _extraire_cv(motorisation)
+        if hp:
+            params["horse_power_din"] = f"{hp}-{hp}"
+
+    if kilometrage:
+        margin = 15_000 if kilometrage <= 100_000 else 25_000
+        params["mileage"] = f"{max(0, kilometrage - margin)}-{kilometrage + margin}"
+
     return f"{SEARCH_URL}?{urllib.parse.urlencode(params)}"
 
 _WEBSHARE_HOST = "p.webshare.io:80"
@@ -844,7 +859,8 @@ class LeboncoinScraper(BaseScraper):
 
         target_hp = _extraire_cv(motorisation) if motorisation else None
         url = _build_search_url(marque, modele, annee, carburant=carburant, boite=boite,
-                                 motorisation=motorisation, type_vehicule=type_vehicule)
+                                 motorisation=motorisation, type_vehicule=type_vehicule,
+                                 kilometrage=kilometrage)
         logger.info(f"[leboncoin] URL search: {url}")
 
         for attempt in range(2):
