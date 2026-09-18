@@ -284,11 +284,13 @@ async def debug_lbc_raw(marque: str = "Audi", modele: str = "Q2", annee: int = 2
     try:
         result = await _asyncio.wait_for(
             lbc._url_search(marque, modele, annee, km, max_pages=1, return_details=False),
-            timeout=45,
+            timeout=120,
         )
         return {"status": "ok", "prices_count": len(result), "prices_sample": result[:5]}
+    except _asyncio.TimeoutError:
+        return {"status": "timeout", "error": "120s dépassé — Playwright trop lent"}
     except Exception as e:
-        return {"status": "error", "error": str(e)}
+        return {"status": "error", "error": str(e), "type": type(e).__name__}
 
 
 # ─── Immatriculation lookup ───────────────────────────────────────────────────

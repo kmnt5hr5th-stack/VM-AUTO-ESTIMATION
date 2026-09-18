@@ -915,9 +915,9 @@ class LeboncoinScraper(BaseScraper):
                         # Naviguer page 1 et intercepter la réponse
                         async with page.expect_response(
                             lambda r: "finder/search" in r.url and r.status == 200,
-                            timeout=20_000,
+                            timeout=40_000,
                         ) as resp_info:
-                            await page.goto(url, wait_until="domcontentloaded", timeout=20_000)
+                            await page.goto(url, wait_until="domcontentloaded", timeout=40_000)
 
                         page.remove_listener("request", on_request)
 
