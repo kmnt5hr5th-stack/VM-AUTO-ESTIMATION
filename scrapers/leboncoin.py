@@ -1115,7 +1115,7 @@ class LeboncoinScraper(BaseScraper):
                     type_vehicule=type_vehicule, finition=finition, carrosserie=carrosserie,
                     max_pages=10, return_details=True,
                 ),
-                timeout=60,
+                timeout=115,
             )
         except Exception:
             listings = []
