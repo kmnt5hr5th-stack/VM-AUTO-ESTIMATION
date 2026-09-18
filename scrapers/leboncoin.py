@@ -38,6 +38,7 @@ async def _init_pw_context() -> None:
         args=["--no-sandbox", "--disable-setuid-sandbox", "--disable-dev-shm-usage",
               "--disable-blink-features=AutomationControlled"],
     )
+    proxy_cfg = _camoufox_proxy()
     context = await browser.new_context(
         user_agent=(
             "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
@@ -45,6 +46,7 @@ async def _init_pw_context() -> None:
         ),
         locale="fr-FR",
         extra_http_headers={"Accept-Language": "fr-FR,fr;q=0.9"},
+        proxy=proxy_cfg,
     )
     await context.add_init_script(
         "Object.defineProperty(navigator, 'webdriver', {get: () => undefined})"
