@@ -601,65 +601,91 @@ def _extract_prix(ads: list, modele: str, marque: str = None, carburant: str = N
 
 def _extract_annonces(ads: list, modele: str, marque: str = None, carburant: str = None,
                        boite: str = None, target_hp: int = None, km_cible: int = None,
-                       finition: str = None, carrosserie: str = None) -> list[dict]:
-    """Même filtrage que _extract_prix mais retourne les détails complets de chaque annonce."""
+                       finition: str = None, carrosserie: str = None,
+                       structured: bool = False) -> list[dict]:
+    """Même filtrage que _extract_prix mais retourne les détails complets de chaque annonce.
+    structured=True : LBC a déjà filtré via enums — on saute les filtres post-hoc redondants."""
     modele_lower = (modele or "").lower()
-    marque_lower = (marque or "").lower()
-    finition_lower = (finition or "").lower()
-    VARIANTS = ["stepway", "stepway 2", "rs", "sport", "gt"]
-    exclude = [v for v in VARIANTS if v not in modele_lower and v not in finition_lower]
-    is_coupe_search = "coup" in modele_lower.replace("é", "e")
     annonces = []
-    logger.info(f"[debug] _extract_annonces reçu {len(ads)} ads bruts")
-    if ads:
-        first = ads[0]
-        logger.info(f"[debug] Premier ad keys: {list(first.keys())}")
-        logger.info(f"[debug] subject: {first.get('subject','')!r}")
-        logger.info(f"[debug] price: {first.get('price')}")
-        raw_attrs = first.get("attributes", [])
-        logger.info(f"[debug] attributes[0:5]: {raw_attrs[:5]}")
     for ad in ads:
         title = ad.get("subject", "").lower().replace("é", "e").replace("è", "e").replace("ê", "e")
         titre_original = ad.get("subject", "")
-        if any(v in title for v in exclude):
-            continue
+
+        # Toujours exclure les voitures accidentées/HS
         if any(kw in title for kw in _PROBLEM_KEYWORDS):
-            continue
-        if is_coupe_search and "coup" not in title.replace("é", "e"):
-            continue
-        if not is_coupe_search and "coup" in title.replace("é", "e") and "suv" not in title and modele_lower in ["glc", "gle", "q3", "q5"]:
             continue
 
         attrs = {a["key"]: a.get("value_label", a.get("value", ""))
                  for a in ad.get("attributes", [])}
 
-        if marque_lower:
-            brand_attr = str(attrs.get("brand", "")).lower()
-            if brand_attr and marque_lower not in brand_attr and brand_attr not in marque_lower:
-                continue
-        if modele_lower:
-            model_attr = str(attrs.get("model", "")).lower()
-            if model_attr and model_attr not in ("autres", "other"):
-                modele_norm = modele_lower.replace(" ", "").replace("-", "")
-                model_attr_norm = model_attr.replace(" ", "").replace("-", "")
-                if modele_norm not in model_attr_norm and model_attr_norm not in modele_norm:
-                    continue
-                is_sportback_search = "sportback" in modele_lower
-                ad_is_sportback = "sportback" in model_attr
-                if is_sportback_search and not ad_is_sportback:
-                    continue
-                if not is_sportback_search and ad_is_sportback:
-                    continue
+        if not structured:
+            marque_lower = (marque or "").lower()
+            finition_lower = (finition or "").lower()
+            VARIANTS = ["stepway", "stepway 2", "rs", "sport", "gt"]
+            exclude = [v for v in VARIANTS if v not in modele_lower and v not in finition_lower]
+            is_coupe_search = "coup" in modele_lower.replace("é", "e")
 
-        if carburant:
-            fuel_val = str(attrs.get("fuel", ""))
-            if fuel_val and not _match_fuel(fuel_val, carburant):
+            if any(v in title for v in exclude):
                 continue
-        if boite:
-            gear_val = str(attrs.get("gearbox", ""))
-            if gear_val and not _match_gear(gear_val, boite):
+            if is_coupe_search and "coup" not in title.replace("é", "e"):
+                continue
+            if not is_coupe_search and "coup" in title.replace("é", "e") and "suv" not in title and modele_lower in ["glc", "gle", "q3", "q5"]:
                 continue
 
+            if marque_lower:
+                brand_attr = str(attrs.get("brand", "")).lower()
+                if brand_attr and marque_lower not in brand_attr and brand_attr not in marque_lower:
+                    continue
+            if modele_lower:
+                model_attr = str(attrs.get("model", "")).lower()
+                if model_attr and model_attr not in ("autres", "other"):
+                    modele_norm = modele_lower.replace(" ", "").replace("-", "")
+                    model_attr_norm = model_attr.replace(" ", "").replace("-", "")
+                    if modele_norm not in model_attr_norm and model_attr_norm not in modele_norm:
+                        continue
+                    is_sportback_search = "sportback" in modele_lower
+                    ad_is_sportback = "sportback" in model_attr
+                    if is_sportback_search and not ad_is_sportback:
+                        continue
+                    if not is_sportback_search and ad_is_sportback:
+                        continue
+
+            if carburant:
+                fuel_val = str(attrs.get("fuel", ""))
+                if fuel_val and not _match_fuel(fuel_val, carburant):
+                    continue
+            if boite:
+                gear_val = str(attrs.get("gearbox", ""))
+                if gear_val and not _match_gear(gear_val, boite):
+                    continue
+
+            if km_cible is not None:
+                mileage_raw = (
+                    attrs.get("mileage") or attrs.get("km") or
+                    ad.get("mileage") or ad.get("kilometrage") or ""
+                )
+                try:
+                    ad_km_check = int(re.sub(r"[^\d]", "", str(mileage_raw))) if mileage_raw else None
+                except (ValueError, TypeError):
+                    ad_km_check = None
+                if ad_km_check is not None:
+                    if km_cible > 150_000:
+                        km_tolerance = max(25_000, int(km_cible * 0.13))
+                    else:
+                        km_tolerance = max(50_000, int(km_cible * 0.25))
+                    if abs(ad_km_check - km_cible) > km_tolerance:
+                        continue
+
+            if target_hp:
+                hp_raw = attrs.get("horse_power_din") or attrs.get("power") or ""
+                try:
+                    hp = int(re.sub(r"[^\d]", "", str(hp_raw))) if hp_raw else None
+                except (ValueError, TypeError):
+                    hp = None
+                if hp and abs(hp - target_hp) > 3:
+                    continue
+
+        # Extraire km pour les détails (même en mode structured)
         mileage_raw = (
             attrs.get("mileage") or attrs.get("km") or
             ad.get("mileage") or ad.get("kilometrage") or ""
@@ -669,33 +695,14 @@ def _extract_annonces(ads: list, modele: str, marque: str = None, carburant: str
         except (ValueError, TypeError):
             ad_km = None
 
-        if km_cible is not None and ad_km is not None:
-            if km_cible > 150_000:
-                km_tolerance = max(25_000, int(km_cible * 0.13))
-            else:
-                km_tolerance = max(50_000, int(km_cible * 0.25))
-            if abs(ad_km - km_cible) > km_tolerance:
-                continue
-
-        if target_hp:
-            hp_raw = attrs.get("horse_power_din") or attrs.get("power") or ""
-            try:
-                hp = int(re.sub(r"[^\d]", "", str(hp_raw))) if hp_raw else None
-            except (ValueError, TypeError):
-                hp = None
-            if hp and abs(hp - target_hp) > 3:
-                continue
-
         raw = ad.get("price", [])
         p = raw[0] if isinstance(raw, list) and raw else (raw if isinstance(raw, (int, float)) else None)
         if p and 500 <= int(p) <= 150_000:
             list_id = ad.get("list_id", "")
             url = ad.get("url") or (f"https://www.leboncoin.fr/voitures/{list_id}.htm" if list_id else "")
-            # Type vendeur
             owner = ad.get("owner", {})
             vendeur_type = "pro" if str(owner.get("type", "")).lower() in ("pro", "professional") else "particulier"
             vendeur_nom = owner.get("name") or owner.get("store_name") or ""
-            # Âge de l'annonce en jours
             pub_date_str = ad.get("first_publication_date") or ad.get("index_date") or ""
             age_jours = None
             if pub_date_str:
@@ -715,23 +722,24 @@ def _extract_annonces(ads: list, modele: str, marque: str = None, carburant: str
                 "age_jours": age_jours,
             })
 
-    # Filtre finition soft
-    if finition and annonces:
-        fin_norm = finition.lower().replace("-", " ").replace("_", " ")
-        fin_words = [w for w in fin_norm.split() if len(w) > 2]
-        if fin_words:
-            filtered = [a for a in annonces if all(w in a["titre"].lower() for w in fin_words)]
-            if len(filtered) >= 5:
-                annonces = filtered
+    if not structured:
+        # Filtre finition soft
+        if finition and annonces:
+            fin_norm = finition.lower().replace("-", " ").replace("_", " ")
+            fin_words = [w for w in fin_norm.split() if len(w) > 2]
+            if fin_words:
+                filtered = [a for a in annonces if all(w in a["titre"].lower() for w in fin_words)]
+                if len(filtered) >= 5:
+                    annonces = filtered
 
-    # Filtre carrosserie soft
-    if carrosserie and annonces:
-        car_key = carrosserie.lower().strip()
-        keywords = _CARROSSERIE_KEYWORDS.get(car_key)
-        if keywords:
-            filtered = [a for a in annonces if any(kw in a["titre"].lower() for kw in keywords)]
-            if len(filtered) >= 3:
-                annonces = filtered
+        # Filtre carrosserie soft
+        if carrosserie and annonces:
+            car_key = carrosserie.lower().strip()
+            keywords = _CARROSSERIE_KEYWORDS.get(car_key)
+            if keywords:
+                filtered = [a for a in annonces if any(kw in a["titre"].lower() for kw in keywords)]
+                if len(filtered) >= 3:
+                    annonces = filtered
 
     return annonces
 
@@ -767,7 +775,7 @@ async def _fetch_structured_api_pages(marque, modele, annee, kilometrage,
             ads = r.json().get("ads", [])
             logger.info(f"[leboncoin] structured API page {pg} → {len(ads)} annonces brutes")
             if return_details:
-                page_results = _extract_annonces(ads, modele, **extract_args)
+                page_results = _extract_annonces(ads, modele, structured=True, **extract_args)
             else:
                 page_results = _extract_prix(ads, modele, **extract_args)
             all_results.extend(page_results)
