@@ -109,6 +109,52 @@ def _extraire_cv(motorisation: str) -> Optional[int]:
     return candidates[-1] if candidates else None
 
 
+_catalog_motorisations: dict = {}
+
+def _load_catalog_motorisations() -> dict:
+    global _catalog_motorisations
+    if _catalog_motorisations:
+        return _catalog_motorisations
+    try:
+        import json as _json
+        import os as _os
+        path = _os.path.join(_os.path.dirname(__file__), "..", "catalog.json")
+        with open(path, encoding="utf-8") as f:
+            _catalog_motorisations = _json.load(f).get("motorisations", {})
+    except Exception:
+        pass
+    return _catalog_motorisations
+
+
+def _hp_from_catalog(marque: str, modele: str, motorisation: str) -> Optional[int]:
+    """Cherche le HP dans le catalogue quand _extraire_cv échoue.
+    Ex: "220 D BUSINESS 4MATIC" → cherche "220 d" dans catalog[Mercedes][GLC] → "GLC 220 d 170ch 4Matic" → 170"""
+    cat = _load_catalog_motorisations()
+    # Normaliser le nom de marque pour chercher dans le catalogue
+    brand_candidates = [marque]
+    if "mercedes" in marque.lower():
+        brand_candidates = ["Mercedes", "Mercedes-Benz"]
+    entries = []
+    for b in brand_candidates:
+        if b in cat and modele in cat[b]:
+            entries = cat[b][modele]
+            break
+    if not entries:
+        return None
+    # Extraire le code moteur depuis motorisation : "220 D BUSINESS 4MATIC" → "220 d"
+    tokens = motorisation.strip().split()
+    if len(tokens) < 2:
+        return None
+    engine_variant = f"{tokens[0]} {tokens[1]}".lower()  # "220 d"
+    for entry in entries:
+        name = entry.get("name", "").lower()
+        if engine_variant in name:
+            hp = _extraire_cv(entry["name"])
+            if hp:
+                return hp
+    return None
+
+
 def _extraire_code_moteur(motorisation: str) -> Optional[str]:
     """Extrait le code moteur alphanumérique pour affiner le keyword LBC."""
     if not motorisation:
@@ -1319,6 +1365,9 @@ class LeboncoinScraper(BaseScraper):
         Utilise l'API structurée (curl_cffi, bypass DataDome) avec les enums u_car_brand/u_car_model."""
         modele_api = re.sub(r'\bsportback\b', '', modele, flags=re.IGNORECASE).strip()
         target_hp = _extraire_cv(motorisation) if motorisation else None
+        # Fallback catalogue si HP non extractible de la version (ex: "220 D BUSINESS 4MATIC")
+        if target_hp is None and motorisation:
+            target_hp = _hp_from_catalog(marque, modele_api, motorisation)
         # Extraire finition depuis motorisation si pas fournie explicitement
         # Format standard : "30 TDI 116 DESIGN" → "DESIGN"
         # Format Mercedes : "220 D BUSINESS 4MATIC" → "BUSINESS" (sans le suffixe 4MATIC)
