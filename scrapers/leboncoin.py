@@ -491,7 +491,7 @@ def _extract_prix(ads: list, modele: str, marque: str = None, carburant: str = N
     is_coupe_search = "coup" in modele_lower.replace("é", "e")
     prix = []
     for ad in ads:
-        title = ad.get("subject", "").lower().replace("é", "e").replace("è", "e").replace("ê", "e")
+        title = (ad.get("subject") or ad.get("title") or ad.get("body") or "").lower().replace("é", "e").replace("è", "e").replace("ê", "e")
         if any(v in title for v in exclude):
             continue
         if any(kw in title for kw in _PROBLEM_KEYWORDS):
@@ -503,7 +503,7 @@ def _extract_prix(ads: list, modele: str, marque: str = None, carburant: str = N
         if not is_coupe_search and "coup" in title.replace("é", "e") and "suv" not in title and modele_lower in ["glc", "gle", "q3", "q5"]:
             continue
 
-        attrs = {a["key"]: a.get("value_label", a.get("value", ""))
+        attrs = {a["key"]: (a.get("value_label") or a.get("value") or "")
                  for a in ad.get("attributes", [])}
 
         # Vérification stricte marque + modèle depuis les attributs LBC
@@ -609,14 +609,14 @@ def _extract_annonces(ads: list, modele: str, marque: str = None, carburant: str
     modele_lower = (modele or "").lower()
     annonces = []
     for ad in ads:
-        title = ad.get("subject", "").lower().replace("é", "e").replace("è", "e").replace("ê", "e")
-        titre_original = ad.get("subject", "")
+        titre_original = (ad.get("subject") or ad.get("title") or ad.get("body") or "")
+        title = titre_original.lower().replace("é", "e").replace("è", "e").replace("ê", "e")
 
         # Toujours exclure les voitures accidentées/HS
         if any(kw in title for kw in _PROBLEM_KEYWORDS):
             continue
 
-        attrs = {a["key"]: a.get("value_label", a.get("value", ""))
+        attrs = {a["key"]: (a.get("value_label") or a.get("value") or "")
                  for a in ad.get("attributes", [])}
 
         if not structured:
