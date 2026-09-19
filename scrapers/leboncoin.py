@@ -160,10 +160,11 @@ def _build_search_url(marque: str, modele: str, annee: int, carburant: str = Non
     import urllib.parse
 
     FUEL_MAP = {
-        "diesel": "diesel", "gazole": "diesel",
-        "essence": "petrol", "sp95": "petrol", "sp98": "petrol",
-        "hybride": "hybrid", "electrique": "electric", "électrique": "electric",
-        "gpl": "lpg",
+        "essence": "1", "sp95": "1", "sp98": "1",
+        "diesel": "2", "gazole": "2",
+        "hybride": "3",
+        "electrique": "4", "électrique": "4",
+        "gpl": "5",
     }
     # LBC gearbox : 1 = manuelle, 2 = automatique
     GEAR_CODE = {
@@ -225,10 +226,11 @@ def _build_structured_payload(marque: str, modele: str, annee: int,
                                page: int = 1) -> dict:
     """Payload finder/search identique à l'URL LBC (u_car_brand, u_car_model, u_car_finition, hp exact)."""
     FUEL_MAP = {
-        "diesel": "diesel", "gazole": "diesel",
-        "essence": "petrol", "sp95": "petrol", "sp98": "petrol",
-        "hybride": "hybrid", "electrique": "electric", "électrique": "electric",
-        "gpl": "lpg",
+        "essence": "1", "sp95": "1", "sp98": "1",
+        "diesel": "2", "gazole": "2",
+        "hybride": "3",
+        "electrique": "4", "électrique": "4",
+        "gpl": "5",
     }
     GEAR_CODE = {
         "manuelle": "1", "mécanique": "1", "mecanique": "1", "bvm": "1", "bm": "1",
@@ -339,15 +341,15 @@ def _mobile_ua() -> tuple[str, str, dict]:
 def _build_lbc_payload(marque, modele, annee, km, page=1, carburant=None, boite=None,
                        type_vehicule=None, target_hp=None) -> dict:
     FUEL_MAP = {
-        "diesel": "diesel", "gazole": "diesel",
-        "essence": "petrol", "sp95": "petrol", "sp98": "petrol",
-        "hybride": "hybrid", "hybrid": "hybrid",
-        "electrique": "electric", "électrique": "electric",
-        "gpl": "lpg", "gnv": "cng",
+        "essence": "1", "sp95": "1", "sp98": "1",
+        "diesel": "2", "gazole": "2",
+        "hybride": "3",
+        "electrique": "4", "électrique": "4",
+        "gpl": "5", "gnv": "6",
     }
     GEAR_MAP = {
-        "mecanique": "manual", "mécanique": "manual", "manuelle": "manual", "bvm": "manual", "bm": "manual",
-        "automatique": "automatic", "auto": "automatic", "bva": "automatic", "dsg": "automatic", "edr": "automatic",
+        "mecanique": "1", "mécanique": "1", "manuelle": "1", "bvm": "1", "bm": "1",
+        "automatique": "2", "auto": "2", "bva": "2", "dsg": "2", "edr": "2",
     }
     enums: dict = {"ad_type": ["offer"]}
     if carburant:
