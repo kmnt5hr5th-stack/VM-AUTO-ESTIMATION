@@ -1244,6 +1244,12 @@ class LeboncoinScraper(BaseScraper):
         Utilise l'API structurée (curl_cffi, bypass DataDome) avec les enums u_car_brand/u_car_model."""
         modele_api = re.sub(r'\bsportback\b', '', modele, flags=re.IGNORECASE).strip()
         target_hp = _extraire_cv(motorisation) if motorisation else None
+        # Extraire finition depuis motorisation si pas fournie explicitement
+        # Ex: "30 TDI 116 DESIGN" → "DESIGN" | "30 TFSI 116 S LINE PLUS" → "S LINE PLUS"
+        if not finition and motorisation:
+            m = re.match(r'^\d+\s+\S+\s+\d+\s+(.+)$', motorisation.strip(), re.IGNORECASE)
+            if m:
+                finition = m.group(1).strip()
         # Code finition LBC ex: "AUDI_Q2_Design" — transmis si finition connue
         lbc_fin = _lbc_finition_code(marque, modele_api, finition) if finition else None
 
