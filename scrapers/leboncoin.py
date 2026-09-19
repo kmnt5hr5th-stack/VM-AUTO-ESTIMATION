@@ -205,12 +205,25 @@ def _build_search_url(marque: str, modele: str, annee: int, carburant: str = Non
 
     return f"{SEARCH_URL}?{urllib.parse.urlencode(params)}"
 
+def _lbc_finition_code(marque: str, modele: str, finition: str) -> str:
+    """Construit le code finition LBC : AUDI_Q2_Design, VOLKSWAGEN_GOLF_GTI, etc."""
+    import unicodedata as _ud
+    def _title(s):
+        s = _ud.normalize("NFD", s)
+        s = "".join(c for c in s if _ud.category(c) != "Mn")
+        return "_".join(w.capitalize() for w in re.split(r'[\s\-]+', s.strip()) if w)
+    brand_code = _lbc_code(marque)
+    model_code = f"{brand_code}_{_lbc_code(modele)}"
+    fin_code = _title(finition)
+    return f"{model_code}_{fin_code}"
+
+
 def _build_structured_payload(marque: str, modele: str, annee: int,
                                carburant: str = None, boite: str = None,
                                target_hp: int = None, kilometrage: int = None,
-                               type_vehicule: str = None, page: int = 1) -> dict:
-    """Payload finder/search avec les enums structurés LBC (u_car_brand, u_car_model).
-    Plus précis qu'une recherche par mots-clés."""
+                               type_vehicule: str = None, finition: str = None,
+                               page: int = 1) -> dict:
+    """Payload finder/search identique à l'URL LBC (u_car_brand, u_car_model, u_car_finition, hp exact)."""
     FUEL_MAP = {
         "diesel": "diesel", "gazole": "diesel",
         "essence": "petrol", "sp95": "petrol", "sp98": "petrol",
@@ -226,6 +239,10 @@ def _build_structured_payload(marque: str, modele: str, annee: int,
     model_code = f"{brand_code}_{_lbc_code(modele)}"
 
     enums: dict = {"ad_type": ["offer"], "u_car_brand": [brand_code], "u_car_model": [model_code]}
+    if finition:
+        fin_code = _lbc_finition_code(marque, modele, finition)
+        enums["u_car_finition"] = [fin_code]
+        logger.info(f"[leboncoin] u_car_finition={fin_code}")
     if carburant:
         fuel = FUEL_MAP.get(carburant.lower().strip())
         if fuel:
@@ -240,7 +257,8 @@ def _build_structured_payload(marque: str, modele: str, annee: int,
         margin = 15_000 if kilometrage <= 100_000 else 25_000
         ranges["mileage"] = {"min": max(0, kilometrage - margin), "max": kilometrage + margin}
     if target_hp:
-        ranges["horse_power_din"] = {"min": target_hp - 5, "max": target_hp + 5}
+        # HP exact comme l'URL LBC (116-116), pas ±5
+        ranges["horse_power_din"] = {"min": target_hp, "max": target_hp}
 
     return {
         "filters": {
@@ -721,7 +739,7 @@ def _extract_annonces(ads: list, modele: str, marque: str = None, carburant: str
 async def _fetch_structured_api_pages(marque, modele, annee, kilometrage,
                                        carburant=None, boite=None, target_hp=None,
                                        type_vehicule=None, finition=None, carrosserie=None,
-                                       max_pages=10, return_details=False) -> list:
+                                       lbc_finition=None, max_pages=10, return_details=False) -> list:
     """Appelle finder/search avec les enums structurés LBC via curl_cffi (bypass DataDome).
     Plus précis que la recherche par mots-clés, parcourt jusqu'à max_pages pages."""
     ua, impersonate, headers = _mobile_ua()
@@ -736,7 +754,8 @@ async def _fetch_structured_api_pages(marque, modele, annee, kilometrage,
             payload = _build_structured_payload(
                 marque, modele, annee,
                 carburant=carburant, boite=boite, target_hp=target_hp,
-                kilometrage=kilometrage, type_vehicule=type_vehicule, page=pg,
+                kilometrage=kilometrage, type_vehicule=type_vehicule,
+                finition=lbc_finition, page=pg,
             )
             r = await s.post(API_URL, json=payload, headers=headers, timeout=30)
             if r.status_code == 403:
@@ -1210,16 +1229,18 @@ class LeboncoinScraper(BaseScraper):
         Utilise l'API structurée (curl_cffi, bypass DataDome) avec les enums u_car_brand/u_car_model."""
         modele_api = re.sub(r'\bsportback\b', '', modele, flags=re.IGNORECASE).strip()
         target_hp = _extraire_cv(motorisation) if motorisation else None
+        # Code finition LBC ex: "AUDI_Q2_Design" — transmis si finition connue
+        lbc_fin = _lbc_finition_code(marque, modele_api, finition) if finition else None
 
         # ── Recherche structurée via curl_cffi (bypass DataDome, enums précis) ───
-        logger.info("[leboncoin] get_listings → structured API (curl_cffi)")
+        logger.info(f"[leboncoin] get_listings → structured API hp={target_hp} finition={lbc_fin}")
         try:
             listings = await asyncio.wait_for(
                 _fetch_structured_api_pages(
                     marque, modele_api, annee, kilometrage,
                     carburant=carburant, boite=boite, target_hp=target_hp,
                     type_vehicule=type_vehicule, finition=finition, carrosserie=carrosserie,
-                    max_pages=10, return_details=True,
+                    lbc_finition=lbc_fin, max_pages=10, return_details=True,
                 ),
                 timeout=90,
             )
