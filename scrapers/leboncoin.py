@@ -93,11 +93,19 @@ async def warm_up_playwright() -> None:
 def _extraire_cv(motorisation: str) -> Optional[int]:
     if not motorisation:
         return None
+    # Unité explicite (ch/cv/hp) → priorité absolue
     m = re.search(r'(\d{2,4})\s*(?:cv|ch|hp|bhp)', motorisation, re.IGNORECASE)
     if m:
         return int(m.group(1))
     nums = re.findall(r'\b(\d{2,4})\b', motorisation)
     candidates = [int(n) for n in nums if 50 <= int(n) <= 600]
+    if not candidates:
+        return None
+    # Si le premier token est un grand nombre (≥150), c'est un code modèle Mercedes/BMW/Audi
+    # ex: "220 D BUSINESS 4MATIC" → 220 = code modèle, pas des CV
+    tokens = motorisation.strip().split()
+    if tokens and re.match(r'^\d+$', tokens[0]) and int(tokens[0]) >= 150:
+        candidates = [c for c in candidates if c != int(tokens[0])]
     return candidates[-1] if candidates else None
 
 
