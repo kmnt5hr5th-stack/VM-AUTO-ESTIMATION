@@ -444,19 +444,29 @@ _FUEL_LABELS = {
     "electrique": ["electrique", "électrique", "electric"],
     "gpl": ["gpl", "lpg"],
 }
+_FUEL_NUMERIC = {"1": "essence", "2": "diesel", "3": "hybride", "4": "electrique", "5": "gpl"}
 _GEAR_LABELS = {
     "manual": ["manuelle", "manual", "mécanique", "mecanique", "bvm"],
     "automatic": ["automatique", "automatic", "auto", "bva", "dsg"],
 }
 
 def _match_fuel(attr_val: str, carburant: str) -> bool:
-    v = attr_val.lower()
+    v = attr_val.strip()
+    # Codes numériques LBC (fuel=1=essence, 2=diesel, …)
+    if v in _FUEL_NUMERIC:
+        return _FUEL_NUMERIC[v] == carburant.lower().strip()
     labels = _FUEL_LABELS.get(carburant.lower(), [carburant.lower()])
-    return any(lbl in v for lbl in labels)
+    return any(lbl in v.lower() for lbl in labels)
 
 def _match_gear(attr_val: str, boite: str) -> bool:
-    v = attr_val.lower()
+    v = attr_val.strip()
     boite_norm = boite.lower().replace("mécanique", "mecanique").replace("é", "e")
+    # Codes numériques LBC (gearbox=1=manuelle, 2=automatique)
+    if v == "1":
+        return boite_norm in _GEAR_LABELS["manual"]
+    if v == "2":
+        return boite_norm in _GEAR_LABELS["automatic"]
+    v = v.lower()
     for gear_key, labels in _GEAR_LABELS.items():
         if boite_norm in labels or boite_norm == gear_key:
             return any(lbl in v for lbl in labels)
@@ -1274,9 +1284,9 @@ class LeboncoinScraper(BaseScraper):
                     marque, modele_api, annee, kilometrage,
                     carburant=carburant, boite=boite, target_hp=target_hp,
                     type_vehicule=type_vehicule, finition=finition, carrosserie=carrosserie,
-                    lbc_finition=lbc_fin, max_pages=10, return_details=True,
+                    lbc_finition=lbc_fin, max_pages=5, return_details=True,
                 ),
-                timeout=90,
+                timeout=110,
             )
         except Exception as e:
             logger.warning(f"[leboncoin] structured API erreur: {e}")
