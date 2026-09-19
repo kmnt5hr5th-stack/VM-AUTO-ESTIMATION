@@ -264,7 +264,7 @@ async def estimation_details(req: EstimationRequest):
         }
 
     try:
-        return await asyncio.wait_for(_run(), timeout=120)
+        return await asyncio.wait_for(_run(), timeout=180)
     except asyncio.TimeoutError:
         raise HTTPException(status_code=504, detail="Délai de scraping dépassé.")
     except HTTPException:

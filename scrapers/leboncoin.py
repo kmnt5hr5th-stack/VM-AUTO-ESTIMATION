@@ -1284,9 +1284,9 @@ class LeboncoinScraper(BaseScraper):
                     marque, modele_api, annee, kilometrage,
                     carburant=carburant, boite=boite, target_hp=target_hp,
                     type_vehicule=type_vehicule, finition=finition, carrosserie=carrosserie,
-                    lbc_finition=lbc_fin, max_pages=5, return_details=True,
+                    lbc_finition=lbc_fin, max_pages=10, return_details=True,
                 ),
-                timeout=110,
+                timeout=160,
             )
         except Exception as e:
             logger.warning(f"[leboncoin] structured API erreur: {e}")
