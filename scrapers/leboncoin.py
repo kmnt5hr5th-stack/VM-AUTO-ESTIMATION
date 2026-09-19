@@ -93,19 +93,23 @@ async def warm_up_playwright() -> None:
 def _extraire_cv(motorisation: str) -> Optional[int]:
     if not motorisation:
         return None
-    # Unité explicite (ch/cv/hp) → priorité absolue
+    # Unité explicite (ch/cv/hp) → priorité absolue, sauf chevaux fiscaux (< 50)
     m = re.search(r'(\d{2,4})\s*(?:cv|ch|hp|bhp)', motorisation, re.IGNORECASE)
-    if m:
+    if m and int(m.group(1)) >= 50:
         return int(m.group(1))
     nums = re.findall(r'\b(\d{2,4})\b', motorisation)
     candidates = [int(n) for n in nums if 50 <= int(n) <= 600]
     if not candidates:
         return None
-    # Si le premier token est un grand nombre (≥150), c'est un code modèle Mercedes/BMW/Audi
-    # ex: "220 D BUSINESS 4MATIC" → 220 = code modèle, pas des CV
     tokens = motorisation.strip().split()
+    # Premier token pur ≥150 = code modèle (ex: "220 D BUSINESS 4MATIC")
     if tokens and re.match(r'^\d+$', tokens[0]) and int(tokens[0]) >= 150:
         candidates = [c for c in candidates if c != int(tokens[0])]
+    # Pattern "NNN D/DE/E" = code modèle Mercedes style Caradisiac
+    # ex: "II 220 D AVANTGARDE", "(2) 300 DE 4MATIC", "IV 180 D BUSINESS"
+    merc_model = re.search(r'\b(\d{3,4})\s+(?:DE?|E)\b', motorisation, re.IGNORECASE)
+    if merc_model:
+        candidates = [c for c in candidates if c != int(merc_model.group(1))]
     return candidates[-1] if candidates else None
 
 
@@ -128,9 +132,11 @@ def _load_catalog_motorisations() -> dict:
 
 def _hp_from_catalog(marque: str, modele: str, motorisation: str) -> Optional[int]:
     """Cherche le HP dans le catalogue quand _extraire_cv échoue.
-    Ex: "220 D BUSINESS 4MATIC" → cherche "220 d" dans catalog[Mercedes][GLC] → "GLC 220 d 170ch 4Matic" → 170"""
+    Gère les formats Caradisiac avec préfixe génération :
+    "II 220 D AVANTGARDE LINE" → engine_variant="220 d" → "GLC 220 d 197ch 4Matic" → 197
+    "(2) 220 D BUSINESS" → engine_variant="220 d" → "GLC 220 d 170ch 4Matic" → 170 (phase 2 même gen)
+    """
     cat = _load_catalog_motorisations()
-    # Normaliser le nom de marque pour chercher dans le catalogue
     brand_candidates = [marque]
     if "mercedes" in marque.lower():
         brand_candidates = ["Mercedes", "Mercedes-Benz"]
@@ -141,18 +147,28 @@ def _hp_from_catalog(marque: str, modele: str, motorisation: str) -> Optional[in
             break
     if not entries:
         return None
-    # Extraire le code moteur depuis motorisation : "220 D BUSINESS 4MATIC" → "220 d"
-    tokens = motorisation.strip().split()
-    if len(tokens) < 2:
-        return None
-    engine_variant = f"{tokens[0]} {tokens[1]}".lower()  # "220 d"
+    # Cherche "NNN D/DE/E" en priorité (format Caradisiac avec ou sans préfixe génération)
+    merc_m = re.search(r'\b(\d{3,4})\s+(DE?|E)\b', motorisation, re.IGNORECASE)
+    if merc_m:
+        engine_variant = f"{merc_m.group(1)} {merc_m.group(2).lower()}"
+    else:
+        tokens = motorisation.strip().split()
+        if len(tokens) < 2:
+            return None
+        engine_variant = f"{tokens[0]} {tokens[1]}".lower()
+    # II/III/IV = nouvelle génération → HP le plus récent (dernier match dans le catalogue)
+    # (2)/(3) = phase 2 même génération → HP d'origine (premier match)
+    is_new_gen = bool(re.match(r'^(?:II|III|IV)\s', motorisation.strip(), re.IGNORECASE))
+    pattern = re.compile(r'\b' + re.escape(engine_variant) + r'\b', re.IGNORECASE)
+    matching_hp = []
     for entry in entries:
-        name = entry.get("name", "").lower()
-        if engine_variant in name:
+        if pattern.search(entry.get("name", "")):
             hp = _extraire_cv(entry["name"])
             if hp:
-                return hp
-    return None
+                matching_hp.append(hp)
+    if not matching_hp:
+        return None
+    return matching_hp[-1] if is_new_gen else matching_hp[0]
 
 
 def _extraire_code_moteur(motorisation: str) -> Optional[str]:

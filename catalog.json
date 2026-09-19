@@ -18026,6 +18026,48 @@
           "fuel": "Hybride rechargeable",
           "yearStart": 2019,
           "yearEnd": 2026
+        },
+        {
+          "name": "GLC 200 d 165ch 4Matic",
+          "fuel": "Diesel",
+          "yearStart": 2022,
+          "yearEnd": 2026
+        },
+        {
+          "name": "GLC 220 d 195ch 4Matic",
+          "fuel": "Diesel",
+          "yearStart": 2022,
+          "yearEnd": 2026
+        },
+        {
+          "name": "GLC 350 d 260ch 4Matic",
+          "fuel": "Diesel",
+          "yearStart": 2015,
+          "yearEnd": 2022
+        },
+        {
+          "name": "GLC 400 d 330ch 4Matic",
+          "fuel": "Diesel",
+          "yearStart": 2019,
+          "yearEnd": 2022
+        },
+        {
+          "name": "GLC 450 d 367ch 4Matic",
+          "fuel": "Diesel",
+          "yearStart": 2022,
+          "yearEnd": 2026
+        },
+        {
+          "name": "GLC 300 de 306ch PHEV",
+          "fuel": "Hybride rechargeable",
+          "yearStart": 2020,
+          "yearEnd": 2022
+        },
+        {
+          "name": "GLC 300 de 333ch PHEV",
+          "fuel": "Hybride rechargeable",
+          "yearStart": 2022,
+          "yearEnd": 2026
         }
       ],
       "EQV": [
