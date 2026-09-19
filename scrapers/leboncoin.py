@@ -161,6 +161,43 @@ def _lbc_code(s: str) -> str:
     return re.sub(r'[\s\-]+', '_', s).upper()
 
 
+# Codes LBC exacts pour les marques/modèles qui dévient de la règle générale
+_LBC_BRAND_EXACT: dict[str, str] = {
+    "mercedes": "MERCEDES-BENZ",
+    "mercedes-benz": "MERCEDES-BENZ",
+    "mercedes benz": "MERCEDES-BENZ",
+}
+
+# Modèles Mercedes dont le nom LBC est différent du nom courant
+_LBC_MERCEDES_MODEL: dict[str, str] = {
+    "glc": "Classe GLC",
+    "glc coupe": "Classe GLC Coupé",
+    "glc coupé": "Classe GLC Coupé",
+    "gle": "Classe GLE",
+    "gle coupe": "Classe GLE Coupé",
+    "gle coupé": "Classe GLE Coupé",
+    "gls": "Classe GLS",
+    "gla": "Classe GLA",
+    "glb": "Classe GLB",
+    "cla": "Classe CLA",
+    "cls": "Classe CLS",
+}
+
+
+def _lbc_brand_code(marque: str) -> str:
+    """Retourne le code LBC exact pour la marque (gère Mercedes-Benz, etc.)."""
+    return _LBC_BRAND_EXACT.get(marque.lower().strip()) or _lbc_code(marque)
+
+
+def _lbc_model_name(marque: str, modele: str) -> str:
+    """Retourne le nom LBC du modèle (ex: GLC → 'Classe GLC' pour Mercedes)."""
+    if marque.lower().strip() in ("mercedes", "mercedes-benz", "mercedes benz"):
+        mapped = _LBC_MERCEDES_MODEL.get(modele.lower().strip())
+        if mapped:
+            return mapped
+    return modele
+
+
 def _build_search_url(marque: str, modele: str, annee: int, carburant: str = None,
                        boite: str = None, motorisation: str = None,
                        type_vehicule: str = None, kilometrage: int = None) -> str:
@@ -181,8 +218,9 @@ def _build_search_url(marque: str, modele: str, annee: int, carburant: str = Non
     }
 
     is_util = type_vehicule and type_vehicule.lower() in ("utilitaire", "fourgon", "van", "camionnette")
-    brand_code = _lbc_code(marque)
-    model_code = f"{brand_code}_{_lbc_code(modele)}"
+    brand_code = _lbc_brand_code(marque)
+    model_name = _lbc_model_name(marque, modele)
+    model_code = f"{brand_code}_{model_name}" if " " in model_name else f"{brand_code}_{_lbc_code(model_name)}"
 
     params: dict = {
         "category": "5" if is_util else "2",
@@ -215,14 +253,19 @@ def _build_search_url(marque: str, modele: str, annee: int, carburant: str = Non
     return f"{SEARCH_URL}?{urllib.parse.urlencode(params)}"
 
 def _lbc_finition_code(marque: str, modele: str, finition: str) -> str:
-    """Construit le code finition LBC : AUDI_Q2_Design, VOLKSWAGEN_GOLF_GTI, etc."""
+    """Construit le code finition LBC : AUDI_Q2_Design, MERCEDES-BENZ_Classe GLC_Business, etc."""
     import unicodedata as _ud
     def _title(s):
         s = _ud.normalize("NFD", s)
         s = "".join(c for c in s if _ud.category(c) != "Mn")
         return "_".join(w.capitalize() for w in re.split(r'[\s\-]+', s.strip()) if w)
-    brand_code = _lbc_code(marque)
-    model_code = f"{brand_code}_{_lbc_code(modele)}"
+    brand_code = _lbc_brand_code(marque)
+    model_name = _lbc_model_name(marque, modele)
+    # Mercedes : le code modèle garde les espaces (ex: "Classe GLC")
+    if " " in model_name:
+        model_code = f"{brand_code}_{model_name}"
+    else:
+        model_code = f"{brand_code}_{_lbc_code(model_name)}"
     fin_code = _title(finition)
     return f"{model_code}_{fin_code}"
 
@@ -245,8 +288,9 @@ def _build_structured_payload(marque: str, modele: str, annee: int,
         "automatique": "2", "auto": "2", "bva": "2", "dsg": "2", "edr": "2",
     }
     is_util = type_vehicule and type_vehicule.lower() in ("utilitaire", "fourgon", "van", "camionnette")
-    brand_code = _lbc_code(marque)
-    model_code = f"{brand_code}_{_lbc_code(modele)}"
+    brand_code = _lbc_brand_code(marque)
+    model_name = _lbc_model_name(marque, modele)
+    model_code = f"{brand_code}_{model_name}" if " " in model_name else f"{brand_code}_{_lbc_code(model_name)}"
 
     enums: dict = {"ad_type": ["offer"], "u_car_brand": [brand_code], "u_car_model": [model_code]}
     if finition:
@@ -1276,11 +1320,18 @@ class LeboncoinScraper(BaseScraper):
         modele_api = re.sub(r'\bsportback\b', '', modele, flags=re.IGNORECASE).strip()
         target_hp = _extraire_cv(motorisation) if motorisation else None
         # Extraire finition depuis motorisation si pas fournie explicitement
-        # Ex: "30 TDI 116 DESIGN" → "DESIGN" | "30 TFSI 116 S LINE PLUS" → "S LINE PLUS"
+        # Format standard : "30 TDI 116 DESIGN" → "DESIGN"
+        # Format Mercedes : "220 D BUSINESS 4MATIC" → "BUSINESS" (sans le suffixe 4MATIC)
         if not finition and motorisation:
             m = re.match(r'^\d+\s+\S+\s+\d+\s+(.+)$', motorisation.strip(), re.IGNORECASE)
             if m:
                 finition = m.group(1).strip()
+            else:
+                # Format Mercedes/BMW : CODE LETTRE FINITION [4MATIC/4x4/…]
+                m2 = re.match(r'^\d+\s+[A-Za-z]\s+(.+?)(?:\s+(?:4MATIC|4X4|AWD|xDrive\d*|sDrive\d*))?$',
+                               motorisation.strip(), re.IGNORECASE)
+                if m2:
+                    finition = m2.group(1).strip()
         # Code finition LBC ex: "AUDI_Q2_Design" — transmis si finition connue
         lbc_fin = _lbc_finition_code(marque, modele_api, finition) if finition else None
 
