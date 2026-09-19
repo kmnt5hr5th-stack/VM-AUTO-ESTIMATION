@@ -240,9 +240,9 @@ def _build_structured_payload(marque: str, modele: str, annee: int,
 
     enums: dict = {"ad_type": ["offer"], "u_car_brand": [brand_code], "u_car_model": [model_code]}
     if finition:
-        fin_code = _lbc_finition_code(marque, modele, finition)
-        enums["u_car_finition"] = [fin_code]
-        logger.info(f"[leboncoin] u_car_finition={fin_code}")
+        # finition est déjà un code LBC encodé (ex: "AUDI_Q2_Design") — pas de re-encodage
+        enums["u_car_finition"] = [finition]
+        logger.info(f"[leboncoin] u_car_finition={finition}")
     if carburant:
         fuel = FUEL_MAP.get(carburant.lower().strip())
         if fuel:
@@ -256,7 +256,8 @@ def _build_structured_payload(marque: str, modele: str, annee: int,
     if annee:
         ranges["regdate"] = {"min": annee - 1, "max": annee + 1}
     if kilometrage:
-        ranges["mileage"] = {"min": max(0, kilometrage - 10_000), "max": kilometrage + 10_000}
+        km_base = round(kilometrage / 10_000) * 10_000
+        ranges["mileage"] = {"min": max(0, km_base - 10_000), "max": km_base + 10_000}
     if target_hp:
         # HP exact comme l'URL LBC (116-116), pas ±5
         ranges["horse_power_din"] = {"min": target_hp, "max": target_hp}
@@ -788,6 +789,16 @@ async def _fetch_structured_api_pages(marque, modele, annee, kilometrage,
             all_results.extend(page_results)
             if len(ads) < 35:
                 break  # dernière page
+    # Dedup par URL (évite les doublons entre pages)
+    if return_details:
+        seen = set()
+        deduped = []
+        for r in all_results:
+            key = r.get("url") or r.get("titre", "") + str(r.get("prix", ""))
+            if key and key not in seen:
+                seen.add(key)
+                deduped.append(r)
+        return deduped
     return all_results
 
 
