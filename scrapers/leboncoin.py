@@ -252,7 +252,9 @@ def _build_structured_payload(marque: str, modele: str, annee: int,
         if gear:
             enums["gearbox"] = [gear]
 
-    ranges: dict = {"regdate": {"min": annee, "max": annee}}
+    ranges: dict = {}
+    if annee:
+        ranges["regdate"] = {"min": annee - 1, "max": annee + 1}
     if kilometrage:
         margin = 15_000 if kilometrage <= 100_000 else 25_000
         ranges["mileage"] = {"min": max(0, kilometrage - margin), "max": kilometrage + margin}
