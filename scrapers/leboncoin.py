@@ -713,11 +713,17 @@ def _extract_annonces(ads: list, modele: str, marque: str = None, carburant: str
                     age_jours = ((_dt.datetime.now(_dt.timezone.utc) - pub_date).days)
                 except Exception:
                     pass
+            images = ad.get("images", {}) or {}
+            image_url = (
+                images.get("thumb_url") or images.get("small_url") or
+                images.get("url") or ad.get("thumb_url") or ""
+            )
             annonces.append({
                 "prix": int(p),
                 "km": ad_km,
                 "titre": titre_original,
                 "url": url,
+                "image_url": image_url,
                 "vendeur_type": vendeur_type,
                 "vendeur_nom": vendeur_nom,
                 "age_jours": age_jours,
