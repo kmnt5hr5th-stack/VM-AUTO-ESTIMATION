@@ -291,6 +291,7 @@ def _build_search_url(marque: str, modele: str, annee: int, carburant: str = Non
         "essence": "1", "sp95": "1", "sp98": "1",
         "diesel": "2", "gazole": "2",
         "hybride": "3",
+        "hybride rechargeable": "8",
         "electrique": "4", "électrique": "4",
         "gpl": "5",
     }
@@ -320,7 +321,8 @@ def _build_search_url(marque: str, modele: str, annee: int, carburant: str = Non
     params["u_car_model"] = model_code
 
     if carburant:
-        fuel = FUEL_MAP.get(carburant.lower().strip())
+        c_lower = carburant.lower().strip()
+        fuel = FUEL_MAP.get(c_lower)
         if fuel:
             params["fuel"] = fuel
 
@@ -342,15 +344,15 @@ def _build_search_url(marque: str, modele: str, annee: int, carburant: str = Non
     return f"{SEARCH_URL}?{urllib.parse.urlencode(params)}"
 
 def _lbc_finition_code(marque: str, modele: str, finition: str) -> str:
-    """Construit le code finition LBC : AUDI_Q2_Design, MERCEDES-BENZ_Classe GLC_Business, etc."""
+    """Construit le code finition LBC : MERCEDES-BENZ_Classe GLC_AMG Line, AUDI_Q2_Design."""
     import unicodedata as _ud
     def _title(s):
         s = _ud.normalize("NFD", s)
         s = "".join(c for c in s if _ud.category(c) != "Mn")
-        return "_".join(w.capitalize() for w in re.split(r'[\s\-]+', s.strip()) if w)
+        # LBC préserve les espaces dans les noms de finition (ex: "AMG Line", pas "Amg_Line")
+        return " ".join(w.capitalize() for w in re.split(r'[\s\-]+', s.strip()) if w)
     brand_code = _lbc_brand_code(marque)
     model_name = _lbc_model_name(marque, modele)
-    # Mercedes : le code modèle garde les espaces (ex: "Classe GLC")
     if " " in model_name:
         model_code = f"{brand_code}_{model_name}"
     else:
@@ -368,9 +370,10 @@ def _build_structured_payload(marque: str, modele: str, annee: int,
     FUEL_MAP = {
         "essence": "1", "sp95": "1", "sp98": "1",
         "diesel": "2", "gazole": "2",
-        "hybride": "3",
-        "electrique": "4", "électrique": "4",
-        "gpl": "5",
+        "hybride": ["3", "8"],
+        "hybride rechargeable": ["8"],
+        "electrique": ["4"], "électrique": ["4"],
+        "gpl": ["5"],
     }
     GEAR_CODE = {
         "manuelle": "1", "mécanique": "1", "mecanique": "1", "bvm": "1", "bm": "1",
@@ -383,13 +386,12 @@ def _build_structured_payload(marque: str, modele: str, annee: int,
 
     enums: dict = {"ad_type": ["offer"], "u_car_brand": [brand_code], "u_car_model": [model_code]}
     if finition:
-        # finition est déjà un code LBC encodé (ex: "AUDI_Q2_Design") — pas de re-encodage
         enums["u_car_finition"] = [finition]
         logger.info(f"[leboncoin] u_car_finition={finition}")
     if carburant:
-        fuel = FUEL_MAP.get(carburant.lower().strip())
-        if fuel:
-            enums["fuel"] = [fuel]
+        fuel_codes = FUEL_MAP.get(carburant.lower().strip())
+        if fuel_codes:
+            enums["fuel"] = fuel_codes if isinstance(fuel_codes, list) else [fuel_codes]
     if boite:
         gear = GEAR_CODE.get(boite.lower().strip())
         if gear:
@@ -488,11 +490,12 @@ def _mobile_ua() -> tuple[str, str, dict]:
 def _build_lbc_payload(marque, modele, annee, km, page=1, carburant=None, boite=None,
                        type_vehicule=None, target_hp=None) -> dict:
     FUEL_MAP = {
-        "essence": "1", "sp95": "1", "sp98": "1",
-        "diesel": "2", "gazole": "2",
-        "hybride": "3",
-        "electrique": "4", "électrique": "4",
-        "gpl": "5", "gnv": "6",
+        "essence": ["1"], "sp95": ["1"], "sp98": ["1"],
+        "diesel": ["2"], "gazole": ["2"],
+        "hybride": ["3", "8"],
+        "hybride rechargeable": ["8"],
+        "electrique": ["4"], "électrique": ["4"],
+        "gpl": ["5"], "gnv": ["6"],
     }
     GEAR_MAP = {
         "mecanique": "1", "mécanique": "1", "manuelle": "1", "bvm": "1", "bm": "1",
@@ -500,9 +503,9 @@ def _build_lbc_payload(marque, modele, annee, km, page=1, carburant=None, boite=
     }
     enums: dict = {"ad_type": ["offer"]}
     if carburant:
-        fuel = FUEL_MAP.get(carburant.lower().strip())
-        if fuel:
-            enums["fuel"] = [fuel]
+        fuel_codes = FUEL_MAP.get(carburant.lower().strip())
+        if fuel_codes:
+            enums["fuel"] = fuel_codes
     if boite:
         gear = GEAR_MAP.get(boite.lower().strip())
         if gear:
@@ -591,7 +594,11 @@ _FUEL_LABELS = {
     "electrique": ["electrique", "électrique", "electric"],
     "gpl": ["gpl", "lpg"],
 }
-_FUEL_NUMERIC = {"1": "essence", "2": "diesel", "3": "hybride", "4": "electrique", "5": "gpl"}
+_FUEL_NUMERIC = {
+    "1": "essence", "2": "diesel", "3": "hybride",
+    "4": "electrique", "5": "gpl", "6": "gnv",
+    "8": "hybride",  # hybride rechargeable (PHEV) = aussi "hybride" pour le matching
+}
 _GEAR_LABELS = {
     "manual": ["manuelle", "manual", "mécanique", "mecanique", "bvm"],
     "automatic": ["automatique", "automatic", "auto", "bva", "dsg"],
@@ -599,9 +606,13 @@ _GEAR_LABELS = {
 
 def _match_fuel(attr_val: str, carburant: str) -> bool:
     v = attr_val.strip()
-    # Codes numériques LBC (fuel=1=essence, 2=diesel, …)
     if v in _FUEL_NUMERIC:
-        return _FUEL_NUMERIC[v] == carburant.lower().strip()
+        fuel_norm = _FUEL_NUMERIC[v]
+        c_lower = carburant.lower().strip()
+        # "hybride" matche fuel=3 ET fuel=8 (PHEV)
+        if c_lower in ("hybride", "hybride rechargeable"):
+            return fuel_norm == "hybride"
+        return fuel_norm == c_lower
     labels = _FUEL_LABELS.get(carburant.lower(), [carburant.lower()])
     return any(lbl in v.lower() for lbl in labels)
 
