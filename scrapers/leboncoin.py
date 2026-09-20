@@ -886,6 +886,15 @@ def _extract_annonces(ads: list, modele: str, marque: str = None, carburant: str
                 images.get("thumb_url") or images.get("small_url") or
                 images.get("url") or ad.get("thumb_url") or ""
             )
+            try:
+                cote_min = int(attrs["car_price_min"]) if attrs.get("car_price_min") else None
+            except (ValueError, TypeError):
+                cote_min = None
+            try:
+                cote_max = int(attrs["car_price_max"]) if attrs.get("car_price_max") else None
+            except (ValueError, TypeError):
+                cote_max = None
+
             annonces.append({
                 "prix": int(p),
                 "km": ad_km,
@@ -895,6 +904,8 @@ def _extract_annonces(ads: list, modele: str, marque: str = None, carburant: str
                 "vendeur_type": vendeur_type,
                 "vendeur_nom": vendeur_nom,
                 "age_jours": age_jours,
+                "cote_min": cote_min,
+                "cote_max": cote_max,
             })
 
     if not structured:
