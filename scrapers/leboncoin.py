@@ -220,11 +220,19 @@ SEARCH_URL = "https://www.leboncoin.fr/recherche"
 
 
 def _lbc_code(s: str) -> str:
-    """Normalise une chaîne en code LBC : majuscules, sans accents, espaces → underscores."""
+    """Normalise une chaîne en code LBC marque : majuscules, sans accents, espaces → underscores."""
     import unicodedata
     s = unicodedata.normalize("NFD", s)
     s = "".join(c for c in s if unicodedata.category(c) != "Mn")
     return re.sub(r'[\s\-]+', '_', s).upper()
+
+
+def _lbc_model_code(s: str) -> str:
+    """Code LBC pour un modèle : préserve la casse d'origine (LBC attend 'Kona', pas 'KONA')."""
+    import unicodedata
+    s = unicodedata.normalize("NFD", s)
+    s = "".join(c for c in s if unicodedata.category(c) != "Mn")
+    return re.sub(r'[\s\-]+', '_', s)
 
 
 # Codes LBC exacts pour les marques/modèles qui dévient de la règle générale
@@ -286,7 +294,7 @@ def _build_search_url(marque: str, modele: str, annee: int, carburant: str = Non
     is_util = type_vehicule and type_vehicule.lower() in ("utilitaire", "fourgon", "van", "camionnette")
     brand_code = _lbc_brand_code(marque)
     model_name = _lbc_model_name(marque, modele)
-    model_code = f"{brand_code}_{model_name}" if " " in model_name else f"{brand_code}_{_lbc_code(model_name)}"
+    model_code = f"{brand_code}_{model_name}" if " " in model_name else f"{brand_code}_{_lbc_model_code(model_name)}"
 
     params: dict = {
         "category": "5" if is_util else "2",
@@ -331,7 +339,7 @@ def _lbc_finition_code(marque: str, modele: str, finition: str) -> str:
     if " " in model_name:
         model_code = f"{brand_code}_{model_name}"
     else:
-        model_code = f"{brand_code}_{_lbc_code(model_name)}"
+        model_code = f"{brand_code}_{_lbc_model_code(model_name)}"
     fin_code = _title(finition)
     return f"{model_code}_{fin_code}"
 
@@ -356,7 +364,7 @@ def _build_structured_payload(marque: str, modele: str, annee: int,
     is_util = type_vehicule and type_vehicule.lower() in ("utilitaire", "fourgon", "van", "camionnette")
     brand_code = _lbc_brand_code(marque)
     model_name = _lbc_model_name(marque, modele)
-    model_code = f"{brand_code}_{model_name}" if " " in model_name else f"{brand_code}_{_lbc_code(model_name)}"
+    model_code = f"{brand_code}_{model_name}" if " " in model_name else f"{brand_code}_{_lbc_model_code(model_name)}"
 
     enums: dict = {"ad_type": ["offer"], "u_car_brand": [brand_code], "u_car_model": [model_code]}
     if finition:
