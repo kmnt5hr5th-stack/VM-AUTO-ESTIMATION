@@ -3106,6 +3106,38 @@
       ],
       "2010": [
         "Essence"
+      ],
+      "2015": [
+        "Essence",
+        "Diesel"
+      ],
+      "2016": [
+        "Essence",
+        "Diesel"
+      ],
+      "2017": [
+        "Essence",
+        "Diesel"
+      ],
+      "2018": [
+        "Essence",
+        "Diesel"
+      ],
+      "2019": [
+        "Essence",
+        "Diesel"
+      ],
+      "2020": [
+        "Essence",
+        "Diesel"
+      ],
+      "2021": [
+        "Essence",
+        "Diesel"
+      ],
+      "2022": [
+        "Essence",
+        "Diesel"
       ]
     },
     "I7": {
@@ -8083,6 +8115,49 @@
         "Diesel",
         "Hybride"
       ]
+    },
+    "Fiesta": {
+      "2017": [
+        "Essence",
+        "Diesel"
+      ],
+      "2018": [
+        "Essence",
+        "Diesel"
+      ],
+      "2019": [
+        "Essence",
+        "Diesel"
+      ],
+      "2020": [
+        "Essence",
+        "Diesel",
+        "Hybride"
+      ],
+      "2021": [
+        "Essence",
+        "Hybride"
+      ],
+      "2022": [
+        "Essence",
+        "Hybride"
+      ],
+      "2023": [
+        "Essence",
+        "Hybride"
+      ],
+      "2024": [
+        "Essence",
+        "Hybride"
+      ],
+      "2025": [
+        "Essence",
+        "Hybride"
+      ],
+      "2026": [
+        "Essence",
+        "Hybride"
+      ]
     }
   },
   "MERCEDES": {
@@ -9886,6 +9961,37 @@
       "2018": [
         "Essence",
         "Diesel"
+      ],
+      "2019": [
+        "Diesel"
+      ],
+      "2020": [
+        "Essence",
+        "Diesel",
+        "Électrique"
+      ],
+      "2021": [
+        "Diesel"
+      ],
+      "2022": [
+        "Diesel"
+      ],
+      "2023": [
+        "Essence",
+        "Diesel",
+        "Électrique"
+      ],
+      "2024": [
+        "Diesel",
+        "Électrique"
+      ],
+      "2025": [
+        "Diesel",
+        "Électrique"
+      ],
+      "2026": [
+        "Diesel",
+        "Électrique"
       ]
     },
     "Classe E 5 Amg": {
@@ -14039,6 +14145,37 @@
       ],
       "2011": [
         "Diesel"
+      ],
+      "2018": [
+        "Diesel"
+      ],
+      "2019": [
+        "Essence",
+        "Diesel"
+      ],
+      "2020": [
+        "Essence",
+        "Diesel",
+        "Hybride"
+      ],
+      "2021": [
+        "Essence",
+        "Diesel",
+        "Hybride"
+      ],
+      "2022": [
+        "Essence",
+        "Diesel",
+        "Hybride"
+      ],
+      "2023": [
+        "Hybride"
+      ],
+      "2024": [
+        "Hybride"
+      ],
+      "2025": [
+        "Hybride"
       ]
     },
     "Touran 2 Entreprise": {},
@@ -15351,6 +15488,33 @@
       "2024": [
         "Essence"
       ]
+    },
+    "Mito": {
+      "2015": [
+        "Essence",
+        "Diesel",
+        "GPL"
+      ],
+      "2016": [
+        "Essence",
+        "Diesel",
+        "GPL"
+      ],
+      "2017": [
+        "Essence",
+        "Diesel",
+        "GPL"
+      ],
+      "2018": [
+        "Essence",
+        "Diesel",
+        "GPL"
+      ],
+      "2019": [
+        "Essence",
+        "Diesel",
+        "GPL"
+      ]
     }
   },
   "ASTON MARTIN": {
@@ -16068,6 +16232,43 @@
       "2026": [
         "Essence"
       ]
+    },
+    "Lodgy": {
+      "2015": [
+        "Essence",
+        "Diesel",
+        "GPL"
+      ],
+      "2016": [
+        "Essence",
+        "Diesel"
+      ],
+      "2017": [
+        "Essence",
+        "Diesel",
+        "GPL"
+      ],
+      "2018": [
+        "Essence",
+        "Diesel",
+        "GPL"
+      ],
+      "2019": [
+        "Essence",
+        "Diesel"
+      ],
+      "2020": [
+        "Essence",
+        "Diesel"
+      ],
+      "2021": [
+        "Essence",
+        "Diesel"
+      ],
+      "2022": [
+        "Essence",
+        "Diesel"
+      ]
     }
   },
   "DS": {
@@ -16560,14 +16761,40 @@
       "2024": [
         "Essence",
         "Diesel",
+        "Électrique",
         "GPL"
       ],
       "2025": [
         "Essence",
         "Diesel",
+        "Électrique",
         "GPL"
       ],
       "2026": [
+        "Essence",
+        "Diesel",
+        "Électrique",
+        "GPL"
+      ],
+      "2015": [
+        "Diesel",
+        "GPL"
+      ],
+      "2016": [
+        "Essence",
+        "Diesel"
+      ],
+      "2017": [
+        "Essence",
+        "Diesel",
+        "GPL"
+      ],
+      "2018": [
+        "Essence",
+        "Diesel",
+        "GPL"
+      ],
+      "2019": [
         "Essence",
         "Diesel",
         "GPL"
@@ -19911,6 +20138,41 @@
       ],
       "2026": [
         "Électrique"
+      ]
+    },
+    "Rio": {
+      "2017": [
+        "Essence",
+        "Diesel"
+      ],
+      "2018": [
+        "Essence",
+        "Diesel"
+      ],
+      "2019": [
+        "Essence"
+      ],
+      "2020": [
+        "Essence",
+        "Hybride"
+      ],
+      "2021": [
+        "Essence",
+        "Hybride"
+      ],
+      "2022": [
+        "Essence",
+        "Hybride"
+      ],
+      "2023": [
+        "Essence",
+        "Hybride"
+      ],
+      "2024": [
+        "Hybride"
+      ],
+      "2025": [
+        "Hybride"
       ]
     }
   },
@@ -24529,6 +24791,47 @@
       "2026": [
         "Diesel"
       ]
+    },
+    "Crossland": {
+      "2017": [
+        "Essence",
+        "Diesel"
+      ],
+      "2018": [
+        "Essence",
+        "Diesel"
+      ],
+      "2019": [
+        "Essence",
+        "Diesel"
+      ],
+      "2020": [
+        "Essence",
+        "Diesel"
+      ],
+      "2021": [
+        "Essence",
+        "Diesel"
+      ],
+      "2022": [
+        "Essence",
+        "Diesel"
+      ],
+      "2023": [
+        "Essence",
+        "Diesel"
+      ],
+      "2024": [
+        "Essence",
+        "Diesel"
+      ],
+      "2025": [
+        "Essence",
+        "Diesel"
+      ],
+      "2026": [
+        "Essence"
+      ]
     }
   },
   "PORSCHE": {
@@ -28274,6 +28577,30 @@
         "Essence",
         "Diesel",
         "GPL"
+      ],
+      "2015": [
+        "Essence",
+        "Diesel"
+      ],
+      "2016": [
+        "Essence",
+        "Diesel"
+      ],
+      "2017": [
+        "Essence",
+        "Diesel"
+      ],
+      "2018": [
+        "Essence",
+        "Diesel"
+      ],
+      "2019": [
+        "Essence",
+        "Diesel"
+      ],
+      "2020": [
+        "Essence",
+        "Diesel"
       ]
     },
     "Xc40": {
@@ -28831,6 +29158,28 @@
       ],
       "2026": [
         "Électrique"
+      ]
+    },
+    "S60": {
+      "2015": [
+        "Essence",
+        "Diesel"
+      ],
+      "2016": [
+        "Essence",
+        "Diesel"
+      ],
+      "2017": [
+        "Essence",
+        "Diesel"
+      ],
+      "2018": [
+        "Essence",
+        "Diesel"
+      ],
+      "2019": [
+        "Essence",
+        "Diesel"
       ]
     }
   },
@@ -30332,6 +30681,27 @@
     },
     "B9 Tribeca": {
       "2006": [
+        "Essence"
+      ]
+    },
+    "Forester": {
+      "2015": [
+        "Essence",
+        "Diesel"
+      ],
+      "2016": [
+        "Essence",
+        "Diesel"
+      ],
+      "2017": [
+        "Essence",
+        "Diesel"
+      ],
+      "2018": [
+        "Essence",
+        "Diesel"
+      ],
+      "2019": [
         "Essence"
       ]
     }
