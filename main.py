@@ -363,30 +363,43 @@ async def debug_lbc_cote(ad_id: str = "3079197187"):
     ua, impersonate, headers = _mobile_ua()
     proxies = _webshare_proxies()
 
-    candidates = [
-        f"https://api.leboncoin.fr/api/v1/ads/{ad_id}",
-        f"https://api.leboncoin.fr/classified/v2/classifieds/{ad_id}",
-        f"https://api.leboncoin.fr/classified/v1/classifieds/{ad_id}",
-        f"https://api.leboncoin.fr/api/v1/classifieds/{ad_id}",
-        f"https://api.leboncoin.fr/finder/ads/{ad_id}",
-        f"https://api.leboncoin.fr/api/pricing/ad/{ad_id}",
-        f"https://api.leboncoin.fr/api/v1/pricing/{ad_id}",
-        f"https://api.leboncoin.fr/api/v1/price-check?list_id={ad_id}",
-        f"https://api.leboncoin.fr/api/price/{ad_id}",
-    ]
+    # Cherche l'annonce via finder/search avec list_id — retourne le JSON brut complet
+    payload = {
+        "filters": {
+            "category": {"id": "2"},
+            "keywords": {},
+            "location": {"regions": [], "departments": [], "cities": [], "area": None},
+            "ranges": {},
+            "enums": {},
+        },
+        "include_locations_nearby": False,
+        "list_ids": [int(ad_id)],
+        "limit": 1,
+        "offset": 0,
+        "pivot": None,
+        "sort_by": "time",
+        "sort_order": "desc",
+    }
 
-    results = []
+    result = {}
     async with AsyncSession(impersonate=impersonate, proxies=proxies) as s:
         await s.get("https://www.leboncoin.fr/", headers=headers, timeout=15)
-        for url in candidates:
-            try:
-                r = await s.get(url, headers=headers, timeout=10)
-                body = r.text[:800] if r.status_code == 200 else ""
-                results.append({"url": url, "status": r.status_code, "body": body})
-            except Exception as e:
-                results.append({"url": url, "status": "ERROR", "body": str(e)[:100]})
+        try:
+            r = await s.post("https://api.leboncoin.fr/finder/search",
+                             json=payload, headers=headers, timeout=20)
+            result["status"] = r.status_code
+            if r.ok:
+                data = r.json()
+                ads = data.get("ads", [])
+                result["nb_ads"] = len(ads)
+                result["ad_raw"] = ads[0] if ads else None
+                result["all_keys"] = list(ads[0].keys()) if ads else []
+            else:
+                result["body"] = r.text[:500]
+        except Exception as e:
+            result["error"] = str(e)
 
-    return {"ad_id": ad_id, "results": results}
+    return {"ad_id": ad_id, "result": result}
 
 
 # ─── Immatriculation lookup ───────────────────────────────────────────────────
