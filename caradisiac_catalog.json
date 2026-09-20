@@ -235271,8 +235271,8 @@
         "hybride": [],
         "electrique": [
           "60 KWH S",
-          "85 KWH PERFORMANCE",
-          "85 KWH S"
+          "85 KWH S",
+          "85 KWH PERFORMANCE"
         ],
         "gpl": []
       },
@@ -235298,10 +235298,14 @@
         "electrique": [
           "60 DUAL MOTOR 60 KWH",
           "60 DUAL MOTOR 7PL 60 KWH",
+          "60KWH",
           "85 DUAL MOTOR 85 KWH",
+          "85 KWH",
+          "85 KWH 367",
           "P85 310KW 7PL 85 KWH",
           "P85 310KW 85 KWH",
           "P85 7PL 85 KWH",
+          "P85 85 KWH",
           "P85 PERFORMANCE DUAL MOTOR 85 KWH"
         ],
         "gpl": []
@@ -235313,12 +235317,16 @@
         "electrique": [
           "60 KWH 385",
           "60 KWH 385 7PL",
+          "60KWH",
           "60KWH 7PL",
           "70 KWH",
           "70 KWH DUAL MOTOR",
           "85 DUAL MOTOR 380 7PL 85 KWH",
           "85 DUAL MOTOR 380 85 KWH",
           "85 DUAL MOTOR 7PL 85 KWH",
+          "85 DUAL MOTOR 85 KWH",
+          "85 KWH",
+          "85 KWH 367",
           "85 KWH 367 7PL",
           "85 KWH 385",
           "85 KWH 385 7PL",
@@ -235332,6 +235340,7 @@
           "90 KWH 7PL",
           "90 KWH DUAL MOTOR",
           "P85 PERFORMANCE DUAL MOTOR 7PL 85 KWH",
+          "P85 PERFORMANCE DUAL MOTOR 85 KWH",
           "P90D 90 KWH PERFORMANCE DUAL MOTOR"
         ],
         "gpl": []
@@ -235360,10 +235369,28 @@
         "hybride": [],
         "electrique": [
           "(2) 100D DUAL MOTOR 100 KWH",
+          "(2) 60 KWH",
           "(2) 60 KWH 7PL",
+          "(2) 60D DUAL MOTOR 60 KWH",
           "(2) 60D DUAL MOTOR 7PL 60 KWH",
+          "(2) 75 KWH",
           "(2) 75 KWH 7PL",
-          "(2) 90D DUAL MOTOR 7PL 90 KWH"
+          "(2) 75D DUAL MOTOR 75 KWH",
+          "(2) 90D DUAL MOTOR 7PL 90 KWH",
+          "(2) P100DL PERFORMANCE LUDICROUS DUAL MOTOR 100 KWH",
+          "90 D DUAL MOTOR 90 KWH",
+          "90 KWH DUAL MOTOR"
+        ],
+        "gpl": []
+      },
+      "2018": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [
+          "(2) 100D DUAL MOTOR 100 KWH",
+          "(2) 75D DUAL MOTOR 75 KWH",
+          "(2) P100DL PERFORMANCE LUDICROUS DUAL MOTOR 100 KWH"
         ],
         "gpl": []
       },
@@ -235375,7 +235402,10 @@
           "(2) 100 KWH AUTONOMIE STANDARD RANGE AWD",
           "(2) 100 KWH LONG RANGE AWD",
           "(2) 100 KWH PERFORMANCE AWD DUAL MOTOR",
-          "(2) 100 KWH PERFORMANCE LUDICROUS AWD"
+          "(2) 100 KWH PERFORMANCE LUDICROUS AWD",
+          "(2) 100D DUAL MOTOR 100 KWH",
+          "(2) 75D DUAL MOTOR 75 KWH",
+          "(2) P100DL PERFORMANCE LUDICROUS DUAL MOTOR 100 KWH"
         ],
         "gpl": []
       },
@@ -235384,7 +235414,9 @@
         "diesel": [],
         "hybride": [],
         "electrique": [
-          "(2) 100 KWH LONG RANGE PLUS AWD"
+          "(2) 100 KWH LONG RANGE AWD",
+          "(2) 100 KWH LONG RANGE PLUS AWD",
+          "(2) 100 KWH PERFORMANCE LUDICROUS AWD"
         ],
         "gpl": []
       },
@@ -235393,6 +235425,8 @@
         "diesel": [],
         "hybride": [],
         "electrique": [
+          "(2) 100 KWH LONG RANGE PLUS AWD",
+          "(2) 100 KWH PERFORMANCE LUDICROUS AWD",
           "(3) 100 KWH PERFORMANCE AWD DUAL MOTOR",
           "(3) 1000 100KWH TRI-MOTOR PLAID",
           "(3) 1020 100KWH TRI-MOTOR PLAID AWD",
@@ -235411,31 +235445,63 @@
         "hybride": [],
         "electrique": [
           "(3) 100 KWH DUAL-MOTOR PERFORMANCE PALLADIUM",
-          "(3) 1000 100 KWH DUAL-MOTOR PERFORMANCE PALLADIUM PLAID"
+          "(3) 1000 100 KWH DUAL-MOTOR PERFORMANCE PALLADIUM PLAID",
+          "(3) 1000 100KWH TRI-MOTOR PLAID",
+          "(3) 1020 100KWH TRI-MOTOR PLAID AWD",
+          "(3) 1020 239 KHW PLAID AWD 100 KWH",
+          "(3) DUAL-MOTOR LONG RANGE AWD 100 KWH",
+          "(3) DUAL-MOTOR LONG RANGE AWD 100KWH",
+          "(3) DUAL-MOTOR LONG RANGE PLUS AWD 100 KWH"
         ],
         "gpl": []
       },
       "2023": {
-        "essence": [
-          "(3) DUAL-MOTOR AWD"
-        ],
+        "essence": [],
         "diesel": [],
         "hybride": [],
         "electrique": [
           "(2) 100 KWH TRI-MOTOR PLAID",
           "(2) DUAL-MOTOR AWD 0 KWH",
-          "(3) 100 KWH TRI-MOTOR PLAID"
+          "(3) 100 KWH DUAL-MOTOR PERFORMANCE PALLADIUM",
+          "(3) 100 KWH TRI-MOTOR PLAID",
+          "(3) 1000 100 KWH DUAL-MOTOR PERFORMANCE PALLADIUM PLAID",
+          "(3) 1020 239 KHW PLAID AWD 100 KWH",
+          "(3) DUAL-MOTOR AWD"
+        ],
+        "gpl": []
+      },
+      "2024": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [
+          "(2) 100 KWH TRI-MOTOR PLAID",
+          "(3) 100 KWH DUAL-MOTOR PERFORMANCE PALLADIUM",
+          "(3) 100 KWH TRI-MOTOR PLAID",
+          "(3) 1020 239 KHW PLAID AWD 100 KWH",
+          "(3) DUAL-MOTOR AWD"
         ],
         "gpl": []
       },
       "2025": {
-        "essence": [
-          "(3) 670 LONG RANGE AWD"
-        ],
+        "essence": [],
         "diesel": [],
         "hybride": [],
         "electrique": [
           "(3) 1020 100 KWH TRI-MOTOR PLAID",
+          "(3) 670 LONG RANGE AWD",
+          "(4) 100 KWH 504 DUAL MOTOR AWD",
+          "(4) 100 KWH 932 TRI MOTOR AWD PLAID"
+        ],
+        "gpl": []
+      },
+      "2026": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [
+          "(3) 100 KWH DUAL-MOTOR PERFORMANCE PALLADIUM",
+          "(3) 1020 239 KHW PLAID AWD 100 KWH",
           "(4) 100 KWH 504 DUAL MOTOR AWD",
           "(4) 100 KWH 932 TRI MOTOR AWD PLAID"
         ],
