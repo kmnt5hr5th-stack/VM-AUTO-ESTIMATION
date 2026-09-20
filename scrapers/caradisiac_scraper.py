@@ -42,7 +42,9 @@ def get(url: str, retries=3):
 
 def detect_fuel(version: str) -> str:
     v = version.upper()
-    if any(x in v for x in ["E-TECH", "FULL HYBRID", "HYBRIDE", "HYBRID", "HSD", "MHEV", "PHEV"]):
+    # Plug-in hybrids (Mercedes: 300 DE = diesel-electric, 300 E = gasoline-electric)
+    if any(x in v for x in ["E-TECH", "FULL HYBRID", "HYBRIDE", "HYBRID", "HSD", "MHEV", "PHEV",
+                              " DE ", " DE 4", "300 DE", "350 E ", "300 E ", "PLUG-IN", "PLUGIN"]):
         return "hybride"
     if any(x in v for x in ["ELECTRIQUE", "ELECTRIC", "KWH", "EV ", "BEV"]):
         return "electrique"
@@ -185,14 +187,26 @@ def get_versions_for_year(model_slug, year):
     if not soup:
         return []
     versions = []
+    # Caradisiac shows all versions across years in a table; capture any version
+    # link for this model (any year), not just the exact year.
+    base_pattern = f"/fiches-techniques/modele--{model_slug}/"
+    year_pattern  = f"{base_pattern}{year}/"
     for a in soup.find_all("a", href=True):
         href = a["href"]
-        pattern = f"/fiches-techniques/modele--{model_slug}/{year}/"
-        if pattern in href and href.rstrip("/") != pattern.rstrip("/"):
-            # Dernier segment = version encodée
-            txt = a.get_text(strip=True)
-            if txt and len(txt) > 3 and txt not in versions:
-                versions.append(txt)
+        if base_pattern not in href:
+            continue
+        # Skip bare year-index links (no version segment)
+        clean = href.rstrip("/")
+        if clean == year_pattern.rstrip("/"):
+            continue
+        # Must be a version link (not just /YYYY/)
+        after = clean[len(base_pattern):]   # e.g. "2015/220+d+4matic"
+        parts = after.split("/")
+        if len(parts) < 2 or not parts[1]:
+            continue
+        txt = a.get_text(strip=True)
+        if txt and len(txt) > 3 and txt not in versions:
+            versions.append(txt)
     return versions
 
 
