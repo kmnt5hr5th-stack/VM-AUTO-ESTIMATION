@@ -235556,7 +235556,7 @@
         "diesel": [],
         "hybride": [],
         "electrique": [
-          "LONG RANGE DUAL MOTOR 9CV AWD 75 KWH",
+          "LONG RANGE DUAL MOTOR AWD 75 KWH",
           "PERFORMANCE DUAL MOTOR AWD 75 KWH"
         ],
         "gpl": []
@@ -235566,9 +235566,9 @@
         "diesel": [],
         "hybride": [],
         "electrique": [
-          "306 AUTONOMIE STANDARD PLUS RWD 50KWH 4CV",
+          "306 AUTONOMIE STANDARD PLUS RWD 50KWH",
           "LONG RANGE RWD 75 KWH",
-          "PERFORMANCE 9CV WITH PUP AWD WITH UPGRADE 75 KWH"
+          "PERFORMANCE AWD WITH UPGRADE 75 KWH"
         ],
         "gpl": []
       },
@@ -235577,9 +235577,9 @@
         "diesel": [],
         "hybride": [],
         "electrique": [
-          "306 AUTONOMIE STANDARD PLUS RWD 50KWH 7CV",
-          "LONG RANGE DUAL MOTOR 11CV AWD 75 KWH",
-          "PERFORMANCE 12CV WITH PUP AWD WITH UPGRADE 75 KWH"
+          "306 AUTONOMIE STANDARD PLUS RWD 50KWH",
+          "LONG RANGE DUAL MOTOR AWD 75 KWH",
+          "PERFORMANCE AWD WITH UPGRADE 75 KWH"
         ],
         "gpl": []
       },
@@ -235589,14 +235589,10 @@
         "hybride": [],
         "electrique": [
           "(2) 275 AUTONOMIE STANDARD PLUS RWD 60KWH",
-          "(2) 275 AUTONOMIE STANDARD PLUS RWD 75KWH",
           "(2) 275 GRANDE AUTONOMIE RWD 60KWH",
           "(2) 325 GRANDE AUTONOMIE LICORNE 60KWH",
-          "(2) 482 PERFORMANCE AWD 75 KWH",
-          "(2) GRANDE AUTONOMIE AWD 346 75 KWH",
-          "(2) GRANDE AUTONOMIE AWD 75 KWH",
-          "GRANDE AUTONOMIE DUAL MOTOR AWD 75 KWH",
-          "PERFORMANCE AWD 75 KWH"
+          "(2) 346 GRANDE AUTONOMIE AWD 75 KWH",
+          "(2) 482 PERFORMANCE AWD 75 KWH"
         ],
         "gpl": []
       },
@@ -235605,18 +235601,15 @@
         "diesel": [],
         "hybride": [],
         "electrique": [
-          "(2) 275 AUTONOMIE STANDARD PLUS 50KWH RWD",
           "(2) 275 AUTONOMIE STANDARD PLUS RWD 50KWH",
-          "(2) 275 RWD AUTONOMIE STANDARD PLUS 50KWH",
-          "(2) 482 PERFORMANCE AWD 2022 75 KWH",
-          "(2) 482 PERFORMANCE AWD 2022 75KWH"
+          "(2) 346 GRANDE AUTONOMIE RWD 75 KWH",
+          "(2) 346 GRANDE AUTONOMIE AWD 75 KWH",
+          "(2) 482 PERFORMANCE AWD 75 KWH"
         ],
         "gpl": []
       },
       "2023": {
-        "essence": [
-          "(3) 482 PERFORMANCE AWD"
-        ],
+        "essence": [],
         "diesel": [],
         "hybride": [],
         "electrique": [
@@ -235624,21 +235617,20 @@
           "(3) 275 AUTONOMIE STANDARD PLUS RWD 60KWH",
           "(3) 283 STANDARD RANGE RWD PREMIUM 88KWH",
           "(3) 346 GRANDE AUTONOMIE AWD 75 KWH",
-          "(3) 350 GRANDE AUTONOMIE AWD 79 KWH"
+          "(3) 350 GRANDE AUTONOMIE AWD 79 KWH",
+          "(3) 350 GRANDE AUTONOMIE RWD 79 KWH",
+          "(3) 460 PERFORMANCE AWD 79 KWH",
+          "(3) 482 PERFORMANCE AWD"
         ],
         "gpl": []
       },
       "2024": {
-        "essence": [
-          "(3) 283 AUTONOMIE STANDARD RWD PREMIUM",
-          "(3) 283 STANDARD RANGE RWD PREMIUM"
-        ],
+        "essence": [],
         "diesel": [],
         "hybride": [],
         "electrique": [
           "(2) 346 GRANDE AUTONOMIE RWD 75 KWH",
           "(3) 275 AUTONOMIE STANDARD PLUS RWD 60KWH",
-          "(3) 283 AUTONOMIE STANDARD RWD PREMIUM",
           "(3) 283 STANDARD RANGE RWD PREMIUM",
           "(3) 283 STANDARD RANGE RWD PREMIUM 88KWH",
           "(3) 346 GRANDE AUTONOMIE AWD 75 KWH",
@@ -235654,7 +235646,26 @@
         "diesel": [],
         "hybride": [],
         "electrique": [
-          "(3) 286 STANDARD RANGE 62.5 KWH"
+          "(2) 346 GRANDE AUTONOMIE RWD 75 KWH",
+          "(3) 275 AUTONOMIE STANDARD PLUS RWD 60KWH",
+          "(3) 286 STANDARD RANGE 62.5 KWH",
+          "(3) 350 GRANDE AUTONOMIE AWD 79 KWH",
+          "(3) 350 GRANDE AUTONOMIE RWD 79 KWH",
+          "(3) 460 PERFORMANCE AWD 79 KWH"
+        ],
+        "gpl": []
+      },
+      "2026": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [
+          "(2) 346 GRANDE AUTONOMIE RWD 75 KWH",
+          "(3) 275 AUTONOMIE STANDARD PLUS RWD 60KWH",
+          "(3) 286 STANDARD RANGE 62.5 KWH",
+          "(3) 350 GRANDE AUTONOMIE AWD 79 KWH",
+          "(3) 350 GRANDE AUTONOMIE RWD 79 KWH",
+          "(3) 460 PERFORMANCE AWD 79 KWH"
         ],
         "gpl": []
       }
