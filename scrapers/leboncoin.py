@@ -263,10 +263,18 @@ def _lbc_brand_code(marque: str) -> str:
     return _LBC_BRAND_EXACT.get(marque.lower().strip()) or _lbc_code(marque)
 
 
-def _lbc_model_name(marque: str, modele: str) -> str:
-    """Retourne le nom LBC du modèle (ex: GLC → 'Classe GLC' pour Mercedes)."""
+def _lbc_model_name(marque: str, modele: str, carrosserie: str = None) -> str:
+    """Retourne le nom LBC du modèle (ex: GLC → 'Classe GLC' pour Mercedes).
+    Si carrosserie='coupé', GLC → 'Classe GLC Coupé', GLE → 'Classe GLE Coupé'."""
     if marque.lower().strip() in ("mercedes", "mercedes-benz", "mercedes benz"):
-        mapped = _LBC_MERCEDES_MODEL.get(modele.lower().strip())
+        key = modele.lower().strip()
+        # GLC + carrosserie Coupé → Classe GLC Coupé
+        if carrosserie and "coup" in carrosserie.lower():
+            coupe_key = f"{key} coupé"
+            mapped_coupe = _LBC_MERCEDES_MODEL.get(coupe_key)
+            if mapped_coupe:
+                return mapped_coupe
+        mapped = _LBC_MERCEDES_MODEL.get(key)
         if mapped:
             return mapped
     return modele
@@ -275,7 +283,7 @@ def _lbc_model_name(marque: str, modele: str) -> str:
 def _build_search_url(marque: str, modele: str, annee: int, carburant: str = None,
                        boite: str = None, motorisation: str = None,
                        type_vehicule: str = None, kilometrage: int = None,
-                       finition: str = None) -> str:
+                       finition: str = None, carrosserie: str = None) -> str:
     """Construit l'URL de recherche LBC identique à celle du site (category, brand, model, finition, regdate, fuel, gearbox, hp, mileage)."""
     import urllib.parse
 
@@ -293,7 +301,7 @@ def _build_search_url(marque: str, modele: str, annee: int, carburant: str = Non
 
     is_util = type_vehicule and type_vehicule.lower() in ("utilitaire", "fourgon", "van", "camionnette")
     brand_code = _lbc_brand_code(marque)
-    model_name = _lbc_model_name(marque, modele)
+    model_name = _lbc_model_name(marque, modele, carrosserie=carrosserie)
     model_code = f"{brand_code}_{model_name}" if " " in model_name else f"{brand_code}_{_lbc_model_code(model_name)}"
 
     # Ordre identique à l'URL LBC : category, regdate, hp, mileage, brand, model, fuel, finition, gearbox
@@ -348,7 +356,7 @@ def _build_structured_payload(marque: str, modele: str, annee: int,
                                carburant: str = None, boite: str = None,
                                target_hp: int = None, kilometrage: int = None,
                                type_vehicule: str = None, finition: str = None,
-                               page: int = 1) -> dict:
+                               carrosserie: str = None, page: int = 1) -> dict:
     """Payload finder/search identique à l'URL LBC (u_car_brand, u_car_model, u_car_finition, hp exact)."""
     FUEL_MAP = {
         "essence": "1", "sp95": "1", "sp98": "1",
@@ -363,7 +371,7 @@ def _build_structured_payload(marque: str, modele: str, annee: int,
     }
     is_util = type_vehicule and type_vehicule.lower() in ("utilitaire", "fourgon", "van", "camionnette")
     brand_code = _lbc_brand_code(marque)
-    model_name = _lbc_model_name(marque, modele)
+    model_name = _lbc_model_name(marque, modele, carrosserie=carrosserie)
     model_code = f"{brand_code}_{model_name}" if " " in model_name else f"{brand_code}_{_lbc_model_code(model_name)}"
 
     enums: dict = {"ad_type": ["offer"], "u_car_brand": [brand_code], "u_car_model": [model_code]}
@@ -906,7 +914,7 @@ async def _fetch_structured_api_pages(marque, modele, annee, kilometrage,
                 marque, modele, annee,
                 carburant=carburant, boite=boite, target_hp=target_hp,
                 kilometrage=kilometrage, type_vehicule=type_vehicule,
-                finition=lbc_finition, page=pg,
+                finition=lbc_finition, carrosserie=carrosserie, page=pg,
             )
             r = await s.post(API_URL, json=payload, headers=headers, timeout=30)
             if r.status_code == 403:
@@ -1165,7 +1173,7 @@ class LeboncoinScraper(BaseScraper):
         target_hp = _extraire_cv(motorisation) if motorisation else None
         url = _build_search_url(marque, modele, annee, carburant=carburant, boite=boite,
                                  motorisation=motorisation, type_vehicule=type_vehicule,
-                                 kilometrage=kilometrage, finition=finition)
+                                 kilometrage=kilometrage, finition=finition, carrosserie=carrosserie)
         logger.info(f"[leboncoin] URL search: {url}")
 
         for attempt in range(2):
