@@ -359,6 +359,18 @@ _CARADISIAC_FUEL_MAP = {
     "gnv": "gpl",
 }
 
+_VARIANT_SUFFIXES = [" sw", " break", " estate", " touring", " sportback", " variant", " e-tech", " combi", " active tourer"]
+
+def _lookup_versions_in_brand(brand_data: dict, m_norm: str, year_str: str, fuel_key: str) -> list[str]:
+    versions = []
+    for cat_model, year_data in brand_data.items():
+        cat_m_norm = _normalize(cat_model)
+        if not cat_m_norm.startswith(m_norm):
+            continue
+        year_entry = year_data.get(year_str, {})
+        versions.extend(year_entry.get(fuel_key, []))
+    return versions
+
 def _get_caradisiac_versions(brand: str, model: str, annee: int, carburant: str) -> list[str]:
     """Retourne les versions Caradisiac pour brand/model/annee/carburant."""
     if not _caradisiac_catalog or not brand or not model or not annee:
@@ -374,14 +386,22 @@ def _get_caradisiac_versions(brand: str, model: str, annee: int, carburant: str)
             break
     if not brand_data:
         return []
-    versions = []
-    for cat_model, year_data in brand_data.items():
-        cat_m_norm = _normalize(cat_model)
-        if not cat_m_norm.startswith(m_norm):
-            continue
-        year_entry = year_data.get(year_str, {})
-        versions.extend(year_entry.get(fuel_key, []))
-    return sorted(set(versions))
+
+    # Essai direct
+    versions = _lookup_versions_in_brand(brand_data, m_norm, year_str, fuel_key)
+    if versions:
+        return sorted(set(versions))
+
+    # Fallback : supprimer les suffixes de variante (SW, Break, Sportback…)
+    for suffix in _VARIANT_SUFFIXES:
+        if m_norm.endswith(suffix):
+            base_norm = m_norm[:-len(suffix)].strip()
+            if base_norm:
+                versions = _lookup_versions_in_brand(brand_data, base_norm, year_str, fuel_key)
+                if versions:
+                    return sorted(set(versions))
+
+    return []
 
 
 def _get_finitions_from_catalog(brand: str, model: str) -> list[str]:
