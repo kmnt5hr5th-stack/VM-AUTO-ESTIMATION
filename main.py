@@ -354,75 +354,39 @@ async def debug_lbc_raw(marque: str = "Audi", modele: str = "Q2", annee: int = 2
 @app.get("/debug/lbc-cote")
 async def debug_lbc_cote(ad_id: str = "3079197187"):
     """
-    Ouvre une annonce LBC avec Playwright et capture TOUTES les requêtes réseau.
-    Cherche spécifiquement les appels liés à la côte / prix équitable.
+    Teste plusieurs endpoints API LBC pour récupérer les détails d'une annonce
+    (incluant éventuellement la côte / prix équitable).
     """
-    from scrapers.leboncoin import _get_pw_context
-    import asyncio as _asyncio
+    from scrapers.leboncoin import _mobile_ua, _webshare_proxies
+    from curl_cffi.requests import AsyncSession
 
-    ctx = await _asyncio.wait_for(_get_pw_context(), timeout=40)
-    page = await ctx.new_page()
+    ua, impersonate, headers = _mobile_ua()
+    proxies = _webshare_proxies()
 
-    all_requests: list[dict] = []
-    cote_responses: list[dict] = []
+    candidates = [
+        f"https://api.leboncoin.fr/api/v1/ads/{ad_id}",
+        f"https://api.leboncoin.fr/classified/v2/classifieds/{ad_id}",
+        f"https://api.leboncoin.fr/classified/v1/classifieds/{ad_id}",
+        f"https://api.leboncoin.fr/api/v1/classifieds/{ad_id}",
+        f"https://api.leboncoin.fr/finder/ads/{ad_id}",
+        f"https://api.leboncoin.fr/api/pricing/ad/{ad_id}",
+        f"https://api.leboncoin.fr/api/v1/pricing/{ad_id}",
+        f"https://api.leboncoin.fr/api/v1/price-check?list_id={ad_id}",
+        f"https://api.leboncoin.fr/api/price/{ad_id}",
+    ]
 
-    COTE_KEYWORDS = ["cote", "fair", "market", "prix", "valuation", "estimate", "cotation",
-                     "price_check", "vehicle_price", "car_price", "vehicule"]
-
-    async def on_response(resp):
-        url = resp.url.lower()
-        if any(kw in url for kw in COTE_KEYWORDS):
+    results = []
+    async with AsyncSession(impersonate=impersonate, proxies=proxies) as s:
+        await s.get("https://www.leboncoin.fr/", headers=headers, timeout=15)
+        for url in candidates:
             try:
-                body = await resp.text()
-                cote_responses.append({
-                    "url": resp.url,
-                    "status": resp.status,
-                    "body_preview": body[:500],
-                })
-            except Exception:
-                cote_responses.append({"url": resp.url, "status": resp.status, "body_preview": ""})
+                r = await s.get(url, headers=headers, timeout=10)
+                body = r.text[:800] if r.status_code == 200 else ""
+                results.append({"url": url, "status": r.status_code, "body": body})
+            except Exception as e:
+                results.append({"url": url, "status": "ERROR", "body": str(e)[:100]})
 
-    def on_request(req):
-        all_requests.append({
-            "url": req.url[:150],
-            "method": req.method,
-        })
-
-    page.on("request", on_request)
-    page.on("response", on_response)
-
-    ad_url = f"https://www.leboncoin.fr/ad/voitures/{ad_id}"
-    page_title = ""
-    page_html_snippet = ""
-    try:
-        await page.goto(ad_url, wait_until="networkidle", timeout=60_000)
-        await _asyncio.sleep(3)
-        page_title = await page.title()
-        # Chercher "équitable" ou "cote" dans le DOM
-        try:
-            content = await page.content()
-            idx = content.lower().find("quitable")
-            page_html_snippet = content[max(0, idx-200):idx+500] if idx != -1 else content[:300]
-        except Exception:
-            pass
-    except Exception as e:
-        page_title = f"ERROR: {e}"
-    await page.close()
-
-    # Filtrer les requêtes API intéressantes
-    api_reqs = [r for r in all_requests if "api." in r["url"] or r["method"] == "POST"]
-    # Toutes les requêtes contenant des mots-clés liés au prix/côte
-    price_reqs = [r for r in all_requests if any(kw in r["url"].lower() for kw in COTE_KEYWORDS)]
-
-    return {
-        "ad_url": ad_url,
-        "page_title": page_title,
-        "page_html_snippet": page_html_snippet,
-        "cote_responses": cote_responses,
-        "api_requests": api_reqs[:50],
-        "price_related_requests": price_reqs,
-        "total_requests": len(all_requests),
-    }
+    return {"ad_id": ad_id, "results": results}
 
 
 # ─── Immatriculation lookup ───────────────────────────────────────────────────
