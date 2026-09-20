@@ -3038,10 +3038,23 @@
       "1996": [
         "Essence"
       ],
+      "1997": [
+        "Essence"
+      ],
+      "1998": [
+        "Essence"
+      ],
+      "1999": [
+        "Essence"
+      ],
       "2000": [
         "Essence"
       ],
       "2001": [
+        "Essence",
+        "Diesel"
+      ],
+      "2002": [
         "Essence",
         "Diesel"
       ],
@@ -3050,6 +3063,10 @@
         "Diesel"
       ],
       "2004": [
+        "Essence",
+        "Diesel"
+      ],
+      "2005": [
         "Essence",
         "Diesel"
       ]
@@ -3119,74 +3136,87 @@
     },
     "Serie 2 U06 Active Tourer": {
       "2021": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2022": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2023": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2024": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2025": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2026": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ]
     },
     "Serie 1": {
-      "2019": [
-        "Essence"
+      "2007": [
+        "Essence",
+        "Diesel"
       ],
-      "2020": [
-        "Essence"
+      "2008": [
+        "Essence",
+        "Diesel"
       ],
-      "2021": [
-        "Essence"
+      "2009": [
+        "Essence",
+        "Diesel"
       ],
-      "2022": [
-        "Essence"
+      "2010": [
+        "Essence",
+        "Diesel"
       ],
-      "2023": [
-        "Essence"
+      "2011": [
+        "Essence",
+        "Diesel"
       ],
-      "2024": [
-        "Essence"
+      "2012": [
+        "Essence",
+        "Diesel"
+      ],
+      "2013": [
+        "Essence",
+        "Diesel"
+      ],
+      "2014": [
+        "Essence",
+        "Diesel"
       ]
     },
     "Serie 3": {
-      "2018": [
+      "1999": [
         "Essence"
       ],
-      "2019": [
-        "Essence",
-        "Hybride"
-      ],
-      "2020": [
-        "Essence",
-        "Hybride"
-      ],
-      "2021": [
-        "Essence",
-        "Hybride"
-      ],
-      "2022": [
-        "Essence",
-        "Hybride"
-      ],
-      "2023": [
+      "2000": [
         "Essence"
       ],
-      "2024": [
+      "2001": [
         "Essence"
       ],
-      "2025": [
+      "2002": [
         "Essence"
       ],
-      "2026": [
+      "2003": [
+        "Essence"
+      ],
+      "2004": [
+        "Essence"
+      ],
+      "2005": [
+        "Essence"
+      ],
+      "2006": [
         "Essence"
       ]
     },
@@ -3197,7 +3227,19 @@
       "2001": [
         "Essence"
       ],
+      "2002": [
+        "Essence"
+      ],
       "2003": [
+        "Essence"
+      ],
+      "2004": [
+        "Essence"
+      ],
+      "2005": [
+        "Essence"
+      ],
+      "2006": [
         "Essence"
       ]
     },
@@ -3226,138 +3268,150 @@
     },
     "Serie 3 E91 Touring": {
       "2005": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2006": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2007": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2008": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2009": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2010": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2011": [
-        "Essence"
+        "Essence",
+        "Diesel"
+      ],
+      "2012": [
+        "Essence",
+        "Diesel"
       ]
     },
     "X5": {
-      "2007": [
-        "Essence"
+      "2018": [
+        "Essence",
+        "Diesel"
       ],
-      "2008": [
-        "Essence"
+      "2019": [
+        "Essence",
+        "Diesel",
+        "Hybride"
       ],
-      "2009": [
-        "Essence"
+      "2020": [
+        "Essence",
+        "Diesel",
+        "Hybride"
       ],
-      "2010": [
-        "Essence"
+      "2021": [
+        "Essence",
+        "Diesel",
+        "Hybride"
       ],
-      "2011": [
-        "Essence"
+      "2022": [
+        "Essence",
+        "Diesel",
+        "Hybride"
       ],
-      "2012": [
-        "Essence"
+      "2023": [
+        "Essence",
+        "Diesel"
       ],
-      "2013": [
-        "Essence"
+      "2024": [
+        "Essence",
+        "Diesel"
+      ],
+      "2025": [
+        "Essence",
+        "Diesel"
+      ],
+      "2026": [
+        "Essence",
+        "Diesel"
       ]
     },
     "Serie 5 F11 Touring": {
       "2010": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2011": [
-        "Essence"
-      ],
-      "2012": [
-        "Essence"
-      ],
-      "2013": [
-        "Essence"
-      ],
-      "2014": [
-        "Essence"
-      ],
-      "2015": [
-        "Essence"
-      ],
-      "2016": [
-        "Essence"
-      ],
-      "2017": [
-        "Essence"
-      ],
-      "2018": [
-        "Essence"
-      ],
-      "2019": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ]
     },
     "X3": {
+      "2010": [
+        "Essence",
+        "Diesel"
+      ],
+      "2011": [
+        "Essence",
+        "Diesel"
+      ],
+      "2012": [
+        "Essence",
+        "Diesel"
+      ],
+      "2013": [
+        "Essence",
+        "Diesel"
+      ],
+      "2014": [
+        "Essence",
+        "Diesel"
+      ],
+      "2015": [
+        "Essence",
+        "Diesel"
+      ],
+      "2016": [
+        "Essence",
+        "Diesel"
+      ],
       "2017": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2018": [
-        "Essence"
-      ],
-      "2019": [
-        "Essence"
-      ],
-      "2020": [
-        "Essence"
-      ],
-      "2021": [
-        "Essence"
-      ],
-      "2022": [
-        "Essence"
-      ],
-      "2023": [
-        "Essence"
-      ],
-      "2024": [
-        "Essence"
-      ],
-      "2025": [
-        "Essence"
-      ],
-      "2026": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ]
     },
     "X1": {
-      "2015": [
-        "Essence"
-      ],
-      "2016": [
-        "Essence"
-      ],
-      "2017": [
-        "Essence"
-      ],
-      "2018": [
-        "Essence"
-      ],
-      "2019": [
-        "Essence"
-      ],
-      "2020": [
-        "Essence"
-      ],
-      "2021": [
-        "Essence"
-      ],
       "2022": [
-        "Essence"
+        "Essence",
+        "Diesel",
+        "Électrique"
+      ],
+      "2023": [
+        "Essence",
+        "Diesel",
+        "Électrique"
+      ],
+      "2024": [
+        "Essence",
+        "Diesel"
+      ],
+      "2025": [
+        "Essence",
+        "Diesel"
+      ],
+      "2026": [
+        "Essence",
+        "Diesel"
       ]
     },
     "X5 F95 M": {
@@ -3407,28 +3461,35 @@
     },
     "Serie 2": {
       "2013": [
-        "Essence"
+        "Diesel"
       ],
       "2014": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2015": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2016": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2017": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2018": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2019": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2020": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2021": [
         "Essence"
@@ -3446,61 +3507,77 @@
     },
     "Serie 5": {
       "2010": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2011": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2012": [
         "Essence",
+        "Diesel",
         "Hybride"
       ],
       "2013": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2014": [
         "Essence",
+        "Diesel",
         "Hybride"
       ],
       "2015": [
         "Essence",
+        "Diesel",
         "Hybride"
       ],
       "2016": [
         "Essence",
+        "Diesel",
         "Hybride"
       ],
       "2017": [
-        "Essence"
+        "Diesel"
       ]
     },
     "Serie 1 F20 5 Portes": {
       "2011": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2012": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2013": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2014": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2015": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2016": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2017": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2018": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2019": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2020": [
         "Essence"
@@ -3529,14 +3606,41 @@
     },
     "Serie 1 E82 Coupe M": {},
     "Serie 2 F45 Active Tourer": {
+      "2014": [
+        "Essence",
+        "Diesel"
+      ],
+      "2015": [
+        "Essence",
+        "Diesel"
+      ],
       "2016": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2017": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2018": [
-        "Essence"
+        "Essence",
+        "Diesel"
+      ],
+      "2019": [
+        "Essence",
+        "Diesel"
+      ],
+      "2020": [
+        "Essence",
+        "Diesel"
+      ],
+      "2021": [
+        "Essence",
+        "Diesel"
+      ],
+      "2022": [
+        "Essence",
+        "Diesel"
       ]
     },
     "Z4": {
@@ -3564,13 +3668,16 @@
     },
     "Serie 2 F74 Gran": {
       "2024": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2025": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2026": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ]
     },
     "I3": {
@@ -3654,16 +3761,20 @@
     },
     "X2": {
       "2023": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2024": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2025": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2026": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ]
     },
     "Z4 E85 M": {
@@ -3692,8 +3803,32 @@
     },
     "Serie 1 E81 3 Portes": {
       "2007": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
+      "2008": [
+        "Essence",
+        "Diesel"
+      ],
+      "2009": [
+        "Essence",
+        "Diesel"
+      ],
+      "2010": [
+        "Essence",
+        "Diesel"
+      ],
+      "2011": [
+        "Essence",
+        "Diesel"
+      ],
+      "2012": [
+        "Essence",
+        "Diesel"
+      ]
+    },
+    "Serie 5 E34 Touring": {},
+    "Serie 3 E90": {
       "2008": [
         "Essence"
       ],
@@ -3704,12 +3839,6 @@
         "Essence"
       ],
       "2011": [
-        "Essence"
-      ]
-    },
-    "Serie 5 E34 Touring": {},
-    "Serie 3 E90": {
-      "2008": [
         "Essence"
       ]
     },
@@ -3742,6 +3871,18 @@
     "X5 F85 M": {
       "2014": [
         "Essence"
+      ],
+      "2015": [
+        "Essence"
+      ],
+      "2016": [
+        "Essence"
+      ],
+      "2017": [
+        "Essence"
+      ],
+      "2018": [
+        "Essence"
       ]
     },
     "Serie 5 G99 Touring": {
@@ -3758,28 +3899,36 @@
     "Serie 5 G30": {},
     "Serie 1 E87 5 Portes": {
       "2004": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2005": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2006": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2007": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2008": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2009": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2010": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2011": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ]
     },
     "X6 F86 M": {
@@ -3830,19 +3979,23 @@
         "Essence"
       ],
       "2021": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2022": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2023": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2024": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2025": [
-        "Essence"
+        "Diesel"
       ]
     },
     "Serie 5 E61 Touring": {
@@ -3850,19 +4003,28 @@
         "Essence"
       ],
       "2005": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2006": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2007": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2008": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2009": [
-        "Essence"
+        "Essence",
+        "Diesel"
+      ],
+      "2010": [
+        "Essence",
+        "Diesel"
       ]
     },
     "Serie 8 F93 Gran Coupe": {
@@ -3890,23 +4052,24 @@
     },
     "Serie 1 F20 Societe 5 Portes": {
       "2014": [
-        "Essence"
+        "Diesel"
       ],
       "2015": [
-        "Essence"
+        "Diesel"
       ],
       "2016": [
-        "Essence"
+        "Diesel"
       ],
       "2017": [
-        "Essence",
         "Diesel"
       ],
       "2018": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2019": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ]
     },
     "Serie 3 E36 Compact": {
@@ -3917,6 +4080,9 @@
         "Essence"
       ],
       "1996": [
+        "Essence"
+      ],
+      "1997": [
         "Essence"
       ],
       "1998": [
@@ -4018,20 +4184,35 @@
     "Serie 3 E36 Coupe": {},
     "Serie 2 F46 Gran Tourer": {
       "2016": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2017": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2018": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ]
     },
     "Serie 3 E93 Cabriolet": {
       "2008": [
         "Essence"
       ],
+      "2009": [
+        "Essence"
+      ],
       "2010": [
+        "Essence"
+      ],
+      "2011": [
+        "Essence"
+      ],
+      "2012": [
+        "Essence"
+      ],
+      "2013": [
         "Essence"
       ]
     },
@@ -4148,19 +4329,36 @@
         "Essence"
       ],
       "1998": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "1999": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2000": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2001": [
-        "Essence"
+        "Essence",
+        "Diesel"
+      ],
+      "2002": [
+        "Essence",
+        "Diesel"
+      ],
+      "2003": [
+        "Essence",
+        "Diesel"
       ],
       "2004": [
-        "Essence"
+        "Essence",
+        "Diesel"
+      ],
+      "2005": [
+        "Essence",
+        "Diesel"
       ]
     },
     "Serie 3 E36": {},
@@ -4195,7 +4393,18 @@
     "Serie 5 G61 Touring": {
       "2024": [
         "Essence",
-        "Hybride rechargeable"
+        "Diesel",
+        "Hybride"
+      ],
+      "2025": [
+        "Essence",
+        "Diesel",
+        "Hybride"
+      ],
+      "2026": [
+        "Essence",
+        "Diesel",
+        "Hybride"
       ]
     },
     "I3 2E Generation": {},
@@ -4254,7 +4463,16 @@
       "2009": [
         "Essence"
       ],
+      "2010": [
+        "Essence"
+      ],
+      "2011": [
+        "Essence"
+      ],
       "2012": [
+        "Essence"
+      ],
+      "2013": [
         "Essence"
       ]
     },
@@ -4265,12 +4483,27 @@
       "2005": [
         "Essence"
       ],
+      "2006": [
+        "Essence"
+      ],
       "2007": [
+        "Essence"
+      ],
+      "2008": [
+        "Essence"
+      ],
+      "2009": [
+        "Essence"
+      ],
+      "2010": [
         "Essence"
       ]
     },
     "Serie 1 F20 M 5 Portes": {
       "2012": [
+        "Essence"
+      ],
+      "2013": [
         "Essence"
       ]
     },
@@ -4391,28 +4624,36 @@
     },
     "Serie 3 F31 Touring": {
       "2012": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2013": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2014": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2015": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2016": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2017": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2018": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2019": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ]
     },
     "Serie 4 G82": {
@@ -4443,7 +4684,16 @@
       "1999": [
         "Essence"
       ],
+      "2000": [
+        "Essence"
+      ],
       "2001": [
+        "Essence"
+      ],
+      "2002": [
+        "Essence"
+      ],
+      "2003": [
         "Essence"
       ]
     },
@@ -4466,28 +4716,36 @@
     },
     "Serie 1 F21 3 Portes": {
       "2012": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2013": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2014": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2015": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2016": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2017": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2018": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2019": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2020": [
         "Essence"
@@ -4615,6 +4873,21 @@
     "Serie 3 E46 Cabriolet": {
       "2001": [
         "Essence"
+      ],
+      "2002": [
+        "Essence"
+      ],
+      "2003": [
+        "Essence"
+      ],
+      "2004": [
+        "Essence"
+      ],
+      "2005": [
+        "Essence"
+      ],
+      "2006": [
+        "Essence"
       ]
     },
     "Ix2": {
@@ -4654,28 +4927,36 @@
     },
     "Serie 5 G31 Touring": {
       "2017": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2018": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2019": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2020": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2021": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2022": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2023": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2024": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2025": [
         "Essence"
@@ -4689,7 +4970,37 @@
     },
     "Serie 3 F30 Entreprise": {
       "2012": [
-        "Essence"
+        "Diesel"
+      ],
+      "2013": [
+        "Diesel"
+      ],
+      "2014": [
+        "Diesel"
+      ],
+      "2015": [
+        "Diesel"
+      ],
+      "2016": [
+        "Diesel"
+      ],
+      "2017": [
+        "Diesel"
+      ],
+      "2018": [
+        "Diesel"
+      ],
+      "2019": [
+        "Diesel"
+      ],
+      "2020": [
+        "Diesel"
+      ],
+      "2021": [
+        "Diesel"
+      ],
+      "2022": [
+        "Diesel"
       ]
     },
     "Serie 4 F83 Cabriolet": {
@@ -4740,31 +5051,39 @@
     },
     "Serie 3 G21 Touring": {
       "2019": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2020": [
         "Essence",
+        "Diesel",
         "Hybride"
       ],
       "2021": [
         "Essence",
+        "Diesel",
         "Hybride"
       ],
       "2022": [
         "Essence",
+        "Diesel",
         "Hybride"
       ],
       "2023": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2024": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2025": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2026": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ]
     },
     "Serie 3 G80": {
@@ -4820,6 +5139,9 @@
       "2006": [
         "Essence"
       ],
+      "2007": [
+        "Essence"
+      ],
       "2008": [
         "Essence"
       ],
@@ -4831,43 +5153,64 @@
       ],
       "2011": [
         "Essence"
+      ],
+      "2012": [
+        "Essence"
+      ],
+      "2013": [
+        "Essence"
       ]
     },
     "Serie 2 F44 Gran": {
       "2019": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2020": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2021": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2022": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2023": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2024": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ]
     },
     "Serie 3 E46 Touring": {
       "2000": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2001": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2002": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2003": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2004": [
-        "Essence"
+        "Essence",
+        "Diesel"
+      ],
+      "2005": [
+        "Essence",
+        "Diesel"
       ]
     },
     "Serie 2 F87 Coupe": {
@@ -10961,7 +11304,89 @@
         "Hybride"
       ]
     },
-    "405": {}
+    "405": {},
+    "508": {
+      "2010": [
+        "Diesel"
+      ],
+      "2011": [
+        "Essence",
+        "Diesel"
+      ],
+      "2012": [
+        "Essence",
+        "Diesel",
+        "Hybride"
+      ],
+      "2013": [
+        "Essence",
+        "Diesel",
+        "Hybride",
+        "Électrique"
+      ],
+      "2014": [
+        "Essence",
+        "Diesel",
+        "Électrique"
+      ],
+      "2015": [
+        "Essence",
+        "Diesel",
+        "Électrique"
+      ],
+      "2016": [
+        "Essence",
+        "Diesel",
+        "Hybride",
+        "Électrique"
+      ],
+      "2017": [
+        "Essence",
+        "Diesel"
+      ],
+      "2018": [
+        "Essence",
+        "Diesel"
+      ]
+    },
+    "508 2E Generation": {
+      "2018": [
+        "Essence",
+        "Diesel"
+      ],
+      "2019": [
+        "Essence",
+        "Diesel",
+        "Hybride"
+      ],
+      "2020": [
+        "Essence",
+        "Diesel",
+        "Hybride"
+      ],
+      "2021": [
+        "Essence",
+        "Diesel",
+        "Hybride"
+      ],
+      "2022": [
+        "Essence",
+        "Diesel",
+        "Hybride"
+      ],
+      "2023": [
+        "Essence",
+        "Diesel",
+        "Hybride"
+      ],
+      "2024": [
+        "Diesel",
+        "Hybride"
+      ],
+      "2025": [
+        "Hybride"
+      ]
+    }
   },
   "RENAULT": {
     "Master 2 Minibus": {
@@ -12249,6 +12674,86 @@
       ],
       "2026": [
         "Hybride"
+      ]
+    },
+    "Kadjar": {
+      "2015": [
+        "Essence",
+        "Diesel"
+      ],
+      "2016": [
+        "Essence",
+        "Diesel"
+      ],
+      "2017": [
+        "Essence",
+        "Diesel"
+      ],
+      "2018": [
+        "Essence",
+        "Diesel"
+      ],
+      "2019": [
+        "Essence",
+        "Diesel"
+      ],
+      "2020": [
+        "Essence",
+        "Diesel"
+      ],
+      "2021": [
+        "Essence",
+        "Diesel"
+      ],
+      "2022": [
+        "Essence",
+        "Diesel"
+      ],
+      "2023": [
+        "Diesel"
+      ],
+      "2024": [
+        "Diesel"
+      ],
+      "2025": [
+        "Diesel"
+      ],
+      "2026": [
+        "Diesel"
+      ]
+    },
+    "Talisman": {
+      "2015": [
+        "Essence",
+        "Diesel"
+      ],
+      "2016": [
+        "Essence",
+        "Diesel"
+      ],
+      "2017": [
+        "Essence",
+        "Diesel"
+      ],
+      "2018": [
+        "Essence",
+        "Diesel"
+      ],
+      "2019": [
+        "Essence",
+        "Diesel"
+      ],
+      "2020": [
+        "Essence",
+        "Diesel"
+      ],
+      "2021": [
+        "Essence",
+        "Diesel"
+      ],
+      "2022": [
+        "Essence",
+        "Diesel"
       ]
     }
   },
@@ -26202,19 +26707,19 @@
   "VOLVO": {
     "V60 Cross Country": {
       "2015": [
-        "Essence"
+        "Diesel"
       ],
       "2016": [
-        "Essence"
+        "Diesel"
       ],
       "2017": [
-        "Essence"
+        "Diesel"
       ],
       "2018": [
-        "Essence"
+        "Diesel"
       ],
       "2019": [
-        "Essence"
+        "Diesel"
       ]
     },
     "760": {},
@@ -26237,10 +26742,12 @@
         "Diesel"
       ],
       "2018": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2019": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2020": [
         "Essence",
@@ -26270,19 +26777,24 @@
     },
     "V90 2E Generation": {
       "2016": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2017": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2018": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2019": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2020": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2021": [
         "Essence"
@@ -26363,19 +26875,24 @@
     },
     "V90 Cross Country": {
       "2016": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2017": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2018": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2019": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2020": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ]
     },
     "V40": {
@@ -26420,20 +26937,25 @@
     },
     "Xc40": {
       "2017": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2018": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2019": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2020": [
         "Essence",
+        "Diesel",
         "Électrique"
       ],
       "2021": [
         "Essence",
+        "Diesel",
         "Électrique"
       ],
       "2022": [
@@ -26471,19 +26993,24 @@
     "V90": {},
     "Xc60 2E Generation": {
       "2017": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2018": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2019": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2020": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2021": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2022": [
         "Essence"
@@ -26514,19 +27041,24 @@
         "Diesel"
       ],
       "2010": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2011": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2012": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2013": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2014": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2015": [
         "Essence",
@@ -26537,6 +27069,10 @@
         "Diesel"
       ],
       "2017": [
+        "Essence",
+        "Diesel"
+      ],
+      "2018": [
         "Essence",
         "Diesel"
       ]
@@ -26585,55 +27121,65 @@
     "940": {},
     "V60": {
       "2010": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2011": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2012": [
         "Essence",
-        "Hybride",
-        "Hybride rechargeable"
+        "Diesel",
+        "Hybride"
       ],
       "2013": [
         "Essence",
-        "Hybride",
-        "Hybride rechargeable"
+        "Diesel",
+        "Hybride"
       ],
       "2014": [
         "Essence",
-        "Hybride",
-        "Hybride rechargeable"
+        "Diesel",
+        "Hybride"
       ],
       "2015": [
         "Essence",
-        "Hybride",
-        "Hybride rechargeable"
+        "Diesel",
+        "Hybride"
       ],
       "2016": [
         "Essence",
         "Diesel",
-        "Hybride",
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2017": [
         "Essence",
-        "Hybride",
-        "Hybride rechargeable"
+        "Diesel",
+        "Hybride"
+      ],
+      "2018": [
+        "Essence",
+        "Diesel",
+        "Hybride"
       ]
     },
     "V60 2E Generation": {
       "2018": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2019": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2020": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2021": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2022": [
         "Essence"
@@ -26737,34 +27283,50 @@
     },
     "Xc90": {
       "2003": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2004": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2005": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2006": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2007": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2008": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2009": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2010": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2011": [
-        "Essence"
+        "Essence",
+        "Diesel"
+      ],
+      "2012": [
+        "Essence",
+        "Diesel"
       ],
       "2013": [
-        "Essence"
+        "Diesel"
+      ],
+      "2014": [
+        "Diesel"
       ]
     },
     "Ec40": {

@@ -54,6 +54,9 @@ def detect_fuel(version: str) -> str:
                               "CDTI", "JTD", "CRDI", "JTDM", "SDI", "D4D", "TDCI",
                               "2.0 D", "1.6 D", "1.5 D", "2.2 D", "TD ", " D "]):
         return "diesel"
+    # BMW/Volvo diesel: "116D", "320D", "D3", "D4", "D5" etc.
+    if re.search(r'\d+D\b', v) or re.search(r'\bD\d\b', v):
+        return "diesel"
     return "essence"
 
 
