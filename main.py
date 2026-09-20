@@ -472,13 +472,14 @@ async def _supabase_upsert_bonnes_affaires(records: list[dict]) -> int:
     return 0
 
 
-async def _scan_lbc_bonnes_affaires(max_pages: int = 15, seuil_pct: int = 10) -> list[dict]:
+async def _scan_lbc_bonnes_affaires(max_pages: int = 15, seuil_pct: int = 10) -> tuple[list[dict], dict]:
     """Scanne LBC (toute France, toutes marques) et retourne les annonces sous la côte de seuil_pct %."""
     from scrapers.leboncoin import _mobile_ua, _webshare_proxies, API_URL as LBC_API_URL, HOMEPAGE as LBC_HP
 
     ua, impersonate, headers = _mobile_ua()
     proxies = _webshare_proxies()
     bonnes = []
+    stats = {"pages": 0, "raw_ads": 0, "pros_exclus": 0, "sans_cote": 0, "hors_fourchette": 0}
 
     async with AsyncSession(impersonate=impersonate, proxies=proxies) as s:
         await s.get(LBC_HP, headers=headers, timeout=15)
@@ -512,11 +513,14 @@ async def _scan_lbc_bonnes_affaires(max_pages: int = 15, seuil_pct: int = 10) ->
             if not ads:
                 break
 
+            stats["pages"] += 1
+            stats["raw_ads"] += len(ads)
             logger.info(f"[scan-ba] page {page}: {len(ads)} annonces")
 
             for ad in ads:
                 # Particuliers uniquement (LBC renvoie "private" pour particulier)
                 if ad.get("owner", {}).get("type") == "pro":
+                    stats["pros_exclus"] += 1
                     continue
 
                 raw_attrs = ad.get("attributes", [])
@@ -526,22 +530,26 @@ async def _scan_lbc_bonnes_affaires(max_pages: int = 15, seuil_pct: int = 10) ->
                 cote_min_raw = attrs_v.get("car_price_min")
                 cote_max_raw = attrs_v.get("car_price_max")
                 if not cote_min_raw:
+                    stats["sans_cote"] += 1
                     continue
 
                 try:
                     cote_min = int(cote_min_raw)
                     cote_max = int(cote_max_raw) if cote_max_raw else cote_min
                 except (ValueError, TypeError):
+                    stats["sans_cote"] += 1
                     continue
 
                 price_raw = ad.get("price", [])
                 prix = price_raw[0] if isinstance(price_raw, list) and price_raw else None
                 if not prix or not (500 <= int(prix) <= 150_000):
+                    stats["hors_fourchette"] += 1
                     continue
                 prix = int(prix)
 
                 # Filtre: au moins seuil_pct% sous la côte min
                 if prix >= cote_min * (1 - seuil_pct / 100):
+                    stats["hors_fourchette"] += 1
                     continue
 
                 ecart_eur = cote_min - prix
@@ -586,7 +594,8 @@ async def _scan_lbc_bonnes_affaires(max_pages: int = 15, seuil_pct: int = 10) ->
                     "is_active": True,
                 })
 
-    return bonnes
+    logger.info(f"[scan-ba] stats: {stats}")
+    return bonnes, stats
 
 
 @app.post("/scan/bonnes-affaires")
@@ -595,13 +604,13 @@ async def scan_bonnes_affaires():
     logger.info("[scan-ba] Démarrage scan bonnes affaires")
 
     try:
-        bonnes = await asyncio.wait_for(_scan_lbc_bonnes_affaires(max_pages=15, seuil_pct=10), timeout=180)
+        bonnes, stats = await asyncio.wait_for(_scan_lbc_bonnes_affaires(max_pages=15, seuil_pct=10), timeout=180)
     except asyncio.TimeoutError:
         raise HTTPException(status_code=504, detail="Scan timeout")
 
     if not bonnes:
-        logger.info("[scan-ba] Aucune bonne affaire trouvée")
-        return {"nouvelles": 0, "total_scanne": 0}
+        logger.info(f"[scan-ba] Aucune bonne affaire trouvée. Stats: {stats}")
+        return {"nouvelles": 0, "total_scanne": 0, "stats": stats}
 
     # Filtrer les doublons déjà en base
     existing_ids = await _supabase_get_existing_ids()
@@ -627,7 +636,7 @@ async def scan_bonnes_affaires():
             lines.append(f"... et {len(nouvelles) - 5} autre(s). Voir l'onglet Bonnes Affaires dans l'admin.")
         await _send_telegram("\n".join(lines))
 
-    return {"nouvelles": len(nouvelles), "sauvegardees": saved, "total_scanne": len(bonnes)}
+    return {"nouvelles": len(nouvelles), "sauvegardees": saved, "total_scanne": len(bonnes), "stats": stats}
 
 
 # ─── Immatriculation lookup ───────────────────────────────────────────────────
