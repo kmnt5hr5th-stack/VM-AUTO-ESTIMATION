@@ -6876,18 +6876,23 @@
         "Diesel"
       ],
       "2019": [
-        "Essence"
+        "Essence",
+        "Diesel",
+        "Hybride"
       ],
       "2020": [
         "Essence",
+        "Diesel",
         "Hybride"
       ],
       "2021": [
         "Essence",
+        "Diesel",
         "Hybride"
       ],
       "2022": [
         "Essence",
+        "Diesel",
         "Hybride"
       ],
       "2023": [
@@ -6895,14 +6900,17 @@
       ],
       "2024": [
         "Essence",
+        "Diesel",
         "Hybride"
       ],
       "2025": [
         "Essence",
+        "Diesel",
         "Hybride"
       ],
       "2026": [
         "Essence",
+        "Diesel",
         "Hybride"
       ]
     },
