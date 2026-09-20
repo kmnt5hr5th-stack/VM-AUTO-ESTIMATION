@@ -21,6 +21,11 @@ import os
 # ── Paramètres Supabase ────────────────────────────────────────────────────────
 SUPABASE_URL = os.getenv("SUPABASE_URL", "")
 SUPABASE_ANON_KEY = os.getenv("SUPABASE_ANON_KEY", "")
+SUPABASE_SERVICE_KEY = os.getenv("SUPABASE_SERVICE_KEY", "")
+
+# ── Telegram ────────────────────────────────────────────────────────────────────
+TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "8303548439:AAHipFPA6R6dgqoLn-RR9Aw-r_Hgy9wZ1Yo")
+TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "538022992")
 
 _settings_cache: dict = {}
 _settings_cache_time: float = 0
@@ -400,6 +405,224 @@ async def debug_lbc_cote(ad_id: str = "3079197187"):
             result["error"] = str(e)
 
     return {"ad_id": ad_id, "result": result}
+
+
+# ─── Bonnes Affaires Scanner ──────────────────────────────────────────────────
+
+_FUEL_LABELS_FR = {"1": "Essence", "2": "Diesel", "3": "Hybride", "4": "Électrique",
+                   "5": "GPL", "6": "GNV", "8": "Hybride rechargeable"}
+_GEAR_LABELS_FR = {"1": "Manuelle", "2": "Automatique"}
+
+
+async def _send_telegram(text: str) -> None:
+    url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
+    try:
+        async with httpx.AsyncClient(timeout=10) as client:
+            await client.post(url, json={
+                "chat_id": TELEGRAM_CHAT_ID,
+                "text": text,
+                "parse_mode": "HTML",
+                "disable_web_page_preview": True,
+            })
+    except Exception as e:
+        logger.warning(f"[telegram] Erreur envoi: {e}")
+
+
+async def _supabase_get_existing_ids() -> set:
+    """Retourne les external_id LBC déjà en base pour éviter les doublons."""
+    if not SUPABASE_URL or not SUPABASE_SERVICE_KEY:
+        return set()
+    try:
+        async with httpx.AsyncClient(timeout=10) as client:
+            r = await client.get(
+                f"{SUPABASE_URL}/rest/v1/bonnes_affaires?select=external_id&source=eq.leboncoin&is_active=eq.true",
+                headers={
+                    "apikey": SUPABASE_SERVICE_KEY,
+                    "Authorization": f"Bearer {SUPABASE_SERVICE_KEY}",
+                },
+            )
+            if r.status_code == 200:
+                return {row["external_id"] for row in r.json()}
+    except Exception as e:
+        logger.warning(f"[supabase] get existing ids: {e}")
+    return set()
+
+
+async def _supabase_upsert_bonnes_affaires(records: list[dict]) -> int:
+    """Insère les nouvelles bonnes affaires en Supabase. Retourne le nombre inséré."""
+    if not records or not SUPABASE_URL or not SUPABASE_SERVICE_KEY:
+        return 0
+    try:
+        async with httpx.AsyncClient(timeout=15) as client:
+            r = await client.post(
+                f"{SUPABASE_URL}/rest/v1/bonnes_affaires",
+                json=records,
+                headers={
+                    "apikey": SUPABASE_SERVICE_KEY,
+                    "Authorization": f"Bearer {SUPABASE_SERVICE_KEY}",
+                    "Content-Type": "application/json",
+                    "Prefer": "resolution=ignore-duplicates",
+                },
+            )
+            if r.status_code in (200, 201):
+                return len(records)
+            logger.warning(f"[supabase] upsert status {r.status_code}: {r.text[:200]}")
+    except Exception as e:
+        logger.warning(f"[supabase] upsert error: {e}")
+    return 0
+
+
+async def _scan_lbc_bonnes_affaires(max_pages: int = 15, seuil_pct: int = 10) -> list[dict]:
+    """Scanne LBC (toute France, toutes marques) et retourne les annonces sous la côte de seuil_pct %."""
+    from scrapers.leboncoin import _mobile_ua, _webshare_proxies, API_URL as LBC_API_URL, HOMEPAGE as LBC_HP
+
+    ua, impersonate, headers = _mobile_ua()
+    proxies = _webshare_proxies()
+    bonnes = []
+
+    async with AsyncSession(impersonate=impersonate, proxies=proxies) as s:
+        await s.get(LBC_HP, headers=headers, timeout=15)
+
+        for page in range(1, max_pages + 1):
+            payload = {
+                "filters": {
+                    "category": {"id": "2"},
+                    "keywords": {},
+                    "location": {"regions": [], "departments": [], "cities": [], "area": None},
+                    "ranges": {},
+                    "enums": {},
+                },
+                "include_locations_nearby": False,
+                "limit": 35,
+                "offset": (page - 1) * 35,
+                "sort_by": "time",
+                "sort_order": "desc",
+            }
+            try:
+                r = await s.post(LBC_API_URL, json=payload, headers=headers, timeout=30)
+            except Exception as e:
+                logger.warning(f"[scan-ba] page {page} erreur: {e}")
+                break
+
+            if not r.ok:
+                logger.warning(f"[scan-ba] page {page} status {r.status_code}")
+                break
+
+            ads = r.json().get("ads", [])
+            if not ads:
+                break
+
+            logger.info(f"[scan-ba] page {page}: {len(ads)} annonces")
+
+            for ad in ads:
+                raw_attrs = ad.get("attributes", [])
+                attrs_v = {a["key"]: a.get("value", "") for a in raw_attrs}
+                attrs_l = {a["key"]: a.get("value_label", "") for a in raw_attrs}
+
+                cote_min_raw = attrs_v.get("car_price_min")
+                cote_max_raw = attrs_v.get("car_price_max")
+                if not cote_min_raw:
+                    continue
+
+                try:
+                    cote_min = int(cote_min_raw)
+                    cote_max = int(cote_max_raw) if cote_max_raw else cote_min
+                except (ValueError, TypeError):
+                    continue
+
+                price_raw = ad.get("price", [])
+                prix = price_raw[0] if isinstance(price_raw, list) and price_raw else None
+                if not prix or not (500 <= int(prix) <= 150_000):
+                    continue
+                prix = int(prix)
+
+                # Filtre: au moins seuil_pct% sous la côte min
+                if prix >= cote_min * (1 - seuil_pct / 100):
+                    continue
+
+                ecart_eur = cote_min - prix
+                ecart_pct = round((ecart_eur / cote_min) * 100)
+
+                list_id = str(ad.get("list_id", ""))
+                location = ad.get("location", {})
+                images = ad.get("images", {})
+                image_url = images.get("thumb_url") or (images.get("urls", [None])[0] or "")
+                owner = ad.get("owner", {})
+                dept_id = location.get("department_id", "")
+                dept_name = location.get("department_name", "")
+
+                energie_code = attrs_v.get("fuel", "")
+                energie = _FUEL_LABELS_FR.get(energie_code, attrs_l.get("fuel", ""))
+                boite_code = attrs_v.get("gearbox", "")
+                boite = _GEAR_LABELS_FR.get(boite_code, attrs_l.get("gearbox", ""))
+
+                pub_date = (ad.get("first_publication_date") or "")[:10] or None
+
+                bonnes.append({
+                    "source": "leboncoin",
+                    "external_id": list_id,
+                    "url_annonce": ad.get("url") or f"https://www.leboncoin.fr/ad/voitures/{list_id}",
+                    "titre": ad.get("subject", ""),
+                    "marque": attrs_l.get("brand", attrs_v.get("brand", "")),
+                    "modele": attrs_l.get("model", attrs_v.get("model", "")),
+                    "annee": int(attrs_v["regdate"]) if attrs_v.get("regdate", "").isdigit() else None,
+                    "kilometrage": int(attrs_v["mileage"]) if attrs_v.get("mileage", "").isdigit() else None,
+                    "prix_annonce": prix,
+                    "valeur_marche": cote_min,
+                    "ecart_eur": ecart_eur,
+                    "ecart_pct": ecart_pct,
+                    "energie": energie,
+                    "boite": boite,
+                    "vendeur_type": owner.get("type", "particulier"),
+                    "region": f"{dept_name} ({dept_id})" if dept_id else dept_name,
+                    "ville": location.get("city", ""),
+                    "image_url": image_url,
+                    "date_publication": pub_date,
+                    "is_active": True,
+                })
+
+    return bonnes
+
+
+@app.post("/scan/bonnes-affaires")
+async def scan_bonnes_affaires():
+    """Scanne LBC pour les bonnes affaires (prix < côte -10%) et notifie via Telegram."""
+    logger.info("[scan-ba] Démarrage scan bonnes affaires")
+
+    try:
+        bonnes = await asyncio.wait_for(_scan_lbc_bonnes_affaires(max_pages=15, seuil_pct=10), timeout=180)
+    except asyncio.TimeoutError:
+        raise HTTPException(status_code=504, detail="Scan timeout")
+
+    if not bonnes:
+        logger.info("[scan-ba] Aucune bonne affaire trouvée")
+        return {"nouvelles": 0, "total_scanne": 0}
+
+    # Filtrer les doublons déjà en base
+    existing_ids = await _supabase_get_existing_ids()
+    nouvelles = [b for b in bonnes if b["external_id"] not in existing_ids]
+
+    logger.info(f"[scan-ba] {len(bonnes)} trouvées, {len(nouvelles)} nouvelles")
+
+    # Sauvegarder en Supabase
+    saved = await _supabase_upsert_bonnes_affaires(nouvelles)
+
+    # Notifier via Telegram
+    if nouvelles:
+        lines = [f"🔥 <b>{len(nouvelles)} bonne(s) affaire(s) LBC détectée(s) !</b>\n"]
+        for b in nouvelles[:5]:
+            km_str = f"{b['kilometrage']:,} km".replace(",", " ") if b.get("kilometrage") else "km n/c"
+            lines.append(
+                f"<b>{b['marque']} {b['modele']}</b> {b.get('annee', '')} — "
+                f"<b>{b['prix_annonce']:,}€</b> (côte {b['valeur_marche']:,}€, -{b['ecart_pct']}%)\n"
+                f"📍 {b['ville']} {b['region']}\n"
+                f"🔗 {b['url_annonce']}\n"
+            )
+        if len(nouvelles) > 5:
+            lines.append(f"... et {len(nouvelles) - 5} autre(s). Voir l'onglet Bonnes Affaires dans l'admin.")
+        await _send_telegram("\n".join(lines))
+
+    return {"nouvelles": len(nouvelles), "sauvegardees": saved, "total_scanne": len(bonnes)}
 
 
 # ─── Immatriculation lookup ───────────────────────────────────────────────────
