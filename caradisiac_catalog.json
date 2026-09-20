@@ -189470,17 +189470,18 @@
         "gpl": []
       },
       "2008": {
-        "essence": [],
+        "essence": [
+          "1.4 109 PACK CLIM"
+        ],
         "diesel": [
           "1.6 CRDI 115 EURO 2008",
-          "1.6 CRDI 90 PACK CLIM LOW EMISSION",
-          "1.6 CRDI 90 PACK CONFORT LOW EMISSION",
           "1.6 CRDI 115 PACK CONFORT",
+          "1.6 CRDI 115 PACK CONFORT BVA",
           "1.6 CRDI 90 PACK CLIM",
+          "1.6 CRDI 90 PACK CLIM LOW EMISSION",
           "1.6 CRDI 90 PACK CONFORT",
-          "2.0 CRDI 140 PACK LUXE",
-          "CW 1.6 CRDI 115 PACK CONFORT",
-          "CW 1.6 CRDI 90 PACK CLIM"
+          "1.6 CRDI 90 PACK CONFORT LOW EMISSION",
+          "2.0 CRDI 140 PACK LUXE"
         ],
         "hybride": [],
         "electrique": [],
@@ -189489,19 +189490,23 @@
       "2009": {
         "essence": [
           "1.4 109 BLUE DRIVE",
+          "1.4 109 PACK CLIM",
           "1.4 109 PACK ISG"
         ],
         "diesel": [
+          "1.6 CRDI 115 PACK CONFORT",
           "1.6 CRDI 115 PACK CONFORT II",
           "1.6 CRDI 115 PACK CONFORT II LOW EMISSION",
           "1.6 CRDI 115 PACK EDITION BLUE DRIVE BVM6",
           "1.6 CRDI 115 PACK EDITION BVM6",
           "1.6 CRDI 90 CLIM BVM6",
+          "1.6 CRDI 90 PACK CLIM",
           "1.6 CRDI 90 PACK CLIM BVM6",
+          "1.6 CRDI 90 PACK CLIM LOW EMISSION",
+          "1.6 CRDI 90 PACK CONFORT",
           "1.6 CRDI 90 PACK CONFORT ESP BVM6",
-          "CW 1.6 CRDI 115 PACK CONFORT II",
-          "CW 1.6 CRDI 115 PACK EDITION BVM6",
-          "CW 1.6 CRDI 90 PACK CLIM BVM6"
+          "1.6 CRDI 90 PACK CONFORT LOW EMISSION",
+          "2.0 CRDI 140 PACK LUXE"
         ],
         "hybride": [],
         "electrique": [],
@@ -189509,16 +189514,25 @@
       },
       "2010": {
         "essence": [
+          "1.4 109 BLUE DRIVE",
           "1.4 109 BLUE DRIVE CLIM",
+          "1.4 109 PACK ISG",
           "1.4 PACK EVIDENCE"
         ],
         "diesel": [
+          "1.6 CRDI 115 PACK CONFORT II LOW EMISSION",
           "1.6 CRDI 115 PACK EDITION",
+          "1.6 CRDI 115 PACK EDITION BLUE DRIVE BVM6",
+          "1.6 CRDI 115 PACK EDITION BVM6",
           "1.6 CRDI 115 PACK SENSATION",
           "1.6 CRDI 115 PACK SENSATION AUTO",
           "1.6 CRDI 115 PACK SENSATION BLUE DRIVE",
           "1.6 CRDI 115 WORLD CUP 2010 BVM6",
-          "1.6 CRDI 90 PACK EVIDENCE"
+          "1.6 CRDI 90 CLIM BVM6",
+          "1.6 CRDI 90 PACK CLIM BVM6",
+          "1.6 CRDI 90 PACK CONFORT ESP BVM6",
+          "1.6 CRDI 90 PACK EVIDENCE",
+          "2.0 CRDI 140 PACK LUXE"
         ],
         "hybride": [],
         "electrique": [],
@@ -189526,19 +189540,40 @@
       },
       "2011": {
         "essence": [
+          "1.4 PACK EVIDENCE",
           "1.4 PACK INVENTIVE"
         ],
         "diesel": [
           "1.6 CRDI 115 FAP PACK SENSATION",
           "1.6 CRDI 115 FAP PACK SENSATION BVA",
+          "1.6 CRDI 115 PACK EDITION",
+          "1.6 CRDI 115 PACK EDITION BVM6",
           "1.6 CRDI 115 PACK EDITION II",
+          "1.6 CRDI 115 PACK SENSATION",
           "1.6 CRDI 115 PACK SENSATION BVA",
           "1.6 CRDI 116 FAP PACK SENSATION AUTO",
           "1.6 CRDI 116 FAP PACK SENSATION BLUE DRIVE",
           "1.6 CRDI 116 PACK EDITION II BLUE DRIVE",
           "1.6 CRDI 116 PACK SENSATION AUTO",
           "1.6 CRDI 116 PACK SENSATION BLUE DRIVE",
+          "1.6 CRDI 90 CLIM BVM6",
           "1.6 CRDI 90 FAP PACK EVIDENCE",
+          "1.6 CRDI 90 FAP PACK EVIDENCE BLUE DRIVE",
+          "1.6 CRDI 90 FAP PACK INVENTIVE BLUE DRIVE",
+          "1.6 CRDI 90 PACK CLIM BVM6",
+          "1.6 CRDI 90 PACK EVIDENCE",
+          "2.0 CRDI 140 PACK LUXE"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2012": {
+        "essence": [
+          "1.4 PACK INVENTIVE"
+        ],
+        "diesel": [
+          "1.6 CRDI 116 FAP PACK SENSATION BLUE DRIVE",
           "1.6 CRDI 90 FAP PACK EVIDENCE BLUE DRIVE",
           "1.6 CRDI 90 FAP PACK INVENTIVE BLUE DRIVE"
         ],
@@ -189796,6 +189831,133 @@
         ],
         "electrique": [],
         "gpl": []
+      },
+      "2005": {
+        "essence": [],
+        "diesel": [
+          "2WD 2.0 CRDI EDITION SPECIALE",
+          "2WD 2.0 CRDI PACK CONFORT",
+          "4WD 2.0 CRDI EDITION SPECIALE",
+          "4WD 2.0 CRDI PACK CONFORT",
+          "4WD 2.0 CRDI PACK CONFORT BVA",
+          "4WD 2.0 CRDI PACK LUXE",
+          "4WD 2.0 CRDI PACK LUXE BVA"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2006": {
+        "essence": [
+          "2WD 2.0 140 PACK CONFORT"
+        ],
+        "diesel": [
+          "2WD 2.0 CRDI 136 PACK CONFORT",
+          "2WD 2.0 CRDI 136 PACK LUXE BVA",
+          "2WD 2.0 CRDI EDITION SPECIALE",
+          "2WD 2.0 CRDI PACK CONFORT",
+          "2WD 2.0 CRDI WORLD CUP",
+          "4WD 2.0 CRDI 140 PACK CONFORT",
+          "4WD 2.0 CRDI 140 PACK LUXE",
+          "4WD 2.0 CRDI 140 WORLD CUP",
+          "4WD 2.0 CRDI EDITION SPECIALE",
+          "4WD 2.0 CRDI PACK CONFORT",
+          "4WD 2.0 CRDI PACK CONFORT BVA",
+          "4WD 2.0 CRDI PACK LUXE",
+          "4WD 2.0 CRDI PACK LUXE BVA"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2007": {
+        "essence": [
+          "2WD 2.0 140 PACK CONFORT"
+        ],
+        "diesel": [
+          "2WD 2.0 CRDI 136 EDITION SPECIALE",
+          "2WD 2.0 CRDI 136 PACK CONFORT",
+          "2WD 2.0 CRDI 136 PACK LUXE BVA",
+          "2WD 2.0 CRDI 136 PACK STYLE",
+          "2WD 2.0 CRDI 140 PACK CONFORT",
+          "2WD 2.0 CRDI 140 PACK LUXE BVA",
+          "2WD 2.0 CRDI 140 PACK STYLE",
+          "2WD 2.0 CRDI EDITION SPECIALE",
+          "4WD 2.0 CRDI 140 EDITION SPECIALE",
+          "4WD 2.0 CRDI 140 PACK COLOR EX",
+          "4WD 2.0 CRDI 140 PACK CONFORT",
+          "4WD 2.0 CRDI 140 PACK LUXE",
+          "4WD 2.0 CRDI 140 PACK STYLE",
+          "4WD 2.0 CRDI EDITION SPECIALE",
+          "4WD 2.0 CRDI PACK LUXE",
+          "4WD 2.0 CRDI PACK LUXE BVA"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2008": {
+        "essence": [
+          "2WD 2.0 140 PACK CONFORT",
+          "2WD 2.0 140 PACK CONFORT II"
+        ],
+        "diesel": [
+          "2WD 2.0 CRDI 136 EDITION SPECIALE",
+          "2WD 2.0 CRDI 140 EURO 2008",
+          "2WD 2.0 CRDI 140 PACK CONFORT",
+          "2WD 2.0 CRDI 140 PACK EXECUTIVE",
+          "2WD 2.0 CRDI 140 PACK EXECUTIVE BVA",
+          "2WD 2.0 CRDI 140 PACK LUXE BVA",
+          "2WD 2.0 CRDI 140 PACK STYLE",
+          "4WD 2.0 CRDI 140 EDITION SPECIALE",
+          "4WD 2.0 CRDI 140 EURO 2008",
+          "4WD 2.0 CRDI 140 PACK COLOR EX",
+          "4WD 2.0 CRDI 140 PACK CONFORT",
+          "4WD 2.0 CRDI 140 PACK EDITION",
+          "4WD 2.0 CRDI 140 PACK EDITION CUIR",
+          "4WD 2.0 CRDI 140 PACK EXECUTIVE",
+          "4WD 2.0 CRDI 140 PACK LUXE",
+          "4WD 2.0 CRDI 140 PACK STYLE",
+          "4WD 2.0 CRDI PACK LUXE",
+          "4WD 2.0 CRDI PACK LUXE BVA"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2009": {
+        "essence": [
+          "2WD 2.0 140 PACK CONFORT II"
+        ],
+        "diesel": [
+          "2WD 2.0 CRDI 140 EURO 2008",
+          "2WD 2.0 CRDI 140 PACK CONFORT",
+          "2WD 2.0 CRDI 140 PACK EXECUTIVE",
+          "2WD 2.0 CRDI 140 PACK EXECUTIVE BVA",
+          "2WD 2.0 CRDI 149 PACK EDITION II",
+          "4WD 2.0 CRDI 140 PACK CONFORT",
+          "4WD 2.0 CRDI 140 PACK EDITION",
+          "4WD 2.0 CRDI 140 PACK EDITION CUIR",
+          "4WD 2.0 CRDI 140 PACK EXECUTIVE",
+          "4WD 2.0 CRDI 149 PACK EXECUTIVE"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2010": {
+        "essence": [],
+        "diesel": [
+          "2WD 2.0 CRDI 140 EURO 2008",
+          "2WD 2.0 CRDI 140 PACK EXECUTIVE",
+          "2WD 2.0 CRDI 149 PACK EDITION II",
+          "4WD 2.0 CRDI 140 PACK EDITION",
+          "4WD 2.0 CRDI 140 PACK EDITION CUIR",
+          "4WD 2.0 CRDI 149 PACK EXECUTIVE"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
       }
     },
     "Bayon": {
@@ -190018,11 +190180,7 @@
           "1.2 77 PACK CLIM",
           "1.2 77 PACK CLIM 3P",
           "1.2 77 PACK COLOR CONFORT",
-          "1.2 77 PACK COLOR CONFORT ESP 5P",
-          "1.2 PACK 5P",
-          "1.2 PACK CLIM 5P",
-          "1.2 PACK COLOR CONFORT 5P",
-          "1.2 PACK COLOR CONFORT ESP 5P"
+          "1.2 77 PACK COLOR CONFORT ESP 5P"
         ],
         "diesel": [
           "1.4 CRDI 75 PACK CLIM",
@@ -190030,8 +190188,7 @@
           "1.4 CRDI 75 PACK CLIM ESP 5P",
           "1.4 CRDI 90 PACK COLOR CONFORT",
           "1.4 CRDI 90 PACK COLOR CONFORT 5P",
-          "1.4 CRDI 90 PACK COLOR CONFORT ESP 5P",
-          "1.4 CRDI 75 PACK CLIM 5P"
+          "1.4 CRDI 90 PACK COLOR CONFORT ESP 5P"
         ],
         "hybride": [],
         "electrique": [],
@@ -190039,6 +190196,11 @@
       },
       "2010": {
         "essence": [
+          "1.2 77 PACK",
+          "1.2 77 PACK CLIM",
+          "1.2 77 PACK CLIM 3P",
+          "1.2 77 PACK COLOR CONFORT",
+          "1.2 77 PACK COLOR CONFORT ESP 5P",
           "1.2 77 PACK EDITION 5P",
           "1.2 77 PACK EVIDENCE 5P",
           "1.2 77 PACK INVENTIVE 5P",
@@ -190047,11 +190209,16 @@
         "diesel": [
           "1.4 CRDI 75 CONFORT 3P EURO5",
           "1.4 CRDI 75 CONFORT ESP 3P",
+          "1.4 CRDI 75 PACK CLIM",
           "1.4 CRDI 75 PACK CLIM 5P EURO5",
+          "1.4 CRDI 75 PACK CLIM ESP 3P",
+          "1.4 CRDI 75 PACK CLIM ESP 5P",
           "1.4 CRDI 75 PACK EDITION 5P",
           "1.4 CRDI 75 PACK INVENTIVE 5P",
           "1.4 CRDI 75 PACK SENSATION 5P",
-          "1.4 CRDI 75 WORLD CUP 5P"
+          "1.4 CRDI 75 WORLD CUP 5P",
+          "1.4 CRDI 90 PACK COLOR CONFORT 5P",
+          "1.4 CRDI 90 PACK COLOR CONFORT ESP 5P"
         ],
         "hybride": [],
         "electrique": [],
@@ -190063,7 +190230,9 @@
           "(2) 1.2 PACK EVIDENCE",
           "(2) 1.2 PACK INVENTIVE",
           "(2) 1.2 PACK SENSATION",
-          "(2) 1.4 PACK SENSATION BVA"
+          "(2) 1.4 PACK SENSATION BVA",
+          "1.2 77 PACK EVIDENCE 5P",
+          "1.2 77 PACK INVENTIVE 5P"
         ],
         "diesel": [
           "(2) 1.1 CRDI 75 PACK EVIDENCE BLUE DRIVE",
@@ -190072,6 +190241,8 @@
           "(2) 1.1 CRDI 75 PACK SENSATION",
           "(2) 1.4 CRDI 90 PACK PREMIUM",
           "(2) 1.4 CRDI 90 PACK SENSATION",
+          "1.4 CRDI 75 PACK INVENTIVE 5P",
+          "1.4 CRDI 75 PACK SENSATION 5P",
           "1.4 CRDI 90 PACK SENSATION BLUE DRIVE"
         ],
         "hybride": [],
@@ -190084,24 +190255,60 @@
           "(2) 1.2 GO! BRASIL",
           "(2) 1.2 GO! BRASIL PLUS",
           "(2) 1.2 GO! PLUS",
+          "(2) 1.2 PACK EVIDENCE",
           "(2) 1.2 PACK GO!",
-          "(2) 1.2 PACK GO! PLUS"
+          "(2) 1.2 PACK GO! PLUS",
+          "(2) 1.2 PACK INVENTIVE",
+          "(2) 1.2 PACK SENSATION",
+          "(2) 1.4 PACK SENSATION BVA"
         ],
-        "diesel": [],
+        "diesel": [
+          "(2) 1.1 CRDI 75 PACK EVIDENCE BLUE DRIVE",
+          "(2) 1.1 CRDI 75 PACK INVENTIVE LIMITED",
+          "(2) 1.4 CRDI 90 PACK PREMIUM",
+          "(2) 1.4 CRDI 90 PACK SENSATION"
+        ],
         "hybride": [],
         "electrique": [],
         "gpl": []
       },
       "2011": {
-        "essence": [],
-        "diesel": [],
+        "essence": [
+          "1.2 77 PACK",
+          "1.2 77 PACK CLIM",
+          "1.2 77 PACK CLIM 3P",
+          "1.2 77 PACK COLOR CONFORT",
+          "1.2 77 PACK EDITION 5P",
+          "1.2 77 PACK EVIDENCE 5P",
+          "1.2 77 PACK INVENTIVE 5P"
+        ],
+        "diesel": [
+          "1.4 CRDI 75 CONFORT ESP 3P",
+          "1.4 CRDI 75 PACK CLIM",
+          "1.4 CRDI 75 PACK CLIM 5P EURO5",
+          "1.4 CRDI 75 PACK EDITION 5P",
+          "1.4 CRDI 75 PACK INVENTIVE 5P",
+          "1.4 CRDI 75 PACK SENSATION 5P"
+        ],
         "hybride": [],
         "electrique": [],
         "gpl": []
       },
       "2013": {
-        "essence": [],
-        "diesel": [],
+        "essence": [
+          "(2) 1.2 EDITION SPECIALE",
+          "(2) 1.2 PACK EVIDENCE",
+          "(2) 1.2 PACK INVENTIVE",
+          "(2) 1.2 PACK SENSATION",
+          "(2) 1.4 PACK SENSATION BVA"
+        ],
+        "diesel": [
+          "(2) 1.1 CRDI 75 PACK EVIDENCE BLUE DRIVE",
+          "(2) 1.1 CRDI 75 PACK INVENTIVE LIMITED",
+          "(2) 1.1 CRDI 75 PACK SENSATION",
+          "(2) 1.4 CRDI 90 PACK PREMIUM",
+          "(2) 1.4 CRDI 90 PACK SENSATION"
+        ],
         "hybride": [],
         "electrique": [],
         "gpl": []
@@ -190344,18 +190551,23 @@
     "I30 3E Generation": {
       "2017": {
         "essence": [
-          "III SW 1.0 T-GDI 120 BUSINESS",
-          "III SW 1.0 T-GDI 120 EDITION 1",
-          "III SW 1.4 T-GDI 140 CREATIVE",
-          "III SW 1.4 T-GDI 140 CREATIVE DCT-7"
+          "III 1.0 T-GDI 120 BUSINESS",
+          "III 1.0 T-GDI 120 CREATIVE",
+          "III 1.0 T-GDI 120 EDITION 1",
+          "III 1.0 T-GDI 120 INTUITIVE",
+          "III 1.4 T-GDI 140 BUSINESS",
+          "III 1.4 T-GDI 140 BUSINESS DCT-7",
+          "III 1.4 T-GDI 140 CREATIVE",
+          "III 1.4 T-GDI 140 CREATIVE DCT-7"
         ],
         "diesel": [
-          "III SW 1.6 CRDI 110 BUSINESS",
-          "III SW 1.6 CRDI 110 BUSINESS DCT-7",
-          "III SW 1.6 CRDI 110 EDITION 1",
-          "III SW 1.6 CRDI 110 EDITION 1 DCT-7",
-          "III SW 1.6 CRDI 136 CREATIVE",
-          "III SW 1.6 CRDI 136 CREATIVE DCT-7"
+          "III 1.6 CRDI 110 BUSINESS",
+          "III 1.6 CRDI 110 BUSINESS DCT-7",
+          "III 1.6 CRDI 110 EDITION 1",
+          "III 1.6 CRDI 110 EDITION 1 DCT-7",
+          "III 1.6 CRDI 110 INTUITIVE",
+          "III 1.6 CRDI 136 CREATIVE",
+          "III 1.6 CRDI 136 CREATIVE DCT-7"
         ],
         "hybride": [],
         "electrique": [],
@@ -190363,28 +190575,36 @@
       },
       "2018": {
         "essence": [
-          "III SW 1.0 T-GDI 120 BUSINESS",
-          "III SW 1.0 T-GDI 120 EDITION 1",
-          "III SW 1.0 T-GDI 120 EDITION MONDIAL",
-          "III SW 1.0 T-GDI 120 EDITION NAVI",
-          "III SW 1.4 T-GDI 140 CREATIVE",
-          "III SW 1.4 T-GDI 140 CREATIVE DCT-7"
+          "III 1.0 T-GDI 120 BUSINESS",
+          "III 1.0 T-GDI 120 CREATIVE",
+          "III 1.0 T-GDI 120 EDITION 1",
+          "III 1.0 T-GDI 120 EDITION MONDIAL",
+          "III 1.0 T-GDI 120 EDITION NAVI",
+          "III 1.0 T-GDI 120 INTUITIVE",
+          "III 1.4 T-GDI 140 BUSINESS",
+          "III 1.4 T-GDI 140 BUSINESS DCT-7",
+          "III 1.4 T-GDI 140 CREATIVE",
+          "III 1.4 T-GDI 140 CREATIVE DCT-7",
+          "III 1.4 T-GDI 140 EDITION NAVI DCT-7",
+          "III 1.4 T-GDI 140 N LINE",
+          "III 1.4 T-GDI 140 N LINE DCT-7"
         ],
         "diesel": [
-          "III SW 1.6 CRDI 110 BUSINESS",
-          "III SW 1.6 CRDI 110 BUSINESS DCT-7",
-          "III SW 1.6 CRDI 110 EDITION 1",
-          "III SW 1.6 CRDI 110 EDITION 1 DCT-7",
-          "III SW 1.6 CRDI 110 EDITION MONDIAL",
-          "III SW 1.6 CRDI 110 EDITION MONDIAL DCT-7",
-          "III SW 1.6 CRDI 115 BUSINESS",
-          "III SW 1.6 CRDI 115 BUSINESS DCT-7",
-          "III SW 1.6 CRDI 115 CREATIVE",
-          "III SW 1.6 CRDI 115 CREATIVE DCT-7",
-          "III SW 1.6 CRDI 115 EDITION NAVI",
-          "III SW 1.6 CRDI 115 EDITION NAVI DCT-7",
-          "III SW 1.6 CRDI 136 CREATIVE",
-          "III SW 1.6 CRDI 136 CREATIVE DCT-7"
+          "III 1.6 CRDI 110 BUSINESS",
+          "III 1.6 CRDI 110 BUSINESS DCT-7",
+          "III 1.6 CRDI 110 EDITION 1",
+          "III 1.6 CRDI 110 EDITION 1 DCT-7",
+          "III 1.6 CRDI 110 EDITION MONDIAL",
+          "III 1.6 CRDI 110 EDITION MONDIAL DCT-7",
+          "III 1.6 CRDI 110 INTUITIVE",
+          "III 1.6 CRDI 115 BUSINESS",
+          "III 1.6 CRDI 115 BUSINESS DCT-7",
+          "III 1.6 CRDI 115 EDITION NAVI",
+          "III 1.6 CRDI 115 EDITION NAVI DCT-7",
+          "III 1.6 CRDI 115 INTUITIVE",
+          "III 1.6 CRDI 136 CREATIVE",
+          "III 1.6 CRDI 136 CREATIVE DCT-7",
+          "III 1.6 CRDI 95 BUSINESS"
         ],
         "hybride": [],
         "electrique": [],
@@ -190392,20 +190612,29 @@
       },
       "2019": {
         "essence": [
-          "III SW 1.0 T-GDI 120 BUSINESS",
-          "III SW 1.0 T-GDI 120 EDITION MONDIAL 2019",
-          "III SW 1.0 T-GDI 120 EDITION NAVI",
-          "III SW 1.4 T-GDI 140 CREATIVE DCT-7"
+          "III 1.0 T-GDI 120 6CV N LINE",
+          "III 1.0 T-GDI 120 BUSINESS",
+          "III 1.0 T-GDI 120 EDITION MONDIAL 2019",
+          "III 1.0 T-GDI 120 EDITION NAVI",
+          "III 1.0 T-GDI 120 INTUITIVE",
+          "III 1.0 T-GDI 120 N LINE",
+          "III 1.4 T-GDI 140 EDITION MONDIAL 2019 DCT-7",
+          "III 1.4 T-GDI 140 EDITION NAVI DCT-7",
+          "III 1.4 T-GDI 140 N LINE",
+          "III 1.4 T-GDI 140 N LINE DCT-7"
         ],
         "diesel": [
-          "III SW 1.6 CRDI 115 BUSINESS",
-          "III SW 1.6 CRDI 115 BUSINESS DCT-7",
-          "III SW 1.6 CRDI 115 CREATIVE",
-          "III SW 1.6 CRDI 115 CREATIVE DCT-7",
-          "III SW 1.6 CRDI 115 EDITION MONDIAL 2019",
-          "III SW 1.6 CRDI 115 EDITION MONDIAL 2019 DCT-7",
-          "III SW 1.6 CRDI 115 EDITION NAVI",
-          "III SW 1.6 CRDI 115 EDITION NAVI DCT-7"
+          "III 1.6 CRDI 115 BUSINESS",
+          "III 1.6 CRDI 115 BUSINESS DCT-7",
+          "III 1.6 CRDI 115 EDITION MONDIAL 2019",
+          "III 1.6 CRDI 115 EDITION MONDIAL 2019 DCT-7",
+          "III 1.6 CRDI 115 EDITION NAVI",
+          "III 1.6 CRDI 115 EDITION NAVI DCT-7",
+          "III 1.6 CRDI 115 INTUITIVE",
+          "III 1.6 CRDI 136 N LINE",
+          "III 1.6 CRDI 136 N LINE DCT-7",
+          "III 1.6 CRDI 95 5CV BUSINESS",
+          "III 1.6 CRDI 95 BUSINESS"
         ],
         "hybride": [],
         "electrique": [],
@@ -190413,102 +190642,150 @@
       },
       "2020": {
         "essence": [
-          "III SW 1.0 T-GDI 120 EDITION MONDIAL 2019",
-          "III SW 1.0 T-GDI 120 EDITION NAVI 119G",
-          "III SW 1.4 T-GDI 140 CREATIVE DCT-7"
+          "III 1.0 T-GDI 120 6CV N LINE",
+          "III 1.0 T-GDI 120 BUSINESS",
+          "III 1.0 T-GDI 120 EDITION MONDIAL 2019",
+          "III 1.0 T-GDI 120 EDITION NAVI 119G",
+          "III 1.0 T-GDI 120 INTUITIVE",
+          "III 1.4 T-GDI 140 EDITION MONDIAL 2019 DCT-7",
+          "III 1.4 T-GDI 140 EDITION NAVI DCT-7 123G",
+          "III 1.4 T-GDI 140 N LINE",
+          "III 1.4 T-GDI 140 N LINE DCT-7"
         ],
         "diesel": [
-          "III (2) SW 1.6 CRDI 115 BUSINESS",
-          "III (2) SW 1.6 CRDI 115 BUSINESS DCT-7",
-          "III (2) SW 1.6 CRDI 115 CREATIVE",
-          "III SW 1.6 CRDI 115 BUSINESS",
-          "III SW 1.6 CRDI 115 BUSINESS DCT-7",
-          "III SW 1.6 CRDI 115 CREATIVE",
-          "III SW 1.6 CRDI 115 CREATIVE DCT-7",
-          "III SW 1.6 CRDI 115 EDITION MONDIAL 2019",
-          "III SW 1.6 CRDI 115 EDITION MONDIAL 2019 DCT-7",
-          "III SW 1.6 CRDI 115 EDITION NAVI 107G",
-          "III SW 1.6 CRDI 115 EDITION NAVI DCT-7 105G"
+          "III (2) 1.6 CRDI 115 BUSINESS",
+          "III (2) 1.6 CRDI 115 BUSINESS DCT-7",
+          "III (2) 1.6 CRDI 115 CREATIVE",
+          "III (2) 1.6 CRDI 115 CREATIVE DCT-7",
+          "III 1.6 CRDI 115 BUSINESS DCT-7",
+          "III 1.6 CRDI 115 EDITION MONDIAL 2019",
+          "III 1.6 CRDI 115 EDITION MONDIAL 2019 DCT-7",
+          "III 1.6 CRDI 115 EDITION NAVI 115G",
+          "III 1.6 CRDI 115 EDITION NAVI DCT-7 105G",
+          "III 1.6 CRDI 136 N LINE",
+          "III 1.6 CRDI 136 N LINE DCT-7",
+          "III 1.6 CRDI 95 5CV BUSINESS"
         ],
         "hybride": [
-          "III (2) SW 1.0 T-GDI 120 MHEV I-MT CREATIVE",
-          "III (2) SW 1.0 T-GDI 120 MHEV N LINE DCT-7"
+          "III (2) 1.0 T-GDI 120 MHEV I-MT CREATIVE",
+          "III (2) 1.0 T-GDI 120 MHEV I-MT INTUITIVE",
+          "III (2) 1.0 T-GDI 120 MHEV I-MT N LINE",
+          "III (2) 1.0 T-GDI 120 MHEV N LINE DCT-7"
         ],
         "electrique": [],
         "gpl": []
       },
       "2021": {
-        "essence": [],
+        "essence": [
+          "III (2) 1.0 T-GDI 120 CREATIVE IBVM6"
+        ],
         "diesel": [
-          "III (2) SW 1.6 CRDI 115 BUSINESS",
-          "III (2) SW 1.6 CRDI 115 BUSINESS DCT-7",
-          "III (2) SW 1.6 CRDI 115 CREATIVE"
+          "III (2) 1.6 CRDI 115 BUSINESS",
+          "III (2) 1.6 CRDI 115 BUSINESS DCT-7",
+          "III (2) 1.6 CRDI 115 CREATIVE",
+          "III (2) 1.6 CRDI 115 CREATIVE DCT-7"
         ],
         "hybride": [
-          "III (2) SW 1.0 T-GDI 120 MHEV I-MT CREATIVE",
-          "III (2) SW 1.0 T-GDI 120 MHEV N LINE DCT-7"
+          "III (2) 1.0 T-GDI 120 MHEV I-MT CREATIVE",
+          "III (2) 1.0 T-GDI 120 MHEV I-MT INTUITIVE",
+          "III (2) 1.0 T-GDI 120 MHEV I-MT N LINE",
+          "III (2) 1.0 T-GDI 120 MHEV N LINE DCT-7"
         ],
         "electrique": [],
         "gpl": []
       },
       "2022": {
         "essence": [
-          "III (2) SW 1.0 T-GDI 120 CREATIVE DCT-7",
-          "III (2) SW 1.0 T-GDI 120 N LINE DCT-7"
+          "III (2) 1.0 T-GDI 120 CREATIVE DCT-7",
+          "III (2) 1.0 T-GDI 120 CREATIVE IBVM6",
+          "III (2) 1.0 T-GDI 120 N LINE DCT-7",
+          "III (2) 1.0 T-GDI 120 N LINE IBVM6"
         ],
         "diesel": [
-          "III (2) SW 1.6 CRDI 115 BUSINESS",
-          "III (2) SW 1.6 CRDI 115 BUSINESS DCT-7",
-          "III (2) SW 1.6 CRDI 115 CREATIVE"
+          "III (2) 1.6 CRDI 115 BUSINESS",
+          "III (2) 1.6 CRDI 115 BUSINESS DCT-7",
+          "III (2) 1.6 CRDI 115 CREATIVE",
+          "III (2) 1.6 CRDI 115 CREATIVE DCT-7"
         ],
         "hybride": [
-          "III (2) SW 1.0 T-GDI 120 MHEV I-MT CREATIVE",
-          "III (2) SW 1.0 T-GDI 120 MHEV N LINE DCT-7"
+          "III (2) 1.0 T-GDI 120 MHEV I-MT INTUITIVE",
+          "III (2) 1.0 T-GDI 120 MHEV I-MT N LINE",
+          "III (2) 1.0 T-GDI 120 MHEV N LINE DCT-7"
         ],
         "electrique": [],
         "gpl": []
       },
       "2023": {
         "essence": [
-          "III (2) SW 1.0 T-GDI 120 CREATIVE DCT-7",
-          "III (2) SW 1.0 T-GDI 120 N LINE DCT-7"
-        ],
-        "diesel": [],
-        "hybride": [
-          "III (2) SW 1.0 T-GDI 120 MHEV I-MT CREATIVE"
-        ],
-        "electrique": [],
-        "gpl": []
-      },
-      "2024": {
-        "essence": [
-          "III (2) SW 1.0 T-GDI 120 CREATIVE DCT-7",
-          "III (2) SW 1.0 T-GDI 120 N LINE DCT-7",
-          "III (3) SW 1.0 T-GDI 100 CREATIVE BVM",
-          "III (3) SW 1.0 T-GDI 100 CREATIVE DCT-7"
-        ],
-        "diesel": [],
-        "hybride": [
-          "III (2) SW 1.0 T-GDI 120 MHEV I-MT CREATIVE"
-        ],
-        "electrique": [],
-        "gpl": []
-      },
-      "2025": {
-        "essence": [
-          "III (3) SW 1.0 T-GDI 100 CREATIVE BVM",
-          "III (3) SW 1.0 T-GDI 100 CREATIVE DCT-7"
+          "III (2) 1.0 T-GDI 120 CREATIVE DCT-7",
+          "III (2) 1.0 T-GDI 120 CREATIVE IBVM6",
+          "III (2) 1.0 T-GDI 120 N LINE DCT-7",
+          "III (2) 1.0 T-GDI 120 N LINE IBVM6"
         ],
         "diesel": [],
         "hybride": [],
         "electrique": [],
         "gpl": []
       },
-      "2026": {
+      "2024": {
         "essence": [
-          "III (3) SW 1.0 T-GDI 100 CREATIVE DCT-7"
+          "III (2) 1.0 T-GDI 120 CREATIVE DCT-7",
+          "III (2) 1.0 T-GDI 120 CREATIVE IBVM6",
+          "III (2) 1.0 T-GDI 120 N LINE DCT-7",
+          "III (2) 1.0 T-GDI 120 N LINE IBVM6",
+          "III (3) 1.0 T-GDI 100 CREATIVE BVM",
+          "III (3) 1.0 T-GDI 100 CREATIVE DCT-7"
         ],
         "diesel": [],
+        "hybride": [
+          "III (3) 1.5 T-GDI 140 HYBRID 48V N LINE DCT-7"
+        ],
+        "electrique": [],
+        "gpl": []
+      },
+      "2025": {
+        "essence": [
+          "III (3) 1.0 T-GDI 100 CREATIVE BVM",
+          "III (3) 1.0 T-GDI 100 CREATIVE DCT-7"
+        ],
+        "diesel": [],
+        "hybride": [
+          "III (3) 1.5 T-GDI 140 HYBRID 48V N LINE DCT-7"
+        ],
+        "electrique": [],
+        "gpl": []
+      },
+      "2026": {
+        "essence": [
+          "III (3) 1.0 T-GDI 100 CREATIVE BVM",
+          "III (3) 1.0 T-GDI 100 CREATIVE DCT-7"
+        ],
+        "diesel": [],
+        "hybride": [
+          "III (3) 1.5 T-GDI 140 HYBRID 48V N LINE DCT-7"
+        ],
+        "electrique": [],
+        "gpl": []
+      },
+      "2016": {
+        "essence": [
+          "III 1.0 T-GDI 120 CREATIVE",
+          "III 1.0 T-GDI 120 EDITION 1",
+          "III 1.0 T-GDI 120 INTUITIVE",
+          "III 1.4 T-GDI 140 BUSINESS",
+          "III 1.4 T-GDI 140 BUSINESS DCT-7",
+          "III 1.4 T-GDI 140 CREATIVE",
+          "III 1.4 T-GDI 140 CREATIVE DCT-7"
+        ],
+        "diesel": [
+          "III 1.6 CRDI 110 BUSINESS",
+          "III 1.6 CRDI 110 BUSINESS DCT-7",
+          "III 1.6 CRDI 110 EDITION 1",
+          "III 1.6 CRDI 110 EDITION 1 DCT-7",
+          "III 1.6 CRDI 110 INTUITIVE",
+          "III 1.6 CRDI 136 CREATIVE",
+          "III 1.6 CRDI 136 CREATIVE DCT-7"
+        ],
         "hybride": [],
         "electrique": [],
         "gpl": []
@@ -190796,12 +191073,7 @@
     "I10": {
       "2008": {
         "essence": [
-          "1.1 65 PACK",
           "1.1 65 PACK COLOR CONFORT",
-          "1.1 65 PACK CONFORT",
-          "1.2 PACK",
-          "1.2 PACK CLIM",
-          "1.2 PACK COLOR CONFORT",
           "1.1 66 PACK",
           "1.1 66 PACK CONFORT",
           "1.2 77 PACK",
@@ -190820,15 +191092,21 @@
       },
       "2009": {
         "essence": [
-          "1.1 66 SOCIETE",
-          "1.2 PACK CLIM II",
-          "1.2 PACK COLOR CONFORT II",
+          "1.1 65 PACK COLOR CONFORT",
+          "1.1 66 PACK",
+          "1.1 66 PACK CONFORT",
           "1.1 67",
+          "1.2 77 PACK",
+          "1.2 77 PACK CLIM",
           "1.2 77 PACK CLIM II",
+          "1.2 77 PACK COLOR CONFORT",
+          "1.2 77 PACK COLOR CONFORT BVA",
           "1.2 77 PACK COLOR CONFORT II"
         ],
         "diesel": [
-          "1.1 CRDI 75 SOCIETE"
+          "1.1 CRDI 75 PACK",
+          "1.1 CRDI 75 PACK COLOR CONFORT",
+          "1.1 CRDI 75 PACK CONFORT"
         ],
         "hybride": [],
         "electrique": [],
@@ -190836,16 +191114,31 @@
       },
       "2010": {
         "essence": [
+          "1.1 67",
+          "1.2 77 PACK",
+          "1.2 77 PACK CLIM",
+          "1.2 77 PACK CLIM II",
+          "1.2 77 PACK COLOR CONFORT",
+          "1.2 77 PACK COLOR CONFORT BVA",
+          "1.2 77 PACK COLOR CONFORT II",
           "1.2 77 PACK EDITION",
           "1.2 77 WORLD CUP 2010"
         ],
-        "diesel": [],
+        "diesel": [
+          "1.1 CRDI 75 PACK",
+          "1.1 CRDI 75 PACK COLOR CONFORT"
+        ],
         "hybride": [],
         "electrique": [],
         "gpl": []
       },
       "2011": {
         "essence": [
+          "1.1 67",
+          "1.2 77 PACK",
+          "1.2 77 PACK CLIM II",
+          "1.2 77 PACK COLOR CONFORT II",
+          "1.2 77 PACK EDITION",
           "1.2 77 PACK EVIDENCE",
           "1.2 77 PACK INVENTIVE",
           "1.2 77 PACK SENSATION",
@@ -190853,7 +191146,7 @@
           "1.2 86 PACK INVENTIVE",
           "1.2 86 PACK SENSATION",
           "1.2 86 PACK SENSATION BVA",
-          "1.2 INTUITIVE & STYLE"
+          "1.2 INTUITIVE &amp; STYLE"
         ],
         "diesel": [],
         "hybride": [],
@@ -190862,7 +191155,27 @@
       },
       "2012": {
         "essence": [
-          "1.1 70"
+          "1.1 70",
+          "1.2 86 PACK EVIDENCE",
+          "1.2 86 PACK INVENTIVE",
+          "1.2 86 PACK SENSATION",
+          "1.2 86 PACK SENSATION BVA",
+          "1.2 INTUITIVE &amp; STYLE"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [
+          "1.2 PACK EVIDENCE ELECTRIC"
+        ],
+        "gpl": []
+      },
+      "2013": {
+        "essence": [
+          "1.1 70",
+          "1.2 86 PACK INVENTIVE",
+          "1.2 86 PACK SENSATION",
+          "1.2 86 PACK SENSATION BVA",
+          "1.2 INTUITIVE &amp; STYLE"
         ],
         "diesel": [],
         "hybride": [],
@@ -190917,8 +191230,10 @@
       "2009": {
         "essence": [],
         "diesel": [
+          "CW 1.6 CRDI 115 PACK CONFORT",
           "CW 1.6 CRDI 115 PACK CONFORT II",
           "CW 1.6 CRDI 115 PACK EDITION BVM6",
+          "CW 1.6 CRDI 90 PACK CLIM",
           "CW 1.6 CRDI 90 PACK CLIM BVM6"
         ],
         "hybride": [],
@@ -190928,8 +191243,11 @@
       "2010": {
         "essence": [],
         "diesel": [
+          "CW 1.6 CRDI 115 PACK EDITION BVM6",
           "CW 1.6 CRDI 115 PACK SENSATION",
           "CW 1.6 CRDI 115 PACK SENSATION AUTO",
+          "CW 1.6 CRDI 90 PACK CLIM",
+          "CW 1.6 CRDI 90 PACK CLIM BVM6",
           "CW 1.6 CRDI 90 PACK EVIDENCE"
         ],
         "hybride": [],
@@ -190941,11 +191259,25 @@
         "diesel": [
           "CW 1.6 CRDI 115 FAP PACK SENSATION",
           "CW 1.6 CRDI 115 FAP PACK SENSATION BVA",
+          "CW 1.6 CRDI 115 PACK EDITION BVM6",
+          "CW 1.6 CRDI 115 PACK SENSATION",
+          "CW 1.6 CRDI 115 PACK SENSATION AUTO",
           "CW 1.6 CRDI 115 PACK SENSATION BVA",
           "CW 1.6 CRDI 116 FAP PACK SENSATION",
           "CW 1.6 CRDI 116 FAP PACK SENSATION AUTO",
           "CW 1.6 CRDI 116 PACK SENSATION AUTO",
-          "CW 1.6 CRDI 90 FAP PACK EVIDENCE"
+          "CW 1.6 CRDI 90 FAP PACK EVIDENCE",
+          "CW 1.6 CRDI 90 PACK CLIM",
+          "CW 1.6 CRDI 90 PACK EVIDENCE"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2012": {
+        "essence": [],
+        "diesel": [
+          "CW 1.6 CRDI 116 FAP PACK SENSATION"
         ],
         "hybride": [],
         "electrique": [],
@@ -190965,6 +191297,7 @@
       "2011": {
         "essence": [],
         "diesel": [
+          "3.0 V6 CRDI 240 4WD PACK PREMIUM",
           "3.0 V6 CRDI 250 4WD PACK PREMIUM"
         ],
         "hybride": [],
@@ -190984,6 +191317,24 @@
         "essence": [],
         "diesel": [
           "3.0 V6 CRDI 240 4WD PACK PREMIUM"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2012": {
+        "essence": [],
+        "diesel": [
+          "3.0 V6 CRDI 250 4WD PACK PREMIUM"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2013": {
+        "essence": [],
+        "diesel": [
+          "3.0 V6 CRDI 250 4WD PACK PREMIUM"
         ],
         "hybride": [],
         "electrique": [],
@@ -191360,13 +191711,25 @@
       },
       "2013": {
         "essence": [
+          "II 1.4 100 PACK EVIDENCE",
+          "II 1.4 100 PACK EVIDENCE 3P",
+          "II 1.4 100 PACK INVENTIVE",
           "II 1.4 PACK INVENTIVE LIMITED",
           "II 1.4 PACK INVENTIVE LIMITED 5P"
         ],
         "diesel": [
+          "II 1.4 CRDI 90 PACK INVENTIVE BLUE DRIVE",
+          "II 1.6 CRDI 110 PACK BUSINESS BLUE DRIVE",
+          "II 1.6 CRDI 110 PACK INVENTIVE BLUE DRIVE",
+          "II 1.6 CRDI 110 PACK INVENTIVE LIMITED 3P",
           "II 1.6 CRDI 110 PACK INVENTIVE LIMITED BLUE DRIVE",
           "II 1.6 CRDI 110 PACK INVENTIVE LIMITED BLUE DRIVE 5P",
+          "II 1.6 CRDI 110 PACK SENSATION BLUE DRIVE",
+          "II 1.6 CRDI 110 PANORAMIC SUNSATION 3P",
           "II 1.6 CRDI 110 PANORAMIC SUNSATION 5P",
+          "II 1.6 CRDI 128 PACK PREMIUM",
+          "II 1.6 CRDI 128 PACK PREMIUM 3P",
+          "II 1.6 CRDI 128 PACK PREMIUM AUTO",
           "II 1.6 CRDI 128 PACK PREMIUM LIMITED"
         ],
         "hybride": [],
@@ -191378,6 +191741,10 @@
           "II 1.4 100",
           "II 1.4 100 INITIA",
           "II 1.4 100 INTUITIVE 5P",
+          "II 1.4 100 PACK EVIDENCE 3P",
+          "II 1.4 100 PACK INVENTIVE",
+          "II 1.4 PACK INVENTIVE LIMITED",
+          "II 1.4 PACK INVENTIVE LIMITED 5P",
           "II 1.6 GDI 135 BLUE DRIVE GO! NAVI",
           "II 1.6 GDI 135 BLUE DRIVE INTUITIVE",
           "II 1.6 GDI 135 CREATIVE",
@@ -191394,7 +191761,19 @@
           "II 1.6 CRDI 110 EXECUTIVE",
           "II 1.6 CRDI 110 EXECUTIVE BVA",
           "II 1.6 CRDI 110 EXECUTIVE DCT-7",
-          "II 1.6 CRDI 110 GO! BRASIL NAVI"
+          "II 1.6 CRDI 110 GO! BRASIL NAVI",
+          "II 1.6 CRDI 110 PACK BUSINESS BLUE DRIVE",
+          "II 1.6 CRDI 110 PACK INVENTIVE BLUE DRIVE",
+          "II 1.6 CRDI 110 PACK INVENTIVE LIMITED 3P",
+          "II 1.6 CRDI 110 PACK INVENTIVE LIMITED BLUE DRIVE",
+          "II 1.6 CRDI 110 PACK INVENTIVE LIMITED BLUE DRIVE 5P",
+          "II 1.6 CRDI 110 PACK SENSATION BLUE DRIVE",
+          "II 1.6 CRDI 110 PANORAMIC SUNSATION 3P",
+          "II 1.6 CRDI 110 PANORAMIC SUNSATION 5P",
+          "II 1.6 CRDI 128 PACK PREMIUM",
+          "II 1.6 CRDI 128 PACK PREMIUM 3P",
+          "II 1.6 CRDI 128 PACK PREMIUM AUTO",
+          "II 1.6 CRDI 128 PACK PREMIUM LIMITED"
         ],
         "hybride": [],
         "electrique": [],
@@ -191406,7 +191785,14 @@
           "II (2) 1.4 100 BLUE DRIVE INITIA",
           "II (2) 1.4 100 BLUE DRIVE INTUITIVE 5P",
           "II (2) 1.6 GDI 135 BLUE DRIVE CREATIVE",
-          "II (2) 1.6 T-GDI 186 TURBO"
+          "II (2) 1.6 T-GDI 186 TURBO",
+          "II 1.4 100",
+          "II 1.4 100 INITIA",
+          "II 1.4 100 INTUITIVE 5P",
+          "II 1.4 100 PACK EVIDENCE 3P",
+          "II 1.6 GDI 135 BLUE DRIVE INTUITIVE",
+          "II 1.6 GDI 135 CREATIVE",
+          "II 1.6 GDI 135 EXECUTIVE"
         ],
         "diesel": [
           "II (2) 1.6 CRDI 110 BLUE DRIVE BUSINESS",
@@ -191415,9 +191801,20 @@
           "II (2) 1.6 CRDI 110 BLUE DRIVE EA SPORTS",
           "II (2) 1.6 CRDI 110 BLUE DRIVE EXECUTIVE",
           "II (2) 1.6 CRDI 110 BLUE DRIVE EXECUTIVE DCT-7",
+          "II (2) 1.6 CRDI 110 BLUE DRIVE INITIA",
           "II (2) 1.6 CRDI 110 BLUE DRIVE INTUITIVE",
           "II (2) 1.6 CRDI 110 CREATIVE",
-          "II (2) 1.6 CRDI 110 EXECUTIVE"
+          "II (2) 1.6 CRDI 110 EXECUTIVE",
+          "II 1.4 CRDI 90 INITIA",
+          "II 1.6 CRDI 110 BLUE DRIVE INTUITIVE 5P",
+          "II 1.6 CRDI 110 CREATIVE",
+          "II 1.6 CRDI 110 CREATIVE DCT-7",
+          "II 1.6 CRDI 110 EXECUTIVE",
+          "II 1.6 CRDI 110 EXECUTIVE BVA",
+          "II 1.6 CRDI 110 EXECUTIVE DCT-7",
+          "II 1.6 CRDI 110 PACK INVENTIVE LIMITED 3P",
+          "II 1.6 CRDI 110 PANORAMIC SUNSATION 3P",
+          "II 1.6 CRDI 128 PACK PREMIUM 3P"
         ],
         "hybride": [],
         "electrique": [],
@@ -191425,20 +191822,36 @@
       },
       "2016": {
         "essence": [
+          "II (2) 1.4 100 BLUE DRIVE",
+          "II (2) 1.4 100 BLUE DRIVE INITIA",
+          "II (2) 1.4 100 BLUE DRIVE INTUITIVE 5P",
+          "II (2) 1.6 GDI 135 BLUE DRIVE CREATIVE",
           "II (2) 1.6 GDI 135 BLUE DRIVE GO!",
           "II (2) 1.6 GDI 135 BLUE DRIVE UEFA EURO 2016",
           "II (2) 1.6 GDI 135 GO! NAVI",
-          "II (2) 1.6 GDI 135 UEFA EURO 2016 PLUS"
+          "II (2) 1.6 GDI 135 UEFA EURO 2016 PLUS",
+          "II (2) 1.6 T-GDI 186 TURBO",
+          "II 1.6 GDI 135 BLUE DRIVE INTUITIVE",
+          "II 1.6 GDI 135 EXECUTIVE"
         ],
         "diesel": [
+          "II (2) 1.6 CRDI 110 BLUE DRIVE BUSINESS",
+          "II (2) 1.6 CRDI 110 BLUE DRIVE CREATIVE",
+          "II (2) 1.6 CRDI 110 BLUE DRIVE CREATIVE DCT-7",
+          "II (2) 1.6 CRDI 110 BLUE DRIVE EA SPORTS",
+          "II (2) 1.6 CRDI 110 BLUE DRIVE EXECUTIVE",
+          "II (2) 1.6 CRDI 110 BLUE DRIVE EXECUTIVE DCT-7",
           "II (2) 1.6 CRDI 110 BLUE DRIVE GO!",
           "II (2) 1.6 CRDI 110 BLUE DRIVE GO! DCT-7",
           "II (2) 1.6 CRDI 110 BLUE DRIVE GO! NAVI",
           "II (2) 1.6 CRDI 110 BLUE DRIVE GO! NAVI PLUS DCT-7",
+          "II (2) 1.6 CRDI 110 BLUE DRIVE INITIA",
+          "II (2) 1.6 CRDI 110 BLUE DRIVE INTUITIVE",
           "II (2) 1.6 CRDI 110 BLUE DRIVE UEFA EURO 2016",
           "II (2) 1.6 CRDI 110 BLUE DRIVE UEFA EURO 2016 DCT-7",
           "II (2) 1.6 CRDI 110 BLUE DRIVE UEFA EURO 2016 PLUS",
-          "II (2) 1.6 CRDI 110 BLUE DRIVE UEFA EURO 2016 PLUS DCT-7"
+          "II (2) 1.6 CRDI 110 BLUE DRIVE UEFA EURO 2016 PLUS DCT-7",
+          "II 1.4 CRDI 90 INITIA"
         ],
         "hybride": [],
         "electrique": [],
@@ -192226,6 +192639,1752 @@
           "(2) SW 1.6 CRDI 136 EXECUTIVE DCT-7"
         ],
         "hybride": [],
+        "electrique": [],
+        "gpl": []
+      }
+    },
+    "I20 2E Generation Coupe": {
+      "2015": {
+        "essence": [
+          "II COUPE 1.0 T-GDI 100 INTUITIVE",
+          "II COUPE 1.0 T-GDI 100 INTUITIVE PLUS",
+          "II COUPE 1.0 T-GDI 120 CREATIVE",
+          "II COUPE 1.2 84 CREATIVE",
+          "II COUPE 1.2 84 INITIA",
+          "II COUPE 1.2 84 INTUITIVE",
+          "II COUPE 1.2 84 INTUITIVE PLUS",
+          "II COUPE 1.4 100 CREATIVE",
+          "II COUPE 1.4 100 INTUITIVE",
+          "II COUPE 1.4 100 INTUITIVE PLUS"
+        ],
+        "diesel": [
+          "II COUPE 1.1 CRDI 75 CREATIVE",
+          "II COUPE 1.1 CRDI 75 INITIA",
+          "II COUPE 1.1 CRDI 75 INTUITIVE",
+          "II COUPE 1.1 CRDI 75 INTUITIVE PLUS",
+          "II COUPE 1.4 CRDI 90 CREATIVE",
+          "II COUPE 1.4 CRDI 90 INTUITIVE",
+          "II COUPE 1.4 CRDI 90 INTUITIVE PLUS"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2016": {
+        "essence": [
+          "II COUPE 1.0 T-GDI 100 INTUITIVE",
+          "II COUPE 1.0 T-GDI 100 INTUITIVE PLUS",
+          "II COUPE 1.0 T-GDI 120 CREATIVE",
+          "II COUPE 1.2 84 CREATIVE",
+          "II COUPE 1.2 84 INITIA",
+          "II COUPE 1.2 84 INTUITIVE",
+          "II COUPE 1.2 84 INTUITIVE PLUS",
+          "II COUPE 1.4 100 CREATIVE",
+          "II COUPE 1.4 100 INTUITIVE",
+          "II COUPE 1.4 100 INTUITIVE PLUS"
+        ],
+        "diesel": [
+          "II COUPE 1.1 CRDI 75 CREATIVE",
+          "II COUPE 1.1 CRDI 75 INITIA",
+          "II COUPE 1.1 CRDI 75 INTUITIVE",
+          "II COUPE 1.1 CRDI 75 INTUITIVE PLUS",
+          "II COUPE 1.4 CRDI 90 CREATIVE",
+          "II COUPE 1.4 CRDI 90 INTUITIVE",
+          "II COUPE 1.4 CRDI 90 INTUITIVE PLUS"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2017": {
+        "essence": [
+          "II COUPE 1.0 T-GDI 100 INTUITIVE",
+          "II COUPE 1.0 T-GDI 100 INTUITIVE PLUS",
+          "II COUPE 1.0 T-GDI 120 CREATIVE",
+          "II COUPE 1.2 84 CREATIVE",
+          "II COUPE 1.2 84 INTUITIVE",
+          "II COUPE 1.2 84 INTUITIVE PLUS",
+          "II COUPE 1.4 100 CREATIVE",
+          "II COUPE 1.4 100 INTUITIVE",
+          "II COUPE 1.4 100 INTUITIVE PLUS"
+        ],
+        "diesel": [
+          "II COUPE 1.1 CRDI 75 CREATIVE",
+          "II COUPE 1.1 CRDI 75 INTUITIVE",
+          "II COUPE 1.1 CRDI 75 INTUITIVE PLUS",
+          "II COUPE 1.4 CRDI 90 CREATIVE",
+          "II COUPE 1.4 CRDI 90 INTUITIVE",
+          "II COUPE 1.4 CRDI 90 INTUITIVE PLUS"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2018": {
+        "essence": [
+          "II COUPE 1.0 T-GDI 100 INTUITIVE",
+          "II COUPE 1.0 T-GDI 100 INTUITIVE PLUS",
+          "II COUPE 1.0 T-GDI 120 CREATIVE",
+          "II COUPE 1.2 84 INTUITIVE",
+          "II COUPE 1.2 84 INTUITIVE PLUS"
+        ],
+        "diesel": [
+          "II COUPE 1.4 CRDI 90 CREATIVE",
+          "II COUPE 1.4 CRDI 90 INTUITIVE",
+          "II COUPE 1.4 CRDI 90 INTUITIVE PLUS"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      }
+    },
+    "I30 2E Genaration Sw": {
+      "2012": {
+        "essence": [],
+        "diesel": [
+          "II SW 1.6 CRDI 110 PACK BUSINESS",
+          "II SW 1.6 CRDI 110 PACK INVENTIVE",
+          "II SW 1.6 CRDI 110 PACK SENSATION",
+          "II SW 1.6 CRDI 128 PACK PREMIUM",
+          "II SW 1.6 CRDI 128 PACK PREMIUM AUTO",
+          "II SW 1.6 CRDI 128 PACK PREMIUM AUTOMATIQUE"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2013": {
+        "essence": [],
+        "diesel": [
+          "II SW 1.6 CRDI 110 PACK BUSINESS",
+          "II SW 1.6 CRDI 110 PACK INVENTIVE",
+          "II SW 1.6 CRDI 110 PACK INVENTIVE LIMITED",
+          "II SW 1.6 CRDI 110 PACK SENSATION",
+          "II SW 1.6 CRDI 110 PACK SUNSATION",
+          "II SW 1.6 CRDI 110 PANORAMIC SUNSATION",
+          "II SW 1.6 CRDI 128 PACK PREMIUM",
+          "II SW 1.6 CRDI 128 PACK PREMIUM AUTO",
+          "II SW 1.6 CRDI 128 PACK PREMIUM AUTOMATIQUE"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2014": {
+        "essence": [],
+        "diesel": [
+          "II SW 1.4 CRDI 90 INITIA",
+          "II SW 1.4 CRDI 90 INTUITIVE",
+          "II SW 1.6 CRDI 110 BLUE DRIVE INITIA",
+          "II SW 1.6 CRDI 110 BLUE DRIVE INTUITIVE",
+          "II SW 1.6 CRDI 110 CREATIVE",
+          "II SW 1.6 CRDI 110 CREATIVE DCT-7",
+          "II SW 1.6 CRDI 110 EXECUTIVE",
+          "II SW 1.6 CRDI 110 EXECUTIVE BVA",
+          "II SW 1.6 CRDI 110 EXECUTIVE DCT-7",
+          "II SW 1.6 CRDI 110 PACK BUSINESS",
+          "II SW 1.6 CRDI 110 PACK INVENTIVE",
+          "II SW 1.6 CRDI 110 PACK INVENTIVE LIMITED",
+          "II SW 1.6 CRDI 110 PACK SENSATION",
+          "II SW 1.6 CRDI 110 PANORAMIC SUNSATION",
+          "II SW 1.6 CRDI 128 PACK PREMIUM",
+          "II SW 1.6 CRDI 128 PACK PREMIUM AUTO",
+          "II SW 1.6 CRDI 128 PACK PREMIUM AUTOMATIQUE"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2015": {
+        "essence": [],
+        "diesel": [
+          "II (2) SW 1.6 CRDI 110 BLUE DRIVE BUSINESS",
+          "II (2) SW 1.6 CRDI 110 BLUE DRIVE CREATIVE",
+          "II (2) SW 1.6 CRDI 110 BLUE DRIVE CREATIVE DCT-7",
+          "II (2) SW 1.6 CRDI 110 BLUE DRIVE EXECUTIVE",
+          "II (2) SW 1.6 CRDI 110 BLUE DRIVE EXECUTIVE DCT-7",
+          "II (2) SW 1.6 CRDI 110 EXECUTIVE",
+          "II SW 1.4 CRDI 90 INITIA",
+          "II SW 1.6 CRDI 110 BLUE DRIVE INITIA",
+          "II SW 1.6 CRDI 110 BLUE DRIVE INTUITIVE",
+          "II SW 1.6 CRDI 110 CREATIVE",
+          "II SW 1.6 CRDI 110 CREATIVE DCT-7",
+          "II SW 1.6 CRDI 110 EXECUTIVE",
+          "II SW 1.6 CRDI 110 EXECUTIVE BVA",
+          "II SW 1.6 CRDI 110 EXECUTIVE DCT-7"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2016": {
+        "essence": [],
+        "diesel": [
+          "II (2) SW 1.6 CRDI 110 BLUE DRIVE BUSINESS",
+          "II (2) SW 1.6 CRDI 110 BLUE DRIVE CREATIVE",
+          "II (2) SW 1.6 CRDI 110 BLUE DRIVE CREATIVE DCT-7",
+          "II (2) SW 1.6 CRDI 110 BLUE DRIVE EXECUTIVE",
+          "II (2) SW 1.6 CRDI 110 BLUE DRIVE EXECUTIVE DCT-7",
+          "II (2) SW 1.6 CRDI 110 BLUE DRIVE GO!",
+          "II (2) SW 1.6 CRDI 110 BLUE DRIVE GO! DCT-7",
+          "II (2) SW 1.6 CRDI 110 BLUE DRIVE GO! NAVI",
+          "II (2) SW 1.6 CRDI 110 BLUE DRIVE GO! NAVI PLUS DCT-7",
+          "II (2) SW 1.6 CRDI 110 BLUE DRIVE UEFA EURO 2016",
+          "II (2) SW 1.6 CRDI 110 BLUE DRIVE UEFA EURO 2016 DCT-7",
+          "II (2) SW 1.6 CRDI 110 BLUE DRIVE UEFA EURO 2016 PLUS",
+          "II (2) SW 1.6 CRDI 110 BLUE DRIVE UEFA EURO 2016 PLUS DCT-7",
+          "II SW 1.4 CRDI 90 INITIA",
+          "II SW 1.6 CRDI 110 BLUE DRIVE INITIA",
+          "II SW 1.6 CRDI 110 BLUE DRIVE INTUITIVE",
+          "II SW 1.6 CRDI 110 BUSINESS"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      }
+    },
+    "I30 3E Generation Sw": {
+      "2017": {
+        "essence": [
+          "III SW 1.0 T-GDI 120 BUSINESS",
+          "III SW 1.0 T-GDI 120 EDITION 1",
+          "III SW 1.4 T-GDI 140 CREATIVE",
+          "III SW 1.4 T-GDI 140 CREATIVE DCT-7"
+        ],
+        "diesel": [
+          "III SW 1.6 CRDI 110 BUSINESS",
+          "III SW 1.6 CRDI 110 BUSINESS DCT-7",
+          "III SW 1.6 CRDI 110 EDITION 1",
+          "III SW 1.6 CRDI 110 EDITION 1 DCT-7",
+          "III SW 1.6 CRDI 136 CREATIVE",
+          "III SW 1.6 CRDI 136 CREATIVE DCT-7"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2018": {
+        "essence": [
+          "III SW 1.0 T-GDI 120 BUSINESS",
+          "III SW 1.0 T-GDI 120 EDITION 1",
+          "III SW 1.0 T-GDI 120 EDITION MONDIAL",
+          "III SW 1.0 T-GDI 120 EDITION NAVI",
+          "III SW 1.4 T-GDI 140 CREATIVE",
+          "III SW 1.4 T-GDI 140 CREATIVE DCT-7"
+        ],
+        "diesel": [
+          "III SW 1.6 CRDI 110 BUSINESS",
+          "III SW 1.6 CRDI 110 BUSINESS DCT-7",
+          "III SW 1.6 CRDI 110 EDITION 1",
+          "III SW 1.6 CRDI 110 EDITION 1 DCT-7",
+          "III SW 1.6 CRDI 110 EDITION MONDIAL",
+          "III SW 1.6 CRDI 110 EDITION MONDIAL DCT-7",
+          "III SW 1.6 CRDI 115 BUSINESS",
+          "III SW 1.6 CRDI 115 BUSINESS DCT-7",
+          "III SW 1.6 CRDI 115 CREATIVE",
+          "III SW 1.6 CRDI 115 CREATIVE DCT-7",
+          "III SW 1.6 CRDI 115 EDITION NAVI",
+          "III SW 1.6 CRDI 115 EDITION NAVI DCT-7",
+          "III SW 1.6 CRDI 136 CREATIVE",
+          "III SW 1.6 CRDI 136 CREATIVE DCT-7"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2019": {
+        "essence": [
+          "III SW 1.0 T-GDI 120 BUSINESS",
+          "III SW 1.0 T-GDI 120 EDITION MONDIAL 2019",
+          "III SW 1.0 T-GDI 120 EDITION NAVI",
+          "III SW 1.4 T-GDI 140 CREATIVE DCT-7"
+        ],
+        "diesel": [
+          "III SW 1.6 CRDI 115 BUSINESS",
+          "III SW 1.6 CRDI 115 BUSINESS DCT-7",
+          "III SW 1.6 CRDI 115 CREATIVE",
+          "III SW 1.6 CRDI 115 CREATIVE DCT-7",
+          "III SW 1.6 CRDI 115 EDITION MONDIAL 2019",
+          "III SW 1.6 CRDI 115 EDITION MONDIAL 2019 DCT-7",
+          "III SW 1.6 CRDI 115 EDITION NAVI",
+          "III SW 1.6 CRDI 115 EDITION NAVI DCT-7"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2020": {
+        "essence": [
+          "III SW 1.0 T-GDI 120 EDITION MONDIAL 2019",
+          "III SW 1.0 T-GDI 120 EDITION NAVI 119G",
+          "III SW 1.4 T-GDI 140 CREATIVE DCT-7"
+        ],
+        "diesel": [
+          "III (2) SW 1.6 CRDI 115 BUSINESS",
+          "III (2) SW 1.6 CRDI 115 BUSINESS DCT-7",
+          "III (2) SW 1.6 CRDI 115 CREATIVE",
+          "III SW 1.6 CRDI 115 BUSINESS",
+          "III SW 1.6 CRDI 115 BUSINESS DCT-7",
+          "III SW 1.6 CRDI 115 CREATIVE",
+          "III SW 1.6 CRDI 115 CREATIVE DCT-7",
+          "III SW 1.6 CRDI 115 EDITION MONDIAL 2019",
+          "III SW 1.6 CRDI 115 EDITION MONDIAL 2019 DCT-7",
+          "III SW 1.6 CRDI 115 EDITION NAVI 107G",
+          "III SW 1.6 CRDI 115 EDITION NAVI DCT-7 105G"
+        ],
+        "hybride": [
+          "III (2) SW 1.0 T-GDI 120 MHEV I-MT CREATIVE",
+          "III (2) SW 1.0 T-GDI 120 MHEV N LINE DCT-7"
+        ],
+        "electrique": [],
+        "gpl": []
+      },
+      "2021": {
+        "essence": [],
+        "diesel": [
+          "III (2) SW 1.6 CRDI 115 BUSINESS",
+          "III (2) SW 1.6 CRDI 115 BUSINESS DCT-7",
+          "III (2) SW 1.6 CRDI 115 CREATIVE"
+        ],
+        "hybride": [
+          "III (2) SW 1.0 T-GDI 120 MHEV I-MT CREATIVE",
+          "III (2) SW 1.0 T-GDI 120 MHEV N LINE DCT-7"
+        ],
+        "electrique": [],
+        "gpl": []
+      },
+      "2022": {
+        "essence": [
+          "III (2) SW 1.0 T-GDI 120 CREATIVE DCT-7",
+          "III (2) SW 1.0 T-GDI 120 N LINE DCT-7"
+        ],
+        "diesel": [
+          "III (2) SW 1.6 CRDI 115 BUSINESS",
+          "III (2) SW 1.6 CRDI 115 BUSINESS DCT-7",
+          "III (2) SW 1.6 CRDI 115 CREATIVE"
+        ],
+        "hybride": [
+          "III (2) SW 1.0 T-GDI 120 MHEV I-MT CREATIVE",
+          "III (2) SW 1.0 T-GDI 120 MHEV N LINE DCT-7"
+        ],
+        "electrique": [],
+        "gpl": []
+      },
+      "2023": {
+        "essence": [
+          "III (2) SW 1.0 T-GDI 120 CREATIVE DCT-7",
+          "III (2) SW 1.0 T-GDI 120 N LINE DCT-7"
+        ],
+        "diesel": [],
+        "hybride": [
+          "III (2) SW 1.0 T-GDI 120 MHEV I-MT CREATIVE"
+        ],
+        "electrique": [],
+        "gpl": []
+      },
+      "2024": {
+        "essence": [
+          "III (2) SW 1.0 T-GDI 120 CREATIVE DCT-7",
+          "III (2) SW 1.0 T-GDI 120 N LINE DCT-7",
+          "III (3) SW 1.0 T-GDI 100 CREATIVE BVM",
+          "III (3) SW 1.0 T-GDI 100 CREATIVE DCT-7"
+        ],
+        "diesel": [],
+        "hybride": [
+          "III (2) SW 1.0 T-GDI 120 MHEV I-MT CREATIVE"
+        ],
+        "electrique": [],
+        "gpl": []
+      },
+      "2025": {
+        "essence": [
+          "III (3) SW 1.0 T-GDI 100 CREATIVE BVM",
+          "III (3) SW 1.0 T-GDI 100 CREATIVE DCT-7"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2026": {
+        "essence": [
+          "III (3) SW 1.0 T-GDI 100 CREATIVE DCT-7"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      }
+    },
+    "I40 Sw": {
+      "2011": {
+        "essence": [
+          "SW 1.6 GDI 135 PACK SENSATION"
+        ],
+        "diesel": [
+          "SW 1.7 CRDI 115 BLUE DRIVE PACK BUSINESS",
+          "SW 1.7 CRDI 115 PACK SENSATION",
+          "SW 1.7 CRDI 136 PACK BUSINESS BVA",
+          "SW 1.7 CRDI 136 PACK PREMIUM",
+          "SW 1.7 CRDI 136 PACK PREMIUM BVA",
+          "SW 1.7 CRDI 136 PACK PREMIUM LIMITED",
+          "SW 1.7 CRDI 136 PACK PREMIUM LIMITED BVA"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2012": {
+        "essence": [
+          "SW 1.6 GDI 135 PACK SENSATION"
+        ],
+        "diesel": [
+          "SW 1.7 CRDI 115 BLUE DRIVE PACK BUSINESS",
+          "SW 1.7 CRDI 115 PACK SENSATION",
+          "SW 1.7 CRDI 136 PACK BUSINESS BVA",
+          "SW 1.7 CRDI 136 PACK PREMIUM",
+          "SW 1.7 CRDI 136 PACK PREMIUM BVA",
+          "SW 1.7 CRDI 136 PACK PREMIUM LIMITED",
+          "SW 1.7 CRDI 136 PACK PREMIUM LIMITED BVA"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2013": {
+        "essence": [
+          "SW 1.6 GDI 135 PACK SENSATION"
+        ],
+        "diesel": [
+          "SW 1.7 CRDI 115 BLUE DRIVE PACK BUSINESS",
+          "SW 1.7 CRDI 115 BLUE DRIVE PACK BUSINESS LIMITED",
+          "SW 1.7 CRDI 115 PACK SENSATION",
+          "SW 1.7 CRDI 136 PACK BUSINESS BVA",
+          "SW 1.7 CRDI 136 PACK PREMIUM",
+          "SW 1.7 CRDI 136 PACK PREMIUM BVA",
+          "SW 1.7 CRDI 136 PACK PREMIUM LIMITED",
+          "SW 1.7 CRDI 136 PACK PREMIUM LIMITED BVA"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2014": {
+        "essence": [],
+        "diesel": [
+          "SW 1.7 CRDI 115 BLUE DRIVE PACK BUSINESS",
+          "SW 1.7 CRDI 115 BLUE DRIVE PACK BUSINESS LIMITED",
+          "SW 1.7 CRDI 115 PACK SENSATION",
+          "SW 1.7 CRDI 136 BLUE DRIVE EXECUTIVE",
+          "SW 1.7 CRDI 136 BLUE DRIVE EXECUTIVE BVA",
+          "SW 1.7 CRDI 136 PACK BUSINESS BVA",
+          "SW 1.7 CRDI 136 PACK PREMIUM",
+          "SW 1.7 CRDI 136 PACK PREMIUM BVA",
+          "SW 1.7 CRDI 136 PACK PREMIUM LIMITED",
+          "SW 1.7 CRDI 136 PACK PREMIUM LIMITED BVA"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2015": {
+        "essence": [],
+        "diesel": [
+          "(2) SW 1.7 CRDI 115 BLUE DRIVE BUSINESS",
+          "(2) SW 1.7 CRDI 115 BLUE DRIVE INTUITIVE",
+          "(2) SW 1.7 CRDI 141 BLUE DRIVE BUSINESS",
+          "(2) SW 1.7 CRDI 141 BLUE DRIVE BUSINESS DCT-7",
+          "(2) SW 1.7 CRDI 141 BLUE DRIVE CREATIVE",
+          "(2) SW 1.7 CRDI 141 BLUE DRIVE CREATIVE DCT-7",
+          "(2) SW 1.7 CRDI 141 BLUE DRIVE EA SPORTS",
+          "(2) SW 1.7 CRDI 141 BLUE DRIVE EXECUTIVE",
+          "(2) SW 1.7 CRDI 141 BLUE DRIVE EXECUTIVE DCT-7",
+          "(2) SW 1.7 CRDI 141 BLUE DRIVE INTUITIVE DCT-7",
+          "SW 1.7 CRDI 115 BLUE DRIVE PACK BUSINESS",
+          "SW 1.7 CRDI 136 BLUE DRIVE EXECUTIVE",
+          "SW 1.7 CRDI 136 BLUE DRIVE EXECUTIVE BVA"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2016": {
+        "essence": [],
+        "diesel": [
+          "(2) SW 1.7 CRDI 115 BLUE DRIVE BUSINESS",
+          "(2) SW 1.7 CRDI 115 BLUE DRIVE INTUITIVE",
+          "(2) SW 1.7 CRDI 115 BUSINESS",
+          "(2) SW 1.7 CRDI 141 BLUE DRIVE BUSINESS",
+          "(2) SW 1.7 CRDI 141 BLUE DRIVE BUSINESS DCT-7",
+          "(2) SW 1.7 CRDI 141 BLUE DRIVE CREATIVE",
+          "(2) SW 1.7 CRDI 141 BLUE DRIVE CREATIVE DCT-7",
+          "(2) SW 1.7 CRDI 141 BLUE DRIVE EA SPORTS",
+          "(2) SW 1.7 CRDI 141 BLUE DRIVE EXECUTIVE",
+          "(2) SW 1.7 CRDI 141 BLUE DRIVE EXECUTIVE DCT-7",
+          "(2) SW 1.7 CRDI 141 BLUE DRIVE INTUITIVE DCT-7",
+          "(2) SW 1.7 CRDI 141 BLUE DRIVE UEFA EURO 2016 PLUS",
+          "(2) SW 1.7 CRDI 141 BLUE DRIVE UEFA EURO 2016 PLUS DCT-7",
+          "(2) SW 1.7 CRDI 141 BUSINESS",
+          "(2) SW 1.7 CRDI 141 BUSINESS DCT-7"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2017": {
+        "essence": [],
+        "diesel": [
+          "(2) SW 1.7 CRDI 115 BLUE DRIVE INTUITIVE",
+          "(2) SW 1.7 CRDI 115 BUSINESS",
+          "(2) SW 1.7 CRDI 141 BLUE DRIVE EXECUTIVE",
+          "(2) SW 1.7 CRDI 141 BLUE DRIVE INTUITIVE DCT-7",
+          "(2) SW 1.7 CRDI 141 BLUE DRIVE UEFA EURO 2016 PLUS",
+          "(2) SW 1.7 CRDI 141 BLUE DRIVE UEFA EURO 2016 PLUS DCT-7",
+          "(2) SW 1.7 CRDI 141 BUSINESS",
+          "(2) SW 1.7 CRDI 141 BUSINESS DCT-7",
+          "(2) SW 1.7 CRDI 141 CREATIVE",
+          "(2) SW 1.7 CRDI 141 CREATIVE DCT-7",
+          "(2) SW 1.7 CRDI 141 EXECUTIVE DCT-7"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2018": {
+        "essence": [],
+        "diesel": [
+          "(2) SW 1.6 CRDI 136 BUSINESS DCT-7",
+          "(2) SW 1.6 CRDI 136 CREATIVE DCT-7",
+          "(2) SW 1.6 CRDI 136 EXECUTIVE DCT-7",
+          "(2) SW 1.7 CRDI 115 BUSINESS",
+          "(2) SW 1.7 CRDI 141 BUSINESS DCT-7",
+          "(2) SW 1.7 CRDI 141 CREATIVE",
+          "(2) SW 1.7 CRDI 141 CREATIVE DCT-7",
+          "(2) SW 1.7 CRDI 141 EXECUTIVE DCT-7"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2019": {
+        "essence": [],
+        "diesel": [
+          "(2) SW 1.6 CRDI 136 BUSINESS DCT-7",
+          "(2) SW 1.6 CRDI 136 CREATIVE DCT-7",
+          "(2) SW 1.6 CRDI 136 EXECUTIVE DCT-7"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      }
+    },
+    "Ioniq 5": {
+      "2021": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [
+          "CREATIVE 58 KWH",
+          "CREATIVE 73 KWH",
+          "EXECUTIVE 73 KWH",
+          "EXECUTIVE 73 KWH HTRAC",
+          "INTUITIVE 58 KWH",
+          "INTUITIVE 73 KWH",
+          "PROJECT 45 73 KWH HTRAC"
+        ],
+        "gpl": []
+      },
+      "2022": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [
+          "58 KWH - 170 CREATIVE",
+          "58 KWH - 170 INTUITIVE",
+          "77 KWH - 229 CREATIVE",
+          "77 KWH - 229 EXECUTIVE",
+          "77 KWH - 229 INTUITIVE",
+          "77 KWH HTRAC - 325 EXECUTIVE",
+          "CREATIVE 58 KWH",
+          "CREATIVE 73 KWH",
+          "EXECUTIVE 73 KWH",
+          "EXECUTIVE 73 KWH HTRAC",
+          "INTUITIVE 58 KWH",
+          "INTUITIVE 73 KWH",
+          "PROJECT 45 73 KWH HTRAC"
+        ],
+        "gpl": []
+      },
+      "2023": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [
+          "170 2WD 58 KWH",
+          "58 KWH - 170 CREATIVE",
+          "58 KWH - 170 INTUITIVE",
+          "77 KWH - 229 CREATIVE",
+          "77 KWH - 229 EXECUTIVE",
+          "77 KWH - 229 INTUITIVE",
+          "77 KWH HTRAC - 325 EXECUTIVE"
+        ],
+        "gpl": []
+      },
+      "2024": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [
+          "170 2WD 58 KWH",
+          "63 KWH - 170 INTUITIVE",
+          "84 KWH - 229 CREATIVE",
+          "84 KWH - 229 EXECUTIVE",
+          "84 KWH - 229 INTUITIVE",
+          "84 KWH - 229 N LINE",
+          "84 KWH - 325 - 4WD HTRAC N LINE"
+        ],
+        "gpl": []
+      },
+      "2025": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [
+          "170 2WD 58 KWH",
+          "63 KWH - 170 INTUITIVE",
+          "84 KWH - 229 CREATIVE",
+          "84 KWH - 229 EXECUTIVE",
+          "84 KWH - 229 INTUITIVE",
+          "84 KWH - 229 N LINE",
+          "84 KWH - 325 - 4WD HTRAC N LINE"
+        ],
+        "gpl": []
+      },
+      "2026": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [
+          "63 KWH - 170 INTUITIVE",
+          "84 KWH - 229 CREATIVE",
+          "84 KWH - 229 EXECUTIVE",
+          "84 KWH - 229 INTUITIVE",
+          "84 KWH - 229 N LINE",
+          "84 KWH - 325 - 4WD HTRAC N LINE"
+        ],
+        "gpl": []
+      }
+    },
+    "Ioniq 6": {
+      "2022": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [
+          "77 KWH 229 CREATIVE",
+          "77 KWH 229 EXECUTIVE",
+          "77 KWH 229 INTUITIVE",
+          "77 KWH HTRAC 325 EXECUTIVE",
+          "77 KWH HTRAC 325 FIRST EDITION"
+        ],
+        "gpl": []
+      },
+      "2023": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [
+          "77 KWH 229",
+          "77 KWH 229 CREATIVE",
+          "77 KWH 229 EXECUTIVE",
+          "77 KWH 229 INTUITIVE",
+          "77 KWH HTRAC 325",
+          "77 KWH HTRAC 325 EXECUTIVE",
+          "77 KWH HTRAC 325 FIRST EDITION"
+        ],
+        "gpl": []
+      },
+      "2024": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [
+          "77 KWH 229",
+          "77 KWH HTRAC 325"
+        ],
+        "gpl": []
+      },
+      "2025": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [
+          "77 KWH 229",
+          "77 KWH HTRAC 325"
+        ],
+        "gpl": []
+      },
+      "2026": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [
+          "84 KWH 609 N"
+        ],
+        "gpl": []
+      }
+    },
+    "Kona 2": {
+      "2023": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [
+          "II 1.6 HYBRID 141 CREATIVE",
+          "II 1.6 HYBRID 141 EXECUTIVE",
+          "II 1.6 HYBRID 141 INTUITIVE",
+          "II 1.6 HYBRID 141 N LINE EXECUTIVE"
+        ],
+        "electrique": [
+          "(2) ELECTRIQUE 39 KWH 136 BUSINESS",
+          "(2) ELECTRIQUE 39 KWH 136 CREATIVE",
+          "(2) ELECTRIQUE 39 KWH 136 INTUITIVE",
+          "(2) ELECTRIQUE 39KWH 136 CH EXECUTIVE",
+          "(2) ELECTRIQUE 64 KWH 204 BUSINESS",
+          "(2) ELECTRIQUE 64 KWH 204 CREATIVE",
+          "(2) ELECTRIQUE 64 KWH 204 EXECUTIVE",
+          "(2) ELECTRIQUE 64 KWH 204 INTUITIVE",
+          "II ELECTRIQUE 48 KWH - 156 CREATIVE",
+          "II ELECTRIQUE 48 KWH - 156 INTUITIVE",
+          "II ELECTRIQUE 48 KWH - 156 PREMIUM",
+          "II ELECTRIQUE 65 KWH - 217 CREATIVE",
+          "II ELECTRIQUE 65 KWH - 217 EXECUTIVE",
+          "II ELECTRIQUE 65 KWH - 217 INTUITIVE",
+          "II ELECTRIQUE 65 KWH - 217 PREMIUM"
+        ],
+        "gpl": []
+      },
+      "2024": {
+        "essence": [
+          "II 1.0 T-GDI 100 CREATIVE",
+          "II 1.0 T-GDI 100 INTUITIVE",
+          "II 1.6 T-GDI 138 CREATIVE DCT-7",
+          "II 1.6 T-GDI 138 EXECUTIVE DCT-7"
+        ],
+        "diesel": [],
+        "hybride": [
+          "II 1.6 HYBRID 129 CREATIVE",
+          "II 1.6 HYBRID 129 EXECUTIVE",
+          "II 1.6 HYBRID 129 INTUITIVE",
+          "II 1.6 HYBRID 129 N LINE EXECUTIVE",
+          "II 1.6 HYBRID 141 CREATIVE",
+          "II 1.6 HYBRID 141 EXECUTIVE",
+          "II 1.6 HYBRID 141 INTUITIVE",
+          "II 1.6 HYBRID 141 N LINE EXECUTIVE"
+        ],
+        "electrique": [
+          "II ELECTRIQUE 48 KWH - 156 CREATIVE",
+          "II ELECTRIQUE 48 KWH - 156 INTUITIVE",
+          "II ELECTRIQUE 48 KWH - 156 PREMIUM",
+          "II ELECTRIQUE 65 KWH - 217 CREATIVE",
+          "II ELECTRIQUE 65 KWH - 217 INTUITIVE",
+          "II ELECTRIQUE 65 KWH - 217 PREMIUM"
+        ],
+        "gpl": []
+      },
+      "2025": {
+        "essence": [
+          "II 1.0 T-GDI 100 CREATIVE",
+          "II 1.0 T-GDI 100 INTUITIVE",
+          "II 1.6 T-GDI 138 CREATIVE DCT-7",
+          "II 1.6 T-GDI 138 EXECUTIVE DCT-7"
+        ],
+        "diesel": [],
+        "hybride": [
+          "II (2) 1.6 HYBRID 138 CREATIVE",
+          "II (2) 1.6 HYBRID 138 EXECUTIVE",
+          "II (2) 1.6 HYBRID 138 INTUITIVE",
+          "II (2) 1.6 HYBRID 138 N LINE EXECUTIVE",
+          "II 1.6 HYBRID 129 CREATIVE",
+          "II 1.6 HYBRID 129 EXECUTIVE",
+          "II 1.6 HYBRID 129 INTUITIVE",
+          "II 1.6 HYBRID 129 N LINE EXECUTIVE"
+        ],
+        "electrique": [
+          "II ELECTRIQUE 48 KWH - 156 CREATIVE",
+          "II ELECTRIQUE 48 KWH - 156 INTUITIVE",
+          "II ELECTRIQUE 48 KWH - 156 PREMIUM",
+          "II ELECTRIQUE 65 KWH - 217 CREATIVE",
+          "II ELECTRIQUE 65 KWH - 217 INTUITIVE",
+          "II ELECTRIQUE 65 KWH - 217 N LINE CREATIVE",
+          "II ELECTRIQUE 65 KWH - 217 PREMIUM"
+        ],
+        "gpl": []
+      },
+      "2026": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [
+          "II (2) 1.6 HYBRID 138 CREATIVE",
+          "II (2) 1.6 HYBRID 138 EXECUTIVE",
+          "II (2) 1.6 HYBRID 138 INTUITIVE",
+          "II (2) 1.6 HYBRID 138 N LINE EXECUTIVE",
+          "II 1.6 HYBRID 138 N LINE ULTIME EDITION"
+        ],
+        "electrique": [
+          "II (2) ELECTRIQUE 65 KWH 217 EXECUTIVE",
+          "II ELECTRIQUE 48 KWH - 156 CREATIVE",
+          "II ELECTRIQUE 48 KWH - 156 INTUITIVE",
+          "II ELECTRIQUE 48 KWH - 156 PREMIUM",
+          "II ELECTRIQUE 48 KWH - 156 ULTIME EDITION",
+          "II ELECTRIQUE 65 KWH - 217 CREATIVE",
+          "II ELECTRIQUE 65 KWH - 217 INTUITIVE",
+          "II ELECTRIQUE 65 KWH - 217 N LINE CREATIVE",
+          "II ELECTRIQUE 65 KWH - 217 N LINE EXECUTIVE",
+          "II ELECTRIQUE 65 KWH - 217 PREMIUM",
+          "II ELECTRIQUE 65 KWH - 217 ULTIME EDITION"
+        ],
+        "gpl": []
+      }
+    },
+    "Santa Fe 2": {
+      "2006": {
+        "essence": [],
+        "diesel": [
+          "II 2.2 CRDI 150 2WD PACK CONFORT",
+          "II 2.2 CRDI 150 4WD 10CV PACK LUXE BVA",
+          "II 2.2 CRDI 150 4WD PACK CONFORT",
+          "II 2.2 CRDI 150 4WD PACK CONFORT 7PL",
+          "II 2.2 CRDI 150 4WD PACK EXECUTIVE BVA 7P",
+          "II 2.2 CRDI 150 4WD PACK LUXE",
+          "II 2.2 CRDI 150 4WD PACK LUXE 7PL",
+          "II 2.2 CRDI 150 4WD PACK LUXE BVA",
+          "II 2.2 CRDI 150 4WD PACK LUXE BVA 7PL",
+          "II 2.2 CRDI 155 2WD PACK CONFORT",
+          "II 2.2 CRDI 155 4WD PACK CONFORT",
+          "II 2.2 CRDI 155 4WD PACK EXECUTIVE",
+          "II 2.2 CRDI 155 4WD PACK EXECUTIVE 7PL"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2007": {
+        "essence": [],
+        "diesel": [
+          "II 2.2 CRDI 150 2WD PACK CONFORT",
+          "II 2.2 CRDI 150 2WD PACK CONFORT 7PL",
+          "II 2.2 CRDI 150 4WD PACK CONFORT",
+          "II 2.2 CRDI 150 4WD PACK CONFORT 7PL",
+          "II 2.2 CRDI 150 4WD PACK EXECUTIVE",
+          "II 2.2 CRDI 150 4WD PACK EXECUTIVE BVA",
+          "II 2.2 CRDI 150 4WD PACK EXECUTIVE BVA 7P",
+          "II 2.2 CRDI 150 4WD PACK LUXE",
+          "II 2.2 CRDI 150 4WD PACK LUXE 7PL",
+          "II 2.2 CRDI 150 4WD PACK LUXE BVA",
+          "II 2.2 CRDI 150 4WD PACK LUXE BVA 7PL",
+          "II 2.2 CRDI 155 2WD PACK CONFORT",
+          "II 2.2 CRDI 155 2WD PACK CONFORT 7PL",
+          "II 2.2 CRDI 155 4WD PACK CONFORT",
+          "II 2.2 CRDI 155 4WD PACK CONFORT 7PL",
+          "II 2.2 CRDI 155 4WD PACK EXECUTIVE",
+          "II 2.2 CRDI 155 4WD PACK EXECUTIVE 7PL",
+          "II 2.2 CRDI 155 4WD PACK EXECUTIVE BVA",
+          "II 2.2 CRDI 155 4WD PACK EXECUTIVE BVA 7PL"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2008": {
+        "essence": [],
+        "diesel": [
+          "II 2.2 CRDI 150 2WD PACK CONFORT",
+          "II 2.2 CRDI 150 2WD PACK CONFORT 7PL",
+          "II 2.2 CRDI 150 4WD PACK CONFORT",
+          "II 2.2 CRDI 150 4WD PACK CONFORT 7PL",
+          "II 2.2 CRDI 150 4WD PACK EXECUTIVE",
+          "II 2.2 CRDI 150 4WD PACK EXECUTIVE BVA",
+          "II 2.2 CRDI 150 4WD PACK EXECUTIVE BVA 7P",
+          "II 2.2 CRDI 150 4WD PACK LUXE",
+          "II 2.2 CRDI 150 4WD PACK LUXE 7PL",
+          "II 2.2 CRDI 150 4WD PACK LUXE BVA",
+          "II 2.2 CRDI 150 4WD PACK LUXE BVA 7PL",
+          "II 2.2 CRDI 155 2WD EURO 2008",
+          "II 2.2 CRDI 155 2WD PACK CONFORT",
+          "II 2.2 CRDI 155 2WD PACK CONFORT 7PL",
+          "II 2.2 CRDI 155 2WD PACK EDITION CUIR",
+          "II 2.2 CRDI 155 4WD EURO 2008",
+          "II 2.2 CRDI 155 4WD PACK CONFORT",
+          "II 2.2 CRDI 155 4WD PACK CONFORT 7PL",
+          "II 2.2 CRDI 155 4WD PACK EDITION CUIR",
+          "II 2.2 CRDI 155 4WD PACK EXECUTIVE",
+          "II 2.2 CRDI 155 4WD PACK EXECUTIVE 7PL",
+          "II 2.2 CRDI 155 4WD PACK EXECUTIVE BVA",
+          "II 2.2 CRDI 155 4WD PACK EXECUTIVE BVA 7PL"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2009": {
+        "essence": [],
+        "diesel": [
+          "II 2.2 CRDI 150 4WD PACK EXECUTIVE",
+          "II 2.2 CRDI 150 4WD PACK EXECUTIVE BVA 7P",
+          "II 2.2 CRDI 155 2WD PACK CONFORT",
+          "II 2.2 CRDI 155 2WD PACK EDITION CUIR",
+          "II 2.2 CRDI 155 4WD PACK CONFORT",
+          "II 2.2 CRDI 155 4WD PACK EDITION CUIR",
+          "II 2.2 CRDI 155 4WD PACK EXECUTIVE",
+          "II 2.2 CRDI 155 4WD PACK EXECUTIVE 7PL",
+          "II 2.2 CRDI 155 4WD PACK EXECUTIVE BVA",
+          "II 2.2 CRDI 155 4WD PACK EXECUTIVE BVA 7PL",
+          "II 2.2 CRDI 155 4WD PACK PREMIUM",
+          "II 2.2 CRDI 155 4WD PACK PREMIUM 7PL"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2010": {
+        "essence": [],
+        "diesel": [
+          "II 2.2 CRDI 150 4WD PACK EXECUTIVE",
+          "II 2.2 CRDI 150 4WD PACK EXECUTIVE BVA 7P",
+          "II 2.2 CRDI 155 2WD PACK EDITION CUIR",
+          "II 2.2 CRDI 155 4WD PACK EDITION CUIR",
+          "II 2.2 CRDI 155 4WD PACK EXECUTIVE BVA",
+          "II 2.2 CRDI 155 4WD PACK EXECUTIVE BVA 7PL",
+          "II 2.2 CRDI 197 4WD PACK EDITION 7PL",
+          "II 2.2 CRDI 197 4WD PACK EDITION BV6 7PL",
+          "II 2.2 CRDI 197 4WD PACK EXECUTIVE 7PL",
+          "II 2.2 CRDI 197 4WD PACK PREMIUM 7PL",
+          "II 2.2 CRDI 197 4WD PACK PREMIUM BVA 7PL"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2011": {
+        "essence": [],
+        "diesel": [
+          "II 2.2 CRDI 197 4WD PACK EXECUTIVE 7PL",
+          "II 2.2 CRDI 197 4WD PACK PREMIUM 7PL",
+          "II 2.2 CRDI 197 4WD PACK PREMIUM BVA 7PL",
+          "II 2.2 CRDI 197 4WD PACK PREMIUM LIMITED 7PL"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2012": {
+        "essence": [],
+        "diesel": [
+          "II 2.2 CRDI 197 4WD PACK PREMIUM 7PL",
+          "II 2.2 CRDI 197 4WD PACK PREMIUM BVA 7PL",
+          "II 2.2 CRDI 197 4WD PACK PREMIUM LIMITED 7PL"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2013": {
+        "essence": [],
+        "diesel": [
+          "II 2.2 CRDI 197 4WD PACK PREMIUM LIMITED 7PL"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      }
+    },
+    "Santa Fe 3": {
+      "2011": {
+        "essence": [],
+        "diesel": [
+          "III 2.2 CRDI 197 4WD PACK PREMIUM LIMITED BVA 7PL"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2012": {
+        "essence": [],
+        "diesel": [
+          "III 2.2 CRDI 197 4WD PACK BUSINESS 7PL",
+          "III 2.2 CRDI 197 4WD PACK PREMIUM 7PL",
+          "III 2.2 CRDI 197 4WD PACK PREMIUM BVA 7PL",
+          "III 2.2 CRDI 197 4WD PACK PREMIUM LIMITED 7PL",
+          "III 2.2 CRDI 197 4WD PACK PREMIUM LIMITED BVA 7PL",
+          "III 2.2 CRDI 197 PACK SENSATION 7PL"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2013": {
+        "essence": [],
+        "diesel": [
+          "III 2.2 CRDI 197 4WD PACK BUSINESS 7PL",
+          "III 2.2 CRDI 197 4WD PACK PREMIUM 7PL",
+          "III 2.2 CRDI 197 4WD PACK PREMIUM BVA 7PL",
+          "III 2.2 CRDI 197 4WD PACK PREMIUM LIMITED 7PL",
+          "III 2.2 CRDI 197 4WD PACK PREMIUM LIMITED BVA 7PL",
+          "III 2.2 CRDI 197 PACK SENSATION 7PL"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2014": {
+        "essence": [],
+        "diesel": [
+          "III 2.0 CRDI 150 INITIA",
+          "III 2.2 CRDI 197 4WD CREATIVE",
+          "III 2.2 CRDI 197 4WD CREATIVE BVA",
+          "III 2.2 CRDI 197 4WD EXECUTIVE 7PL",
+          "III 2.2 CRDI 197 4WD EXECUTIVE BVA 7PL",
+          "III 2.2 CRDI 197 4WD INTUITIVE",
+          "III 2.2 CRDI 197 4WD INTUITIVE 7PL",
+          "III 2.2 CRDI 197 4WD PACK BUSINESS 7PL",
+          "III 2.2 CRDI 197 4WD PACK PREMIUM 7PL",
+          "III 2.2 CRDI 197 4WD PACK PREMIUM BVA 7PL",
+          "III 2.2 CRDI 197 4WD PACK PREMIUM LIMITED 7PL",
+          "III 2.2 CRDI 197 4WD PACK PREMIUM LIMITED BVA 7PL",
+          "III 2.2 CRDI 197 INITIA",
+          "III 2.2 CRDI 197 INTUITIVE",
+          "III 2.2 CRDI 197 INTUITIVE 7PL",
+          "III 2.2 CRDI 197 PACK SENSATION 7PL"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2015": {
+        "essence": [],
+        "diesel": [
+          "III (2) 2.2 CRDI 200 CREATIVE",
+          "III (2) 2.2 CRDI 200 CREATIVE 4WD",
+          "III (2) 2.2 CRDI 200 CREATIVE 4WD BVA",
+          "III (2) 2.2 CRDI 200 EXECUTIVE 4WD BVA 7PL",
+          "III (2) 2.2 CRDI 200 INITIA",
+          "III 2.0 CRDI 150 INITIA",
+          "III 2.2 CRDI 197 4WD CREATIVE",
+          "III 2.2 CRDI 197 4WD CREATIVE 7PL",
+          "III 2.2 CRDI 197 4WD CREATIVE BVA",
+          "III 2.2 CRDI 197 4WD CREATIVE BVA 7PL",
+          "III 2.2 CRDI 197 4WD EXECUTIVE 7PL",
+          "III 2.2 CRDI 197 4WD EXECUTIVE BVA 7PL",
+          "III 2.2 CRDI 197 4WD INTUITIVE",
+          "III 2.2 CRDI 197 4WD INTUITIVE 7PL",
+          "III 2.2 CRDI 197 INITIA",
+          "III 2.2 CRDI 197 INTUITIVE",
+          "III 2.2 CRDI 197 INTUITIVE 7PL"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2016": {
+        "essence": [],
+        "diesel": [
+          "III (2) 2.2 CRDI 200 CREATIVE",
+          "III (2) 2.2 CRDI 200 CREATIVE 4WD",
+          "III (2) 2.2 CRDI 200 CREATIVE 4WD BVA",
+          "III (2) 2.2 CRDI 200 CREATIVE 7PL",
+          "III (2) 2.2 CRDI 200 CREATIVE BVA",
+          "III (2) 2.2 CRDI 200 CREATIVE BVA 7PL",
+          "III (2) 2.2 CRDI 200 EXECUTIVE 4WD BVA 7PL",
+          "III (2) 2.2 CRDI 200 EXECUTIVE BVA",
+          "III (2) 2.2 CRDI 200 EXECUTIVE BVA 7PL",
+          "III (2) 2.2 CRDI 200 INITIA"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2017": {
+        "essence": [],
+        "diesel": [
+          "III (2) 2.2 CRDI 200 CREATIVE",
+          "III (2) 2.2 CRDI 200 CREATIVE 4WD",
+          "III (2) 2.2 CRDI 200 CREATIVE 4WD BVA",
+          "III (2) 2.2 CRDI 200 CREATIVE 7PL",
+          "III (2) 2.2 CRDI 200 CREATIVE BVA",
+          "III (2) 2.2 CRDI 200 CREATIVE BVA 7PL",
+          "III (2) 2.2 CRDI 200 EXECUTIVE 4WD BVA 7PL",
+          "III (2) 2.2 CRDI 200 EXECUTIVE BVA",
+          "III (2) 2.2 CRDI 200 EXECUTIVE BVA 7PL",
+          "III (2) 2.2 CRDI 200 INITIA"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2018": {
+        "essence": [],
+        "diesel": [
+          "III (2) 2.2 CRDI 200 CREATIVE 4WD",
+          "III (2) 2.2 CRDI 200 CREATIVE 4WD BVA",
+          "III (2) 2.2 CRDI 200 EXECUTIVE 4WD BVA 7PL"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      }
+    },
+    "Santa Fe 4": {
+      "2019": {
+        "essence": [],
+        "diesel": [
+          "IV 2.0 CRDI 185 HTRAC EXECUTIVE 4WD BVA8"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2020": {
+        "essence": [],
+        "diesel": [
+          "IV (2) 2.2 CRDI 202 EXECUTIVE DCT-8 7PL",
+          "IV 2.0 CRDI 185 HTRAC EXECUTIVE 4WD BVA8"
+        ],
+        "hybride": [
+          "IV (2) 1.6 T-GDI HYBRID 230 CREATIVE BVA6",
+          "IV (2) 1.6 T-GDI HYBRID 230 EXECUTIVE BVA6",
+          "IV (2) 1.6 T-GDI HYBRID 230 INTUITIVE BVA6",
+          "IV (2) 1.6 T-GDI HYBRID CREATIVE AUTO 7PL",
+          "IV (2) 1.6 T-GDI HYBRID EXECUTIVE AUTO 7PL",
+          "IV (2) 1.6 T-GDI HYBRID INTUITIVE AUTO 7PL"
+        ],
+        "electrique": [],
+        "gpl": []
+      },
+      "2021": {
+        "essence": [],
+        "diesel": [
+          "IV (2) 2.2 CRDI 202 EXECUTIVE DCT-8 7PL"
+        ],
+        "hybride": [
+          "IV (2) 1.6 T-GDI 265 PHEV HTRAC BUSINESS AUTO",
+          "IV (2) 1.6 T-GDI 265 PHEV HTRAC CREATIVE AUTO",
+          "IV (2) 1.6 T-GDI 265 PHEV HTRAC EXECUTIVE AUTO",
+          "IV (2) 1.6 T-GDI HYBRID 230 CREATIVE BVA6",
+          "IV (2) 1.6 T-GDI HYBRID 230 EXECUTIVE BVA6",
+          "IV (2) 1.6 T-GDI HYBRID 230 INTUITIVE BVA6",
+          "IV (2) 1.6 T-GDI HYBRID CREATIVE AUTO 7PL",
+          "IV (2) 1.6 T-GDI HYBRID EXECUTIVE AUTO 7PL",
+          "IV (2) 1.6 T-GDI HYBRID INTUITIVE AUTO 7PL",
+          "IV (2) 1.6 T-GDI PLUG-IN 265 HTRAC BUSINESS BVA6",
+          "IV (2) 1.6 T-GDI PLUG-IN 265 HTRAC CREATIVE BVA6",
+          "IV (2) 1.6 T-GDI PLUG-IN 265 HTRAC EXECUTIVE BVA6"
+        ],
+        "electrique": [],
+        "gpl": []
+      },
+      "2022": {
+        "essence": [],
+        "diesel": [
+          "IV (2) 2.2 CRDI 202 EXECUTIVE DCT-8 7PL"
+        ],
+        "hybride": [
+          "IV (2) 1.6 T-GDI 265 PHEV HTRAC BUSINESS AUTO",
+          "IV (2) 1.6 T-GDI 265 PHEV HTRAC CREATIVE AUTO",
+          "IV (2) 1.6 T-GDI 265 PHEV HTRAC EXECUTIVE AUTO",
+          "IV (2) 1.6 T-GDI HYBRID 230 CREATIVE BVA6",
+          "IV (2) 1.6 T-GDI HYBRID 230 EXECUTIVE BVA6",
+          "IV (2) 1.6 T-GDI HYBRID 230 INTUITIVE BVA6",
+          "IV (2) 1.6 T-GDI HYBRID CREATIVE AUTO 7PL",
+          "IV (2) 1.6 T-GDI HYBRID EXECUTIVE AUTO 7PL",
+          "IV (2) 1.6 T-GDI HYBRID INTUITIVE AUTO 7PL",
+          "IV (2) 1.6 T-GDI PLUG-IN 265 HTRAC BUSINESS BVA6",
+          "IV (2) 1.6 T-GDI PLUG-IN 265 HTRAC CREATIVE BVA6",
+          "IV (2) 1.6 T-GDI PLUG-IN 265 HTRAC EXECUTIVE BVA6"
+        ],
+        "electrique": [],
+        "gpl": []
+      },
+      "2023": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [
+          "IV (2) 1.6 T-GDI HYBRID 230 CREATIVE BVA6",
+          "IV (2) 1.6 T-GDI HYBRID 230 EXECUTIVE BVA6",
+          "IV (2) 1.6 T-GDI HYBRID 230 INTUITIVE BVA6",
+          "IV (2) 1.6 T-GDI PLUG-IN 265 HTRAC BUSINESS BVA6",
+          "IV (2) 1.6 T-GDI PLUG-IN 265 HTRAC CREATIVE BVA6",
+          "IV (2) 1.6 T-GDI PLUG-IN 265 HTRAC EXECUTIVE BVA6"
+        ],
+        "electrique": [],
+        "gpl": []
+      },
+      "2024": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [
+          "IV (2) 1.6 T-GDI HYBRID 230 CREATIVE BVA6",
+          "IV (2) 1.6 T-GDI HYBRID 230 EXECUTIVE BVA6",
+          "IV (2) 1.6 T-GDI HYBRID 230 INTUITIVE BVA6",
+          "IV (2) 1.6 T-GDI PLUG-IN 265 HTRAC BUSINESS BVA6",
+          "IV (2) 1.6 T-GDI PLUG-IN 265 HTRAC CREATIVE BVA6",
+          "IV (2) 1.6 T-GDI PLUG-IN 265 HTRAC EXECUTIVE BVA6"
+        ],
+        "electrique": [],
+        "gpl": []
+      }
+    },
+    "Santa Fe 5": {
+      "2024": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [
+          "1.6 T-GDI 215 HYBRID CREATIVE BVA6",
+          "1.6 T-GDI 215 HYBRID EXECUTIVE BVA6",
+          "1.6 T-GDI 215 HYBRID INTUITIVE BVA6",
+          "1.6 T-GDI PLUG-IN 253 HTRAC CALLIGRAPHY BVA6",
+          "1.6 T-GDI PLUG-IN 253 HTRAC CREATIVE BVA6",
+          "1.6 T-GDI PLUG-IN 253 HTRAC EXECUTIVE BVA6",
+          "1.6 T-GDI PLUG-IN 253 HTRAC INTUITIVE BVA6"
+        ],
+        "electrique": [],
+        "gpl": []
+      },
+      "2025": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [
+          "1.6 T-GDI 215 HYBRID CREATIVE BVA6",
+          "1.6 T-GDI 215 HYBRID EXECUTIVE BVA6",
+          "1.6 T-GDI 215 HYBRID INTUITIVE BVA6",
+          "1.6 T-GDI 239 HYBRID CREATIVE BVA6",
+          "1.6 T-GDI 239 HYBRID EXECUTIVE BVA6",
+          "1.6 T-GDI 239 HYBRID INTUITIVE BVA6",
+          "1.6 T-GDI PLUG-IN 253 HTRAC CALLIGRAPHY BVA6",
+          "1.6 T-GDI PLUG-IN 253 HTRAC CREATIVE BVA6",
+          "1.6 T-GDI PLUG-IN 253 HTRAC EXECUTIVE BVA6",
+          "1.6 T-GDI PLUG-IN 253 HTRAC INTUITIVE BVA6",
+          "1.6 T-GDI PLUG-IN 288 HTRAC CALLIGRAPHY BVA6",
+          "1.6 T-GDI PLUG-IN 288 HTRAC CREATIVE BVA6",
+          "1.6 T-GDI PLUG-IN 288 HTRAC EXECUTIVE BVA6",
+          "1.6 T-GDI PLUG-IN 288 HTRAC INTUITIVE BVA6"
+        ],
+        "electrique": [],
+        "gpl": []
+      },
+      "2026": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [
+          "1.6 T-GDI 239 HYBRID CREATIVE BVA6",
+          "1.6 T-GDI 239 HYBRID EXECUTIVE BVA6",
+          "1.6 T-GDI 239 HYBRID INTUITIVE BVA6",
+          "1.6 T-GDI PLUG-IN 288 HTRAC CALLIGRAPHY BVA6",
+          "1.6 T-GDI PLUG-IN 288 HTRAC CREATIVE BVA6",
+          "1.6 T-GDI PLUG-IN 288 HTRAC EXECUTIVE BVA6",
+          "1.6 T-GDI PLUG-IN 288 HTRAC INTUITIVE BVA6"
+        ],
+        "electrique": [],
+        "gpl": []
+      }
+    },
+    "Tucson 3": {
+      "2015": {
+        "essence": [
+          "III 1.6 GDI 132 CREATIVE",
+          "III 1.6 GDI 132 INITIA",
+          "III 1.6 GDI 132 INTUITIVE",
+          "III 1.6 T-GDI 177 4WD EXECUTIVE DCT-7"
+        ],
+        "diesel": [
+          "III 1.7 CRDI 115 BUSINESS",
+          "III 1.7 CRDI 115 CREATIVE",
+          "III 1.7 CRDI 115 EXECUTIVE",
+          "III 1.7 CRDI 115 INITIA",
+          "III 1.7 CRDI 115 INTUITIVE",
+          "III 1.7 CRDI 141 CREATIVE",
+          "III 2.0 CRDI 136 4WD CREATIVE",
+          "III 2.0 CRDI 136 4WD EXECUTIVE",
+          "III 2.0 CRDI 136 BUSINESS",
+          "III 2.0 CRDI 136 CREATIVE",
+          "III 2.0 CRDI 136 EXECUTIVE",
+          "III 2.0 CRDI 136 INTUITIVE",
+          "III 2.0 CRDI 185 4WD CREATIVE BVA",
+          "III 2.0 CRDI 185 4WD EXECUTIVE BVA"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2016": {
+        "essence": [
+          "III 1.6 GDI 132 CREATIVE",
+          "III 1.6 GDI 132 INITIA",
+          "III 1.6 GDI 132 INTUITIVE",
+          "III 1.6 T-GDI 177 4WD EXECUTIVE DCT-7"
+        ],
+        "diesel": [
+          "III 1.7 CRDI 115 BUSINESS",
+          "III 1.7 CRDI 115 CREATIVE",
+          "III 1.7 CRDI 115 EXECUTIVE",
+          "III 1.7 CRDI 115 INITIA",
+          "III 1.7 CRDI 115 INTUITIVE",
+          "III 1.7 CRDI 115 S EDITION",
+          "III 1.7 CRDI 141 CREATIVE",
+          "III 1.7 CRDI 141 CREATIVE DCT-7",
+          "III 1.7 CRDI 141 EXECUTIVE DCT-7",
+          "III 1.7 CRDI 141 INTUITIVE DCT-7",
+          "III 1.7 CRDI 141 S EDITION DCT-7",
+          "III 1.7 CRDI BUSINESS DCT-7",
+          "III 2.0 CRDI 136 4WD CREATIVE",
+          "III 2.0 CRDI 136 4WD EXECUTIVE",
+          "III 2.0 CRDI 136 BUSINESS",
+          "III 2.0 CRDI 136 CREATIVE",
+          "III 2.0 CRDI 136 EXECUTIVE",
+          "III 2.0 CRDI 136 INTUITIVE",
+          "III 2.0 CRDI 185 4WD CREATIVE BVA",
+          "III 2.0 CRDI 185 4WD EXECUTIVE BVA"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2017": {
+        "essence": [
+          "III 1.6 GDI 132 BUSINESS",
+          "III 1.6 GDI 132 CREATIVE",
+          "III 1.6 GDI 132 INITIA",
+          "III 1.6 GDI 132 INTUITIVE",
+          "III 1.6 T-GDI 177 4WD EXECUTIVE DCT-7",
+          "III 1.6 T-GDI 177 EXECUTIVE DCT-7"
+        ],
+        "diesel": [
+          "III 1.7 CRDI 115 BUSINESS",
+          "III 1.7 CRDI 115 CREATIVE",
+          "III 1.7 CRDI 115 EDITION LOUNGE",
+          "III 1.7 CRDI 115 EXECUTIVE",
+          "III 1.7 CRDI 115 INITIA",
+          "III 1.7 CRDI 115 INTUITIVE",
+          "III 1.7 CRDI 115 S EDITION",
+          "III 1.7 CRDI 141 BUSINESS DCT-7",
+          "III 1.7 CRDI 141 CREATIVE",
+          "III 1.7 CRDI 141 CREATIVE DCT-7",
+          "III 1.7 CRDI 141 EDITION LOUNGE DCT-7",
+          "III 1.7 CRDI 141 EXECUTIVE DCT-7",
+          "III 1.7 CRDI 141 INTUITIVE DCT-7",
+          "III 1.7 CRDI 141 S EDITION DCT-7",
+          "III 1.7 CRDI BUSINESS DCT-7",
+          "III 2.0 CRDI 136 4WD CREATIVE",
+          "III 2.0 CRDI 136 4WD EXECUTIVE",
+          "III 2.0 CRDI 136 BUSINESS",
+          "III 2.0 CRDI 136 CREATIVE",
+          "III 2.0 CRDI 136 EXECUTIVE",
+          "III 2.0 CRDI 136 INTUITIVE",
+          "III 2.0 CRDI 185 4WD CREATIVE BVA",
+          "III 2.0 CRDI 185 4WD EXECUTIVE BVA"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2018": {
+        "essence": [
+          "III (2) 1.6 GDI 132 CREATIVE",
+          "III (2) 1.6 T-GDI 177 EXECUTIVE DCT-7",
+          "III 1.6 GDI 132 BUSINESS",
+          "III 1.6 GDI 132 CREATIVE",
+          "III 1.6 GDI 132 INITIA",
+          "III 1.6 GDI 132 INTUITIVE",
+          "III 1.6 T-GDI 177 EXECUTIVE DCT-7"
+        ],
+        "diesel": [
+          "III (2) 1.6 CRDI 115 BUSINESS",
+          "III (2) 1.6 CRDI 115 CREATIVE",
+          "III (2) 1.6 CRDI 115 INTUITIVE",
+          "III (2) 1.6 CRDI 136 BUSINESS DCT-7",
+          "III (2) 1.6 CRDI 136 CREATIVE",
+          "III (2) 1.6 CRDI 136 CREATIVE DCT-7",
+          "III (2) 1.6 CRDI 136 EXECUTIVE DCT-7",
+          "III (2) 1.6 CRDI 136 HTRAC CREATIVE",
+          "III (2) 1.6 CRDI 136 HTRAC CREATIVE DCT-7",
+          "III (2) 1.6 CRDI 136 HTRAC EXECUTIVE DCT-7",
+          "III (2) 1.6 CRDI 136 HTRAC PREMIUM DCT-7",
+          "III (2) 1.6 CRDI 136 INTUITIVE DCT-7",
+          "III (2) 1.6 CRDI 136 PREMIUM",
+          "III (2) 1.6 CRDI 136 PREMIUM DCT-7",
+          "III 1.7 CRDI 115 BUSINESS",
+          "III 1.7 CRDI 115 CREATIVE",
+          "III 1.7 CRDI 115 EDITION MONDIAL",
+          "III 1.7 CRDI 115 EXECUTIVE",
+          "III 1.7 CRDI 115 INITIA",
+          "III 1.7 CRDI 115 INITIA PLUS",
+          "III 1.7 CRDI 115 INTUITIVE",
+          "III 1.7 CRDI 141 BUSINESS DCT-7",
+          "III 1.7 CRDI 141 CREATIVE",
+          "III 1.7 CRDI 141 CREATIVE DCT-7",
+          "III 1.7 CRDI 141 EDITION MONDIAL DCT-7",
+          "III 1.7 CRDI 141 EXECUTIVE DCT-7",
+          "III 1.7 CRDI 141 INTUITIVE DCT-7",
+          "III 2.0 CRDI 136 4WD CREATIVE",
+          "III 2.0 CRDI 136 4WD EDITION MONDIAL",
+          "III 2.0 CRDI 136 4WD EXECUTIVE",
+          "III 2.0 CRDI 136 CREATIVE",
+          "III 2.0 CRDI 136 EDITION MONDIAL",
+          "III 2.0 CRDI 136 EXECUTIVE",
+          "III 2.0 CRDI 185 4WD EXECUTIVE BVA"
+        ],
+        "hybride": [
+          "III (2) 2.0 CRDI 185 HTRAC HYBRID EXECUTIVE BVA8"
+        ],
+        "electrique": [],
+        "gpl": []
+      },
+      "2019": {
+        "essence": [
+          "III (2) 1.6 GDI 132 CREATIVE",
+          "III (2) 1.6 T-GDI 177 CREATIVE DCT-7",
+          "III (2) 1.6 T-GDI 177 EXECUTIVE DCT-7",
+          "III (2) 1.6 T-GDI 177 N LINE DCT-7"
+        ],
+        "diesel": [
+          "III (2) 1.6 CRDI 115 BUSINESS",
+          "III (2) 1.6 CRDI 115 CREATIVE",
+          "III (2) 1.6 CRDI 115 INTUITIVE",
+          "III (2) 1.6 CRDI 136 BUSINESS DCT-7",
+          "III (2) 1.6 CRDI 136 CREATIVE",
+          "III (2) 1.6 CRDI 136 CREATIVE DCT-7",
+          "III (2) 1.6 CRDI 136 EXECUTIVE DCT-7",
+          "III (2) 1.6 CRDI 136 HTRAC CREATIVE",
+          "III (2) 1.6 CRDI 136 HTRAC CREATIVE DCT-7",
+          "III (2) 1.6 CRDI 136 HTRAC EXECUTIVE DCT-7",
+          "III (2) 1.6 CRDI 136 HTRAC PREMIUM DCT-7",
+          "III (2) 1.6 CRDI 136 INTUITIVE DCT-7",
+          "III (2) 1.6 CRDI 136 N LINE DCT-7",
+          "III (2) 1.6 CRDI 136 N LINE EDITION DCT-7",
+          "III (2) 1.6 CRDI 136 N LINE HTRAC DCT-7",
+          "III (2) 1.6 CRDI 136 PREMIUM",
+          "III (2) 1.6 CRDI 136 PREMIUM DCT-7",
+          "III 1.7 CRDI 141 CREATIVE"
+        ],
+        "hybride": [
+          "III (2) 1.6 CRDI 115 HYBRID 48V BUSINESS",
+          "III (2) 1.6 CRDI 115 HYBRID 48V CREATIVE",
+          "III (2) 1.6 CRDI 136 HYBRID 48V BUSINESS DCT-7",
+          "III (2) 1.6 CRDI 136 HYBRID 48V CREATIVE DCT-7",
+          "III (2) 1.6 CRDI 136 HYBRID 48V EXECUTIVE DCT-7",
+          "III (2) 1.6 CRDI 136 HYBRID 48V N LINE DCT-7",
+          "III (2) 2.0 CRDI 185 HTRAC HYBRID EXECUTIVE BVA8",
+          "III (2) 2.0 CRDI 185 HYBRID N LINE HTRAC BVA8"
+        ],
+        "electrique": [],
+        "gpl": []
+      },
+      "2020": {
+        "essence": [
+          "III (2) 1.6 GDI 132 CREATIVE",
+          "III (2) 1.6 T-GDI 177 CREATIVE DCT-7",
+          "III (2) 1.6 T-GDI 177 EXECUTIVE DCT-7",
+          "III (2) 1.6 T-GDI 177 N LINE DCT-7"
+        ],
+        "diesel": [
+          "III (2) 1.6 CRDI 115 CREATIVE",
+          "III (2) 1.6 CRDI 115 INTUITIVE",
+          "III (2) 1.6 CRDI 136 CREATIVE DCT-7",
+          "III (2) 1.6 CRDI 136 EXECUTIVE DCT-7",
+          "III (2) 1.6 CRDI 136 HTRAC CREATIVE DCT-7",
+          "III (2) 1.6 CRDI 136 HTRAC EXECUTIVE DCT-7",
+          "III (2) 1.6 CRDI 136 HTRAC N LINE EXECUTIVE DCT-7",
+          "III (2) 1.6 CRDI 136 HTRAC PREMIUM DCT-7",
+          "III (2) 1.6 CRDI 136 HY48 HTRAC N LINE EXECUTIVE DCT-7",
+          "III (2) 1.6 CRDI 136 N LINE DCT-7",
+          "III (2) 1.6 CRDI 136 N LINE EDITION DCT-7",
+          "III (2) 1.6 CRDI 136 N LINE HTRAC DCT-7",
+          "III (2) 1.6 CRDI 136 PREMIUM",
+          "III (2) 1.6 CRDI 136 PREMIUM DCT-7",
+          "III 1.7 CRDI 141 CREATIVE"
+        ],
+        "hybride": [
+          "III (2) 1.6 CRDI 115 HYBRID 48V BUSINESS",
+          "III (2) 1.6 CRDI 115 HYBRID 48V CREATIVE",
+          "III (2) 1.6 CRDI 115 HYBRID 48V INTUITIVE",
+          "III (2) 1.6 CRDI 115 HYBRID 48V N LINE EDITION",
+          "III (2) 1.6 CRDI 136 HYBRID 48V BUSINESS DCT-7",
+          "III (2) 1.6 CRDI 136 HYBRID 48V CREATIVE DCT-7",
+          "III (2) 1.6 CRDI 136 HYBRID 48V EXECUTIVE DCT-7",
+          "III (2) 1.6 CRDI 136 HYBRID 48V N LINE DCT-7",
+          "III (2) 1.6 CRDI 136 HYBRID 48V N LINE EDITION DCT-7",
+          "III (2) 1.6 CRDI 136 HYBRID 48V N LINE EXECUTIVE DCT-7",
+          "III (2) 2.0 CRDI 185 HTRAC HYBRID EXECUTIVE BVA8",
+          "III (2) 2.0 CRDI 185 HYBRID N LINE HTRAC BVA8"
+        ],
+        "electrique": [],
+        "gpl": []
+      },
+      "2021": {
+        "essence": [],
+        "diesel": [
+          "III (2) 1.6 CRDI 136 HY48 HTRAC N LINE EXECUTIVE DCT-7"
+        ],
+        "hybride": [
+          "III (2) 1.6 CRDI 115 HYBRID 48V BUSINESS",
+          "III (2) 1.6 CRDI 115 HYBRID 48V CREATIVE",
+          "III (2) 1.6 CRDI 115 HYBRID 48V INTUITIVE",
+          "III (2) 1.6 CRDI 115 HYBRID 48V N LINE EDITION",
+          "III (2) 1.6 CRDI 136 HYBRID 48V BUSINESS DCT-7",
+          "III (2) 1.6 CRDI 136 HYBRID 48V CREATIVE DCT-7",
+          "III (2) 1.6 CRDI 136 HYBRID 48V N LINE EDITION DCT-7",
+          "III (2) 1.6 CRDI 136 HYBRID 48V N LINE EXECUTIVE DCT-7"
+        ],
+        "electrique": [],
+        "gpl": []
+      }
+    },
+    "Tucson 4": {
+      "2020": {
+        "essence": [],
+        "diesel": [
+          "IV 1.6 CRDI 136 HTRAC HY48V CREATIVE DCT-7",
+          "IV 1.6 CRDI 136 HTRAC HY48V EXECUTIVE DCT-7"
+        ],
+        "hybride": [
+          "IV 1.6 CRDI 136 HYBRID 48V 7CV EXECUTIVE DCT-7",
+          "IV 1.6 CRDI 136 HYBRID 48V BUSINESS DCT-7",
+          "IV 1.6 CRDI 136 HYBRID 48V CREATIVE DCT-7",
+          "IV 1.6 HYBRID 230 BUSINESS",
+          "IV 1.6 HYBRID 230 CREATIVE",
+          "IV 1.6 HYBRID 230 EXECUTIVE",
+          "IV 1.6 HYBRID 230 INTUITIVE",
+          "IV 1.6 T-GDI 150 HYBRID 48V CREATIVE DCT-7",
+          "IV 1.6 T-GDI 150 HYBRID 48V CREATIVE IBVM",
+          "IV 1.6 T-GDI 150 HYBRID 48V EXECUTIVE DCT-7",
+          "IV 1.6 T-GDI 150 HYBRID 48V INTUITIVE IBVM",
+          "IV 1.6 T-GDI 230 HYBRID BUSINESS BVA6",
+          "IV 1.6 T-GDI 230 HYBRID CREATIVE BVA6",
+          "IV 1.6 T-GDI 230 HYBRID EXECUTIVE BVA6",
+          "IV 1.6 T-GDI 230 HYBRID INTUITIVE BVA6"
+        ],
+        "electrique": [],
+        "gpl": []
+      },
+      "2021": {
+        "essence": [],
+        "diesel": [
+          "IV 1.6 CRDI 136 HTRAC HY48V CREATIVE DCT-7",
+          "IV 1.6 CRDI 136 HTRAC HY48V EXECUTIVE DCT-7",
+          "IV 1.6 CRDI 136 HTRAC HY48V N LINE EXECUTIVE DCT-7"
+        ],
+        "hybride": [
+          "IV 1.6 CRDI 136 HYBRID 48V 7CV EXECUTIVE DCT-7",
+          "IV 1.6 CRDI 136 HYBRID 48V BUSINESS DCT-7",
+          "IV 1.6 CRDI 136 HYBRID 48V CREATIVE DCT-7",
+          "IV 1.6 CRDI 136 HYBRID 48V N LINE EXECUTIVE DCT-7",
+          "IV 1.6 CRDI 136 IBVM HYBRID 48V BUSINESS",
+          "IV 1.6 CRDI 136 IBVM HYBRID 48V CREATIVE",
+          "IV 1.6 HYBRID 230 BUSINESS",
+          "IV 1.6 HYBRID 230 CREATIVE",
+          "IV 1.6 HYBRID 230 EXECUTIVE",
+          "IV 1.6 HYBRID 230 INTUITIVE",
+          "IV 1.6 HYBRID 230 N LINE EXECUTIVE",
+          "IV 1.6 PHEV 265 HTRAC BUSINESS 4WD AUTO",
+          "IV 1.6 PHEV 265 HTRAC CREATIVE 4WD AUTO",
+          "IV 1.6 PHEV 265 HTRAC EXECUTIVE 4WD AUTO",
+          "IV 1.6 PHEV 265 HTRAC N LINE EXECUTIVE 4WD AUTO",
+          "IV 1.6 T-GDI 150 HYBRID 48V CREATIVE DCT-7",
+          "IV 1.6 T-GDI 150 HYBRID 48V CREATIVE IBVM",
+          "IV 1.6 T-GDI 150 HYBRID 48V EXECUTIVE DCT-7",
+          "IV 1.6 T-GDI 150 HYBRID 48V INTUITIVE IBVM",
+          "IV 1.6 T-GDI 150 HYBRID 48V N LINE EXECUTIVE DCT-7",
+          "IV 1.6 T-GDI 230 HTRAC HYBRID CREATIVE BVA6",
+          "IV 1.6 T-GDI 230 HTRAC HYBRID EXECUTIVE BVA6",
+          "IV 1.6 T-GDI 230 HTRAC HYBRID N LINE EXECUTIVE BVA6",
+          "IV 1.6 T-GDI 230 HYBRID BUSINESS BVA6",
+          "IV 1.6 T-GDI 230 HYBRID CREATIVE BVA6",
+          "IV 1.6 T-GDI 230 HYBRID EXECUTIVE BVA6",
+          "IV 1.6 T-GDI 230 HYBRID INTUITIVE BVA6",
+          "IV 1.6 T-GDI 230 HYBRID N LINE EXECUTIVE BVA6",
+          "IV 1.6 T-GDI 265 HTRAC PLUG-IN BUSINESS BVA6",
+          "IV 1.6 T-GDI 265 HTRAC PLUG-IN CREATIVE BVA6",
+          "IV 1.6 T-GDI 265 HTRAC PLUG-IN EXECUTIVE BVA6",
+          "IV 1.6 T-GDI 265 HTRAC PLUG-IN N LINE EXECUTIVE BVA6"
+        ],
+        "electrique": [],
+        "gpl": []
+      },
+      "2022": {
+        "essence": [],
+        "diesel": [
+          "IV 1.6 CRDI 136 HTRAC HY48V CREATIVE DCT-7",
+          "IV 1.6 CRDI 136 HTRAC HY48V EXECUTIVE DCT-7",
+          "IV 1.6 CRDI 136 HTRAC HY48V N LINE EXECUTIVE DCT-7"
+        ],
+        "hybride": [
+          "IV 1.6 CRDI 136 HYBRID 48V 7CV EXECUTIVE DCT-7",
+          "IV 1.6 CRDI 136 HYBRID 48V BUSINESS DCT-7",
+          "IV 1.6 CRDI 136 HYBRID 48V CREATIVE DCT-7",
+          "IV 1.6 CRDI 136 HYBRID 48V N LINE EXECUTIVE DCT-7",
+          "IV 1.6 CRDI 136 IBVM HYBRID 48V BUSINESS",
+          "IV 1.6 CRDI 136 IBVM HYBRID 48V CREATIVE",
+          "IV 1.6 HYBRID 230 BUSINESS",
+          "IV 1.6 HYBRID 230 CREATIVE",
+          "IV 1.6 HYBRID 230 EXECUTIVE",
+          "IV 1.6 HYBRID 230 INTUITIVE",
+          "IV 1.6 HYBRID 230 N LINE EXECUTIVE",
+          "IV 1.6 PHEV 265 HTRAC BUSINESS 4WD AUTO",
+          "IV 1.6 PHEV 265 HTRAC CREATIVE 4WD AUTO",
+          "IV 1.6 PHEV 265 HTRAC EXECUTIVE 4WD AUTO",
+          "IV 1.6 PHEV 265 HTRAC N LINE EXECUTIVE 4WD AUTO",
+          "IV 1.6 T-GDI 150 HYBRID 48V CREATIVE DCT-7",
+          "IV 1.6 T-GDI 150 HYBRID 48V CREATIVE IBVM",
+          "IV 1.6 T-GDI 150 HYBRID 48V EXECUTIVE DCT-7",
+          "IV 1.6 T-GDI 150 HYBRID 48V INTUITIVE IBVM",
+          "IV 1.6 T-GDI 150 HYBRID 48V N LINE EXECUTIVE DCT-7",
+          "IV 1.6 T-GDI 230 HTRAC HYBRID CREATIVE BVA6",
+          "IV 1.6 T-GDI 230 HTRAC HYBRID EXECUTIVE BVA6",
+          "IV 1.6 T-GDI 230 HTRAC HYBRID N LINE EXECUTIVE BVA6",
+          "IV 1.6 T-GDI 230 HYBRID BUSINESS BVA6",
+          "IV 1.6 T-GDI 230 HYBRID CREATIVE BVA6",
+          "IV 1.6 T-GDI 230 HYBRID EXECUTIVE BVA6",
+          "IV 1.6 T-GDI 230 HYBRID INTUITIVE BVA6",
+          "IV 1.6 T-GDI 230 HYBRID N LINE EXECUTIVE BVA6",
+          "IV 1.6 T-GDI 265 HTRAC PLUG-IN BUSINESS BVA6",
+          "IV 1.6 T-GDI 265 HTRAC PLUG-IN CREATIVE BVA6",
+          "IV 1.6 T-GDI 265 HTRAC PLUG-IN EXECUTIVE BVA6",
+          "IV 1.6 T-GDI 265 HTRAC PLUG-IN N LINE EXECUTIVE BVA6"
+        ],
+        "electrique": [],
+        "gpl": []
+      },
+      "2023": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [
+          "IV 1.6 CRDI 136 HYBRID 48V 7CV EXECUTIVE DCT-7",
+          "IV 1.6 CRDI 136 HYBRID 48V BUSINESS DCT-7",
+          "IV 1.6 CRDI 136 HYBRID 48V CREATIVE DCT-7",
+          "IV 1.6 CRDI 136 HYBRID 48V N LINE EXECUTIVE DCT-7",
+          "IV 1.6 CRDI 136 IBVM HYBRID 48V BUSINESS",
+          "IV 1.6 CRDI 136 IBVM HYBRID 48V CREATIVE",
+          "IV 1.6 T-GDI 150 HYBRID 48V CREATIVE DCT-7",
+          "IV 1.6 T-GDI 150 HYBRID 48V CREATIVE IBVM",
+          "IV 1.6 T-GDI 150 HYBRID 48V EXECUTIVE DCT-7",
+          "IV 1.6 T-GDI 150 HYBRID 48V INTUITIVE IBVM",
+          "IV 1.6 T-GDI 150 HYBRID 48V N LINE EXECUTIVE DCT-7",
+          "IV 1.6 T-GDI 230 HTRAC HYBRID CREATIVE BVA6",
+          "IV 1.6 T-GDI 230 HTRAC HYBRID EXECUTIVE BVA6",
+          "IV 1.6 T-GDI 230 HTRAC HYBRID N LINE EXECUTIVE BVA6",
+          "IV 1.6 T-GDI 230 HYBRID BUSINESS BVA6",
+          "IV 1.6 T-GDI 230 HYBRID CREATIVE BVA6",
+          "IV 1.6 T-GDI 230 HYBRID EXECUTIVE BVA6",
+          "IV 1.6 T-GDI 230 HYBRID INTUITIVE BVA6",
+          "IV 1.6 T-GDI 230 HYBRID N LINE EDITION BVA6",
+          "IV 1.6 T-GDI 230 HYBRID N LINE EXECUTIVE BVA6",
+          "IV 1.6 T-GDI 265 HTRAC PLUG-IN BUSINESS BVA6",
+          "IV 1.6 T-GDI 265 HTRAC PLUG-IN CREATIVE BVA6",
+          "IV 1.6 T-GDI 265 HTRAC PLUG-IN EXECUTIVE BVA6",
+          "IV 1.6 T-GDI 265 HTRAC PLUG-IN N LINE EXECUTIVE BVA6"
+        ],
+        "electrique": [],
+        "gpl": []
+      },
+      "2024": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [
+          "IV (2) 1.6 T-GDI 215 HTRAC HYBRID EXECUTIVE BVA6",
+          "IV (2) 1.6 T-GDI 215 HTRAC HYBRID N LINE EXECUTIVE BVA6",
+          "IV (2) 1.6 T-GDI 215 HYBRID 20EME ANNIVERSAIRE BVA6",
+          "IV (2) 1.6 T-GDI 215 HYBRID CREATIVE BVA6",
+          "IV (2) 1.6 T-GDI 215 HYBRID EXECUTIVE BVA6",
+          "IV (2) 1.6 T-GDI 215 HYBRID INITIA BVA6",
+          "IV (2) 1.6 T-GDI 215 HYBRID INTUITIVE BVA6",
+          "IV (2) 1.6 T-GDI 215 HYBRID N LINE CREATIVE BVA6",
+          "IV (2) 1.6 T-GDI 215 HYBRID N LINE EXECUTIVE BVA6",
+          "IV (2) 1.6 T-GDI 253 PLUG-IN CREATIVE BVA6",
+          "IV (2) 1.6 T-GDI 253 PLUG-IN EXECUTIVE BVA6",
+          "IV (2) 1.6 T-GDI 253 PLUG-IN N LINE CREATIVE BVA6",
+          "IV (2) 1.6 T-GDI 253 PLUG-IN N LINE EXECUTIVE BVA6",
+          "IV 1.6 CRDI 136 HYBRID 48V 7CV EXECUTIVE DCT-7",
+          "IV 1.6 CRDI 136 HYBRID 48V BUSINESS DCT-7",
+          "IV 1.6 CRDI 136 HYBRID 48V CREATIVE DCT-7",
+          "IV 1.6 CRDI 136 HYBRID 48V N LINE EXECUTIVE DCT-7",
+          "IV 1.6 CRDI 136 IBVM HYBRID 48V BUSINESS",
+          "IV 1.6 CRDI 136 IBVM HYBRID 48V CREATIVE",
+          "IV 1.6 T-GDI 150 HYBRID 48V CREATIVE DCT-7",
+          "IV 1.6 T-GDI 150 HYBRID 48V CREATIVE IBVM",
+          "IV 1.6 T-GDI 150 HYBRID 48V EXECUTIVE DCT-7",
+          "IV 1.6 T-GDI 150 HYBRID 48V INTUITIVE IBVM",
+          "IV 1.6 T-GDI 150 HYBRID 48V N LINE EXECUTIVE DCT-7",
+          "IV 1.6 T-GDI 230 HTRAC HYBRID EXECUTIVE BVA6",
+          "IV 1.6 T-GDI 230 HYBRID BUSINESS BVA6",
+          "IV 1.6 T-GDI 230 HYBRID CREATIVE BVA6",
+          "IV 1.6 T-GDI 230 HYBRID EXECUTIVE BVA6",
+          "IV 1.6 T-GDI 230 HYBRID INTUITIVE BVA6",
+          "IV 1.6 T-GDI 230 HYBRID N LINE EDITION BVA6",
+          "IV 1.6 T-GDI 230 HYBRID N LINE EXECUTIVE BVA6",
+          "IV 1.6 T-GDI 265 HTRAC PLUG-IN BUSINESS BVA6",
+          "IV 1.6 T-GDI 265 HTRAC PLUG-IN CREATIVE BVA6",
+          "IV 1.6 T-GDI 265 HTRAC PLUG-IN EXECUTIVE BVA6",
+          "IV 1.6 T-GDI 265 HTRAC PLUG-IN N LINE EXECUTIVE BVA6"
+        ],
+        "electrique": [],
+        "gpl": []
+      },
+      "2025": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [
+          "IV (2) 1.6 T-GDI 215 HTRAC HYBRID EXECUTIVE BVA6",
+          "IV (2) 1.6 T-GDI 215 HTRAC HYBRID N LINE EXECUTIVE BVA6",
+          "IV (2) 1.6 T-GDI 215 HYBRID 20EME ANNIVERSAIRE BVA6",
+          "IV (2) 1.6 T-GDI 215 HYBRID CREATIVE BVA6",
+          "IV (2) 1.6 T-GDI 215 HYBRID EXECUTIVE BVA6",
+          "IV (2) 1.6 T-GDI 215 HYBRID INITIA BVA6",
+          "IV (2) 1.6 T-GDI 215 HYBRID INTUITIVE BVA6",
+          "IV (2) 1.6 T-GDI 215 HYBRID N LINE CREATIVE BVA6",
+          "IV (2) 1.6 T-GDI 215 HYBRID N LINE EXECUTIVE BVA6",
+          "IV (2) 1.6 T-GDI 239 HTRAC HYBRID EXECUTIVE BVA6",
+          "IV (2) 1.6 T-GDI 239 HTRAC HYBRID N LINE EXECUTIVE BVA6",
+          "IV (2) 1.6 T-GDI 239 HYBRID CREATIVE BVA6",
+          "IV (2) 1.6 T-GDI 239 HYBRID EXECUTIVE BVA6",
+          "IV (2) 1.6 T-GDI 239 HYBRID INITIA BVA6",
+          "IV (2) 1.6 T-GDI 239 HYBRID INTUITIVE BVA6",
+          "IV (2) 1.6 T-GDI 239 HYBRID N LINE CREATIVE BVA6",
+          "IV (2) 1.6 T-GDI 239 HYBRID N LINE EXECUTIVE BVA6",
+          "IV (2) 1.6 T-GDI 239 HYBRID N LINE ULTIME EDITION BVA6",
+          "IV (2) 1.6 T-GDI 253 PLUG-IN CREATIVE BVA6",
+          "IV (2) 1.6 T-GDI 253 PLUG-IN EXECUTIVE BVA6",
+          "IV (2) 1.6 T-GDI 253 PLUG-IN INITIA BVA6",
+          "IV (2) 1.6 T-GDI 253 PLUG-IN INTUITIVE BVA6",
+          "IV (2) 1.6 T-GDI 253 PLUG-IN N LINE CREATIVE BVA6",
+          "IV (2) 1.6 T-GDI 253 PLUG-IN N LINE EXECUTIVE BVA6",
+          "IV (2) 1.6 T-GDI 288 PLUG-IN CREATIVE BVA6",
+          "IV (2) 1.6 T-GDI 288 PLUG-IN EXECUTIVE BVA6",
+          "IV (2) 1.6 T-GDI 288 PLUG-IN INITIA BVA6",
+          "IV (2) 1.6 T-GDI 288 PLUG-IN INTUITIVE BVA6",
+          "IV (2) 1.6 T-GDI 288 PLUG-IN N LINE CREATIVE BVA6",
+          "IV (2) 1.6 T-GDI 288 PLUG-IN N LINE EXECUTIVE BVA6",
+          "IV (2) 1.6 T-GDI 288 PLUG-IN N LINE ULTIME EDITION BVA6",
+          "IV 1.6 T-GDI 230 HYBRID CREATIVE BVA6"
+        ],
+        "electrique": [],
+        "gpl": []
+      },
+      "2026": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [
+          "IV (2) 1.6 T-GDI 239 HYBRID EXECUTIVE BVA6",
+          "IV (2) 1.6 T-GDI 239 HYBRID INITIA BVA6",
+          "IV (2) 1.6 T-GDI 239 HYBRID INTUITIVE BVA6",
+          "IV (2) 1.6 T-GDI 239 HYBRID N LINE CREATIVE BVA6",
+          "IV (2) 1.6 T-GDI 239 HYBRID N LINE EXECUTIVE BVA6",
+          "IV (2) 1.6 T-GDI 239 HYBRID N LINE ULTIME EDITION BVA6",
+          "IV (2) 1.6 T-GDI 288 PLUG-IN EXECUTIVE BVA6",
+          "IV (2) 1.6 T-GDI 288 PLUG-IN INITIA BVA6",
+          "IV (2) 1.6 T-GDI 288 PLUG-IN INTUITIVE BVA6",
+          "IV (2) 1.6 T-GDI 288 PLUG-IN N LINE CREATIVE BVA6",
+          "IV (2) 1.6 T-GDI 288 PLUG-IN N LINE EXECUTIVE BVA6",
+          "IV (2) 1.6 T-GDI 288 PLUG-IN N LINE ULTIME EDITION BVA6"
+        ],
         "electrique": [],
         "gpl": []
       }
