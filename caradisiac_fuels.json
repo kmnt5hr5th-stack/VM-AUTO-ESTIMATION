@@ -8360,7 +8360,42 @@
         "Diesel"
       ],
       "2019": [
+        "Essence",
         "Diesel"
+      ],
+      "2020": [
+        "Essence",
+        "Diesel",
+        "Hybride"
+      ],
+      "2021": [
+        "Essence",
+        "Diesel",
+        "Hybride"
+      ],
+      "2022": [
+        "Essence",
+        "Diesel",
+        "Hybride"
+      ],
+      "2023": [
+        "Essence",
+        "Diesel",
+        "Hybride"
+      ],
+      "2024": [
+        "Essence",
+        "Diesel",
+        "Hybride"
+      ],
+      "2025": [
+        "Diesel",
+        "Hybride"
+      ],
+      "2026": [
+        "Essence",
+        "Diesel",
+        "Hybride"
       ]
     },
     "Classe G 3 Amg": {
@@ -24461,7 +24496,70 @@
         "Diesel"
       ],
       "2013": [
+        "Essence",
         "Diesel"
+      ],
+      "2014": [
+        "Essence",
+        "Diesel"
+      ],
+      "2015": [
+        "Essence",
+        "Diesel"
+      ],
+      "2016": [
+        "Essence",
+        "Diesel"
+      ],
+      "2017": [
+        "Essence",
+        "Diesel"
+      ],
+      "2018": [
+        "Essence",
+        "Diesel"
+      ],
+      "2019": [
+        "Essence",
+        "Diesel"
+      ],
+      "2020": [
+        "Essence",
+        "Diesel",
+        "Hybride"
+      ],
+      "2021": [
+        "Essence",
+        "Diesel",
+        "Hybride",
+        "GPL"
+      ],
+      "2022": [
+        "Essence",
+        "Diesel",
+        "Hybride",
+        "GPL"
+      ],
+      "2023": [
+        "Essence",
+        "Diesel",
+        "Hybride",
+        "GPL"
+      ],
+      "2024": [
+        "Essence",
+        "Diesel",
+        "Hybride"
+      ],
+      "2025": [
+        "Essence",
+        "Diesel",
+        "Hybride"
+      ],
+      "2026": [
+        "Essence",
+        "Diesel",
+        "Hybride"
       ]
     },
     "Tarraco": {
@@ -24844,6 +24942,72 @@
       ],
       "2004": [
         "Essence"
+      ],
+      "2013": [
+        "Essence",
+        "Diesel"
+      ],
+      "2014": [
+        "Essence",
+        "Diesel"
+      ],
+      "2015": [
+        "Essence",
+        "Diesel",
+        "Hybride"
+      ],
+      "2016": [
+        "Essence",
+        "Diesel",
+        "Hybride"
+      ],
+      "2017": [
+        "Essence",
+        "Diesel",
+        "Hybride"
+      ],
+      "2018": [
+        "Essence",
+        "Diesel"
+      ],
+      "2019": [
+        "Essence",
+        "Diesel"
+      ],
+      "2020": [
+        "Essence",
+        "Diesel",
+        "Hybride"
+      ],
+      "2021": [
+        "Essence",
+        "Diesel",
+        "Hybride"
+      ],
+      "2022": [
+        "Essence",
+        "Diesel",
+        "Hybride"
+      ],
+      "2023": [
+        "Essence",
+        "Diesel",
+        "Hybride"
+      ],
+      "2024": [
+        "Essence",
+        "Diesel",
+        "Hybride"
+      ],
+      "2025": [
+        "Essence",
+        "Diesel",
+        "Hybride"
+      ],
+      "2026": [
+        "Essence",
+        "Diesel",
+        "Hybride"
       ]
     },
     "Fabia": {
