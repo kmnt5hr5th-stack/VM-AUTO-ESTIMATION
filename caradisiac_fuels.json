@@ -5620,7 +5620,43 @@
         "Essence"
       ]
     },
-    "Serie 5 E34": {}
+    "Serie 5 E34": {},
+    "X7": {
+      "2018": [
+        "Essence"
+      ],
+      "2019": [
+        "Essence"
+      ],
+      "2020": [
+        "Essence",
+        "Diesel"
+      ],
+      "2021": [
+        "Essence",
+        "Diesel"
+      ],
+      "2022": [
+        "Essence",
+        "Diesel"
+      ],
+      "2023": [
+        "Essence",
+        "Diesel"
+      ],
+      "2024": [
+        "Essence",
+        "Diesel"
+      ],
+      "2025": [
+        "Essence",
+        "Diesel"
+      ],
+      "2026": [
+        "Essence",
+        "Diesel"
+      ]
+    }
   },
   "CITROËN": {
     "E C4 3E Generation X": {
@@ -13999,6 +14035,56 @@
       "2010": [
         "Essence",
         "Diesel"
+      ],
+      "2015": [
+        "Essence",
+        "Diesel"
+      ],
+      "2016": [
+        "Essence",
+        "Diesel"
+      ],
+      "2017": [
+        "Essence",
+        "Diesel"
+      ],
+      "2018": [
+        "Essence",
+        "Diesel"
+      ],
+      "2019": [
+        "Essence",
+        "Diesel"
+      ],
+      "2020": [
+        "Diesel",
+        "Électrique"
+      ],
+      "2021": [
+        "Diesel",
+        "Électrique"
+      ],
+      "2022": [
+        "Essence",
+        "Diesel",
+        "Électrique"
+      ],
+      "2023": [
+        "Diesel"
+      ],
+      "2024": [
+        "Diesel"
+      ],
+      "2025": [
+        "Essence",
+        "Diesel",
+        "Hybride",
+        "Électrique"
+      ],
+      "2026": [
+        "Essence",
+        "Diesel",
+        "Hybride"
       ]
     },
     "Golf 5": {
@@ -15514,6 +15600,40 @@
         "Essence",
         "Diesel",
         "GPL"
+      ]
+    },
+    "Giulietta": {
+      "2015": [
+        "Essence",
+        "Diesel"
+      ],
+      "2016": [
+        "Essence",
+        "Diesel"
+      ],
+      "2017": [
+        "Essence",
+        "Diesel"
+      ],
+      "2018": [
+        "Essence",
+        "Diesel"
+      ],
+      "2019": [
+        "Essence",
+        "Diesel"
+      ],
+      "2020": [
+        "Essence",
+        "Diesel"
+      ],
+      "2021": [
+        "Essence",
+        "Diesel"
+      ],
+      "2022": [
+        "Essence",
+        "Diesel"
       ]
     }
   },
