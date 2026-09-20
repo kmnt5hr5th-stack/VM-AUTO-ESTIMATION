@@ -235461,6 +235461,10 @@
         "hybride": [],
         "electrique": [
           "352 GRANDE AUTONOMIE DUAL MOTOR AWD 75 KWH 2021",
+          "480 GRANDE AUTONOMIE DUAL MOTOR AWD 75 KWH 2020",
+          "480 GRANDE AUTONOMIE DUAL MOTOR AWD 7PL 75 KWH",
+          "480 PERFORMANCE AWD 75 KWH",
+          "480 PERFORMANCE AWD 75 KWH 7PL",
           "480 PERFORMANCE DUAL MOTOR AWD 75KWH 2021-2022"
         ],
         "gpl": []
@@ -235471,7 +235475,10 @@
         "hybride": [],
         "electrique": [
           "300 AUTONOMIE STANDARD RWD 60 KWH 2022",
+          "352 GRANDE AUTONOMIE DUAL MOTOR AWD 75 KWH 2021",
           "352 GRANDE AUTONOMIE DUAL MOTOR AWD 75 KWH 2022",
+          "480 PERFORMANCE AWD 75 KWH",
+          "480 PERFORMANCE DUAL MOTOR AWD 75KWH 2021-2022",
           "480 PERFORMANCE DUAL MOTOR AWD 75KWH 2022"
         ],
         "gpl": []
@@ -235522,7 +235529,12 @@
         "diesel": [],
         "hybride": [],
         "electrique": [
-          "(2) 299 STANDARD LONG RANGE RWD 79 KWH"
+          "(2) 295 AUTONOMIE STANDARD RWD 62.5 KWH",
+          "(2) 299 STANDARD LONG RANGE RWD 79 KWH",
+          "(2) 308 PREMIUM LONG RANGE RWD 79 KWH",
+          "(2) 375 PREMIUM LONG RANGE AWD 79 KWH",
+          "(2) 412 PERFORMANCE 79 KWH",
+          "352 GRANDE AUTONOMIE DUAL MOTOR AWD 75 KWH 2024"
         ],
         "gpl": []
       }
