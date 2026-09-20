@@ -6874,6 +6874,36 @@
       "2018": [
         "Essence",
         "Diesel"
+      ],
+      "2019": [
+        "Essence"
+      ],
+      "2020": [
+        "Essence",
+        "Hybride"
+      ],
+      "2021": [
+        "Essence",
+        "Hybride"
+      ],
+      "2022": [
+        "Essence",
+        "Hybride"
+      ],
+      "2023": [
+        "Hybride"
+      ],
+      "2024": [
+        "Essence",
+        "Hybride"
+      ],
+      "2025": [
+        "Essence",
+        "Hybride"
+      ],
+      "2026": [
+        "Essence",
+        "Hybride"
       ]
     },
     "Explorer": {
@@ -11967,6 +11997,48 @@
       ],
       "2003": [
         "Essence"
+      ],
+      "2015": [
+        "Essence"
+      ],
+      "2016": [
+        "Essence",
+        "Diesel"
+      ],
+      "2017": [
+        "Essence",
+        "Diesel"
+      ],
+      "2018": [
+        "Essence",
+        "Diesel"
+      ],
+      "2019": [
+        "Essence",
+        "Diesel"
+      ],
+      "2020": [
+        "Essence",
+        "Diesel"
+      ],
+      "2021": [
+        "Essence",
+        "Diesel",
+        "Hybride"
+      ],
+      "2022": [
+        "Essence",
+        "Diesel",
+        "Hybride"
+      ],
+      "2023": [
+        "Essence",
+        "Diesel",
+        "Hybride"
+      ],
+      "2024": [
+        "Essence",
+        "Diesel"
       ]
     },
     "Espace": {
