@@ -332,6 +332,13 @@ def _build_search_url(marque: str, modele: str, annee: int, carburant: str = Non
         if gear:
             params["gearbox"] = gear
 
+    if carrosserie:
+        _VT = {"break": "break", "coupé": "coupe", "cabriolet": "cabriolet",
+               "suv / 4x4": "4x4", "monospace": "monospace", "berline": "berline"}
+        vt = _VT.get(carrosserie.lower().strip())
+        if vt:
+            params["vehicle_type"] = vt
+
     return f"{SEARCH_URL}?{urllib.parse.urlencode(params)}"
 
 def _lbc_finition_code(marque: str, modele: str, finition: str) -> str:
@@ -387,6 +394,12 @@ def _build_structured_payload(marque: str, modele: str, annee: int,
         gear = GEAR_CODE.get(boite.lower().strip())
         if gear:
             enums["gearbox"] = [gear]
+    if carrosserie:
+        _VT = {"break": "break", "coupé": "coupe", "cabriolet": "cabriolet",
+               "suv / 4x4": "4x4", "monospace": "monospace", "berline": "berline"}
+        vt = _VT.get(carrosserie.lower().strip())
+        if vt:
+            enums["vehicle_type"] = [vt]
 
     ranges: dict = {}
     if annee:
