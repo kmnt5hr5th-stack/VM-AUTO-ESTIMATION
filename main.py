@@ -515,8 +515,8 @@ async def _scan_lbc_bonnes_affaires(max_pages: int = 15, seuil_pct: int = 10) ->
             logger.info(f"[scan-ba] page {page}: {len(ads)} annonces")
 
             for ad in ads:
-                # Particuliers uniquement
-                if ad.get("owner", {}).get("type") != "particulier":
+                # Particuliers uniquement (LBC renvoie "private" pour particulier)
+                if ad.get("owner", {}).get("type") == "pro":
                     continue
 
                 raw_attrs = ad.get("attributes", [])
