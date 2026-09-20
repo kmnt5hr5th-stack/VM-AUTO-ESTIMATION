@@ -274,8 +274,9 @@ def _lbc_model_name(marque: str, modele: str) -> str:
 
 def _build_search_url(marque: str, modele: str, annee: int, carburant: str = None,
                        boite: str = None, motorisation: str = None,
-                       type_vehicule: str = None, kilometrage: int = None) -> str:
-    """Construit l'URL de recherche LBC avec les paramètres structurés voiture."""
+                       type_vehicule: str = None, kilometrage: int = None,
+                       finition: str = None) -> str:
+    """Construit l'URL de recherche LBC identique à celle du site (category, brand, model, finition, regdate, fuel, gearbox, hp, mileage)."""
     import urllib.parse
 
     FUEL_MAP = {
@@ -285,7 +286,6 @@ def _build_search_url(marque: str, modele: str, annee: int, carburant: str = Non
         "electrique": "4", "électrique": "4",
         "gpl": "5",
     }
-    # LBC gearbox : 1 = manuelle, 2 = automatique
     GEAR_CODE = {
         "manuelle": "1", "mécanique": "1", "mecanique": "1", "bvm": "1", "bm": "1",
         "automatique": "2", "auto": "2", "bva": "2", "dsg": "2", "edr": "2",
@@ -296,24 +296,8 @@ def _build_search_url(marque: str, modele: str, annee: int, carburant: str = Non
     model_name = _lbc_model_name(marque, modele)
     model_code = f"{brand_code}_{model_name}" if " " in model_name else f"{brand_code}_{_lbc_model_code(model_name)}"
 
-    params: dict = {
-        "category": "5" if is_util else "2",
-        "u_car_brand": brand_code,
-        "u_car_model": model_code,
-        "regdate": f"{annee - 1}-{annee + 1}",
-        "sort": "price",
-        "order": "asc",
-    }
-
-    if carburant:
-        fuel = FUEL_MAP.get(carburant.lower().strip())
-        if fuel:
-            params["fuel"] = fuel
-
-    if boite:
-        gear = GEAR_CODE.get(boite.lower().strip())
-        if gear:
-            params["gearbox"] = gear
+    # Ordre identique à l'URL LBC : category, regdate, hp, mileage, brand, model, fuel, finition, gearbox
+    params: dict = {"category": "5" if is_util else "2", "regdate": f"{annee - 1}-{annee + 1}"}
 
     if motorisation:
         hp = _extraire_cv(motorisation)
@@ -321,8 +305,24 @@ def _build_search_url(marque: str, modele: str, annee: int, carburant: str = Non
             params["horse_power_din"] = f"{hp}-{hp}"
 
     if kilometrage:
-        margin = 15_000 if kilometrage <= 100_000 else 25_000
-        params["mileage"] = f"{max(0, kilometrage - margin)}-{kilometrage + margin}"
+        km_base = round(kilometrage / 10_000) * 10_000
+        params["mileage"] = f"{max(0, km_base - 10_000)}-{km_base + 10_000}"
+
+    params["u_car_brand"] = brand_code
+    params["u_car_model"] = model_code
+
+    if carburant:
+        fuel = FUEL_MAP.get(carburant.lower().strip())
+        if fuel:
+            params["fuel"] = fuel
+
+    if finition:
+        params["u_car_finition"] = _lbc_finition_code(marque, modele, finition)
+
+    if boite:
+        gear = GEAR_CODE.get(boite.lower().strip())
+        if gear:
+            params["gearbox"] = gear
 
     return f"{SEARCH_URL}?{urllib.parse.urlencode(params)}"
 
@@ -1165,7 +1165,7 @@ class LeboncoinScraper(BaseScraper):
         target_hp = _extraire_cv(motorisation) if motorisation else None
         url = _build_search_url(marque, modele, annee, carburant=carburant, boite=boite,
                                  motorisation=motorisation, type_vehicule=type_vehicule,
-                                 kilometrage=kilometrage)
+                                 kilometrage=kilometrage, finition=finition)
         logger.info(f"[leboncoin] URL search: {url}")
 
         for attempt in range(2):
@@ -1409,8 +1409,27 @@ class LeboncoinScraper(BaseScraper):
         # Code finition LBC ex: "AUDI_Q2_Design" — transmis si finition connue
         lbc_fin = _lbc_finition_code(marque, modele_api, finition) if finition else None
 
-        # ── Recherche structurée via curl_cffi (bypass DataDome, enums précis) ───
-        logger.info(f"[leboncoin] get_listings → structured API hp={target_hp} finition={lbc_fin}")
+        # ── 1. URL search Playwright (payload exact de LBC, finition dans l'URL) ──
+        logger.info(f"[leboncoin] get_listings → URL search (finition={finition})")
+        try:
+            listings = await asyncio.wait_for(
+                self._url_search(
+                    marque, modele_api, annee, kilometrage,
+                    carburant=carburant, boite=boite, motorisation=motorisation,
+                    type_vehicule=type_vehicule, finition=finition,
+                    carrosserie=carrosserie, max_pages=10, return_details=True,
+                ),
+                timeout=160,
+            )
+        except Exception as e:
+            logger.warning(f"[leboncoin] URL search erreur: {e}")
+            listings = []
+
+        if listings:
+            return listings
+
+        # ── 2. Fallback : structured API curl_cffi ────────────────────────────
+        logger.info(f"[leboncoin] get_listings fallback → structured API hp={target_hp} finition={lbc_fin}")
         try:
             listings = await asyncio.wait_for(
                 _fetch_structured_api_pages(
