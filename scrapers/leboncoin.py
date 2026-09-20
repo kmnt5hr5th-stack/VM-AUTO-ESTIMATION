@@ -367,10 +367,9 @@ def _build_structured_payload(marque: str, modele: str, annee: int,
         fuel = FUEL_MAP.get(carburant.lower().strip())
         if fuel:
             enums["fuel"] = [fuel]
-    if boite:
-        gear = GEAR_CODE.get(boite.lower().strip())
-        if gear:
-            enums["gearbox"] = [gear]
+    # Gearbox intentionnellement absent du payload API : beaucoup de vendeurs ne renseignent
+    # pas ce champ sur LBC, ce qui causerait des résultats manquants. Le filtre post-hoc
+    # dans _extract_annonces exclut les annonces qui spécifient explicitement une autre boîte.
 
     ranges: dict = {}
     if annee:
@@ -474,10 +473,7 @@ def _build_lbc_payload(marque, modele, annee, km, page=1, carburant=None, boite=
         fuel = FUEL_MAP.get(carburant.lower().strip())
         if fuel:
             enums["fuel"] = [fuel]
-    if boite:
-        gear = GEAR_MAP.get(boite.lower().strip())
-        if gear:
-            enums["gearbox"] = [gear]
+    # Gearbox retiré du payload — filtre post-hoc dans _extract_prix/_extract_annonces
     is_util = type_vehicule and type_vehicule.lower() in ("utilitaire", "fourgon", "van", "camionnette")
     cat_id = "5" if is_util else "2"
     # Pas de filtre km dans l'API — LBC l'ignore souvent et retourne
@@ -522,10 +518,7 @@ def _build_camoufox_payload(marque, modele, annee, km, boite=None,
     is_util = type_vehicule and type_vehicule.lower() in ("utilitaire", "fourgon", "van", "camionnette")
     cat_id = "5" if is_util else "2"
     enums: dict = {"ad_type": ["offer"]}
-    if boite:
-        gear = GEAR_NUM.get(boite.lower().strip())
-        if gear:
-            enums["gearbox"] = [gear]
+    # Gearbox retiré du payload — filtre post-hoc dans _extract_annonces
     ranges: dict = {"regdate": {"min": annee - 1, "max": annee}}
     if _km_bas_pour_age(km, annee):
         logger.info(f"[leboncoin] Km bas pour l'âge ({km} km / {annee}) — filtre km désactivé")
