@@ -147,15 +147,19 @@ def _hp_from_catalog(marque: str, modele: str, motorisation: str) -> Optional[in
             break
     if not entries:
         return None
-    # Cherche "NNN D/DE/E" en priorité (format Caradisiac avec ou sans préfixe génération)
+    # Cherche "NNN D/DE/E" (nouvelles gens "d") ou "NNN CDI/CDTI" (ancienne notation)
     merc_m = re.search(r'\b(\d{3,4})\s+(DE?|E)\b', motorisation, re.IGNORECASE)
     if merc_m:
         engine_variant = f"{merc_m.group(1)} {merc_m.group(2).lower()}"
     else:
-        tokens = motorisation.strip().split()
-        if len(tokens) < 2:
-            return None
-        engine_variant = f"{tokens[0]} {tokens[1]}".lower()
+        cdi_m = re.search(r'\b(\d{3,4})\s+(CDI|CDTI|BlueTEC)\b', motorisation, re.IGNORECASE)
+        if cdi_m:
+            engine_variant = f"{cdi_m.group(1)} {cdi_m.group(2)}"
+        else:
+            tokens = motorisation.strip().split()
+            if len(tokens) < 2:
+                return None
+            engine_variant = f"{tokens[0]} {tokens[1]}".lower()
     # II/III/IV = nouvelle génération → HP le plus récent (dernier match dans le catalogue)
     # (2)/(3) = phase 2 même génération → HP d'origine (premier match)
     is_new_gen = bool(re.match(r'^(?:II|III|IV)\s', motorisation.strip(), re.IGNORECASE))

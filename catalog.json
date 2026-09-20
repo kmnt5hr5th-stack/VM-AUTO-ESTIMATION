@@ -15866,6 +15866,12 @@
           "yearEnd": 2021
         },
         {
+          "name": "C 250 d 204ch",
+          "fuel": "Diesel",
+          "yearStart": 2014,
+          "yearEnd": 2018
+        },
+        {
           "name": "C 220 d 194ch",
           "fuel": "Diesel",
           "yearStart": 2018,
@@ -16101,6 +16107,12 @@
           "name": "GLE 400 d 330ch",
           "fuel": "Diesel",
           "yearStart": 2019,
+          "yearEnd": 2026
+        },
+        {
+          "name": "GLE 450 d 367ch",
+          "fuel": "Diesel",
+          "yearStart": 2022,
           "yearEnd": 2026
         },
         {
@@ -17812,6 +17824,12 @@
           "fuel": "Diesel",
           "yearStart": 2016,
           "yearEnd": 2023
+        },
+        {
+          "name": "E 350 d 258ch",
+          "fuel": "Diesel",
+          "yearStart": 2016,
+          "yearEnd": 2019
         },
         {
           "name": "E 400 d 340ch",
