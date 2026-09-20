@@ -688,13 +688,11 @@ def _extract_prix(ads: list, modele: str, marque: str = None, carburant: str = N
             except (ValueError, TypeError):
                 ad_km = None
             if ad_km is not None:
-                # Tolérance plus serrée pour véhicules très kilométrés pour éviter de mixer
-                # avec des voitures nettement moins kilométrées qui faussent la médiane vers le haut
-                if km_cible > 150_000:
-                    km_tolerance = max(25_000, int(km_cible * 0.13))
-                else:
-                    km_tolerance = max(50_000, int(km_cible * 0.25))
-                if abs(ad_km - km_cible) > km_tolerance:
+                # Aligne sur le filtre mileage LBC : round to nearest 10k ±10k
+                km_base = round(km_cible / 10_000) * 10_000
+                km_min = max(0, km_base - 10_000)
+                km_max = km_base + 10_000
+                if not (km_min <= ad_km <= km_max):
                     continue
 
         # Filtre HP post-hoc (filet de sécurité si le filtre API laisse passer des cas limites)
@@ -809,11 +807,10 @@ def _extract_annonces(ads: list, modele: str, marque: str = None, carburant: str
                 except (ValueError, TypeError):
                     ad_km_check = None
                 if ad_km_check is not None:
-                    if km_cible > 150_000:
-                        km_tolerance = max(25_000, int(km_cible * 0.13))
-                    else:
-                        km_tolerance = max(50_000, int(km_cible * 0.25))
-                    if abs(ad_km_check - km_cible) > km_tolerance:
+                    km_base = round(km_cible / 10_000) * 10_000
+                    km_min = max(0, km_base - 10_000)
+                    km_max = km_base + 10_000
+                    if not (km_min <= ad_km_check <= km_max):
                         continue
 
             if target_hp:
