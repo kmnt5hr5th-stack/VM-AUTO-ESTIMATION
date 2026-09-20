@@ -1397,7 +1397,7 @@ class LeboncoinScraper(BaseScraper):
         # Format standard : "30 TDI 116 DESIGN" → "DESIGN"
         # Format Mercedes : "220 D BUSINESS 4MATIC" → "BUSINESS" (sans le suffixe 4MATIC)
         if not finition and motorisation:
-            m = re.match(r'^\d+\s+\S+\s+\d+\s+(.+)$', motorisation.strip(), re.IGNORECASE)
+            m = re.match(r'^[\d.]+\s+\S+\s+\d+\s+(.+)$', motorisation.strip(), re.IGNORECASE)
             if m:
                 finition = m.group(1).strip()
             else:
