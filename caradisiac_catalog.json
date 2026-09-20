@@ -235636,8 +235636,16 @@
         "diesel": [],
         "hybride": [],
         "electrique": [
+          "(2) 346 GRANDE AUTONOMIE RWD 75 KWH",
+          "(3) 275 AUTONOMIE STANDARD PLUS RWD 60KWH",
+          "(3) 283 AUTONOMIE STANDARD RWD PREMIUM",
+          "(3) 283 STANDARD RANGE RWD PREMIUM",
+          "(3) 283 STANDARD RANGE RWD PREMIUM 88KWH",
+          "(3) 346 GRANDE AUTONOMIE AWD 75 KWH",
+          "(3) 350 GRANDE AUTONOMIE AWD 79 KWH",
           "(3) 350 GRANDE AUTONOMIE RWD 79 KWH",
-          "(3) 460 PERFORMANCE AWD 79 KWH"
+          "(3) 460 PERFORMANCE AWD 79 KWH",
+          "(3) 482 PERFORMANCE AWD"
         ],
         "gpl": []
       },
