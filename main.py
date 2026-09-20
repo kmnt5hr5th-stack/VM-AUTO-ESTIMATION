@@ -3,6 +3,7 @@ import base64
 import json as _json
 import logging
 import re
+import time
 import xml.etree.ElementTree as ET
 from dotenv import load_dotenv
 
@@ -13,8 +14,37 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 from typing import Optional
 from curl_cffi.requests import AsyncSession
+import httpx
 
 import os
+
+# ── Paramètres Supabase ────────────────────────────────────────────────────────
+SUPABASE_URL = os.getenv("SUPABASE_URL", "")
+SUPABASE_ANON_KEY = os.getenv("SUPABASE_ANON_KEY", "")
+
+_settings_cache: dict = {}
+_settings_cache_time: float = 0
+_SETTINGS_TTL = 600  # 10 minutes
+
+async def _get_settings() -> dict:
+    global _settings_cache, _settings_cache_time
+    now = time.time()
+    if _settings_cache and (now - _settings_cache_time) < _SETTINGS_TTL:
+        return _settings_cache
+    if not SUPABASE_URL or not SUPABASE_ANON_KEY:
+        return _settings_cache
+    try:
+        async with httpx.AsyncClient(timeout=5) as client:
+            resp = await client.get(
+                f"{SUPABASE_URL}/rest/v1/site_settings?select=key,value",
+                headers={"apikey": SUPABASE_ANON_KEY, "Authorization": f"Bearer {SUPABASE_ANON_KEY}"},
+            )
+            if resp.status_code == 200:
+                _settings_cache = {row["key"]: row["value"] for row in resp.json()}
+                _settings_cache_time = now
+    except Exception as e:
+        logging.getLogger("vm-api").warning(f"[settings] Supabase fetch failed: {e}")
+    return _settings_cache
 from scrapers.histovec import get_histovec_pdf
 from scrapers.leboncoin import (
     LeboncoinScraper,
@@ -174,6 +204,12 @@ async def _run_estimation(req: EstimationRequest) -> dict:
 
     calc = calculate_estimation(all_prices, req.marque, req.modele, req.motorisation, req.finition, req.boite, req.annee, req.kilometrage)
 
+    # Ajustement global configurable depuis l'admin
+    settings = await _get_settings()
+    ajustement = float(settings.get("estimation.ajustement_global", "0") or "0")
+    if ajustement:
+        calc["prix_rachat"] = round(calc["prix_rachat"] * (1 + ajustement / 100) / 100) * 100
+
     return {
         "vehicule": {
             "marque": req.marque.upper(),
@@ -311,6 +347,80 @@ async def debug_lbc_raw(marque: str = "Audi", modele: str = "Q2", annee: int = 2
         "page_html_preview": page_html_preview,
         "post_requests": post_reqs,
         "api_related_requests": api_reqs,
+        "total_requests": len(all_requests),
+    }
+
+
+@app.get("/debug/lbc-cote")
+async def debug_lbc_cote(ad_id: str = "3079197187"):
+    """
+    Ouvre une annonce LBC avec Playwright et capture TOUTES les requêtes réseau.
+    Cherche spécifiquement les appels liés à la côte / prix équitable.
+    """
+    from scrapers.leboncoin import _get_pw_context
+    import asyncio as _asyncio
+
+    ctx = await _asyncio.wait_for(_get_pw_context(), timeout=40)
+    page = await ctx.new_page()
+
+    all_requests: list[dict] = []
+    cote_responses: list[dict] = []
+
+    COTE_KEYWORDS = ["cote", "fair", "market", "prix", "valuation", "estimate", "cotation",
+                     "price_check", "vehicle_price", "car_price", "vehicule"]
+
+    async def on_response(resp):
+        url = resp.url.lower()
+        if any(kw in url for kw in COTE_KEYWORDS):
+            try:
+                body = await resp.text()
+                cote_responses.append({
+                    "url": resp.url,
+                    "status": resp.status,
+                    "body_preview": body[:500],
+                })
+            except Exception:
+                cote_responses.append({"url": resp.url, "status": resp.status, "body_preview": ""})
+
+    def on_request(req):
+        all_requests.append({
+            "url": req.url[:150],
+            "method": req.method,
+        })
+
+    page.on("request", on_request)
+    page.on("response", on_response)
+
+    ad_url = f"https://www.leboncoin.fr/ad/voitures/{ad_id}"
+    page_title = ""
+    page_html_snippet = ""
+    try:
+        await page.goto(ad_url, wait_until="networkidle", timeout=60_000)
+        await _asyncio.sleep(3)
+        page_title = await page.title()
+        # Chercher "équitable" ou "cote" dans le DOM
+        try:
+            content = await page.content()
+            idx = content.lower().find("quitable")
+            page_html_snippet = content[max(0, idx-200):idx+500] if idx != -1 else content[:300]
+        except Exception:
+            pass
+    except Exception as e:
+        page_title = f"ERROR: {e}"
+    await page.close()
+
+    # Filtrer les requêtes API intéressantes
+    api_reqs = [r for r in all_requests if "api." in r["url"] or r["method"] == "POST"]
+    # Toutes les requêtes contenant des mots-clés liés au prix/côte
+    price_reqs = [r for r in all_requests if any(kw in r["url"].lower() for kw in COTE_KEYWORDS)]
+
+    return {
+        "ad_url": ad_url,
+        "page_title": page_title,
+        "page_html_snippet": page_html_snippet,
+        "cote_responses": cote_responses,
+        "api_requests": api_reqs[:50],
+        "price_related_requests": price_reqs,
         "total_requests": len(all_requests),
     }
 
