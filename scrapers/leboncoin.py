@@ -292,7 +292,7 @@ def _build_search_url(marque: str, modele: str, annee: int, carburant: str = Non
         "category": "5" if is_util else "2",
         "u_car_brand": brand_code,
         "u_car_model": model_code,
-        "regdate": f"{annee}-{annee}",
+        "regdate": f"{annee - 1}-{annee + 1}",
         "sort": "price",
         "order": "asc",
     }
