@@ -573,6 +573,7 @@ async def _scan_lbc_bonnes_affaires(max_pages: int = 15, seuil_pct: int = 10) ->
                     "kilometrage": int(attrs_v["mileage"]) if attrs_v.get("mileage", "").isdigit() else None,
                     "prix_annonce": prix,
                     "valeur_marche": cote_min,
+                    "cote_max": cote_max,
                     "ecart_eur": ecart_eur,
                     "ecart_pct": ecart_pct,
                     "energie": energie,
