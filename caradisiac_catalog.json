@@ -169425,6 +169425,7 @@
       "2010": {
         "essence": [],
         "diesel": [
+          "STEPWAY 1.5 DCI 70",
           "STEPWAY 1.5 DCI 90 FAP"
         ],
         "hybride": [],
@@ -169434,7 +169435,8 @@
       "2011": {
         "essence": [],
         "diesel": [
-          "STEPWAY 1.5 DCI 70 ECO2"
+          "STEPWAY 1.5 DCI 70 ECO2",
+          "STEPWAY 1.5 DCI 90 FAP"
         ],
         "hybride": [],
         "electrique": [],
@@ -169446,6 +169448,7 @@
           "STEPWAY 2 1.6 16V BIOETHANOL"
         ],
         "diesel": [
+          "STEPWAY 1.5 DCI 90 FAP",
           "STEPWAY 2 1.5 DCI 90 FAP"
         ],
         "hybride": [],
@@ -171078,6 +171081,476 @@
           "III 1.8 HYBRID 155 EXTREME",
           "III 1.8 HYBRID 155 JOURNEY"
         ],
+        "electrique": [],
+        "gpl": []
+      }
+    },
+    "Sandero 2": {
+      "2012": {
+        "essence": [
+          "II 0.9 TCE 90 AMBIANCE",
+          "II 0.9 TCE 90 AMBIANCE ECO2",
+          "II 0.9 TCE 90 LAUREATE",
+          "II 0.9 TCE 90 LAUREATE BLACK TOUCH",
+          "II 0.9 TCE 90 LAUREATE ECO2",
+          "II 1.2 16V",
+          "II 1.2 16V 75 EURO6",
+          "II 1.2 16V 75 LAUREATE",
+          "II 1.2 16V AMBIANCE",
+          "II 1.2 16V LAUREATE",
+          "II 1.2 75 AMBIANCE"
+        ],
+        "diesel": [
+          "II 1.5 DCI 75 AMBIANCE E6",
+          "II 1.5 DCI 75 FAP AMBIANCE EURO6",
+          "II 1.5 DCI 75 FAP LAUREATE EURO6",
+          "II 1.5 DCI 75 LAUREATE E6",
+          "II 1.5 DCI 90 FAP LAUREATE EURO6",
+          "II 1.5 DCI 90 LAUREATE E6"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": [
+          "II 1.2 16V GPL AMBIANCE ECO2",
+          "II 1.2 16V GPL ECO2",
+          "II 1.2 16V GPL LAUREATE ECO2"
+        ]
+      },
+      "2013": {
+        "essence": [
+          "II 0.9 TCE 90 AMBIANCE",
+          "II 0.9 TCE 90 AMBIANCE ECO2",
+          "II 0.9 TCE 90 LAUREATE",
+          "II 0.9 TCE 90 LAUREATE BLACK TOUCH",
+          "II 0.9 TCE 90 LAUREATE ECO2",
+          "II 1.2 16V",
+          "II 1.2 16V 75 EURO6",
+          "II 1.2 16V 75 LAUREATE",
+          "II 1.2 16V AMBIANCE",
+          "II 1.2 16V LAUREATE",
+          "II 1.2 75 AMBIANCE"
+        ],
+        "diesel": [
+          "II 1.5 DCI 75 AMBIANCE E6",
+          "II 1.5 DCI 75 FAP AMBIANCE EURO6",
+          "II 1.5 DCI 75 FAP LAUREATE EURO6",
+          "II 1.5 DCI 75 LAUREATE E6",
+          "II 1.5 DCI 90 FAP LAUREATE EURO6",
+          "II 1.5 DCI 90 LAUREATE E6"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": [
+          "II 1.2 16V GPL AMBIANCE ECO2",
+          "II 1.2 16V GPL ECO2",
+          "II 1.2 16V GPL LAUREATE ECO2"
+        ]
+      },
+      "2014": {
+        "essence": [
+          "II 0.9 TCE 90 AMBIANCE",
+          "II 0.9 TCE 90 AMBIANCE ECO2",
+          "II 0.9 TCE 90 LAUREATE",
+          "II 0.9 TCE 90 LAUREATE BLACK TOUCH",
+          "II 0.9 TCE 90 LAUREATE ECO2",
+          "II 1.2 16V",
+          "II 1.2 16V 75 EURO6",
+          "II 1.2 16V 75 LAUREATE",
+          "II 1.2 16V AMBIANCE",
+          "II 1.2 16V LAUREATE",
+          "II 1.2 75 AMBIANCE"
+        ],
+        "diesel": [
+          "II 1.5 DCI 75 AMBIANCE E6",
+          "II 1.5 DCI 75 FAP AMBIANCE EURO6",
+          "II 1.5 DCI 75 FAP LAUREATE EURO6",
+          "II 1.5 DCI 75 LAUREATE E6",
+          "II 1.5 DCI 90 FAP LAUREATE EURO6",
+          "II 1.5 DCI 90 LAUREATE E6"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": [
+          "II 1.2 16V GPL AMBIANCE ECO2",
+          "II 1.2 16V GPL ECO2",
+          "II 1.2 16V GPL LAUREATE ECO2"
+        ]
+      },
+      "2015": {
+        "essence": [
+          "II 0.9 TCE 90 AMBIANCE",
+          "II 0.9 TCE 90 AMBIANCE ECO2",
+          "II 0.9 TCE 90 AMBIANCE EURO6",
+          "II 0.9 TCE 90 LAUREATE",
+          "II 0.9 TCE 90 LAUREATE BLACK TOUCH",
+          "II 0.9 TCE 90 LAUREATE E6",
+          "II 0.9 TCE 90 LAUREATE EASY-R E6",
+          "II 0.9 TCE 90 LAUREATE ECO2",
+          "II 0.9 TCE 90 LAUREATE EURO6",
+          "II 0.9 TCE 90 SL 10 ANS",
+          "II 0.9 TCE 90 SL 10 ANS E6",
+          "II 0.9 TCE 90 SL 10 ANS EURO6",
+          "II 0.9 TCE 90 SL MUSIC E6",
+          "II 0.9 TCE 90 SL MUSIC EASY-R E6",
+          "II 1.2 16V",
+          "II 1.2 16V 75 EURO6",
+          "II 1.2 16V 75 LAUREATE",
+          "II 1.2 16V 75 LAUREATE E6",
+          "II 1.2 16V 75 SANDERO E6",
+          "II 1.2 16V 75 SL 10 ANS",
+          "II 1.2 16V 75 SL 10 ANS E6",
+          "II 1.2 16V 75 SL 10 ANS EURO6",
+          "II 1.2 16V AMBIANCE",
+          "II 1.2 16V AMBIANCE EURO6",
+          "II 1.2 16V LAUREATE",
+          "II 1.2 16V LAUREATE EURO6",
+          "II 1.2 75 AMBIANCE",
+          "II 1.2 75 AMBIANCE E6",
+          "II 1.2 75 SL MUSIC E6"
+        ],
+        "diesel": [
+          "II 1.5 DCI 75 AMBIANCE E6",
+          "II 1.5 DCI 75 FAP AMBIANCE EURO6",
+          "II 1.5 DCI 75 FAP LAUREATE EURO6",
+          "II 1.5 DCI 75 LAUREATE E6",
+          "II 1.5 DCI 75 SL 10 ANS EURO6",
+          "II 1.5 DCI 90 FAP LAUREATE EURO6",
+          "II 1.5 DCI 90 LAUREATE E6",
+          "II 1.5 DCI 90 SL 10 ANS EURO6",
+          "II 1.5 DCI 90 SL MUSIC E6"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": [
+          "II 1.2 16V GPL AMBIANCE ECO2",
+          "II 1.2 16V GPL ECO2",
+          "II 1.2 16V GPL EURO6",
+          "II 1.2 16V GPL LAUREATE ECO2"
+        ]
+      },
+      "2016": {
+        "essence": [
+          "II (2) 0.9 TCE 90 AMBIANCE",
+          "II (2) 0.9 TCE 90 LAUREATE",
+          "II (2) 0.9 TCE 90 LAUREATE EASY-R",
+          "II (2) 1.0 SCE 75 AMBIANCE",
+          "II (2) 1.0 SCE 75 LAUREATE 17",
+          "II (2) 1.0 SCE 75 SANDERO",
+          "II 0.9 TCE 90 AMBIANCE EURO6",
+          "II 0.9 TCE 90 LAUREATE EASY-R E6",
+          "II 0.9 TCE 90 LAUREATE EURO6",
+          "II 0.9 TCE 90 SL MUSIC E6",
+          "II 0.9 TCE 90 SL MUSIC EASY-R E6",
+          "II 1.2 16V AMBIANCE EURO6",
+          "II 1.2 16V LAUREATE EURO6",
+          "II 1.2 75 SL MUSIC E6"
+        ],
+        "diesel": [
+          "II (2) 1.5 DCI 75 AMBIANCE",
+          "II (2) 1.5 DCI 75 LAUREATE",
+          "II (2) 1.5 DCI 90 LAUREATE",
+          "II (2) 1.5 DCI 90 LAUREATE EASY-R",
+          "II 1.5 DCI 75 AMBIANCE E6",
+          "II 1.5 DCI 75 LAUREATE E6",
+          "II 1.5 DCI 90 LAUREATE E6",
+          "II 1.5 DCI 90 LAUREATE EASY-R E6",
+          "II 1.5 DCI 90 SL MUSIC E6"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": [
+          "II 1.2 16V GPL EURO6"
+        ]
+      },
+      "2017": {
+        "essence": [
+          "II (2) 0.9 TCE 90 AMBIANCE",
+          "II (2) 0.9 TCE 90 EXPLORER",
+          "II (2) 0.9 TCE 90 EXPLORER EASY-R",
+          "II (2) 0.9 TCE 90 LAUREATE",
+          "II (2) 0.9 TCE 90 LAUREATE EASY-R",
+          "II (2) 1.0 SCE 75 AMBIANCE",
+          "II (2) 1.0 SCE 75 LAUREATE 17",
+          "II (2) 1.0 SCE 75 LAUREATE 18",
+          "II (2) 1.0 SCE 75 SANDERO"
+        ],
+        "diesel": [
+          "II (2) 1.5 DCI 75 AMBIANCE",
+          "II (2) 1.5 DCI 75 LAUREATE",
+          "II (2) 1.5 DCI 90 EXPLORER",
+          "II (2) 1.5 DCI 90 EXPLORER EASY-R",
+          "II (2) 1.5 DCI 90 LAUREATE",
+          "II (2) 1.5 DCI 90 LAUREATE EASY-R"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": [
+          "II (2) 0.9 TCE 90 GPL AMBIANCE",
+          "II (2) 0.9 TCE 90 GPL LAUREATE"
+        ]
+      },
+      "2018": {
+        "essence": [
+          "II (2) 0.9 ECO-G 90 AMBIANCE",
+          "II (2) 0.9 ECO-G 90 LAUREATE",
+          "II (2) 0.9 TCE 90 ADVANCE",
+          "II (2) 0.9 TCE 90 ADVANCE E6C",
+          "II (2) 0.9 TCE 90 ADVANCE EASY-R",
+          "II (2) 0.9 TCE 90 AMBIANCE",
+          "II (2) 0.9 TCE 90 AMBIANCE E6C",
+          "II (2) 0.9 TCE 90 LAUREATE",
+          "II (2) 0.9 TCE 90 LAUREATE E6C",
+          "II (2) 0.9 TCE 90 LAUREATE EASY-R",
+          "II (2) 1.0 SCE 75 AMBIANCE",
+          "II (2) 1.0 SCE 75 LAUREATE 18",
+          "II (2) 1.0 SCE 75 LAUREATE 19",
+          "II (2) 1.0 SCE 75 SANDERO"
+        ],
+        "diesel": [
+          "II (2) 1.5 DCI 75 AMBIANCE",
+          "II (2) 1.5 DCI 75 BLUE AMBIANCE",
+          "II (2) 1.5 DCI 75 BLUE LAUREATE",
+          "II (2) 1.5 DCI 75 LAUREATE",
+          "II (2) 1.5 DCI 90 ADVANCE",
+          "II (2) 1.5 DCI 90 ADVANCE EASY-R",
+          "II (2) 1.5 DCI 90 LAUREATE",
+          "II (2) 1.5 DCI 90 LAUREATE EASY-R",
+          "II (2) 1.5 DCI 95 BLUE LAUREATE"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": [
+          "II (2) 0.9 TCE 90 GPL ADVANCE",
+          "II (2) 0.9 TCE 90 GPL AMBIANCE",
+          "II (2) 0.9 TCE 90 GPL LAUREATE"
+        ]
+      },
+      "2019": {
+        "essence": [
+          "II (2) 0.9 ECO-G 90 AMBIANCE",
+          "II (2) 0.9 ECO-G 90 ESSENTIEL",
+          "II (2) 0.9 ECO-G 90 LAUREATE",
+          "II (2) 0.9 TCE 90 AMBIANCE E6C",
+          "II (2) 0.9 TCE 90 CONFORT",
+          "II (2) 0.9 TCE 90 CONFORT EASY-R",
+          "II (2) 0.9 TCE 90 ESCAPE",
+          "II (2) 0.9 TCE 90 ESSENTIEL",
+          "II (2) 0.9 TCE 90 LAUREATE E6C",
+          "II (2) 0.9 TCE 90 LAUREATE EASY-R",
+          "II (2) 1.0 SCE 75 ACCESS",
+          "II (2) 1.0 SCE 75 AMBIANCE",
+          "II (2) 1.0 SCE 75 CONFORT",
+          "II (2) 1.0 SCE 75 ESSENTIEL",
+          "II (2) 1.0 SCE 75 LAUREATE 19",
+          "II (2) 1.0 SCE 75 SANDERO"
+        ],
+        "diesel": [
+          "II (2) 1.5 BLUE DCI 75 CONFORT",
+          "II (2) 1.5 BLUE DCI 75 ESSENTIEL",
+          "II (2) 1.5 BLUE DCI 95 CONFORT",
+          "II (2) 1.5 DCI 75 BLUE AMBIANCE",
+          "II (2) 1.5 DCI 75 BLUE LAUREATE",
+          "II (2) 1.5 DCI 95 BLUE LAUREATE"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2020": {
+        "essence": [
+          "II (2) 0.9 ECO-G 100 CITY+",
+          "II (2) 0.9 ECO-G 100 ESSENTIEL",
+          "II (2) 0.9 TCE 90 15 ANS 2020",
+          "II (2) 0.9 TCE 90 15 ANS EASY-R",
+          "II (2) 0.9 TCE 90 CONFORT",
+          "II (2) 0.9 TCE 90 ESSENTIEL",
+          "II (2) 1.0 ECO-G 100 15 ANS",
+          "II (2) 1.0 ECO-G 100 5CV CITY+",
+          "II (2) 1.0 ECO-G 100 EVASION",
+          "II (2) 1.0 SCE 75 ACCESS",
+          "II (2) 1.0 SCE 75 CITY+",
+          "II (2) 1.0 SCE 75 CONFORT",
+          "II (2) 1.0 SCE 75 ESSENTIEL",
+          "II (2) 1.0 SCE 75 EVASION",
+          "II (2) 1.0 TCE 100 15 ANS"
+        ],
+        "diesel": [
+          "II (2) 1.5 BLUE DCI 75 CONFORT",
+          "II (2) 1.5 BLUE DCI 75 ESSENTIEL",
+          "II (2) 1.5 BLUE DCI 95 15 ANS 2020",
+          "II (2) 1.5 BLUE DCI 95 CITY+",
+          "II (2) 1.5 BLUE DCI 95 CONFORT"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2021": {
+        "essence": [
+          "II (2) 0.9 ECO-G 100 ESSENTIEL",
+          "II (2) 0.9 TCE 90 15 ANS EASY-R",
+          "II (2) 1.0 ECO-G 100 15 ANS",
+          "II (2) 1.0 ECO-G 100 5CV CITY+",
+          "II (2) 1.0 ECO-G 100 EVASION",
+          "II (2) 1.0 SCE 75 ACCESS",
+          "II (2) 1.0 SCE 75 CITY+",
+          "II (2) 1.0 SCE 75 ESSENTIEL",
+          "II (2) 1.0 SCE 75 EVASION",
+          "II (2) 1.0 TCE 100 15 ANS"
+        ],
+        "diesel": [
+          "II (2) 1.5 BLUE DCI 75 ESSENTIEL",
+          "II (2) 1.5 BLUE DCI 95 15 ANS 2020",
+          "II (2) 1.5 BLUE DCI 95 CITY+"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      }
+    },
+    "Sandero 3": {
+      "2020": {
+        "essence": [
+          "III 0.9 ECO-G 100 ESSENTIEL",
+          "III 1.0 ECO-G 100 CONFORT",
+          "III 1.0 SCE 65 ACCESS",
+          "III 1.0 SCE 65 CONFORT",
+          "III 1.0 SCE 65 ESSENTIEL",
+          "III 1.0 TCE 90 CONFORT"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2021": {
+        "essence": [
+          "III 0.9 ECO-G 100 ESSENTIEL",
+          "III 0.9 ECO-G 100 ESSENTIEL MY22",
+          "III 1.0 ECO-G 100 CONFORT",
+          "III 1.0 ECO-G 100 CONFORT - 22",
+          "III 1.0 SCE 65 ACCESS",
+          "III 1.0 SCE 65 CONFORT",
+          "III 1.0 SCE 65 ESSENTIEL",
+          "III 1.0 SCE 65 ESSENTIEL MY22",
+          "III 1.0 TCE 90 CONFORT",
+          "III 1.0 TCE 90 CONFORT CVT",
+          "III 1.0 TCE 90 CONFORT CVT - 22",
+          "III ECO-G 100 - 22 CONFORT",
+          "III ECO-G 100 - 22 ESSENTIEL"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2022": {
+        "essence": [
+          "III 0.9 ECO-G 100 ESSENTIEL MY22",
+          "III 1.0 ECO-G 100 CONFORT",
+          "III 1.0 ECO-G 100 CONFORT - 22",
+          "III 1.0 ECO-G 100 CONFORT 22B",
+          "III 1.0 ECO-G 100 ESSENTIAL",
+          "III 1.0 ECO-G 100 ESSENTIEL 22B",
+          "III 1.0 ECO-G 100 EXPRESSION",
+          "III 1.0 SCE 65 CONFORT",
+          "III 1.0 SCE 65 CONFORT 22",
+          "III 1.0 SCE 65 ESSENTIAL",
+          "III 1.0 SCE 65 ESSENTIEL 22",
+          "III 1.0 SCE 65 ESSENTIEL MY22",
+          "III 1.0 SCE 65 EXPRESSION",
+          "III 1.0 TCE 90 CONFORT",
+          "III 1.0 TCE 90 CONFORT 22",
+          "III 1.0 TCE 90 CONFORT 22B",
+          "III 1.0 TCE 90 CONFORT CVT",
+          "III 1.0 TCE 90 CONFORT CVT - 22",
+          "III 1.0 TCE 90 ESSENTIAL",
+          "III 1.0 TCE 90 EXPRESSION",
+          "III 1.0 TCE 90 EXPRESSION CVT",
+          "III ECO-G 100 - 22 CONFORT",
+          "III ECO-G 100 - 22 ESSENTIEL",
+          "III ECO-G 100 CONFORT 2022",
+          "III ECO-G 100 ESSENTIEL 2022"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2023": {
+        "essence": [
+          "III 1.0 ECO-G 100 ESSENTIAL",
+          "III 1.0 ECO-G 100 EXPRESSION",
+          "III 1.0 SCE 65 ESSENTIAL",
+          "III 1.0 SCE 65 EXPRESSION",
+          "III 1.0 TCE 90 EXPRESSION",
+          "III 1.0 TCE 90 EXPRESSION CVT"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2024": {
+        "essence": [
+          "III (2) 1.0 ECO-G 100 ESSENTIAL GSR2 - 24",
+          "III (2) 1.0 ECO-G 100 EXPRESSION GSR2 - 24",
+          "III (2) 1.0 ECO-G 100 JOURNEY",
+          "III (2) 1.0 SCE 65 ESSENTIAL",
+          "III (2) 1.0 SCE 65 EXPRESSION",
+          "III (2) 1.0 TCE 90 EXPRESSION",
+          "III (2) 1.0 TCE 90 EXPRESSION CVT",
+          "III (2) 1.0 TCE 90 GSR2 JOURNEY CVT",
+          "III (2) 1.0 TCE 90 JOURNEY",
+          "III (2) 1.0 TCE 90 JOURNEY CVT",
+          "III 1.0 ECO-G 100 ESSENTIAL",
+          "III 1.0 ECO-G 100 EXPRESSION",
+          "III 1.0 SCE 65 ESSENTIAL",
+          "III 1.0 SCE 65 EXPRESSION",
+          "III 1.0 TCE 90 EXPRESSION",
+          "III 1.0 TCE 90 EXPRESSION CVT"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2025": {
+        "essence": [
+          "III (2) 1.0 ECO-G 100 ESSENTIAL GSR2 - 24",
+          "III (2) 1.0 ECO-G 100 EXPRESSION GSR2 - 24",
+          "III (2) 1.0 ECO-G 100 JOURNEY",
+          "III (2) 1.0 SCE 65 ESSENTIAL",
+          "III (2) 1.0 SCE 65 EXPRESSION",
+          "III (2) 1.0 SCE 65 GSR2 ESSENTIAL",
+          "III (2) 1.0 TCE 90 EXPRESSION",
+          "III (2) 1.0 TCE 90 GSR2 JOURNEY AUTO",
+          "III (2) 1.0 TCE 90 GSR2 JOURNEY CVT",
+          "III (2) 1.0 TCE 90 JOURNEY",
+          "III (3) 1.0 SCE 65 ESSENTIAL",
+          "III (3) 1.0 SCE 65 EXPRESSION",
+          "III (3) 1.0 TCE 100 EXPRESSION",
+          "III (3) 1.0 TCE 100 JOURNEY"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2026": {
+        "essence": [
+          "III (3) 1.0 SCE 65 ESSENTIAL",
+          "III (3) 1.0 SCE 65 EXPRESSION",
+          "III (3) 1.0 TCE 100 ESSENTIAL",
+          "III (3) 1.0 TCE 100 EXPRESSION",
+          "III (3) 1.0 TCE 100 JOURNEY",
+          "III (3) 1.8 155 EXPRESSION",
+          "III (3) 1.8 155 JOURNEY",
+          "III 1.8 155 STEPWAY EXPRESSION",
+          "III 1.8 155 STEPWAY EXTREME"
+        ],
+        "diesel": [],
+        "hybride": [],
         "electrique": [],
         "gpl": []
       }
