@@ -2370,8 +2370,7 @@
       "2024": [
         "Essence",
         "Diesel",
-        "Hybride",
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2026": [
         "Diesel",
@@ -3005,22 +3004,28 @@
   "BMW": {
     "X6": {
       "2014": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2015": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2016": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2017": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2018": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2019": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2020": [
         "Essence"
@@ -3338,25 +3343,32 @@
     },
     "Serie 4": {
       "2020": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2021": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2022": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2023": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2024": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2025": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2026": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ]
     },
     "Serie 3 E91 Touring": {
@@ -4073,7 +4085,8 @@
     },
     "Serie": {
       "2007": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ]
     },
     "X6 G06 M": {
@@ -4145,16 +4158,20 @@
         "Essence"
       ],
       "2022": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2023": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2024": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2025": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ]
     },
     "X5 F85 M": {
@@ -4528,25 +4545,32 @@
     },
     "Serie 8 G16 Gran": {
       "2019": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2020": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2021": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2022": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2023": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2024": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2025": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2026": [
         "Essence"
@@ -4874,22 +4898,28 @@
     },
     "Serie 4 G26 Gran": {
       "2021": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2022": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2023": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2024": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2025": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2026": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ]
     },
     "Serie 5 F10": {
@@ -6937,17 +6967,14 @@
         "Hybride"
       ],
       "2024": [
-        "Essence",
         "Diesel",
         "Hybride"
       ],
       "2025": [
-        "Essence",
         "Diesel",
         "Hybride"
       ],
       "2026": [
-        "Essence",
         "Diesel",
         "Hybride"
       ]
@@ -7010,20 +7037,19 @@
         "Diesel"
       ],
       "2019": [
-        "Essence",
         "Diesel",
         "Hybride"
       ],
       "2020": [
-        "Essence",
+        "Diesel",
         "Hybride"
       ],
       "2021": [
-        "Essence",
+        "Diesel",
         "Hybride"
       ],
       "2022": [
-        "Essence",
+        "Diesel",
         "Hybride"
       ]
     },
@@ -7049,13 +7075,16 @@
         "Diesel"
       ],
       "2019": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2020": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2021": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2022": [
         "Essence"
@@ -7076,18 +7105,22 @@
     "F150": {},
     "Transit Courier": {
       "2023": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2024": [
         "Essence",
+        "Diesel",
         "Électrique"
       ],
       "2025": [
         "Essence",
+        "Diesel",
         "Électrique"
       ],
       "2026": [
         "Essence",
+        "Diesel",
         "Électrique"
       ]
     },
@@ -7180,16 +7213,20 @@
         "Diesel"
       ],
       "2019": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2020": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2021": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2022": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ]
     },
     "Transit 3 Minibus": {
@@ -7218,16 +7255,16 @@
         "Diesel"
       ],
       "2019": [
-        "Essence"
+        "Diesel"
       ],
       "2020": [
-        "Essence"
+        "Diesel"
       ],
       "2021": [
-        "Essence"
+        "Diesel"
       ],
       "2022": [
-        "Essence"
+        "Diesel"
       ]
     },
     "Kuga": {
@@ -7249,31 +7286,26 @@
         "Électrique"
       ],
       "2022": [
-        "Essence",
         "Diesel",
         "Hybride",
         "Électrique"
       ],
       "2023": [
-        "Essence",
         "Diesel",
         "Hybride",
         "Électrique"
       ],
       "2024": [
-        "Essence",
         "Diesel",
         "Hybride",
         "Électrique"
       ],
       "2025": [
-        "Essence",
         "Diesel",
         "Hybride",
         "Électrique"
       ],
       "2026": [
-        "Essence",
         "Diesel",
         "Hybride",
         "Électrique"
@@ -7363,24 +7395,29 @@
         "Diesel"
       ],
       "2020": [
-        "Essence"
+        "Diesel"
       ],
       "2021": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2022": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2024": [
         "Essence",
+        "Diesel",
         "Hybride"
       ],
       "2025": [
         "Essence",
+        "Diesel",
         "Hybride"
       ],
       "2026": [
         "Essence",
+        "Diesel",
         "Hybride"
       ]
     },
@@ -7422,7 +7459,7 @@
         "Essence"
       ],
       "2026": [
-        "Essence"
+        "Diesel"
       ]
     },
     "Focus 2 C C": {
@@ -7528,13 +7565,14 @@
         "Diesel"
       ],
       "2020": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2021": [
-        "Essence"
+        "Diesel"
       ],
       "2022": [
-        "Essence"
+        "Diesel"
       ]
     },
     "E Transit Custom": {
@@ -7562,41 +7600,40 @@
         "Diesel"
       ],
       "2018": [
-        "Essence",
         "Diesel"
       ],
       "2019": [
-        "Essence",
+        "Diesel",
         "Hybride"
       ],
       "2020": [
-        "Essence",
+        "Diesel",
         "Hybride"
       ],
       "2021": [
-        "Essence",
+        "Diesel",
         "Hybride"
       ],
       "2022": [
-        "Essence",
+        "Diesel",
         "Hybride"
       ],
       "2023": [
-        "Essence",
+        "Diesel",
         "Hybride"
       ],
       "2024": [
-        "Essence",
+        "Diesel",
         "Hybride",
         "Électrique"
       ],
       "2025": [
-        "Essence",
+        "Diesel",
         "Hybride",
         "Électrique"
       ],
       "2026": [
-        "Essence",
+        "Diesel",
         "Hybride"
       ]
     },
@@ -7632,10 +7669,12 @@
     },
     "Tourneo Connect": {
       "2022": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2026": [
         "Essence",
+        "Diesel",
         "Hybride"
       ]
     },
@@ -7681,17 +7720,17 @@
         "Diesel"
       ],
       "2023": [
-        "Essence"
+        "Diesel"
       ],
       "2024": [
-        "Essence"
+        "Diesel"
       ],
       "2025": [
-        "Essence",
+        "Diesel",
         "Hybride"
       ],
       "2026": [
-        "Essence",
+        "Diesel",
         "Hybride"
       ]
     },
@@ -7714,32 +7753,36 @@
         "Diesel"
       ],
       "2019": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2020": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2021": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2022": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2023": [
-        "Essence",
+        "Diesel",
         "Hybride"
       ],
       "2024": [
-        "Essence",
+        "Diesel",
         "Hybride"
       ],
       "2025": [
-        "Essence",
+        "Diesel",
         "Hybride",
         "Électrique"
       ],
       "2026": [
-        "Essence",
+        "Diesel",
         "Hybride",
         "Électrique"
       ]
@@ -7789,14 +7832,17 @@
       ],
       "2020": [
         "Essence",
+        "Diesel",
         "Hybride"
       ],
       "2021": [
         "Essence",
+        "Diesel",
         "Hybride"
       ],
       "2022": [
         "Essence",
+        "Diesel",
         "Hybride"
       ],
       "2023": [
@@ -7834,27 +7880,31 @@
     },
     "Transit 4 Minibus": {
       "2019": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2020": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2021": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2022": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ]
     },
     "Tourneo Custom Nugget": {
       "2020": [
-        "Essence"
+        "Diesel"
       ],
       "2021": [
-        "Essence"
+        "Diesel"
       ],
       "2022": [
-        "Essence"
+        "Diesel"
       ]
     },
     "Transit Custom": {
@@ -7877,39 +7927,43 @@
         "Diesel"
       ],
       "2018": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2019": [
-        "Essence",
-        "Hybride"
-      ],
-      "2020": [
-        "Essence",
-        "Hybride"
-      ],
-      "2021": [
-        "Essence",
-        "Hybride"
-      ],
-      "2022": [
-        "Essence",
-        "Hybride"
-      ],
-      "2023": [
         "Essence",
         "Diesel",
         "Hybride"
       ],
-      "2024": [
+      "2020": [
         "Essence",
+        "Diesel",
+        "Hybride"
+      ],
+      "2021": [
+        "Essence",
+        "Diesel",
+        "Hybride"
+      ],
+      "2022": [
+        "Essence",
+        "Diesel",
+        "Hybride"
+      ],
+      "2023": [
+        "Diesel",
+        "Hybride"
+      ],
+      "2024": [
+        "Diesel",
         "Hybride"
       ],
       "2025": [
-        "Essence",
+        "Diesel",
         "Hybride"
       ],
       "2026": [
-        "Essence",
+        "Diesel",
         "Hybride"
       ]
     },
@@ -7933,21 +7987,26 @@
     },
     "Focus 4 Active": {
       "2018": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2019": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2020": [
         "Essence",
+        "Diesel",
         "Hybride"
       ],
       "2021": [
         "Essence",
+        "Diesel",
         "Hybride"
       ],
       "2022": [
         "Essence",
+        "Diesel",
         "Hybride"
       ]
     },
@@ -7978,19 +8037,19 @@
     },
     "Transit Custom 2 Nugget": {
       "2020": [
-        "Essence"
+        "Diesel"
       ],
       "2021": [
-        "Essence"
+        "Diesel"
       ],
       "2022": [
-        "Essence"
+        "Diesel"
       ],
       "2023": [
-        "Essence"
+        "Diesel"
       ],
       "2024": [
-        "Essence"
+        "Diesel"
       ],
       "2025": [
         "Électrique"
@@ -8001,22 +8060,27 @@
     },
     "Focus 4 Sw Active": {
       "2018": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2019": [
         "Essence",
+        "Diesel",
         "Hybride"
       ],
       "2020": [
         "Essence",
+        "Diesel",
         "Hybride"
       ],
       "2021": [
         "Essence",
+        "Diesel",
         "Hybride"
       ],
       "2022": [
         "Essence",
+        "Diesel",
         "Hybride"
       ]
     }
@@ -8057,34 +8121,38 @@
         "Essence"
       ],
       "1999": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2000": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2001": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2002": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2003": [
-        "Essence"
+        "Diesel"
       ],
       "2004": [
-        "Essence"
+        "Diesel"
       ],
       "2005": [
-        "Essence"
+        "Diesel"
       ],
       "2006": [
-        "Essence"
+        "Diesel"
       ],
       "2007": [
-        "Essence"
+        "Diesel"
       ],
       "2008": [
-        "Essence"
+        "Diesel"
       ],
       "2016": [
         "Essence",
@@ -8244,10 +8312,11 @@
         "Essence"
       ],
       "2002": [
-        "Essence"
+        "Diesel"
       ],
       "2004": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ]
     },
     "Classe C 3 Amg": {
@@ -8289,13 +8358,16 @@
     },
     "Classe A": {
       "2012": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2013": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2014": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2015": [
         "Essence",
@@ -8437,10 +8509,12 @@
     },
     "Cla": {
       "2013": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2014": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2015": [
         "Essence",
@@ -8658,83 +8732,87 @@
     },
     "Vito": {
       "2003": [
-        "Essence"
+        "Diesel"
       ],
       "2004": [
-        "Essence"
+        "Diesel"
       ],
       "2005": [
-        "Essence"
+        "Diesel"
       ],
       "2006": [
-        "Essence"
+        "Diesel"
       ],
       "2007": [
-        "Essence"
+        "Diesel"
       ],
       "2008": [
-        "Essence"
+        "Diesel"
       ],
       "2009": [
-        "Essence"
+        "Diesel"
       ],
       "2010": [
-        "Essence"
+        "Diesel"
       ],
       "2011": [
-        "Essence"
+        "Diesel"
       ],
       "2012": [
-        "Essence"
+        "Diesel"
       ],
       "2013": [
-        "Essence"
+        "Diesel"
       ],
       "2014": [
-        "Essence"
+        "Diesel"
       ],
       "2015": [
-        "Essence"
+        "Diesel"
       ],
       "2016": [
-        "Essence"
+        "Diesel"
       ],
       "2017": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2018": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2019": [
-        "Essence",
+        "Diesel",
         "Électrique"
       ],
       "2020": [
-        "Essence",
+        "Diesel",
         "Électrique"
       ],
       "2021": [
-        "Essence",
+        "Diesel",
         "Électrique"
       ],
       "2022": [
-        "Essence",
+        "Diesel",
         "Électrique"
       ],
       "2023": [
-        "Essence",
+        "Diesel",
         "Électrique"
       ],
       "2024": [
-        "Essence",
+        "Diesel",
         "Électrique"
       ],
       "2025": [
         "Essence",
+        "Diesel",
         "Électrique"
       ],
       "2026": [
         "Essence",
+        "Diesel",
         "Électrique"
       ]
     },
@@ -8743,25 +8821,29 @@
         "Essence"
       ],
       "1999": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2003": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2006": [
         "Essence"
       ],
       "2008": [
-        "Essence"
+        "Diesel"
       ]
     },
     "Classe S": {
       "2013": [
         "Essence",
+        "Diesel",
         "Hybride"
       ],
       "2014": [
         "Essence",
+        "Diesel",
         "Hybride"
       ],
       "2015": [
@@ -8862,13 +8944,13 @@
     },
     "Vito Minibus": {
       "2006": [
-        "Essence"
+        "Diesel"
       ],
       "2011": [
-        "Essence"
+        "Diesel"
       ],
       "2014": [
-        "Essence"
+        "Diesel"
       ]
     },
     "Glc Coupe Amg": {
@@ -8918,39 +9000,40 @@
         "Essence"
       ],
       "2019": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2020": [
-        "Essence"
+        "Diesel"
       ],
       "2021": [
-        "Essence"
+        "Diesel"
       ],
       "2022": [
-        "Essence"
+        "Diesel"
       ],
       "2023": [
-        "Essence"
+        "Diesel"
       ],
       "2024": [
-        "Essence"
+        "Diesel"
       ],
       "2025": [
-        "Essence"
+        "Diesel"
       ],
       "2026": [
-        "Essence"
+        "Diesel"
       ]
     },
     "Classe B": {
       "2008": [
-        "Essence"
+        "Diesel"
       ],
       "2009": [
-        "Essence"
+        "Diesel"
       ],
       "2010": [
-        "Essence"
+        "Diesel"
       ],
       "2019": [
         "Essence",
@@ -9061,22 +9144,28 @@
     },
     "Classe C Coupe Sport": {
       "2000": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2002": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2003": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2004": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2005": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2006": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ]
     },
     "Glb Amg": {
@@ -9107,7 +9196,8 @@
     },
     "Gla": {
       "2013": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2014": [
         "Essence",
@@ -9189,7 +9279,7 @@
     },
     "Classe V": {
       "2014": [
-        "Essence"
+        "Diesel"
       ],
       "2015": [
         "Essence",
@@ -9212,7 +9302,6 @@
         "Diesel"
       ],
       "2020": [
-        "Essence",
         "Diesel"
       ],
       "2021": [
@@ -9224,7 +9313,6 @@
         "Diesel"
       ],
       "2023": [
-        "Essence",
         "Diesel"
       ],
       "2024": [
@@ -9250,18 +9338,22 @@
     },
     "Cle": {
       "2023": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2024": [
         "Essence",
+        "Diesel",
         "Hybride"
       ],
       "2025": [
         "Essence",
+        "Diesel",
         "Hybride"
       ],
       "2026": [
         "Essence",
+        "Diesel",
         "Hybride"
       ]
     },
@@ -9354,25 +9446,31 @@
     },
     "Citan": {
       "2021": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2022": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2023": [
         "Essence",
+        "Diesel",
         "Électrique"
       ],
       "2024": [
         "Essence",
+        "Diesel",
         "Électrique"
       ],
       "2025": [
         "Essence",
+        "Diesel",
         "Électrique"
       ],
       "2026": [
         "Essence",
+        "Diesel",
         "Électrique"
       ]
     },
@@ -9726,37 +9824,37 @@
     },
     "Sprinter": {
       "2000": [
-        "Essence"
+        "Diesel"
       ],
       "2001": [
-        "Essence"
+        "Diesel"
       ],
       "2002": [
-        "Essence"
+        "Diesel"
       ],
       "2003": [
-        "Essence"
+        "Diesel"
       ],
       "2004": [
-        "Essence"
+        "Diesel"
       ],
       "2005": [
-        "Essence"
+        "Diesel"
       ],
       "2006": [
-        "Essence"
+        "Diesel"
       ],
       "2007": [
-        "Essence"
+        "Diesel"
       ],
       "2008": [
-        "Essence"
+        "Diesel"
       ],
       "2009": [
-        "Essence"
+        "Diesel"
       ],
       "2010": [
-        "Essence"
+        "Diesel"
       ],
       "2011": [
         "Essence",
@@ -9775,16 +9873,19 @@
         "Diesel"
       ],
       "2015": [
-        "Essence"
+        "Diesel"
       ],
       "2016": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2017": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2018": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ]
     },
     "Classe E 5 Amg": {
@@ -10014,11 +10115,11 @@
     },
     "Vito 3 Minibus": {
       "2019": [
-        "Essence",
+        "Diesel",
         "Électrique"
       ],
       "2020": [
-        "Essence",
+        "Diesel",
         "Électrique"
       ]
     },
@@ -10143,7 +10244,7 @@
         "Essence"
       ],
       "2002": [
-        "Essence"
+        "Diesel"
       ]
     },
     "Classe C 4 Sw Amg": {
@@ -10272,7 +10373,8 @@
     "Glc Coupe": {
       "2023": [
         "Essence",
-        "Diesel"
+        "Diesel",
+        "Hybride"
       ],
       "2024": [
         "Essence",
@@ -10299,7 +10401,7 @@
     },
     "Classe A 2 Business": {
       "2007": [
-        "Essence"
+        "Diesel"
       ]
     },
     "Eqe Suv": {
@@ -13610,8 +13712,7 @@
     "Arteon Shooting Brake": {
       "2020": [
         "Diesel",
-        "Hybride",
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2021": [
         "Essence",
@@ -13654,7 +13755,6 @@
         "Électrique"
       ],
       "2013": [
-        "Essence",
         "Diesel"
       ],
       "2016": [
@@ -13678,7 +13778,6 @@
         "Essence",
         "Diesel",
         "Hybride",
-        "Hybride rechargeable",
         "Électrique"
       ],
       "2008": [
@@ -13720,8 +13819,7 @@
       "2021": [
         "Essence",
         "Diesel",
-        "Hybride",
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2023": [
         "Essence",
@@ -13815,7 +13913,6 @@
     },
     "Passat": {
       "2014": [
-        "Essence",
         "Diesel"
       ],
       "2015": [
@@ -14127,10 +14224,10 @@
     },
     "Golf 7 Gti": {
       "2015": [
-        "Essence"
+        "Diesel"
       ],
       "2016": [
-        "Essence"
+        "Diesel"
       ]
     },
     "Multivan": {
@@ -14362,15 +14459,12 @@
         "Diesel"
       ],
       "2012": [
-        "Essence",
         "Diesel"
       ],
       "2013": [
-        "Essence",
         "Diesel"
       ],
       "2015": [
-        "Essence",
         "Diesel"
       ],
       "2023": [
@@ -14393,7 +14487,6 @@
         "Hybride"
       ],
       "2016": [
-        "Essence",
         "Diesel"
       ],
       "2017": [
@@ -14426,22 +14519,22 @@
     },
     "Golf 7 R": {
       "2013": [
-        "Essence"
+        "Diesel"
       ],
       "2014": [
-        "Essence"
+        "Diesel"
       ],
       "2015": [
-        "Essence"
+        "Diesel"
       ],
       "2016": [
-        "Essence"
+        "Diesel"
       ],
       "2017": [
-        "Essence"
+        "Diesel"
       ],
       "2018": [
-        "Essence"
+        "Diesel"
       ],
       "2019": [
         "Essence"
@@ -14572,11 +14665,9 @@
         "Diesel"
       ],
       "2017": [
-        "Essence",
         "Diesel"
       ],
       "2018": [
-        "Essence",
         "Diesel"
       ],
       "2019": [
@@ -14767,7 +14858,7 @@
         "Diesel"
       ],
       "2007": [
-        "Essence"
+        "Diesel"
       ],
       "2008": [
         "Diesel"
@@ -14813,15 +14904,12 @@
         "Diesel"
       ],
       "2016": [
-        "Essence",
         "Diesel"
       ],
       "2017": [
-        "Essence",
         "Diesel"
       ],
       "2018": [
-        "Essence",
         "Diesel"
       ],
       "2019": [
@@ -14900,16 +14988,16 @@
     },
     "Golf 7 Sw R": {
       "2015": [
-        "Essence"
+        "Diesel"
       ],
       "2016": [
-        "Essence"
+        "Diesel"
       ],
       "2017": [
-        "Essence"
+        "Diesel"
       ],
       "2018": [
-        "Essence"
+        "Diesel"
       ]
     },
     "Golf 4": {
@@ -15027,15 +15115,12 @@
         "Diesel"
       ],
       "2014": [
-        "Essence",
         "Diesel"
       ],
       "2015": [
-        "Essence",
         "Diesel"
       ],
       "2016": [
-        "Essence",
         "Diesel"
       ],
       "2017": [
@@ -15081,16 +15166,16 @@
     "Tonale": {
       "2022": [
         "Essence",
-        "Hybride",
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2023": [
         "Essence",
-        "Hybride",
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2025": [
-        "Essence"
+        "Essence",
+        "Diesel",
+        "Hybride"
       ]
     },
     "Giulia": {
@@ -15569,10 +15654,12 @@
     },
     "Cruze": {
       "2012": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2013": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ]
     },
     "Corvette C8 Stingray Convertible": {
@@ -15990,13 +16077,10 @@
       ],
       "2022": [
         "Diesel",
-        "Hybride",
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2023": [
-        "Diesel",
-        "Hybride",
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2015": [
         "Essence",
@@ -16009,20 +16093,19 @@
       ],
       "2017": [
         "Essence",
-        "Diesel"
+        "Diesel",
+        "Hybride"
       ],
       "2021": [
         "Diesel"
       ],
       "2024": [
         "Diesel",
-        "Hybride",
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2025": [
         "Diesel",
-        "Hybride",
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2018": [
         "Essence"
@@ -16043,8 +16126,7 @@
         "Électrique"
       ],
       "2023": [
-        "Essence",
-        "Diesel",
+        "Hybride",
         "Électrique"
       ],
       "2024": [
@@ -16075,20 +16157,16 @@
         "Hybride"
       ],
       "2023": [
-        "Essence",
-        "Diesel",
         "Hybride"
       ],
       "2024": [
         "Essence",
         "Diesel",
-        "Hybride",
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2025": [
         "Diesel",
-        "Hybride",
-        "Hybride rechargeable"
+        "Hybride"
       ]
     },
     "Ds 3 Racing": {},
@@ -16103,6 +16181,7 @@
       "2020": [
         "Essence",
         "Diesel",
+        "Hybride",
         "Électrique"
       ],
       "2021": [
@@ -16112,8 +16191,7 @@
       ],
       "2022": [
         "Essence",
-        "Diesel",
-        "Électrique"
+        "Hybride"
       ]
     },
     "Ds 7 Crossback": {
@@ -16169,10 +16247,10 @@
     "Sf90 Stradale": {
       "2019": [
         "Essence",
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2023": [
-        "Hybride rechargeable"
+        "Hybride"
       ]
     },
     "Enzo": {
@@ -16219,10 +16297,10 @@
     "Sf90 Spider": {
       "2020": [
         "Essence",
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2023": [
-        "Hybride rechargeable"
+        "Hybride"
       ]
     },
     "Laferrari Aperta": {},
@@ -16266,10 +16344,9 @@
   "FIAT": {
     "Scudo": {
       "2021": [
-        "Essence"
+        "Diesel"
       ],
       "2022": [
-        "Essence",
         "Diesel",
         "Électrique"
       ],
@@ -16295,26 +16372,33 @@
     "Tipo 2 Commerciale": {
       "2016": [
         "Essence",
+        "Diesel",
         "GPL"
       ],
       "2017": [
         "Essence",
+        "Diesel",
         "GPL"
       ],
       "2018": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2019": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2020": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2021": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2022": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ]
     },
     "500 3E Generation": {
@@ -16353,13 +16437,16 @@
     "Punto": {
       "2012": [
         "Essence",
+        "Diesel",
         "GPL"
       ],
       "2013": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2014": [
         "Essence",
+        "Diesel",
         "GPL"
       ],
       "2015": [
@@ -16401,6 +16488,7 @@
       ],
       "2005": [
         "Essence",
+        "Diesel",
         "GPL"
       ],
       "2006": [
@@ -16414,6 +16502,7 @@
     "Tipo 2 Sw Cross": {
       "2022": [
         "Essence",
+        "Diesel",
         "Hybride"
       ]
     },
@@ -16448,32 +16537,39 @@
     "Ducato": {
       "2020": [
         "Essence",
+        "Diesel",
         "GPL"
       ],
       "2021": [
         "Essence",
+        "Diesel",
         "GPL"
       ],
       "2022": [
         "Essence",
+        "Diesel",
         "Électrique",
         "GPL"
       ],
       "2023": [
         "Essence",
+        "Diesel",
         "Électrique",
         "GPL"
       ],
       "2024": [
         "Essence",
+        "Diesel",
         "GPL"
       ],
       "2025": [
         "Essence",
+        "Diesel",
         "GPL"
       ],
       "2026": [
         "Essence",
+        "Diesel",
         "GPL"
       ]
     },
@@ -16544,39 +16640,50 @@
     },
     "500 C": {
       "2009": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2010": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2011": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2012": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2013": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2014": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2015": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2016": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2017": [
         "Essence",
+        "Diesel",
         "Hybride"
       ],
       "2018": [
         "Essence",
+        "Diesel",
         "Hybride"
       ],
       "2019": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2020": [
         "Essence",
@@ -16623,70 +16730,85 @@
     },
     "Tipo 2 Berline": {
       "2016": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2017": [
         "Essence",
+        "Diesel",
         "GPL"
       ],
       "2018": [
         "Essence",
+        "Diesel",
         "GPL"
       ],
       "2019": [
         "Essence",
+        "Diesel",
         "GPL"
       ],
       "2020": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2021": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2022": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2024": [
-        "Essence"
+        "Diesel"
       ],
       "2025": [
-        "Essence"
+        "Diesel"
       ],
       "2026": [
-        "Essence"
+        "Diesel"
       ]
     },
     "Tipo 2 Sw Commerciale": {
       "2017": [
         "Essence",
+        "Diesel",
         "GPL"
       ]
     },
     "Tipo": {
       "2016": [
         "Essence",
+        "Diesel",
         "GPL"
       ],
       "2017": [
         "Essence",
+        "Diesel",
         "GPL"
       ],
       "2018": [
         "Essence",
+        "Diesel",
         "GPL"
       ],
       "2019": [
         "Essence",
+        "Diesel",
         "GPL"
       ],
       "2020": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2021": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2022": [
         "Essence",
+        "Diesel",
         "Hybride"
       ],
       "2023": [
@@ -16704,132 +16826,152 @@
     },
     "Ducato 3 Minibus": {
       "2006": [
-        "Essence"
+        "Diesel"
       ],
       "2007": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2008": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2009": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2010": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2011": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2012": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2013": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2016": [
-        "Essence"
+        "Diesel"
       ],
       "2017": [
-        "Essence",
+        "Diesel",
         "GPL"
       ],
       "2018": [
-        "Essence",
+        "Diesel",
         "GPL"
       ],
       "2019": [
-        "Essence",
+        "Diesel",
         "GPL"
       ]
     },
     "Scudo Ii": {
       "2004": [
-        "Essence"
+        "Diesel"
       ],
       "2005": [
-        "Essence"
+        "Diesel"
       ],
       "2006": [
-        "Essence"
+        "Diesel"
       ],
       "2007": [
-        "Essence"
+        "Diesel"
       ],
       "2008": [
-        "Essence"
+        "Diesel"
       ],
       "2009": [
-        "Essence"
+        "Diesel"
       ],
       "2010": [
-        "Essence"
+        "Diesel"
       ],
       "2011": [
-        "Essence"
+        "Diesel"
       ],
       "2012": [
-        "Essence"
+        "Diesel"
       ],
       "2013": [
-        "Essence"
+        "Diesel"
       ],
       "2014": [
-        "Essence"
+        "Diesel"
       ],
       "2015": [
-        "Essence"
+        "Diesel"
       ],
       "2016": [
-        "Essence"
+        "Diesel"
       ],
       "2017": [
-        "Essence"
+        "Diesel"
       ]
     },
     "500 X": {
       "2014": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2015": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2016": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2017": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2018": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2019": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2020": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2021": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2022": [
         "Essence",
+        "Diesel",
         "Hybride"
       ],
       "2023": [
         "Essence",
+        "Diesel",
         "Hybride"
       ],
       "2024": [
         "Essence",
+        "Diesel",
         "Hybride"
       ],
       "2025": [
         "Essence",
+        "Diesel",
         "Hybride"
       ],
       "2026": [
         "Essence",
+        "Diesel",
         "Hybride"
       ]
     },
@@ -16857,7 +16999,8 @@
         "Diesel"
       ],
       "2005": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2006": [
         "GPL"
@@ -16890,29 +17033,34 @@
         "Diesel"
       ],
       "2007": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2008": [
         "Essence",
+        "Diesel",
         "GPL"
       ],
       "2009": [
-        "Essence"
+        "Diesel"
       ],
       "2010": [
         "Essence",
+        "Diesel",
         "GPL"
       ],
       "2011": [
         "Essence",
+        "Diesel",
         "GPL"
       ],
       "2012": [
         "Essence",
+        "Diesel",
         "GPL"
       ],
       "2014": [
-        "Essence"
+        "Diesel"
       ]
     },
     "500": {},
@@ -16958,22 +17106,23 @@
         "Essence"
       ],
       "2011": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2012": [
-        "Essence"
+        "Diesel"
       ],
       "2013": [
-        "Essence"
+        "Diesel"
       ],
       "2014": [
-        "Essence"
+        "Diesel"
       ],
       "2015": [
-        "Essence"
+        "Diesel"
       ],
       "2016": [
-        "Essence"
+        "Diesel"
       ],
       "2025": [
         "Essence"
@@ -17021,34 +17170,42 @@
       ],
       "2012": [
         "Essence",
+        "Diesel",
         "GPL"
       ],
       "2013": [
         "Essence",
+        "Diesel",
         "GPL"
       ],
       "2014": [
         "Essence",
+        "Diesel",
         "GPL"
       ],
       "2015": [
         "Essence",
+        "Diesel",
         "GPL"
       ],
       "2016": [
         "Essence",
+        "Diesel",
         "GPL"
       ],
       "2017": [
         "Essence",
+        "Diesel",
         "GPL"
       ],
       "2018": [
         "Essence",
+        "Diesel",
         "GPL"
       ],
       "2019": [
         "Essence",
+        "Diesel",
         "GPL"
       ],
       "2020": [
@@ -17119,67 +17276,77 @@
         "Essence"
       ],
       "2011": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ]
     },
     "Doblo Cargo": {
       "2004": [
-        "Essence",
+        "Diesel",
         "GPL"
       ],
       "2005": [
         "Essence",
+        "Diesel",
         "GPL"
       ],
       "2006": [
         "Essence",
+        "Diesel",
         "GPL"
       ],
       "2007": [
         "Essence",
+        "Diesel",
         "GPL"
       ],
       "2008": [
         "Essence",
+        "Diesel",
         "GPL"
       ],
       "2009": [
         "Essence",
+        "Diesel",
         "GPL"
       ],
       "2010": [
         "Essence",
+        "Diesel",
         "GPL"
       ],
       "2011": [
         "Essence",
+        "Diesel",
         "GPL"
       ],
       "2012": [
         "Essence",
+        "Diesel",
         "GPL"
       ],
       "2013": [
         "Essence",
+        "Diesel",
         "GPL"
       ],
       "2014": [
-        "Essence"
+        "Diesel"
       ],
       "2015": [
-        "Essence"
+        "Diesel"
       ],
       "2019": [
-        "Essence"
+        "Diesel"
       ],
       "2020": [
-        "Essence"
+        "Diesel"
       ],
       "2021": [
-        "Essence"
+        "Diesel"
       ],
       "2022": [
-        "Essence"
+        "Diesel"
       ]
     },
     "Stilo Abarth": {
@@ -17192,34 +17359,42 @@
     },
     "Fiorino 2 Combi": {
       "2008": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2009": [
         "Essence",
+        "Diesel",
         "GPL"
       ],
       "2010": [
         "Essence",
+        "Diesel",
         "GPL"
       ],
       "2012": [
         "Essence",
+        "Diesel",
         "GPL"
       ]
     },
     "Tipo 2 Cross": {
       "2020": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2021": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2022": [
         "Essence",
+        "Diesel",
         "Hybride"
       ],
       "2023": [
         "Essence",
+        "Diesel",
         "Hybride"
       ],
       "2024": [
@@ -17234,20 +17409,25 @@
     },
     "500 2E Generation Entreprise": {
       "2014": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2015": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2016": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2017": [
         "Essence",
+        "Diesel",
         "Hybride"
       ],
       "2018": [
         "Essence",
+        "Diesel",
         "Hybride"
       ],
       "2019": [
@@ -17275,74 +17455,93 @@
       ],
       "2010": [
         "Essence",
+        "Diesel",
         "GPL"
       ],
       "2011": [
         "Essence",
+        "Diesel",
         "GPL"
       ],
       "2012": [
         "Essence",
+        "Diesel",
         "GPL"
       ],
       "2013": [
         "Essence",
+        "Diesel",
         "GPL"
       ],
       "2014": [
         "Essence",
+        "Diesel",
         "GPL"
       ],
       "2015": [
         "Essence",
+        "Diesel",
         "GPL"
       ],
       "2016": [
-        "Essence",
+        "Diesel",
         "GPL"
       ]
     },
     "500 2E Generation": {
       "2007": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2008": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2009": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2010": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2011": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2012": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2013": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2014": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2015": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2016": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2017": [
         "Essence",
+        "Diesel",
         "Hybride"
       ],
       "2018": [
         "Essence",
+        "Diesel",
         "Hybride"
       ],
       "2019": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2020": [
         "Essence",
@@ -17379,41 +17578,47 @@
     },
     "Fiorino 4 Combi": {
       "2010": [
-        "Essence"
+        "Diesel"
       ],
       "2011": [
-        "Essence"
+        "Diesel"
       ],
       "2012": [
-        "Essence"
+        "Diesel"
       ],
       "2013": [
-        "Essence"
+        "Diesel"
       ],
       "2014": [
-        "Essence"
+        "Diesel"
       ],
       "2015": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2016": [
         "Essence",
+        "Diesel",
         "GPL"
       ],
       "2017": [
         "Essence",
+        "Diesel",
         "GPL"
       ],
       "2018": [
         "Essence",
+        "Diesel",
         "GPL"
       ],
       "2019": [
         "Essence",
+        "Diesel",
         "GPL"
       ],
       "2020": [
         "Essence",
+        "Diesel",
         "GPL"
       ]
     },
@@ -17496,41 +17701,45 @@
         "Diesel"
       ],
       "2007": [
-        "Essence"
+        "Diesel"
       ],
       "2008": [
-        "Essence",
+        "Diesel",
         "GPL"
       ],
       "2009": [
-        "Essence"
+        "Diesel"
       ],
       "2011": [
-        "Essence"
+        "Diesel"
       ]
     },
     "Doblo": {
       "2015": [
         "Essence",
+        "Diesel",
         "GPL"
       ],
       "2016": [
         "Essence",
+        "Diesel",
         "GPL"
       ],
       "2017": [
         "Essence",
+        "Diesel",
         "GPL"
       ],
       "2018": [
         "Essence",
+        "Diesel",
         "GPL"
       ],
       "2019": [
-        "Essence"
+        "Diesel"
       ],
       "2020": [
-        "Essence"
+        "Diesel"
       ]
     }
   },
@@ -17727,7 +17936,7 @@
     },
     "Cr V": {
       "2023": [
-        "Hybride rechargeable",
+        "Hybride",
         "Électrique"
       ],
       "2026": [
@@ -18614,7 +18823,7 @@
         "Diesel"
       ],
       "2014": [
-        "Essence"
+        "Diesel"
       ]
     },
     "Xfr S Sportbrake": {
@@ -18634,15 +18843,13 @@
       ],
       "2020": [
         "Essence",
-        "Hybride",
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2022": [
-        "Hybride",
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2024": [
-        "Hybride rechargeable"
+        "Hybride"
       ]
     },
     "F Type": {
@@ -18702,17 +18909,15 @@
       "2020": [
         "Essence",
         "Diesel",
-        "Hybride",
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2021": [
         "Essence",
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2022": [
         "Essence",
-        "Hybride",
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2023": [
         "Essence"
@@ -18720,13 +18925,16 @@
     },
     "Xe": {
       "2015": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2017": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2018": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2019": [
         "Essence",
@@ -18807,7 +19015,6 @@
         "Diesel"
       ],
       "2011": [
-        "Essence",
         "Diesel"
       ],
       "2012": [
@@ -18822,22 +19029,28 @@
         "Diesel"
       ],
       "2015": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2016": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2017": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2018": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2019": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2020": [
         "Essence",
+        "Diesel",
         "Hybride"
       ],
       "2022": [
@@ -18849,19 +19062,23 @@
     },
     "Xf 2 Sportbrake": {
       "2015": [
-        "Essence"
+        "Diesel"
       ],
       "2017": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2018": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2019": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2020": [
         "Essence",
+        "Diesel",
         "Hybride"
       ],
       "2022": [
@@ -18905,20 +19122,25 @@
         "Essence"
       ],
       "2017": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2018": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2019": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2020": [
         "Essence",
+        "Diesel",
         "Hybride"
       ],
       "2021": [
         "Essence",
+        "Diesel",
         "Hybride"
       ],
       "2022": [
@@ -18934,26 +19156,30 @@
     },
     "Wrangler": {
       "2018": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2019": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2020": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2021": [
         "Essence",
-        "Hybride rechargeable"
+        "Diesel",
+        "Hybride"
       ],
       "2022": [
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2023": [
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2024": [
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "1998": [
         "Essence"
@@ -19064,10 +19290,10 @@
         "Essence"
       ],
       "2022": [
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2024": [
-        "Hybride rechargeable"
+        "Hybride"
       ]
     },
     "Cherokee": {
@@ -19123,19 +19349,21 @@
         "Essence"
       ],
       "2014": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2015": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2016": [
-        "Essence"
+        "Diesel"
       ],
       "2018": [
-        "Essence"
+        "Diesel"
       ],
       "2019": [
-        "Essence"
+        "Diesel"
       ],
       "2002": [
         "Essence"
@@ -19152,42 +19380,47 @@
     },
     "Renegade": {
       "2014": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2015": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2016": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2017": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2018": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2019": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2020": [
         "Essence",
-        "Hybride rechargeable"
+        "Diesel",
+        "Hybride"
       ],
       "2021": [
         "Essence",
-        "Hybride rechargeable"
+        "Diesel",
+        "Hybride"
       ],
       "2022": [
-        "Hybride",
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2023": [
-        "Hybride",
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2024": [
-        "Hybride",
-        "Hybride rechargeable"
+        "Hybride"
       ]
     },
     "Avenger": {
@@ -19219,13 +19452,13 @@
         "Essence"
       ],
       "2021": [
-        "Essence"
+        "Diesel"
       ],
       "2022": [
-        "Essence"
+        "Diesel"
       ],
       "2023": [
-        "Essence"
+        "Diesel"
       ]
     },
     "Patriot": {
@@ -19972,8 +20205,7 @@
       ],
       "2024": [
         "Essence",
-        "Hybride",
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2011": [
         "Diesel"
@@ -19997,26 +20229,23 @@
       "2020": [
         "Essence",
         "Diesel",
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2021": [
         "Essence",
-        "Hybride",
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2022": [
         "Essence",
-        "Hybride",
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2023": [
         "Essence",
-        "Hybride",
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2025": [
         "Essence",
-        "Hybride rechargeable"
+        "Hybride"
       ]
     },
     "Range Rover": {
@@ -20046,15 +20275,15 @@
       ],
       "2022": [
         "Essence",
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2023": [
         "Essence",
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2024": [
         "Essence",
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2026": [
         "Essence"
@@ -20080,20 +20309,20 @@
       ],
       "2017": [
         "Essence",
-        "Hybride",
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2018": [
         "Essence",
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2019": [
         "Essence",
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2020": [
         "Essence",
-        "Hybride rechargeable"
+        "Diesel",
+        "Hybride"
       ],
       "1991": [
         "Essence"
@@ -20172,21 +20401,23 @@
     "Range Rover Sport": {
       "2022": [
         "Essence",
-        "Hybride rechargeable"
+        "Diesel",
+        "Hybride"
       ],
       "2023": [
         "Essence",
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2024": [
         "Essence"
       ],
       "2025": [
         "Essence",
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2026": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2005": [
         "Essence"
@@ -20228,19 +20459,18 @@
       ],
       "2017": [
         "Essence",
-        "Hybride",
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2018": [
         "Essence"
       ],
       "2019": [
         "Essence",
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2020": [
         "Essence",
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2021": [
         "Essence"
@@ -20256,23 +20486,20 @@
       ],
       "2020": [
         "Essence",
-        "Hybride",
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2021": [
         "Essence",
-        "Hybride",
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2022": [
         "Hybride"
       ],
       "2023": [
-        "Hybride",
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2024": [
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2016": [
         "Essence"
@@ -20315,18 +20542,16 @@
       "2020": [
         "Essence",
         "Diesel",
-        "Hybride",
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2022": [
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2023": [
-        "Hybride",
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2024": [
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2026": [
         "Essence"
@@ -20390,7 +20615,7 @@
       "2020": [
         "Essence",
         "Diesel",
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2021": [
         "Essence",
@@ -20401,15 +20626,13 @@
         "Hybride"
       ],
       "2023": [
-        "Hybride",
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2024": [
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2025": [
-        "Hybride",
-        "Hybride rechargeable"
+        "Hybride"
       ]
     }
   },
@@ -20439,20 +20662,16 @@
       ],
       "2021": [
         "Essence",
-        "Hybride",
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2022": [
-        "Hybride",
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2024": [
-        "Hybride",
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2025": [
-        "Hybride",
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2026": [
         "Hybride"
@@ -20502,21 +20721,17 @@
     "Rx": {
       "2022": [
         "Essence",
-        "Hybride",
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2023": [
         "Essence",
-        "Hybride",
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2025": [
-        "Hybride",
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2026": [
-        "Hybride",
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2000": [
         "Essence"
@@ -21142,22 +21357,18 @@
       ],
       "2022": [
         "Diesel",
-        "Hybride",
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2023": [
-        "Hybride",
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2024": [
         "Diesel",
-        "Hybride",
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2025": [
         "Diesel",
-        "Hybride",
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2026": [
         "Hybride"
@@ -22072,7 +22283,6 @@
       "2023": [
         "Essence",
         "Hybride",
-        "Hybride rechargeable",
         "Électrique"
       ],
       "2024": [
@@ -22133,10 +22343,10 @@
         "Essence"
       ],
       "2024": [
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2026": [
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2006": [
         "Diesel"
@@ -22165,32 +22375,29 @@
       ],
       "2014": [
         "Diesel",
-        "Hybride",
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2015": [
         "Essence",
         "Diesel",
-        "Hybride",
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2016": [
         "Essence",
         "Diesel"
       ],
       "2017": [
-        "Hybride",
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2018": [
         "Diesel",
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2019": [
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2021": [
-        "Hybride rechargeable"
+        "Hybride"
       ]
     },
     "Grandis": {
@@ -22277,20 +22484,20 @@
         "Essence"
       ],
       "2020": [
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2021": [
         "Essence",
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2022": [
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2023": [
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2024": [
-        "Hybride rechargeable"
+        "Hybride"
       ]
     },
     "Galant": {},
@@ -23440,13 +23647,11 @@
         "Essence",
         "Diesel",
         "Hybride",
-        "Hybride rechargeable",
         "Électrique"
       ],
       "2026": [
         "Diesel",
         "Hybride",
-        "Hybride rechargeable",
         "Électrique"
       ]
     },
@@ -23979,13 +24184,11 @@
         "Essence",
         "Diesel",
         "Hybride",
-        "Hybride rechargeable",
         "Électrique"
       ],
       "2026": [
         "Diesel",
         "Hybride",
-        "Hybride rechargeable",
         "Électrique"
       ]
     },
@@ -25655,8 +25858,7 @@
     "Superb 4 Combi": {
       "2024": [
         "Diesel",
-        "Hybride",
-        "Hybride rechargeable"
+        "Hybride"
       ]
     },
     "Citigo": {
@@ -25716,19 +25918,21 @@
       ],
       "2004": [
         "Essence",
-        "Diesel"
+        "Diesel",
+        "Hybride"
       ],
       "2005": [
         "Essence",
         "Diesel"
       ],
       "2006": [
-        "Essence",
-        "Diesel"
+        "Diesel",
+        "Hybride"
       ],
       "2007": [
         "Essence",
-        "Diesel"
+        "Diesel",
+        "Hybride"
       ]
     },
     "Superb": {
@@ -25839,18 +26043,15 @@
       "2024": [
         "Essence",
         "Diesel",
-        "Hybride",
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2025": [
         "Diesel",
-        "Hybride",
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2026": [
         "Diesel",
-        "Hybride",
-        "Hybride rechargeable"
+        "Hybride"
       ]
     },
     "Octavia 2 Combi": {
@@ -25864,7 +26065,8 @@
       ],
       "2007": [
         "Essence",
-        "Diesel"
+        "Diesel",
+        "Hybride"
       ],
       "2008": [
         "Essence",
@@ -25879,7 +26081,8 @@
       ],
       "2011": [
         "Essence",
-        "Diesel"
+        "Diesel",
+        "Hybride"
       ],
       "2012": [
         "Essence",
@@ -26075,21 +26278,20 @@
         "Diesel"
       ],
       "2004": [
-        "Diesel"
+        "Diesel",
+        "Hybride"
       ]
     },
     "Octavia 4 Combi": {
       "2020": [
         "Essence",
         "Diesel",
-        "Hybride",
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2021": [
         "Essence",
         "Diesel",
-        "Hybride",
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2022": [
         "Essence",
@@ -26207,7 +26409,7 @@
       ],
       "2014": [
         "Essence",
-        "Diesel"
+        "Hybride"
       ]
     },
     "Octavia 3 Scout": {
@@ -26285,22 +26487,28 @@
         "Électrique"
       ],
       "2007": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2008": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2009": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2010": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2011": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2012": [
         "Essence",
+        "Diesel",
         "Électrique"
       ],
       "2013": [
@@ -26311,13 +26519,16 @@
         "Essence"
       ],
       "2006": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2003": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2004": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2005": [
         "Essence"
@@ -26360,13 +26571,16 @@
     },
     "Smart Forfour": {
       "2004": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2005": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2006": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ]
     },
     "Hash1": {
@@ -26386,10 +26600,12 @@
     },
     "Fortwo Business": {
       "2003": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2007": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ]
     }
   },
@@ -26397,16 +26613,13 @@
     "E Vitara": {},
     "Across": {
       "2020": [
-        "Hybride",
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2021": [
-        "Hybride",
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2022": [
-        "Hybride",
-        "Hybride rechargeable"
+        "Hybride"
       ]
     },
     "Kizashi": {
@@ -26862,37 +27075,34 @@
   "TOYOTA": {
     "Hilux": {
       "2016": [
-        "Essence"
+        "Diesel"
       ],
       "2017": [
-        "Essence",
         "Diesel"
       ],
       "2018": [
-        "Essence",
         "Diesel"
       ],
       "2019": [
-        "Essence",
         "Diesel"
       ],
       "2020": [
-        "Essence"
+        "Diesel"
       ],
       "2021": [
-        "Essence"
+        "Diesel"
       ],
       "2022": [
-        "Essence"
+        "Diesel"
       ],
       "2023": [
-        "Essence"
+        "Diesel"
       ],
       "2024": [
-        "Essence"
+        "Diesel"
       ],
       "2025": [
-        "Essence",
+        "Diesel",
         "Électrique"
       ],
       "2026": [
@@ -26927,10 +27137,10 @@
     },
     "Land Cruiser Serie": {
       "2024": [
-        "Essence"
+        "Diesel"
       ],
       "2025": [
-        "Essence",
+        "Diesel",
         "Hybride"
       ],
       "2026": [
@@ -26961,89 +27171,90 @@
     },
     "Proace": {
       "2016": [
-        "Essence"
+        "Diesel"
       ],
       "2017": [
-        "Essence",
         "Diesel"
       ],
       "2018": [
-        "Essence",
         "Diesel"
       ],
       "2019": [
-        "Essence",
         "Diesel"
       ],
       "2020": [
-        "Essence",
         "Diesel",
         "Électrique"
       ],
       "2021": [
-        "Essence",
         "Diesel",
         "Électrique"
       ],
       "2022": [
-        "Essence",
         "Diesel",
         "Électrique"
       ],
       "2023": [
-        "Essence",
         "Diesel",
         "Électrique"
       ],
       "2024": [
-        "Essence",
         "Diesel",
         "Électrique"
       ],
       "2025": [
-        "Essence",
         "Diesel",
         "Électrique"
       ],
       "2026": [
-        "Essence",
         "Diesel",
         "Électrique"
       ]
     },
     "Avensis": {
       "2008": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2009": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2010": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2011": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2012": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2013": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2014": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2015": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2016": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2017": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2018": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ]
     },
     "Camry": {
@@ -27088,38 +27299,47 @@
     },
     "Rav 4 3E Generation": {
       "2006": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2007": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2008": [
-        "Essence"
+        "Diesel"
       ],
       "2009": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2010": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2011": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2012": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ]
     },
     "Auris": {
       "2010": [
         "Essence",
+        "Diesel",
         "Hybride"
       ],
       "2011": [
         "Essence",
+        "Diesel",
         "Hybride"
       ],
       "2012": [
         "Essence",
+        "Diesel",
         "Hybride"
       ],
       "2013": [
@@ -27127,28 +27347,35 @@
       ],
       "2014": [
         "Essence",
+        "Diesel",
         "Hybride"
       ],
       "2015": [
         "Essence",
+        "Diesel",
         "Hybride"
       ],
       "2016": [
         "Essence",
+        "Diesel",
         "Hybride"
       ],
       "2017": [
         "Essence",
+        "Diesel",
         "Hybride"
       ],
       "2007": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2008": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2009": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ]
     },
     "Prius": {
@@ -27191,16 +27418,16 @@
     },
     "Corolla": {
       "2004": [
-        "Essence"
+        "Diesel"
       ],
       "2005": [
-        "Essence"
+        "Diesel"
       ],
       "2006": [
-        "Essence"
+        "Diesel"
       ],
       "2007": [
-        "Essence"
+        "Diesel"
       ],
       "2018": [
         "Hybride"
@@ -27279,39 +27506,48 @@
     },
     "Proace City": {
       "2019": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2020": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2021": [
         "Essence",
+        "Diesel",
         "Électrique"
       ],
       "2022": [
         "Essence",
+        "Diesel",
         "Électrique"
       ],
       "2023": [
         "Essence",
+        "Diesel",
         "Électrique"
       ],
       "2024": [
         "Essence",
+        "Diesel",
         "Électrique"
       ],
       "2025": [
         "Essence",
+        "Diesel",
         "Électrique"
       ],
       "2026": [
         "Essence",
+        "Diesel",
         "Électrique"
       ]
     },
     "Urban Cruiser": {
       "2009": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2011": [
         "Essence"
@@ -27408,25 +27644,31 @@
     },
     "Rav 4 4E Generation": {
       "2013": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2014": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2015": [
         "Essence",
+        "Diesel",
         "Hybride"
       ],
       "2016": [
         "Essence",
+        "Diesel",
         "Hybride"
       ],
       "2017": [
         "Essence",
+        "Diesel",
         "Hybride"
       ],
       "2018": [
         "Essence",
+        "Diesel",
         "Hybride"
       ],
       "2019": [
@@ -27448,26 +27690,21 @@
         "Diesel"
       ],
       "2020": [
-        "Essence",
         "Diesel"
       ],
       "2021": [
-        "Essence",
         "Diesel",
         "Électrique"
       ],
       "2022": [
-        "Essence",
         "Diesel",
         "Électrique"
       ],
       "2023": [
-        "Essence",
         "Diesel",
         "Électrique"
       ],
       "2024": [
-        "Essence",
         "Diesel",
         "Électrique"
       ],
@@ -27511,7 +27748,7 @@
     },
     "Land Cruiser Serie 150 Utilitaire": {
       "2010": [
-        "Essence"
+        "Diesel"
       ]
     },
     "Yaris 4 Affaires": {
@@ -27543,49 +27780,48 @@
     },
     "Prius 4 Rechargeable": {
       "2017": [
-        "Hybride",
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2018": [
-        "Hybride",
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2019": [
-        "Hybride",
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2020": [
-        "Hybride",
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2021": [
-        "Hybride",
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2022": [
-        "Hybride",
-        "Hybride rechargeable"
+        "Hybride"
       ]
     },
     "Auris 2 Touring Sports": {
       "2013": [
         "Essence",
+        "Diesel",
         "Hybride"
       ],
       "2014": [
         "Essence",
+        "Diesel",
         "Hybride"
       ],
       "2015": [
         "Essence",
+        "Diesel",
         "Hybride"
       ],
       "2016": [
         "Essence",
+        "Diesel",
         "Hybride"
       ],
       "2017": [
         "Essence",
+        "Diesel",
         "Hybride"
       ],
       "2018": [
@@ -27598,42 +27834,47 @@
         "Essence"
       ],
       "2001": [
-        "Essence"
+        "Diesel"
       ],
       "2003": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2004": [
-        "Essence"
+        "Diesel"
       ],
       "2005": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ]
     },
     "Corolla Cross": {},
     "Yaris 3 Affaires": {
       "2012": [
-        "Essence"
+        "Diesel"
       ],
       "2013": [
-        "Essence"
+        "Diesel"
       ],
       "2014": [
-        "Essence"
+        "Diesel"
       ],
       "2015": [
-        "Essence"
+        "Diesel"
       ],
       "2016": [
         "Essence",
+        "Diesel",
         "Hybride"
       ],
       "2017": [
         "Essence",
+        "Diesel",
         "Hybride"
       ],
       "2018": [
         "Essence",
+        "Diesel",
         "Hybride"
       ],
       "2019": [
@@ -27647,7 +27888,7 @@
     },
     "Auris Affaires": {
       "2012": [
-        "Essence"
+        "Diesel"
       ]
     },
     "Supra Mkiii": {
@@ -28243,22 +28484,28 @@
     "Xc70 3E Generation": {},
     "S90 2E Generation": {
       "2016": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2017": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2018": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2019": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2020": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2021": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2022": [
         "Essence"
@@ -28435,16 +28682,18 @@
     "Ex60": {},
     "Xc70 2E Generation": {
       "2005": [
-        "Essence"
+        "Diesel"
       ],
       "2006": [
-        "Essence"
+        "Diesel"
       ],
       "2007": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2008": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2009": [
         "Essence",
@@ -28455,22 +28704,28 @@
         "Diesel"
       ],
       "2011": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2012": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2013": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2014": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2015": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2016": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ]
     },
     "Xc90": {
@@ -28603,7 +28858,8 @@
         "Essence"
       ],
       "2020": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2021": [
         "Essence"
@@ -28660,7 +28916,8 @@
         "Essence"
       ],
       "2020": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2021": [
         "Essence"
@@ -28710,11 +28967,11 @@
         "Essence"
       ],
       "2024": [
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2025": [
         "Essence",
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2008": [
         "Essence"
@@ -28785,11 +29042,11 @@
     "Turbo R": {},
     "Continental Gt": {
       "2024": [
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2025": [
         "Essence",
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2017": [
         "Essence"
@@ -28936,7 +29193,7 @@
     },
     "Seal U": {
       "2024": [
-        "Hybride rechargeable",
+        "Hybride",
         "Électrique"
       ]
     },
@@ -28958,7 +29215,7 @@
         "Électrique"
       ],
       "2025": [
-        "Hybride rechargeable"
+        "Hybride"
       ]
     },
     "Seal": {
@@ -29160,6 +29417,7 @@
       ],
       "2022": [
         "Essence",
+        "Diesel",
         "Hybride"
       ],
       "2023": [
@@ -29384,19 +29642,24 @@
   "LANCIA": {
     "Ypsilon 3 Entreprise": {
       "2011": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2013": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2014": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2015": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2016": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ]
     },
     "Kappa": {
@@ -29444,22 +29707,27 @@
       ],
       "2010": [
         "Essence",
+        "Diesel",
         "GPL"
       ],
       "2011": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2012": [
-        "Essence"
+        "Diesel"
       ],
       "2013": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2014": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2015": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2024": [
         "Essence",
@@ -29498,20 +29766,25 @@
         "Essence"
       ],
       "2010": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2011": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2012": [
         "Essence",
+        "Diesel",
         "GPL"
       ],
       "2013": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2014": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "1994": [
         "Essence"
@@ -29571,20 +29844,24 @@
     },
     "Ypsilon Entreprise": {
       "2007": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2008": [
         "Essence"
       ],
       "2009": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2010": [
         "Essence",
+        "Diesel",
         "GPL"
       ],
       "2011": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2012": [
         "Essence"
@@ -29630,14 +29907,13 @@
   "MG": {
     "Ehs": {
       "2020": [
-        "Hybride",
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2021": [
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2023": [
-        "Hybride rechargeable"
+        "Hybride"
       ]
     },
     "F": {
@@ -29663,7 +29939,7 @@
     "Mgs9": {},
     "Mg Ehs": {
       "2024": [
-        "Hybride rechargeable"
+        "Hybride"
       ],
       "2025": [
         "Hybride"
@@ -29910,7 +30186,8 @@
   "SUBARU": {
     "Outback": {
       "2015": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2018": [
         "Essence"
@@ -29962,10 +30239,12 @@
         "Essence"
       ],
       "2014": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2016": [
-        "Essence"
+        "Essence",
+        "Diesel"
       ],
       "2018": [
         "Essence"

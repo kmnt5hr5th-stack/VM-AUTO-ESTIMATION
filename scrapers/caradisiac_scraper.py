@@ -51,8 +51,9 @@ def detect_fuel(version: str) -> str:
     if any(x in v for x in ["GPL", "GNV"]):
         return "gpl"
     if any(x in v for x in ["TDI", "DCI", "HDI", "BLUEHDI", "BLUE DCI", "BLUE HDI",
-                              "CDTI", "JTD", "CRDI", "JTDM", "SDI", "D4D", "TDCI",
-                              "ECOBLUE", "BLUEMOTION",
+                              "CDTI", "CDI", "JTD", "CRDI", "JTDM", "SDI", "D4D", "TDCI",
+                              "MULTIJET", "MJET", "BLUETEC", "BLUEEFFICIENCY", "ECOBLUE", "BLUEMOTION",
+                              "VCDI", "D-4D", "D4D",
                               "2.0 D", "1.6 D", "1.5 D", "2.2 D", "TD ", " D "]):
         return "diesel"
     # BMW/Volvo diesel: "116D", "320D", "D3", "D4", "D5" etc.
