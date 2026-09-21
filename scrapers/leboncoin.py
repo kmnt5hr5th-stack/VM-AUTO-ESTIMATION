@@ -1310,7 +1310,7 @@ class LeboncoinScraper(BaseScraper):
 
         # kw_args pour _search_via_context uniquement (inclut marque)
         ctx_args = dict(marque=marque, carburant=carburant, boite=boite,
-                        type_vehicule=type_vehicule, finition=finition, carrosserie=carrosserie)
+                        finition=finition, carrosserie=carrosserie)
 
         async def _mobile_pages(mod, km, hp):
             """mod = modele (keyword LBC), km = km cible, hp = target_hp ou None."""
