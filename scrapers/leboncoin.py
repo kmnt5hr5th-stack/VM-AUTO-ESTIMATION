@@ -228,11 +228,11 @@ def _lbc_code(s: str) -> str:
 
 
 def _lbc_model_code(s: str) -> str:
-    """Code LBC pour un modèle : préserve la casse d'origine (LBC attend 'Kona', pas 'KONA')."""
+    """Code LBC pour un modèle : préserve la casse et les tirets (LBC attend 'S-Cross', pas 'S_Cross')."""
     import unicodedata
     s = unicodedata.normalize("NFD", s)
     s = "".join(c for c in s if unicodedata.category(c) != "Mn")
-    return re.sub(r'[\s\-]+', '_', s)
+    return re.sub(r'\s+', '_', s)  # espaces → underscore, tirets préservés
 
 
 # Codes LBC exacts pour les marques/modèles qui dévient de la règle générale
