@@ -291871,6 +291871,56 @@
         "hybride": [],
         "electrique": [],
         "gpl": []
+      },
+      "2010": {
+        "essence": [
+          "2.4 VVT 178 SPORT",
+          "2.4 VVT 178 SPORT 4X4 CVT"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2012": {
+        "essence": [
+          "2.4 VVT 178 SPORT",
+          "2.4 VVT 178 SPORT 4X4 CVT"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2013": {
+        "essence": [
+          "2.4 VVT 178 SPORT",
+          "2.4 VVT 178 SPORT 4X4 CVT"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2014": {
+        "essence": [
+          "2.4 VVT 178 SPORT",
+          "2.4 VVT 178 SPORT 4X4 CVT"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2015": {
+        "essence": [
+          "2.4 VVT 178 SPORT",
+          "2.4 VVT 178 SPORT 4X4 CVT"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
       }
     },
     "Swift": {
@@ -292897,7 +292947,22 @@
         "gpl": []
       },
       "2008": {
-        "essence": [],
+        "essence": [
+          "1.3 DDIS GL 3P",
+          "1.3 DDIS GL 5P",
+          "1.3 DDIS GLX 3P",
+          "1.3 DDIS GLX 5P",
+          "1.3 GL 3P",
+          "1.3 GL 5P",
+          "1.3 GLX 3P",
+          "1.3 GLX 4X4 5P",
+          "1.3 GLX 5P",
+          "1.3 GLX BV ROBOTISEE 3P",
+          "1.3 GLX BV ROBOTISEE 5P",
+          "1.3 GLX EDITION LIMITEE 3P",
+          "1.3 GLX EDITION LIMITEE 5P",
+          "1.3 SERIE SPECIALE"
+        ],
         "diesel": [],
         "hybride": [],
         "electrique": [],
@@ -293007,14 +293072,36 @@
         "gpl": []
       },
       "2017": {
-        "essence": [],
-        "diesel": [],
+        "essence": [
+          "1.0 BOOSTERJET 111 AVANTAGE",
+          "1.0 BOOSTERJET 111 PRIVILEGE",
+          "1.0 BOOSTERJET 111 PRIVILEGE ALLGRIP",
+          "1.0 BOOSTERJET 111 PRIVILEGE AUTO",
+          "1.4 BOOSTERJET STYLE",
+          "1.4 BOOSTERJET STYLE ALLGRIP",
+          "1.4 BOOSTERJET STYLE ALLGRIP AUTO"
+        ],
+        "diesel": [
+          "1.6 DDIS PRIVILEGE",
+          "1.6 DDIS PRIVILEGE ALLGRIP",
+          "1.6 DDIS STYLE ALLGRIP",
+          "1.6 DDIS STYLE ALLGRIP AUTO"
+        ],
         "hybride": [],
         "electrique": [],
         "gpl": []
       },
       "2019": {
-        "essence": [],
+        "essence": [
+          "1.0 BOOSTERJET 111 AVANTAGE",
+          "1.0 BOOSTERJET 111 PRIVILEGE",
+          "1.0 BOOSTERJET 111 PRIVILEGE ALLGRIP",
+          "1.0 BOOSTERJET 111 PRIVILEGE AUTO",
+          "1.4 BOOSTERJET 8CV STYLE",
+          "1.4 BOOSTERJET 8CV STYLE ALLGRIP",
+          "1.4 BOOSTERJET 8CV STYLE ALLGRIP AUTO",
+          "1.4 BOOSTERJET STYLE"
+        ],
         "diesel": [],
         "hybride": [],
         "electrique": [],
@@ -293029,6 +293116,51 @@
       },
       "2024": {
         "essence": [],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2013": {
+        "essence": [
+          "1.0 BOOSTERJET 111 AVANTAGE",
+          "1.0 BOOSTERJET 111 PRIVILEGE",
+          "1.0 BOOSTERJET 111 PRIVILEGE ALLGRIP",
+          "1.0 BOOSTERJET 111 PRIVILEGE AUTO",
+          "1.4 BOOSTERJET 8CV STYLE ALLGRIP",
+          "1.4 BOOSTERJET 8CV STYLE ALLGRIP AUTO",
+          "1.4 BOOSTERJET STYLE"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2014": {
+        "essence": [
+          "1.0 BOOSTERJET 111 AVANTAGE",
+          "1.0 BOOSTERJET 111 PRIVILEGE",
+          "1.0 BOOSTERJET 111 PRIVILEGE ALLGRIP",
+          "1.0 BOOSTERJET 111 PRIVILEGE AUTO",
+          "1.4 BOOSTERJET 8CV STYLE ALLGRIP",
+          "1.4 BOOSTERJET 8CV STYLE ALLGRIP AUTO",
+          "1.4 BOOSTERJET STYLE"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2015": {
+        "essence": [
+          "1.0 BOOSTERJET 111 AVANTAGE",
+          "1.0 BOOSTERJET 111 PRIVILEGE",
+          "1.0 BOOSTERJET 111 PRIVILEGE ALLGRIP",
+          "1.0 BOOSTERJET 111 PRIVILEGE AUTO",
+          "1.4 BOOSTERJET 8CV STYLE ALLGRIP",
+          "1.4 BOOSTERJET 8CV STYLE ALLGRIP AUTO",
+          "1.4 BOOSTERJET STYLE"
+        ],
         "diesel": [],
         "hybride": [],
         "electrique": [],
@@ -293644,7 +293776,9 @@
         "gpl": []
       },
       "2012": {
-        "essence": [],
+        "essence": [
+          "III 1.6 VVT 136 SPORT 3P"
+        ],
         "diesel": [],
         "hybride": [],
         "electrique": [],
@@ -293728,6 +293862,2948 @@
         ],
         "diesel": [],
         "hybride": [],
+        "electrique": [],
+        "gpl": []
+      }
+    },
+    "Swift 2": {
+      "2005": {
+        "essence": [
+          "II 1.3 DDIS 70 GL 3P",
+          "II 1.3 DDIS 70 GL 5P",
+          "II 1.3 DDIS 70 GLX 3P",
+          "II 1.3 DDIS 70 GLX 5P",
+          "II 1.3 VVT 90 GL 5P",
+          "II 1.3 VVT 90 GLX 5P",
+          "II 1.3 VVT 92 GL 3P",
+          "II 1.3 VVT 92 GLX 3P",
+          "II 1.3 VVT 92 GLX BVA 3P",
+          "II 1.3 VVT 92 GLX BVA 5P",
+          "II 1.6 VVT 3P",
+          "II 1.6 VVT PACK 3P",
+          "II 1.9 DDIS 5P",
+          "II 2.0 LUXE BVA 5P"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2006": {
+        "essence": [
+          "II 1.3 DDIS 70 GL 3P",
+          "II 1.3 DDIS 70 GL 5P",
+          "II 1.3 DDIS 70 GLX 3P",
+          "II 1.3 DDIS 70 GLX 5P",
+          "II 1.3 VVT 90 GL 5P",
+          "II 1.3 VVT 90 GLX 5P",
+          "II 1.3 VVT 90 GLX SSP 5P",
+          "II 1.3 VVT 92 GL 3P",
+          "II 1.3 VVT 92 GLX 3P",
+          "II 1.3 VVT 92 GLX 4X4 5P",
+          "II 1.3 VVT 92 GLX BVA 3P",
+          "II 1.3 VVT 92 GLX BVA 5P",
+          "II 1.6 VVT 3P",
+          "II 1.6 VVT PACK 3P",
+          "II 1.9 DDIS 5P",
+          "II 2.0 LUXE BVA 5P"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2007": {
+        "essence": [
+          "II 1.3 DDIS 70 GL 3P",
+          "II 1.3 DDIS 70 GL 5P",
+          "II 1.3 DDIS 70 GLX 3P",
+          "II 1.3 DDIS 70 GLX 5P",
+          "II 1.3 DDIS 70 GLX EDITION LIMITEE 5P",
+          "II 1.3 VVT 90 GL 5P",
+          "II 1.3 VVT 90 GLX 5P",
+          "II 1.3 VVT 90 GLX SSP 5P",
+          "II 1.3 VVT 92 GL 3P",
+          "II 1.3 VVT 92 GLX 3P",
+          "II 1.3 VVT 92 GLX 4X4 5P",
+          "II 1.3 VVT 92 GLX BVA 3P",
+          "II 1.3 VVT 92 GLX BVA 5P",
+          "II 1.3 VVT 92 GLX EDITION LIMITEE 3P",
+          "II 1.3 VVT 92 GLX EDITION LIMITEE 5P",
+          "II 1.6 VVT 3P",
+          "II 1.6 VVT PACK 3P",
+          "II 1.9 DDIS 5P",
+          "II 2.0 LUXE BVA 5P"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2008": {
+        "essence": [
+          "II 1.3 DDIS 70 GL 3P",
+          "II 1.3 DDIS 70 GL 5P",
+          "II 1.3 DDIS 70 GLX 3P",
+          "II 1.3 DDIS 70 GLX 5P",
+          "II 1.3 DDIS 70 GLX EDITION LIMITEE 5P",
+          "II 1.3 DDIS 75 GL 3P",
+          "II 1.3 DDIS 75 GL 5P",
+          "II 1.3 DDIS 75 GLX 3P",
+          "II 1.3 DDIS 75 GLX 5P",
+          "II 1.3 VVT 90 GL 5P",
+          "II 1.3 VVT 90 GLX 5P",
+          "II 1.3 VVT 90 GLX SSP 5P",
+          "II 1.3 VVT 92 GL 3P",
+          "II 1.3 VVT 92 GL 5P",
+          "II 1.3 VVT 92 GLX 3P",
+          "II 1.3 VVT 92 GLX 4X4 5P",
+          "II 1.3 VVT 92 GLX 5P",
+          "II 1.3 VVT 92 GLX BVA 3P",
+          "II 1.3 VVT 92 GLX BVA 5P",
+          "II 1.3 VVT 92 GLX EDITION LIMITEE 3P",
+          "II 1.3 VVT 92 GLX EDITION LIMITEE 5P",
+          "II 1.3 VVT 92 GLX SSP 5P",
+          "II 1.6 VVT 3P",
+          "II 1.6 VVT PACK 3P",
+          "II 1.9 DDIS 5P",
+          "II 2.0 LUXE BVA 5P"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2009": {
+        "essence": [
+          "II 1.3 DDIS 75 ANNIVERSARY 5P",
+          "II 1.3 DDIS 75 GL 3P",
+          "II 1.3 DDIS 75 GL 5P",
+          "II 1.3 DDIS 75 GLX 3P",
+          "II 1.3 DDIS 75 GLX 5P",
+          "II 1.3 DDIS 75 MAC DOUGLAS 5P",
+          "II 1.3 VVT 90 MAC DOUGLAS",
+          "II 1.3 VVT 92 ANNIVERSARY 3P",
+          "II 1.3 VVT 92 ANNIVERSARY 5P",
+          "II 1.3 VVT 92 GL 3P",
+          "II 1.3 VVT 92 GL 5P",
+          "II 1.3 VVT 92 GLX 3P",
+          "II 1.3 VVT 92 GLX 4X4 5P",
+          "II 1.3 VVT 92 GLX 5P",
+          "II 1.3 VVT 92 GLX BVA 3P",
+          "II 1.3 VVT 92 GLX BVA 5P",
+          "II 1.3 VVT 92 GLX EDITION LIMITEE 3P",
+          "II 1.3 VVT 92 GLX EDITION LIMITEE 5P",
+          "II 1.3 VVT 92 GLX SSP 5P"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2010": {
+        "essence": [
+          "II 1.3 92 SWIFT IN THE CITY 3P",
+          "II 1.3 92 SWIFT IN THE CITY 5P",
+          "II 1.3 DDIS 75 ANNIVERSARY 5P",
+          "II 1.3 DDIS 75 GL 3P",
+          "II 1.3 DDIS 75 GL 5P",
+          "II 1.3 DDIS 75 GLX 3P",
+          "II 1.3 DDIS 75 GLX 5P",
+          "II 1.3 DDIS 75 MAC DOUGLAS 5P",
+          "II 1.3 DDIS 75 SWIFT IN THE CITY 3P",
+          "II 1.3 DDIS 75 SWIFT IN THE CITY 5P",
+          "II 1.3 VVT 90 MAC DOUGLAS",
+          "II 1.3 VVT 92 ANNIVERSARY 3P",
+          "II 1.3 VVT 92 ANNIVERSARY 5P",
+          "II 1.3 VVT 92 GL 3P",
+          "II 1.3 VVT 92 GL 5P",
+          "II 1.3 VVT 92 GLX 3P",
+          "II 1.3 VVT 92 GLX 4X4 5P",
+          "II 1.3 VVT 92 GLX 5P",
+          "II 1.3 VVT 92 GLX BVA 3P",
+          "II 1.3 VVT 92 GLX BVA 5P"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2011": {
+        "essence": [
+          "II 1.3 92 SWIFT IN THE CITY 3P",
+          "II 1.3 92 SWIFT IN THE CITY 5P",
+          "II 1.3 DDIS 75 SWIFT IN THE CITY 3P",
+          "II 1.3 DDIS 75 SWIFT IN THE CITY 5P"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      }
+    },
+    "Swift 3": {
+      "2010": {
+        "essence": [
+          "III 1.2 VVT GL 3P",
+          "III 1.2 VVT GL 5P",
+          "III 1.2 VVT GLX 3P",
+          "III 1.2 VVT GLX 5P",
+          "III 1.2 VVT GLX BVA 3P",
+          "III 1.2 VVT GLX BVA 5P",
+          "III 1.2 VVT LITTLE MARCEL 3P",
+          "III 1.2 VVT LITTLE MARCEL 5P",
+          "III 1.2 VVT LITTLE MARCEL AUTO 3P",
+          "III 1.2 VVT LITTLE MARCEL AUTO 5P",
+          "III 1.2 VVT SO COLOR 3P",
+          "III 1.2 VVT SO COLOR 5P",
+          "III 1.2 VVT SO COLOR AUTO 3P",
+          "III 1.2 VVT SO COLOR AUTO 5P",
+          "III 1.3 DDIS GL 3P",
+          "III 1.3 DDIS GL 5P",
+          "III 1.3 DDIS GLX 3P",
+          "III 1.3 DDIS GLX 5P",
+          "III 1.3 DDIS LITTLE MARCEL 3P",
+          "III 1.3 DDIS LITTLE MARCEL 5P",
+          "III 1.3 DDIS SO COLOR 3P",
+          "III 1.3 DDIS SO COLOR 5P"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2011": {
+        "essence": [
+          "III 1.2 VVT GL 3P",
+          "III 1.2 VVT GL 5P",
+          "III 1.2 VVT GLX 3P",
+          "III 1.2 VVT GLX 4X4 5P",
+          "III 1.2 VVT GLX 5P",
+          "III 1.2 VVT GLX BVA 3P",
+          "III 1.2 VVT GLX BVA 5P",
+          "III 1.2 VVT GLX PACK 3P",
+          "III 1.2 VVT GLX PACK 5P",
+          "III 1.2 VVT GLX PACK AUTO 3P",
+          "III 1.2 VVT GLX PACK AUTO 5P",
+          "III 1.2 VVT LITTLE MARCEL 3P",
+          "III 1.2 VVT LITTLE MARCEL 5P",
+          "III 1.2 VVT LITTLE MARCEL AUTO 3P",
+          "III 1.2 VVT LITTLE MARCEL AUTO 5P",
+          "III 1.2 VVT SO COLOR 3P",
+          "III 1.2 VVT SO COLOR 5P",
+          "III 1.2 VVT SO COLOR AUTO 3P",
+          "III 1.2 VVT SO COLOR AUTO 5P",
+          "III 1.3 DDIS GL 3P",
+          "III 1.3 DDIS GL 5P",
+          "III 1.3 DDIS GLX 3P",
+          "III 1.3 DDIS GLX 5P",
+          "III 1.3 DDIS GLX PACK 5P",
+          "III 1.3 DDIS LITTLE MARCEL 3P",
+          "III 1.3 DDIS LITTLE MARCEL 5P",
+          "III 1.3 DDIS SO COLOR 3P",
+          "III 1.3 DDIS SO COLOR 5P"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2012": {
+        "essence": [
+          "III 1.2 VVT GL 3P",
+          "III 1.2 VVT GL 5P",
+          "III 1.2 VVT GLX 3P",
+          "III 1.2 VVT GLX 4X4 5P",
+          "III 1.2 VVT GLX 5P",
+          "III 1.2 VVT GLX BVA 3P",
+          "III 1.2 VVT GLX BVA 5P",
+          "III 1.2 VVT GLX PACK 3P",
+          "III 1.2 VVT GLX PACK 5P",
+          "III 1.2 VVT GLX PACK AUTO 3P",
+          "III 1.2 VVT GLX PACK AUTO 5P",
+          "III 1.2 VVT IN THE CITY 3P",
+          "III 1.2 VVT IN THE CITY 5P",
+          "III 1.2 VVT LITTLE MARCEL 3P",
+          "III 1.2 VVT LITTLE MARCEL 5P",
+          "III 1.2 VVT LITTLE MARCEL AUTO 3P",
+          "III 1.2 VVT LITTLE MARCEL AUTO 5P",
+          "III 1.2 VVT SO COLOR 3P",
+          "III 1.2 VVT SO COLOR 5P",
+          "III 1.2 VVT SO COLOR AUTO 3P",
+          "III 1.2 VVT SO COLOR AUTO 5P",
+          "III 1.3 DDIS GL 3P",
+          "III 1.3 DDIS GL 5P",
+          "III 1.3 DDIS GLX 3P",
+          "III 1.3 DDIS GLX 5P",
+          "III 1.3 DDIS GLX PACK 5P",
+          "III 1.3 DDIS IN THE CITY 5P",
+          "III 1.3 DDIS LITTLE MARCEL 3P",
+          "III 1.3 DDIS LITTLE MARCEL 5P",
+          "III 1.3 DDIS SO COLOR 3P",
+          "III 1.3 DDIS SO COLOR 5P"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2013": {
+        "essence": [
+          "III 1.2 VVT AVANTAGE 3P",
+          "III 1.2 VVT GL 3P",
+          "III 1.2 VVT GL 5P",
+          "III 1.2 VVT GLX 3P",
+          "III 1.2 VVT GLX 4X4 5P",
+          "III 1.2 VVT GLX 5P",
+          "III 1.2 VVT GLX BVA 3P",
+          "III 1.2 VVT GLX BVA 5P",
+          "III 1.2 VVT GLX PACK 3P",
+          "III 1.2 VVT GLX PACK 5P",
+          "III 1.2 VVT GLX PACK AUTO 3P",
+          "III 1.2 VVT GLX PACK AUTO 5P",
+          "III 1.2 VVT IN THE CITY 3P",
+          "III 1.2 VVT IN THE CITY 5P",
+          "III 1.2 VVT LITTLE MARCEL 3P",
+          "III 1.2 VVT LITTLE MARCEL 5P",
+          "III 1.2 VVT LITTLE MARCEL AUTO 3P",
+          "III 1.2 VVT LITTLE MARCEL AUTO 5P",
+          "III 1.2 VVT NAVI 3P",
+          "III 1.2 VVT NAVI 5P",
+          "III 1.2 VVT NAVI AUTO 3P",
+          "III 1.2 VVT NAVI AUTO 5P",
+          "III 1.2 VVT PACK 3P",
+          "III 1.2 VVT PACK 4X4",
+          "III 1.2 VVT PACK 5P",
+          "III 1.2 VVT PACK AUTO 3P",
+          "III 1.2 VVT PACK AUTO 5P",
+          "III 1.2 VVT PRIVILEGE 3P",
+          "III 1.2 VVT PRIVILEGE 4X4 5P",
+          "III 1.2 VVT PRIVILEGE 5P",
+          "III 1.2 VVT SO CITY 3P",
+          "III 1.2 VVT SO CITY 5P",
+          "III 1.2 VVT SO CITY AUTO 3P",
+          "III 1.2 VVT SO CITY AUTO 5P",
+          "III 1.2 VVT SO COLOR 3P",
+          "III 1.2 VVT SO COLOR 5P",
+          "III 1.2 VVT SO COLOR AUTO 3P",
+          "III 1.2 VVT SO COLOR AUTO 5P",
+          "III 1.3 DDIS GL 3P",
+          "III 1.3 DDIS GL 5P",
+          "III 1.3 DDIS GLX 3P",
+          "III 1.3 DDIS GLX 5P",
+          "III 1.3 DDIS GLX PACK 5P",
+          "III 1.3 DDIS IN THE CITY 5P",
+          "III 1.3 DDIS LITTLE MARCEL 3P",
+          "III 1.3 DDIS LITTLE MARCEL 5P",
+          "III 1.3 DDIS PACK",
+          "III 1.3 DDIS PACK 5P",
+          "III 1.3 DDIS PRIVILEGE 3P",
+          "III 1.3 DDIS PRIVILEGE 5P",
+          "III 1.3 DDIS SO CITY 3P",
+          "III 1.3 DDIS SO CITY 5P",
+          "III 1.3 DDIS SO COLOR 3P",
+          "III 1.3 DDIS SO COLOR 5P"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2014": {
+        "essence": [
+          "III 1.2 VVT AVANTAGE 3P",
+          "III 1.2 VVT PACK 3P",
+          "III 1.2 VVT PACK 4X4",
+          "III 1.2 VVT PACK 5P",
+          "III 1.2 VVT PACK AUTO 3P",
+          "III 1.2 VVT PACK AUTO 5P",
+          "III 1.2 VVT PRIVILEGE 3P",
+          "III 1.2 VVT PRIVILEGE 4X4 5P",
+          "III 1.2 VVT PRIVILEGE 5P",
+          "III 1.2 VVT SO CITY 3P",
+          "III 1.2 VVT SO CITY 5P",
+          "III 1.2 VVT SO CITY AUTO 3P",
+          "III 1.2 VVT SO CITY AUTO 5P",
+          "III 1.3 DDIS PACK",
+          "III 1.3 DDIS PACK 5P",
+          "III 1.3 DDIS PRIVILEGE 3P",
+          "III 1.3 DDIS PRIVILEGE 5P",
+          "III 1.3 DDIS SO CITY 3P",
+          "III 1.3 DDIS SO CITY 5P"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2015": {
+        "essence": [
+          "III 1.2 VVT AVANTAGE 3P",
+          "III 1.2 VVT BIBA 5P",
+          "III 1.2 VVT CASUAL EDITION 5P",
+          "III 1.2 VVT PACK 3P",
+          "III 1.2 VVT PACK 4X4",
+          "III 1.2 VVT PACK 5P",
+          "III 1.2 VVT PACK AUTO 3P",
+          "III 1.2 VVT PACK AUTO 5P",
+          "III 1.2 VVT PRIVILEGE 3P",
+          "III 1.2 VVT PRIVILEGE 4X4 5P",
+          "III 1.2 VVT PRIVILEGE 5P",
+          "III 1.2 VVT PRIVILEGE AUTO 5P",
+          "III 1.2 VVT SO CITY 3P",
+          "III 1.2 VVT SO CITY 5P",
+          "III 1.2 VVT SO CITY AUTO 3P",
+          "III 1.2 VVT SO CITY AUTO 5P",
+          "III 1.3 DDIS BIBA 5P",
+          "III 1.3 DDIS PACK",
+          "III 1.3 DDIS PACK 5P",
+          "III 1.3 DDIS PRIVILEGE 3P",
+          "III 1.3 DDIS PRIVILEGE 5P",
+          "III 1.3 DDIS SO CITY 3P",
+          "III 1.3 DDIS SO CITY 5P"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2016": {
+        "essence": [
+          "III 1.2 VVT 94 IN THE CITY 5P",
+          "III 1.2 VVT AVANTAGE 3P",
+          "III 1.2 VVT BIBA 5P",
+          "III 1.2 VVT CASUAL EDITION 5P",
+          "III 1.2 VVT PACK 4X4",
+          "III 1.2 VVT PRIVILEGE 3P",
+          "III 1.2 VVT PRIVILEGE 4X4 5P",
+          "III 1.2 VVT PRIVILEGE 5P",
+          "III 1.2 VVT PRIVILEGE AUTO 5P",
+          "III 1.2 VVT SO CITY 5P",
+          "III 1.2 VVT SO CITY AUTO 5P",
+          "III 1.3 DDIS BIBA 5P",
+          "III 1.3 DDIS PRIVILEGE 5P",
+          "III 1.3 DDIS SO CITY 5P"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2017": {
+        "essence": [
+          "III 1.2 VVT 94 IN THE CITY 5P",
+          "III 1.2 VVT AVANTAGE 3P",
+          "III 1.2 VVT BIBA 5P",
+          "III 1.2 VVT CASUAL EDITION 5P",
+          "III 1.2 VVT PACK 4X4",
+          "III 1.2 VVT PRIVILEGE 3P",
+          "III 1.2 VVT PRIVILEGE 4X4 5P",
+          "III 1.2 VVT PRIVILEGE 5P",
+          "III 1.2 VVT PRIVILEGE AUTO 5P",
+          "III 1.2 VVT SO CITY 5P",
+          "III 1.2 VVT SO CITY AUTO 5P"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      }
+    },
+    "Swift 4": {
+      "2017": {
+        "essence": [
+          "IV 1.0 BOOSTERJET 111 PACK AUTO",
+          "IV 1.0 BOOSTERJET 111 PRIVILEGE",
+          "IV 1.0 BOOSTERJET 111 PRIVILEGE BVA",
+          "IV 1.2 DUALJET 90 AVANTAGE",
+          "IV 1.2 DUALJET 90 PRIVILEGE",
+          "IV 1.2 DUALJET 90 PRIVILEGE ALLGRIP 4WD"
+        ],
+        "diesel": [],
+        "hybride": [
+          "IV 1.0 BOOSTERJET 111 HYBRID SHVS S/S PACK",
+          "IV 1.2 DUALJET 90 HYBRID SHVS PACK ALLGRIP 4WD",
+          "IV 1.2 DUALJET 90 HYBRID SHVS S/S PACK"
+        ],
+        "electrique": [],
+        "gpl": []
+      },
+      "2018": {
+        "essence": [
+          "IV 1.0 BOOSTERJET 111 6CV PRIVILEGE",
+          "IV 1.0 BOOSTERJET 111 PACK AUTO",
+          "IV 1.0 BOOSTERJET 111 PRIVILEGE",
+          "IV 1.0 BOOSTERJET 111 PRIVILEGE BVA",
+          "IV 1.2 DUALJET 90 5CV AVANTAGE",
+          "IV 1.2 DUALJET 90 5CV PRIVILEGE",
+          "IV 1.2 DUALJET 90 AVANTAGE",
+          "IV 1.2 DUALJET 90 PRIVILEGE",
+          "IV 1.2 DUALJET 90 PRIVILEGE ALLGRIP 4WD"
+        ],
+        "diesel": [],
+        "hybride": [
+          "IV 1.0 BOOSTERJET 111 HYBRID SHVS S/S PACK",
+          "IV 1.2 DUALJET 90 HYBRID SHVS PACK ALLGRIP 4WD",
+          "IV 1.2 DUALJET 90 HYBRID SHVS S/S PACK"
+        ],
+        "electrique": [],
+        "gpl": []
+      },
+      "2019": {
+        "essence": [
+          "IV 1.0 BOOSTERJET 111 6CV PRIVILEGE",
+          "IV 1.0 BOOSTERJET 111 PACK AUTO",
+          "IV 1.2 DUALJET 90 5CV AVANTAGE",
+          "IV 1.2 DUALJET 90 5CV PRIVILEGE",
+          "IV 1.2 DUALJET 90 PRIVILEGE ALLGRIP 4WD"
+        ],
+        "diesel": [],
+        "hybride": [
+          "IV 1.0 BOOSTERJET 111 HYBRID SHVS S/S PACK",
+          "IV 1.0 BOOSTERJET HYBRID 111 PACK",
+          "IV 1.2 DUALJET 90 HYBRID SHVS PACK ALLGRIP 4WD",
+          "IV 1.2 DUALJET 90 HYBRID SHVS S/S PACK",
+          "IV 1.2 DUALJET HYBRID 90 AVANTAGE",
+          "IV 1.2 DUALJET HYBRID 90 PACK",
+          "IV 1.2 DUALJET HYBRID 90 PACK ALLGRIP 4WD",
+          "IV 1.2 DUALJET HYBRID 90 PRIVILEGE",
+          "IV 1.2 DUALJET HYBRID 90 PRIVILEGE ALLGRIP 4WD"
+        ],
+        "electrique": [],
+        "gpl": []
+      },
+      "2020": {
+        "essence": [
+          "IV 1.0 BOOSTERJET 111 6CV PRIVILEGE",
+          "IV 1.0 BOOSTERJET 111 PACK AUTO"
+        ],
+        "diesel": [],
+        "hybride": [
+          "IV 1.0 BOOSTERJET HYBRID 111 PACK",
+          "IV 1.2 DUALJET HYBRID 83 AVANTAGE",
+          "IV 1.2 DUALJET HYBRID 83 PACK",
+          "IV 1.2 DUALJET HYBRID 83 PACK ALLGRIP 4WD",
+          "IV 1.2 DUALJET HYBRID 83 PRIVILEGE",
+          "IV 1.2 DUALJET HYBRID 83 PRIVILEGE ALLGRIP 4WD",
+          "IV 1.2 DUALJET HYBRID 90 5CV PACK",
+          "IV 1.2 DUALJET HYBRID 90 5CV PACK ALLGRIP 4WD",
+          "IV 1.2 DUALJET HYBRID 90 5CV PRIVILEGE",
+          "IV 1.2 DUALJET HYBRID 90 5CV PRIVILEGE ALLGRIP 4WD",
+          "IV 1.2 DUALJET HYBRID 90 AVANTAGE",
+          "IV 1.2 DUALJET HYBRID 90 PACK",
+          "IV 1.2 DUALJET HYBRID 90 PACK ALLGRIP 4WD",
+          "IV 1.2 DUALJET HYBRID 90 PRIVILEGE",
+          "IV 1.2 DUALJET HYBRID 90 PRIVILEGE ALLGRIP 4WD",
+          "IV 1.2 DUALJET HYBRID PACK CVT",
+          "IV 1.2 DUALJET HYBRID PRIVILEGE CVT"
+        ],
+        "electrique": [],
+        "gpl": []
+      },
+      "2021": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [
+          "IV 1.2 DUALJET HYBRID 83 AVANTAGE",
+          "IV 1.2 DUALJET HYBRID 83 PACK",
+          "IV 1.2 DUALJET HYBRID 83 PACK ALLGRIP 4WD",
+          "IV 1.2 DUALJET HYBRID 83 PRIVILEGE",
+          "IV 1.2 DUALJET HYBRID 83 PRIVILEGE ALLGRIP 4WD",
+          "IV 1.2 DUALJET HYBRID PACK CVT",
+          "IV 1.2 DUALJET HYBRID PRIVILEGE CVT"
+        ],
+        "electrique": [],
+        "gpl": []
+      },
+      "2022": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [
+          "IV 1.2 DUALJET HYBRID 83 AVANTAGE",
+          "IV 1.2 DUALJET HYBRID 83 PACK",
+          "IV 1.2 DUALJET HYBRID 83 PACK ALLGRIP 4WD",
+          "IV 1.2 DUALJET HYBRID 83 PRIVILEGE",
+          "IV 1.2 DUALJET HYBRID 83 PRIVILEGE ALLGRIP 4WD",
+          "IV 1.2 DUALJET HYBRID AVANTAGE",
+          "IV 1.2 DUALJET HYBRID PACK CVT",
+          "IV 1.2 DUALJET HYBRID PRIVILEGE",
+          "IV 1.2 DUALJET HYBRID PRIVILEGE AUTO CVT",
+          "IV 1.2 DUALJET HYBRID PRIVILEGE CVT"
+        ],
+        "electrique": [],
+        "gpl": []
+      },
+      "2023": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [
+          "IV 1.2 DUALJET HYBRID 83 PACK",
+          "IV 1.2 DUALJET HYBRID 83 PACK ALLGRIP 4WD",
+          "IV 1.2 DUALJET HYBRID 83 PRIVILEGE ALLGRIP 4WD",
+          "IV 1.2 DUALJET HYBRID ALLGRIP PACK",
+          "IV 1.2 DUALJET HYBRID ALLGRIP PRIVILEGE",
+          "IV 1.2 DUALJET HYBRID AVANTAGE",
+          "IV 1.2 DUALJET HYBRID PACK",
+          "IV 1.2 DUALJET HYBRID PACK AUTO CVT",
+          "IV 1.2 DUALJET HYBRID PACK CVT",
+          "IV 1.2 DUALJET HYBRID PRIVILEGE",
+          "IV 1.2 DUALJET HYBRID PRIVILEGE AUTO CVT"
+        ],
+        "electrique": [],
+        "gpl": []
+      }
+    },
+    "Swift 5": {
+      "2023": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [
+          "1.2 DUALJET HYBRID ALLGRIP PACK",
+          "1.2 DUALJET HYBRID ALLGRIP PRIVILEGE",
+          "1.2 DUALJET HYBRID AVANTAGE",
+          "1.2 DUALJET HYBRID PACK",
+          "1.2 DUALJET HYBRID PACK AUTO",
+          "1.2 DUALJET HYBRID PRIVILEGE",
+          "1.2 DUALJET HYBRID PRIVILEGE AUTO"
+        ],
+        "electrique": [],
+        "gpl": []
+      },
+      "2024": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [
+          "1.2 DUALJET HYBRID ALLGRIP PACK",
+          "1.2 DUALJET HYBRID ALLGRIP PRIVILEGE",
+          "1.2 DUALJET HYBRID AVANTAGE",
+          "1.2 DUALJET HYBRID PACK",
+          "1.2 DUALJET HYBRID PACK AUTO",
+          "1.2 DUALJET HYBRID PRIVILEGE",
+          "1.2 DUALJET HYBRID PRIVILEGE AUTO"
+        ],
+        "electrique": [],
+        "gpl": []
+      },
+      "2025": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [
+          "1.2 DUALJET HYBRID ALLGRIP PACK",
+          "1.2 DUALJET HYBRID ALLGRIP PRIVILEGE",
+          "1.2 DUALJET HYBRID AVANTAGE",
+          "1.2 DUALJET HYBRID PACK",
+          "1.2 DUALJET HYBRID PACK AUTO",
+          "1.2 DUALJET HYBRID PRIVILEGE",
+          "1.2 DUALJET HYBRID PRIVILEGE AUTO"
+        ],
+        "electrique": [],
+        "gpl": []
+      },
+      "2026": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [
+          "1.2 DUALJET HYBRID ALLGRIP PACK",
+          "1.2 DUALJET HYBRID ALLGRIP PRIVILEGE",
+          "1.2 DUALJET HYBRID AVANTAGE",
+          "1.2 DUALJET HYBRID PACK",
+          "1.2 DUALJET HYBRID PACK AUTO",
+          "1.2 DUALJET HYBRID PRIVILEGE",
+          "1.2 DUALJET HYBRID PRIVILEGE AUTO"
+        ],
+        "electrique": [],
+        "gpl": []
+      }
+    },
+    "Sx4": {
+      "2006": {
+        "essence": [
+          "1.6 107 VVT GLX 4X4",
+          "1.6 VVT 107 GLX",
+          "1.9 DDIS 120 GLX",
+          "1.9 DDIS 120 GLX 4X4"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2007": {
+        "essence": [
+          "1.6 107 VVT GLX 4X4",
+          "1.6 VVT 107 GLX",
+          "1.9 DDIS 120 GLX",
+          "1.9 DDIS 120 GLX 4X4"
+        ],
+        "diesel": [
+          "1.6 DDIS 90 GL"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2008": {
+        "essence": [
+          "1.6 107 VVT GLX 4X4",
+          "1.6 VVT 107 GLX",
+          "1.9 DDIS 120 GLX",
+          "1.9 DDIS 120 GLX 4X4"
+        ],
+        "diesel": [
+          "1.6 DDIS 90 GL"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2009": {
+        "essence": [
+          "1.6 107 VVT GLX 4X4",
+          "1.6 VVT 107 GLX",
+          "1.9 DDIS 120 GLX",
+          "1.9 DDIS 120 GLX 4X4"
+        ],
+        "diesel": [
+          "1.6 DDIS 90 GL"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2010": {
+        "essence": [
+          "1.6 107 VVT GLX 4X4",
+          "1.6 VVT 107 GLX",
+          "1.9 DDIS 120 GLX",
+          "1.9 DDIS 120 GLX 4X4"
+        ],
+        "diesel": [
+          "1.6 DDIS 90 GL",
+          "2.0 DDIS 135 GLX 4X4",
+          "2.0 DDIS 135 XPLORE 4X4"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2011": {
+        "essence": [],
+        "diesel": [
+          "1.6 DDIS 90 GL",
+          "2.0 DDIS 135 GLX 4X4",
+          "2.0 DDIS 135 XPLORE 4X4",
+          "2.0 DDIS GL",
+          "2.0 DDIS SERIE SPECIALE XPLORE 4X4"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2012": {
+        "essence": [],
+        "diesel": [
+          "2.0 DDIS 135 GLX 4X4",
+          "2.0 DDIS 135 XPLORE 4X4",
+          "2.0 DDIS GL",
+          "2.0 DDIS SERIE SPECIALE XPLORE 4X4",
+          "2.0 DDIS XPLORE",
+          "2.0 DDIS XPLORE 4X4"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2013": {
+        "essence": [],
+        "diesel": [
+          "2.0 DDIS 135 GLX 4X4",
+          "2.0 DDIS 135 XPLORE 4X4",
+          "2.0 DDIS GL",
+          "2.0 DDIS XPLORE",
+          "2.0 DDIS XPLORE 4X4"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2014": {
+        "essence": [],
+        "diesel": [
+          "2.0 DDIS 135 GLX 4X4",
+          "2.0 DDIS 135 XPLORE 4X4",
+          "2.0 DDIS GL",
+          "2.0 DDIS XPLORE",
+          "2.0 DDIS XPLORE 4X4"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      }
+    },
+    "Sx4 Utilitaire": {
+      "2006": {
+        "essence": [],
+        "diesel": [
+          "2.0 DDIS GL",
+          "2.0 DDIS GLX 4X4",
+          "2.0 DDIS XPLORE 4X4"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2007": {
+        "essence": [
+          "1.6 VVT GLX",
+          "1.6 VVT GLX 4X4",
+          "1.9 DDIS GLX",
+          "1.9 DDIS GLX 4X4"
+        ],
+        "diesel": [
+          "1.6 DDIS GL"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2008": {
+        "essence": [
+          "1.6 VVT GLX",
+          "1.6 VVT GLX 4X4",
+          "1.9 DDIS GLX",
+          "1.9 DDIS GLX 4X4"
+        ],
+        "diesel": [
+          "1.6 DDIS GL"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2009": {
+        "essence": [
+          "1.6 VVT GLX",
+          "1.6 VVT GLX 4X4",
+          "1.9 DDIS GLX",
+          "1.9 DDIS GLX 4X4"
+        ],
+        "diesel": [
+          "1.6 DDIS GL"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2010": {
+        "essence": [
+          "1.6 VVT GLX",
+          "1.6 VVT GLX 4X4",
+          "1.9 DDIS GLX",
+          "1.9 DDIS GLX 4X4"
+        ],
+        "diesel": [
+          "1.6 DDIS GL",
+          "2.0 DDIS GL",
+          "2.0 DDIS GLX 4X4",
+          "2.0 DDIS XPLORE 4X4"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2011": {
+        "essence": [],
+        "diesel": [
+          "1.6 DDIS GL",
+          "2.0 DDIS GL",
+          "2.0 DDIS GLX 4X4",
+          "2.0 DDIS SERIE SPECIALE XPLORE",
+          "2.0 DDIS XPLORE 4X4"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2012": {
+        "essence": [],
+        "diesel": [
+          "2.0 DDIS GL",
+          "2.0 DDIS GLX 4X4",
+          "2.0 DDIS SERIE SPECIALE XPLORE",
+          "2.0 DDIS XPLORE 4X4"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2013": {
+        "essence": [],
+        "diesel": [
+          "2.0 DDIS GL",
+          "2.0 DDIS GLX 4X4",
+          "2.0 DDIS XPLORE 4X4"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2014": {
+        "essence": [],
+        "diesel": [
+          "2.0 DDIS GL",
+          "2.0 DDIS GLX 4X4",
+          "2.0 DDIS XPLORE 4X4"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      }
+    },
+    "Grand Vitara": {
+      "2005": {
+        "essence": [
+          "2.0 STD",
+          "2.5 V6 BVA 5P",
+          "2.5 V6 LUXE 5P 11CV"
+        ],
+        "diesel": [
+          "1.6 STD 3P",
+          "2.0 16S TD COMMON RAIL 3P",
+          "2.0 16S TD COMMON RAIL 5P",
+          "2.0 16S TD SERIE LIMITEE 3P",
+          "2.0 16S TD SERIE LIMITEE 5P"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2006": {
+        "essence": [],
+        "diesel": [
+          "2.0 16V TD LUXE 5P",
+          "2.0 TD 5P"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2007": {
+        "essence": [],
+        "diesel": [
+          "2.0 16V TD LUXE 5P",
+          "2.0 TD 5P"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2008": {
+        "essence": [],
+        "diesel": [
+          "2.0 16V TD LUXE 5P",
+          "2.0 TD 5P"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2009": {
+        "essence": [],
+        "diesel": [
+          "2.0 16V TD LUXE 5P",
+          "2.0 TD 5P"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2010": {
+        "essence": [],
+        "diesel": [
+          "2.0 16V TD LUXE 5P",
+          "2.0 TD 5P"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2011": {
+        "essence": [],
+        "diesel": [
+          "2.0 16V TD LUXE 5P",
+          "2.0 TD 5P"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2012": {
+        "essence": [],
+        "diesel": [
+          "2.0 16V TD LUXE 5P",
+          "2.0 TD 5P"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      }
+    },
+    "Grand Vitara 2": {
+      "2005": {
+        "essence": [
+          "II 1.9 DDIS 130 3P",
+          "II 1.9 DDIS 130 LUXE 5P",
+          "II 1.9 DDIS 130 PACK 3P",
+          "II 2.0 140 LUXE 5P"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2006": {
+        "essence": [
+          "II 1.9 DDIS 130 3P",
+          "II 1.9 DDIS 130 LUXE 5P",
+          "II 1.9 DDIS 130 PACK 3P",
+          "II 2.0 140 LUXE 5P"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2007": {
+        "essence": [
+          "II 1.6 VVT 106 SERIE SPECIALE 3P",
+          "II 1.9 DDIS 130 3P",
+          "II 1.9 DDIS 130 LUXE 5P",
+          "II 1.9 DDIS 130 PACK 3P",
+          "II 1.9 DDIS 130 SERIE SPECIALE 3P",
+          "II 2.0 140 LUXE 5P"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2008": {
+        "essence": [
+          "II 1.6 VVT 106 3P",
+          "II 1.6 VVT 106 PACK 3P",
+          "II 1.6 VVT 106 SERIE SPECIALE 3P",
+          "II 1.9 DDIS 130 3P",
+          "II 1.9 DDIS 130 5P",
+          "II 1.9 DDIS 130 LUXE 5P",
+          "II 1.9 DDIS 130 PACK 3P",
+          "II 1.9 DDIS 130 SERIE SPECIALE 3P",
+          "II 1.9 DDIS 130 SERIE SPECIALE 5P",
+          "II 2.0 140 LUXE 5P",
+          "II 2.0 140 LUXE BVA 5P"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2009": {
+        "essence": [
+          "II 1.6 VVT 106 3P",
+          "II 1.6 VVT 106 PACK 3P",
+          "II 1.6 VVT 106 SERIE SPECIALE 3P",
+          "II 1.9 DDIS 130 3P",
+          "II 1.9 DDIS 130 5P",
+          "II 1.9 DDIS 130 LUXE 5P",
+          "II 1.9 DDIS 130 PACK 3P",
+          "II 1.9 DDIS 130 SERIE SPECIALE 3P",
+          "II 1.9 DDIS 130 SERIE SPECIALE 5P",
+          "II 2.0 140 LUXE 5P",
+          "II 2.0 140 LUXE BVA 5P"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2010": {
+        "essence": [
+          "II 1.9 DDIS 130 3P",
+          "II 1.9 DDIS 130 5P",
+          "II 1.9 DDIS 130 LUXE 5P",
+          "II 1.9 DDIS 130 PACK 3P",
+          "II 1.9 DDIS 130 SERIE SPECIALE URBAN 3P",
+          "II 2.0 140 LUXE 5P",
+          "II 2.0 140 LUXE BVA 5P"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2011": {
+        "essence": [
+          "II 1.9 DDIS 130 3P",
+          "II 1.9 DDIS 130 5P",
+          "II 1.9 DDIS 130 LUXE 5P",
+          "II 1.9 DDIS 130 LUXE URBAN 5P",
+          "II 1.9 DDIS 130 SERIE SPECIALE URBAN 3P"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2012": {
+        "essence": [
+          "II 1.9 DDIS 130 3P",
+          "II 1.9 DDIS 130 5P",
+          "II 1.9 DDIS 130 LUXE URBAN 5P",
+          "II 1.9 DDIS 130 SERIE SPECIALE URBAN 3P"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2013": {
+        "essence": [
+          "II 1.9 DDIS 130 3P",
+          "II 1.9 DDIS 130 5P"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2014": {
+        "essence": [
+          "II 1.9 DDIS 130 3P",
+          "II 1.9 DDIS 130 5P"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2015": {
+        "essence": [
+          "II 1.9 DDIS 130 3P",
+          "II 1.9 DDIS 130 5P"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      }
+    },
+    "Grand Vitara Utilitaire": {
+      "2005": {
+        "essence": [
+          "1.6 LUXE 3P"
+        ],
+        "diesel": [
+          "1.6 STD 3P",
+          "2.0 TD LUXE 3P",
+          "2.0 TD STD 3P"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2006": {
+        "essence": [
+          "1.6 BERLINE 3P STD",
+          "1.6 LUXE 3P",
+          "1.6 VVT",
+          "1.6 VVT PACK",
+          "1.9 DDIS",
+          "1.9 DDIS LUXE",
+          "1.9 DDIS PACK",
+          "2.0 LUXE",
+          "2.0 LUXE AUTO"
+        ],
+        "diesel": [
+          "1.6 STD 3P",
+          "2.0 16V TD COMMON RAIL STD 3P",
+          "2.0 16V TD COMMON RAIL STD 5P",
+          "2.0 16V TD SERIE LIMITEE 3P",
+          "2.0 16V TD SERIE LIMITEE 5P",
+          "2.0 TD LUXE 3P",
+          "2.0 TD STD 3P"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2007": {
+        "essence": [
+          "1.6 BERLINE 3P STD",
+          "1.6 VVT",
+          "1.6 VVT PACK",
+          "1.6 VVT SERIE SPECIALE",
+          "1.9 DDIS",
+          "1.9 DDIS LUXE",
+          "1.9 DDIS PACK",
+          "1.9 DDIS SERIE SPECIALE",
+          "2.0 LUXE",
+          "2.0 LUXE AUTO"
+        ],
+        "diesel": [
+          "2.0 16V TD COMMON RAIL STD 3P",
+          "2.0 16V TD COMMON RAIL STD 5P",
+          "2.0 16V TD SERIE LIMITEE 3P",
+          "2.0 16V TD SERIE LIMITEE 5P",
+          "2.0 TD LUXE 3P",
+          "2.0 TD STD 3P"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2008": {
+        "essence": [
+          "1.6 BERLINE 3P STD",
+          "1.6 VVT",
+          "1.6 VVT PACK",
+          "1.6 VVT SERIE SPECIALE",
+          "1.9 DDIS",
+          "1.9 DDIS LUXE",
+          "1.9 DDIS PACK",
+          "1.9 DDIS SERIE SPECIALE",
+          "2.0 LUXE",
+          "2.0 LUXE AUTO"
+        ],
+        "diesel": [
+          "2.0 16V TD COMMON RAIL STD 3P",
+          "2.0 16V TD COMMON RAIL STD 5P",
+          "2.0 16V TD SERIE LIMITEE 3P",
+          "2.0 16V TD SERIE LIMITEE 5P",
+          "2.0 TD LUXE 3P",
+          "2.0 TD STD 3P"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2009": {
+        "essence": [
+          "1.6 BERLINE 3P STD",
+          "1.6 VVT",
+          "1.6 VVT PACK",
+          "1.6 VVT SERIE SPECIALE",
+          "1.9 DDIS",
+          "1.9 DDIS LUXE",
+          "1.9 DDIS PACK",
+          "1.9 DDIS SERIE SPECIALE",
+          "2.0 LUXE",
+          "2.0 LUXE AUTO"
+        ],
+        "diesel": [
+          "2.0 16V TD COMMON RAIL STD 3P",
+          "2.0 16V TD COMMON RAIL STD 5P",
+          "2.0 16V TD SERIE LIMITEE 3P",
+          "2.0 16V TD SERIE LIMITEE 5P",
+          "2.0 TD LUXE 3P",
+          "2.0 TD STD 3P"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2010": {
+        "essence": [
+          "1.6 BERLINE 3P STD",
+          "1.6 VVT",
+          "1.6 VVT PACK",
+          "1.6 VVT SERIE SPECIALE",
+          "1.9 DDIS",
+          "1.9 DDIS LUXE",
+          "1.9 DDIS PACK",
+          "1.9 DDIS SERIE SPECIALE",
+          "1.9 DDIS URBAN 3P",
+          "2.0 LUXE",
+          "2.0 LUXE AUTO"
+        ],
+        "diesel": [
+          "2.0 16V TD COMMON RAIL STD 3P",
+          "2.0 16V TD COMMON RAIL STD 5P",
+          "2.0 16V TD SERIE LIMITEE 3P",
+          "2.0 16V TD SERIE LIMITEE 5P",
+          "2.0 TD LUXE 3P",
+          "2.0 TD STD 3P"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2011": {
+        "essence": [
+          "1.9 DDIS",
+          "1.9 DDIS 7CV 3P",
+          "1.9 DDIS 7CV 5P",
+          "1.9 DDIS 7CV LUXE URBAN 5P",
+          "1.9 DDIS 7CV SERIE SPECIALE URBAN 3P",
+          "1.9 DDIS LUXE",
+          "1.9 DDIS LUXE URBAN",
+          "1.9 DDIS URBAN 3P"
+        ],
+        "diesel": [
+          "2.0 TD LUXE 3P",
+          "2.0 TD STD 3P"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2012": {
+        "essence": [
+          "1.9 DDIS 3P",
+          "1.9 DDIS 5P",
+          "1.9 DDIS 7CV 3P",
+          "1.9 DDIS 7CV 5P",
+          "1.9 DDIS 7CV LUXE URBAN 5P",
+          "1.9 DDIS 7CV SERIE SPECIALE URBAN 3P"
+        ],
+        "diesel": [
+          "2.0 TD LUXE 3P",
+          "2.0 TD STD 3P"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      }
+    },
+    "Jimny": {
+      "2005": {
+        "essence": [
+          "1.3 JLX",
+          "1.3 LUXE BVA",
+          "1.3 MAORI SE",
+          "1.3 MAORI SE CABRIOLET",
+          "1.3 OXBOW",
+          "1.3 OXBOW CABRIOLET",
+          "1.3 VVT 65 LUXE BERLINE BVA",
+          "1.3 VVT JLX BERLINE",
+          "1.3 VVT MAORI SE BERLINE"
+        ],
+        "diesel": [
+          "1.5 DDIS JLX",
+          "1.5 DDIS JLX CABRIOLET",
+          "1.5 DDIS MAORI SE",
+          "1.5 DDIS MAORI SE CABRIOLET"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2006": {
+        "essence": [
+          "1.3 JLX",
+          "1.3 MAORI SE CABRIOLET",
+          "1.3 VVT 65 LUXE BERLINE BVA",
+          "1.3 VVT 65 SERIE SPECIALE BVA",
+          "1.3 VVT 85 LIGNE VERNEY CARRON CABRIOLET",
+          "1.3 VVT 85 LIGNE VERNEY-CARRON",
+          "1.3 VVT 85 SERIE SPECIALE",
+          "1.3 VVT JLX BERLINE",
+          "1.3 VVT MAORI SE BERLINE"
+        ],
+        "diesel": [
+          "1.5 DDIS 5CV MAORI SE",
+          "1.5 DDIS 84 JLX",
+          "1.5 DDIS 84 MAORI SE",
+          "1.5 DDIS JLX",
+          "1.5 DDIS JLX CABRIOLET",
+          "1.5 DDIS MAORI SE",
+          "1.5 DDIS MAORI SE CABRIOLET",
+          "1.5 DDIS SERIE SPECIALE"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2007": {
+        "essence": [
+          "1.3 MAORI SE CABRIOLET",
+          "1.3 VVT 65 LUXE BERLINE BVA",
+          "1.3 VVT 65 SERIE SPECIALE BVA",
+          "1.3 VVT 85 JLX CABRIOLET",
+          "1.3 VVT 85 LIGNE VERNEY CARRON CABRIOLET",
+          "1.3 VVT 85 LIGNE VERNEY-CARRON",
+          "1.3 VVT 85 LUXE BERLINE BVA",
+          "1.3 VVT 85 MAORI SE BERLINE",
+          "1.3 VVT 85 SERIE SPECIALE",
+          "1.3 VVT 85 SERIE SPECIALE BVA",
+          "1.3 VVT JLX BERLINE",
+          "1.3 VVT MAORI SE BERLINE"
+        ],
+        "diesel": [
+          "1.5 DDIS JLX",
+          "1.5 DDIS JLX CABRIOLET",
+          "1.5 DDIS MAORI SE",
+          "1.5 DDIS MAORI SE CABRIOLET",
+          "1.5 DDIS SERIE SPECIALE"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2008": {
+        "essence": [
+          "1.3 MAORI SE CABRIOLET",
+          "1.3 VVT 85 JLX CABRIOLET",
+          "1.3 VVT 85 LIGNE VERNEY CARRON CABRIOLET",
+          "1.3 VVT 85 LIGNE VERNEY-CARRON",
+          "1.3 VVT 85 LUXE BERLINE BVA",
+          "1.3 VVT 85 MAORI SE BERLINE",
+          "1.3 VVT 85 SERIE SPECIALE",
+          "1.3 VVT 85 SERIE SPECIALE BVA",
+          "1.3 VVT JLX BERLINE"
+        ],
+        "diesel": [
+          "1.5 DDIS JLX",
+          "1.5 DDIS JLX CABRIOLET",
+          "1.5 DDIS JLX CABRIOLET SERIE SPECIALE",
+          "1.5 DDIS MAORI SE",
+          "1.5 DDIS MAORI SE CABRIOLET",
+          "1.5 DDIS SERIE SPECIALE"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2009": {
+        "essence": [
+          "1.3 MAORI SE CABRIOLET",
+          "1.3 VVT 85 JLX CABRIOLET",
+          "1.3 VVT 85 LIGNE VERNEY CARRON CABRIOLET",
+          "1.3 VVT 85 LIGNE VERNEY-CARRON",
+          "1.3 VVT 85 LUXE BERLINE BVA",
+          "1.3 VVT 85 MAORI SE BERLINE",
+          "1.3 VVT 85 SERIE SPECIALE",
+          "1.3 VVT 85 SERIE SPECIALE BVA",
+          "1.3 VVT JLX BERLINE"
+        ],
+        "diesel": [
+          "1.5 DDIS JLX",
+          "1.5 DDIS JLX CABRIOLET",
+          "1.5 DDIS JLX CABRIOLET SERIE SPECIALE",
+          "1.5 DDIS MAORI SE",
+          "1.5 DDIS MAORI SE CABRIOLET",
+          "1.5 DDIS SERIE SPECIALE"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2010": {
+        "essence": [
+          "1.3 MAORI SE CABRIOLET",
+          "1.3 VVT 85 JLX CABRIOLET",
+          "1.3 VVT 85 JX",
+          "1.3 VVT 85 LIGNE VERNEY CARRON CABRIOLET",
+          "1.3 VVT 85 LIGNE VERNEY-CARRON",
+          "1.3 VVT 85 LUXE BERLINE BVA",
+          "1.3 VVT 85 MAORI SE BERLINE",
+          "1.3 VVT 85 SERIE SPECIALE",
+          "1.3 VVT 85 SERIE SPECIALE BVA",
+          "1.3 VVT JLX BERLINE"
+        ],
+        "diesel": [
+          "1.5 DDIS JLX",
+          "1.5 DDIS JLX CABRIOLET",
+          "1.5 DDIS JLX CABRIOLET SERIE SPECIALE",
+          "1.5 DDIS MAORI SE",
+          "1.5 DDIS MAORI SE CABRIOLET",
+          "1.5 DDIS SERIE SPECIALE"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2011": {
+        "essence": [
+          "1.3 VVT 85 JX",
+          "1.3 VVT JLX BERLINE"
+        ],
+        "diesel": [
+          "1.5 DDIS JLX"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2012": {
+        "essence": [
+          "1.3 VVT 85 JX",
+          "1.3 VVT 86 JLX",
+          "1.3 VVT 86 JX",
+          "1.3 VVT JLX BERLINE"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2013": {
+        "essence": [
+          "1.3 VVT 85 JX",
+          "1.3 VVT 86 JLX",
+          "1.3 VVT 86 JX",
+          "1.3 VVT JLX BERLINE"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2014": {
+        "essence": [
+          "1.3 VVT 85 JX",
+          "1.3 VVT 86 JLX",
+          "1.3 VVT 86 JX",
+          "1.3 VVT JLX BERLINE"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2015": {
+        "essence": [
+          "1.3 VVT 85 JX",
+          "1.3 VVT 86 JLX",
+          "1.3 VVT 86 JX",
+          "1.3 VVT JLX AUTO",
+          "1.3 VVT JLX BERLINE"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2016": {
+        "essence": [
+          "1.3 VVT 85 JX",
+          "1.3 VVT JLX AUTO",
+          "1.3 VVT JLX BERLINE"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2017": {
+        "essence": [
+          "1.3 VVT 85 JX",
+          "1.3 VVT JLX AUTO",
+          "1.3 VVT JLX BERLINE"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2018": {
+        "essence": [
+          "1.3 VVT 85 JX",
+          "1.3 VVT JLX AUTO",
+          "1.3 VVT JLX BERLINE"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      }
+    },
+    "Jimny Utilitaire": {
+      "2005": {
+        "essence": [
+          "SOCIETE 1.3 LUXE CABRIOLET 3P",
+          "SOCIETE 1.3 VVT JLX"
+        ],
+        "diesel": [
+          "SOCIETE 1.3 STD CABRIOLET 3P",
+          "SOCIETE 1.5 DDIS JLX",
+          "SOCIETE 1.5 DDIS MAORI SE",
+          "SOCIETE 1.9 TD JLX 3P",
+          "SOCIETE 1.9 TD JX 3P"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2006": {
+        "essence": [
+          "SOCIETE 1.3 LUXE CABRIOLET 3P",
+          "SOCIETE 1.3 VVT JLX",
+          "SOCIETE 1.3 VVT JLX SERIE SPECIALE",
+          "SOCIETE 1.3 VVT JLX SERIE SPECIALE AUTO",
+          "SOCIETE 1.3 VVT LIGNE VERNEY-CARRON",
+          "SOCIETE 1.3 VVT LUXE AUTO",
+          "SOCIETE 1.3 VVT MAORI SE"
+        ],
+        "diesel": [
+          "SOCIETE 1.3 STD CABRIOLET 3P",
+          "SOCIETE 1.5 DDIS CABRIOLET JLX",
+          "SOCIETE 1.5 DDIS CABRIOLET MAORI SE",
+          "SOCIETE 1.5 DDIS JLX",
+          "SOCIETE 1.5 DDIS JLX SERIE SPECIALE",
+          "SOCIETE 1.5 DDIS MAORI SE",
+          "SOCIETE 1.9 TD JLX 3P",
+          "SOCIETE 1.9 TD JX 3P"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2007": {
+        "essence": [
+          "SOCIETE 1.3 LUXE CABRIOLET 3P",
+          "SOCIETE 1.3 VVT JLX",
+          "SOCIETE 1.3 VVT JLX SERIE SPECIALE",
+          "SOCIETE 1.3 VVT JLX SERIE SPECIALE AUTO",
+          "SOCIETE 1.3 VVT LIGNE VERNEY-CARRON",
+          "SOCIETE 1.3 VVT LUXE AUTO",
+          "SOCIETE 1.3 VVT MAORI SE"
+        ],
+        "diesel": [
+          "SOCIETE 1.3 STD CABRIOLET 3P",
+          "SOCIETE 1.5 DDIS CABRIOLET JLX",
+          "SOCIETE 1.5 DDIS CABRIOLET MAORI SE",
+          "SOCIETE 1.5 DDIS JLX",
+          "SOCIETE 1.5 DDIS JLX SERIE SPECIALE",
+          "SOCIETE 1.5 DDIS MAORI SE"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2008": {
+        "essence": [
+          "SOCIETE 1.3 LUXE CABRIOLET 3P",
+          "SOCIETE 1.3 VVT JLX",
+          "SOCIETE 1.3 VVT JLX SERIE SPECIALE",
+          "SOCIETE 1.3 VVT JLX SERIE SPECIALE AUTO",
+          "SOCIETE 1.3 VVT LIGNE VERNEY-CARRON",
+          "SOCIETE 1.3 VVT LUXE AUTO",
+          "SOCIETE 1.3 VVT MAORI SE"
+        ],
+        "diesel": [
+          "SOCIETE 1.3 STD CABRIOLET 3P",
+          "SOCIETE 1.5 DDIS CABRIOLET JLX",
+          "SOCIETE 1.5 DDIS CABRIOLET MAORI SE",
+          "SOCIETE 1.5 DDIS JLX",
+          "SOCIETE 1.5 DDIS JLX SERIE SPECIALE",
+          "SOCIETE 1.5 DDIS MAORI SE"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2009": {
+        "essence": [
+          "SOCIETE 1.3 LUXE CABRIOLET 3P",
+          "SOCIETE 1.3 VVT JLX",
+          "SOCIETE 1.3 VVT JLX SERIE SPECIALE",
+          "SOCIETE 1.3 VVT JLX SERIE SPECIALE AUTO",
+          "SOCIETE 1.3 VVT LIGNE VERNEY-CARRON",
+          "SOCIETE 1.3 VVT LUXE AUTO",
+          "SOCIETE 1.3 VVT MAORI SE"
+        ],
+        "diesel": [
+          "SOCIETE 1.3 STD CABRIOLET 3P",
+          "SOCIETE 1.5 DDIS CABRIOLET JLX",
+          "SOCIETE 1.5 DDIS CABRIOLET MAORI SE",
+          "SOCIETE 1.5 DDIS JLX",
+          "SOCIETE 1.5 DDIS JLX SERIE SPECIALE",
+          "SOCIETE 1.5 DDIS MAORI SE"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2010": {
+        "essence": [
+          "SOCIETE 1.3 LUXE CABRIOLET 3P",
+          "SOCIETE 1.3 VVT JLX",
+          "SOCIETE 1.3 VVT JLX SERIE SPECIALE",
+          "SOCIETE 1.3 VVT JLX SERIE SPECIALE AUTO",
+          "SOCIETE 1.3 VVT JX",
+          "SOCIETE 1.3 VVT LIGNE VERNEY-CARRON",
+          "SOCIETE 1.3 VVT LUXE AUTO",
+          "SOCIETE 1.3 VVT MAORI SE"
+        ],
+        "diesel": [
+          "SOCIETE 1.3 STD CABRIOLET 3P",
+          "SOCIETE 1.5 DDIS CABRIOLET JLX",
+          "SOCIETE 1.5 DDIS CABRIOLET MAORI SE",
+          "SOCIETE 1.5 DDIS JLX",
+          "SOCIETE 1.5 DDIS JLX SERIE SPECIALE",
+          "SOCIETE 1.5 DDIS MAORI SE"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2011": {
+        "essence": [
+          "SOCIETE 1.3 LUXE CABRIOLET 3P",
+          "SOCIETE 1.3 VVT JLX",
+          "SOCIETE 1.3 VVT JX"
+        ],
+        "diesel": [
+          "SOCIETE 1.3 STD CABRIOLET 3P",
+          "SOCIETE 1.5 DDIS JLX"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2012": {
+        "essence": [
+          "SOCIETE 1.3 LUXE CABRIOLET 3P",
+          "SOCIETE 1.3 VVT JLX",
+          "SOCIETE 1.3 VVT JX"
+        ],
+        "diesel": [
+          "SOCIETE 1.3 STD CABRIOLET 3P"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2013": {
+        "essence": [
+          "SOCIETE 1.3 VVT JLX",
+          "SOCIETE 1.3 VVT JX"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2014": {
+        "essence": [
+          "SOCIETE 1.3 VVT JLX",
+          "SOCIETE 1.3 VVT JX"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2015": {
+        "essence": [
+          "SOCIETE 1.3 VVT JLX",
+          "SOCIETE 1.3 VVT JX"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2016": {
+        "essence": [
+          "SOCIETE 1.3 VVT JLX",
+          "SOCIETE 1.3 VVT JX"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2017": {
+        "essence": [
+          "SOCIETE 1.3 VVT JLX",
+          "SOCIETE 1.3 VVT JX"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2018": {
+        "essence": [
+          "SOCIETE 1.3 VVT JLX",
+          "SOCIETE 1.3 VVT JX"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      }
+    },
+    "Jimny 2": {
+      "2018": {
+        "essence": [
+          "II 1.5 VVT 102 ALLGRIP PRO AVANTAGE",
+          "II 1.5 VVT 102 ALLGRIP PRO PACK",
+          "II 1.5 VVT 102 ALLGRIP PRO PACK AUTO",
+          "II 1.5 VVT 102 ALLGRIP PRO PRIVILEGE"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2019": {
+        "essence": [
+          "II 1.5 VVT 102 ALLGRIP PRO AVANTAGE",
+          "II 1.5 VVT 102 ALLGRIP PRO PACK",
+          "II 1.5 VVT 102 ALLGRIP PRO PACK AUTO",
+          "II 1.5 VVT 102 ALLGRIP PRO PRIVILEGE"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2020": {
+        "essence": [
+          "II 1.5 VVT 102 ALLGRIP PRO AVANTAGE",
+          "II 1.5 VVT 102 ALLGRIP PRO PACK",
+          "II 1.5 VVT 102 ALLGRIP PRO PACK AUTO",
+          "II 1.5 VVT 102 ALLGRIP PRO PRIVILEGE"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2021": {
+        "essence": [
+          "II 1.5 VVT PRIVILEGE 2PL"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2022": {
+        "essence": [
+          "II 1.5 VVT PRIVILEGE 2PL"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2023": {
+        "essence": [
+          "II 1.5 VVT PRIVILEGE 2PL"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2024": {
+        "essence": [
+          "II 1.5 VVT PRIVILEGE 2PL"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2025": {
+        "essence": [
+          "II 1.5 VVT PRIVILEGE 2PL"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2026": {
+        "essence": [
+          "II 1.5 VVT PRIVILEGE 2PL"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      }
+    },
+    "Jimny 2 Utilitaire": {
+      "2018": {
+        "essence": [
+          "II 1.5 VVT PRIVILEGE 2PL"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2019": {
+        "essence": [
+          "II 1.5 VVT PRIVILEGE 2PL"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2020": {
+        "essence": [
+          "II 1.5 VVT PRIVILEGE 2PL"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2021": {
+        "essence": [
+          "II 1.5 VVT PRIVILEGE 2 PLACES"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2022": {
+        "essence": [
+          "II 1.5 VVT PRIVILEGE 2 PLACES",
+          "II 1.5 VVT PRIVILEGE 2PL"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2023": {
+        "essence": [
+          "II 1.5 VVT PRIVILEGE 2PL"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2024": {
+        "essence": [
+          "II 1.5 VVT PRIVILEGE 2PL"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2025": {
+        "essence": [
+          "II 1.5 VVT PRIVILEGE 2PL"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2026": {
+        "essence": [
+          "II 1.5 VVT PRIVILEGE 2PL"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      }
+    },
+    "Splash": {
+      "2008": {
+        "essence": [
+          "1.0 VVT 65 GL",
+          "1.2 86 GLS",
+          "1.2 VVT 94 GLS BVA",
+          "1.3 DDIS 75 GLS"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2009": {
+        "essence": [
+          "1.0 VVT 65 GL",
+          "1.0 VVT 65 GL PACK",
+          "1.2 86 GLS",
+          "1.2 VVT 94 GLS BVA",
+          "1.3 DDIS 75 GL",
+          "1.3 DDIS 75 GLS"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2010": {
+        "essence": [
+          "1.0 PACK TRANQUILITE",
+          "1.0 VVT 65 GL",
+          "1.0 VVT 65 GL PACK",
+          "1.2 86 GLS",
+          "1.2 VVT 94 GLS BVA",
+          "1.3 DDIS 75 GL",
+          "1.3 DDIS 75 GLS",
+          "1.3 DDIS PACK TRANQUILITE"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2011": {
+        "essence": [
+          "1.0 PACK TRANQUILITE",
+          "1.0 VVT 65 GL",
+          "1.0 VVT 65 GL PACK",
+          "1.2 VVT 94 GLS AUTO",
+          "1.2 VVT 94 GLS BVA",
+          "1.3 DDIS 75 GLS",
+          "1.3 DDIS PACK TRANQUILITE"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2012": {
+        "essence": [
+          "1.0 VVT 65 GL",
+          "1.0 VVT 65 GL PACK",
+          "1.0 VVT GL PACK",
+          "1.2 VVT 94 GLS AUTO",
+          "1.2 VVT 94 GLS BVA"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2013": {
+        "essence": [
+          "1.0 VVT 65 GL",
+          "1.0 VVT 65 GL PACK",
+          "1.0 VVT GL PACK",
+          "1.2 VVT 94 GLS AUTO",
+          "1.2 VVT 94 GLS BVA"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2014": {
+        "essence": [
+          "1.0 VVT 65 GL",
+          "1.0 VVT 65 GL PACK",
+          "1.0 VVT GL PACK",
+          "1.2 VVT 94 GLS AUTO",
+          "1.2 VVT 94 GLS BVA"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2015": {
+        "essence": [
+          "1.0 VVT 65 GL",
+          "1.0 VVT 65 GL PACK",
+          "1.0 VVT GL PACK",
+          "1.2 VVT 94 GLS AUTO",
+          "1.2 VVT 94 GLS BVA"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      }
+    },
+    "Splash Utilitaire": {
+      "2008": {
+        "essence": [
+          "1.0 GL",
+          "1.0 GL PACK",
+          "1.2 VVT 6CV GLS AUTO"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2009": {
+        "essence": [
+          "1.2 GLS",
+          "1.2 GLS BVA",
+          "1.3 GLS DDIS"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2010": {
+        "essence": [
+          "1.0 GL PACK TRANQUILITE",
+          "1.2 GLS",
+          "1.2 GLS BVA",
+          "1.3 DDIS PACK TRANQUILITE",
+          "1.3 GLS DDIS"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2011": {
+        "essence": [
+          "1.0 6CV GL PACK TRANQUILITE",
+          "1.0 GL PACK TRANQUILITE",
+          "1.2 GLS BVA",
+          "1.3 DDIS GLS PACK TRANQUILITE",
+          "1.3 DDIS PACK TRANQUILITE",
+          "1.3 GLS DDIS"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2012": {
+        "essence": [
+          "1.0 GL",
+          "1.0 GL PACK",
+          "1.0 VVT GL",
+          "1.2 VVT GLS AUTO"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2013": {
+        "essence": [
+          "1.0 GL",
+          "1.0 GL PACK",
+          "1.0 VVT GL",
+          "1.2 VVT 6CV GLS AUTO",
+          "1.2 VVT GLS AUTO"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2014": {
+        "essence": [
+          "1.0 GL",
+          "1.0 GL PACK",
+          "1.2 VVT 6CV GLS AUTO"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2015": {
+        "essence": [
+          "1.0 GL",
+          "1.0 GL PACK",
+          "1.2 VVT 6CV GLS AUTO"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      }
+    },
+    "Alto": {
+      "2009": {
+        "essence": [
+          "GL 3P",
+          "GL 5P"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2010": {
+        "essence": [
+          "GL 3P",
+          "GL 5P"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2011": {
+        "essence": [
+          "GL 3P",
+          "GL 5P"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2012": {
+        "essence": [
+          "GL 3P",
+          "GL 5P"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2013": {
+        "essence": [
+          "GL 3P",
+          "GL 5P"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2014": {
+        "essence": [
+          "GL 3P",
+          "GL 5P"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2015": {
+        "essence": [
+          "GL 3P",
+          "GL 5P"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      }
+    },
+    "Alto 2": {
+      "2014": {
+        "essence": [
+          "II 1.0",
+          "II 1.0 GL",
+          "II 1.0 VVT GL AUTO"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2015": {
+        "essence": [
+          "II 1.0",
+          "II 1.0 GL",
+          "II 1.0 VVT GL AUTO"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2016": {
+        "essence": [
+          "II 1.0",
+          "II 1.0 GL",
+          "II 1.0 VVT GL AUTO"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2017": {
+        "essence": [
+          "II 1.0",
+          "II 1.0 GL",
+          "II 1.0 VVT GL AUTO"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2018": {
+        "essence": [
+          "II 1.0",
+          "II 1.0 GL",
+          "II 1.0 VVT GL AUTO"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2019": {
+        "essence": [
+          "II 1.0",
+          "II 1.0 GL",
+          "II 1.0 VVT GL AUTO"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2020": {
+        "essence": [
+          "II 1.0",
+          "II 1.0 GL",
+          "II 1.0 VVT GL AUTO"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      }
+    },
+    "Alto Societe": {
+      "2009": {
+        "essence": [
+          "1.0",
+          "1.0 GL",
+          "1.0 GL AUTO"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2010": {
+        "essence": [
+          "1.0",
+          "1.0 GL",
+          "1.0 GL AUTO",
+          "1.0 GL BVA",
+          "1.0 WHITE AND BLACK EDITION"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2011": {
+        "essence": [
+          "1.0",
+          "1.0 AZURIO",
+          "1.0 GL",
+          "1.0 GL AUTO",
+          "1.0 GL BVA",
+          "1.0 WHITE AND BLACK EDITION"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2012": {
+        "essence": [
+          "1.0",
+          "1.0 AZURIO",
+          "1.0 GL",
+          "1.0 GL AUTO",
+          "1.0 GL BVA",
+          "1.0 VVT",
+          "1.0 VVT GL"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2013": {
+        "essence": [
+          "1.0",
+          "1.0 GL",
+          "1.0 GL AUTO",
+          "1.0 VVT",
+          "1.0 VVT GL"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2014": {
+        "essence": [
+          "1.0",
+          "1.0 GL",
+          "1.0 GL AUTO"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2015": {
+        "essence": [
+          "1.0",
+          "1.0 GL",
+          "1.0 GL AUTO"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      }
+    },
+    "Liana": {
+      "2005": {
+        "essence": [
+          "1.3 GLX",
+          "1.4 DDIS GLX",
+          "1.6 4X4 GLX 7CV"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2006": {
+        "essence": [
+          "1.3 GLX",
+          "1.4 DDIS",
+          "1.4 DDIS GLX",
+          "1.6 4X4 GLX 7CV"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2007": {
+        "essence": [
+          "1.3 GLX",
+          "1.4 DDIS",
+          "1.4 DDIS GLX",
+          "1.6 4X4 GLX 7CV"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      }
+    },
+    "Ignis 3": {
+      "2020": {
+        "essence": [
+          "III 1.2 DUALJET PACK AUTO AGS"
+        ],
+        "diesel": [],
+        "hybride": [
+          "III (2) 1.2 DUALJET HYBRID AVANTAGE",
+          "III (2) 1.2 DUALJET HYBRID PACK",
+          "III (2) 1.2 DUALJET HYBRID PACK ALLGRIP",
+          "III (2) 1.2 DUALJET HYBRID PACK CVT",
+          "III (2) 1.2 DUALJET HYBRID PRIVILEGE",
+          "III (2) 1.2 DUALJET HYBRID PRIVILEGE ALLGRIP",
+          "III (2) 1.2 DUALJET HYBRID PRIVILEGE CVT",
+          "III 1.2 DUALJET HYBRID AVANTAGE",
+          "III 1.2 DUALJET HYBRID PACK",
+          "III 1.2 DUALJET HYBRID PRIVILEGE",
+          "III 1.2 DUALJET HYBRID PRIVILEGE ALLGRIP",
+          "III 1.2 DUALJET HYBRID SHVS 5CV PACK ALLGRIP"
+        ],
+        "electrique": [],
+        "gpl": []
+      },
+      "2021": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [
+          "III (2) 1.2 DUALJET HYBRID AVANTAGE",
+          "III (2) 1.2 DUALJET HYBRID PACK",
+          "III (2) 1.2 DUALJET HYBRID PACK ALLGRIP",
+          "III (2) 1.2 DUALJET HYBRID PACK CVT",
+          "III (2) 1.2 DUALJET HYBRID PRIVILEGE",
+          "III (2) 1.2 DUALJET HYBRID PRIVILEGE ALLGRIP",
+          "III (2) 1.2 DUALJET HYBRID PRIVILEGE CVT"
+        ],
+        "electrique": [],
+        "gpl": []
+      },
+      "2022": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [
+          "III (2) 1.2 DUALJET HYBRID ALLGRIP PACK",
+          "III (2) 1.2 DUALJET HYBRID ALLGRIP PRIVILEGE",
+          "III (2) 1.2 DUALJET HYBRID AUTO CVT PRIVILEGE AUTO CVT",
+          "III (2) 1.2 DUALJET HYBRID AVANTAGE",
+          "III (2) 1.2 DUALJET HYBRID AVANTAGE 2022",
+          "III (2) 1.2 DUALJET HYBRID PACK",
+          "III (2) 1.2 DUALJET HYBRID PACK 2022",
+          "III (2) 1.2 DUALJET HYBRID PACK ALLGRIP",
+          "III (2) 1.2 DUALJET HYBRID PACK AUTO CVT",
+          "III (2) 1.2 DUALJET HYBRID PACK CVT",
+          "III (2) 1.2 DUALJET HYBRID PRIVILEGE",
+          "III (2) 1.2 DUALJET HYBRID PRIVILEGE 2022",
+          "III (2) 1.2 DUALJET HYBRID PRIVILEGE ALLGRIP",
+          "III (2) 1.2 DUALJET HYBRID PRIVILEGE CVT"
+        ],
+        "electrique": [],
+        "gpl": []
+      },
+      "2023": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [
+          "III (2) 1.2 DUALJET HYBRID ALLGRIP PACK",
+          "III (2) 1.2 DUALJET HYBRID ALLGRIP PRIVILEGE",
+          "III (2) 1.2 DUALJET HYBRID AUTO CVT PRIVILEGE AUTO CVT",
+          "III (2) 1.2 DUALJET HYBRID AVANTAGE",
+          "III (2) 1.2 DUALJET HYBRID AVANTAGE 2022",
+          "III (2) 1.2 DUALJET HYBRID PACK",
+          "III (2) 1.2 DUALJET HYBRID PACK 2022",
+          "III (2) 1.2 DUALJET HYBRID PACK AUTO CVT",
+          "III (2) 1.2 DUALJET HYBRID PRIVILEGE",
+          "III (2) 1.2 DUALJET HYBRID PRIVILEGE 2022",
+          "III (2) 1.2 DUALJET HYBRID PRIVILEGE AUTO CVT"
+        ],
+        "electrique": [],
+        "gpl": []
+      },
+      "2024": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [
+          "III (2) 1.2 DUALJET HYBRID ALLGRIP PACK",
+          "III (2) 1.2 DUALJET HYBRID ALLGRIP PRIVILEGE",
+          "III (2) 1.2 DUALJET HYBRID AVANTAGE",
+          "III (2) 1.2 DUALJET HYBRID PACK",
+          "III (2) 1.2 DUALJET HYBRID PACK AUTO CVT",
+          "III (2) 1.2 DUALJET HYBRID PRIVILEGE",
+          "III (2) 1.2 DUALJET HYBRID PRIVILEGE AUTO CVT"
+        ],
+        "electrique": [],
+        "gpl": []
+      },
+      "2025": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [
+          "III (2) 1.2 DUALJET HYBRID ALLGRIP PACK",
+          "III (2) 1.2 DUALJET HYBRID ALLGRIP PRIVILEGE",
+          "III (2) 1.2 DUALJET HYBRID AVANTAGE",
+          "III (2) 1.2 DUALJET HYBRID PACK",
+          "III (2) 1.2 DUALJET HYBRID PACK AUTO CVT",
+          "III (2) 1.2 DUALJET HYBRID PRIVILEGE",
+          "III (2) 1.2 DUALJET HYBRID PRIVILEGE AUTO CVT"
+        ],
+        "electrique": [],
+        "gpl": []
+      },
+      "2026": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [
+          "III (2) 1.2 DUALJET HYBRID ALLGRIP PACK",
+          "III (2) 1.2 DUALJET HYBRID ALLGRIP PRIVILEGE",
+          "III (2) 1.2 DUALJET HYBRID AVANTAGE",
+          "III (2) 1.2 DUALJET HYBRID PACK",
+          "III (2) 1.2 DUALJET HYBRID PACK AUTO CVT",
+          "III (2) 1.2 DUALJET HYBRID PRIVILEGE",
+          "III (2) 1.2 DUALJET HYBRID PRIVILEGE AUTO CVT"
+        ],
+        "electrique": [],
+        "gpl": []
+      }
+    },
+    "Baleno 2": {
+      "2022": {
+        "essence": [
+          "II 1.0 BOOSTERJET 6CV PACK",
+          "II 1.0 BOOSTERJET PACK AUTO",
+          "II 1.2 DUALJET 5CV PACK",
+          "II 1.2 DUALJET 5CV PRIVILEGE"
+        ],
+        "diesel": [],
+        "hybride": [
+          "II 1.2 HYBRID SHVS PACK"
+        ],
+        "electrique": [],
+        "gpl": []
+      },
+      "2023": {
+        "essence": [
+          "II 1.0 BOOSTERJET 6CV PACK",
+          "II 1.0 BOOSTERJET PACK AUTO",
+          "II 1.2 DUALJET 5CV PACK",
+          "II 1.2 DUALJET 5CV PRIVILEGE"
+        ],
+        "diesel": [],
+        "hybride": [
+          "II 1.2 HYBRID SHVS PACK"
+        ],
+        "electrique": [],
+        "gpl": []
+      },
+      "2024": {
+        "essence": [
+          "II 1.0 BOOSTERJET 6CV PACK",
+          "II 1.0 BOOSTERJET PACK AUTO",
+          "II 1.2 DUALJET 5CV PACK",
+          "II 1.2 DUALJET 5CV PRIVILEGE"
+        ],
+        "diesel": [],
+        "hybride": [
+          "II 1.2 HYBRID SHVS PACK"
+        ],
+        "electrique": [],
+        "gpl": []
+      },
+      "2025": {
+        "essence": [
+          "II 1.0 BOOSTERJET 6CV PACK",
+          "II 1.0 BOOSTERJET PACK AUTO",
+          "II 1.2 DUALJET 5CV PACK",
+          "II 1.2 DUALJET 5CV PRIVILEGE"
+        ],
+        "diesel": [],
+        "hybride": [
+          "II 1.2 HYBRID SHVS PACK"
+        ],
+        "electrique": [],
+        "gpl": []
+      },
+      "2026": {
+        "essence": [
+          "II 1.0 BOOSTERJET 6CV PACK",
+          "II 1.0 BOOSTERJET PACK AUTO",
+          "II 1.2 DUALJET 5CV PACK",
+          "II 1.2 DUALJET 5CV PRIVILEGE"
+        ],
+        "diesel": [],
+        "hybride": [
+          "II 1.2 HYBRID SHVS PACK"
+        ],
+        "electrique": [],
+        "gpl": []
+      }
+    },
+    "Baleno Break": {
+      "2005": {
+        "essence": [
+          "BREAK 1.6 GLX 6CV"
+        ],
+        "diesel": [
+          "BREAK 1.9 TD GLX"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2006": {
+        "essence": [
+          "BREAK 1.6 GLX 6CV"
+        ],
+        "diesel": [
+          "BREAK 1.9 TD GLX"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2007": {
+        "essence": [
+          "BREAK 1.6 GLX 6CV"
+        ],
+        "diesel": [
+          "BREAK 1.9 TD GLX"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2008": {
+        "essence": [
+          "BREAK 1.6 GLX 6CV"
+        ],
+        "diesel": [
+          "BREAK 1.9 TD GLX"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2009": {
+        "essence": [
+          "BREAK 1.6 GLX 6CV"
+        ],
+        "diesel": [
+          "BREAK 1.9 TD GLX"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      }
+    },
+    "Vitara 4": {
+      "2022": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [
+          "IV (2) 1.4 BOOSTERJET HYBRID AVANTAGE",
+          "IV (2) 1.4 BOOSTERJET HYBRID PRIVILEGE",
+          "IV (2) 1.4 BOOSTERJET HYBRID PRIVILEGE ALLGRIP",
+          "IV (2) 1.4 BOOSTERJET HYBRID PRIVILEGE ALLGRIP AUTO",
+          "IV (2) 1.4 BOOSTERJET HYBRID PRIVILEGE AUTO",
+          "IV (2) 1.4 BOOSTERJET HYBRID PRIVLIEGE ALLGRIP AUTO",
+          "IV (2) 1.4 BOOSTERJET HYBRID STYLE",
+          "IV (2) 1.4 BOOSTERJET HYBRID STYLE ALLGRIP",
+          "IV (2) 1.4 BOOSTERJET HYBRID STYLE ALLGRIP AUTO",
+          "IV (2) 1.4 BOOSTERJET HYBRID STYLE AUTO",
+          "IV (2) 1.5 DUALJET ALLGRIP HYBRID PACK AUTO",
+          "IV (2) 1.5 DUALJET ALLGRIP HYBRID PRIVILEGE AUTO",
+          "IV (2) 1.5 DUALJET ALLGRIP HYBRID STYLE AUTO",
+          "IV (2) 1.5 DUALJET HYBRID 102 STYLE AUTO",
+          "IV (2) 1.5 DUALJET HYBRID PRIVILEGE AUTO"
+        ],
+        "electrique": [],
+        "gpl": []
+      },
+      "2023": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [
+          "IV (2) 1.4 BOOSTERJET ALLGRIP HYBRID GRAND LARGE",
+          "IV (2) 1.4 BOOSTERJET HYBRID AVANTAGE",
+          "IV (2) 1.4 BOOSTERJET HYBRID GRAND LARGE",
+          "IV (2) 1.4 BOOSTERJET HYBRID PRIVILEGE",
+          "IV (2) 1.4 BOOSTERJET HYBRID PRIVILEGE ALLGRIP",
+          "IV (2) 1.4 BOOSTERJET HYBRID PRIVILEGE ALLGRIP AUTO",
+          "IV (2) 1.4 BOOSTERJET HYBRID STYLE",
+          "IV (2) 1.4 BOOSTERJET HYBRID STYLE ALLGRIP",
+          "IV (2) 1.5 DUALJET ALLGRIP HYBRID AUTO GRAND LARGE",
+          "IV (2) 1.5 DUALJET ALLGRIP HYBRID PACK AUTO",
+          "IV (2) 1.5 DUALJET ALLGRIP HYBRID PRIVILEGE AUTO",
+          "IV (2) 1.5 DUALJET ALLGRIP HYBRID STYLE AUTO",
+          "IV (2) 1.5 DUALJET HYBRID 102 STYLE AUTO",
+          "IV (2) 1.5 DUALJET HYBRID AUTO GRAND LARGE",
+          "IV (2) 1.5 DUALJET HYBRID PRIVILEGE AUTO"
+        ],
+        "electrique": [],
+        "gpl": []
+      },
+      "2024": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [
+          "IV (2) 1.4 BOOSTERJET ALLGRIP HYBRID GRAND LARGE",
+          "IV (2) 1.4 BOOSTERJET HYBRID AVANTAGE",
+          "IV (2) 1.4 BOOSTERJET HYBRID GRAND LARGE",
+          "IV (2) 1.4 BOOSTERJET HYBRID PRIVILEGE",
+          "IV (2) 1.4 BOOSTERJET HYBRID PRIVILEGE ALLGRIP",
+          "IV (2) 1.4 BOOSTERJET HYBRID PRIVILEGE ALLGRIP AUTO",
+          "IV (2) 1.4 BOOSTERJET HYBRID STYLE",
+          "IV (2) 1.4 BOOSTERJET HYBRID STYLE ALLGRIP",
+          "IV (2) 1.5 DUALJET ALLGRIP HYBRID AUTO GRAND LARGE",
+          "IV (2) 1.5 DUALJET ALLGRIP HYBRID PRIVILEGE AUTO",
+          "IV (2) 1.5 DUALJET ALLGRIP HYBRID STYLE AUTO",
+          "IV (2) 1.5 DUALJET HYBRID 102 STYLE AUTO",
+          "IV (2) 1.5 DUALJET HYBRID AUTO GRAND LARGE",
+          "IV (2) 1.5 DUALJET HYBRID PRIVILEGE AUTO",
+          "IV (3) 1.4 BOOSTERJET HYBRID 130 ALLGRIP PRIVILEGE",
+          "IV (3) 1.4 BOOSTERJET HYBRID 130 ALLGRIP STYLE",
+          "IV (3) 1.4 BOOSTERJET HYBRID 130 AVANTAGE",
+          "IV (3) 1.4 BOOSTERJET HYBRID 130 PRIVILEGE",
+          "IV (3) 1.4 BOOSTERJET HYBRID 130 STYLE",
+          "IV (3) 1.5 DUALJET HYBRID 115 ALLGRIP PRIVILEGE AUTO",
+          "IV (3) 1.5 DUALJET HYBRID 115 ALLGRIP STYLE AUTO",
+          "IV (3) 1.5 DUALJET HYBRID 115 PRIVILEGE AUTO",
+          "IV (3) 1.5 DUALJET HYBRID 115 STYLE AUTO"
+        ],
+        "electrique": [],
+        "gpl": []
+      },
+      "2025": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [
+          "IV (2) 1.4 BOOSTERJET HYBRID PRIVILEGE ALLGRIP AUTO",
+          "IV (2) 1.5 DUALJET HYBRID 102 STYLE AUTO",
+          "IV (3) 1.4 BOOSTERJET ALLGRIP HYBRID PRIVILEGE",
+          "IV (3) 1.4 BOOSTERJET ALLGRIP HYBRID PRIVILEGE AUTO",
+          "IV (3) 1.4 BOOSTERJET ALLGRIP HYBRID STYLE",
+          "IV (3) 1.4 BOOSTERJET ALLGRIP HYBRID STYLE AUTO",
+          "IV (3) 1.4 BOOSTERJET HYBRID 130 ALLGRIP PRIVILEGE",
+          "IV (3) 1.4 BOOSTERJET HYBRID 130 ALLGRIP STYLE",
+          "IV (3) 1.4 BOOSTERJET HYBRID 130 AVANTAGE",
+          "IV (3) 1.4 BOOSTERJET HYBRID 130 PRIVILEGE",
+          "IV (3) 1.4 BOOSTERJET HYBRID 130 STYLE",
+          "IV (3) 1.4 BOOSTERJET HYBRID AVANTAGE",
+          "IV (3) 1.4 BOOSTERJET HYBRID PRIVILEGE",
+          "IV (3) 1.4 BOOSTERJET HYBRID PRIVILEGE AUTO",
+          "IV (3) 1.4 BOOSTERJET HYBRID STYLE",
+          "IV (3) 1.4 BOOSTERJET HYBRID STYLE AUTO",
+          "IV (3) 1.5 DUALJET HYBRID 115 ALLGRIP PRIVILEGE AUTO",
+          "IV (3) 1.5 DUALJET HYBRID 115 ALLGRIP STYLE AUTO",
+          "IV (3) 1.5 DUALJET HYBRID 115 PRIVILEGE AUTO",
+          "IV (3) 1.5 DUALJET HYBRID 115 STYLE AUTO"
+        ],
+        "electrique": [],
+        "gpl": []
+      },
+      "2026": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [
+          "IV (2) 1.4 BOOSTERJET HYBRID PRIVILEGE ALLGRIP AUTO",
+          "IV (3) 1.4 BOOSTERJET ALLGRIP HYBRID PRIVILEGE",
+          "IV (3) 1.4 BOOSTERJET ALLGRIP HYBRID PRIVILEGE AUTO",
+          "IV (3) 1.4 BOOSTERJET ALLGRIP HYBRID STYLE",
+          "IV (3) 1.4 BOOSTERJET ALLGRIP HYBRID STYLE AUTO",
+          "IV (3) 1.4 BOOSTERJET HYBRID 110 ALLGRIP XPLORE",
+          "IV (3) 1.4 BOOSTERJET HYBRID 110 ALLGRIP XPLORE AUTO",
+          "IV (3) 1.4 BOOSTERJET HYBRID 110 XPLORE",
+          "IV (3) 1.4 BOOSTERJET HYBRID 110 XPLORE AUTO",
+          "IV (3) 1.4 BOOSTERJET HYBRID AVANTAGE",
+          "IV (3) 1.4 BOOSTERJET HYBRID PRIVILEGE",
+          "IV (3) 1.4 BOOSTERJET HYBRID PRIVILEGE AUTO",
+          "IV (3) 1.4 BOOSTERJET HYBRID STYLE",
+          "IV (3) 1.4 BOOSTERJET HYBRID STYLE AUTO"
+        ],
+        "electrique": [],
+        "gpl": []
+      }
+    },
+    "S Cross 2": {
+      "2021": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [
+          "1.4 BOOSTERJET HYBRID PRIVILEGE",
+          "1.4 BOOSTERJET HYBRID PRIVILEGE 2020",
+          "1.4 BOOSTERJET HYBRID PRIVILEGE AUTO",
+          "II 1.4 BOOSTERJET ALLGRIP HYBRID AUTO STYLE",
+          "II 1.4 BOOSTERJET ALLGRIP HYBRID PRIVILEGE B",
+          "II 1.4 BOOSTERJET ALLGRIP HYBRID STYLE B",
+          "II 1.4 BOOSTERJET HYBRID AVANTAGE 2020",
+          "II 1.4 BOOSTERJET HYBRID AVANTAGE B",
+          "II 1.4 BOOSTERJET HYBRID PRIVILEGE ALLGRIP",
+          "II 1.4 BOOSTERJET HYBRID PRIVILEGE AUTO B",
+          "II 1.4 BOOSTERJET HYBRID STYLE 2020",
+          "II 1.4 BOOSTERJET HYBRID STYLE ALLGRIP",
+          "II 1.4 BOOSTERJET HYBRID STYLE ALLGRIP AUTO",
+          "II 1.4 BOOSTERJET HYBRID STYLE B"
+        ],
+        "electrique": [],
+        "gpl": []
+      },
+      "2022": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [
+          "1.4 BOOSTERJET HYBRID PRIVILEGE",
+          "1.4 BOOSTERJET HYBRID PRIVILEGE 2020",
+          "1.4 BOOSTERJET HYBRID PRIVILEGE AUTO",
+          "II 1.4 BOOSTERJET ALLGRIP HYBRID AUTO STYLE",
+          "II 1.4 BOOSTERJET ALLGRIP HYBRID PRIVILEGE B",
+          "II 1.4 BOOSTERJET ALLGRIP HYBRID STYLE B",
+          "II 1.4 BOOSTERJET HYBRID AVANTAGE 2020",
+          "II 1.4 BOOSTERJET HYBRID AVANTAGE B",
+          "II 1.4 BOOSTERJET HYBRID PRIVILEGE ALLGRIP",
+          "II 1.4 BOOSTERJET HYBRID PRIVILEGE AUTO B",
+          "II 1.4 BOOSTERJET HYBRID STYLE 2020",
+          "II 1.4 BOOSTERJET HYBRID STYLE ALLGRIP",
+          "II 1.4 BOOSTERJET HYBRID STYLE ALLGRIP AUTO",
+          "II 1.4 BOOSTERJET HYBRID STYLE B",
+          "II 1.5 DUALJET ALLGRIP HYBRID PACK AUTO",
+          "II 1.5 DUALJET ALLGRIP HYBRID STYLE AUTO",
+          "II 1.5 DUALJET HYBRID PRIVILEGE AUTO",
+          "II 1.5 DUALJET HYBRID STYLE AUTO"
+        ],
+        "electrique": [],
+        "gpl": []
+      },
+      "2023": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [
+          "1.4 BOOSTERJET HYBRID PRIVILEGE",
+          "II 1.4 BOOSTERJET ALLGRIP HYBRID PRIVILEGE B",
+          "II 1.4 BOOSTERJET ALLGRIP HYBRID STYLE B",
+          "II 1.4 BOOSTERJET HYBRID AVANTAGE B",
+          "II 1.4 BOOSTERJET HYBRID STYLE B",
+          "II 1.5 DUALJET ALLGRIP HYBRID PACK AUTO",
+          "II 1.5 DUALJET ALLGRIP HYBRID STYLE AUTO",
+          "II 1.5 DUALJET HYBRID PRIVILEGE AUTO",
+          "II 1.5 DUALJET HYBRID STYLE AUTO"
+        ],
+        "electrique": [],
+        "gpl": []
+      },
+      "2024": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [
+          "1.4 BOOSTERJET HYBRID PRIVILEGE",
+          "II 1.4 BOOSTERJET ALLGRIP HYBRID PRIVILEGE B",
+          "II 1.4 BOOSTERJET ALLGRIP HYBRID STYLE B",
+          "II 1.4 BOOSTERJET HYBRID AVANTAGE B",
+          "II 1.4 BOOSTERJET HYBRID STYLE B",
+          "II 1.5 DUALJET ALLGRIP HYBRID STYLE AUTO",
+          "II 1.5 DUALJET HYBRID PRIVILEGE AUTO",
+          "II 1.5 DUALJET HYBRID STYLE AUTO"
+        ],
+        "electrique": [],
+        "gpl": []
+      },
+      "2025": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [
+          "1.4 BOOSTERJET HYBRID PRIVILEGE",
+          "II 1.4 BOOSTERJET ALLGRIP HYBRID PRIVILEGE",
+          "II 1.4 BOOSTERJET ALLGRIP HYBRID PRIVILEGE B",
+          "II 1.4 BOOSTERJET ALLGRIP HYBRID STYLE",
+          "II 1.4 BOOSTERJET ALLGRIP HYBRID STYLE AUTO",
+          "II 1.4 BOOSTERJET ALLGRIP HYBRID STYLE B",
+          "II 1.4 BOOSTERJET HYBRID AVANTAGE",
+          "II 1.4 BOOSTERJET HYBRID AVANTAGE B",
+          "II 1.4 BOOSTERJET HYBRID PRIVILEGE",
+          "II 1.4 BOOSTERJET HYBRID PRIVILEGE AUTO",
+          "II 1.4 BOOSTERJET HYBRID STYLE",
+          "II 1.4 BOOSTERJET HYBRID STYLE AUTO",
+          "II 1.4 BOOSTERJET HYBRID STYLE B",
+          "II 1.5 DUALJET ALLGRIP HYBRID STYLE AUTO",
+          "II 1.5 DUALJET HYBRID PRIVILEGE AUTO",
+          "II 1.5 DUALJET HYBRID STYLE AUTO"
+        ],
+        "electrique": [],
+        "gpl": []
+      },
+      "2026": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [
+          "II 1.4 BOOSTERJET ALLGRIP HYBRID PRIVILEGE",
+          "II 1.4 BOOSTERJET ALLGRIP HYBRID STYLE",
+          "II 1.4 BOOSTERJET ALLGRIP HYBRID STYLE AUTO",
+          "II 1.4 BOOSTERJET HYBRID 110 ALLGRIP XPLORE",
+          "II 1.4 BOOSTERJET HYBRID 110 ALLGRIP XPLORE AUTO",
+          "II 1.4 BOOSTERJET HYBRID 110 XPLORE",
+          "II 1.4 BOOSTERJET HYBRID 110 XPLORE AUTO",
+          "II 1.4 BOOSTERJET HYBRID AVANTAGE",
+          "II 1.4 BOOSTERJET HYBRID PRIVILEGE",
+          "II 1.4 BOOSTERJET HYBRID PRIVILEGE AUTO",
+          "II 1.4 BOOSTERJET HYBRID STYLE",
+          "II 1.4 BOOSTERJET HYBRID STYLE AUTO"
+        ],
         "electrique": [],
         "gpl": []
       }
