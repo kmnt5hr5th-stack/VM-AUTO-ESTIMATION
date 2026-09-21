@@ -210,9 +210,11 @@ def get_versions_for_year(model_slug, year):
         if clean == year_pattern.rstrip("/"):
             continue
         # Must be a version link (not just /YYYY/)
-        after = clean[len(base_pattern):]   # e.g. "2015/220+d+4matic"
+        after = clean[len(base_pattern):]   # e.g. "2019/1-4-boosterjet-140"
         parts = after.split("/")
         if len(parts) < 2 or not parts[1]:
+            continue
+        if parts[0] != year:  # ignorer les versions d'autres années
             continue
         txt = a.get_text(strip=True)
         if txt and len(txt) > 3 and txt not in versions:
