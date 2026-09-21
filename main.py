@@ -192,7 +192,7 @@ async def _run_estimation(req: EstimationRequest) -> dict:
     try:
         lbc_prices = await asyncio.wait_for(
             lbc.get_prices(marque_search, req.modele, req.annee, req.kilometrage, **lbc_args),
-            timeout=45,
+            timeout=90,
         )
         sources_detail["leboncoin"] = {"annonces": len(lbc_prices)}
         all_prices.extend(lbc_prices)

@@ -1339,7 +1339,7 @@ class LeboncoinScraper(BaseScraper):
                                  carburant=carburant, boite=boite, motorisation=motorisation,
                                  type_vehicule=type_vehicule, finition=finition,
                                  carrosserie=carrosserie),
-                timeout=45,
+                timeout=40,
             )
         except Exception:
             prix = []
