@@ -14,7 +14,7 @@ from scrapers.caradisiac_scraper import (
 logging.basicConfig(level=logging.INFO, format="%(message)s")
 log = logging.getLogger(__name__)
 
-OUTPUT   = Path(__file__).parent / "caradisiac_catalog.json"
+OUTPUT   = Path(__file__).parent / "vm_catalog.json"
 FUEL_KEYS = ["essence", "diesel", "hybride", "electrique", "gpl"]
 MIN_YEAR  = 2005
 EXCLUDE   = {"BENTLEY", "FERRARI", "LAMBORGHINI", "ASTON MARTIN", "ROLLS-ROYCE", "MASERATI"}

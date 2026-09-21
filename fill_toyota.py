@@ -146,7 +146,7 @@ async def main():
 
 results = asyncio.run(main())
 
-OUTPUT = Path(__file__).parent / 'caradisiac_catalog.json'
+OUTPUT = Path(__file__).parent / 'vm_catalog.json'
 with open(OUTPUT, encoding='utf-8') as f:
     catalog = json.load(f)
 

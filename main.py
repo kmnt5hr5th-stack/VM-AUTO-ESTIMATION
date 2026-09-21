@@ -167,7 +167,7 @@ async def health():
 @app.get("/catalog/versions")
 @limiter.limit("10/minute")
 async def catalog_versions(request: Request, marque: str = "", modele: str = "", annee: int = 0, carburant: str = ""):
-    versions = _get_caradisiac_versions(marque, modele, annee, carburant)
+    versions = _get_vm_catalog_versions(marque, modele, annee, carburant)
     return {"versions": versions, "count": len(versions)}
 
 
@@ -675,15 +675,15 @@ except Exception as _e:
     logger.warning(f"[catalog] non chargé: {_e}")
 
 # Caradisiac catalog (versions par marque/modele/annee/carburant)
-_caradisiac_catalog: dict = {}
+_vm_catalog: dict = {}
 try:
-    _caradisiac_path = os.path.join(os.path.dirname(__file__), "caradisiac_catalog.json")
-    with open(_caradisiac_path, encoding="utf-8") as _f:
-        _caradisiac_catalog = _json.load(_f)
-    _total_v = sum(len(vs) for b in _caradisiac_catalog.values() for m in b.values() for y in m.values() for vs in y.values())
-    logger.info(f"[caradisiac] chargé ({len(_caradisiac_catalog)} marques, {_total_v} versions)")
+    _vm_catalog_path = os.path.join(os.path.dirname(__file__), "vm_catalog.json")
+    with open(_vm_catalog_path, encoding="utf-8") as _f:
+        _vm_catalog = _json.load(_f)
+    _total_v = sum(len(vs) for b in _vm_catalog.values() for m in b.values() for y in m.values() for vs in y.values())
+    logger.info(f"[vm-catalog] chargé ({len(_vm_catalog)} marques, {_total_v} versions)")
 except Exception as _e:
-    logger.warning(f"[caradisiac] non chargé: {_e}")
+    logger.warning(f"[vm-catalog] non chargé: {_e}")
 
 def _normalize(s: str) -> str:
     """Normalise un nom pour comparaison souple (lowercase, sans accents ni tirets)."""
@@ -715,18 +715,18 @@ def _lookup_versions_in_brand(brand_data: dict, m_norm: str, year_str: str, fuel
         versions.extend(year_entry.get(fuel_key, []))
     return versions
 
-def _get_caradisiac_versions(brand: str, model: str, annee: int, carburant: str) -> list[str]:
+def _get_vm_catalog_versions(brand: str, model: str, annee: int, carburant: str) -> list[str]:
     """Retourne les versions Caradisiac pour brand/model/annee/carburant."""
-    if not _caradisiac_catalog or not brand or not model or not annee:
+    if not _vm_catalog or not brand or not model or not annee:
         return []
     fuel_key = _CARADISIAC_FUEL_MAP.get(carburant.lower(), "essence")
     year_str = str(annee)
     b_norm = _normalize(brand)
     m_norm = _normalize(model)
     brand_data = None
-    for b_key in _caradisiac_catalog:
+    for b_key in _vm_catalog:
         if _normalize(b_key) == b_norm:
-            brand_data = _caradisiac_catalog[b_key]
+            brand_data = _vm_catalog[b_key]
             break
     if not brand_data:
         return []

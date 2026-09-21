@@ -1,4 +1,4 @@
-"""Fill remaining KIA gaps in caradisiac_catalog.json"""
+"""Fill remaining KIA gaps in vm_catalog.json"""
 import asyncio, aiohttp, ssl, re, json
 from pathlib import Path
 from scrapers.caradisiac_scraper import detect_fuel, clean_version, BASE
@@ -91,7 +91,7 @@ async def main():
 
 results = asyncio.run(main())
 
-OUTPUT = Path(__file__).parent / 'caradisiac_catalog.json'
+OUTPUT = Path(__file__).parent / 'vm_catalog.json'
 with open(OUTPUT, encoding='utf-8') as f:
     catalog = json.load(f)
 

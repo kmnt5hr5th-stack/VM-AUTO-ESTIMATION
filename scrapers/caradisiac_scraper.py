@@ -1,6 +1,6 @@
 """
 Scrape Caradisiac fiches-techniques to build a complete vehicle catalog.
-Output: caradisiac_catalog.json
+Output: vm_catalog.json
 Structure: { "RENAULT": { "Clio": { "2020": { "essence": [...], "diesel": [...] } } } }
 """
 
@@ -17,7 +17,7 @@ logging.basicConfig(level=logging.INFO, format="%(message)s")
 log = logging.getLogger(__name__)
 
 BASE    = "https://www.caradisiac.com"
-OUTPUT  = Path(__file__).parent.parent / "caradisiac_catalog.json"
+OUTPUT  = Path(__file__).parent.parent / "vm_catalog.json"
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
     "Accept-Language": "fr-FR,fr;q=0.9",
