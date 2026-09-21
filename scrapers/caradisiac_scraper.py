@@ -42,9 +42,13 @@ def get(url: str, retries=3):
 
 def detect_fuel(version: str) -> str:
     v = version.upper()
-    # Plug-in hybrids (Mercedes: 300 DE = diesel-electric, 300 E = gasoline-electric)
-    if any(x in v for x in ["E-TECH", "FULL HYBRID", "HYBRIDE", "HYBRID", "HSD", "MHEV", "PHEV",
-                              " DE ", " DE 4", "300 DE", "350 E ", "300 E ", "PLUG-IN", "PLUGIN"]):
+    # Plug-in hybrids
+    if any(x in v for x in ["E-TECH", "E-TENSE", "FULL HYBRID", "HYBRIDE", "HYBRID", "HSD", "MHEV", "PHEV",
+                              " DE ", " DE 4", "300 DE", "350 E ", "300 E ", "PLUG-IN", "PLUGIN",
+                              "GTE", "RECHARGE",
+                              "330E", "530E", "225XE", "225E", "740E", "740LE",
+                              "P300E", "P400E",
+                              "TFSI E "]):
         return "hybride"
     if any(x in v for x in ["ELECTRIQUE", "ELECTRIC", "KWH", "EV ", "BEV"]):
         return "electrique"
