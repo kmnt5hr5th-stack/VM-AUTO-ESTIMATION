@@ -282986,29 +282986,64 @@
         "gpl": []
       },
       "2006": {
-        "essence": [],
-        "diesel": [],
+        "essence": [
+          "2.4 INFORM",
+          "2.4 INSTYLE",
+          "2.4 INTENSE",
+          "2.4 INVITE"
+        ],
+        "diesel": [
+          "2.0 DI-D 136 INSTYLE 7PL",
+          "2.0 DI-D 136 INTENSE 7PL",
+          "2.0 DI-D INFORM",
+          "2.0 DI-D INSTYLE",
+          "2.0 DI-D INTENSE",
+          "2.0 DI-D INVITE"
+        ],
         "hybride": [],
         "electrique": [],
         "gpl": []
       },
       "2009": {
         "essence": [],
-        "diesel": [],
+        "diesel": [
+          "2.0 DI-D 136 INSTYLE 6PL",
+          "2.0 DI-D 136 INSTYLE 7PL",
+          "2.0 DI-D 136 INTENSE 6PL",
+          "2.0 DI-D 136 INTENSE 7PL",
+          "2.0 DI-D INFORM",
+          "2.0 DI-D INSTYLE",
+          "2.0 DI-D INTENSE",
+          "2.0 DI-D INVITE"
+        ],
         "hybride": [],
         "electrique": [],
         "gpl": []
       },
       "2010": {
         "essence": [],
-        "diesel": [],
+        "diesel": [
+          "2.0 DI-D 136 INTENSE 6PL",
+          "2.0 DI-D 136 INTENSE 7PL",
+          "2.0 DI-D INFORM",
+          "2.0 DI-D INSTYLE",
+          "2.0 DI-D INTENSE",
+          "2.0 DI-D INVITE"
+        ],
         "hybride": [],
         "electrique": [],
         "gpl": []
       },
       "2011": {
         "essence": [],
-        "diesel": [],
+        "diesel": [
+          "2.0 DI-D 136 INTENSE 6PL",
+          "2.0 DI-D 136 INTENSE 7PL",
+          "2.0 DI-D INFORM",
+          "2.0 DI-D INSTYLE",
+          "2.0 DI-D INTENSE",
+          "2.0 DI-D INVITE"
+        ],
         "hybride": [],
         "electrique": [],
         "gpl": []
@@ -283689,6 +283724,23 @@
         "hybride": [],
         "electrique": [],
         "gpl": []
+      },
+      "2010": {
+        "essence": [
+          "(8) SPORTBACK 1.8 143 INTENSE C(5)T"
+        ],
+        "diesel": [
+          "(8) 2.0 DI-D INSTYLE",
+          "(8) 2.0 DI-D INTENSE",
+          "(8) 2.0 DI-D INVITE",
+          "(8) SPORTBACK 2.0 DI-D 140 DIAMANT",
+          "(8) SPORTBACK 2.0 DI-D 140 INSTYLE",
+          "(8) SPORTBACK 2.0 DI-D 140 INTENSE",
+          "(8) SPORTBACK 2.0 DI-D 140 INVITE"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
       }
     },
     "Colt": {
@@ -283981,6 +284033,3025 @@
         "gpl": [
           "VII (2) 1.0 MPI-T GPL 101 INVITE+"
         ]
+      }
+    },
+    "Colt 7": {
+      "2005": {
+        "essence": [
+          "VII (2) 1.3 INVITE",
+          "VII 1.1 INFORM",
+          "VII 1.1 INVITE",
+          "VII 1.3 INFORM",
+          "VII 1.3 INSTYLE",
+          "VII 1.3 INSTYLE ALLSHIFT",
+          "VII 1.3 INVITE ALLSHIFT",
+          "VII 1.5 INSTYLE",
+          "VII 1.5 INVITE",
+          "VII CZ3 1.1",
+          "VII CZ3 1.1 INFORM",
+          "VII CZ3 1.3 INFORM",
+          "VII CZ3 1.3 INVITE",
+          "VII CZ3 1.3 INVITE ALLSHIFT",
+          "VII CZ3 1.5 INSTYLE",
+          "VII CZ3 1.5 INVITE",
+          "VII CZT 1.5 TURBO 150"
+        ],
+        "diesel": [
+          "VII 1.5 DI-D INFORM",
+          "VII 1.5 DI-D INSTYLE",
+          "VII 1.5 DI-D INSTYLE ALLSHIFT",
+          "VII 1.5 DI-D INVITE",
+          "VII 1.5 DI-D INVITE ALLSHIFT",
+          "VII CZ3 1.5 DI-D INFORM",
+          "VII CZ3 1.5 DI-D INSTYLE",
+          "VII CZ3 1.5 DI-D INVITE"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2006": {
+        "essence": [
+          "VII (2) 1.1 75 3P",
+          "VII (2) 1.3 INVITE",
+          "VII 1.1 INFORM",
+          "VII 1.1 INVITE",
+          "VII 1.3 INFORM",
+          "VII 1.3 INSTYLE",
+          "VII 1.3 INSTYLE ALLSHIFT",
+          "VII 1.3 INVITE ALLSHIFT",
+          "VII 1.5 INSTYLE",
+          "VII 1.5 INVITE",
+          "VII CZ3 1.1",
+          "VII CZ3 1.1 INFORM",
+          "VII CZ3 1.3 INFORM",
+          "VII CZ3 1.3 INVITE",
+          "VII CZ3 1.3 INVITE ALLSHIFT",
+          "VII CZ3 1.5 INSTYLE",
+          "VII CZ3 1.5 INVITE",
+          "VII CZT 1.5 TURBO 150"
+        ],
+        "diesel": [
+          "VII 1.5 DI-D INFORM",
+          "VII 1.5 DI-D INSTYLE",
+          "VII 1.5 DI-D INSTYLE ALLSHIFT",
+          "VII 1.5 DI-D INVITE",
+          "VII 1.5 DI-D INVITE ALLSHIFT",
+          "VII CZ3 1.5 DI-D INFORM",
+          "VII CZ3 1.5 DI-D INSTYLE",
+          "VII CZ3 1.5 DI-D INVITE"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2007": {
+        "essence": [
+          "VII (2) 1.1 75 3P",
+          "VII (2) 1.3 INSTYLE PACK SECURITE",
+          "VII (2) 1.3 INVITE",
+          "VII (2) 1.3 INVITE PACK CUIR",
+          "VII (2) 1.3 INVITE PACK LUXE",
+          "VII (2) 1.3 INVITE PACK LUXE &amp; PACK SECURITE",
+          "VII (2) 1.5 INSTYLE PACK CUIR",
+          "VII (2) 1.5 INSTYLE PACK SECURITE",
+          "VII (2) 1.5 INVITE PACK LUXE",
+          "VII 1.3 INFORM",
+          "VII 1.3 INSTYLE",
+          "VII 1.3 INSTYLE ALLSHIFT",
+          "VII 1.3 INVITE ALLSHIFT",
+          "VII 1.5 INSTYLE",
+          "VII CZ3 1.3 INVITE",
+          "VII CZ3 1.3 INVITE ALLSHIFT",
+          "VII CZT 1.5 TURBO 150"
+        ],
+        "diesel": [
+          "VII (2) 1.5 DI-D INSTYLE PACK CUIR",
+          "VII (2) 1.5 DI-D INSTYLE PACK SECURITE",
+          "VII (2) 1.5 DI-D INVITE PACK LUXE",
+          "VII 1.5 DI-D INFORM",
+          "VII 1.5 DI-D INSTYLE",
+          "VII 1.5 DI-D INSTYLE ALLSHIFT",
+          "VII 1.5 DI-D INVITE",
+          "VII 1.5 DI-D INVITE ALLSHIFT",
+          "VII CZ3 1.5 DI-D INVITE"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2008": {
+        "essence": [
+          "VII (2) 1.1 75 3P",
+          "VII (2) 1.1 75 E 3P",
+          "VII (2) 1.1 75 INFORM 3P",
+          "VII (2) 1.1 75 INFORM 5P",
+          "VII (2) 1.1 75 INVITE 3P",
+          "VII (2) 1.1 75 INVITE 5P",
+          "VII (2) 1.3 INVITE",
+          "VII CZ3 1.3 INVITE",
+          "VII CZT 1.5 TURBO 150"
+        ],
+        "diesel": [
+          "VII 1.5 DI-D INVITE",
+          "VII CZ3 1.5 DI-D INVITE"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2009": {
+        "essence": [
+          "VII (2) 1.1 75 3P",
+          "VII (2) 1.1 75 4CV INVITE 5P",
+          "VII (2) 1.1 75 E 3P",
+          "VII (2) 1.1 75 INFORM 3P",
+          "VII (2) 1.1 75 INFORM 5P",
+          "VII (2) 1.1 75 INVITE 3P",
+          "VII (2) 1.1 75 INVITE 5P",
+          "VII (2) 1.3 INVITE",
+          "VII CZ3 1.3 INVITE",
+          "VII CZT 1.5 TURBO 150"
+        ],
+        "diesel": [
+          "VII 1.5 DI-D INVITE",
+          "VII CZ3 1.5 DI-D INVITE"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2010": {
+        "essence": [
+          "VII (2) 1.1 75 3P",
+          "VII (2) 1.1 75 4CV INVITE 5P",
+          "VII (2) 1.1 75 E 3P",
+          "VII (2) 1.1 75 INFORM 3P",
+          "VII (2) 1.1 75 INFORM 5P",
+          "VII (2) 1.1 75 INVITE 3P",
+          "VII (2) 1.1 75 SERIE SPECIALE 3P",
+          "VII (2) 1.3 INVITE",
+          "VII (2) CZ3 1.3 INVITE",
+          "VII (2) CZT 1.5 TURBO 150 RALLIART",
+          "VII CZ3 1.3 INVITE",
+          "VII CZT 1.5 TURBO 150"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2011": {
+        "essence": [
+          "VII (2) 1.1 75 3P",
+          "VII (2) 1.1 75 CLEARTEC IN 3P",
+          "VII (2) 1.1 75 CLEARTEC IN 5P",
+          "VII (2) 1.1 75 E 3P",
+          "VII (2) 1.1 75 INFORM 3P",
+          "VII (2) 1.1 75 INFORM 5P",
+          "VII (2) 1.3 INVITE",
+          "VII (2) CZ3 1.3 INVITE",
+          "VII (2) CZT 1.5 TURBO 150 RALLIART"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2012": {
+        "essence": [
+          "VII (2) 1.1 75 CLEARTEC IN 3P",
+          "VII (2) 1.1 75 CLEARTEC IN 5P"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      }
+    },
+    "Colt Czc": {
+      "2006": {
+        "essence": [
+          "VII CZC 1.5 110",
+          "VII CZC 1.5 110 INSTYLE",
+          "VII CZC 1.5 110 INVITE",
+          "VII CZC 1.5 TURBO 150"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2007": {
+        "essence": [
+          "VII CZC 1.5 110",
+          "VII CZC 1.5 110 INSTYLE",
+          "VII CZC 1.5 110 INVITE",
+          "VII CZC 1.5 TURBO 150"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2008": {
+        "essence": [
+          "VII CZC 1.5 110",
+          "VII CZC 1.5 110 INSTYLE",
+          "VII CZC 1.5 110 INVITE",
+          "VII CZC 1.5 TURBO 150"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2009": {
+        "essence": [
+          "VII CZC 1.5 TURBO 150"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2010": {
+        "essence": [
+          "VII CZC 1.5 TURBO 150"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2011": {
+        "essence": [
+          "VII CZC 1.5 TURBO 150"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2012": {
+        "essence": [
+          "VII CZC 1.5 TURBO 150"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      }
+    },
+    "Colt Societe": {
+      "2005": {
+        "essence": [
+          "1.3 INFORM",
+          "1.3 INSTYLE",
+          "1.3 INSTYLE PACK CUIR",
+          "1.3 INSTYLE PACK SECURITE",
+          "1.3 INVITE",
+          "1.3 INVITE PACK LUXE",
+          "1.3 INVITE PACK LUXE &amp; PACK SECURITE",
+          "1.5 INSTYLE",
+          "1.5 INSTYLE PACK CUIR",
+          "1.5 INSTYLE PACK SECURITE",
+          "1.5 INVITE PACK LUXE",
+          "CZ3 1.1",
+          "CZ3 1.3 INVITE",
+          "CZ3 INFORM 1.1",
+          "CZ3 INFORM 1.3",
+          "CZ3 INSTYLE 1.5",
+          "CZ3 INVITE 1.3 ASH",
+          "CZ3 INVITE 1.5",
+          "CZT 1.5 TURBO",
+          "INFORM 1.1",
+          "INSTYLE 1.3 ASH",
+          "INVITE 1.1",
+          "INVITE 1.3 ASH",
+          "INVITE 1.5"
+        ],
+        "diesel": [
+          "1.5 DI-D 95 INFORM",
+          "1.5 DI-D 95 INSTYLE",
+          "1.5 DI-D 95 INSTYLE PACK CUIR",
+          "1.5 DI-D 95 INSTYLE PACK SECURITE",
+          "1.5 DI-D 95 INVITE",
+          "1.5 DI-D 95 INVITE PACK LUXE",
+          "CZ3 1.5 DI-D 95 INVITE",
+          "CZ3 INFORM 1.5 DI-D 95",
+          "CZ3 INSTYLE 1.5 DI-D 95",
+          "INSTYLE 1.5 DI-D 95 ASH",
+          "INVITE 1.5 DI-D 95 ASH"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2006": {
+        "essence": [
+          "1.3 INFORM",
+          "1.3 INSTYLE",
+          "1.3 INVITE",
+          "1.5 INSTYLE",
+          "CZ3 1.1",
+          "CZ3 1.3 INVITE",
+          "CZ3 INFORM 1.1",
+          "CZ3 INFORM 1.3",
+          "CZ3 INSTYLE 1.5",
+          "CZ3 INVITE 1.3 ASH",
+          "CZ3 INVITE 1.5",
+          "CZT 1.5 TURBO",
+          "INFORM 1.1",
+          "INSTYLE 1.3 ASH",
+          "INVITE 1.1",
+          "INVITE 1.3 ASH",
+          "INVITE 1.5"
+        ],
+        "diesel": [
+          "1.5 DI-D 95 INFORM",
+          "1.5 DI-D 95 INSTYLE",
+          "1.5 DI-D 95 INVITE",
+          "CZ3 1.5 DI-D 95 INVITE",
+          "CZ3 INFORM 1.5 DI-D 95",
+          "CZ3 INSTYLE 1.5 DI-D 95",
+          "INSTYLE 1.5 DI-D 95 ASH",
+          "INVITE 1.5 DI-D 95 ASH"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2007": {
+        "essence": [
+          "1.3 INFORM",
+          "1.3 INSTYLE",
+          "1.3 INSTYLE PACK CUIR",
+          "1.3 INSTYLE PACK SECURITE",
+          "1.3 INVITE",
+          "1.3 INVITE PACK LUXE",
+          "1.3 INVITE PACK LUXE &amp; PACK SECURITE",
+          "1.5 INSTYLE",
+          "1.5 INSTYLE PACK CUIR",
+          "1.5 INSTYLE PACK SECURITE",
+          "1.5 INVITE PACK LUXE",
+          "CZ3 1.1",
+          "CZ3 1.3 INVITE",
+          "CZ3 INFORM 1.1",
+          "CZ3 INFORM 1.3",
+          "CZ3 INSTYLE 1.5",
+          "CZ3 INVITE 1.3 ASH",
+          "CZ3 INVITE 1.5",
+          "CZT 1.5 TURBO",
+          "INFORM 1.1",
+          "INSTYLE 1.3 ASH",
+          "INVITE 1.1",
+          "INVITE 1.3 ASH",
+          "INVITE 1.5"
+        ],
+        "diesel": [
+          "1.5 DI-D 95 INFORM",
+          "1.5 DI-D 95 INSTYLE",
+          "1.5 DI-D 95 INSTYLE PACK CUIR",
+          "1.5 DI-D 95 INSTYLE PACK SECURITE",
+          "1.5 DI-D 95 INVITE",
+          "1.5 DI-D 95 INVITE PACK LUXE",
+          "CZ3 1.5 DI-D 95 INVITE",
+          "CZ3 INFORM 1.5 DI-D 95",
+          "CZ3 INSTYLE 1.5 DI-D 95",
+          "INSTYLE 1.5 DI-D 95 ASH",
+          "INVITE 1.5 DI-D 95 ASH"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2008": {
+        "essence": [
+          "1.3 INFORM",
+          "1.3 INSTYLE",
+          "1.3 INSTYLE PACK CUIR",
+          "1.3 INSTYLE PACK SECURITE",
+          "1.3 INVITE",
+          "1.3 INVITE PACK LUXE",
+          "1.3 INVITE PACK LUXE &amp; PACK SECURITE",
+          "1.5 INSTYLE",
+          "1.5 INSTYLE PACK CUIR",
+          "1.5 INSTYLE PACK SECURITE",
+          "1.5 INVITE PACK LUXE",
+          "CZ3 1.1",
+          "CZ3 1.3 INVITE",
+          "CZ3 INFORM 1.1",
+          "CZ3 INFORM 1.3",
+          "CZ3 INSTYLE 1.5",
+          "CZ3 INVITE 1.3 ASH",
+          "CZ3 INVITE 1.5",
+          "CZT 1.5 TURBO",
+          "INFORM 1.1",
+          "INSTYLE 1.3 ASH",
+          "INVITE 1.1",
+          "INVITE 1.3 ASH",
+          "INVITE 1.5"
+        ],
+        "diesel": [
+          "1.5 DI-D 95 INFORM",
+          "1.5 DI-D 95 INSTYLE",
+          "1.5 DI-D 95 INSTYLE PACK CUIR",
+          "1.5 DI-D 95 INSTYLE PACK SECURITE",
+          "1.5 DI-D 95 INVITE",
+          "1.5 DI-D 95 INVITE PACK LUXE",
+          "CZ3 1.5 DI-D 95 INVITE",
+          "CZ3 INFORM 1.5 DI-D 95",
+          "CZ3 INSTYLE 1.5 DI-D 95",
+          "INSTYLE 1.5 DI-D 95 ASH",
+          "INVITE 1.5 DI-D 95 ASH"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2009": {
+        "essence": [
+          "1.3 INFORM",
+          "1.3 INSTYLE",
+          "1.3 INSTYLE PACK CUIR",
+          "1.3 INSTYLE PACK SECURITE",
+          "1.3 INVITE",
+          "1.3 INVITE PACK LUXE",
+          "1.3 INVITE PACK LUXE &amp; PACK SECURITE",
+          "1.5 INSTYLE",
+          "1.5 INSTYLE PACK CUIR",
+          "1.5 INSTYLE PACK SECURITE",
+          "1.5 INVITE PACK LUXE",
+          "CZ3 1.1",
+          "CZ3 1.3 INVITE",
+          "CZ3 INFORM 1.1",
+          "CZ3 INFORM 1.3",
+          "CZ3 INSTYLE 1.5",
+          "CZ3 INVITE 1.3 ASH",
+          "CZ3 INVITE 1.5",
+          "CZT 1.5 TURBO",
+          "INFORM 1.1",
+          "INSTYLE 1.3 ASH",
+          "INVITE 1.1",
+          "INVITE 1.3 ASH",
+          "INVITE 1.5"
+        ],
+        "diesel": [
+          "1.5 DI-D 95 INFORM",
+          "1.5 DI-D 95 INSTYLE",
+          "1.5 DI-D 95 INSTYLE PACK CUIR",
+          "1.5 DI-D 95 INSTYLE PACK SECURITE",
+          "1.5 DI-D 95 INVITE",
+          "1.5 DI-D 95 INVITE PACK LUXE",
+          "CZ3 1.5 DI-D 95 INVITE",
+          "CZ3 INFORM 1.5 DI-D 95",
+          "CZ3 INSTYLE 1.5 DI-D 95",
+          "INSTYLE 1.5 DI-D 95 ASH",
+          "INVITE 1.5 DI-D 95 ASH"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2010": {
+        "essence": [
+          "1.3 INFORM",
+          "1.3 INSTYLE",
+          "1.3 INSTYLE PACK CUIR",
+          "1.3 INSTYLE PACK SECURITE",
+          "1.3 INVITE",
+          "1.3 INVITE PACK LUXE",
+          "1.3 INVITE PACK LUXE &amp; PACK SECURITE",
+          "1.5 INSTYLE",
+          "1.5 INSTYLE PACK CUIR",
+          "1.5 INSTYLE PACK SECURITE",
+          "1.5 INVITE PACK LUXE",
+          "CZ3 1.1",
+          "CZ3 1.3 INVITE",
+          "CZ3 INFORM 1.1",
+          "CZ3 INFORM 1.3",
+          "CZ3 INSTYLE 1.5",
+          "CZ3 INVITE 1.3 ASH",
+          "CZ3 INVITE 1.5",
+          "CZT 1.5 TURBO",
+          "INFORM 1.1",
+          "INSTYLE 1.3 ASH",
+          "INVITE 1.1",
+          "INVITE 1.3 ASH",
+          "INVITE 1.5"
+        ],
+        "diesel": [
+          "1.5 DI-D 95 INFORM",
+          "1.5 DI-D 95 INSTYLE",
+          "1.5 DI-D 95 INSTYLE PACK CUIR",
+          "1.5 DI-D 95 INSTYLE PACK SECURITE",
+          "1.5 DI-D 95 INVITE",
+          "1.5 DI-D 95 INVITE PACK LUXE",
+          "CZ3 1.5 DI-D 95 INVITE",
+          "CZ3 INFORM 1.5 DI-D 95",
+          "CZ3 INSTYLE 1.5 DI-D 95",
+          "INSTYLE 1.5 DI-D 95 ASH",
+          "INVITE 1.5 DI-D 95 ASH"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2011": {
+        "essence": [
+          "1.3 INFORM",
+          "1.3 INSTYLE",
+          "1.3 INSTYLE PACK CUIR",
+          "1.3 INSTYLE PACK SECURITE",
+          "1.3 INVITE",
+          "1.3 INVITE PACK LUXE",
+          "1.3 INVITE PACK LUXE &amp; PACK SECURITE",
+          "1.5 INSTYLE",
+          "1.5 INSTYLE PACK CUIR",
+          "1.5 INSTYLE PACK SECURITE",
+          "1.5 INVITE PACK LUXE",
+          "CZ3 1.1",
+          "CZ3 1.3 INVITE",
+          "CZ3 INFORM 1.1",
+          "CZ3 INFORM 1.3",
+          "CZ3 INSTYLE 1.5",
+          "CZ3 INVITE 1.3 ASH",
+          "CZ3 INVITE 1.5",
+          "CZT 1.5 TURBO",
+          "INFORM 1.1",
+          "INSTYLE 1.3 ASH",
+          "INVITE 1.1",
+          "INVITE 1.3 ASH",
+          "INVITE 1.5"
+        ],
+        "diesel": [
+          "1.5 DI-D 95 INFORM",
+          "1.5 DI-D 95 INSTYLE",
+          "1.5 DI-D 95 INSTYLE PACK CUIR",
+          "1.5 DI-D 95 INSTYLE PACK SECURITE",
+          "1.5 DI-D 95 INVITE",
+          "1.5 DI-D 95 INVITE PACK LUXE",
+          "CZ3 1.5 DI-D 95 INVITE",
+          "CZ3 INFORM 1.5 DI-D 95",
+          "CZ3 INSTYLE 1.5 DI-D 95",
+          "INSTYLE 1.5 DI-D 95 ASH",
+          "INVITE 1.5 DI-D 95 ASH"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2012": {
+        "essence": [
+          "1.3 INFORM",
+          "1.3 INSTYLE",
+          "1.3 INSTYLE PACK CUIR",
+          "1.3 INSTYLE PACK SECURITE",
+          "1.3 INVITE",
+          "1.3 INVITE PACK LUXE",
+          "1.3 INVITE PACK LUXE &amp; PACK SECURITE",
+          "1.5 INSTYLE",
+          "1.5 INSTYLE PACK CUIR",
+          "1.5 INSTYLE PACK SECURITE",
+          "1.5 INVITE PACK LUXE",
+          "CZ3 1.1",
+          "CZ3 1.3 INVITE",
+          "CZ3 INFORM 1.1",
+          "CZ3 INFORM 1.3",
+          "CZ3 INSTYLE 1.5",
+          "CZ3 INVITE 1.3 ASH",
+          "CZ3 INVITE 1.5",
+          "CZT 1.5 TURBO",
+          "INFORM 1.1",
+          "INSTYLE 1.3 ASH",
+          "INVITE 1.1",
+          "INVITE 1.3 ASH",
+          "INVITE 1.5"
+        ],
+        "diesel": [
+          "1.5 DI-D 95 INFORM",
+          "1.5 DI-D 95 INSTYLE",
+          "1.5 DI-D 95 INSTYLE PACK CUIR",
+          "1.5 DI-D 95 INSTYLE PACK SECURITE",
+          "1.5 DI-D 95 INVITE",
+          "1.5 DI-D 95 INVITE PACK LUXE",
+          "CZ3 1.5 DI-D 95 INVITE",
+          "CZ3 INFORM 1.5 DI-D 95",
+          "CZ3 INSTYLE 1.5 DI-D 95",
+          "INSTYLE 1.5 DI-D 95 ASH",
+          "INVITE 1.5 DI-D 95 ASH"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      }
+    },
+    "Colt 8": {
+      "2023": {
+        "essence": [
+          "VIII 1.0 MPI 67 INVITE",
+          "VIII 1.0 MPI-T 91 BUSINESS",
+          "VIII 1.0 MPI-T 91 INTENSE"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [
+          "VIII 1.6 MPI HEV 143 BUSINESS",
+          "VIII 1.6 MPI HEV 143 INSTYLE",
+          "VIII 1.6 MPI HEV 143 INTENSE"
+        ],
+        "gpl": []
+      },
+      "2024": {
+        "essence": [
+          "VIII 1.0 MPI 67 INVITE",
+          "VIII 1.0 MPI-T 91 BUSINESS",
+          "VIII 1.0 MPI-T 91 INTENSE"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [
+          "VIII 1.6 MPI HEV 143 BUSINESS",
+          "VIII 1.6 MPI HEV 143 INSTYLE",
+          "VIII 1.6 MPI HEV 143 INTENSE"
+        ],
+        "gpl": [
+          "VIII 1.0 MPI-T GPL 101 BUSINESS",
+          "VIII 1.0 MPI-T GPL 101 INTENSE"
+        ]
+      },
+      "2025": {
+        "essence": [
+          "VIII 1.0 MPI 67 INVITE",
+          "VIII 1.0 MPI-T 91 BUSINESS",
+          "VIII 1.0 MPI-T 91 INTENSE"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [
+          "VIII 1.6 MPI HEV 143 BUSINESS",
+          "VIII 1.6 MPI HEV 143 INSTYLE",
+          "VIII 1.6 MPI HEV 143 INTENSE"
+        ],
+        "gpl": [
+          "VIII 1.0 MPI-T GPL 101 BUSINESS",
+          "VIII 1.0 MPI-T GPL 101 INTENSE"
+        ]
+      },
+      "2026": {
+        "essence": [
+          "VIII 1.0 MPI 67 INVITE",
+          "VIII 1.0 MPI-T 91 BUSINESS",
+          "VIII 1.0 MPI-T 91 INTENSE"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [
+          "VIII 1.6 MPI HEV 143 BUSINESS",
+          "VIII 1.6 MPI HEV 143 INSTYLE",
+          "VIII 1.6 MPI HEV 143 INTENSE"
+        ],
+        "gpl": [
+          "VIII 1.0 MPI-T GPL 101 BUSINESS",
+          "VIII 1.0 MPI-T GPL 101 INTENSE"
+        ]
+      }
+    },
+    "Asx 2": {
+      "2022": {
+        "essence": [
+          "II (2) 1.2 DI-T 116 INVITE",
+          "II (2) 1.2 DI-T 116 INVITE+"
+        ],
+        "diesel": [],
+        "hybride": [
+          "II (2) 1.3 DI-T MHEV 140 INTENSE DCT7"
+        ],
+        "electrique": [
+          "II (2) 1.8 MPI HEV 158 BLACK EDITION",
+          "II (2) 1.8 MPI HEV 158 INSTYLE",
+          "II (2) 1.8 MPI HEV 158 INTENSE",
+          "II (2) 1.8 MPI HEV 158 INVITE+"
+        ],
+        "gpl": []
+      },
+      "2023": {
+        "essence": [
+          "II 1.0 MPI-T 91 AS&amp;G BUSINESS",
+          "II 1.0 MPI-T 91 AS&amp;G INVITE"
+        ],
+        "diesel": [],
+        "hybride": [
+          "II 1.3 DI-T MHEV 140 AS&amp;G BUSINESS",
+          "II 1.3 DI-T MHEV 140 AS&amp;G INTENSE",
+          "II 1.6 MPI PHEV 159 AS&amp;G INSTYLE BVA",
+          "II 1.6 MPI PHEV 159 AS&amp;G INTENSE BVA"
+        ],
+        "electrique": [
+          "II 1.6 MPI HEV 143 AS&amp;G BUSINESS BVA",
+          "II 1.6 MPI HEV 143 AS&amp;G INSTYLE BVA",
+          "II 1.6 MPI HEV 143 AS&amp;G INTENSE BVA"
+        ],
+        "gpl": []
+      },
+      "2024": {
+        "essence": [
+          "II (2) 1.0 MPI-T 91 BUSINESS",
+          "II (2) 1.0 MPI-T 91 INVITE",
+          "II 1.0 MPI-T 91 AS&amp;G BUSINESS",
+          "II 1.0 MPI-T 91 AS&amp;G INVITE"
+        ],
+        "diesel": [],
+        "hybride": [
+          "II (2) 1.3 DI-T MHEV 140 BUSINESS",
+          "II (2) 1.3 DI-T MHEV 140 INSTYLE",
+          "II (2) 1.3 DI-T MHEV 140 INTENSE",
+          "II 1.3 DI-T MHEV 140 AS&amp;G BUSINESS",
+          "II 1.3 DI-T MHEV 140 AS&amp;G INTENSE",
+          "II 1.6 MPI PHEV 159 AS&amp;G INSTYLE BVA",
+          "II 1.6 MPI PHEV 159 AS&amp;G INTENSE BVA"
+        ],
+        "electrique": [
+          "II (2) 1.6 MPI HEV 143 INSTYLE BVA",
+          "II (2) 1.6 MPI HEV 143 INTENSE BVA",
+          "II 1.6 MPI HEV 143 AS&amp;G BUSINESS BVA",
+          "II 1.6 MPI HEV 143 AS&amp;G INSTYLE BVA",
+          "II 1.6 MPI HEV 143 AS&amp;G INTENSE BVA"
+        ],
+        "gpl": [
+          "II (2) 1.0 MPI-T GPL 101 BUSINESS",
+          "II (2) 1.0 MPI-T GPL 101 INTENSE",
+          "II (2) 1.0 MPI-T GPL 101 INVITE"
+        ]
+      },
+      "2025": {
+        "essence": [
+          "II (2) 1.0 MPI-T 91 BUSINESS",
+          "II (2) 1.0 MPI-T 91 INVITE",
+          "II (2) 1.2 DI-T 116 INVITE",
+          "II (2) 1.2 DI-T 116 INVITE+"
+        ],
+        "diesel": [],
+        "hybride": [
+          "II (2) 1.3 DI-T MHEV 140 BUSINESS",
+          "II (2) 1.3 DI-T MHEV 140 INSTYLE",
+          "II (2) 1.3 DI-T MHEV 140 INTENSE",
+          "II (2) 1.3 DI-T MHEV 140 INTENSE DCT7"
+        ],
+        "electrique": [
+          "II (2) 1.6 MPI HEV 143 INSTYLE BVA",
+          "II (2) 1.6 MPI HEV 143 INTENSE BVA",
+          "II (2) 1.8 MPI HEV 158 INSTYLE",
+          "II (2) 1.8 MPI HEV 158 INTENSE",
+          "II (2) 1.8 MPI HEV 158 INVITE+"
+        ],
+        "gpl": [
+          "II (2) 1.0 MPI-T GPL 101 BUSINESS",
+          "II (2) 1.0 MPI-T GPL 101 INTENSE",
+          "II (2) 1.0 MPI-T GPL 101 INVITE"
+        ]
+      },
+      "2026": {
+        "essence": [
+          "II (2) 1.2 DI-T 116 INVITE",
+          "II (2) 1.2 DI-T 116 INVITE+"
+        ],
+        "diesel": [],
+        "hybride": [
+          "II (2) 1.3 DI-T MHEV 140 INTENSE DCT7"
+        ],
+        "electrique": [
+          "II (2) 1.8 MPI HEV 158 BLACK EDITION",
+          "II (2) 1.8 MPI HEV 158 INSTYLE",
+          "II (2) 1.8 MPI HEV 158 INTENSE",
+          "II (2) 1.8 MPI HEV 158 INVITE+"
+        ],
+        "gpl": []
+      }
+    },
+    "Outlander 2": {
+      "2006": {
+        "essence": [],
+        "diesel": [
+          "II (2) 2.2 DI-D 177 INTENSE",
+          "II (2) 2.2 DI-D 177 INVITE"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2007": {
+        "essence": [],
+        "diesel": [
+          "II (2) 2.2 DI-D 177 INSTYLE",
+          "II (2) 2.2 DI-D 177 INTENSE",
+          "II (2) 2.2 DI-D 177 INVITE",
+          "II 2.0 DI-D 140 INSTYLE",
+          "II 2.0 DI-D 140 INTENSE",
+          "II 2.0 DI-D 140 INTENSE +",
+          "II 2.0 DI-D 140 INVITE",
+          "II 2.2 DI-D 156 10CV INTENSE +",
+          "II 2.2 DI-D 156 INSTYLE",
+          "II 2.2 DI-D 156 INTENSE +"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2008": {
+        "essence": [],
+        "diesel": [
+          "II (2) 2.2 DI-D 177 INSTYLE",
+          "II (2) 2.2 DI-D 177 INTENSE",
+          "II (2) 2.2 DI-D 177 INVITE",
+          "II 2.0 DI-D 140 30EME ANNIVERSAIRE",
+          "II 2.0 DI-D 140 INSTYLE",
+          "II 2.0 DI-D 140 INTENSE",
+          "II 2.0 DI-D 140 INTENSE +",
+          "II 2.0 DI-D 140 INVITE",
+          "II 2.2 DI-D 156 10CV INTENSE +",
+          "II 2.2 DI-D 156 30EME ANNIVERSAIRE",
+          "II 2.2 DI-D 156 INSTYLE",
+          "II 2.2 DI-D 156 INTENSE +"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2009": {
+        "essence": [],
+        "diesel": [
+          "II (2) 2.0 DI-D 140 INTENSE",
+          "II (2) 2.0 DI-D 140 INVITE",
+          "II (2) 2.2 DI-D 156 INSTYLE",
+          "II (2) 2.2 DI-D 156 INSTYLE TC-SST",
+          "II (2) 2.2 DI-D 177 INSTYLE",
+          "II (2) 2.2 DI-D 177 INTENSE",
+          "II (2) 2.2 DI-D 177 INVITE",
+          "II 2.0 DI-D 140 30EME ANNIVERSAIRE",
+          "II 2.0 DI-D 140 INSTYLE",
+          "II 2.0 DI-D 140 INTENSE",
+          "II 2.0 DI-D 140 INTENSE +",
+          "II 2.0 DI-D 140 INVITE",
+          "II 2.2 DI-D 156 30EME ANNIVERSAIRE",
+          "II 2.2 DI-D 156 INSTYLE"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2010": {
+        "essence": [],
+        "diesel": [
+          "II (2) 2.0 DI-D 140 INTENSE",
+          "II (2) 2.0 DI-D 140 INVITE",
+          "II (2) 2.2 DI-D 156 INSTYLE",
+          "II (2) 2.2 DI-D 156 INSTYLE TC-SST",
+          "II (2) 2.2 DI-D 156 INTENSE",
+          "II (2) 2.2 DI-D 156 INVITE",
+          "II (2) 2.2 DI-D 177 INSTYLE",
+          "II (2) 2.2 DI-D 177 INTENSE",
+          "II (2) 2.2 DI-D 177 INVITE",
+          "II 2.0 DI-D 140 INTENSE +",
+          "II 2.0 DI-D 140 INVITE",
+          "II 2.2 DI-D 156 INSTYLE"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2011": {
+        "essence": [],
+        "diesel": [
+          "II (2) 2.2 DI-D 156 INSTYLE TC-SST",
+          "II (2) 2.2 DI-D 177 INSTYLE",
+          "II (2) 2.2 DI-D 177 INTENSE",
+          "II (2) 2.2 DI-D 177 INVITE",
+          "II (2) 2.2 DI-D 177 INVITE+"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2012": {
+        "essence": [],
+        "diesel": [
+          "II (2) 2.2 DI-D 156 INSTYLE TC-SST",
+          "II (2) 2.2 DI-D 177 INSTYLE",
+          "II (2) 2.2 DI-D 177 INTENSE",
+          "II (2) 2.2 DI-D 177 INVITE",
+          "II (2) 2.2 DI-D 177 INVITE+"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      }
+    },
+    "Outlander 3": {
+      "2012": {
+        "essence": [
+          "III 2.0 ESS 150 INFORM",
+          "III 2.0 INFORM 2WD"
+        ],
+        "diesel": [
+          "III 2.2 DI-D 150 INSTYLE",
+          "III 2.2 DI-D 150 INSTYLE 4WD AUTO",
+          "III 2.2 DI-D 150 INSTYLE A/T",
+          "III 2.2 DI-D 150 INVITE 2WD",
+          "III 2.2 DI-D 150 INVITE 4WD",
+          "III 2.2 DI-D INVITE 2WD",
+          "III 2.2 DI-D INVITE 4WD"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2013": {
+        "essence": [
+          "III 2.0 ESS 150 INFORM",
+          "III 2.0 INFORM 2WD"
+        ],
+        "diesel": [
+          "III 2.2 DI-D 150 INSTYLE",
+          "III 2.2 DI-D 150 INSTYLE 4WD AUTO",
+          "III 2.2 DI-D 150 INSTYLE A/T",
+          "III 2.2 DI-D 150 INTENSE NAVI",
+          "III 2.2 DI-D 150 INVITE 2WD",
+          "III 2.2 DI-D 150 INVITE 4WD",
+          "III 2.2 DI-D 177 INSTYLE",
+          "III 2.2 DI-D 177 INTENSE",
+          "III 2.2 DI-D 177 INVITE",
+          "III 2.2 DI-D INTENSE NAVI 4WD",
+          "III 2.2 DI-D INVITE 2WD",
+          "III 2.2 DI-D INVITE 4WD"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2014": {
+        "essence": [
+          "III 2.0 ESS 150 INFORM",
+          "III 2.0 INFORM 2WD"
+        ],
+        "diesel": [
+          "III 2.2 DI-D 150 INSTYLE",
+          "III 2.2 DI-D 150 INSTYLE 4WD AUTO",
+          "III 2.2 DI-D 150 INSTYLE TC-SST",
+          "III 2.2 DI-D 150 INTENSE",
+          "III 2.2 DI-D 150 INTENSE NAVI",
+          "III 2.2 DI-D 150 INVITE",
+          "III 2.2 DI-D 150 INVITE 4WD",
+          "III 2.2 DI-D 177 INSTYLE",
+          "III 2.2 DI-D 177 INTENSE",
+          "III 2.2 DI-D 177 INVITE",
+          "III 2.2 DI-D INTENSE NAVI 4WD",
+          "III 2.2 DI-D INVITE 2WD",
+          "III 2.2 DI-D INVITE 4WD"
+        ],
+        "hybride": [
+          "III PHEV HYBRIDE RECHARGEABLE INSTYLE",
+          "III PHEV HYBRIDE RECHARGEABLE INTENSE"
+        ],
+        "electrique": [],
+        "gpl": []
+      },
+      "2015": {
+        "essence": [
+          "III (2) 2.0 150 INFORM 2WD",
+          "III 2.0 ESS 150 INFORM",
+          "III 2.0 INFORM 2WD"
+        ],
+        "diesel": [
+          "III (2) 2.2 DI-D 150 INSTYLE 4WD AUTO",
+          "III (2) 2.2 DI-D 150 INVITE",
+          "III (2) 2.2 DI-D 150 INVITE 4WD",
+          "III (2) 2.2 DI-D INTENSE NAVI 4WD",
+          "III (2) 2.2 DI-D INTENSE NAVI 4WD AUTO",
+          "III 2.2 DI-D 150 INSTYLE 4WD AUTO",
+          "III 2.2 DI-D 150 INSTYLE TC-SST",
+          "III 2.2 DI-D 150 INTENSE NAVI",
+          "III 2.2 DI-D 150 INVITE",
+          "III 2.2 DI-D 150 INVITE 4WD",
+          "III 2.2 DI-D INTENSE NAVI 4WD",
+          "III 2.2 DI-D INVITE 2WD",
+          "III 2.2 DI-D INVITE 4WD"
+        ],
+        "hybride": [
+          "III (2) PHEV HYBRIDE RECHARGEABLE INSTYLE 4WD",
+          "III (2) PHEV HYBRIDE RECHARGEABLE INTENSE 4WD",
+          "III (2) PHEV HYBRIDE RECHARGEABLE INTENSE STYLE 4WD",
+          "III HYBRIDE RECHARGEABLE INSTYLE SPORT",
+          "III PHEV HYBRIDE RECHARGEABLE INSTYLE",
+          "III PHEV HYBRIDE RECHARGEABLE INSTYLE SPORT",
+          "III PHEV HYBRIDE RECHARGEABLE INTENSE"
+        ],
+        "electrique": [],
+        "gpl": []
+      },
+      "2016": {
+        "essence": [
+          "III (2) 2.0 150 INFORM 2WD",
+          "III (2) 2.0 150 INVITE 2WD",
+          "III 2.0 INFORM 2WD"
+        ],
+        "diesel": [
+          "III (2) 2.2 DI-D 150 INSTYLE 4WD AUTO",
+          "III (2) 2.2 DI-D 150 INVITE",
+          "III (2) 2.2 DI-D 150 INVITE 4WD",
+          "III (2) 2.2 DI-D INTENSE NAVI 4WD",
+          "III (2) 2.2 DI-D INTENSE NAVI 4WD AUTO",
+          "III (2) 2.2 DI-D INTENSE NAVI 4WD AUTO 7PL",
+          "III (2) 2.2 DI-D INTENSE NAVI 5P 2WD",
+          "III 2.2 DI-D 150 INSTYLE 4WD AUTO",
+          "III 2.2 DI-D INTENSE NAVI 4WD",
+          "III 2.2 DI-D INVITE 2WD",
+          "III 2.2 DI-D INVITE 4WD"
+        ],
+        "hybride": [
+          "III (2) PHEV HYBRIDE RECHARGEABLE INSTYLE 4WD",
+          "III (2) PHEV HYBRIDE RECHARGEABLE INTENSE 4WD",
+          "III (2) PHEV HYBRIDE RECHARGEABLE INTENSE STYLE 4WD",
+          "III PHEV HYBRIDE RECHARGEABLE INSTYLE",
+          "III PHEV HYBRIDE RECHARGEABLE INSTYLE SPORT",
+          "III PHEV HYBRIDE RECHARGEABLE INTENSE"
+        ],
+        "electrique": [],
+        "gpl": []
+      },
+      "2017": {
+        "essence": [
+          "III (2) 2.0 150 INVITE 2WD",
+          "III 2.0 INFORM 2WD"
+        ],
+        "diesel": [
+          "III (2) 2.2 DI-D 150 INSTYLE 4WD AUTO",
+          "III (2) 2.2 DI-D 150 INVITE",
+          "III (2) 2.2 DI-D INTENSE NAVI 4WD",
+          "III (2) 2.2 DI-D INTENSE NAVI 4WD AUTO",
+          "III (2) 2.2 DI-D INTENSE NAVI 4WD AUTO 7PL",
+          "III (2) 2.2 DI-D INTENSE NAVI 5P 2WD",
+          "III 2.2 DI-D 150 INSTYLE 4WD AUTO",
+          "III 2.2 DI-D INTENSE NAVI 4WD",
+          "III 2.2 DI-D INVITE 2WD",
+          "III 2.2 DI-D INVITE 4WD"
+        ],
+        "hybride": [
+          "III (2) HYBRIDE RECHARG INTENSE STYLE 4WD",
+          "III (2) HYBRIDE RECHARGEABLE INSTYLE 4WD",
+          "III (2) HYBRIDE RECHARGEABLE INTENSE 4WD",
+          "III (2) PHEV HYBRIDE RECHARGEABLE INSTYLE 4WD",
+          "III (2) PHEV HYBRIDE RECHARGEABLE INTENSE 4WD",
+          "III (2) PHEV HYBRIDE RECHARGEABLE INTENSE STYLE 4WD"
+        ],
+        "electrique": [],
+        "gpl": []
+      },
+      "2018": {
+        "essence": [
+          "III (2) 2.0 150 INVITE 2WD"
+        ],
+        "diesel": [
+          "III (2) 2.2 DI-D 150 INSTYLE 4WD AUTO",
+          "III (2) 2.2 DI-D 150 INVITE",
+          "III (2) 2.2 DI-D BLACK COLLECTION 4WD",
+          "III (2) 2.2 DI-D BLACK COLLECTION+ AUTO 4WD",
+          "III (2) 2.2 DI-D INTENSE NAVI 4WD",
+          "III (2) 2.2 DI-D INTENSE NAVI 4WD 7PL",
+          "III (2) 2.2 DI-D INTENSE NAVI 4WD AUTO 7PL",
+          "III (2) 2.2 DI-D INTENSE NAVI 5P 2WD",
+          "III (2) 2.2 DI-D INTENSE NAVI 5P 2WD 7PL"
+        ],
+        "hybride": [
+          "III (2) HYBRIDE RECHARG INTENSE STYLE 4WD",
+          "III (2) HYBRIDE RECHARGEABLE INSTYLE 4WD",
+          "III (2) HYBRIDE RECHARGEABLE INTENSE 4WD",
+          "III (2) PHEV HYBRIDE RECHARGEABLE INSTYLE 4WD",
+          "III (2) PHEV HYBRIDE RECHARGEABLE INTENSE 4WD",
+          "III (2) PHEV HYBRIDE RECHARGEABLE INTENSE STYLE 4WD",
+          "III (2) PHEV TWIN MOTOR 4WD BUSINESS MY19",
+          "III (2) PHEV TWIN MOTOR 4WD INSTYLE MY19",
+          "III (2) PHEV TWIN MOTOR 4WD INTENSE MY19",
+          "III (2) PHEV TWIN MOTOR 4WD INVITE MY19"
+        ],
+        "electrique": [],
+        "gpl": []
+      },
+      "2019": {
+        "essence": [],
+        "diesel": [
+          "III (2) 2.2 DI-D BLACK COLLECTION 4WD",
+          "III (2) 2.2 DI-D BLACK COLLECTION+ AUTO 4WD"
+        ],
+        "hybride": [
+          "III (2) PHEV TWIN MOTOR 4WD BUSINESS MY19",
+          "III (2) PHEV TWIN MOTOR 4WD BUSINESS MY20",
+          "III (2) PHEV TWIN MOTOR 4WD INSTYLE MY19",
+          "III (2) PHEV TWIN MOTOR 4WD INSTYLE MY20",
+          "III (2) PHEV TWIN MOTOR 4WD INTENSE MY19",
+          "III (2) PHEV TWIN MOTOR 4WD INTENSE MY20",
+          "III (2) PHEV TWIN MOTOR 4WD INVITE MY19",
+          "III (2) PHEV TWIN MOTOR 4WD INVITE MY20"
+        ],
+        "electrique": [],
+        "gpl": []
+      },
+      "2020": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [
+          "III (2) PHEV TWIN MOTOR 4WD BUSINESS MY20",
+          "III (2) PHEV TWIN MOTOR 4WD INSTYLE MY20",
+          "III (2) PHEV TWIN MOTOR 4WD INTENSE MY20",
+          "III (2) PHEV TWIN MOTOR 4WD INVITE MY20"
+        ],
+        "electrique": [],
+        "gpl": []
+      },
+      "2021": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [
+          "III (2) PHEV TWIN MOTOR 4WD BUSINESS 2020",
+          "III (2) PHEV TWIN MOTOR 4WD BUSINESS MY20",
+          "III (2) PHEV TWIN MOTOR 4WD INSTYLE 2020",
+          "III (2) PHEV TWIN MOTOR 4WD INSTYLE MY20",
+          "III (2) PHEV TWIN MOTOR 4WD INTENSE 2020",
+          "III (2) PHEV TWIN MOTOR 4WD INTENSE MY20"
+        ],
+        "electrique": [],
+        "gpl": []
+      }
+    },
+    "Outlander 4": {
+      "2021": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [
+          "IV 2.4 MIVEC PHEV 306 4WD BLACK EDITION",
+          "IV 2.4 MIVEC PHEV 306 4WD INSTYLE",
+          "IV 2.4 MIVEC PHEV 306 4WD INSTYLE+",
+          "IV 2.4 MIVEC PHEV 306 4WD INTENSE",
+          "IV 2.4 MIVEC PHEV 306 4WD INVITE",
+          "IV 2.4 MIVEC PHEV 306 4WD INVITE+"
+        ],
+        "electrique": [],
+        "gpl": []
+      },
+      "2022": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [
+          "IV 2.4 MIVEC PHEV 306 4WD BLACK EDITION",
+          "IV 2.4 MIVEC PHEV 306 4WD INSTYLE",
+          "IV 2.4 MIVEC PHEV 306 4WD INSTYLE+",
+          "IV 2.4 MIVEC PHEV 306 4WD INTENSE",
+          "IV 2.4 MIVEC PHEV 306 4WD INVITE",
+          "IV 2.4 MIVEC PHEV 306 4WD INVITE+"
+        ],
+        "electrique": [],
+        "gpl": []
+      },
+      "2023": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [
+          "IV 2.4 MIVEC PHEV 306 4WD BLACK EDITION",
+          "IV 2.4 MIVEC PHEV 306 4WD INSTYLE",
+          "IV 2.4 MIVEC PHEV 306 4WD INSTYLE+",
+          "IV 2.4 MIVEC PHEV 306 4WD INTENSE",
+          "IV 2.4 MIVEC PHEV 306 4WD INVITE",
+          "IV 2.4 MIVEC PHEV 306 4WD INVITE+"
+        ],
+        "electrique": [],
+        "gpl": []
+      },
+      "2024": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [
+          "IV 2.4 MIVEC PHEV 306 4WD INSTYLE",
+          "IV 2.4 MIVEC PHEV 306 4WD INSTYLE+",
+          "IV 2.4 MIVEC PHEV 306 4WD INTENSE",
+          "IV 2.4 MIVEC PHEV 306 4WD INVITE",
+          "IV 2.4 MIVEC PHEV 306 4WD INVITE+"
+        ],
+        "electrique": [],
+        "gpl": []
+      },
+      "2025": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [
+          "IV 2.4 MIVEC PHEV 306 4WD INSTYLE",
+          "IV 2.4 MIVEC PHEV 306 4WD INSTYLE+",
+          "IV 2.4 MIVEC PHEV 306 4WD INTENSE",
+          "IV 2.4 MIVEC PHEV 306 4WD INVITE",
+          "IV 2.4 MIVEC PHEV 306 4WD INVITE+"
+        ],
+        "electrique": [],
+        "gpl": []
+      },
+      "2026": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [
+          "IV 2.4 MIVEC PHEV 306 4WD BLACK EDITION",
+          "IV 2.4 MIVEC PHEV 306 4WD INSTYLE",
+          "IV 2.4 MIVEC PHEV 306 4WD INSTYLE+",
+          "IV 2.4 MIVEC PHEV 306 4WD INTENSE",
+          "IV 2.4 MIVEC PHEV 306 4WD INVITE",
+          "IV 2.4 MIVEC PHEV 306 4WD INVITE+"
+        ],
+        "electrique": [],
+        "gpl": []
+      }
+    },
+    "Lancer Evolution": {
+      "2005": {
+        "essence": [
+          "EVOLUTION VIII 2.0 T 265"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2006": {
+        "essence": [
+          "EVOLUTION VIII 2.0 T 265",
+          "EVOLUTION X 2.0 T GSR"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2007": {
+        "essence": [
+          "EVOLUTION IX 2.0 T 280",
+          "EVOLUTION VIII 2.0 T 265",
+          "EVOLUTION X 2.0 T GSR"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2008": {
+        "essence": [
+          "EVOLUTION IX 2.0 T 280",
+          "EVOLUTION VIII 2.0 T 265",
+          "EVOLUTION X 2.0 T 295 GSR",
+          "EVOLUTION X 2.0 T 295 GSR TC-SST",
+          "EVOLUTION X 2.0 T 295 MR TC-SST",
+          "EVOLUTION X 2.0 T 295 SPORTBACK GSR TC-SST",
+          "EVOLUTION X 2.0 T 295 SPORTBACK MR TC-SST",
+          "EVOLUTION X 2.0 T GSR"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2009": {
+        "essence": [
+          "EVOLUTION VIII 2.0 T 265",
+          "EVOLUTION X 2.0 T 295 GSR",
+          "EVOLUTION X 2.0 T 295 GSR TC-SST",
+          "EVOLUTION X 2.0 T 295 MR TC-SST",
+          "EVOLUTION X 2.0 T 295 SPORTBACK GSR TC-SST",
+          "EVOLUTION X 2.0 T 295 SPORTBACK MR TC-SST",
+          "EVOLUTION X 2.0 T GSR"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2010": {
+        "essence": [
+          "EVOLUTION VIII 2.0 T 265",
+          "EVOLUTION X 2.0 T 295 GSR",
+          "EVOLUTION X 2.0 T 295 GSR TC-SST",
+          "EVOLUTION X 2.0 T 295 MR TC-SST",
+          "EVOLUTION X 2.0 T 295 SPORTBACK MR TC-SST",
+          "EVOLUTION X 2.0 T GSR"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2011": {
+        "essence": [
+          "EVOLUTION VIII 2.0 T 265",
+          "EVOLUTION X 2.0 T 295 20CV SPORTBACK MR TC-SST",
+          "EVOLUTION X 2.0 T 295 GSR",
+          "EVOLUTION X 2.0 T 295 GSR TC-SST",
+          "EVOLUTION X 2.0 T 295 MR TC-SST",
+          "EVOLUTION X 2.0 T 295 SPORTBACK MR TC-SST",
+          "EVOLUTION X 2.0 T GSR"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2012": {
+        "essence": [
+          "EVOLUTION X 2.0 T 295 20CV SPORTBACK MR TC-SST",
+          "EVOLUTION X 2.0 T 295 GSR",
+          "EVOLUTION X 2.0 T 295 GSR TC-SST",
+          "EVOLUTION X 2.0 T 295 MR TC-SST",
+          "EVOLUTION X 2.0 T GSR"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2013": {
+        "essence": [
+          "EVOLUTION X 2.0 T 295 20CV SPORTBACK MR TC-SST",
+          "EVOLUTION X 2.0 T GSR"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2014": {
+        "essence": [
+          "EVOLUTION X 2.0 T 295 20CV SPORTBACK MR TC-SST",
+          "EVOLUTION X 2.0 T GSR"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2015": {
+        "essence": [
+          "EVOLUTION X 2.0 T 295 20CV SPORTBACK MR TC-SST",
+          "EVOLUTION X 2.0 T GSR"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      }
+    },
+    "L200 4": {
+      "2005": {
+        "essence": [],
+        "diesel": [
+          "IV CLUB CAB 2.5 TD 136 INVITE",
+          "IV CLUB CAB 2.5 TD 178 INTENSE",
+          "IV DOUBLE CAB 2.5 TD 136 INVITE",
+          "IV DOUBLE CAB 2.5 TD 178 INSTYLE NAVI BVA",
+          "IV DOUBLE CAB 2.5 TD 178 INTENSE"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2006": {
+        "essence": [],
+        "diesel": [
+          "IV CLUB CAB 2.5 TD 136 INVITE",
+          "IV CLUB CAB 2.5TD 136 INVITE",
+          "IV CLUB CABINE 2.5 TD 115 INTENSE",
+          "IV CLUB CABINE 2.5 TD 115 INVITE",
+          "IV CLUB CABINE 2.5 TD 133 INTENSE",
+          "IV CLUB CABINE 2.5 TD 133 INVITE",
+          "IV DOUBLE CAB 2.5 TD 136 INVITE",
+          "IV DOUBLE CABINE 2.5 TD 115 INTENSE",
+          "IV DOUBLE CABINE 2.5 TD 115 INVITE",
+          "IV DOUBLE CABINE 2.5 TD 115 XSTORM",
+          "IV DOUBLE CABINE 2.5 TD 133 DAKAR",
+          "IV DOUBLE CABINE 2.5 TD 133 INTENSE",
+          "IV DOUBLE CABINE 2.5 TD 133 INVITE",
+          "IV DOUBLE CABINE 2.5 TD 133 XSTORM",
+          "IV SINGLE CAB 2.5 TD 115 INVITE",
+          "IV SINGLE CAB 2.5 TD 133 INVITE",
+          "IV SINGLE CAB 2.5 TD 133 INVITE 3P",
+          "IV SINGLE CAB 2.5 TD INVITE 3PL"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2007": {
+        "essence": [],
+        "diesel": [
+          "IV CLUB CAB 2.5 TD 136 INVITE",
+          "IV CLUB CAB 2.5TD 136 INVITE",
+          "IV CLUB CABINE 2.5 TD 115 INTENSE",
+          "IV CLUB CABINE 2.5 TD 115 INVITE",
+          "IV CLUB CABINE 2.5 TD 133 INTENSE",
+          "IV CLUB CABINE 2.5 TD 133 INVITE",
+          "IV DOUBLE CAB 2.5 TD 136 INVITE",
+          "IV DOUBLE CABINE 2.5 TD 115 INTENSE",
+          "IV DOUBLE CABINE 2.5 TD 115 INVITE",
+          "IV DOUBLE CABINE 2.5 TD 115 XSTORM",
+          "IV DOUBLE CABINE 2.5 TD 133 DAKAR",
+          "IV DOUBLE CABINE 2.5 TD 133 INTENSE",
+          "IV DOUBLE CABINE 2.5 TD 133 INVITE",
+          "IV DOUBLE CABINE 2.5 TD 133 XSTORM",
+          "IV SINGLE CAB 2.5 TD 115 INVITE",
+          "IV SINGLE CAB 2.5 TD 133 INVITE",
+          "IV SINGLE CAB 2.5 TD 133 INVITE 3P",
+          "IV SINGLE CAB 2.5 TD INVITE 3PL"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2008": {
+        "essence": [],
+        "diesel": [
+          "IV CLUB CAB 2.5 TD 136 INVITE",
+          "IV CLUB CAB 2.5TD 136 INVITE",
+          "IV CLUB CABINE 2.5 TD 115 INTENSE",
+          "IV CLUB CABINE 2.5 TD 115 INVITE",
+          "IV CLUB CABINE 2.5 TD 133 INTENSE",
+          "IV CLUB CABINE 2.5 TD 133 INVITE",
+          "IV DOUBLE CAB 2.5 TD 136 INVITE",
+          "IV DOUBLE CABINE 2.5 TD 115 INTENSE",
+          "IV DOUBLE CABINE 2.5 TD 115 INVITE",
+          "IV DOUBLE CABINE 2.5 TD 115 XSTORM",
+          "IV DOUBLE CABINE 2.5 TD 133 DAKAR",
+          "IV DOUBLE CABINE 2.5 TD 133 INTENSE",
+          "IV DOUBLE CABINE 2.5 TD 133 INVITE",
+          "IV DOUBLE CABINE 2.5 TD 133 XSTORM",
+          "IV SINGLE CAB 2.5 TD 115 INVITE",
+          "IV SINGLE CAB 2.5 TD 133 INVITE",
+          "IV SINGLE CAB 2.5 TD 133 INVITE 3P",
+          "IV SINGLE CAB 2.5 TD INVITE 3PL"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2009": {
+        "essence": [],
+        "diesel": [
+          "IV CLUB CAB 2.5 TD 136 INVITE",
+          "IV CLUB CAB 2.5 TD 178 INTENSE",
+          "IV CLUB CAB 2.5TD 136 INFORM",
+          "IV CLUB CAB 2.5TD 136 INVITE",
+          "IV CLUB CAB 2.5TD 178 INTENSE",
+          "IV CLUB CABINE 2.5 TD 115 INTENSE",
+          "IV CLUB CABINE 2.5 TD 115 INVITE",
+          "IV CLUB CABINE 2.5 TD 133 INTENSE",
+          "IV CLUB CABINE 2.5 TD 133 INVITE",
+          "IV DOUBLE CAB 2.5 TD 136 INVITE",
+          "IV DOUBLE CAB 2.5 TD 178 INTENSE",
+          "IV DOUBLE CAB 2.5TD 178 INSTYLE AUTO",
+          "IV DOUBLE CABINE 2.5 TD 115 INTENSE",
+          "IV DOUBLE CABINE 2.5 TD 115 INVITE",
+          "IV DOUBLE CABINE 2.5 TD 115 XSTORM",
+          "IV DOUBLE CABINE 2.5 TD 133 DAKAR",
+          "IV DOUBLE CABINE 2.5 TD 133 INTENSE",
+          "IV DOUBLE CABINE 2.5 TD 133 INVITE",
+          "IV DOUBLE CABINE 2.5 TD 133 XSTORM",
+          "IV SINGLE CAB 2.5 TD 115 INVITE",
+          "IV SINGLE CAB 2.5 TD 133 INVITE",
+          "IV SINGLE CAB 2.5 TD 133 INVITE 3P",
+          "IV SINGLE CAB 2.5 TD INVITE 3PL"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2010": {
+        "essence": [],
+        "diesel": [
+          "IV CLUB CAB 2.5 TD 136 INVITE",
+          "IV CLUB CAB 2.5 TD 178 INTENSE",
+          "IV CLUB CAB 2.5TD 136 INFORM",
+          "IV CLUB CAB 2.5TD 136 INVITE",
+          "IV CLUB CAB 2.5TD 178 INTENSE",
+          "IV CLUB CABINE 2.5 TD 115 INTENSE",
+          "IV CLUB CABINE 2.5 TD 115 INVITE",
+          "IV CLUB CABINE 2.5 TD 133 INTENSE",
+          "IV CLUB CABINE 2.5 TD 133 INVITE",
+          "IV DOUBLE CAB 2.5 TD 136 INVITE",
+          "IV DOUBLE CAB 2.5 TD 178 INTENSE",
+          "IV DOUBLE CAB 2.5TD 178 INSTYLE AUTO",
+          "IV DOUBLE CABINE 2.5 TD 115 INTENSE",
+          "IV DOUBLE CABINE 2.5 TD 115 INVITE",
+          "IV DOUBLE CABINE 2.5 TD 115 XSTORM",
+          "IV DOUBLE CABINE 2.5 TD 133 DAKAR",
+          "IV DOUBLE CABINE 2.5 TD 133 INTENSE",
+          "IV DOUBLE CABINE 2.5 TD 133 INVITE",
+          "IV DOUBLE CABINE 2.5 TD 133 XSTORM",
+          "IV SINGLE CAB 2.5 TD 115 INVITE",
+          "IV SINGLE CAB 2.5 TD 133 INVITE",
+          "IV SINGLE CAB 2.5 TD 133 INVITE 3P",
+          "IV SINGLE CAB 2.5 TD INVITE 3PL"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2011": {
+        "essence": [],
+        "diesel": [
+          "IV CLUB CAB 2.5 TD 136 INVITE",
+          "IV CLUB CAB 2.5 TD 178 INTENSE",
+          "IV CLUB CAB 2.5TD 136 INFORM",
+          "IV CLUB CAB 2.5TD 136 INVITE",
+          "IV CLUB CAB 2.5TD 178 INTENSE",
+          "IV CLUB CABINE 2.5 TD 115 INTENSE",
+          "IV CLUB CABINE 2.5 TD 115 INVITE",
+          "IV CLUB CABINE 2.5 TD 133 INTENSE",
+          "IV CLUB CABINE 2.5 TD 133 INVITE",
+          "IV DOUBLE CAB 2.5 TD 136 INVITE",
+          "IV DOUBLE CAB 2.5 TD 178 INTENSE",
+          "IV DOUBLE CAB 2.5TD 178 INSTYLE AUTO",
+          "IV DOUBLE CABINE 2.5 TD 115 INTENSE",
+          "IV DOUBLE CABINE 2.5 TD 115 INVITE",
+          "IV DOUBLE CABINE 2.5 TD 115 XSTORM",
+          "IV DOUBLE CABINE 2.5 TD 133 DAKAR",
+          "IV DOUBLE CABINE 2.5 TD 133 INTENSE",
+          "IV DOUBLE CABINE 2.5 TD 133 INVITE",
+          "IV DOUBLE CABINE 2.5 TD 133 XSTORM",
+          "IV SINGLE CAB 2.5 TD 115 INVITE",
+          "IV SINGLE CAB 2.5 TD 133 INVITE",
+          "IV SINGLE CAB 2.5 TD 133 INVITE 3P",
+          "IV SINGLE CAB 2.5 TD INVITE 3PL"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2012": {
+        "essence": [],
+        "diesel": [
+          "IV CLUB CAB 2.5 TD 136 INVITE",
+          "IV CLUB CAB 2.5 TD 178 INTENSE",
+          "IV CLUB CAB 2.5TD 136 INFORM",
+          "IV CLUB CAB 2.5TD 136 INFORM CLIM",
+          "IV CLUB CAB 2.5TD 136 INVITE",
+          "IV CLUB CAB 2.5TD 178 INTENSE",
+          "IV DOUBLE CAB 2.5 TD 136 INVITE",
+          "IV DOUBLE CAB 2.5 TD 178 INTENSE",
+          "IV DOUBLE CAB 2.5TD 136 INFORM CLIM",
+          "IV DOUBLE CAB 2.5TD 178 INSTYLE AUTO"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2013": {
+        "essence": [],
+        "diesel": [
+          "IV CLUB CAB 2.5 TD 136 INVITE",
+          "IV CLUB CAB 2.5 TD 178 INTENSE",
+          "IV CLUB CAB 2.5TD 136 INFORM",
+          "IV CLUB CAB 2.5TD 136 INFORM CLIM",
+          "IV CLUB CAB 2.5TD 136 INVITE",
+          "IV CLUB CAB 2.5TD 178 INTENSE",
+          "IV CLUB CAB 2.5TD 178 INTENSE XSTORM",
+          "IV DOUBLE CAB 2.5 TD 136 INVITE",
+          "IV DOUBLE CAB 2.5 TD 178 INTENSE",
+          "IV DOUBLE CAB 2.5 TD 178 INTENSE SPORT BLACK",
+          "IV DOUBLE CAB 2.5 TD 178 INTENSE XSTORM",
+          "IV DOUBLE CAB 2.5TD 136 INFORM CLIM",
+          "IV DOUBLE CAB 2.5TD 178 INSTYLE AUTO"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2014": {
+        "essence": [],
+        "diesel": [
+          "IV CLUB CAB 2.5 TD 136 INVITE",
+          "IV CLUB CAB 2.5 TD 178 INTENSE",
+          "IV CLUB CAB 2.5TD 136 INFORM",
+          "IV CLUB CAB 2.5TD 136 INFORM CLIM",
+          "IV CLUB CAB 2.5TD 136 INVITE",
+          "IV CLUB CAB 2.5TD 178 INTENSE",
+          "IV DOUBLE CAB 2.5 TD 136 INVITE",
+          "IV DOUBLE CAB 2.5 TD 178 INSTYLE NAVI BVA",
+          "IV DOUBLE CAB 2.5 TD 178 INTENSE",
+          "IV DOUBLE CAB 2.5 TD 178 INTENSE SPORT BLACK",
+          "IV DOUBLE CAB 2.5 TD 178 INTENSE XSTORM",
+          "IV DOUBLE CAB 2.5TD 136 INFORM CLIM",
+          "IV DOUBLE CAB 2.5TD 178 INSTYLE AUTO"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2015": {
+        "essence": [],
+        "diesel": [
+          "IV CLUB CAB 2.5 TD 136 INVITE",
+          "IV CLUB CAB 2.5 TD 178 INTENSE",
+          "IV CLUB CAB 2.5TD 136 INFORM",
+          "IV CLUB CAB 2.5TD 136 INFORM CLIM",
+          "IV CLUB CAB 2.5TD 136 INVITE",
+          "IV CLUB CAB 2.5TD 178 INTENSE",
+          "IV DOUBLE CAB 2.5 TD 136 INVITE",
+          "IV DOUBLE CAB 2.5 TD 178 INSTYLE NAVI BVA",
+          "IV DOUBLE CAB 2.5 TD 178 INTENSE"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      }
+    },
+    "Pajero 3": {
+      "2005": {
+        "essence": [
+          "III 1.8 MAGNESITE 3P",
+          "III 1.8 MAGNESITE 5P",
+          "III 3.2 DI-D INSTYLE 3P",
+          "III 3.2 DI-D INSTYLE 5P",
+          "III 3.2 DI-D INSTYLE BVA 3P",
+          "III 3.2 DI-D INSTYLE BVA 5P",
+          "III 3.2 DI-D INTENSE BVA 3P",
+          "III 3.2 DI-D INTENSE BVA 5P",
+          "III 3.2 DI-D INVITE 3P",
+          "III 3.2 DI-D XSTORM BVA 3P",
+          "III 3.2 DI-D XSTORM BVA 5P"
+        ],
+        "diesel": [
+          "III 2.5 TD 115 CLASSIC 3P",
+          "III 2.5 TD 115 CLASSIC 5P",
+          "III 2.5 TD 115 INSTENSE 5P",
+          "III 2.5 TD 115 INSTYLE 5P",
+          "III 2.5 TD 115 XSTORM 5P"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2006": {
+        "essence": [
+          "III (2) 3.2 DI-D INSTYLE BVA 3P",
+          "III (2) 3.2 DI-D INSTYLE BVA 5P",
+          "III (2) 3.2 DI-D INTENSE 3P",
+          "III (2) 3.2 DI-D INTENSE 5P",
+          "III (2) 3.2 DI-D INTENSE BVA 3P",
+          "III (2) 3.2 DI-D INTENSE BVA 5P",
+          "III (2) 3.2 DI-D INVITE 3P",
+          "III (2) 3.2 DI-D INVITE 5P",
+          "III 1.8 MAGNESITE 3P",
+          "III 1.8 MAGNESITE 5P",
+          "III 3.2 DI-D INSTYLE 3P",
+          "III 3.2 DI-D INSTYLE 5P",
+          "III 3.2 DI-D INSTYLE BVA 3P",
+          "III 3.2 DI-D INSTYLE BVA 5P",
+          "III 3.2 DI-D INTENSE BVA 3P",
+          "III 3.2 DI-D INTENSE BVA 5P",
+          "III 3.2 DI-D INVITE 3P",
+          "III 3.2 DI-D XSTORM BVA 3P",
+          "III 3.2 DI-D XSTORM BVA 5P"
+        ],
+        "diesel": [
+          "III 2.5 TD 115 CLASSIC 3P",
+          "III 2.5 TD 115 CLASSIC 5P",
+          "III 2.5 TD 115 INSTENSE 5P",
+          "III 2.5 TD 115 INSTYLE 5P",
+          "III 2.5 TD 115 XSTORM 5P"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2007": {
+        "essence": [
+          "III (2) 3.2 DI-D INSTYLE BVA 3P",
+          "III (2) 3.2 DI-D INSTYLE BVA 5P",
+          "III (2) 3.2 DI-D INTENSE 3P",
+          "III (2) 3.2 DI-D INTENSE 5P",
+          "III (2) 3.2 DI-D INTENSE BVA 3P",
+          "III (2) 3.2 DI-D INTENSE BVA 5P",
+          "III (2) 3.2 DI-D INVITE 3P",
+          "III (2) 3.2 DI-D INVITE 5P",
+          "III 1.8 MAGNESITE 3P",
+          "III 3.2 DI-D DAKAR BVA 3P",
+          "III 3.2 DI-D DAKAR BVA 5P",
+          "III 3.2 DI-D MAGNESITE 3P",
+          "III 3.2 DI-D MAGNESITE PLUS BVA 3P"
+        ],
+        "diesel": [
+          "III 2.5 TD 115 CLASSIC 3P",
+          "III 2.5 TD 115 CLASSIC 5P",
+          "III 2.5 TD 115 XSTORM 5P"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2008": {
+        "essence": [
+          "III (2) 3.2 DI-D 170 INSTYLE 30EM BVA",
+          "III (2) 3.2 DI-D INSTYLE BVA 3P",
+          "III (2) 3.2 DI-D INSTYLE BVA 5P",
+          "III (2) 3.2 DI-D INTENSE 3P",
+          "III (2) 3.2 DI-D INTENSE 5P",
+          "III (2) 3.2 DI-D INTENSE BVA 3P",
+          "III (2) 3.2 DI-D INTENSE BVA 5P",
+          "III (2) 3.2 DI-D INVITE 3P",
+          "III (2) 3.2 DI-D INVITE 5P"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2009": {
+        "essence": [
+          "III (2) 3.2 DI-D 170 INSTYLE 30EM BVA",
+          "III (2) 3.2 DI-D 200 GRANITE BVA 3P",
+          "III (2) 3.2 DI-D 200 GRANITE BVA 5P",
+          "III (2) 3.2 DI-D 200 INFORM 5P",
+          "III (2) 3.2 DI-D 200 INSTYLE BVA 3P",
+          "III (2) 3.2 DI-D 200 INSTYLE BVA 5P",
+          "III (2) 3.2 DI-D 200 INTENSE 3P",
+          "III (2) 3.2 DI-D 200 INTENSE 5P",
+          "III (2) 3.2 DI-D 200 INTENSE BVA 3P",
+          "III (2) 3.2 DI-D 200 INVITE 3P",
+          "III (2) 3.2 DI-D INSTYLE AUTO",
+          "III (2) 3.2 DI-D INSTYLE BVA 3P",
+          "III (2) 3.2 DI-D INSTYLE BVA 5P",
+          "III (2) 3.2 DI-D INTENSE",
+          "III (2) 3.2 DI-D INVITE"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2010": {
+        "essence": [
+          "III (2) 3.2 DI-D 170 INSTYLE 30EM BVA",
+          "III (2) 3.2 DI-D 200 GRANITE BVA 3P",
+          "III (2) 3.2 DI-D 200 GRANITE BVA 5P",
+          "III (2) 3.2 DI-D 200 INFORM 5P",
+          "III (2) 3.2 DI-D 200 INSTYLE BVA 3P",
+          "III (2) 3.2 DI-D 200 INSTYLE BVA 5P",
+          "III (2) 3.2 DI-D 200 INTENSE 3P",
+          "III (2) 3.2 DI-D 200 INTENSE 5P",
+          "III (2) 3.2 DI-D 200 INTENSE BVA 3P",
+          "III (2) 3.2 DI-D 200 INVITE 3P",
+          "III (2) 3.2 DI-D INSTYLE AUTO",
+          "III (2) 3.2 DI-D INSTYLE BVA 3P",
+          "III (2) 3.2 DI-D INSTYLE BVA 5P",
+          "III (2) 3.2 DI-D INTENSE",
+          "III (2) 3.2 DI-D INVITE"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2011": {
+        "essence": [
+          "III (2) 3.2 DI-D 200 INFORM 3P",
+          "III (2) 3.2 DI-D 200 INFORM 5P",
+          "III (2) 3.2 DI-D 200 INSTYLE BVA 3P",
+          "III (2) 3.2 DI-D 200 INSTYLE BVA 5P",
+          "III (2) 3.2 DI-D 200 INTENSE 3P",
+          "III (2) 3.2 DI-D 200 INTENSE BVA 3P",
+          "III (2) 3.2 DI-D 200 INVITE 3P",
+          "III (2) 3.2 DI-D INSTYLE AUTO",
+          "III (2) 3.2 DI-D INTENSE",
+          "III (2) 3.2 DI-D INVITE"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2012": {
+        "essence": [
+          "III (2) 3.2 DI-D 190 INVITE BVA 5P EURO6",
+          "III (2) 3.2 DI-D 200 INFORM 3P",
+          "III (2) 3.2 DI-D 200 INFORM 5P",
+          "III (2) 3.2 DI-D 200 INSTYLE BVA 3P",
+          "III (2) 3.2 DI-D 200 INSTYLE BVA 5P",
+          "III (2) 3.2 DI-D 200 INTENSE 3P",
+          "III (2) 3.2 DI-D 200 INTENSE BVA 3P",
+          "III (2) 3.2 DI-D 200 INVITE 3P",
+          "III (2) 3.2 DI-D 200 INVITE 5P",
+          "III (2) 3.2 DI-D INSTYLE 30EME ANNIVERSAIRE BA 3P",
+          "III (2) 3.2 DI-D INSTYLE 30EME ANNIVERSAIRE BA 5P",
+          "III (2) 3.2 DI-D INSTYLE AUTO",
+          "III (2) 3.2 DI-D INTENSE",
+          "III (2) 3.2 DI-D INVITE"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2013": {
+        "essence": [
+          "III (2) 3.2 DI-D 190 INVITE BVA 5P EURO6",
+          "III (2) 3.2 DI-D 200 INFORM 3P",
+          "III (2) 3.2 DI-D 200 INFORM 5P",
+          "III (2) 3.2 DI-D 200 INSTYLE BVA 3P",
+          "III (2) 3.2 DI-D 200 INSTYLE BVA 5P",
+          "III (2) 3.2 DI-D 200 INTENSE 3P",
+          "III (2) 3.2 DI-D 200 INTENSE BVA 3P",
+          "III (2) 3.2 DI-D 200 INVITE 3P",
+          "III (2) 3.2 DI-D 200 INVITE 5P",
+          "III (2) 3.2 DI-D INSTYLE 30EME ANNIVERSAIRE BA 3P",
+          "III (2) 3.2 DI-D INSTYLE 30EME ANNIVERSAIRE BA 5P",
+          "III (2) 3.2 DI-D INSTYLE AUTO",
+          "III (2) 3.2 DI-D INTENSE",
+          "III (2) 3.2 DI-D INVITE",
+          "III (2) 3.2 DI-D SPORT BLACK 3P"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2014": {
+        "essence": [
+          "III (2) 3.2 DI-D 190 INVITE BVA 5P EURO6",
+          "III (2) 3.2 DI-D 200 INFORM 3P",
+          "III (2) 3.2 DI-D 200 INFORM 5P",
+          "III (2) 3.2 DI-D 200 INSTYLE BVA 3P",
+          "III (2) 3.2 DI-D 200 INSTYLE BVA 5P",
+          "III (2) 3.2 DI-D 200 INTENSE 3P",
+          "III (2) 3.2 DI-D 200 INVITE 3P",
+          "III (2) 3.2 DI-D 200 INVITE 5P",
+          "III (2) 3.2 DI-D INSTYLE AUTO",
+          "III (2) 3.2 DI-D INTENSE",
+          "III (2) 3.2 DI-D INVITE",
+          "III (2) 3.2 DI-D SPORT BLACK 3P"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2015": {
+        "essence": [
+          "III (2) 3.2 DI-D 190 INSTYLE BVA 3P EURO6",
+          "III (2) 3.2 DI-D 190 INSTYLE BVA 5P EURO6",
+          "III (2) 3.2 DI-D 190 INTENSE BVA 3P EURO6",
+          "III (2) 3.2 DI-D 190 INVITE BVA 3P EURO6",
+          "III (2) 3.2 DI-D 190 INVITE BVA 5P EURO6",
+          "III (2) 3.2 DI-D 200 INSTYLE BVA 3P",
+          "III (2) 3.2 DI-D 200 INSTYLE BVA 5P",
+          "III (2) 3.2 DI-D 200 INTENSE 3P",
+          "III (2) 3.2 DI-D 200 INVITE 3P",
+          "III (2) 3.2 DI-D 200 INVITE 5P",
+          "III (2) 3.2 DI-D INSTYLE AUTO",
+          "III (2) 3.2 DI-D INTENSE",
+          "III (2) 3.2 DI-D INVITE"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2016": {
+        "essence": [
+          "III (2) 3.2 DI-D 190 INSTYLE BVA 3P EURO6",
+          "III (2) 3.2 DI-D 190 INSTYLE BVA 5P EURO6",
+          "III (2) 3.2 DI-D 190 INTENSE BVA 3P EURO6",
+          "III (2) 3.2 DI-D 190 INVITE BVA 3P EURO6",
+          "III (2) 3.2 DI-D 190 INVITE BVA 5P EURO6",
+          "III (2) 3.2 DI-D 200 INSTYLE BVA 3P",
+          "III (2) 3.2 DI-D 200 INVITE 5P",
+          "III (2) 3.2 DI-D INSTYLE AUTO",
+          "III (2) 3.2 DI-D INTENSE",
+          "III (2) 3.2 DI-D INVITE"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2017": {
+        "essence": [
+          "III (2) 3.2 DI-D 190 INSTYLE BVA 3P EURO6",
+          "III (2) 3.2 DI-D 190 INSTYLE BVA 5P EURO6",
+          "III (2) 3.2 DI-D 190 INTENSE BVA 3P EURO6",
+          "III (2) 3.2 DI-D 190 INVITE BVA 3P EURO6",
+          "III (2) 3.2 DI-D 190 INVITE BVA 5P EURO6"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2018": {
+        "essence": [
+          "III (2) 3.2 DI-D 190 INSTYLE BVA 3P EURO6",
+          "III (2) 3.2 DI-D 190 INSTYLE BVA 5P EURO6",
+          "III (2) 3.2 DI-D 190 INTENSE BVA 3P EURO6",
+          "III (2) 3.2 DI-D 190 INVITE BVA 3P EURO6",
+          "III (2) 3.2 DI-D 190 INVITE BVA 5P EURO6"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2019": {
+        "essence": [
+          "III (2) 3.2 DI-D 190 INSTYLE BVA 3P EURO6",
+          "III (2) 3.2 DI-D 190 INSTYLE BVA 5P EURO6",
+          "III (2) 3.2 DI-D 190 INTENSE BVA 3P EURO6",
+          "III (2) 3.2 DI-D 190 INVITE BVA 3P EURO6",
+          "III (2) 3.2 DI-D 190 INVITE BVA 5P EURO6"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2020": {
+        "essence": [
+          "III (2) 3.2 DI-D 190 INSTYLE BVA 3P EURO6",
+          "III (2) 3.2 DI-D 190 INSTYLE BVA 5P EURO6",
+          "III (2) 3.2 DI-D 190 INTENSE BVA 3P EURO6",
+          "III (2) 3.2 DI-D 190 INVITE BVA 3P EURO6",
+          "III (2) 3.2 DI-D 190 INVITE BVA 5P EURO6"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      }
+    },
+    "Pajero Societe": {
+      "2005": {
+        "essence": [
+          "(2) COURT 3.2 DI-D INSTYLE SOCIETE 3P",
+          "(2) COURT 3.2 DI-D INSTYLE SOCIETE BVA 3P",
+          "(2) COURT 3.2 DI-D INTENSE SOCIETE BVA 3P",
+          "(2) COURT 3.2 DI-D INVITE SOCIETE 3P",
+          "(2) COURT 3.2 DI-D XSTORM SOCIETE BVA 3P",
+          "(2) LONG 3.2 DI-D INSTYLE SOCIETE 5P",
+          "(2) LONG 3.2 DI-D INSTYLE SOCIETE BVA 5P",
+          "(2) LONG 3.2 DI-D INTENSE SOCIETE BVA 5P",
+          "(2) LONG 3.2 DI-D XSTORM SOCIETE BVA 5P"
+        ],
+        "diesel": [
+          "(2) COURT 2.5 TD SOCIETE 3P",
+          "(2) LONG 2.5 TD SOCIETE 5P"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2006": {
+        "essence": [
+          "(2) COURT 3.2 DI-D INSTYLE SOCIETE 3P",
+          "(2) COURT 3.2 DI-D INSTYLE SOCIETE BVA 3P",
+          "(2) COURT 3.2 DI-D INTENSE SOCIETE BVA 3P",
+          "(2) COURT 3.2 DI-D INVITE SOCIETE 3P",
+          "(2) COURT 3.2 DI-D XSTORM SOCIETE BVA 3P",
+          "(2) LONG 3.2 DI-D INSTYLE SOCIETE 5P",
+          "(2) LONG 3.2 DI-D INSTYLE SOCIETE BVA 5P",
+          "(2) LONG 3.2 DI-D INTENSE SOCIETE BVA 5P",
+          "(2) LONG 3.2 DI-D XSTORM SOCIETE BVA 5P",
+          "COURT 2.5 TD",
+          "COURT INSTYLE 3.2 DI-D",
+          "COURT INSTYLE 3.2 DI-D BVA",
+          "COURT INTENSE 3.2 DI-D BVA",
+          "COURT XSTORM 3.2 DI-D BVA",
+          "LONG 2.5 TD",
+          "LONG INSTYLE 3.2 DI-D BVA",
+          "LONG INTENSE 3.2 DI-D BVA",
+          "LONG XSTORM 3.2 DI-D BVA"
+        ],
+        "diesel": [
+          "(2) COURT 2.5 TD SOCIETE 3P",
+          "(2) LONG 2.5 TD SOCIETE 5P"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2007": {
+        "essence": [
+          "(2) COURT 3.2 DI-D INSTYLE SOCIETE 3P",
+          "(2) COURT 3.2 DI-D INSTYLE SOCIETE BVA 3P",
+          "(2) COURT 3.2 DI-D INTENSE SOCIETE BVA 3P",
+          "(2) COURT 3.2 DI-D INVITE SOCIETE 3P",
+          "(2) COURT 3.2 DI-D XSTORM SOCIETE BVA 3P",
+          "(2) LONG 3.2 DI-D INSTYLE SOCIETE 5P",
+          "(2) LONG 3.2 DI-D INSTYLE SOCIETE BVA 5P",
+          "(2) LONG 3.2 DI-D INTENSE SOCIETE BVA 5P",
+          "(2) LONG 3.2 DI-D XSTORM SOCIETE BVA 5P",
+          "COURT 2.5 TD",
+          "COURT INSTYLE 3.2 DI-D",
+          "COURT INSTYLE 3.2 DI-D BVA",
+          "COURT INTENSE 3.2 DI-D BVA",
+          "COURT XSTORM 3.2 DI-D BVA",
+          "LONG 2.5 TD",
+          "LONG INSTYLE 3.2 DI-D BVA",
+          "LONG INTENSE 3.2 DI-D BVA",
+          "LONG XSTORM 3.2 DI-D BVA"
+        ],
+        "diesel": [
+          "(2) COURT 2.5 TD SOCIETE 3P",
+          "(2) LONG 2.5 TD SOCIETE 5P"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2008": {
+        "essence": [
+          "(2) COURT 3.2 DI-D INSTYLE SOCIETE 3P",
+          "(2) COURT 3.2 DI-D INSTYLE SOCIETE BVA 3P",
+          "(2) COURT 3.2 DI-D INTENSE SOCIETE BVA 3P",
+          "(2) COURT 3.2 DI-D INVITE SOCIETE 3P",
+          "(2) COURT 3.2 DI-D XSTORM SOCIETE BVA 3P",
+          "(2) LONG 3.2 DI-D INSTYLE SOCIETE 5P",
+          "(2) LONG 3.2 DI-D INSTYLE SOCIETE BVA 5P",
+          "(2) LONG 3.2 DI-D INTENSE SOCIETE BVA 5P",
+          "(2) LONG 3.2 DI-D XSTORM SOCIETE BVA 5P",
+          "COURT 2.5 TD",
+          "COURT INSTYLE 3.2 DI-D",
+          "COURT INSTYLE 3.2 DI-D BVA",
+          "COURT INTENSE 3.2 DI-D BVA",
+          "COURT XSTORM 3.2 DI-D BVA",
+          "LONG 2.5 TD",
+          "LONG INSTYLE 3.2 DI-D BVA",
+          "LONG INTENSE 3.2 DI-D BVA",
+          "LONG XSTORM 3.2 DI-D BVA"
+        ],
+        "diesel": [
+          "(2) COURT 2.5 TD SOCIETE 3P",
+          "(2) LONG 2.5 TD SOCIETE 5P"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2009": {
+        "essence": [
+          "(2) COURT 3.2 DI-D INSTYLE SOCIETE 3P",
+          "(2) COURT 3.2 DI-D INSTYLE SOCIETE BVA 3P",
+          "(2) COURT 3.2 DI-D INTENSE SOCIETE BVA 3P",
+          "(2) COURT 3.2 DI-D INVITE SOCIETE 3P",
+          "(2) COURT 3.2 DI-D XSTORM SOCIETE BVA 3P",
+          "(2) LONG 3.2 DI-D INSTYLE SOCIETE 5P",
+          "(2) LONG 3.2 DI-D INSTYLE SOCIETE BVA 5P",
+          "(2) LONG 3.2 DI-D INTENSE SOCIETE BVA 5P",
+          "(2) LONG 3.2 DI-D XSTORM SOCIETE BVA 5P",
+          "COURT 2.5 TD",
+          "COURT INSTYLE 3.2 DI-D",
+          "COURT INSTYLE 3.2 DI-D BVA",
+          "COURT INTENSE 3.2 DI-D BVA",
+          "COURT XSTORM 3.2 DI-D BVA",
+          "LONG 2.5 TD",
+          "LONG INSTYLE 3.2 DI-D BVA",
+          "LONG INTENSE 3.2 DI-D BVA",
+          "LONG XSTORM 3.2 DI-D BVA"
+        ],
+        "diesel": [
+          "(2) COURT 2.5 TD SOCIETE 3P",
+          "(2) LONG 2.5 TD SOCIETE 5P"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2010": {
+        "essence": [
+          "(2) COURT 3.2 DI-D INSTYLE SOCIETE 3P",
+          "(2) COURT 3.2 DI-D INSTYLE SOCIETE BVA 3P",
+          "(2) COURT 3.2 DI-D INTENSE SOCIETE BVA 3P",
+          "(2) COURT 3.2 DI-D INVITE SOCIETE 3P",
+          "(2) COURT 3.2 DI-D XSTORM SOCIETE BVA 3P",
+          "(2) LONG 3.2 DI-D INSTYLE SOCIETE 5P",
+          "(2) LONG 3.2 DI-D INSTYLE SOCIETE BVA 5P",
+          "(2) LONG 3.2 DI-D INTENSE SOCIETE BVA 5P",
+          "(2) LONG 3.2 DI-D XSTORM SOCIETE BVA 5P",
+          "COURT 2.5 TD",
+          "COURT INSTYLE 3.2 DI-D",
+          "COURT INSTYLE 3.2 DI-D BVA",
+          "COURT INTENSE 3.2 DI-D BVA",
+          "COURT XSTORM 3.2 DI-D BVA",
+          "LONG 2.5 TD",
+          "LONG INSTYLE 3.2 DI-D BVA",
+          "LONG INTENSE 3.2 DI-D BVA",
+          "LONG XSTORM 3.2 DI-D BVA"
+        ],
+        "diesel": [
+          "(2) COURT 2.5 TD SOCIETE 3P",
+          "(2) LONG 2.5 TD SOCIETE 5P"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2011": {
+        "essence": [
+          "(2) COURT 3.2 DI-D INSTYLE SOCIETE 3P",
+          "(2) COURT 3.2 DI-D INSTYLE SOCIETE BVA 3P",
+          "(2) COURT 3.2 DI-D INTENSE SOCIETE BVA 3P",
+          "(2) COURT 3.2 DI-D INVITE SOCIETE 3P",
+          "(2) COURT 3.2 DI-D XSTORM SOCIETE BVA 3P",
+          "(2) LONG 3.2 DI-D INSTYLE SOCIETE 5P",
+          "(2) LONG 3.2 DI-D INSTYLE SOCIETE BVA 5P",
+          "(2) LONG 3.2 DI-D INTENSE SOCIETE BVA 5P",
+          "(2) LONG 3.2 DI-D XSTORM SOCIETE BVA 5P"
+        ],
+        "diesel": [
+          "(2) COURT 2.5 TD SOCIETE 3P",
+          "(2) LONG 2.5 TD SOCIETE 5P"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2012": {
+        "essence": [
+          "(2) COURT 3.2 DI-D INSTYLE SOCIETE 3P",
+          "(2) COURT 3.2 DI-D INSTYLE SOCIETE BVA 3P",
+          "(2) COURT 3.2 DI-D INTENSE SOCIETE BVA 3P",
+          "(2) COURT 3.2 DI-D INVITE SOCIETE 3P",
+          "(2) COURT 3.2 DI-D XSTORM SOCIETE BVA 3P",
+          "(2) LONG 3.2 DI-D INSTYLE SOCIETE 5P",
+          "(2) LONG 3.2 DI-D INSTYLE SOCIETE BVA 5P",
+          "(2) LONG 3.2 DI-D INTENSE SOCIETE BVA 5P",
+          "(2) LONG 3.2 DI-D XSTORM SOCIETE BVA 5P"
+        ],
+        "diesel": [
+          "(2) COURT 2.5 TD SOCIETE 3P",
+          "(2) LONG 2.5 TD SOCIETE 5P"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2013": {
+        "essence": [
+          "(2) COURT 3.2 DI-D INSTYLE SOCIETE 3P",
+          "(2) COURT 3.2 DI-D INSTYLE SOCIETE BVA 3P",
+          "(2) COURT 3.2 DI-D INTENSE SOCIETE BVA 3P",
+          "(2) COURT 3.2 DI-D INVITE SOCIETE 3P",
+          "(2) COURT 3.2 DI-D XSTORM SOCIETE BVA 3P",
+          "(2) LONG 3.2 DI-D INSTYLE SOCIETE 5P",
+          "(2) LONG 3.2 DI-D INSTYLE SOCIETE BVA 5P",
+          "(2) LONG 3.2 DI-D INTENSE SOCIETE BVA 5P",
+          "(2) LONG 3.2 DI-D XSTORM SOCIETE BVA 5P"
+        ],
+        "diesel": [
+          "(2) COURT 2.5 TD SOCIETE 3P",
+          "(2) LONG 2.5 TD SOCIETE 5P"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2014": {
+        "essence": [
+          "(2) COURT 3.2 DI-D INSTYLE SOCIETE 3P",
+          "(2) COURT 3.2 DI-D INSTYLE SOCIETE BVA 3P",
+          "(2) COURT 3.2 DI-D INTENSE SOCIETE BVA 3P",
+          "(2) COURT 3.2 DI-D INVITE SOCIETE 3P",
+          "(2) COURT 3.2 DI-D XSTORM SOCIETE BVA 3P",
+          "(2) LONG 3.2 DI-D INSTYLE SOCIETE 5P",
+          "(2) LONG 3.2 DI-D INSTYLE SOCIETE BVA 5P",
+          "(2) LONG 3.2 DI-D INTENSE SOCIETE BVA 5P",
+          "(2) LONG 3.2 DI-D XSTORM SOCIETE BVA 5P"
+        ],
+        "diesel": [
+          "(2) COURT 2.5 TD SOCIETE 3P",
+          "(2) LONG 2.5 TD SOCIETE 5P"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2015": {
+        "essence": [
+          "(2) COURT 3.2 DI-D INSTYLE SOCIETE 3P",
+          "(2) COURT 3.2 DI-D INSTYLE SOCIETE BVA 3P",
+          "(2) COURT 3.2 DI-D INTENSE SOCIETE BVA 3P",
+          "(2) COURT 3.2 DI-D INVITE SOCIETE 3P",
+          "(2) COURT 3.2 DI-D XSTORM SOCIETE BVA 3P",
+          "(2) LONG 3.2 DI-D INSTYLE SOCIETE 5P",
+          "(2) LONG 3.2 DI-D INSTYLE SOCIETE BVA 5P",
+          "(2) LONG 3.2 DI-D INTENSE SOCIETE BVA 5P",
+          "(2) LONG 3.2 DI-D XSTORM SOCIETE BVA 5P"
+        ],
+        "diesel": [
+          "(2) COURT 2.5 TD SOCIETE 3P",
+          "(2) LONG 2.5 TD SOCIETE 5P"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2016": {
+        "essence": [
+          "(2) COURT 3.2 DI-D INSTYLE SOCIETE 3P",
+          "(2) COURT 3.2 DI-D INSTYLE SOCIETE BVA 3P",
+          "(2) COURT 3.2 DI-D INTENSE SOCIETE BVA 3P",
+          "(2) COURT 3.2 DI-D INVITE SOCIETE 3P",
+          "(2) COURT 3.2 DI-D XSTORM SOCIETE BVA 3P",
+          "(2) LONG 3.2 DI-D INSTYLE SOCIETE 5P",
+          "(2) LONG 3.2 DI-D INSTYLE SOCIETE BVA 5P",
+          "(2) LONG 3.2 DI-D INTENSE SOCIETE BVA 5P",
+          "(2) LONG 3.2 DI-D XSTORM SOCIETE BVA 5P"
+        ],
+        "diesel": [
+          "(2) COURT 2.5 TD SOCIETE 3P",
+          "(2) LONG 2.5 TD SOCIETE 5P"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2017": {
+        "essence": [
+          "(2) COURT 3.2 DI-D INSTYLE SOCIETE 3P",
+          "(2) COURT 3.2 DI-D INSTYLE SOCIETE BVA 3P",
+          "(2) COURT 3.2 DI-D INTENSE SOCIETE BVA 3P",
+          "(2) COURT 3.2 DI-D INVITE SOCIETE 3P",
+          "(2) COURT 3.2 DI-D XSTORM SOCIETE BVA 3P",
+          "(2) LONG 3.2 DI-D INSTYLE SOCIETE 5P",
+          "(2) LONG 3.2 DI-D INSTYLE SOCIETE BVA 5P",
+          "(2) LONG 3.2 DI-D INTENSE SOCIETE BVA 5P",
+          "(2) LONG 3.2 DI-D XSTORM SOCIETE BVA 5P"
+        ],
+        "diesel": [
+          "(2) COURT 2.5 TD SOCIETE 3P",
+          "(2) LONG 2.5 TD SOCIETE 5P"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2018": {
+        "essence": [
+          "(2) COURT 3.2 DI-D INSTYLE SOCIETE 3P",
+          "(2) COURT 3.2 DI-D INSTYLE SOCIETE BVA 3P",
+          "(2) COURT 3.2 DI-D INTENSE SOCIETE BVA 3P",
+          "(2) COURT 3.2 DI-D INVITE SOCIETE 3P",
+          "(2) COURT 3.2 DI-D XSTORM SOCIETE BVA 3P",
+          "(2) LONG 3.2 DI-D INSTYLE SOCIETE 5P",
+          "(2) LONG 3.2 DI-D INSTYLE SOCIETE BVA 5P",
+          "(2) LONG 3.2 DI-D INTENSE SOCIETE BVA 5P",
+          "(2) LONG 3.2 DI-D XSTORM SOCIETE BVA 5P"
+        ],
+        "diesel": [
+          "(2) COURT 2.5 TD SOCIETE 3P",
+          "(2) LONG 2.5 TD SOCIETE 5P"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2019": {
+        "essence": [
+          "(2) COURT 3.2 DI-D INSTYLE SOCIETE 3P",
+          "(2) COURT 3.2 DI-D INSTYLE SOCIETE BVA 3P",
+          "(2) COURT 3.2 DI-D INTENSE SOCIETE BVA 3P",
+          "(2) COURT 3.2 DI-D INVITE SOCIETE 3P",
+          "(2) COURT 3.2 DI-D XSTORM SOCIETE BVA 3P",
+          "(2) LONG 3.2 DI-D INSTYLE SOCIETE 5P",
+          "(2) LONG 3.2 DI-D INSTYLE SOCIETE BVA 5P",
+          "(2) LONG 3.2 DI-D INTENSE SOCIETE BVA 5P",
+          "(2) LONG 3.2 DI-D XSTORM SOCIETE BVA 5P"
+        ],
+        "diesel": [
+          "(2) COURT 2.5 TD SOCIETE 3P",
+          "(2) LONG 2.5 TD SOCIETE 5P"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2020": {
+        "essence": [
+          "(2) COURT 3.2 DI-D INSTYLE SOCIETE 3P",
+          "(2) COURT 3.2 DI-D INSTYLE SOCIETE BVA 3P",
+          "(2) COURT 3.2 DI-D INTENSE SOCIETE BVA 3P",
+          "(2) COURT 3.2 DI-D INVITE SOCIETE 3P",
+          "(2) COURT 3.2 DI-D XSTORM SOCIETE BVA 3P",
+          "(2) LONG 3.2 DI-D INSTYLE SOCIETE 5P",
+          "(2) LONG 3.2 DI-D INSTYLE SOCIETE BVA 5P",
+          "(2) LONG 3.2 DI-D INTENSE SOCIETE BVA 5P",
+          "(2) LONG 3.2 DI-D XSTORM SOCIETE BVA 5P"
+        ],
+        "diesel": [
+          "(2) COURT 2.5 TD SOCIETE 3P",
+          "(2) LONG 2.5 TD SOCIETE 5P"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      }
+    },
+    "Eclipse Cross 2": {
+      "2021": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [
+          "II CROSS BEV 218 87 KWH 22KW INVITE+"
+        ],
+        "gpl": []
+      },
+      "2022": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [
+          "II CROSS BEV 218 87 KWH 22KW INVITE+"
+        ],
+        "gpl": []
+      },
+      "2023": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [
+          "II CROSS BEV 218 87 KWH 22KW INVITE+"
+        ],
+        "gpl": []
+      },
+      "2024": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [
+          "II CROSS BEV 218 87 KWH 22KW INVITE+"
+        ],
+        "gpl": []
+      },
+      "2025": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [
+          "II CROSS BEV 218 87 KWH 22KW INVITE+"
+        ],
+        "gpl": []
+      },
+      "2026": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [
+          "II CROSS BEV 218 87 KWH 22KW INVITE+"
+        ],
+        "gpl": []
+      }
+    },
+    "Space Star": {
+      "2005": {
+        "essence": [
+          "1.3 MAGNESITE",
+          "1.6 MAGNESITE",
+          "1.6 MAGNESITE BVA",
+          "1.9 DI-D MAGNESITE",
+          "1.9 DI-D MAGNESITE 7CV"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2006": {
+        "essence": [
+          "1.3 MAGNESITE",
+          "1.9 DI-D MAGNESITE"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2007": {
+        "essence": [
+          "1.9 DI-D MAGNESITE"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2008": {
+        "essence": [
+          "1.9 DI-D MAGNESITE"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2009": {
+        "essence": [
+          "1.9 DI-D MAGNESITE"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2010": {
+        "essence": [
+          "1.9 DI-D MAGNESITE"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2011": {
+        "essence": [
+          "1.9 DI-D MAGNESITE"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2012": {
+        "essence": [
+          "1.9 DI-D MAGNESITE"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      }
+    },
+    "Space Star 2": {
+      "2012": {
+        "essence": [
+          "(2) 1.2 MIVEC 71 AS&amp;G INTENSE",
+          "(2) 1.2 MIVEC 71 AS&amp;G INTENSE CVT",
+          "(2) 1.2 MIVEC 71 AS&amp;G INVITE",
+          "(2) 1.2 MIVEC 71 AS&amp;G RED LINE EDITION",
+          "(2) 1.2 MIVEC 71 AS&amp;G RED LINE EDITION CVT"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2013": {
+        "essence": [
+          "II (2) 1.0 MIVEC 71 IN",
+          "II (2) 1.0 MIVEC AS&amp;G 71 INVITE",
+          "II (2) 1.0 MIVEC AS&amp;G 71 SELECTION INVITE",
+          "II 1.0 71 MIVEC AS&amp;G INVITE",
+          "II 1.0 71 MIVEC IN",
+          "II 1.0 MIVEC 71 IN",
+          "II 1.0 MIVEC AS&amp;G 71 INVITE",
+          "II 1.0 MIVEC AS&amp;G 71 SELECTION INVITE",
+          "II 1.2 80 MIVEC AS&amp;G INTENSE",
+          "II 1.2 MIVEC 80 AS&amp;G INTENSE",
+          "II 1.2 MIVEC 80 AS&amp;G SELECTION INTENSE",
+          "II 1.2 MIVEC AS&amp;G 80 INTENSE"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2014": {
+        "essence": [
+          "II (2) 1.0 MIVEC 71 IN",
+          "II (2) 1.0 MIVEC AS&amp;G 71 INVITE",
+          "II (2) 1.0 MIVEC AS&amp;G 71 SELECTION INVITE",
+          "II 1.0 71 MIVEC AS&amp;G INVITE",
+          "II 1.0 71 MIVEC IN",
+          "II 1.0 MIVEC 71 IN",
+          "II 1.0 MIVEC AS&amp;G 71 INVITE",
+          "II 1.0 MIVEC AS&amp;G 71 INVITE TUDO BOM",
+          "II 1.0 MIVEC AS&amp;G 71 SELECTION INVITE",
+          "II 1.2 80 MIVEC AS&amp;G INTENSE",
+          "II 1.2 MIVEC 80 AS&amp;G INTENSE",
+          "II 1.2 MIVEC 80 AS&amp;G SELECTION INTENSE",
+          "II 1.2 MIVEC 80 INTENSE AUTO",
+          "II 1.2 MIVEC 80 INTENSE CVT",
+          "II 1.2 MIVEC 80 SELECTION INTENSE AUTO",
+          "II 1.2 MIVEC AS&amp;G 80 INTENSE"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2015": {
+        "essence": [
+          "II (2) 1.0 MIVEC 71 IN",
+          "II (2) 1.0 MIVEC AS&amp;G 71 FLIRTY 50 S",
+          "II (2) 1.0 MIVEC AS&amp;G 71 INVITE",
+          "II (2) 1.0 MIVEC AS&amp;G 71 SELECTION INVITE",
+          "II (2) 1.2 MIVEC 80 INTENSE STYLE CVT",
+          "II (2) 1.2 MIVEC 80 SELECT INTENSE STYLE CVT",
+          "II (2) 1.2 MIVEC AS&amp;G 80 INTENSE STYLE",
+          "II 1.0 71 MIVEC AS&amp;G INVITE",
+          "II 1.0 71 MIVEC IN",
+          "II 1.0 MIVEC 71 IN",
+          "II 1.0 MIVEC AS&amp;G 71 FLIRTY 50 S",
+          "II 1.0 MIVEC AS&amp;G 71 INVITE",
+          "II 1.0 MIVEC AS&amp;G 71 INVITE TUDO BOM",
+          "II 1.0 MIVEC AS&amp;G 71 SELECTION INVITE",
+          "II 1.2 80 MIVEC AS&amp;G INTENSE",
+          "II 1.2 MIVEC 80 AS&amp;G INTENSE",
+          "II 1.2 MIVEC 80 AS&amp;G SELECTION INTENSE",
+          "II 1.2 MIVEC 80 INTENSE AUTO",
+          "II 1.2 MIVEC 80 INTENSE CVT",
+          "II 1.2 MIVEC 80 INTENSE STYLE CVT",
+          "II 1.2 MIVEC 80 SELECTION INTENSE AUTO",
+          "II 1.2 MIVEC 80 SELECTION INTENSE STYLE CVT",
+          "II 1.2 MIVEC AS&amp;G 80 INTENSE",
+          "II 1.2 MIVEC AS&amp;G 80 INTENSE STYLE",
+          "II 1.2 MIVEC AS&amp;G 80 SELECT INT STYLE",
+          "II 1.2 MIVEC AS&amp;G 80 SELECTION INTENSE STYLE"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2016": {
+        "essence": [
+          "II (2) 1.0 MIVEC 71 IN",
+          "II (2) 1.0 MIVEC AS&amp;G 71 FLIRTY 50 S",
+          "II (2) 1.0 MIVEC AS&amp;G 71 INVITE",
+          "II (2) 1.0 MIVEC AS&amp;G 71 SELECTION INVITE",
+          "II (2) 1.2 MIVEC 80 AS&amp;G INTENSE STYLE",
+          "II (2) 1.2 MIVEC 80 INTENSE CVT",
+          "II (2) 1.2 MIVEC 80 INTENSE NAVI CONNECT CVT",
+          "II (2) 1.2 MIVEC 80 INTENSE STYLE CVT",
+          "II (2) 1.2 MIVEC 80 SELECT INTENSE STYLE CVT",
+          "II (2) 1.2 MIVEC 80 SELECTION INTENSE CVT",
+          "II (2) 1.2 MIVEC AS&amp;G 80 INTENSE",
+          "II (2) 1.2 MIVEC AS&amp;G 80 INTENSE NAVI CONNECT",
+          "II (2) 1.2 MIVEC AS&amp;G 80 INTENSE STYLE",
+          "II (2) 1.2 MIVEC AS&amp;G 80 INVITE",
+          "II (2) 1.2 MIVEC AS&amp;G 80 SELECTION INTENSE",
+          "II 1.0 71 MIVEC AS&amp;G INVITE",
+          "II 1.0 71 MIVEC IN",
+          "II 1.0 MIVEC 71 IN",
+          "II 1.0 MIVEC AS&amp;G 71 FLIRTY 50 S",
+          "II 1.0 MIVEC AS&amp;G 71 INVITE",
+          "II 1.0 MIVEC AS&amp;G 71 SELECTION INVITE",
+          "II 1.2 80 MIVEC AS&amp;G INTENSE",
+          "II 1.2 MIVEC 80 INTENSE CVT",
+          "II 1.2 MIVEC 80 INTENSE STYLE CVT",
+          "II 1.2 MIVEC 80 SELECTION INTENSE STYLE CVT",
+          "II 1.2 MIVEC AS&amp;G 80 INTENSE",
+          "II 1.2 MIVEC AS&amp;G 80 INTENSE STYLE",
+          "II 1.2 MIVEC AS&amp;G 80 SELECT INT STYLE",
+          "II 1.2 MIVEC AS&amp;G 80 SELECTION INTENSE STYLE"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2017": {
+        "essence": [
+          "II (2) 1.0 MIVEC 71 IN",
+          "II (2) 1.0 MIVEC 71 S/S IN",
+          "II (2) 1.0 MIVEC AS&amp;G 71 FLIRTY 50 S",
+          "II (2) 1.0 MIVEC AS&amp;G 71 INVITE",
+          "II (2) 1.2 MIVEC 80 AS&amp;G INTENSE",
+          "II (2) 1.2 MIVEC 80 AS&amp;G INTENSE STYLE",
+          "II (2) 1.2 MIVEC 80 INTENSE NAVI CONNECT CVT",
+          "II (2) 1.2 MIVEC 80 INVITE",
+          "II (2) 1.2 MIVEC 80 INVITE MY18 CVT",
+          "II (2) 1.2 MIVEC AS&amp;G 80 INTENSE NAVI CONNECT",
+          "II (2) 1.2 MIVEC AS&amp;G 80 INVITE",
+          "II 1.2 MIVEC AS&amp;G 80 INTENSE"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2018": {
+        "essence": [
+          "II (2) 1.0 MIVEC 71 S/S IN",
+          "II (2) 1.2 MIVEC 80 AS&amp;G INTENSE CVT",
+          "II (2) 1.2 MIVEC 80 INTENSE",
+          "II (2) 1.2 MIVEC 80 INTENSE NAVI CONNECT CVT",
+          "II (2) 1.2 MIVEC 80 INVITE",
+          "II (2) 1.2 MIVEC 80 INVITE MY18 CVT",
+          "II (2) 1.2 MIVEC 80 S/S INVITE",
+          "II (2) 1.2 MIVEC AS&amp;G 80 INTENSE NAVI CONNECT",
+          "II (2) 1.2 MIVEC AS&amp;G 80 INVITE"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2019": {
+        "essence": [
+          "II (2) 1.0 MIVEC 71",
+          "II (2) 1.0 MIVEC 71 S/S IN",
+          "II (2) 1.2 MIVEC 80 AS&amp;G INTENSE CVT",
+          "II (2) 1.2 MIVEC 80 BLACK COLLECTION",
+          "II (2) 1.2 MIVEC 80 BLACK COLLECTION CVT",
+          "II (2) 1.2 MIVEC 80 INTENSE",
+          "II (2) 1.2 MIVEC 80 INVITE"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2020": {
+        "essence": [
+          "II (2) 1.0 MIVEC 71",
+          "II (2) 1.0 MIVEC 71 AS&amp;G IN",
+          "II (2) 1.0 MIVEC 71 AS&amp;G INVITE",
+          "II (2) 1.0 MIVEC 71 S/S IN",
+          "II (2) 1.2 MIVEC 71 AS&amp;G IN",
+          "II (2) 1.2 MIVEC 71 AS&amp;G INTENSE 113G",
+          "II (2) 1.2 MIVEC 71 AS&amp;G INTENSE CVT",
+          "II (2) 1.2 MIVEC 71 AS&amp;G INVITE",
+          "II (2) 1.2 MIVEC 71 AS&amp;G RED LINE EDITION CVT",
+          "II (2) 1.2 MIVEC 71AS&amp;G RED LINE EDITION",
+          "II (2) 1.2 MIVEC 80 AS&amp;G INTENSE 113G",
+          "II (2) 1.2 MIVEC 80 AS&amp;G INTENSE CVT",
+          "II (2) 1.2 MIVEC 80 AS&amp;G RED LINE EDITION",
+          "II (2) 1.2 MIVEC 80 AS&amp;G RED LINE EDITION CVT",
+          "II (2) 1.2 MIVEC 80 BLACK COLLECTION",
+          "II (2) 1.2 MIVEC 80 BLACK COLLECTION CVT",
+          "II (2) 1.2 MIVEC 80 INTENSE",
+          "II (2) 1.2 MIVEC 80 INTENSE CVT 116G",
+          "II (2) 1.2 MIVEC 80 INVITE",
+          "II (2) SPACE STAR 1.0 MIVEC 71 AS&amp;G IN",
+          "II (2) SPACE STAR 1.0 MIVEC 71 AS&amp;G INVITE",
+          "II (2) SPACE STAR 1.2 MIVEC 80 AS&amp;G INTENSE",
+          "II (2) SPACE STAR 1.2 MIVEC 80 AS&amp;G RED LINE EDITION"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2021": {
+        "essence": [
+          "II (2) 1.0 MIVEC 71 AS&amp;G INVITE",
+          "II (2) 1.0 MIVEC 71 AS&amp;G INVITE MY21",
+          "II (2) 1.0 MIVEC 71 S/S IN",
+          "II (2) 1.0 MIVEC 71 S/S IN MY21",
+          "II (2) 1.2 MIVEC 71 AS&amp;G IN",
+          "II (2) 1.2 MIVEC 71 AS&amp;G IN MY22",
+          "II (2) 1.2 MIVEC 71 AS&amp;G INTENSE 113G",
+          "II (2) 1.2 MIVEC 71 AS&amp;G INTENSE 113G MY21",
+          "II (2) 1.2 MIVEC 71 AS&amp;G INTENSE CVT",
+          "II (2) 1.2 MIVEC 71 AS&amp;G INTENSE CVT MY22",
+          "II (2) 1.2 MIVEC 71 AS&amp;G INVITE",
+          "II (2) 1.2 MIVEC 71 AS&amp;G INVITE MY21",
+          "II (2) 1.2 MIVEC 71 AS&amp;G RED LINE EDITION CVT",
+          "II (2) 1.2 MIVEC 71 AS&amp;G RED LINE EDITION CVT MY21",
+          "II (2) 1.2 MIVEC 71 CVT AS&amp;G INTENSE CVT",
+          "II (2) 1.2 MIVEC 71 INTENSE",
+          "II (2) 1.2 MIVEC 71 S/S IN",
+          "II (2) 1.2 MIVEC 71AS&amp;G RED LINE EDITION",
+          "II (2) 1.2 MIVEC 71AS&amp;G RED LINE EDITION MY21",
+          "II (2) 1.2 MIVEC 80 AS&amp;G INTENSE CVT",
+          "II (2) 1.2 MIVEC 80 AS&amp;G RED LINE EDITION",
+          "II (2) 1.2 MIVEC 80 AS&amp;G RED LINE EDITION CVT",
+          "II (2) 1.2 MIVEC 80 AS&amp;G RED LINE EDITION CVT MY21",
+          "II (2) 1.2 MIVEC 80 AS&amp;G RED LINE EDITION MY21",
+          "II (2) 1.2 MIVEC 80 INTENSE",
+          "II (2) 1.2 MIVEC 80 INTENSE CVT 116G",
+          "II (2) 1.2 MIVEC 80 INTENSE CVT 116G MY21",
+          "II (2) 1.2 MIVEC 80 INTENSE MY21",
+          "II (2) SPACE STAR 1.0 MIVEC 71 AS&amp;G IN",
+          "II (2) SPACE STAR 1.0 MIVEC 71 AS&amp;G INVITE",
+          "II (2) SPACE STAR 1.2 MIVEC 71 AS&amp;G INVITE",
+          "II (2) SPACE STAR 1.2 MIVEC 71 AS&amp;G RED LINE EDITION",
+          "II (2) SPACE STAR 1.2 MIVEC 71 CVT AS&amp;G RED LINE EDITION",
+          "II (2) SPACE STAR 1.2 MIVEC 80 AS&amp;G INTENSE",
+          "II (2) SPACE STAR 1.2 MIVEC 80 AS&amp;G RED LINE EDITION"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2022": {
+        "essence": [
+          "(2) 1.2 MIVEC 71 AS&amp;G INTENSE",
+          "(2) 1.2 MIVEC 71 AS&amp;G INTENSE CVT",
+          "(2) 1.2 MIVEC 71 AS&amp;G INVITE",
+          "(2) 1.2 MIVEC 71 AS&amp;G RED LINE EDITION",
+          "(2) 1.2 MIVEC 71 AS&amp;G RED LINE EDITION CVT",
+          "II (2) 1.2 MIVEC 71 AS&amp;G IN MY22",
+          "II (2) 1.2 MIVEC 71 AS&amp;G INFORM",
+          "II (2) 1.2 MIVEC 71 AS&amp;G INTENSE",
+          "II (2) 1.2 MIVEC 71 AS&amp;G INTENSE 113G MY21",
+          "II (2) 1.2 MIVEC 71 AS&amp;G INTENSE CVT",
+          "II (2) 1.2 MIVEC 71 AS&amp;G INTENSE CVT MY22",
+          "II (2) 1.2 MIVEC 71 AS&amp;G INVITE",
+          "II (2) 1.2 MIVEC 71 AS&amp;G INVITE MY21",
+          "II (2) 1.2 MIVEC 71 AS&amp;G RED LINE EDITION",
+          "II (2) 1.2 MIVEC 71 AS&amp;G RED LINE EDITION CVT",
+          "II (2) 1.2 MIVEC 71 AS&amp;G RED LINE EDITION CVT MY21",
+          "II (2) 1.2 MIVEC 71 CVT AS&amp;G INTENSE CVT",
+          "II (2) 1.2 MIVEC 71 INTENSE",
+          "II (2) 1.2 MIVEC 71 S/S IN",
+          "II (2) 1.2 MIVEC 71AS&amp;G RED LINE EDITION MY21",
+          "II (2) 1.2 MIVEC 80 AS&amp;G INTENSE CVT",
+          "II (2) 1.2 MIVEC 80 AS&amp;G RED LINE EDITION CVT",
+          "II (2) SPACE STAR 1.0 MIVEC 71 AS&amp;G IN",
+          "II (2) SPACE STAR 1.0 MIVEC 71 AS&amp;G INVITE",
+          "II (2) SPACE STAR 1.2 MIVEC 71 AS&amp;G INFORM",
+          "II (2) SPACE STAR 1.2 MIVEC 71 AS&amp;G INVITE",
+          "II (2) SPACE STAR 1.2 MIVEC 71 AS&amp;G RED LINE EDITION",
+          "II (2) SPACE STAR 1.2 MIVEC 71 CVT AS&amp;G RED LINE EDITION",
+          "II (2) SPACE STAR 1.2 MIVEC 80 AS&amp;G INTENSE",
+          "II (2) SPACE STAR 1.2 MIVEC 80 AS&amp;G RED LINE EDITION",
+          "III (2) 1.2 MIVEC 71 AS&amp;G INFORM MY23",
+          "III (2) 1.2 MIVEC 71 AS&amp;G INTENSE MY23",
+          "III (2) 1.2 MIVEC 71 AS&amp;G INVITE MY23",
+          "III (2) 1.2 MIVEC 71 AS&amp;G RED LINE EDITION CVT MY23",
+          "III (2) 1.2 MIVEC 71 AS&amp;G RED LINE EDITION MY23"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2023": {
+        "essence": [
+          "(2) 1.2 MIVEC 71 AS&amp;G INTENSE",
+          "(2) 1.2 MIVEC 71 AS&amp;G INTENSE CVT",
+          "(2) 1.2 MIVEC 71 AS&amp;G INVITE",
+          "(2) 1.2 MIVEC 71 AS&amp;G RED LINE EDITION",
+          "(2) 1.2 MIVEC 71 AS&amp;G RED LINE EDITION CVT",
+          "II (2) 1.2 MIVEC 71 AS&amp;G IN MY22",
+          "II (2) 1.2 MIVEC 71 AS&amp;G INFORM",
+          "II (2) 1.2 MIVEC 71 AS&amp;G INTENSE",
+          "II (2) 1.2 MIVEC 71 AS&amp;G INTENSE CVT",
+          "II (2) 1.2 MIVEC 71 AS&amp;G INVITE",
+          "II (2) 1.2 MIVEC 71 AS&amp;G RED LINE EDITION",
+          "II (2) 1.2 MIVEC 71 CVT AS&amp;G INTENSE",
+          "II (2) SPACE STAR 1.2 MIVEC 71 AS&amp;G INVITE",
+          "II (2) SPACE STAR 1.2 MIVEC 71 AS&amp;G RED LINE EDITION",
+          "II (2) SPACE STAR 1.2 MIVEC 71 CVT AS&amp;G RED LINE EDITION",
+          "III (2) 1.2 MIVEC 71 AS&amp;G INFORM MY23",
+          "III (2) 1.2 MIVEC 71 AS&amp;G INTENSE MY23",
+          "III (2) 1.2 MIVEC 71 AS&amp;G INVITE MY23",
+          "III (2) 1.2 MIVEC 71 AS&amp;G RED LINE EDITION CVT MY23",
+          "III (2) 1.2 MIVEC 71 AS&amp;G RED LINE EDITION MY23"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2024": {
+        "essence": [
+          "(2) 1.2 MIVEC 71 AS&amp;G INTENSE",
+          "(2) 1.2 MIVEC 71 AS&amp;G INTENSE CVT",
+          "(2) 1.2 MIVEC 71 AS&amp;G INVITE",
+          "(2) 1.2 MIVEC 71 AS&amp;G RED LINE EDITION",
+          "(2) 1.2 MIVEC 71 AS&amp;G RED LINE EDITION CVT",
+          "II (2) 1.2 MIVEC 71 AS&amp;G INFORM",
+          "II (2) 1.2 MIVEC 71 AS&amp;G INTENSE",
+          "II (2) 1.2 MIVEC 71 AS&amp;G INTENSE CVT",
+          "II (2) 1.2 MIVEC 71 AS&amp;G INVITE",
+          "II (2) 1.2 MIVEC 71 AS&amp;G RED LINE EDITION",
+          "II (2) 1.2 MIVEC 71 CVT AS&amp;G INTENSE",
+          "II (2) SPACE STAR 1.2 MIVEC 71 AS&amp;G INVITE",
+          "II (2) SPACE STAR 1.2 MIVEC 71 AS&amp;G RED LINE EDITION",
+          "II (2) SPACE STAR 1.2 MIVEC 71 CVT AS&amp;G RED LINE EDITION",
+          "III (2) 1.2 MIVEC 71 AS&amp;G INFORM MY23",
+          "III (2) 1.2 MIVEC 71 AS&amp;G INTENSE MY23",
+          "III (2) 1.2 MIVEC 71 AS&amp;G INVITE MY23",
+          "III (2) 1.2 MIVEC 71 AS&amp;G RED LINE EDITION CVT MY23",
+          "III (2) 1.2 MIVEC 71 AS&amp;G RED LINE EDITION MY23"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2025": {
+        "essence": [
+          "(2) 1.2 MIVEC 71 AS&amp;G INTENSE",
+          "(2) 1.2 MIVEC 71 AS&amp;G INTENSE CVT",
+          "(2) 1.2 MIVEC 71 AS&amp;G INVITE",
+          "(2) 1.2 MIVEC 71 AS&amp;G RED LINE EDITION",
+          "(2) 1.2 MIVEC 71 AS&amp;G RED LINE EDITION CVT",
+          "II (2) 1.2 MIVEC 71 AS&amp;G INFORM",
+          "II (2) 1.2 MIVEC 71 AS&amp;G INTENSE",
+          "II (2) 1.2 MIVEC 71 AS&amp;G INVITE",
+          "II (2) 1.2 MIVEC 71 CVT AS&amp;G INTENSE",
+          "II (2) SPACE STAR 1.2 MIVEC 71 AS&amp;G RED LINE EDITION",
+          "II (2) SPACE STAR 1.2 MIVEC 71 CVT AS&amp;G RED LINE EDITION"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2026": {
+        "essence": [
+          "(2) 1.2 MIVEC 71 AS&amp;G INTENSE",
+          "(2) 1.2 MIVEC 71 AS&amp;G INTENSE CVT",
+          "(2) 1.2 MIVEC 71 AS&amp;G INVITE",
+          "(2) 1.2 MIVEC 71 AS&amp;G RED LINE EDITION",
+          "(2) 1.2 MIVEC 71 AS&amp;G RED LINE EDITION CVT"
+        ],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      }
+    },
+    "I Miev": {
+      "2010": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [
+          "50 KW 16 KWH",
+          "ELECTRIQ S 16 KWH"
+        ],
+        "gpl": []
+      },
+      "2011": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [
+          "47 KW 16 KWH",
+          "50 KW 16 KWH"
+        ],
+        "gpl": []
+      },
+      "2012": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [
+          "50 KW 16 KWH"
+        ],
+        "gpl": []
+      },
+      "2013": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [
+          "50 KW 16 KWH"
+        ],
+        "gpl": []
+      },
+      "2014": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [
+          "50 KW 16 KWH"
+        ],
+        "gpl": []
+      },
+      "2015": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [
+          "50 KW 16 KWH"
+        ],
+        "gpl": []
+      },
+      "2016": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [
+          "50 KW 16 KWH",
+          "ELECTRIQ S 16 KWH"
+        ],
+        "gpl": []
+      },
+      "2017": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [
+          "50 KW 16 KWH",
+          "ELECTRIQ S 16 KWH"
+        ],
+        "gpl": []
+      },
+      "2018": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [
+          "50 KW 16 KWH",
+          "ELECTRIQ S 16 KWH"
+        ],
+        "gpl": []
+      }
+    },
+    "Grandis 2": {
+      "2005": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [
+          "II 1.8 MPI HEV 158 INSTYLE",
+          "II 1.8 MPI HEV 158 INTENSE",
+          "II 1.8 MPI HEV 158 INVITE+"
+        ],
+        "gpl": []
+      },
+      "2006": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [
+          "II 1.8 MPI HEV 158 INSTYLE",
+          "II 1.8 MPI HEV 158 INTENSE",
+          "II 1.8 MPI HEV 158 INVITE+"
+        ],
+        "gpl": []
+      },
+      "2007": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [
+          "II 1.8 MPI HEV 158 INSTYLE",
+          "II 1.8 MPI HEV 158 INTENSE",
+          "II 1.8 MPI HEV 158 INVITE+"
+        ],
+        "gpl": []
+      },
+      "2008": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [
+          "II 1.8 MPI HEV 158 INSTYLE",
+          "II 1.8 MPI HEV 158 INTENSE",
+          "II 1.8 MPI HEV 158 INVITE+"
+        ],
+        "gpl": []
+      },
+      "2009": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [
+          "II 1.8 MPI HEV 158 INSTYLE",
+          "II 1.8 MPI HEV 158 INTENSE",
+          "II 1.8 MPI HEV 158 INVITE+"
+        ],
+        "gpl": []
+      },
+      "2010": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [
+          "II 1.8 MPI HEV 158 INSTYLE",
+          "II 1.8 MPI HEV 158 INTENSE",
+          "II 1.8 MPI HEV 158 INVITE+"
+        ],
+        "gpl": []
+      },
+      "2011": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [
+          "II 1.8 MPI HEV 158 INSTYLE",
+          "II 1.8 MPI HEV 158 INTENSE",
+          "II 1.8 MPI HEV 158 INVITE+"
+        ],
+        "gpl": []
+      },
+      "2012": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [],
+        "electrique": [
+          "II 1.8 MPI HEV 158 INSTYLE",
+          "II 1.8 MPI HEV 158 INTENSE",
+          "II 1.8 MPI HEV 158 INVITE+"
+        ],
+        "gpl": []
       }
     }
   },
