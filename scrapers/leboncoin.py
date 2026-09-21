@@ -544,8 +544,8 @@ def _km_bas_pour_age(km: int, annee: int) -> bool:
 
 
 def _build_camoufox_payload(marque, modele, annee, km, boite=None,
-                             type_vehicule=None, target_hp=None) -> dict:
-    """Payload optimisé pour le navigateur camoufox — gearbox numérique, km ±10k, année ±1.
+                             type_vehicule=None, target_hp=None, km_margin=10_000) -> dict:
+    """Payload optimisé pour le navigateur camoufox — gearbox numérique, km ±km_margin, année ±1.
     Si km anormalement bas pour l'âge → pas de filtre km (marché de niche)."""
     GEAR_NUM = {
         "mecanique": "1", "mécanique": "1", "manuelle": "1", "bvm": "1", "bm": "1", "manual": "1",
@@ -565,9 +565,9 @@ def _build_camoufox_payload(marque, modele, annee, km, boite=None,
         # Peu d'annonces >200k km sur LBC — élargir pour trouver des résultats
         ranges["mileage"] = {"min": max(0, km - 40_000), "max": km + 40_000}
     elif km > 150_000:
-        ranges["mileage"] = {"min": max(0, km - 20_000), "max": km + 20_000}
+        ranges["mileage"] = {"min": max(0, km - max(km_margin, 20_000)), "max": km + max(km_margin, 20_000)}
     else:
-        ranges["mileage"] = {"min": max(0, km - 10_000), "max": km + 10_000}
+        ranges["mileage"] = {"min": max(0, km - km_margin), "max": km + km_margin}
     if target_hp:
         ranges["horse_power_din"] = {"min": target_hp - 5, "max": target_hp + 5}
     keyword_modele = re.sub(r'\bsportback\b', '', modele, flags=re.IGNORECASE).strip()
@@ -652,7 +652,7 @@ _CARROSSERIE_KEYWORDS: dict[str, list[str]] = {
 
 def _extract_prix(ads: list, modele: str, marque: str = None, carburant: str = None,
                    boite: str = None, target_hp: int = None, km_cible: int = None,
-                   finition: str = None, carrosserie: str = None) -> list[int]:
+                   finition: str = None, carrosserie: str = None, km_margin: int = 10_000) -> list[int]:
     modele_lower = (modele or "").lower()
     marque_lower = (marque or "").lower()
     finition_lower = (finition or "").lower()
@@ -720,10 +720,9 @@ def _extract_prix(ads: list, modele: str, marque: str = None, carburant: str = N
             except (ValueError, TypeError):
                 ad_km = None
             if ad_km is not None:
-                # Aligne sur le filtre mileage LBC : round to nearest 10k ±10k
                 km_base = round(km_cible / 10_000) * 10_000
-                km_min = max(0, km_base - 10_000)
-                km_max = km_base + 10_000
+                km_min = max(0, km_base - km_margin)
+                km_max = km_base + km_margin
                 if not (km_min <= ad_km <= km_max):
                     continue
 
@@ -986,10 +985,11 @@ class LeboncoinScraper(BaseScraper):
     async def _fetch_mobile_api(self, marque, modele, annee, km, page,
                                  carburant=None, boite=None, type_vehicule=None,
                                  target_hp=None, finition=None, carrosserie=None,
-                                 return_details: bool = False):
+                                 return_details: bool = False, km_margin: int = 10_000):
         ua, impersonate, headers = _mobile_ua()
         base = _build_camoufox_payload(marque, modele, annee, km, boite=boite,
-                                        type_vehicule=type_vehicule, target_hp=target_hp)
+                                        type_vehicule=type_vehicule, target_hp=target_hp,
+                                        km_margin=km_margin)
         payload = {**base, "offset": 35 * (page - 1),
                    "listing_source": "direct-search" if page == 1 else "pagination"}
         proxies = _webshare_proxies()
@@ -1007,7 +1007,7 @@ class LeboncoinScraper(BaseScraper):
                                      finition=finition, carrosserie=carrosserie)
         return _extract_prix(ads, modele, marque=marque,
                              carburant=carburant, boite=boite, target_hp=target_hp, km_cible=km,
-                             finition=finition, carrosserie=carrosserie)
+                             finition=finition, carrosserie=carrosserie, km_margin=km_margin)
 
     async def _search_via_context(self, payload: dict, modele: str, marque: str = None,
                                    carburant: str = None, boite: str = None,
@@ -1312,7 +1312,7 @@ class LeboncoinScraper(BaseScraper):
         ctx_args = dict(marque=marque, carburant=carburant, boite=boite,
                         finition=finition, carrosserie=carrosserie)
 
-        async def _mobile_pages(mod, km, hp):
+        async def _mobile_pages(mod, km, hp, km_margin=10_000):
             """mod = modele (keyword LBC), km = km cible, hp = target_hp ou None."""
             prix = []
             for pg in range(1, max_pages + 1):
@@ -1322,6 +1322,7 @@ class LeboncoinScraper(BaseScraper):
                         carburant=carburant, boite=boite,
                         type_vehicule=type_vehicule, target_hp=hp,
                         finition=finition, carrosserie=carrosserie,
+                        km_margin=km_margin,
                     )
                     prix.extend(p)
                     if not p:
@@ -1421,6 +1422,15 @@ class LeboncoinScraper(BaseScraper):
                 prix = []
             if prix:
                 return prix
+
+        # ── 8. Retry km ±20k (fenêtre élargie si rien trouvé) ────────────────
+        logger.info("[leboncoin] Retry km ±20k")
+        try:
+            prix = await asyncio.wait_for(_mobile_pages(modele_api, kilometrage, target_hp, km_margin=20_000), timeout=22)
+        except Exception:
+            prix = []
+        if prix:
+            return prix
 
         logger.warning(f"[leboncoin] Aucun résultat pour {marque} {modele} {annee}")
         return []

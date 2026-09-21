@@ -1,5 +1,6 @@
 import asyncio
 import base64
+import datetime
 import json as _json
 import logging
 import re
@@ -526,6 +527,18 @@ async def _scan_lbc_bonnes_affaires(max_pages: int = 15, seuil_pct: int = 10) ->
                 raw_attrs = ad.get("attributes", [])
                 attrs_v = {a["key"]: a.get("value", "") for a in raw_attrs}
                 attrs_l = {a["key"]: a.get("value_label", "") for a in raw_attrs}
+
+                # Filtre âge : moins de 10 ans
+                annee_v = int(attrs_v["regdate"]) if attrs_v.get("regdate", "").isdigit() else None
+                if annee_v and annee_v < datetime.date.today().year - 10:
+                    stats["hors_fourchette"] += 1
+                    continue
+
+                # Filtre km : moins de 130 000 km
+                km_v = int(attrs_v["mileage"]) if attrs_v.get("mileage", "").isdigit() else None
+                if km_v and km_v >= 130_000:
+                    stats["hors_fourchette"] += 1
+                    continue
 
                 cote_min_raw = attrs_v.get("car_price_min")
                 cote_max_raw = attrs_v.get("car_price_max")
