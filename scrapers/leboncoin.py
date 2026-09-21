@@ -1331,21 +1331,20 @@ class LeboncoinScraper(BaseScraper):
                     break
             return prix
 
-        # ── 1. URL search via Playwright (motorisation dans le texte) ───────────
-        if motorisation:
-            logger.info("[leboncoin] URL search (Playwright)")
-            try:
-                prix = await asyncio.wait_for(
-                    self._url_search(marque, modele_api, annee, kilometrage,
-                                     carburant=carburant, boite=boite, motorisation=motorisation,
-                                     type_vehicule=type_vehicule, finition=finition,
-                                     carrosserie=carrosserie),
-                    timeout=30,
-                )
-            except Exception:
-                prix = []
-            if prix:
-                return prix
+        # ── 1. URL search via Playwright (URL identique à LBC — toujours en premier) ─
+        logger.info("[leboncoin] URL search (Playwright)")
+        try:
+            prix = await asyncio.wait_for(
+                self._url_search(marque, modele_api, annee, kilometrage,
+                                 carburant=carburant, boite=boite, motorisation=motorisation,
+                                 type_vehicule=type_vehicule, finition=finition,
+                                 carrosserie=carrosserie),
+                timeout=45,
+            )
+        except Exception:
+            prix = []
+        if prix:
+            return prix
 
         # ── 2. Mobile API avec HP ─────────────────────────────────────────────
         logger.info("[leboncoin] Mobile API (avec HP)")
