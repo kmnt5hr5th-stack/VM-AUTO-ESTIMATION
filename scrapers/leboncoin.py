@@ -1422,23 +1422,6 @@ class LeboncoinScraper(BaseScraper):
             if prix:
                 return prix
 
-        # ── 8. Fallback sans filtre km — le calculateur ajuste via le coef km ──
-        logger.info("[leboncoin] Fallback sans filtre km")
-        payload_no_km = _build_lbc_payload(marque, modele_api, annee, kilometrage, 1,
-                                            carburant=carburant, boite=boite,
-                                            type_vehicule=type_vehicule, target_hp=target_hp)
-        try:
-            prix = await asyncio.wait_for(
-                self._search_via_context(payload_no_km, modele_api, km_cible=None, **ctx_args),
-                timeout=30,
-            )
-        except Exception as e:
-            logger.warning(f"[leboncoin] Fallback sans km erreur: {e}")
-            prix = []
-        if prix:
-            logger.info(f"[leboncoin] Fallback sans km → {len(prix)} prix")
-            return prix
-
         logger.warning(f"[leboncoin] Aucun résultat pour {marque} {modele} {annee}")
         return []
 
