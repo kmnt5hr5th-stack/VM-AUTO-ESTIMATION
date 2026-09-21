@@ -578,7 +578,7 @@ async def _scan_lbc_bonnes_affaires(max_pages: int = 15, seuil_pct: int = 10) ->
                 list_id = str(ad.get("list_id", ""))
                 location = ad.get("location", {})
                 images = ad.get("images", {})
-                image_url = images.get("thumb_url") or (images.get("urls", [None])[0] or "")
+                image_url = (images.get("urls_large") or images.get("urls") or [None])[0] or images.get("thumb_url") or ""
                 owner = ad.get("owner", {})
                 dept_id = location.get("department_id", "")
                 dept_name = location.get("department_name", "")

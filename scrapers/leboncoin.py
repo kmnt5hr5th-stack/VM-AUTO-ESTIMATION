@@ -882,8 +882,8 @@ def _extract_annonces(ads: list, modele: str, marque: str = None, carburant: str
                     pass
             images = ad.get("images", {}) or {}
             image_url = (
-                images.get("thumb_url") or images.get("small_url") or
-                images.get("url") or ad.get("thumb_url") or ""
+                (images.get("urls_large") or images.get("urls") or [None])[0] or
+                images.get("thumb_url") or ad.get("thumb_url") or ""
             )
             try:
                 cote_min = int(attrs["car_price_min"]) if attrs.get("car_price_min") else None
