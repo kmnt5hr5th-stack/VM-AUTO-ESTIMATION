@@ -10,8 +10,11 @@ from dotenv import load_dotenv
 
 load_dotenv()  # Charge .env en local ; les variables Railway ont priorité en prod
 
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
+from slowapi import Limiter, _rate_limit_exceeded_handler
+from slowapi.util import get_remote_address
+from slowapi.errors import RateLimitExceeded
 from pydantic import BaseModel, Field
 from typing import Optional
 from curl_cffi.requests import AsyncSession
@@ -111,11 +114,14 @@ def _detect_type_vehicule(modele: str) -> str:
             return "utilitaire"
     return "voiture"
 
+limiter = Limiter(key_func=get_remote_address)
 app = FastAPI(
     title="VM Auto Estimation API",
     description="API de rachat de véhicules d'occasion — VM Auto Business (Seine-et-Marne)",
     version="1.0.0",
 )
+app.state.limiter = limiter
+app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
 
 
 @app.on_event("startup")
@@ -159,7 +165,8 @@ async def health():
 
 
 @app.get("/catalog/versions")
-async def catalog_versions(marque: str = "", modele: str = "", annee: int = 0, carburant: str = ""):
+@limiter.limit("10/minute")
+async def catalog_versions(request: Request, marque: str = "", modele: str = "", annee: int = 0, carburant: str = ""):
     versions = _get_caradisiac_versions(marque, modele, annee, carburant)
     return {"versions": versions, "count": len(versions)}
 
