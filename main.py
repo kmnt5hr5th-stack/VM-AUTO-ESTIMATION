@@ -480,14 +480,19 @@ async def _supabase_upsert_bonnes_affaires(records: list[dict]) -> int:
     return 0
 
 
-async def _scan_lbc_bonnes_affaires(max_pages: int = 15, seuil_pct: int = 10) -> tuple[list[dict], dict]:
-    """Scanne LBC (toute France, toutes marques) et retourne les annonces sous la côte de seuil_pct %."""
+async def _scan_lbc_bonnes_affaires(max_pages: int = 50, seuil_pct: int = 10) -> tuple[list[dict], dict]:
+    """Scanne LBC (toute France, toutes marques) et retourne les annonces sous la côte de seuil_pct %.
+    S'arrête dès qu'une annonce déjà connue est rencontrée (scan intelligent)."""
     from scrapers.leboncoin import _mobile_ua, _webshare_proxies, API_URL as LBC_API_URL, HOMEPAGE as LBC_HP
 
     ua, impersonate, headers = _mobile_ua()
     proxies = _webshare_proxies()
     bonnes = []
     stats = {"pages": 0, "raw_ads": 0, "pros_exclus": 0, "sans_cote": 0, "hors_fourchette": 0}
+
+    # Charger les IDs déjà en base pour arrêter dès qu'on retombe sur du connu
+    existing_ids = await _supabase_get_existing_ids()
+    logger.info(f"[scan-ba] {len(existing_ids)} annonces déjà en base")
 
     async with AsyncSession(impersonate=impersonate, proxies=proxies) as s:
         try:
@@ -529,8 +534,15 @@ async def _scan_lbc_bonnes_affaires(max_pages: int = 15, seuil_pct: int = 10) ->
             stats["raw_ads"] += len(ads)
             logger.info(f"[scan-ba] page {page}: {len(ads)} annonces")
 
+            stop_scan = False
             for ad in ads:
               try:
+                list_id = str(ad.get("list_id", ""))
+                if list_id and list_id in existing_ids:
+                    logger.info(f"[scan-ba] annonce déjà connue ({list_id}), arrêt du scan")
+                    stop_scan = True
+                    break
+
                 # Particuliers uniquement (LBC renvoie "private" pour particulier)
                 if ad.get("owner", {}).get("type") == "pro":
                     stats["pros_exclus"] += 1
@@ -580,7 +592,6 @@ async def _scan_lbc_bonnes_affaires(max_pages: int = 15, seuil_pct: int = 10) ->
                 ecart_eur = cote_min - prix
                 ecart_pct = round((ecart_eur / cote_min) * 100)
 
-                list_id = str(ad.get("list_id", ""))
                 location = ad.get("location", {})
                 images = ad.get("images", {}) or {}
                 _img_list = images.get("urls_large") or images.get("urls") or []
@@ -621,6 +632,9 @@ async def _scan_lbc_bonnes_affaires(max_pages: int = 15, seuil_pct: int = 10) ->
                 })
               except Exception as e:
                 logger.warning(f"[scan-ba] annonce ignorée ({e})")
+
+            if stop_scan:
+                break
 
     logger.info(f"[scan-ba] stats: {stats}")
     return bonnes, stats
