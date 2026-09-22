@@ -490,7 +490,11 @@ async def _scan_lbc_bonnes_affaires(max_pages: int = 15, seuil_pct: int = 10) ->
     stats = {"pages": 0, "raw_ads": 0, "pros_exclus": 0, "sans_cote": 0, "hors_fourchette": 0}
 
     async with AsyncSession(impersonate=impersonate, proxies=proxies) as s:
-        await s.get(LBC_HP, headers=headers, timeout=15)
+        try:
+            await s.get(LBC_HP, headers=headers, timeout=15)
+        except Exception as e:
+            logger.warning(f"[scan-ba] homepage LBC inaccessible: {e}")
+            return [], stats
 
         for page in range(1, max_pages + 1):
             payload = {
