@@ -36,7 +36,7 @@ def get(url: str, retries=3):
                 return None
         except Exception as e:
             log.warning(f"  Erreur {url}: {e}")
-        time.sleep(random.uniform(0.5, 1.2))
+        time.sleep(random.uniform(0.1, 0.3))
     return None
 
 
@@ -78,20 +78,92 @@ def clean_version(raw: str) -> str:
 def extract_model_name(brand_slug, full_slug):
     """
     Extract clean model name from Caradisiac slug.
-    Ex: brand='renault', slug='renault-clio-5'    → 'Clio'
-        brand='renault', slug='renault-clio-4-rs'  → 'Clio'
-        brand='peugeot', slug='peugeot-308-3'      → '308'
-        brand='mercedes-benz', slug='mercedes-benz-classe-a-4' → 'Classe A'
+    Ex: brand='renault', slug='renault-clio-5'                  → 'Clio'
+        brand='renault', slug='renault-clio-4-rs'               → 'Clio'
+        brand='peugeot', slug='peugeot-308-3'                   → '308'
+        brand='mercedes-benz', slug='mercedes-benz-classe-a-4'  → 'Classe A'
+        brand='bmw', slug='bmw-serie-3-e93-cabriolet-m3'        → 'Serie 3'
+        brand='bmw', slug='bmw-serie-4-f82'                     → 'Serie 4'
+        brand='bmw', slug='bmw-serie-5-g31-touring'             → 'Serie 5'
+        brand='audi', slug='audi-a3-sportback'                  → 'A3'
+        brand='audi', slug='audi-rs3-2e-generation-berline'     → 'Rs3'
     """
     model_part = full_slug[len(brand_slug):].lstrip("-")
-    # Remove known variant suffixes first
-    for suffix in ["-rs", "-gti", "-gt", "-gts", "-gtd", "-st", "-sw", "-estate",
-                   "-break", "-coupe", "-cabriolet", "-cabrio", "-roadster",
-                   "-societe", "-van", "-pickup", "-phev", "-plug-in-hybrid"]:
-        if model_part.endswith(suffix):
-            model_part = model_part[: -len(suffix)]
-    # Remove generation codes: trailing -5, -4, -f20, -e46, -w204, etc.
-    model_part = re.sub(r"-[a-z]?\d+$", "", model_part)
+
+    # Words that act as series designators: the digit following them is part of the model name.
+    # e.g. "serie-3", "classe-a" — do NOT strip these trailing digits/letters.
+    SERIES_DESIGNATORS = {"serie", "series", "classe", "klasse"}
+
+    # Body style and trim suffixes to strip (longest first to avoid partial matches).
+    BODY_STYLE_SUFFIXES = [
+        "-gran-coupe", "-gran-turismo", "-gran-cabrio",
+        "-plug-in-hybrid", "-phev",
+        "-sportback", "-hatchback", "-fastback",
+        "-cabriolet", "-cabrio", "-convertible",
+        "-roadster", "-spyder", "-spider",
+        "-touring", "-estate", "-break", "-sw", "-avant", "-wagon",
+        "-coupe", "-berline", "-targa",
+        "-societe", "-van", "-pickup",
+        "-gti", "-gts", "-gtd", "-gt",
+        "-rs", "-st", "-m3", "-m4", "-m5", "-amg",
+    ]
+
+    # Generation code: 1-2 letters followed by 2+ digits (E93, F82, G31, W204)
+    # or 1-3 digits followed by 1-2 letters (e.g. "2e" in "2e-generation"),
+    # or single-letter + single-digit where it follows a known model token (B9, C7).
+    # The regex strips a trailing "-<letters><digits>" or "-<digits><letters>" segment.
+    GEN_CODE_RE = re.compile(
+        r"-(?:[a-z]{1,2}\d{2,4}|\d{1,3}[a-z]{1,2}|\d+e-generation)$",
+        re.IGNORECASE
+    )
+
+    # Single-letter+single-digit gen codes (B9, C7, E9) — only strip when preceded by
+    # a token that looks like a model name (letter-only token), not when that token is
+    # itself a series designator (handled separately below).
+    SHORT_GEN_CODE_RE = re.compile(r"-[a-z]\d$", re.IGNORECASE)
+
+    def _last_token(s):
+        parts = s.rsplit("-", 1)
+        return parts[-1].lower() if len(parts) > 1 else s.lower()
+
+    # Iteratively strip suffixes until stable
+    prev = None
+    while prev != model_part:
+        prev = model_part
+        lower = model_part.lower()
+
+        # 1. Strip body style and trim suffixes
+        for suffix in BODY_STYLE_SUFFIXES:
+            if lower.endswith(suffix):
+                model_part = model_part[: -len(suffix)]
+                lower = model_part.lower()
+                break
+
+        # 2. Strip "-N-portes" door-count suffixes (e.g. "5-portes", "3-portes")
+        model_part = re.sub(r"-\d+-portes$", "", model_part, flags=re.IGNORECASE)
+
+        # 3. Strip generation codes like E93, F82, G31, W204, B9 (multi-digit)
+        model_part = GEN_CODE_RE.sub("", model_part)
+
+        # 4. Strip short single-letter+single-digit gen codes (B9, C7) but only when
+        #    the preceding token is a plain model identifier, not a series designator.
+        m = SHORT_GEN_CODE_RE.search(model_part)
+        if m:
+            before = model_part[: m.start()]
+            if _last_token(before) not in SERIES_DESIGNATORS:
+                model_part = before
+
+        # 5. Strip plain trailing generation numbers (-5, -4, -3, -2, -1) but NOT
+        #    when the preceding token is a series designator (serie-3, classe-a, etc.)
+        #    and NOT when the preceding token is itself numeric (308-3 → strip, fine).
+        m2 = re.search(r"-(\d+)$", model_part)
+        if m2:
+            before = model_part[: m2.start()]
+            last = _last_token(before)
+            # Keep the digit if it belongs to a series-style name
+            if last not in SERIES_DESIGNATORS:
+                model_part = before
+
     return model_part.replace("-", " ").title()
 
 
@@ -104,22 +176,19 @@ ACTIVE_BRANDS = {
     "audi", "bmw", "mercedes", "volkswagen", "opel", "mini", "porsche", "smart",
     "seat", "skoda", "cupra",
     # Japonais
-    "toyota", "honda", "nissan", "mazda", "mitsubishi", "suzuki", "lexus",
-    "subaru", "isuzu",
+    "toyota", "honda", "nissan", "mazda", "mitsubishi", "suzuki", "lexus", "subaru", "isuzu",
     # Coréens
     "hyundai", "kia", "genesis",
     # Italiens
-    "fiat", "alfa-romeo", "lancia", "abarth", "maserati", "ferrari", "lamborghini",
+    "fiat", "alfa-romeo", "lancia", "abarth",
     # Américains
-    "ford", "jeep", "chevrolet", "dodge", "tesla", "lincoln", "cadillac", "chrysler",
+    "ford", "jeep", "tesla", "chevrolet", "dodge", "lincoln", "cadillac", "chrysler",
     # Britanniques
-    "land-rover", "jaguar", "aston-martin", "bentley", "rolls-royce",
-    # Suédois
-    "volvo",
-    # Chinois/nouveaux
-    "mg", "byd", "nio", "xpeng", "polestar", "lynk-co", "leapmotor",
-    # Autres actifs en France
-    "seat", "ssangyong",
+    "land-rover", "jaguar", "volvo",
+    # Nouveaux/Chinois
+    "mg", "polestar", "byd", "nio", "xpeng", "lynk-co", "leapmotor",
+    # Autres
+    "ssangyong",
 }
 
 def get_brands():
@@ -277,13 +346,13 @@ def run():
                 total = sum(len(vs) for vs in catalog[brand_display][model_name][year].values())
                 log.info(f"    {year}: {total} versions")
 
-                time.sleep(random.uniform(0.3, 0.7))
+                time.sleep(random.uniform(0.05, 0.15))
 
         # Sauvegarder après chaque marque
         with open(OUTPUT, "w", encoding="utf-8") as f:
             json.dump(catalog, f, ensure_ascii=False, indent=2)
 
-        time.sleep(random.uniform(0.5, 1.5))
+        time.sleep(random.uniform(0.1, 0.3))
 
     # Stats finales
     total_models  = sum(len(m) for m in catalog.values())
