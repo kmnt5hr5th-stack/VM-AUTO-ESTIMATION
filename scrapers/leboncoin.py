@@ -90,6 +90,106 @@ async def warm_up_playwright() -> None:
         logger.warning(f"[leboncoin] Warmup Playwright échoué : {e}")
 
 
+# Codes variant → (hp_essence, hp_diesel) ou hp unique
+# Mercedes : le code (180, 200, 220…) ne correspond PAS à la puissance DIN
+_VARIANT_HP: dict[str, dict[str, tuple | int]] = {
+    "mercedes": {
+        "160": (102, 90), "180": (136, 116), "200": (163, 150),
+        "220": (184, 194), "250": (224, 204), "300": (258, 265),
+        "350": (306, 258), "400": (333, 340), "450": (367, 340),
+        "43": 367, "45": 421, "45 s": 421, "53": 435, "63": 503, "63 s": 612,
+    },
+    "bmw": {
+        # Série 1
+        "116i": 109, "118i": 136, "120i": 184, "125i": 218, "128ti": 265, "130i": 265,
+        "116d": 116, "118d": 150, "120d": 190, "123d": 204, "125d": 218,
+        # Série 2
+        "218i": 136, "220i": 184, "225i": 231, "220d": 190, "225d": 231, "218d": 150,
+        # Série 3
+        "316i": 109, "318i": 136, "320i": 184, "325i": 218, "328i": 245, "330i": 258, "335i": 306, "340i": 326,
+        "316d": 116, "318d": 150, "320d": 190, "325d": 218, "330d": 265, "335d": 313, "340d": 313,
+        # Série 4
+        "418i": 136, "420i": 184, "430i": 258, "440i": 326,
+        "418d": 150, "420d": 190, "430d": 265, "440d": 313,
+        # Série 5
+        "518i": 136, "520i": 184, "523i": 204, "525i": 218, "530i": 258, "535i": 306, "540i": 340,
+        "518d": 150, "520d": 190, "525d": 218, "530d": 265, "535d": 313,
+        # X1/X2/X3/X5
+        "x1 18i": 136, "x1 20i": 192, "x1 25i": 231, "x1 18d": 150, "x1 20d": 190,
+        "x2 18i": 136, "x2 20i": 192, "x2 18d": 150, "x2 20d": 190,
+        "x3 20i": 184, "x3 30i": 252, "x3 20d": 190, "x3 30d": 265,
+        "x5 25d": 231, "x5 30d": 265, "x5 30i": 252, "x5 40i": 340,
+    },
+    "audi": {
+        "25 tfsi": 95, "30 tfsi": 116, "35 tfsi": 150, "40 tfsi": 190, "45 tfsi": 245, "50 tfsi": 286,
+        "30 tdi": 116, "35 tdi": 150, "40 tdi": 190, "45 tdi": 231, "50 tdi": 286,
+        "30 tdis": 116, "35 tdis": 150,
+    },
+    "volvo": {
+        # Diesel
+        "d2": 120, "d3": 150, "d4": 190, "d5": 235,
+        # Essence/mild-hybrid
+        "t3": 152, "t4": 190, "t5": 254, "t6": 310, "t8": 390,
+        "b3": 163, "b4": 197, "b5": 250, "b6": 300,
+        # Micro-hybride
+        "b4 d": 197, "b5 d": 235,
+    },
+    "mini": {
+        "one": 102, "cooper": 136, "cooper s": 178, "john cooper works": 231,
+        "cooper d": 116, "cooper sd": 170,
+        "one d": 95,
+    },
+    "porsche": {
+        "carrera": 385, "carrera s": 450, "carrera 4": 385, "carrera 4s": 450,
+        "cayenne": 340, "cayenne s": 440, "cayenne gts": 460, "cayenne turbo": 550,
+        "macan": 265, "macan s": 354, "macan gts": 380, "macan turbo": 440,
+    },
+    "jaguar": {
+        "d180": 180, "d200": 200, "d240": 240, "d300": 300,
+        "p250": 250, "p300": 300, "p340": 340, "p380": 380, "p400": 400, "p450": 450,
+    },
+    "land rover": {
+        "d150": 150, "d180": 180, "d200": 200, "d240": 240, "d250": 250, "d300": 300,
+        "p250": 250, "p300": 300, "p340": 340, "p360": 360, "p400": 400, "p510": 510,
+        "si4": 240, "td4": 180, "td6": 258,
+    },
+}
+
+
+def _hp_from_variant(marque: str, motorisation: str, carburant: str = None) -> Optional[int]:
+    """Lookup HP depuis le code variant quand _extraire_cv échoue ou retourne un mauvais résultat.
+    Ex: Mercedes 'BERLINE 180 BUSINESS LINE' → 136ch (essence) ou 116ch (diesel)."""
+    if not motorisation:
+        return None
+    m_lower = marque.lower().replace("-benz", "").replace("benz", "").strip()
+    for brand, variants in _VARIANT_HP.items():
+        if brand not in m_lower and m_lower not in brand:
+            continue
+        mot_lower = motorisation.lower()
+        best_hp = None
+        best_len = 0
+        for variant, hp in variants.items():
+            if re.search(r'\b' + re.escape(variant) + r'\b', mot_lower) and len(variant) > best_len:
+                best_hp = hp
+                best_len = len(variant)
+        if best_hp is not None:
+            if isinstance(best_hp, tuple):
+                is_diesel = carburant and "diesel" in carburant.lower()
+                return best_hp[1] if is_diesel else best_hp[0]
+            return best_hp
+    return None
+
+
+def _get_target_hp(marque: str, motorisation: str, carburant: str = None) -> Optional[int]:
+    """HP final : pour Mercedes/BMW/Audi le code variant prime sur _extraire_cv."""
+    if not motorisation:
+        return None
+    variant = _hp_from_variant(marque, motorisation, carburant)
+    if variant:
+        return variant
+    return _extraire_cv(motorisation)
+
+
 def _extraire_cv(motorisation: str) -> Optional[int]:
     if not motorisation:
         return None
@@ -218,6 +318,84 @@ API_URL = "https://api.leboncoin.fr/finder/search"
 HOMEPAGE = "https://www.leboncoin.fr/"
 SEARCH_URL = "https://www.leboncoin.fr/recherche"
 
+# (début_gen, fin_gen) — fin_gen = 1ère année de la génération suivante (exclusive)
+_GENERATIONS: dict[str, list[tuple[int, int]]] = {
+    "peugeot_208":        [(2012, 2019), (2019, 2030)],
+    "peugeot_308":        [(2007, 2013), (2013, 2021), (2021, 2030)],
+    "peugeot_3008":       [(2009, 2016), (2016, 2024), (2024, 2030)],
+    "peugeot_5008":       [(2009, 2017), (2017, 2024), (2024, 2030)],
+    "peugeot_2008":       [(2013, 2019), (2019, 2030)],
+    "peugeot_508":        [(2010, 2018), (2018, 2030)],
+    "renault_clio":       [(2005, 2012), (2012, 2019), (2019, 2030)],
+    "renault_megane":     [(2008, 2016), (2016, 2023), (2023, 2030)],
+    "renault_captur":     [(2013, 2019), (2019, 2030)],
+    "renault_kadjar":     [(2015, 2022), (2022, 2030)],
+    "renault_scenic":     [(2009, 2016), (2016, 2023), (2023, 2030)],
+    "renault_zoe":        [(2012, 2019), (2019, 2030)],
+    "volkswagen_golf":    [(2008, 2013), (2013, 2020), (2020, 2030)],
+    "volkswagen_polo":    [(2009, 2018), (2018, 2030)],
+    "volkswagen_tiguan":  [(2007, 2016), (2016, 2024), (2024, 2030)],
+    "volkswagen_passat":  [(2010, 2019), (2019, 2030)],
+    "bmw_serie_3":        [(2005, 2012), (2012, 2019), (2019, 2030)],
+    "bmw_serie_5":        [(2010, 2017), (2017, 2024), (2024, 2030)],
+    "bmw_x3":             [(2010, 2017), (2017, 2030)],
+    "bmw_x5":             [(2013, 2018), (2018, 2030)],
+    "bmw_x1":             [(2009, 2015), (2015, 2022), (2022, 2030)],
+    "mercedes_classe_c":  [(2007, 2014), (2014, 2021), (2021, 2030)],
+    "mercedes_classe_e":  [(2009, 2016), (2016, 2023), (2023, 2030)],
+    "mercedes_classe_a":  [(2012, 2018), (2018, 2030)],
+    "mercedes_glc":       [(2015, 2019), (2019, 2023), (2023, 2030)],
+    "mercedes_gle":       [(2015, 2019), (2019, 2030)],
+    "audi_a3":            [(2003, 2012), (2012, 2020), (2020, 2030)],
+    "audi_a4":            [(2008, 2015), (2015, 2024), (2024, 2030)],
+    "audi_q3":            [(2011, 2018), (2018, 2030)],
+    "audi_q5":            [(2008, 2017), (2017, 2030)],
+    "ford_focus":         [(2011, 2019), (2019, 2030)],
+    "ford_fiesta":        [(2008, 2017), (2017, 2030)],
+    "ford_kuga":          [(2012, 2019), (2019, 2030)],
+    "toyota_yaris":       [(2011, 2020), (2020, 2030)],
+    "toyota_corolla":     [(2013, 2019), (2019, 2030)],
+    "toyota_rav4":        [(2013, 2019), (2019, 2030)],
+    "citroen_c3":         [(2009, 2016), (2016, 2024), (2024, 2030)],
+    "citroen_berlingo":   [(2008, 2018), (2018, 2030)],
+    "opel_corsa":         [(2014, 2019), (2019, 2030)],
+    "opel_astra":         [(2009, 2015), (2015, 2022), (2022, 2030)],
+    "seat_leon":          [(2012, 2020), (2020, 2030)],
+    "seat_ateca":         [(2016, 2020), (2020, 2030)],
+    "skoda_octavia":      [(2012, 2020), (2020, 2030)],
+    "skoda_kodiaq":       [(2016, 2021), (2021, 2030)],
+    "hyundai_tucson":     [(2015, 2020), (2020, 2030)],
+    "hyundai_i30":        [(2012, 2017), (2017, 2030)],
+    "kia_sportage":       [(2010, 2016), (2016, 2021), (2021, 2030)],
+    "volvo_xc60":         [(2008, 2017), (2017, 2030)],
+    "volvo_xc90":         [(2002, 2014), (2014, 2030)],
+    "mini_mini":          [(2006, 2014), (2014, 2023), (2023, 2030)],
+}
+
+
+def _gen_key(marque: str, modele: str) -> str:
+    import unicodedata as _ud
+    def _norm(s):
+        s = _ud.normalize("NFD", s)
+        s = "".join(c for c in s if _ud.category(c) != "Mn")
+        return re.sub(r'[\s\-/]+', '_', s.lower().strip())
+    return f"{_norm(marque)}_{_norm(modele)}"
+
+
+def _generation_range(marque: str, modele: str, annee: int) -> tuple[int, int]:
+    """Retourne (regdate_min, regdate_max) en respectant les bornes de génération."""
+    gens = _GENERATIONS.get(_gen_key(marque, modele))
+    if not gens:
+        return (annee - 1, annee + 1)
+    matched = None
+    for start, end in sorted(gens):
+        if start <= annee:
+            matched = (start, end)
+    if not matched:
+        return (annee - 1, annee + 1)
+    gen_start, gen_end = matched
+    return (max(gen_start, annee - 1), min(gen_end - 1, annee + 1))
+
 
 def _lbc_code(s: str) -> str:
     """Normalise une chaîne en code LBC marque : majuscules, sans accents, espaces → underscores."""
@@ -283,7 +461,8 @@ def _lbc_model_name(marque: str, modele: str, carrosserie: str = None) -> str:
 def _build_search_url(marque: str, modele: str, annee: int, carburant: str = None,
                        boite: str = None, motorisation: str = None,
                        type_vehicule: str = None, kilometrage: int = None,
-                       finition: str = None, carrosserie: str = None) -> str:
+                       finition: str = None, carrosserie: str = None,
+                       puissance: int = None) -> str:
     """Construit l'URL de recherche LBC identique à celle du site (category, brand, model, finition, regdate, fuel, gearbox, hp, mileage)."""
     import urllib.parse
 
@@ -303,12 +482,15 @@ def _build_search_url(marque: str, modele: str, annee: int, carburant: str = Non
     is_util = type_vehicule and type_vehicule.lower() in ("utilitaire", "fourgon", "van", "camionnette")
     brand_code = _lbc_brand_code(marque)
     model_name = _lbc_model_name(marque, modele, carrosserie=carrosserie)
-    model_code = f"{brand_code}_{model_name}" if " " in model_name else f"{brand_code}_{_lbc_model_code(model_name)}"
+    model_code = f"{brand_code}_{model_name}"
 
     # Ordre identique à l'URL LBC : category, regdate, hp, mileage, brand, model, fuel, finition, gearbox
-    params: dict = {"category": "5" if is_util else "2", "regdate": f"{annee - 1}-{annee + 1}"}
+    reg_min, reg_max = _generation_range(marque, modele, annee)
+    params: dict = {"category": "5" if is_util else "2", "regdate": f"{reg_min}-{reg_max}"}
 
-    if motorisation:
+    if puissance:
+        params["horse_power_din"] = f"{puissance}-{puissance}"
+    elif motorisation:
         hp = _extraire_cv(motorisation)
         if hp:
             params["horse_power_din"] = f"{hp}-{hp}"
@@ -341,7 +523,7 @@ def _build_search_url(marque: str, modele: str, annee: int, carburant: str = Non
         if vt:
             params["vehicle_type"] = vt
 
-    return f"{SEARCH_URL}?{urllib.parse.urlencode(params)}"
+    return f"{SEARCH_URL}?{urllib.parse.urlencode(params, quote_via=urllib.parse.quote)}"
 
 def _lbc_finition_code(marque: str, modele: str, finition: str) -> str:
     """Construit le code finition LBC : MERCEDES-BENZ_Classe GLC_AMG Line, AUDI_Q2_Design."""
@@ -353,10 +535,7 @@ def _lbc_finition_code(marque: str, modele: str, finition: str) -> str:
         return " ".join(w.capitalize() for w in re.split(r'[\s\-]+', s.strip()) if w)
     brand_code = _lbc_brand_code(marque)
     model_name = _lbc_model_name(marque, modele)
-    if " " in model_name:
-        model_code = f"{brand_code}_{model_name}"
-    else:
-        model_code = f"{brand_code}_{_lbc_model_code(model_name)}"
+    model_code = f"{brand_code}_{model_name}"
     fin_code = _title(finition)
     return f"{model_code}_{fin_code}"
 
@@ -382,7 +561,7 @@ def _build_structured_payload(marque: str, modele: str, annee: int,
     is_util = type_vehicule and type_vehicule.lower() in ("utilitaire", "fourgon", "van", "camionnette")
     brand_code = _lbc_brand_code(marque)
     model_name = _lbc_model_name(marque, modele, carrosserie=carrosserie)
-    model_code = f"{brand_code}_{model_name}" if " " in model_name else f"{brand_code}_{_lbc_model_code(model_name)}"
+    model_code = f"{brand_code}_{model_name}"
 
     enums: dict = {"ad_type": ["offer"], "u_car_brand": [brand_code], "u_car_model": [model_code]}
     if finition:
@@ -405,7 +584,8 @@ def _build_structured_payload(marque: str, modele: str, annee: int,
 
     ranges: dict = {}
     if annee:
-        ranges["regdate"] = {"min": annee - 1, "max": annee + 1}
+        reg_min, reg_max = _generation_range(marque, modele, annee)
+        ranges["regdate"] = {"min": reg_min, "max": reg_max}
     if kilometrage:
         km_base = round(kilometrage / 10_000) * 10_000
         ranges["mileage"] = {"min": max(0, km_base - 10_000), "max": km_base + 10_000}
@@ -558,7 +738,8 @@ def _build_camoufox_payload(marque, modele, annee, km, boite=None,
         gear = GEAR_NUM.get(boite.lower().strip())
         if gear:
             enums["gearbox"] = [gear]
-    ranges: dict = {"regdate": {"min": annee - 1, "max": annee + 1}}
+    reg_min, reg_max = _generation_range(marque, modele, annee)
+    ranges: dict = {"regdate": {"min": reg_min, "max": reg_max}}
     if _km_bas_pour_age(km, annee):
         logger.info(f"[leboncoin] Km bas pour l'âge ({km} km / {annee}) — filtre km désactivé")
     elif km > 200_000:
@@ -1205,10 +1386,11 @@ class LeboncoinScraper(BaseScraper):
         if _pw_sem is None:
             _pw_sem = asyncio.Semaphore(2)
 
-        target_hp = _extraire_cv(motorisation) if motorisation else None
+        target_hp = _get_target_hp(marque, motorisation, carburant) if motorisation else None
         url = _build_search_url(marque, modele, annee, carburant=carburant, boite=boite,
                                  motorisation=motorisation, type_vehicule=type_vehicule,
-                                 kilometrage=kilometrage, finition=finition, carrosserie=carrosserie)
+                                 kilometrage=kilometrage, finition=finition, carrosserie=carrosserie,
+                                 puissance=target_hp)
         logger.info(f"[leboncoin] URL search: {url}")
 
         for attempt in range(2):
@@ -1304,7 +1486,7 @@ class LeboncoinScraper(BaseScraper):
     async def get_prices(self, marque, modele, annee, kilometrage, max_pages=2,
                           finition=None, carburant=None, boite=None,
                           motorisation=None, type_vehicule=None, carrosserie=None):
-        target_hp = _extraire_cv(motorisation) if motorisation else None
+        target_hp = _get_target_hp(marque, motorisation, carburant) if motorisation else None
         engine_code = _extraire_code_moteur(motorisation) if motorisation else None
         modele_api = re.sub(r'\bsportback\b', '', modele, flags=re.IGNORECASE).strip()
 
