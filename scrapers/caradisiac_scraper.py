@@ -68,10 +68,11 @@ def detect_fuel(version: str) -> str:
 
 
 def clean_version(raw: str) -> str:
-    """Remove leading 'V ' or 'V (2) ' prefix from Caradisiac version names."""
     s = raw.strip()
     s = re.sub(r"^V\s*\(\d+\)\s*", "", s)
     s = re.sub(r"^V\s+", "", s)
+    s = re.sub(r"^\([^)]+\)\s*", "", s)   # retire (2), (E81), (III) en début
+    s = re.sub(r"\s+\d+P\b", "", s)        # retire 3P, 5P en fin
     return s.strip()
 
 
