@@ -526,6 +526,7 @@ async def _scan_lbc_bonnes_affaires(max_pages: int = 15, seuil_pct: int = 10) ->
             logger.info(f"[scan-ba] page {page}: {len(ads)} annonces")
 
             for ad in ads:
+              try:
                 # Particuliers uniquement (LBC renvoie "private" pour particulier)
                 if ad.get("owner", {}).get("type") == "pro":
                     stats["pros_exclus"] += 1
@@ -577,8 +578,9 @@ async def _scan_lbc_bonnes_affaires(max_pages: int = 15, seuil_pct: int = 10) ->
 
                 list_id = str(ad.get("list_id", ""))
                 location = ad.get("location", {})
-                images = ad.get("images", {})
-                image_url = (images.get("urls_large") or images.get("urls") or [None])[0] or images.get("thumb_url") or ""
+                images = ad.get("images", {}) or {}
+                _img_list = images.get("urls_large") or images.get("urls") or []
+                image_url = (_img_list[0] if isinstance(_img_list, list) and _img_list else None) or images.get("thumb_url") or ""
                 owner = ad.get("owner", {})
                 dept_id = location.get("department_id", "")
                 dept_name = location.get("department_name", "")
@@ -613,6 +615,8 @@ async def _scan_lbc_bonnes_affaires(max_pages: int = 15, seuil_pct: int = 10) ->
                     "date_publication": pub_date,
                     "is_active": True,
                 })
+              except Exception as e:
+                logger.warning(f"[scan-ba] annonce ignorée ({e})")
 
     logger.info(f"[scan-ba] stats: {stats}")
     return bonnes, stats
