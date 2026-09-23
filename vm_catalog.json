@@ -139229,6 +139229,165 @@
           "PANORAMA 3.5 MH2 3.0 GNV"
         ]
       }
+    },
+    "500X": {
+      "2015": {
+        "essence": [
+          "1.4 MULTIAIR 16V 140 LOUNGE",
+          "1.4 MULTIAIR 16V 140 POP",
+          "1.4 MULTIAIR 16V 140 CROSS",
+          "1.4 MULTIAIR 16V 170 SPORT",
+          "1.4 MULTIAIR 16V 170 CROSS PLUS"
+        ],
+        "diesel": [
+          "1.3 MULTIJET 16V 95 POP",
+          "1.3 MULTIJET 16V 95 LOUNGE",
+          "1.6 MULTIJET II 16V 120 LOUNGE",
+          "1.6 MULTIJET II 16V 120 CROSS",
+          "2.0 MULTIJET II 16V 140 CROSS PLUS",
+          "2.0 MULTIJET II 16V 140 SPORT"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2016": {
+        "essence": [
+          "1.4 MULTIAIR 16V 140 LOUNGE",
+          "1.4 MULTIAIR 16V 140 POP",
+          "1.4 MULTIAIR 16V 140 CROSS",
+          "1.4 MULTIAIR 16V 170 SPORT",
+          "1.4 MULTIAIR 16V 170 CROSS PLUS"
+        ],
+        "diesel": [
+          "1.3 MULTIJET 16V 95 POP",
+          "1.3 MULTIJET 16V 95 LOUNGE",
+          "1.6 MULTIJET II 16V 120 LOUNGE",
+          "1.6 MULTIJET II 16V 120 CROSS",
+          "2.0 MULTIJET II 16V 140 CROSS PLUS",
+          "2.0 MULTIJET II 16V 140 SPORT"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2017": {
+        "essence": [
+          "1.4 MULTIAIR 16V 140 LOUNGE",
+          "1.4 MULTIAIR 16V 140 POP",
+          "1.4 MULTIAIR 16V 140 CROSS",
+          "1.4 MULTIAIR 16V 170 SPORT",
+          "1.4 MULTIAIR 16V 170 CROSS PLUS"
+        ],
+        "diesel": [
+          "1.3 MULTIJET 16V 95 POP",
+          "1.3 MULTIJET 16V 95 LOUNGE",
+          "1.6 MULTIJET II 16V 120 LOUNGE",
+          "1.6 MULTIJET II 16V 120 CROSS",
+          "2.0 MULTIJET II 16V 140 CROSS PLUS",
+          "2.0 MULTIJET II 16V 140 SPORT"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2018": {
+        "essence": [
+          "1.0 FIREFLY TURBO T3 120 CITY CROSS",
+          "1.0 FIREFLY TURBO T3 120 CONNECT",
+          "1.0 FIREFLY TURBO T3 120 CROSS",
+          "1.3 FIREFLY TURBO T4 150 CROSS PLUS",
+          "1.3 FIREFLY TURBO T4 150 SPORT"
+        ],
+        "diesel": [
+          "1.3 MULTIJET 95 CITY CROSS",
+          "1.3 MULTIJET 95 CONNECT",
+          "1.6 MULTIJET II 120 CROSS",
+          "1.6 MULTIJET II 120 LOUNGE"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2019": {
+        "essence": [
+          "1.0 FIREFLY TURBO T3 120 CITY CROSS",
+          "1.0 FIREFLY TURBO T3 120 CONNECT",
+          "1.0 FIREFLY TURBO T3 120 CROSS",
+          "1.3 FIREFLY TURBO T4 150 CROSS PLUS",
+          "1.3 FIREFLY TURBO T4 150 SPORT"
+        ],
+        "diesel": [
+          "1.3 MULTIJET 95 CITY CROSS",
+          "1.3 MULTIJET 95 CONNECT",
+          "1.6 MULTIJET II 120 CROSS",
+          "1.6 MULTIJET II 120 LOUNGE"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2020": {
+        "essence": [
+          "1.0 FIREFLY TURBO T3 120 CITY CROSS",
+          "1.0 FIREFLY TURBO T3 120 CONNECT",
+          "1.0 FIREFLY TURBO T3 120 CROSS",
+          "1.3 FIREFLY TURBO T4 150 CROSS PLUS",
+          "1.3 FIREFLY TURBO T4 150 SPORT",
+          "1.5 FIREFLY HYBRID 130 CROSS"
+        ],
+        "diesel": [
+          "1.3 MULTIJET 95 CITY CROSS",
+          "1.6 MULTIJET II 120 CROSS"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2021": {
+        "essence": [
+          "1.0 FIREFLY TURBO T3 120 CITY CROSS",
+          "1.0 FIREFLY TURBO T3 120 CONNECT",
+          "1.0 FIREFLY TURBO T3 120 CROSS",
+          "1.3 FIREFLY TURBO T4 150 CROSS PLUS",
+          "1.3 FIREFLY TURBO T4 150 SPORT",
+          "1.5 FIREFLY HYBRID 130 CROSS"
+        ],
+        "diesel": [
+          "1.3 MULTIJET 95 CITY CROSS",
+          "1.6 MULTIJET II 120 CROSS"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2022": {
+        "essence": [
+          "1.0 FIREFLY TURBO T3 120 CROSS",
+          "1.3 FIREFLY TURBO T4 150 CROSS PLUS",
+          "1.5 FIREFLY HYBRID 130 CROSS"
+        ],
+        "diesel": [
+          "1.3 MULTIJET 95 CROSS"
+        ],
+        "hybride": [
+          "1.5 FIREFLY HYBRID 130 CROSS"
+        ],
+        "electrique": [],
+        "gpl": []
+      },
+      "2023": {
+        "essence": [
+          "1.5 FIREFLY HYBRID 130 CROSS",
+          "1.5 FIREFLY HYBRID 130 RED"
+        ],
+        "diesel": [],
+        "hybride": [
+          "1.5 FIREFLY HYBRID 130 CROSS"
+        ],
+        "electrique": [],
+        "gpl": []
+      }
     }
   },
   "HONDA": {
