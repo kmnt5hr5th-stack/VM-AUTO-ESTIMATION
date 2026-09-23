@@ -111614,6 +111614,24 @@
         ],
         "electrique": [],
         "gpl": []
+      },
+      "2024": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [
+          "VIII (2) SW 1.4 TSI HYBRIDE RECHARGEABLE GTE LIFE PLUS DSG6"
+        ],
+        "electrique": [],
+        "gpl": []
+      },
+      "2025": {
+        "essence": [],
+        "diesel": [],
+        "hybride": [
+          "VIII (2) SW 1.4 TSI HYBRIDE RECHARGEABLE GTE LIFE PLUS DSG6"
+        ],
+        "electrique": [],
+        "gpl": []
       }
     },
     "Passat 9 Sw": {
@@ -123462,6 +123480,132 @@
           "IX SW 1.5 EHYBRID 272 R-LINE DSG6",
           "IX SW 1.5 EHYBRID 272 STYLE DSG6"
         ],
+        "electrique": [],
+        "gpl": []
+      }
+    },
+    "Passat Alltrack": {
+      "2015": {
+        "essence": [],
+        "diesel": [
+          "VIII ALLTRACK 2.0 TDI 150 4WD",
+          "VIII ALLTRACK 2.0 TDI 190 4WD DSG6"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2016": {
+        "essence": [
+          "VIII ALLTRACK 2.0 TFSI 220 4WD DSG7"
+        ],
+        "diesel": [
+          "VIII ALLTRACK 2.0 TDI 150 4WD",
+          "VIII ALLTRACK 2.0 TDI 190 10CV 4WD DSG6",
+          "VIII ALLTRACK 2.0 TDI 190 4WD DSG6",
+          "VIII ALLTRACK 2.0 TDI 240 4WD DSG7"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2017": {
+        "essence": [
+          "VIII ALLTRACK 2.0 TFSI 220 4WD DSG7"
+        ],
+        "diesel": [
+          "VIII ALLTRACK 2.0 TDI 150 4WD",
+          "VIII ALLTRACK 2.0 TDI 190 10CV 4WD DSG6",
+          "VIII ALLTRACK 2.0 TDI 190 4WD DSG7",
+          "VIII ALLTRACK 2.0 TDI 240 4WD DSG7"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2018": {
+        "essence": [
+          "VIII ALLTRACK 2.0 TFSI 220 4WD DSG7"
+        ],
+        "diesel": [
+          "VIII ALLTRACK 2.0 TDI 190 4WD DSG7",
+          "VIII ALLTRACK 2.0 TDI 240 4WD DSG7"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2019": {
+        "essence": [],
+        "diesel": [
+          "VIII (2) ALLTRACK 2.0 TDI EVO SCR 200 4WD DSG7",
+          "VIII ALLTRACK 2.0 TDI 190 4WD DSG7"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2020": {
+        "essence": [],
+        "diesel": [
+          "VIII (2) ALLTRACK 2.0 TDI EVO SCR 200 4WD DSG7"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2021": {
+        "essence": [],
+        "diesel": [
+          "VIII (2) ALLTRACK 2.0 TDI EVO SCR 200 4WD DSG7"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2022": {
+        "essence": [],
+        "diesel": [
+          "VIII (2) ALLTRACK 2.0 TDI EVO SCR 200 4MOTION DSG7",
+          "VIII (2) ALLTRACK 2.0 TDI EVO SCR 200 4WD DSG7"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2023": {
+        "essence": [],
+        "diesel": [
+          "VIII (2) ALLTRACK 2.0 TDI EVO SCR 200 4MOTION DSG7"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2024": {
+        "essence": [],
+        "diesel": [
+          "VIII (2) ALLTRACK 2.0 TDI EVO SCR 200 4MOTION DSG7"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2025": {
+        "essence": [],
+        "diesel": [
+          "VIII (2) ALLTRACK 2.0 TDI EVO SCR 200 4MOTION DSG7"
+        ],
+        "hybride": [],
+        "electrique": [],
+        "gpl": []
+      },
+      "2026": {
+        "essence": [],
+        "diesel": [
+          "VIII (2) ALLTRACK 2.0 TDI EVO SCR 200 4MOTION DSG7"
+        ],
+        "hybride": [],
         "electrique": [],
         "gpl": []
       }
