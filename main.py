@@ -725,7 +725,7 @@ _CARADISIAC_FUEL_MAP = {
     "gnv": "gpl",
 }
 
-_VARIANT_SUFFIXES = [" sw", " break", " estate", " touring", " sportback", " variant", " e-tech", " combi", " active tourer"]
+_VARIANT_SUFFIXES = [" sw", " break", " estate", " touring", " sportback", " variant", " e-tech", " combi"]
 
 def _lookup_versions_in_brand(brand_data: dict, m_norm: str, year_str: str, fuel_key: str) -> list[str]:
     versions = []
