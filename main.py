@@ -1,3 +1,4 @@
+import vm_ab_catalog
 import asyncio
 import base64
 import datetime
@@ -738,7 +739,17 @@ def _lookup_versions_in_brand(brand_data: dict, m_norm: str, year_str: str, fuel
     return versions
 
 def _get_vm_catalog_versions(brand: str, model: str, annee: int, carburant: str) -> list[str]:
-    """Retourne les versions Caradisiac pour brand/model/annee/carburant."""
+    """Versions du catalogue VM Auto Business ; l'ancien catalogue ne sert que si le véhicule y manque."""
+    if not brand or not model or not annee:
+        return []
+    versions = vm_ab_catalog.get_versions(brand, model, annee, carburant)
+    if versions:
+        return versions
+    return _get_old_catalog_versions(brand, model, annee, carburant)
+
+
+def _get_old_catalog_versions(brand: str, model: str, annee: int, carburant: str) -> list[str]:
+    """Ancien catalogue (secours pour les véhicules absents du catalogue VM Auto Business)."""
     if not _vm_catalog or not brand or not model or not annee:
         return []
     fuel_key = _CARADISIAC_FUEL_MAP.get(carburant.lower(), "essence")
