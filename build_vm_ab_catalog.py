@@ -48,11 +48,20 @@ def main():
     out: dict[str, dict[str, list]] = {}
     for key, data in raw.items():
         brand_raw, _, model = key.partition("_")
-        versions = [
-            {"v": v["label"], "de": v["min_year"], "a": v["max_year"], "c": infer_fuel(v["label"], v["fuel"]), "n": v.get("count", 0)}
-            for v in data.get("versions", [])
-            if v.get("label") and v.get("min_year")
-        ]
+        # Certains noms arrivent préfixés par leur finition (« Trendy_107 1.0 12v Trendy 3p ») : on retire
+        # le préfixe et on fusionne les doublons qui en résultent
+        merged: dict[tuple, dict] = {}
+        for v in data.get("versions", []):
+            if not v.get("label") or not v.get("min_year"):
+                continue
+            label = v["label"].split("_", 1)[1] if "_" in v["label"] else v["label"]
+            fuel = infer_fuel(label, v["fuel"])
+            m = merged.get((label, fuel))
+            if m:
+                m["de"], m["a"], m["n"] = min(m["de"], v["min_year"]), max(m["a"], v["max_year"]), m["n"] + v.get("count", 0)
+            else:
+                merged[(label, fuel)] = {"v": label, "de": v["min_year"], "a": v["max_year"], "c": fuel, "n": v.get("count", 0)}
+        versions = list(merged.values())
         if not versions or model == "Autre":
             continue
         brand = BRAND_NAMES.get(brand_raw, brand_raw.title())
