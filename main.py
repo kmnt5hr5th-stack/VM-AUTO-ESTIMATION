@@ -499,7 +499,8 @@ async def _supabase_upsert_bonnes_affaires(records: list[dict]) -> int:
     return 0
 
 
-async def _scan_lbc_bonnes_affaires(max_pages: int = 50, seuil_pct: int = 10) -> tuple[list[dict], dict]:
+async def _scan_lbc_bonnes_affaires(max_pages: int = 50, seuil_pct: int = 10,
+                                    known_ids: Optional[set] = None) -> tuple[list[dict], dict]:
     """Scanne LBC (toute France, toutes marques) et retourne les annonces sous la côte de seuil_pct %.
     S'arrête dès qu'une annonce déjà connue est rencontrée (scan intelligent)."""
     from scrapers.leboncoin import _mobile_ua, _webshare_proxies, API_URL as LBC_API_URL, HOMEPAGE as LBC_HP
@@ -510,7 +511,8 @@ async def _scan_lbc_bonnes_affaires(max_pages: int = 50, seuil_pct: int = 10) ->
     stats = {"pages": 0, "raw_ads": 0, "pros_exclus": 0, "sans_cote": 0, "hors_fourchette": 0}
 
     # Charger les IDs déjà en base pour arrêter dès qu'on retombe sur du connu
-    existing_ids = await _supabase_get_existing_ids()
+    # known_ids : annonces déjà connues de l'appelant (app VM) ; sinon celles de la base du site vitrine
+    existing_ids = known_ids if known_ids is not None else await _supabase_get_existing_ids()
     logger.info(f"[scan-ba] {len(existing_ids)} annonces déjà en base")
 
     async with AsyncSession(impersonate=impersonate, proxies=proxies) as s:
@@ -657,6 +659,30 @@ async def _scan_lbc_bonnes_affaires(max_pages: int = 50, seuil_pct: int = 10) ->
 
     logger.info(f"[scan-ba] stats: {stats}")
     return bonnes, stats
+
+
+class ScanListeRequest(BaseModel):
+    max_pages: int = 10
+    seuil_pct: int = 10
+    known_ids: list[str] = []
+
+
+@app.post("/scan/bonnes-affaires/liste")
+async def scan_bonnes_affaires_liste(req: ScanListeRequest):
+    """Même stratégie que /scan/bonnes-affaires (toute la France, cote LeBonCoin -10 %), sans enregistrement
+    ni alerte : l'app VM enregistre et prévient elle-même."""
+    try:
+        bonnes, stats = await asyncio.wait_for(
+            _scan_lbc_bonnes_affaires(max_pages=min(req.max_pages, 20), seuil_pct=req.seuil_pct,
+                                      known_ids=set(req.known_ids)),
+            timeout=120,
+        )
+    except asyncio.TimeoutError:
+        raise HTTPException(status_code=504, detail="Scan timeout")
+    for b in bonnes:
+        b["cote_lbc_min"] = b["valeur_marche"]
+        b["cote_lbc_max"] = b.pop("cote_max", b["valeur_marche"])
+    return {"listings": bonnes, "stats": stats}
 
 
 @app.post("/scan/bonnes-affaires")
