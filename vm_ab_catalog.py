@@ -98,3 +98,12 @@ def get_versions(marque: str, modele: str, annee: int, carburant: str) -> list:
             if v["de"] - 1 <= annee <= v["a"] + 1:
                 found[v["v"]] = max(found.get(v["v"], 0), v["n"])
     return sorted(found, key=lambda label: -found[label])
+
+
+def list_marques() -> list:
+    return sorted(_CATALOG)
+
+
+def list_modeles(marque: str) -> list:
+    models = _find_brand(marque)
+    return sorted(models) if models else []

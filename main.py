@@ -165,6 +165,17 @@ async def health():
     return {"status": "healthy"}
 
 
+@app.get("/catalog/marques")
+async def catalog_marques():
+    """Marques du catalogue VM Auto Business (listes déroulantes de l'app)."""
+    return {"marques": vm_ab_catalog.list_marques()}
+
+
+@app.get("/catalog/modeles")
+async def catalog_modeles(marque: str = ""):
+    return {"modeles": vm_ab_catalog.list_modeles(marque)}
+
+
 @app.get("/catalog/versions")
 @limiter.limit("10/minute")
 async def catalog_versions(request: Request, marque: str = "", modele: str = "", annee: int = 0, carburant: str = ""):
@@ -1266,7 +1277,7 @@ async def scan_lacentrale(req: LaCentraleScanRequest):
 
 async def _estimate_market_lbc(marque: str, modele: str, annee: Optional[int], km: Optional[int],
                                carburant: Optional[str] = None, boite: Optional[str] = None,
-                               timeout: int = 20) -> list[int]:
+                               timeout: int = 20, motorisation: Optional[str] = None) -> list[int]:
     """Prix des annonces comparables sur LeBonCoin (API mobile)."""
     marque_search = _resolve_brand(marque, modele)
     type_vehicule = _detect_type_vehicule(modele)
@@ -1277,7 +1288,7 @@ async def _estimate_market_lbc(marque: str, modele: str, annee: Optional[int], k
         lbc = LeboncoinScraper()
         prices = await asyncio.wait_for(
             lbc.get_prices(marque_search, modele, annee_eff, km_eff, type_vehicule=type_vehicule,
-                           carburant=carburant or None, boite=boite or None),
+                           carburant=carburant or None, boite=boite or None, motorisation=motorisation or None),
             timeout=timeout,
         )
         if prices:
@@ -1297,13 +1308,18 @@ class CoteAnnonceRequest(BaseModel):
     kilometrage: Optional[int] = None
     energie: Optional[str] = None
     boite: Optional[str] = None
+    version: Optional[str] = None  # version du catalogue VM Auto Business (puissance → annonces comparables)
 
 
 @app.post("/cote-annonce")
 async def cote_annonce(req: CoteAnnonceRequest):
     """Ma cote + prix que proposerait le site, pour une annonce précise (bouton « Calculer » des bonnes affaires)."""
     prices = await _estimate_market_lbc(req.marque, req.modele, req.annee, req.kilometrage,
-                                        carburant=req.energie, boite=req.boite, timeout=60)
+                                        carburant=req.energie, boite=req.boite, timeout=60, motorisation=req.version)
+    if not prices and req.version:
+        # Version trop précise : on élargit à toutes les versions du modèle
+        prices = await _estimate_market_lbc(req.marque, req.modele, req.annee, req.kilometrage,
+                                            carburant=req.energie, boite=req.boite, timeout=50)
     if not prices:
         # Sans filtre carburant / boîte si rien trouvé
         prices = await _estimate_market_lbc(req.marque, req.modele, req.annee, req.kilometrage, timeout=40)
