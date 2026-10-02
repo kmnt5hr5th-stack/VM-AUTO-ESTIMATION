@@ -180,6 +180,28 @@ def _resolve_brand(marque: str, modele: str) -> str:
         return "Citroën"
     return marque
 
+async def _apply_ajustement_global(prix_rachat: int) -> int:
+    """Ajustement global configurable depuis l'admin (en %)."""
+    settings = await _get_settings()
+    ajustement = float(settings.get("estimation.ajustement_global", "0") or "0")
+    if ajustement:
+        return round(prix_rachat * (1 + ajustement / 100) / 100) * 100
+    return prix_rachat
+
+
+async def _site_offer(prices: list[int], marque: str, modele: str, annee: Optional[int],
+                      km: Optional[int], boite: Optional[str]) -> dict:
+    """Ce que le site proposerait pour ce véhicule, à partir des prix des annonces comparables."""
+    calc = calculate_estimation(prices, marque, modele, None, None, boite, annee, km)
+    return {
+        "ma_cote": calc["prix_median"],
+        "nb_comparables": calc["nb_annonces"],
+        "prix_site": await _apply_ajustement_global(calc["prix_rachat"]),
+        "fourchette_basse": calc["fourchette_basse"],
+        "fourchette_haute": calc["fourchette_haute"],
+    }
+
+
 async def _run_estimation(req: EstimationRequest) -> dict:
     type_vehicule = req.type_vehicule or _detect_type_vehicule(req.modele)
     marque_search = _resolve_brand(req.marque, req.modele)
@@ -218,11 +240,7 @@ async def _run_estimation(req: EstimationRequest) -> dict:
 
     calc = calculate_estimation(all_prices, req.marque, req.modele, req.motorisation, req.finition, req.boite, req.annee, req.kilometrage)
 
-    # Ajustement global configurable depuis l'admin
-    settings = await _get_settings()
-    ajustement = float(settings.get("estimation.ajustement_global", "0") or "0")
-    if ajustement:
-        calc["prix_rachat"] = round(calc["prix_rachat"] * (1 + ajustement / 100) / 100) * 100
+    calc["prix_rachat"] = await _apply_ajustement_global(calc["prix_rachat"])
 
     return {
         "vehicule": {
@@ -1015,6 +1033,13 @@ def _model_from_subject(subject: str, marque: str) -> Optional[str]:
     return " ".join(words[:2]) if words else None
 
 
+def _to_int(v) -> Optional[int]:
+    try:
+        return int(float(v)) if v not in (None, "") else None
+    except (ValueError, TypeError):
+        return None
+
+
 def _parse_geo_listing(ad: dict) -> Optional[dict]:
     if ad.get("owner", {}).get("type", "").lower() == "pro":
         return None
@@ -1074,6 +1099,9 @@ def _parse_geo_listing(ad: dict) -> Optional[dict]:
         "ville": location.get("city", ""),
         "image_url": image_urls[0] if image_urls else None,
         "date_publication": ad.get("first_publication_date"),
+        # Cote affichée par LeBonCoin sur l'annonce (fourchette prix bas – prix haut)
+        "cote_lbc_min": _to_int(attrs.get("car_price_min", {}).get("v")),
+        "cote_lbc_max": _to_int(attrs.get("car_price_max", {}).get("v")),
     }
 
 
@@ -1176,8 +1204,10 @@ async def scan_lacentrale(req: LaCentraleScanRequest):
 
 # ─── Scan géo enrichi : scan LBC + estimation marché LBC par modèle ──────────
 
-async def _estimate_market_lbc(marque: str, modele: str, annee: Optional[int], km: Optional[int]) -> Optional[int]:
-    """Estime la valeur marché via LeBonCoin API mobile uniquement."""
+async def _estimate_market_lbc(marque: str, modele: str, annee: Optional[int], km: Optional[int],
+                               carburant: Optional[str] = None, boite: Optional[str] = None,
+                               timeout: int = 20) -> list[int]:
+    """Prix des annonces comparables sur LeBonCoin (API mobile)."""
     marque_search = _resolve_brand(marque, modele)
     type_vehicule = _detect_type_vehicule(modele)
     annee_eff = annee or 2015
@@ -1186,18 +1216,40 @@ async def _estimate_market_lbc(marque: str, modele: str, annee: Optional[int], k
     try:
         lbc = LeboncoinScraper()
         prices = await asyncio.wait_for(
-            lbc.get_prices(marque_search, modele, annee_eff, km_eff, type_vehicule=type_vehicule),
-            timeout=20,
+            lbc.get_prices(marque_search, modele, annee_eff, km_eff, type_vehicule=type_vehicule,
+                           carburant=carburant or None, boite=boite or None),
+            timeout=timeout,
         )
         if prices:
-            s = sorted(prices)
-            logger.info(f"[enriched] LBC {marque} {modele} {annee} → {s[len(s)//2]}€ ({len(s)} prix)")
-            return s[len(s) // 2]
+            logger.info(f"[enriched] LBC {marque} {modele} {annee} → {len(prices)} prix")
+            return prices
     except Exception as e:
         logger.warning(f"[enriched] LBC {marque} {modele} {annee} erreur: {e}")
 
     logger.warning(f"[enriched] aucun prix trouvé pour {marque} {modele} {annee}")
-    return None
+    return []
+
+
+class CoteAnnonceRequest(BaseModel):
+    marque: str
+    modele: str
+    annee: Optional[int] = None
+    kilometrage: Optional[int] = None
+    energie: Optional[str] = None
+    boite: Optional[str] = None
+
+
+@app.post("/cote-annonce")
+async def cote_annonce(req: CoteAnnonceRequest):
+    """Ma cote + prix que proposerait le site, pour une annonce précise (bouton « Calculer » des bonnes affaires)."""
+    prices = await _estimate_market_lbc(req.marque, req.modele, req.annee, req.kilometrage,
+                                        carburant=req.energie, boite=req.boite, timeout=60)
+    if not prices:
+        # Sans filtre carburant / boîte si rien trouvé
+        prices = await _estimate_market_lbc(req.marque, req.modele, req.annee, req.kilometrage, timeout=40)
+    if not prices:
+        raise HTTPException(status_code=404, detail="Aucune annonce comparable trouvée")
+    return await _site_offer(prices, req.marque, req.modele, req.annee, req.kilometrage, req.boite)
 
 
 @app.post("/scan-geo-enriched")
@@ -1222,23 +1274,23 @@ async def scan_geo_enriched(req: GeoScanRequest):
     logger.info(f"[geo-enriched] {len(group_meta)} groupes uniques, estimation sur top {len(groups)}")
 
     # Estimation en parallèle (max 6 simultanées pour ne pas surcharger Render free tier)
-    market_values: dict[str, Optional[int]] = {}
+    group_prices: dict[str, list[int]] = {}
     sem = asyncio.Semaphore(6)
 
     async def _est(key: str, g: dict):
         async with sem:
-            val = await _estimate_market_lbc(g["marque"], g["modele"], g["annee"], g["km"])
-        market_values[key] = val
-        logger.info(f"[geo-enriched] {g['marque']} {g['modele']} {g['annee']} → {val}")
+            group_prices[key] = await _estimate_market_lbc(g["marque"], g["modele"], g["annee"], g["km"])
 
     await asyncio.gather(*[_est(k, v) for k, v in groups.items()])
 
-    # Enrichir les listings
+    # Enrichir les listings : ma cote + ce que le site proposerait (même calcul que l'estimation du site)
     enriched = []
     for l in listings:
         key = f"{(l.get('marque') or '').upper()}|{(l.get('modele') or '').upper()}|{l.get('annee') or ''}"
-        valeur_marche = market_values.get(key)
-        enriched.append({**l, "valeur_marche": valeur_marche})
+        prices = group_prices.get(key)
+        offer = await _site_offer(prices, l.get("marque") or "", l.get("modele") or "", l.get("annee"),
+                                  l.get("kilometrage"), l.get("boite")) if prices else {}
+        enriched.append({**l, "valeur_marche": offer.get("ma_cote"), **offer})
 
     logger.info(f"[geo-enriched] Terminé — {len(enriched)} annonces enrichies")
     return {"listings": enriched, "count": len(enriched)}
