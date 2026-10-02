@@ -180,10 +180,40 @@ def _resolve_brand(marque: str, modele: str) -> str:
         return "Citroën"
     return marque
 
+# Réglages de la page « Référence » de l'app VM (base vm-administration, lecture publique)
+REGLAGES_URL = os.getenv("REGLAGES_URL", "https://ucefxszhdhhthcpqpfms.supabase.co/rest/v1/reglages?select=cle,valeur")
+REGLAGES_KEY = os.getenv("REGLAGES_KEY", "sb_publishable_kEPpVm_LL4w4rMM99F9iqQ_bgGPAMY-")  # clé publique (publishable), sans danger
+_reglages_cache: dict = {}
+_reglages_time: float = 0.0
+
+
+async def _get_reglages() -> dict:
+    """Réglages modifiés dans l'app (cache 60 s) ; les absents gardent leur valeur par défaut."""
+    global _reglages_cache, _reglages_time
+    if _reglages_time and time.time() - _reglages_time < 60:
+        return _reglages_cache
+    try:
+        async with httpx.AsyncClient(timeout=5) as client:
+            r = await client.get(REGLAGES_URL, headers={"apikey": REGLAGES_KEY, "Authorization": f"Bearer {REGLAGES_KEY}"})
+            if r.status_code == 200:
+                _reglages_cache = {row["cle"]: row["valeur"] for row in r.json()}
+                _reglages_time = time.time()
+    except Exception as e:
+        logger.warning(f"[reglages] lecture impossible : {e}")
+    return _reglages_cache
+
+
+async def _estimation_params() -> dict:
+    """Paramètres du calcul (clés « estimation.xxx » de la page Référence, sans le préfixe)."""
+    reg = await _get_reglages()
+    return {k.split(".", 1)[1]: v for k, v in reg.items() if k.startswith("estimation.")}
+
+
 async def _apply_ajustement_global(prix_rachat: int) -> int:
-    """Ajustement global configurable depuis l'admin (en %)."""
+    """Ajustement global (en %) : page Référence de l'app VM, sinon ancien réglage de l'admin du site vitrine."""
+    reg = await _get_reglages()
     settings = await _get_settings()
-    ajustement = float(settings.get("estimation.ajustement_global", "0") or "0")
+    ajustement = float(reg.get("estimation.ajustement_global") or settings.get("estimation.ajustement_global", "0") or "0")
     if ajustement:
         return round(prix_rachat * (1 + ajustement / 100) / 100) * 100
     return prix_rachat
@@ -192,7 +222,7 @@ async def _apply_ajustement_global(prix_rachat: int) -> int:
 async def _site_offer(prices: list[int], marque: str, modele: str, annee: Optional[int],
                       km: Optional[int], boite: Optional[str]) -> dict:
     """Ce que le site proposerait pour ce véhicule, à partir des prix des annonces comparables."""
-    calc = calculate_estimation(prices, marque, modele, None, None, boite, annee, km)
+    calc = calculate_estimation(prices, marque, modele, None, None, boite, annee, km, await _estimation_params())
     return {
         "ma_cote": calc["prix_median"],
         "nb_comparables": calc["nb_annonces"],
@@ -238,7 +268,8 @@ async def _run_estimation(req: EstimationRequest) -> dict:
             detail="Aucune annonce trouvée pour ce véhicule. Vérifiez la marque et le modèle.",
         )
 
-    calc = calculate_estimation(all_prices, req.marque, req.modele, req.motorisation, req.finition, req.boite, req.annee, req.kilometrage)
+    calc = calculate_estimation(all_prices, req.marque, req.modele, req.motorisation, req.finition, req.boite, req.annee, req.kilometrage,
+                                await _estimation_params())
 
     calc["prix_rachat"] = await _apply_ajustement_global(calc["prix_rachat"])
 
@@ -500,7 +531,8 @@ async def _supabase_upsert_bonnes_affaires(records: list[dict]) -> int:
 
 
 async def _scan_lbc_bonnes_affaires(max_pages: int = 50, seuil_pct: int = 10,
-                                    known_ids: Optional[set] = None) -> tuple[list[dict], dict]:
+                                    known_ids: Optional[set] = None, age_max: int = 10,
+                                    km_max: int = 130_000) -> tuple[list[dict], dict]:
     """Scanne LBC (toute France, toutes marques) et retourne les annonces sous la côte de seuil_pct %.
     S'arrête dès qu'une annonce déjà connue est rencontrée (scan intelligent)."""
     from scrapers.leboncoin import _mobile_ua, _webshare_proxies, API_URL as LBC_API_URL, HOMEPAGE as LBC_HP
@@ -575,13 +607,13 @@ async def _scan_lbc_bonnes_affaires(max_pages: int = 50, seuil_pct: int = 10,
 
                 # Filtre âge : moins de 10 ans
                 annee_v = int(attrs_v["regdate"]) if attrs_v.get("regdate", "").isdigit() else None
-                if annee_v and annee_v < datetime.date.today().year - 10:
+                if annee_v and annee_v < datetime.date.today().year - age_max:
                     stats["hors_fourchette"] += 1
                     continue
 
                 # Filtre km : moins de 130 000 km
                 km_v = int(attrs_v["mileage"]) if attrs_v.get("mileage", "").isdigit() else None
-                if km_v and km_v >= 130_000:
+                if km_v and km_v >= km_max:
                     stats["hors_fourchette"] += 1
                     continue
 
@@ -665,6 +697,8 @@ class ScanListeRequest(BaseModel):
     max_pages: int = 10
     seuil_pct: int = 10
     known_ids: list[str] = []
+    age_max: int = 10
+    km_max: int = 130_000
 
 
 @app.post("/scan/bonnes-affaires/liste")
@@ -674,7 +708,7 @@ async def scan_bonnes_affaires_liste(req: ScanListeRequest):
     try:
         bonnes, stats = await asyncio.wait_for(
             _scan_lbc_bonnes_affaires(max_pages=min(req.max_pages, 20), seuil_pct=req.seuil_pct,
-                                      known_ids=set(req.known_ids)),
+                                      known_ids=set(req.known_ids), age_max=req.age_max, km_max=req.km_max),
             timeout=120,
         )
     except asyncio.TimeoutError:
