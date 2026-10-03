@@ -186,8 +186,10 @@ async def catalog_versions(request: Request, marque: str = "", modele: str = "",
 
 DS_CITROEN_MODELS = {"DS3", "DS4", "DS5"}
 
-def _resolve_brand(marque: str, modele: str) -> str:
-    """DS3/DS4/DS5 sont indexés sous Citroën sur LeBonCoin."""
+def _resolve_brand(marque: str, modele: str, annee: Optional[int] = None) -> str:
+    """Les DS3/DS4/DS5 d'avant 2016 sont indexées sous Citroën sur Leboncoin ; depuis 2016, sous DS."""
+    if annee and annee >= 2016:
+        return marque
     if marque.upper() == "DS" and modele.upper().replace(" ", "") in {m.replace(" ", "") for m in DS_CITROEN_MODELS}:
         return "Citroën"
     return marque
@@ -272,7 +274,7 @@ async def _cote_params() -> dict:
 
 async def _run_estimation(req: EstimationRequest) -> dict:
     type_vehicule = req.type_vehicule or _detect_type_vehicule(req.modele)
-    marque_search = _resolve_brand(req.marque, req.modele)
+    marque_search = _resolve_brand(req.marque, req.modele, req.annee)
     if marque_search != req.marque:
         logger.info(f"Marque résolue : {req.marque} → {marque_search} pour {req.modele}")
     logger.info(f"Demande reçue : {req.marque} {req.modele} {req.annee} {req.kilometrage} km | type={type_vehicule}")
@@ -397,7 +399,7 @@ async def estimation_details(req: EstimationRequest):
     """Comme /estimation mais retourne aussi la liste brute des annonces LBC (prix, km, titre, url)."""
     async def _run():
         type_vehicule = req.type_vehicule or _detect_type_vehicule(req.modele)
-        marque_search = _resolve_brand(req.marque, req.modele)
+        marque_search = _resolve_brand(req.marque, req.modele, req.annee)
         lbc_args = dict(
             finition=req.finition, carburant=req.carburant,
             boite=req.boite, motorisation=req.motorisation,
@@ -414,7 +416,10 @@ async def estimation_details(req: EstimationRequest):
             raise HTTPException(status_code=404, detail="Aucune annonce trouvée pour ce véhicule.")
 
         prices = [a["prix"] for a in listings]
-        calc = calculate_estimation(prices, req.marque, req.modele, req.motorisation, req.finition, req.boite, req.annee, req.kilometrage)
+        # Mêmes pourcentages que le site (Réglages de l'app) et même ajustement global
+        calc = calculate_estimation(prices, req.marque, req.modele, req.motorisation, req.finition, req.boite, req.annee, req.kilometrage,
+                                    await _estimation_params())
+        calc["prix_rachat"] = await _apply_ajustement_global(calc["prix_rachat"])
 
         return {
             "vehicule": {
@@ -1350,7 +1355,7 @@ async def _estimate_market_lbc(marque: str, modele: str, annee: Optional[int], k
     """Prix des annonces comparables sur LeBonCoin (API mobile).
     min_resultats > 1 : la recherche continue tant qu'elle a trop peu d'annonces et rend le meilleur lot trouvé
     dans le délai (pas de coupure brutale qui ferait tout perdre)."""
-    marque_search = _resolve_brand(marque, modele)
+    marque_search = _resolve_brand(marque, modele, annee)
     type_vehicule = _detect_type_vehicule(modele)
     annee_eff = annee or 2015
     km_eff = km or 100000
@@ -1401,7 +1406,7 @@ async def cote_annonce(req: CoteAnnonceRequest):
     if cote["version_identique"] and req.annee:
         try:
             ident = await asyncio.wait_for(cote_voiture_identique(
-                _resolve_brand(req.marque, req.modele), req.modele, req.annee, req.kilometrage, version=req.version,
+                _resolve_brand(req.marque, req.modele, req.annee), req.modele, req.annee, req.kilometrage, version=req.version,
                 boite=req.boite, carburant=req.energie, minimum=MIN_COMPARABLES, elargissement_pct=cote["elargissement_pct"],
                 base_lbc=bool(cote["base_lbc"]), droite_km=bool(cote["droite_km"])), timeout=60)
         except Exception as e:

@@ -2096,7 +2096,35 @@ class LeboncoinScraper(BaseScraper):
         # Code finition LBC ex: "AUDI_Q2_Design" — transmis si finition connue
         lbc_fin = _lbc_finition_code(marque, modele_api, finition) if finition else None
 
-        # ── 1. URL search Playwright (payload exact de LBC, finition dans l'URL) ──
+        # ── 1. API structurée d'abord (rapide et fiable, codes officiels Leboncoin) ──
+        async def structuree(hp, fin, lbc, carro):
+            try:
+                return await asyncio.wait_for(
+                    _fetch_structured_api_pages(
+                        marque, modele_api, annee, kilometrage,
+                        carburant=carburant, boite=boite, target_hp=hp,
+                        type_vehicule=type_vehicule, finition=fin, carrosserie=carro,
+                        lbc_finition=lbc, max_pages=10, return_details=True,
+                    ),
+                    timeout=70,
+                )
+            except Exception as e:
+                logger.warning(f"[leboncoin] structured API erreur: {e}")
+                return []
+
+        logger.info(f"[leboncoin] get_listings → structured API hp={target_hp} finition={lbc_fin}")
+        listings = await structuree(target_hp, finition, lbc_fin, carrosserie)
+        if listings:
+            return listings
+        if target_hp or lbc_fin or carrosserie:
+            # Version ou carrosserie absente des annonces en ligne (ex. DS 3 « Berline » alors que Leboncoin
+            # la classe en citadine) : on élargit à tout le modèle
+            logger.info("[leboncoin] get_listings → rien pour cette version / carrosserie, élargissement au modèle")
+            listings = await structuree(None, None, None, None)
+            if listings:
+                return listings
+
+        # ── 2. Secours : URL search Playwright (plus lent, souvent bloqué) ──
         logger.info(f"[leboncoin] get_listings → URL search (finition={finition})")
         try:
             listings = await asyncio.wait_for(
@@ -2106,29 +2134,10 @@ class LeboncoinScraper(BaseScraper):
                     type_vehicule=type_vehicule, finition=finition,
                     carrosserie=carrosserie, max_pages=10, return_details=True,
                 ),
-                timeout=160,
+                timeout=60,
             )
         except Exception as e:
             logger.warning(f"[leboncoin] URL search erreur: {e}")
-            listings = []
-
-        if listings:
-            return listings
-
-        # ── 2. Fallback : structured API curl_cffi ────────────────────────────
-        logger.info(f"[leboncoin] get_listings fallback → structured API hp={target_hp} finition={lbc_fin}")
-        try:
-            listings = await asyncio.wait_for(
-                _fetch_structured_api_pages(
-                    marque, modele_api, annee, kilometrage,
-                    carburant=carburant, boite=boite, target_hp=target_hp,
-                    type_vehicule=type_vehicule, finition=finition, carrosserie=carrosserie,
-                    lbc_finition=lbc_fin, max_pages=10, return_details=True,
-                ),
-                timeout=160,
-            )
-        except Exception as e:
-            logger.warning(f"[leboncoin] structured API erreur: {e}")
             listings = []
 
         if listings:
