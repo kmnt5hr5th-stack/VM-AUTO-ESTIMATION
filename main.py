@@ -1,5 +1,6 @@
 import vm_ab_catalog
 import asyncio
+import statistics
 import base64
 import datetime
 import json as _json
@@ -1277,8 +1278,11 @@ async def scan_lacentrale(req: LaCentraleScanRequest):
 
 async def _estimate_market_lbc(marque: str, modele: str, annee: Optional[int], km: Optional[int],
                                carburant: Optional[str] = None, boite: Optional[str] = None,
-                               timeout: int = 20, motorisation: Optional[str] = None) -> list[int]:
-    """Prix des annonces comparables sur LeBonCoin (API mobile)."""
+                               timeout: int = 20, motorisation: Optional[str] = None,
+                               min_resultats: int = 1) -> list[int]:
+    """Prix des annonces comparables sur LeBonCoin (API mobile).
+    min_resultats > 1 : la recherche continue tant qu'elle a trop peu d'annonces et rend le meilleur lot trouvé
+    dans le délai (pas de coupure brutale qui ferait tout perdre)."""
     marque_search = _resolve_brand(marque, modele)
     type_vehicule = _detect_type_vehicule(modele)
     annee_eff = annee or 2015
@@ -1286,11 +1290,11 @@ async def _estimate_market_lbc(marque: str, modele: str, annee: Optional[int], k
 
     try:
         lbc = LeboncoinScraper()
-        prices = await asyncio.wait_for(
-            lbc.get_prices(marque_search, modele, annee_eff, km_eff, type_vehicule=type_vehicule,
-                           carburant=carburant or None, boite=boite or None, motorisation=motorisation or None),
-            timeout=timeout,
-        )
+        recherche = lbc.get_prices(marque_search, modele, annee_eff, km_eff, type_vehicule=type_vehicule,
+                                   carburant=carburant or None, boite=boite or None, motorisation=motorisation or None,
+                                   min_resultats=min_resultats, budget_s=timeout if min_resultats > 1 else None)
+        # Avec un budget, get_prices s'arrête seule ; la limite dure ne sert que de filet de sécurité
+        prices = await asyncio.wait_for(recherche, timeout=timeout + 45 if min_resultats > 1 else timeout)
         if prices:
             logger.info(f"[enriched] LBC {marque} {modele} {annee} → {len(prices)} prix")
             return prices
@@ -1309,23 +1313,46 @@ class CoteAnnonceRequest(BaseModel):
     energie: Optional[str] = None
     boite: Optional[str] = None
     version: Optional[str] = None  # version du catalogue VM Auto Business (puissance → annonces comparables)
+    cote_lbc_min: Optional[int] = None  # cote affichée par Leboncoin sur l'annonce (garde-fou)
+    cote_lbc_max: Optional[int] = None
+
+
+# Une cote sur moins de 4 annonces n'est pas fiable ; au-delà de ±25 % de la cote Leboncoin, elle est suspecte
+MIN_COMPARABLES = 4
+ECART_MAX_COTE_LBC = 0.25
 
 
 @app.post("/cote-annonce")
 async def cote_annonce(req: CoteAnnonceRequest):
-    """Ma cote + prix que proposerait le site, pour une annonce précise (bouton « Calculer » des bonnes affaires)."""
-    prices = await _estimate_market_lbc(req.marque, req.modele, req.annee, req.kilometrage,
-                                        carburant=req.energie, boite=req.boite, timeout=60, motorisation=req.version)
-    if not prices and req.version:
+    """Ma cote + prix que proposerait le site, pour une annonce précise (bonnes affaires)."""
+    args = dict(marque=req.marque, modele=req.modele, annee=req.annee, km=req.kilometrage, min_resultats=MIN_COMPARABLES)
+    prices = await _estimate_market_lbc(**args, carburant=req.energie, boite=req.boite, timeout=55, motorisation=req.version)
+    if len(prices) < MIN_COMPARABLES and req.version:
         # Version trop précise : on élargit à toutes les versions du modèle
-        prices = await _estimate_market_lbc(req.marque, req.modele, req.annee, req.kilometrage,
-                                            carburant=req.energie, boite=req.boite, timeout=50)
-    if not prices:
-        # Sans filtre carburant / boîte si rien trouvé
-        prices = await _estimate_market_lbc(req.marque, req.modele, req.annee, req.kilometrage, timeout=40)
+        plus = await _estimate_market_lbc(**args, carburant=req.energie, boite=req.boite, timeout=40)
+        prices = plus if len(plus) > len(prices) else prices
+    if len(prices) < MIN_COMPARABLES and (req.energie or req.boite):
+        # Sans filtre boîte (le carburant reste : essence et diesel n'ont pas la même cote)
+        plus = await _estimate_market_lbc(**args, carburant=req.energie, timeout=35)
+        prices = plus if len(plus) > len(prices) else prices
+
+    lbc_mid = (req.cote_lbc_min + req.cote_lbc_max) / 2 if req.cote_lbc_min and req.cote_lbc_max else None
+    base = "comparables"
+    if prices:
+        median = statistics.median(prices)
+        suspecte = lbc_mid is not None and abs(median - lbc_mid) / lbc_mid > ECART_MAX_COTE_LBC
+        if lbc_mid is not None and (len(prices) < MIN_COMPARABLES or suspecte):
+            logger.info(f"[cote-annonce] {req.marque} {req.modele} : {len(prices)} comparables, médiane {median:.0f} "
+                        f"vs cote LBC {lbc_mid:.0f} → base cote LBC")
+            prices, base = [int(lbc_mid)], "cote_lbc"
+    elif lbc_mid is not None:
+        prices, base = [int(lbc_mid)], "cote_lbc"
     if not prices:
         raise HTTPException(status_code=404, detail="Aucune annonce comparable trouvée")
-    return await _site_offer(prices, req.marque, req.modele, req.annee, req.kilometrage, req.boite)
+    if base == "comparables" and len(prices) < MIN_COMPARABLES:
+        raise HTTPException(status_code=404, detail=f"Seulement {len(prices)} annonce(s) comparable(s), pas assez pour une cote fiable")
+    offre = await _site_offer(prices, req.marque, req.modele, req.annee, req.kilometrage, req.boite)
+    return {**offre, "base": base, "nb_comparables": 0 if base == "cote_lbc" else offre["nb_comparables"]}
 
 
 @app.post("/scan-geo-enriched")

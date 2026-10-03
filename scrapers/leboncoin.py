@@ -1645,7 +1645,21 @@ class LeboncoinScraper(BaseScraper):
 
     async def get_prices(self, marque, modele, annee, kilometrage, max_pages=2,
                           finition=None, carburant=None, boite=None,
-                          motorisation=None, type_vehicule=None, carrosserie=None):
+                          motorisation=None, type_vehicule=None, carrosserie=None,
+                          min_resultats=1, budget_s=None):
+        # min_resultats > 1 (cote des bonnes affaires) : une étape qui ramène trop peu d'annonces ne suffit pas,
+        # on continue et on garde le meilleur lot ; budget_s : on n'entame plus d'étape après ce délai.
+        meilleur: list = []
+        fin = (asyncio.get_event_loop().time() + budget_s) if budget_s else None
+
+        def assez(p):
+            nonlocal meilleur
+            if p and len(p) > len(meilleur):
+                meilleur = p
+            return bool(p) and len(p) >= min_resultats
+
+        def trop_tard():
+            return fin is not None and asyncio.get_event_loop().time() > fin - 5
         target_hp = _get_target_hp(marque, motorisation, carburant) if motorisation else None
         engine_code = _extraire_code_moteur(motorisation) if motorisation else None
         modele_api = re.sub(r'\bsportback\b', '', modele, flags=re.IGNORECASE).strip()
@@ -1686,18 +1700,22 @@ class LeboncoinScraper(BaseScraper):
             )
         except Exception:
             prix = []
-        if prix:
+        if assez(prix):
             return prix
 
+        if trop_tard():
+            return meilleur
         # ── 2. Mobile API avec HP ─────────────────────────────────────────────
         logger.info("[leboncoin] Mobile API (avec HP)")
         try:
             prix = await asyncio.wait_for(_mobile_pages(modele_api, kilometrage, target_hp), timeout=22)
         except Exception:
             prix = []
-        if prix:
+        if assez(prix):
             return prix
 
+        if trop_tard():
+            return meilleur
         # ── 3. Contexte Playwright avec HP (DataDome natif → filtre HP fiable) ─
         if target_hp:
             logger.info("[leboncoin] Context Playwright avec HP")
@@ -1712,10 +1730,12 @@ class LeboncoinScraper(BaseScraper):
             except Exception as e:
                 logger.warning(f"[leboncoin] Context HP erreur: {e}")
                 prix = []
-            if prix:
+            if assez(prix):
                 logger.info(f"[leboncoin] Context HP → {len(prix)} prix")
                 return prix
 
+        if trop_tard():
+            return meilleur
         # ── 4. Engine code retry (BMW 318d, VW GTI…) ─────────────────────────
         if target_hp and engine_code and engine_code.lower() not in modele_api.lower():
             modele_engine = f"{modele_api} {engine_code}"
@@ -1724,9 +1744,11 @@ class LeboncoinScraper(BaseScraper):
                 prix = await asyncio.wait_for(_mobile_pages(modele_engine, kilometrage, None), timeout=22)
             except Exception:
                 prix = []
-            if prix:
+            if assez(prix):
                 return prix
 
+        if trop_tard():
+            return meilleur
         # ── 5. Mobile API SANS HP (élargissement) ────────────────────────────
         if target_hp:
             logger.info("[leboncoin] Retry Mobile sans HP")
@@ -1734,9 +1756,11 @@ class LeboncoinScraper(BaseScraper):
                 prix = await asyncio.wait_for(_mobile_pages(modele_api, kilometrage, None), timeout=22)
             except Exception:
                 prix = []
-            if prix:
+            if assez(prix):
                 return prix
 
+        if trop_tard():
+            return meilleur
         # ── 6. Contexte Playwright SANS HP ────────────────────────────────────
         logger.info("[leboncoin] Context Playwright sans HP")
         payload_no_hp = _build_lbc_payload(marque, modele_api, annee, kilometrage, 1,
@@ -1750,30 +1774,37 @@ class LeboncoinScraper(BaseScraper):
         except Exception as e:
             logger.warning(f"[leboncoin] Context sans HP erreur: {e}")
             prix = []
-        if prix:
+        if assez(prix):
             logger.info(f"[leboncoin] Context sans HP → {len(prix)} prix")
             return prix
 
+        if trop_tard():
+            return meilleur
         # ── 7. Retry km=50k (véhicule rare ou km atypique) ───────────────────
         km_retry = 50_000
-        if kilometrage != km_retry:
+        if kilometrage != km_retry and (min_resultats <= 1 or abs((kilometrage or 0) - km_retry) <= 30_000):
             logger.info(f"[leboncoin] Retry km={km_retry}")
             try:
                 prix = await asyncio.wait_for(_mobile_pages(modele_api, km_retry, None), timeout=22)
             except Exception:
                 prix = []
-            if prix:
+            if assez(prix):
                 return prix
 
+        if trop_tard():
+            return meilleur
         # ── 8. Retry km ±20k (fenêtre élargie si rien trouvé) ────────────────
         logger.info("[leboncoin] Retry km ±20k")
         try:
             prix = await asyncio.wait_for(_mobile_pages(modele_api, kilometrage, target_hp, km_margin=20_000), timeout=22)
         except Exception:
             prix = []
-        if prix:
+        if assez(prix):
             return prix
 
+        if meilleur:
+            logger.info(f"[leboncoin] {len(meilleur)} prix seulement (minimum {min_resultats}) pour {marque} {modele} {annee}")
+            return meilleur
         logger.warning(f"[leboncoin] Aucun résultat pour {marque} {modele} {annee}")
         return []
 
