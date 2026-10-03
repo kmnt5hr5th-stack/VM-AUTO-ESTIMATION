@@ -551,8 +551,9 @@ async def debug_lbc_cote(ad_id: str = "3079197187"):
 
 # ─── Bonnes Affaires Scanner ──────────────────────────────────────────────────
 
-_FUEL_LABELS_FR = {"1": "Essence", "2": "Diesel", "3": "Hybride", "4": "Électrique",
-                   "5": "GPL", "6": "GNV", "8": "Hybride rechargeable"}
+# Codes Leboncoin vérifiés le 03/10/2026
+_FUEL_LABELS_FR = {"1": "Essence", "2": "Diesel", "3": "GPL", "4": "Électrique", "5": "Autre",
+                   "6": "Hybride", "7": "GNV", "8": "Hybride rechargeable"}
 _GEAR_LABELS_FR = {"1": "Manuelle", "2": "Automatique"}
 
 

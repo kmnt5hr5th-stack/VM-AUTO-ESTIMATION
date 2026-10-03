@@ -23,7 +23,7 @@ PROGRES_FILE = os.path.join(HERE, "catalogue_complet_progres.json")
 AN_MIN, AN_MAX = 2012, 2026  # pas de rachat avant 2012
 PAR_PAGE = 100
 PARALLELE = 4
-CARBURANTS = {"1": "essence", "2": "diesel", "3": "electrique", "4": "hybride", "6": "hybride", "5": "gpl"}
+CARBURANTS = {"1": "essence", "2": "diesel", "3": "gpl", "4": "electrique", "6": "hybride", "7": "gnv", "8": "hybride"}  # codes Leboncoin vérifiés
 sem = asyncio.Semaphore(PARALLELE)
 
 
@@ -90,7 +90,7 @@ async def modele(marque_code: str, modele_code: str) -> dict:
             filtre_an = {**base, "ranges": {"regdate": {"min": an, "max": an}}}
             _, ok = await toutes_les_pages(filtre_an, versions, finitions)
             if not ok:
-                for code in ("1", "2", "3", "4", "5", "6"):
+                for code in ("1", "2", "3", "4", "5", "6", "7", "8"):
                     f = {"enums": {**base["enums"], "fuel": [code]}, "ranges": filtre_an["ranges"]}
                     await toutes_les_pages(f, versions, finitions)
     return {"versions": list(versions.values()), "finitions": list(finitions.values()), "total_ads": total}

@@ -659,10 +659,11 @@ def _build_search_url(marque: str, modele: str, annee: int, carburant: str = Non
     FUEL_MAP = {
         "essence": "1", "sp95": "1", "sp98": "1",
         "diesel": "2", "gazole": "2",
-        "hybride": "3",
+        # Codes Leboncoin vérifiés le 03/10/2026 : 1 essence, 2 diesel, 3 GPL, 4 électrique, 5 autre, 6 hybride, 7 GNV, 8 hybride rechargeable
+        "hybride": "6",
         "hybride rechargeable": "8",
         "electrique": "4", "électrique": "4",
-        "gpl": "5",
+        "gpl": "3", "gnv": "7",
     }
     GEAR_CODE = {
         "manuelle": "1", "mécanique": "1", "mecanique": "1", "bvm": "1", "bm": "1",
@@ -739,10 +740,11 @@ def _build_structured_payload(marque: str, modele: str, annee: int,
     FUEL_MAP = {
         "essence": "1", "sp95": "1", "sp98": "1",
         "diesel": "2", "gazole": "2",
-        "hybride": ["3", "8"],
+        # Codes Leboncoin vérifiés le 03/10/2026 : 1 essence, 2 diesel, 3 GPL, 4 électrique, 5 autre, 6 hybride, 7 GNV, 8 hybride rechargeable
+        "hybride": ["6", "8"],
         "hybride rechargeable": ["8"],
         "electrique": ["4"], "électrique": ["4"],
-        "gpl": ["5"],
+        "gpl": ["3"], "gnv": ["7"],
     }
     GEAR_CODE = {
         "manuelle": "1", "mécanique": "1", "mecanique": "1", "bvm": "1", "bm": "1",
@@ -865,10 +867,10 @@ def _build_lbc_payload(marque, modele, annee, km, page=1, carburant=None, boite=
     FUEL_MAP = {
         "essence": ["1"], "sp95": ["1"], "sp98": ["1"],
         "diesel": ["2"], "gazole": ["2"],
-        "hybride": ["3", "8"],
+        "hybride": ["6", "8"],
         "hybride rechargeable": ["8"],
         "electrique": ["4"], "électrique": ["4"],
-        "gpl": ["5"], "gnv": ["6"],
+        "gpl": ["3"], "gnv": ["7"],
     }
     GEAR_MAP = {
         "mecanique": "1", "mécanique": "1", "manuelle": "1", "bvm": "1", "bm": "1",
