@@ -244,11 +244,25 @@ async def _site_offer(prices: list[int], marque: str, modele: str, annee: Option
     }
 
 
-# Règle de cote (site et bonnes affaires) : on vise 10 annonces comparables ; en dessous de 4, pas de prix.
-# Bonnes affaires : au-delà de ±25 % de la cote Leboncoin de l'annonce, la cote est suspecte.
-COTE_CIBLE = 10
-MIN_COMPARABLES = 4
-ECART_MAX_COTE_LBC = 0.25
+# Règle de cote (site et bonnes affaires), modifiable dans Réglages de l'app VM (clés « cote.* ») :
+# on vise `cible` annonces à ±`fenetre_km` ; sinon fenêtre élargie de `elargissement_pct` % du kilométrage ;
+# on garde les plus proches en km ; en dessous de `minimum` annonces, pas de prix.
+# Bonnes affaires : au-delà de ±`ecart_max_lbc` % de la cote Leboncoin de l'annonce, la cote est suspecte.
+COTE_DEFAUTS = {"cible": 10, "minimum": 4, "fenetre_km": 10_000, "elargissement_pct": 40, "ecart_max_lbc": 25}
+
+
+async def _cote_params() -> dict:
+    reg = await _get_reglages()
+    p = dict(COTE_DEFAUTS)
+    for k in p:
+        try:
+            v = float(reg.get(f"cote.{k}", ""))
+            if v > 0:
+                p[k] = int(v)
+        except (TypeError, ValueError):
+            pass
+    p["minimum"] = max(1, min(p["minimum"], p["cible"]))
+    return p
 
 
 async def _run_estimation(req: EstimationRequest) -> dict:
@@ -269,11 +283,13 @@ async def _run_estimation(req: EstimationRequest) -> dict:
     sources_detail: dict = {}
 
     lbc = LeboncoinScraper()
+    cote = await _cote_params()
     try:
-        # Règle unique de cote : 10 annonces, sinon km ±40 %, puis les 10 plus proches en km du client
+        # Règle unique de cote : `cible` annonces, sinon km élargi, puis les plus proches en km du client
         lbc_prices = await asyncio.wait_for(
             lbc.get_cote_prices(marque_search, req.modele, req.annee, req.kilometrage,
-                                cible=COTE_CIBLE, minimum=MIN_COMPARABLES, budget_s=75, **lbc_args),
+                                cible=cote["cible"], minimum=cote["minimum"], budget_s=75,
+                                fenetre_km=cote["fenetre_km"], elargissement_pct=cote["elargissement_pct"], **lbc_args),
             timeout=95,
         )
         sources_detail["leboncoin"] = {"annonces": len(lbc_prices)}
@@ -288,7 +304,7 @@ async def _run_estimation(req: EstimationRequest) -> dict:
             status_code=404,
             detail="Aucune annonce trouvée pour ce véhicule. Vérifiez la marque et le modèle.",
         )
-    if len(all_prices) < MIN_COMPARABLES:
+    if len(all_prices) < cote["minimum"]:
         # Pas assez d'annonces pour une cote fiable : pas de prix (le site propose une réponse sous 24 h)
         raise HTTPException(
             status_code=404,
@@ -1307,9 +1323,11 @@ async def _estimate_market_lbc(marque: str, modele: str, annee: Optional[int], k
         lbc = LeboncoinScraper()
         if min_resultats > 1:
             # Cote : même règle que l'estimation du site (10 annonces, km ±40 %, plus proches en km)
-            recherche = lbc.get_cote_prices(marque_search, modele, annee_eff, km_eff, cible=COTE_CIBLE, minimum=min_resultats,
+            cote = await _cote_params()
+            recherche = lbc.get_cote_prices(marque_search, modele, annee_eff, km_eff, cible=cote["cible"], minimum=min_resultats,
                                             type_vehicule=type_vehicule, carburant=carburant or None, boite=boite or None,
-                                            motorisation=motorisation or None, budget_s=timeout)
+                                            motorisation=motorisation or None, budget_s=timeout,
+                                            fenetre_km=cote["fenetre_km"], elargissement_pct=cote["elargissement_pct"])
         else:
             recherche = lbc.get_prices(marque_search, modele, annee_eff, km_eff, type_vehicule=type_vehicule,
                                        carburant=carburant or None, boite=boite or None, motorisation=motorisation or None)
@@ -1340,6 +1358,8 @@ class CoteAnnonceRequest(BaseModel):
 @app.post("/cote-annonce")
 async def cote_annonce(req: CoteAnnonceRequest):
     """Ma cote + prix que proposerait le site, pour une annonce précise (bonnes affaires)."""
+    cote = await _cote_params()
+    MIN_COMPARABLES = cote["minimum"]
     args = dict(marque=req.marque, modele=req.modele, annee=req.annee, km=req.kilometrage, min_resultats=MIN_COMPARABLES)
     prices = await _estimate_market_lbc(**args, carburant=req.energie, boite=req.boite, timeout=55, motorisation=req.version)
     if len(prices) < MIN_COMPARABLES and req.version:
@@ -1355,7 +1375,7 @@ async def cote_annonce(req: CoteAnnonceRequest):
     base = "comparables"
     if prices:
         median = statistics.median(prices)
-        suspecte = lbc_mid is not None and abs(median - lbc_mid) / lbc_mid > ECART_MAX_COTE_LBC
+        suspecte = lbc_mid is not None and abs(median - lbc_mid) / lbc_mid > cote["ecart_max_lbc"] / 100
         if lbc_mid is not None and (len(prices) < MIN_COMPARABLES or suspecte):
             logger.info(f"[cote-annonce] {req.marque} {req.modele} : {len(prices)} comparables, médiane {median:.0f} "
                         f"vs cote LBC {lbc_mid:.0f} → base cote LBC")

@@ -1837,7 +1837,8 @@ class LeboncoinScraper(BaseScraper):
 
     async def get_cote_prices(self, marque, modele, annee, kilometrage, cible=10, minimum=4,
                               finition=None, carburant=None, boite=None, motorisation=None,
-                              type_vehicule=None, carrosserie=None, budget_s=60):
+                              type_vehicule=None, carrosserie=None, budget_s=60,
+                              fenetre_km=10_000, elargissement_pct=40):
         """Règle unique de cote (site et bonnes affaires) :
         1. annonces comparables autour du kilométrage du client (±10 000 km) ;
         2. moins de `cible` (10) annonces → fenêtre élargie à ±40 % du kilométrage ;
@@ -1867,10 +1868,10 @@ class LeboncoinScraper(BaseScraper):
                     break
             return vus
 
-        annonces = await collecter(10_000, 2)
-        logger.info(f"[cote] {marque} {modele} {annee} {km} km : {len(annonces)} annonces à ±10 000 km")
+        annonces = await collecter(fenetre_km, 2)
+        logger.info(f"[cote] {marque} {modele} {annee} {km} km : {len(annonces)} annonces à ±{fenetre_km} km")
         if len(annonces) < cible:
-            marge = max(10_000, int(km * 0.40))
+            marge = max(fenetre_km, int(km * elargissement_pct / 100))
             plus = await collecter(marge, 3)
             logger.info(f"[cote] fenêtre élargie ±{marge} km : {len(plus)} annonces")
             if len(plus) > len(annonces):
