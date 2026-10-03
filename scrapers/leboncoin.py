@@ -704,7 +704,7 @@ def _build_structured_payload(marque: str, modele: str, annee: int,
                                carburant: str = None, boite: str = None,
                                target_hp: int = None, kilometrage: int = None,
                                type_vehicule: str = None, finition: str = None,
-                               carrosserie: str = None, page: int = 1) -> dict:
+                               carrosserie: str = None, page: int = 1, km_margin: int = 10_000) -> dict:
     """Payload finder/search identique à l'URL LBC (u_car_brand, u_car_model, u_car_finition, hp exact)."""
     FUEL_MAP = {
         "essence": "1", "sp95": "1", "sp98": "1",
@@ -748,7 +748,7 @@ def _build_structured_payload(marque: str, modele: str, annee: int,
         ranges["regdate"] = {"min": reg_min, "max": reg_max}
     if kilometrage:
         km_base = round(kilometrage / 10_000) * 10_000
-        ranges["mileage"] = {"min": max(0, km_base - 10_000), "max": km_base + 10_000}
+        ranges["mileage"] = {"min": max(0, km_base - km_margin), "max": km_base + km_margin}
     if target_hp:
         # HP exact comme l'URL LBC (116-116), pas ±5
         ranges["horse_power_din"] = {"min": target_hp, "max": target_hp}
@@ -1115,7 +1115,7 @@ def _extract_prix(ads: list, modele: str, marque: str = None, carburant: str = N
 def _extract_annonces(ads: list, modele: str, marque: str = None, carburant: str = None,
                        boite: str = None, target_hp: int = None, km_cible: int = None,
                        finition: str = None, carrosserie: str = None,
-                       structured: bool = False) -> list[dict]:
+                       structured: bool = False, km_margin: int = 10_000) -> list[dict]:
     """Même filtrage que _extract_prix mais retourne les détails complets de chaque annonce.
     structured=True : LBC a déjà filtré via enums — on saute les filtres post-hoc redondants."""
     modele_lower = (modele or "").lower()
@@ -1183,8 +1183,8 @@ def _extract_annonces(ads: list, modele: str, marque: str = None, carburant: str
                     ad_km_check = None
                 if ad_km_check is not None:
                     km_base = round(km_cible / 10_000) * 10_000
-                    km_min = max(0, km_base - 10_000)
-                    km_max = km_base + 10_000
+                    km_min = max(0, km_base - km_margin)
+                    km_max = km_base + km_margin
                     if not (km_min <= ad_km_check <= km_max):
                         continue
 
@@ -1276,40 +1276,51 @@ def _extract_annonces(ads: list, modele: str, marque: str = None, carburant: str
 async def _fetch_structured_api_pages(marque, modele, annee, kilometrage,
                                        carburant=None, boite=None, target_hp=None,
                                        type_vehicule=None, finition=None, carrosserie=None,
-                                       lbc_finition=None, max_pages=10, return_details=False) -> list:
+                                       lbc_finition=None, max_pages=10, return_details=False,
+                                       km_margin=10_000) -> list:
     """Appelle finder/search avec les enums structurés LBC via curl_cffi (bypass DataDome).
     Plus précis que la recherche par mots-clés, parcourt jusqu'à max_pages pages."""
-    ua, impersonate, headers = _mobile_ua()
-    proxies = _webshare_proxies()
     all_results = []
     extract_args = dict(marque=marque, carburant=carburant, boite=boite,
                         target_hp=target_hp, km_cible=kilometrage,
                         finition=finition, carrosserie=carrosserie)
-    async with AsyncSession(impersonate=impersonate, proxies=proxies) as s:
-        await s.get(HOMEPAGE, headers=headers, timeout=15)
-        for pg in range(1, max_pages + 1):
-            payload = _build_structured_payload(
-                marque, modele, annee,
-                carburant=carburant, boite=boite, target_hp=target_hp,
-                kilometrage=kilometrage, type_vehicule=type_vehicule,
-                finition=lbc_finition, carrosserie=carrosserie, page=pg,
-            )
-            r = await s.post(API_URL, json=payload, headers=headers, timeout=30)
-            if r.status_code == 403:
-                logger.warning(f"[leboncoin] structured API 403 page {pg}")
-                break
-            if not r.ok:
-                logger.warning(f"[leboncoin] structured API {r.status_code} page {pg}")
-                break
-            ads = r.json().get("ads", [])
-            logger.info(f"[leboncoin] structured API page {pg} → {len(ads)} annonces brutes")
-            if return_details:
-                page_results = _extract_annonces(ads, modele, structured=True, **extract_args)
-            else:
-                page_results = _extract_prix(ads, modele, **extract_args)
-            all_results.extend(page_results)
-            if len(ads) < 35:
-                break  # dernière page
+    for pg in range(1, max_pages + 1):
+        payload = _build_structured_payload(
+            marque, modele, annee,
+            carburant=carburant, boite=boite, target_hp=target_hp,
+            kilometrage=kilometrage, type_vehicule=type_vehicule,
+            finition=lbc_finition, carrosserie=carrosserie, page=pg, km_margin=km_margin,
+        )
+        # Comme pour le catalogue : sur blocage (403), nouvel appareil simulé + nouvelle adresse IP (3 essais)
+        r = None
+        for tentative in range(3):
+            ua, impersonate, headers = _mobile_ua()
+            try:
+                async with AsyncSession(impersonate=impersonate, proxies=_webshare_proxies()) as s:
+                    await s.get(HOMEPAGE, headers=headers, timeout=15)
+                    r = await s.post(API_URL, json=payload, headers=headers, timeout=30)
+                if r.status_code != 403:
+                    break
+                logger.info(f"[leboncoin] structured API 403 page {pg}, nouvel essai {tentative + 2}/3")
+            except Exception as e:
+                logger.info(f"[leboncoin] structured API erreur page {pg} ({e}), nouvel essai {tentative + 2}/3")
+                r = None
+            await asyncio.sleep(random.uniform(0.8, 2.0))
+        if r is None or r.status_code == 403:
+            logger.warning(f"[leboncoin] structured API bloquée page {pg}")
+            break
+        if not r.ok:
+            logger.warning(f"[leboncoin] structured API {r.status_code} page {pg}")
+            break
+        ads = r.json().get("ads", [])
+        logger.info(f"[leboncoin] structured API page {pg} → {len(ads)} annonces brutes")
+        if return_details:
+            page_results = _extract_annonces(ads, modele, structured=True, km_margin=km_margin, **extract_args)
+        else:
+            page_results = _extract_prix(ads, modele, km_margin=km_margin, **extract_args)
+        all_results.extend(page_results)
+        if len(ads) < 35:
+            break  # dernière page
     # Dedup par URL (évite les doublons entre pages)
     if return_details:
         seen = set()
@@ -1840,9 +1851,9 @@ class LeboncoinScraper(BaseScraper):
                               type_vehicule=None, carrosserie=None, budget_s=60,
                               fenetre_km=10_000, elargissement_pct=40):
         """Règle unique de cote (site et bonnes affaires) :
-        1. annonces comparables autour du kilométrage du client (±10 000 km) ;
+        1. annonces comparables autour du kilométrage du client (±10 000 km) ; au moins `cible` → on les garde toutes ;
         2. moins de `cible` (10) annonces → fenêtre élargie à ±40 % du kilométrage ;
-        3. on garde les `cible` annonces les plus proches en km du client ;
+        3. on garde alors les `cible` annonces les plus proches en km du client ;
         4. moins de `minimum` (4) annonces → liste courte : l'appelant ne donne pas de prix.
         Même année (génération), mêmes filtres carburant / boîte / puissance / finition."""
         target_hp = _get_target_hp(marque, motorisation, carburant) if motorisation else None
@@ -1850,7 +1861,23 @@ class LeboncoinScraper(BaseScraper):
         km = kilometrage or 100_000
         fin = asyncio.get_event_loop().time() + budget_s
 
+        hp_struct = _extraire_cv(motorisation) if motorisation else None
+        if hp_struct is None and motorisation:
+            hp_struct = _hp_from_catalog(marque, modele_api, motorisation)
+
         async def collecter(km_margin, pages):
+            # 1. Recherche structurée (codes marque/modèle Leboncoin, celle de la page Pricing) : la plus complète
+            try:
+                details = await _fetch_structured_api_pages(
+                    marque, modele_api, annee, km, carburant=carburant, boite=boite, target_hp=hp_struct,
+                    type_vehicule=type_vehicule, finition=finition, carrosserie=carrosserie,
+                    max_pages=pages + 2, return_details=True, km_margin=km_margin)
+            except Exception as e:
+                logger.info(f"[cote] recherche structurée : {e}")
+                details = []
+            if details:
+                return [(d["prix"], d.get("km")) for d in details if d.get("prix")]
+            # 2. Secours : API mobile par mots-clés
             vus = []
             for pg in range(1, pages + 1):
                 if asyncio.get_event_loop().time() > fin - 5:
@@ -1870,6 +1897,9 @@ class LeboncoinScraper(BaseScraper):
 
         annonces = await collecter(fenetre_km, 2)
         logger.info(f"[cote] {marque} {modele} {annee} {km} km : {len(annonces)} annonces à ±{fenetre_km} km")
+        if len(annonces) >= cible:
+            # Assez d'annonces proches en km : on les garde toutes (10 seulement tirées d'un gros lot = cote instable)
+            return [p for p, _ in annonces]
         if len(annonces) < cible:
             marge = max(fenetre_km, int(km * elargissement_pct / 100))
             plus = await collecter(marge, 3)
