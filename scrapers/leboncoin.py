@@ -1,4 +1,7 @@
 import asyncio
+import os
+import json
+import unicodedata
 import statistics
 import datetime
 import logging
@@ -597,6 +600,32 @@ _LBC_MERCEDES_MODEL: dict[str, str] = {
 }
 
 
+# Codes officiels Leboncoin (u_car_brand / u_car_model) lus dans lbc_catalog_raw.json :
+# ex. « ALFA ROMEO » / « ALFA ROMEO_Stelvio » (avec une espace, pas « ALFA_ROMEO »)
+_CODES_OFFICIELS: Optional[dict] = None
+
+
+def _cle_code(s: str) -> str:
+    return re.sub(r"[^a-z0-9]", "", unicodedata.normalize("NFD", str(s or "")).encode("ascii", "ignore").decode().lower())
+
+
+def _code_officiel(marque: str, modele: str) -> Optional[tuple[str, str]]:
+    global _CODES_OFFICIELS
+    if _CODES_OFFICIELS is None:
+        _CODES_OFFICIELS = {}
+        try:
+            chemin = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "lbc_catalog_raw.json")
+            for code_marque, d in json.load(open(chemin)).items():
+                _CODES_OFFICIELS[_cle_code(code_marque)] = (code_marque, {_cle_code(o["label"]): o["value"] for o in d.get("modelObjects", [])})
+        except Exception as e:
+            logger.warning(f"[leboncoin] codes officiels illisibles : {e}")
+    m = _CODES_OFFICIELS.get(_cle_code(marque))
+    if not m:
+        return None
+    code_modele = m[1].get(_cle_code(modele))
+    return (m[0], code_modele) if code_modele else None
+
+
 def _lbc_brand_code(marque: str) -> str:
     """Retourne le code LBC exact pour la marque (gère Mercedes-Benz, etc.)."""
     return _LBC_BRAND_EXACT.get(marque.lower().strip()) or _lbc_code(marque)
@@ -723,6 +752,9 @@ def _build_structured_payload(marque: str, modele: str, annee: int,
     brand_code = _lbc_brand_code(marque)
     model_name = _lbc_model_name(marque, modele, carrosserie=carrosserie)
     model_code = f"{brand_code}_{model_name}"
+    officiel = _code_officiel(marque, model_name)
+    if officiel:
+        brand_code, model_code = officiel
 
     enums: dict = {"ad_type": ["offer"], "u_car_brand": [brand_code], "u_car_model": [model_code]}
     if finition:
