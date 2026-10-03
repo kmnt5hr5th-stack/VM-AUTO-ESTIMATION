@@ -6,3 +6,5 @@ __pycache__/
 venv/
 dist/
 *.egg-info/
+catalogue_complet_progres.json
+lbc_finitions_v2.avant-complet.json
