@@ -904,7 +904,7 @@ def _build_camoufox_payload(marque, modele, annee, km, boite=None,
         logger.info(f"[leboncoin] Km bas pour l'âge ({km} km / {annee}) — filtre km désactivé")
     elif km > 200_000:
         # Peu d'annonces >200k km sur LBC — élargir pour trouver des résultats
-        ranges["mileage"] = {"min": max(0, km - 40_000), "max": km + 40_000}
+        ranges["mileage"] = {"min": max(0, km - max(40_000, km_margin)), "max": km + max(40_000, km_margin)}
     elif km > 150_000:
         ranges["mileage"] = {"min": max(0, km - max(km_margin, 20_000)), "max": km + max(km_margin, 20_000)}
     else:
@@ -993,7 +993,9 @@ _CARROSSERIE_KEYWORDS: dict[str, list[str]] = {
 
 def _extract_prix(ads: list, modele: str, marque: str = None, carburant: str = None,
                    boite: str = None, target_hp: int = None, km_cible: int = None,
-                   finition: str = None, carrosserie: str = None, km_margin: int = 10_000) -> list[int]:
+                   finition: str = None, carrosserie: str = None, km_margin: int = 10_000,
+                   avec_km: bool = False) -> list:
+    """Prix des annonces qui correspondent. avec_km=True : liste de (prix, km de l'annonce ou None)."""
     modele_lower = (modele or "").lower()
     marque_lower = (marque or "").lower()
     finition_lower = (finition or "").lower()
@@ -1049,17 +1051,18 @@ def _extract_prix(ads: list, modele: str, marque: str = None, carburant: str = N
             if gear_val and not _match_gear(gear_val, boite):
                 continue
 
+        # km peut être dans les attributs ou directement sur l'annonce
+        mileage_raw = (
+            attrs.get("mileage") or attrs.get("km") or
+            ad.get("mileage") or ad.get("kilometrage") or ""
+        )
+        try:
+            ad_km = int(re.sub(r"[^\d]", "", str(mileage_raw))) if mileage_raw else None
+        except (ValueError, TypeError):
+            ad_km = None
+
         # Filtre km post-hoc — LBC API ignore souvent le filtre mileage
         if km_cible is not None:
-            # km peut être dans les attributs ou directement sur l'annonce
-            mileage_raw = (
-                attrs.get("mileage") or attrs.get("km") or
-                ad.get("mileage") or ad.get("kilometrage") or ""
-            )
-            try:
-                ad_km = int(re.sub(r"[^\d]", "", str(mileage_raw))) if mileage_raw else None
-            except (ValueError, TypeError):
-                ad_km = None
             if ad_km is not None:
                 km_base = round(km_cible / 10_000) * 10_000
                 km_min = max(0, km_base - km_margin)
@@ -1080,17 +1083,17 @@ def _extract_prix(ads: list, modele: str, marque: str = None, carburant: str = N
         raw = ad.get("price", [])
         p = raw[0] if isinstance(raw, list) and raw else (raw if isinstance(raw, (int, float)) else None)
         if p and 500 <= int(p) <= 150_000:
-            prix.append((title, int(p)))
+            prix.append((title, int(p), ad_km))
 
     # Filtre finition (soft): si >= 5 annonces mentionnent la finition, on garde seulement celles-là
     if finition and prix:
         fin_norm = finition.lower().replace("-", " ").replace("_", " ")
         fin_words = [w for w in fin_norm.split() if len(w) > 2]
         if fin_words:
-            filtered = [p for t, p in prix if all(w in t for w in fin_words)]
+            filtered = [(t, p, k) for t, p, k in prix if all(w in t for w in fin_words)]
             if len(filtered) >= 5:
                 logger.info(f"[leboncoin] Filtre finition '{finition}': {len(filtered)}/{len(prix)} annonces")
-                return filtered
+                return [(p, k) for _, p, k in filtered] if avec_km else [p for _, p, _ in filtered]
             else:
                 logger.info(f"[leboncoin] Finition '{finition}' trop peu d'annonces ({len(filtered)}) → pas de filtre")
 
@@ -1099,14 +1102,14 @@ def _extract_prix(ads: list, modele: str, marque: str = None, carburant: str = N
         car_key = carrosserie.lower().strip()
         keywords = _CARROSSERIE_KEYWORDS.get(car_key)
         if keywords:
-            filtered = [p for t, p in prix if any(kw in t for kw in keywords)]
+            filtered = [(t, p, k) for t, p, k in prix if any(kw in t for kw in keywords)]
             if len(filtered) >= 3:
                 logger.info(f"[leboncoin] Filtre carrosserie '{carrosserie}': {len(filtered)}/{len(prix)} annonces")
-                return filtered
+                return [(p, k) for _, p, k in filtered] if avec_km else [p for _, p, _ in filtered]
             else:
                 logger.info(f"[leboncoin] Carrosserie '{carrosserie}' trop peu d'annonces ({len(filtered)}) → pas de filtre")
 
-    return [p for _, p in prix]
+    return [(p, k) for _, p, k in prix] if avec_km else [p for _, p, _ in prix]
 
 
 def _extract_annonces(ads: list, modele: str, marque: str = None, carburant: str = None,
@@ -1326,7 +1329,7 @@ class LeboncoinScraper(BaseScraper):
     async def _fetch_mobile_api(self, marque, modele, annee, km, page,
                                  carburant=None, boite=None, type_vehicule=None,
                                  target_hp=None, finition=None, carrosserie=None,
-                                 return_details: bool = False, km_margin: int = 10_000):
+                                 return_details: bool = False, km_margin: int = 10_000, avec_km: bool = False):
         base = _build_camoufox_payload(marque, modele, annee, km, boite=boite,
                                         type_vehicule=type_vehicule, target_hp=target_hp,
                                         km_margin=km_margin)
@@ -1362,7 +1365,7 @@ class LeboncoinScraper(BaseScraper):
                                      finition=finition, carrosserie=carrosserie)
         return _extract_prix(ads, modele, marque=marque,
                              carburant=carburant, boite=boite, target_hp=target_hp, km_cible=km,
-                             finition=finition, carrosserie=carrosserie, km_margin=km_margin)
+                             finition=finition, carrosserie=carrosserie, km_margin=km_margin, avec_km=avec_km)
 
     async def _search_via_context(self, payload: dict, modele: str, marque: str = None,
                                    carburant: str = None, boite: str = None,
@@ -1831,6 +1834,63 @@ class LeboncoinScraper(BaseScraper):
             return meilleur
         logger.warning(f"[leboncoin] Aucun résultat pour {marque} {modele} {annee}")
         return []
+
+    async def get_cote_prices(self, marque, modele, annee, kilometrage, cible=10, minimum=4,
+                              finition=None, carburant=None, boite=None, motorisation=None,
+                              type_vehicule=None, carrosserie=None, budget_s=60):
+        """Règle unique de cote (site et bonnes affaires) :
+        1. annonces comparables autour du kilométrage du client (±10 000 km) ;
+        2. moins de `cible` (10) annonces → fenêtre élargie à ±40 % du kilométrage ;
+        3. on garde les `cible` annonces les plus proches en km du client ;
+        4. moins de `minimum` (4) annonces → liste courte : l'appelant ne donne pas de prix.
+        Même année (génération), mêmes filtres carburant / boîte / puissance / finition."""
+        target_hp = _get_target_hp(marque, motorisation, carburant) if motorisation else None
+        modele_api = re.sub(r'\bsportback\b', '', modele, flags=re.IGNORECASE).strip()
+        km = kilometrage or 100_000
+        fin = asyncio.get_event_loop().time() + budget_s
+
+        async def collecter(km_margin, pages):
+            vus = []
+            for pg in range(1, pages + 1):
+                if asyncio.get_event_loop().time() > fin - 5:
+                    break
+                try:
+                    lot = await self._fetch_mobile_api(
+                        marque, modele_api, annee, km, pg, carburant=carburant, boite=boite,
+                        type_vehicule=type_vehicule, target_hp=target_hp, finition=finition,
+                        carrosserie=carrosserie, km_margin=km_margin, avec_km=True)
+                except Exception as e:
+                    logger.info(f"[cote] API mobile page {pg} : {e}")
+                    break
+                vus.extend(lot)
+                if not lot:
+                    break
+            return vus
+
+        annonces = await collecter(10_000, 2)
+        logger.info(f"[cote] {marque} {modele} {annee} {km} km : {len(annonces)} annonces à ±10 000 km")
+        if len(annonces) < cible:
+            marge = max(10_000, int(km * 0.40))
+            plus = await collecter(marge, 3)
+            logger.info(f"[cote] fenêtre élargie ±{marge} km : {len(plus)} annonces")
+            if len(plus) > len(annonces):
+                annonces = plus
+
+        if annonces:
+            # Les plus proches en km du client d'abord (km inconnu en dernier)
+            annonces.sort(key=lambda pk: abs(pk[1] - km) if pk[1] is not None else 10**9)
+            retenues = annonces[:cible]
+            ecarts = [abs(k - km) for _, k in retenues if k is not None]
+            logger.info(f"[cote] {len(retenues)} retenues, écart km max {max(ecarts) if ecarts else '?'}")
+            return [p for p, _ in retenues]
+
+        # API mobile injoignable : ancienne recherche (navigateur), sans tri par km
+        logger.info("[cote] API mobile sans résultat → recherche classique")
+        reste = max(10, int(fin - asyncio.get_event_loop().time()))
+        prix = await self.get_prices(marque, modele, annee, km, finition=finition, carburant=carburant, boite=boite,
+                                     motorisation=motorisation, type_vehicule=type_vehicule, carrosserie=carrosserie,
+                                     min_resultats=minimum, budget_s=reste)
+        return prix[:cible] if len(prix) > cible else prix
 
     async def get_listings(self, marque, modele, annee, kilometrage,
                             finition=None, carburant=None, boite=None,

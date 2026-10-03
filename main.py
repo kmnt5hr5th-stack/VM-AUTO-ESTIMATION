@@ -244,6 +244,13 @@ async def _site_offer(prices: list[int], marque: str, modele: str, annee: Option
     }
 
 
+# Règle de cote (site et bonnes affaires) : on vise 10 annonces comparables ; en dessous de 4, pas de prix.
+# Bonnes affaires : au-delà de ±25 % de la cote Leboncoin de l'annonce, la cote est suspecte.
+COTE_CIBLE = 10
+MIN_COMPARABLES = 4
+ECART_MAX_COTE_LBC = 0.25
+
+
 async def _run_estimation(req: EstimationRequest) -> dict:
     type_vehicule = req.type_vehicule or _detect_type_vehicule(req.modele)
     marque_search = _resolve_brand(req.marque, req.modele)
@@ -263,9 +270,11 @@ async def _run_estimation(req: EstimationRequest) -> dict:
 
     lbc = LeboncoinScraper()
     try:
+        # Règle unique de cote : 10 annonces, sinon km ±40 %, puis les 10 plus proches en km du client
         lbc_prices = await asyncio.wait_for(
-            lbc.get_prices(marque_search, req.modele, req.annee, req.kilometrage, **lbc_args),
-            timeout=90,
+            lbc.get_cote_prices(marque_search, req.modele, req.annee, req.kilometrage,
+                                cible=COTE_CIBLE, minimum=MIN_COMPARABLES, budget_s=75, **lbc_args),
+            timeout=95,
         )
         sources_detail["leboncoin"] = {"annonces": len(lbc_prices)}
         all_prices.extend(lbc_prices)
@@ -278,6 +287,12 @@ async def _run_estimation(req: EstimationRequest) -> dict:
         raise HTTPException(
             status_code=404,
             detail="Aucune annonce trouvée pour ce véhicule. Vérifiez la marque et le modèle.",
+        )
+    if len(all_prices) < MIN_COMPARABLES:
+        # Pas assez d'annonces pour une cote fiable : pas de prix (le site propose une réponse sous 24 h)
+        raise HTTPException(
+            status_code=404,
+            detail=f"Seulement {len(all_prices)} annonce(s) comparable(s) : estimation à confirmer par téléphone.",
         )
 
     calc = calculate_estimation(all_prices, req.marque, req.modele, req.motorisation, req.finition, req.boite, req.annee, req.kilometrage,
@@ -1290,9 +1305,14 @@ async def _estimate_market_lbc(marque: str, modele: str, annee: Optional[int], k
 
     try:
         lbc = LeboncoinScraper()
-        recherche = lbc.get_prices(marque_search, modele, annee_eff, km_eff, type_vehicule=type_vehicule,
-                                   carburant=carburant or None, boite=boite or None, motorisation=motorisation or None,
-                                   min_resultats=min_resultats, budget_s=timeout if min_resultats > 1 else None)
+        if min_resultats > 1:
+            # Cote : même règle que l'estimation du site (10 annonces, km ±40 %, plus proches en km)
+            recherche = lbc.get_cote_prices(marque_search, modele, annee_eff, km_eff, cible=COTE_CIBLE, minimum=min_resultats,
+                                            type_vehicule=type_vehicule, carburant=carburant or None, boite=boite or None,
+                                            motorisation=motorisation or None, budget_s=timeout)
+        else:
+            recherche = lbc.get_prices(marque_search, modele, annee_eff, km_eff, type_vehicule=type_vehicule,
+                                       carburant=carburant or None, boite=boite or None, motorisation=motorisation or None)
         # Avec un budget, get_prices s'arrête seule ; la limite dure ne sert que de filet de sécurité
         prices = await asyncio.wait_for(recherche, timeout=timeout + 45 if min_resultats > 1 else timeout)
         if prices:
@@ -1315,11 +1335,6 @@ class CoteAnnonceRequest(BaseModel):
     version: Optional[str] = None  # version du catalogue VM Auto Business (puissance → annonces comparables)
     cote_lbc_min: Optional[int] = None  # cote affichée par Leboncoin sur l'annonce (garde-fou)
     cote_lbc_max: Optional[int] = None
-
-
-# Une cote sur moins de 4 annonces n'est pas fiable ; au-delà de ±25 % de la cote Leboncoin, elle est suspecte
-MIN_COMPARABLES = 4
-ECART_MAX_COTE_LBC = 0.25
 
 
 @app.post("/cote-annonce")
