@@ -1,6 +1,6 @@
 """Récupération COMPLÈTE des versions Leboncoin à partir des annonces en ligne (toutes les pages).
 
-Pour chaque modèle de la liste officielle Leboncoin (lbc_catalog_raw.json), lit toutes les annonces 2000-2026
+Pour chaque modèle de la liste officielle Leboncoin (lbc_catalog_raw.json), lit toutes les annonces 2012-2026
 par paquets de 100 (API mobile, mêmes précautions que scrape_lbc_finitions.py : appareil simulé + proxy, relances).
 Si un modèle dépasse la limite de pages de Leboncoin, la recherche est découpée par année, puis par carburant.
 
@@ -18,7 +18,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 MODELES_FILE = os.path.join(HERE, "lbc_catalog_raw.json")
 CATALOGUE_FILE = os.path.join(HERE, "lbc_finitions_v2.json")
 PROGRES_FILE = os.path.join(HERE, "catalogue_complet_progres.json")
-AN_MIN, AN_MAX = 2000, 2026  # voitures de 2000 à aujourd'hui
+AN_MIN, AN_MAX = 2012, 2026  # pas de rachat avant 2012
 PAR_PAGE = 100
 PARALLELE = 4
 CARBURANTS = {"1": "essence", "2": "diesel", "3": "electrique", "4": "hybride", "6": "hybride", "5": "gpl"}
