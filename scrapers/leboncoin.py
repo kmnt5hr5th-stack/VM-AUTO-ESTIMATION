@@ -1,4 +1,5 @@
 import asyncio
+import statistics
 import datetime
 import logging
 import uuid
@@ -1332,6 +1333,120 @@ async def _fetch_structured_api_pages(marque, modele, annee, kilometrage,
                 deduped.append(r)
         return deduped
     return all_results
+
+
+# ── Cote « voiture identique » (méthode validée le 03/10/2026 sur 40 annonces : 5,4 % d'erreur moyenne) ──
+# 1. annonces de la même voiture à l'identique : même version exacte (u_car_version), même boîte, même année ;
+# 2. droite prix / kilométrage sur leurs cotes Leboncoin (ou leurs prix affichés) ;
+# 3. lecture du prix au kilométrage exact. Élargissement pas à pas si trop peu d'annonces identiques.
+
+def _norm_version(v) -> str:
+    return re.sub(r"\s+", " ", str(v or "")).strip().lower()
+
+
+def _boite_cle(b) -> str:
+    b = str(b or "").lower()
+    return "a" if b.startswith(("auto", "bva", "dsg", "edc", "eat")) or b == "2" else ("m" if b else "")
+
+
+def _cv_version(v) -> Optional[int]:
+    m = re.search(r"(\d{2,3})\s*ch\b", str(v or ""), re.IGNORECASE)
+    return int(m.group(1)) if m else None
+
+
+def _droite(points: list, km: int) -> Optional[float]:
+    """Prix lu au kilométrage `km` sur la droite des points (km, prix) ; la pente ne peut pas être positive."""
+    if not points:
+        return None
+    xs, ys = [x for x, _ in points], [y for _, y in points]
+    mx, my = statistics.mean(xs), statistics.mean(ys)
+    vx = sum((x - mx) ** 2 for x in xs)
+    if vx == 0:
+        return my
+    pente = min(0.0, sum((x - mx) * (y - my) for x, y in points) / vx)
+    return my + pente * (km - mx)
+
+
+async def _annonces_structurees(marque, modele, annee, carburant, km, km_margin, pages=7) -> list[dict]:
+    """Annonces brutes (API structurée, relances anti-blocage) réduites à : prix, km, année, version, boîte, cote."""
+    def num(v):
+        try:
+            return int(re.sub(r"[^\d]", "", str(v))) if v not in (None, "") else None
+        except ValueError:
+            return None
+    out = []
+    for pg in range(1, pages + 1):
+        payload = _build_structured_payload(marque, modele, annee, carburant=carburant, kilometrage=km, page=pg, km_margin=km_margin)
+        ads, r = [], None
+        for tentative in range(3):
+            ua, impersonate, headers = _mobile_ua()
+            try:
+                async with AsyncSession(impersonate=impersonate, proxies=_webshare_proxies()) as s:
+                    await s.get(HOMEPAGE, headers=headers, timeout=15)
+                    r = await s.post(API_URL, json=payload, headers=headers, timeout=30)
+                if r.ok:
+                    ads = r.json().get("ads", [])
+                    break
+            except Exception:
+                r = None
+            await asyncio.sleep(random.uniform(0.8, 2.0))
+        for a in ads:
+            at = {x["key"]: x.get("value_label") or x.get("value") for x in a.get("attributes", [])}
+            p = a.get("price")
+            p = p[0] if isinstance(p, list) and p else p
+            if not p or not (500 <= int(p) <= 150_000):
+                continue
+            if carburant and at.get("fuel") and not _match_fuel(str(at.get("fuel")), carburant):
+                continue
+            cmin, cmax = num(at.get("car_price_min")), num(at.get("car_price_max"))
+            out.append({"prix": int(p), "km": num(at.get("mileage")), "an": num(at.get("regdate")),
+                        "version": at.get("u_car_version") or "", "boite": at.get("gearbox") or "",
+                        "cote": (cmin + cmax) / 2 if cmin and cmax else None})
+        if len(ads) < 35:
+            break
+    return out
+
+
+async def cote_voiture_identique(marque, modele, annee, km, version=None, boite=None, carburant=None,
+                                 minimum=4, elargissement_pct=40, base_lbc=True, droite_km=True) -> Optional[dict]:
+    """Cote d'une voiture précise. Renvoie {valeur, n, niveau, base, basse, haute} ou None (pas assez d'annonces)."""
+    km = km or 100_000
+    v, b, cv = _norm_version(version), _boite_cle(boite), _cv_version(version)
+    if not v and not cv:
+        return None  # version inconnue : pas de voiture identique à chercher
+    marge = max(10_000, int(km * elargissement_pct / 100))
+    pool = await _annonces_structurees(marque, modele, annee, carburant, km, marge)
+    pool = [d for d in pool if d["km"] is not None and abs(d["km"] - km) <= marge]
+    meme_boite = (lambda d: not b or _boite_cle(d["boite"]) == b)
+    niveaux = []
+    if v:
+        niveaux.append(("version identique", lambda d: _norm_version(d["version"]) == v and meme_boite(d) and d["an"] == annee))
+        niveaux.append(("version identique, année ±1", lambda d: _norm_version(d["version"]) == v and meme_boite(d) and d["an"] is not None and abs(d["an"] - annee) <= 1))
+    if cv:
+        niveaux.append(("même puissance", lambda d: _cv_version(d["version"]) == cv and meme_boite(d) and d["an"] == annee))
+    for niveau, garder in niveaux:
+        lot = [d for d in pool if garder(d)]
+        avec_cote = [d for d in lot if d["cote"]]
+        if base_lbc and len(avec_cote) >= minimum:
+            points, base = [(d["km"], d["cote"]) for d in avec_cote], "cotes Leboncoin"
+        elif len(lot) >= minimum:
+            med = statistics.median(d["prix"] for d in lot)
+            points, base = [(d["km"], d["prix"]) for d in lot if 0.6 * med <= d["prix"] <= 1.5 * med], "prix affichés"
+            if len(points) < minimum:
+                continue
+        else:
+            continue
+        valeur = _droite(points, km) if droite_km else statistics.median(y for _, y in points)
+        if not valeur or valeur <= 0:
+            continue
+        ecarts = sorted(abs(y - (_droite(points, x) if droite_km else valeur)) for x, y in points)
+        dispersion = ecarts[len(ecarts) // 2] if ecarts else 0
+        logger.info(f"[cote identique] {marque} {modele} {annee} {km} km « {version} » → {valeur:.0f} € "
+                    f"({len(points)} annonces, {niveau}, {base})")
+        return {"valeur": round(valeur), "n": len(points), "niveau": niveau, "base": base,
+                "basse": round(valeur - dispersion), "haute": round(valeur + dispersion)}
+    logger.info(f"[cote identique] {marque} {modele} {annee} « {version} » : pas assez d'annonces identiques")
+    return None
 
 
 class LeboncoinScraper(BaseScraper):

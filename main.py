@@ -58,7 +58,7 @@ async def _get_settings() -> dict:
     return _settings_cache
 from scrapers.histovec import get_histovec_pdf
 from scrapers.leboncoin import (
-    LeboncoinScraper,
+    LeboncoinScraper, cote_voiture_identique,
     _mobile_ua, _webshare_proxies,
     warm_up_playwright,
     API_URL as LBC_API_URL, HOMEPAGE as LBC_HOMEPAGE,
@@ -248,7 +248,10 @@ async def _site_offer(prices: list[int], marque: str, modele: str, annee: Option
 # on vise `cible` annonces à ±`fenetre_km` ; sinon fenêtre élargie de `elargissement_pct` % du kilométrage ;
 # on garde les plus proches en km ; en dessous de `minimum` annonces, pas de prix.
 # Bonnes affaires : au-delà de ±`ecart_max_lbc` % de la cote Leboncoin de l'annonce, la cote est suspecte.
-COTE_DEFAUTS = {"cible": 10, "minimum": 4, "fenetre_km": 10_000, "elargissement_pct": 40, "ecart_max_lbc": 25}
+COTE_DEFAUTS = {"cible": 10, "minimum": 4, "fenetre_km": 10_000, "elargissement_pct": 40, "ecart_max_lbc": 25,
+                # Méthode « voiture identique » : même version / boîte / année, cotes Leboncoin, droite prix-km (1 = oui, 0 = non)
+                "version_identique": 1, "base_lbc": 1, "droite_km": 1}
+COTE_OUI_NON = {"version_identique", "base_lbc", "droite_km"}
 
 
 async def _cote_params() -> dict:
@@ -257,7 +260,9 @@ async def _cote_params() -> dict:
     for k in p:
         try:
             v = float(reg.get(f"cote.{k}", ""))
-            if v > 0:
+            if k in COTE_OUI_NON:
+                p[k] = 1 if v >= 1 else 0
+            elif v > 0:
                 p[k] = int(v)
         except (TypeError, ValueError):
             pass
@@ -284,6 +289,36 @@ async def _run_estimation(req: EstimationRequest) -> dict:
 
     lbc = LeboncoinScraper()
     cote = await _cote_params()
+
+    # 1. Voiture identique (version exacte du catalogue, boîte, année) + droite prix / km
+    if cote["version_identique"]:
+        try:
+            ident = await asyncio.wait_for(cote_voiture_identique(
+                marque_search, req.modele, req.annee, req.kilometrage, version=req.motorisation, boite=req.boite,
+                carburant=req.carburant, minimum=cote["minimum"], elargissement_pct=cote["elargissement_pct"],
+                base_lbc=bool(cote["base_lbc"]), droite_km=bool(cote["droite_km"])), timeout=60)
+        except Exception as e:
+            logger.warning(f"[cote identique] erreur : {e}")
+            ident = None
+        if ident:
+            calc = calculate_estimation([ident["valeur"]], req.marque, req.modele, req.motorisation, req.finition, req.boite,
+                                        req.annee, req.kilometrage, await _estimation_params())
+            calc["prix_rachat"] = await _apply_ajustement_global(calc["prix_rachat"])
+            return {
+                "vehicule": {
+                    "marque": req.marque.upper(), "modele": req.modele.upper(), "annee": req.annee, "kilometrage": req.kilometrage,
+                    "finition": req.finition or None, "motorisation": req.motorisation or None, "boite": req.boite or None,
+                    "carburant": req.carburant or None, "type_vehicule": type_vehicule,
+                },
+                "marche": {
+                    "nb_annonces": ident["n"], "prix_moyen": calc["prix_median"], "prix_median": calc["prix_median"],
+                    "fourchette_basse": round(ident["basse"] / 100) * 100, "fourchette_haute": round(ident["haute"] / 100) * 100,
+                },
+                "estimation_rachat": {"prix_suggere": calc["prix_rachat"], "methode": calc["methode"]},
+                "sources": {"leboncoin": {"annonces": ident["n"], "methode": f"{ident['niveau']} · {ident['base']} · droite prix/km"}},
+            }
+
+    # 2. Sinon : annonces proches en kilométrage (méthode précédente)
     try:
         # Règle unique de cote : `cible` annonces, sinon km élargi, puis les plus proches en km du client
         lbc_prices = await asyncio.wait_for(
@@ -719,6 +754,7 @@ async def _scan_lbc_bonnes_affaires(max_pages: int = 50, seuil_pct: int = 10,
                     "ecart_pct": ecart_pct,
                     "energie": energie,
                     "boite": boite,
+                    "version": attrs_l.get("u_car_version") or attrs_v.get("u_car_version") or None,
                     "vendeur_type": owner.get("type", "particulier"),
                     "region": f"{dept_name} ({dept_id})" if dept_id else dept_name,
                     "ville": location.get("city", ""),
@@ -1361,7 +1397,19 @@ async def cote_annonce(req: CoteAnnonceRequest):
     cote = await _cote_params()
     MIN_COMPARABLES = cote["minimum"]
     args = dict(marque=req.marque, modele=req.modele, annee=req.annee, km=req.kilometrage, min_resultats=MIN_COMPARABLES)
-    prices = await _estimate_market_lbc(**args, carburant=req.energie, boite=req.boite, timeout=55, motorisation=req.version)
+    ident = None
+    if cote["version_identique"] and req.annee:
+        try:
+            ident = await asyncio.wait_for(cote_voiture_identique(
+                _resolve_brand(req.marque, req.modele), req.modele, req.annee, req.kilometrage, version=req.version,
+                boite=req.boite, carburant=req.energie, minimum=MIN_COMPARABLES, elargissement_pct=cote["elargissement_pct"],
+                base_lbc=bool(cote["base_lbc"]), droite_km=bool(cote["droite_km"])), timeout=60)
+        except Exception as e:
+            logger.warning(f"[cote identique] erreur : {e}")
+    # Cote identique trouvée : déjà calculée, répétée pour passer les contrôles de nombre d'annonces
+    prices = [ident["valeur"]] * MIN_COMPARABLES if ident else []
+    if not prices:
+        prices = await _estimate_market_lbc(**args, carburant=req.energie, boite=req.boite, timeout=55, motorisation=req.version)
     if len(prices) < MIN_COMPARABLES and req.version:
         # Version trop précise : on élargit à toutes les versions du modèle
         plus = await _estimate_market_lbc(**args, carburant=req.energie, boite=req.boite, timeout=40)
@@ -1387,7 +1435,10 @@ async def cote_annonce(req: CoteAnnonceRequest):
     if base == "comparables" and len(prices) < MIN_COMPARABLES:
         raise HTTPException(status_code=404, detail=f"Seulement {len(prices)} annonce(s) comparable(s), pas assez pour une cote fiable")
     offre = await _site_offer(prices, req.marque, req.modele, req.annee, req.kilometrage, req.boite)
-    return {**offre, "base": base, "nb_comparables": 0 if base == "cote_lbc" else offre["nb_comparables"]}
+    nb = 0 if base == "cote_lbc" else (ident["n"] if ident else offre["nb_comparables"])
+    methode = "cote_lbc" if base == "cote_lbc" else ("identique" if ident else "comparables")
+    return {**offre, "base": methode, "nb_comparables": nb,
+            "detail": f"{ident['niveau']} · {ident['base']}" if ident and base != "cote_lbc" else None}
 
 
 @app.post("/scan-geo-enriched")
