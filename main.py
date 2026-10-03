@@ -234,9 +234,10 @@ async def _apply_ajustement_global(prix_rachat: int) -> int:
 
 
 async def _site_offer(prices: list[int], marque: str, modele: str, annee: Optional[int],
-                      km: Optional[int], boite: Optional[str]) -> dict:
-    """Ce que le site proposerait pour ce véhicule, à partir des prix des annonces comparables."""
-    calc = calculate_estimation(prices, marque, modele, None, None, boite, annee, km, await _estimation_params())
+                      km: Optional[int], boite: Optional[str], motorisation: Optional[str] = None) -> dict:
+    """Ce que le site proposerait pour ce véhicule, à partir des prix des annonces comparables
+    (la version sert au malus des moteurs à problème)."""
+    calc = calculate_estimation(prices, marque, modele, motorisation, None, boite, annee, km, await _estimation_params())
     return {
         "ma_cote": calc["prix_median"],
         "nb_comparables": calc["nb_annonces"],
@@ -1439,7 +1440,7 @@ async def cote_annonce(req: CoteAnnonceRequest):
         raise HTTPException(status_code=404, detail="Aucune annonce comparable trouvée")
     if base == "comparables" and len(prices) < MIN_COMPARABLES:
         raise HTTPException(status_code=404, detail=f"Seulement {len(prices)} annonce(s) comparable(s), pas assez pour une cote fiable")
-    offre = await _site_offer(prices, req.marque, req.modele, req.annee, req.kilometrage, req.boite)
+    offre = await _site_offer(prices, req.marque, req.modele, req.annee, req.kilometrage, req.boite, req.version)
     nb = 0 if base == "cote_lbc" else (ident["n"] if ident else offre["nb_comparables"])
     methode = "cote_lbc" if base == "cote_lbc" else ("identique" if ident else "comparables")
     return {**offre, "base": methode, "nb_comparables": nb,

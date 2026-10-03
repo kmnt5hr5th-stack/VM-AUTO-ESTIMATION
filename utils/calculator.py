@@ -1,3 +1,4 @@
+import json
 import statistics
 import datetime
 from typing import Optional
@@ -27,6 +28,41 @@ def _is_landrover(marque: str) -> bool:
 
 # ── Moteurs à risque → coefficient fixe ──────────────────────────────────────
 
+# Liste par défaut des moteurs à problème. Modifiable dans Réglages de l'app (clé estimation.moteurs_fragiles, JSON).
+# Une entrée s'applique si : la marque est dans « marques » (vide = toutes), la version contient TOUS les mots de
+# « tous » et AU MOINS UN de « un_de » (vide = aucun requis), aucun mot de « exclure », et l'année est dans les bornes.
+MOTEURS_FRAGILES_DEFAUT = [
+    {"nom": "1.2 PureTech", "raison": "courroie de distribution humide", "marques": ["PEUGEOT", "CITROEN", "DS", "OPEL"],
+     "un_de": ["puretech", "1.2"], "exclure": ["hdi"]},
+    {"nom": "1.2 TCe / DIG-T", "raison": "consommation d'huile, chaîne", "marques": ["RENAULT", "DACIA", "NISSAN"],
+     "tous": ["1.2"], "un_de": ["tce", "dig-t", "dig t"]},
+    {"nom": "EcoBoost 1.0 / 1.5 / 1.6", "raison": "joint de culasse, surchauffe", "marques": ["FORD"],
+     "un_de": ["1.0 ecoboost", "1.5 ecoboost", "1.6 ecoboost", "ecoboost 1.0", "ecoboost 1.5", "ecoboost 1.6"]},
+    {"nom": "1.6 THP", "raison": "chaîne de distribution, consommation d'huile", "marques": ["PEUGEOT", "CITROEN", "DS"],
+     "un_de": ["thp"], "exclure": ["e-thp"]},
+    {"nom": "1.2 / 1.4 TSI (avant 2013)", "raison": "chaîne de distribution", "marques": ["VOLKSWAGEN", "AUDI", "SEAT", "SKODA"],
+     "un_de": ["1.2 tsi", "1.4 tsi", "1.2 tfsi", "1.4 tfsi"], "annee_max": 2012},
+    {"nom": "BMW diesel N47 (avant 2015)", "raison": "chaîne de distribution", "marques": ["BMW"],
+     "un_de": ["16d", "18d", "20d", "25d"], "annee_max": 2014},
+    {"nom": "Mazda 2.2 Skyactiv-D (avant 2019)", "raison": "encrassement, dilution d'huile", "marques": ["MAZDA"],
+     "tous": ["2.2"], "un_de": ["skyactiv-d", "skyactiv d"], "annee_max": 2018},
+    {"nom": "Jaguar 2.0 diesel Ingenium (avant 2020)", "raison": "chaîne, injection", "marques": ["JAGUAR"],
+     "un_de": ["2.0d", "2.0 d"], "annee_max": 2019},
+]
+
+
+def _liste_moteurs(params: Optional[dict]) -> list:
+    brut = (params or {}).get("moteurs_fragiles")
+    if brut:
+        try:
+            liste = json.loads(brut) if isinstance(brut, str) else brut
+            if isinstance(liste, list):
+                return liste
+        except (ValueError, TypeError):
+            pass
+    return MOTEURS_FRAGILES_DEFAUT
+
+
 def _detect_risky_engine(
     marque: str,
     motorisation: Optional[str],
@@ -37,40 +73,31 @@ def _detect_risky_engine(
     fragile, fragile_recent = _p(params, "pct_moteur_fragile") / 100, _p(params, "pct_moteur_fragile_recent") / 100
     if not motorisation:
         return None
-
     mot = motorisation.lower()
     marque_up = _normalize_marque(marque)
-
-    # PureTech 1.2 — Peugeot, Citroën, DS, Opel
-    is_puretech = (
-        marque_up in ("PEUGEOT", "CITROEN", "DS", "OPEL")
-        and ("1.2" in mot or "puretech" in mot)
-    )
-    if is_puretech:
+    annee = datetime.date.today().year - age
+    for e in _liste_moteurs(params):
+        if e.get("actif") is False:
+            continue
+        marques = [_normalize_marque(m) for m in e.get("marques") or []]
+        if marques and marque_up not in marques:
+            continue
+        if any(str(w).lower() not in mot for w in e.get("tous") or []):
+            continue
+        un_de = [str(w).lower() for w in e.get("un_de") or []]
+        if un_de and not any(w in mot for w in un_de):
+            continue
+        if any(str(w).lower() in mot for w in e.get("exclure") or []):
+            continue
+        if e.get("annee_min") and annee < int(e["annee_min"]):
+            continue
+        if e.get("annee_max") and annee > int(e["annee_max"]):
+            continue
+        nom = e.get("nom", "moteur à problème")
+        raison = f" ({e['raison']})" if e.get("raison") else ""
         if age <= 3 and km <= 70_000:
-            return fragile_recent, f"PureTech 1.2 récent (≤3 ans, ≤70k km) → {fragile_recent:.0%}"
-        return fragile, f"PureTech 1.2 (chaîne distribution) → {fragile:.0%}"
-
-    # 1.2 TCe — Renault, Dacia, Nissan
-    is_tce12 = (
-        marque_up in ("RENAULT", "DACIA", "NISSAN")
-        and "1.2" in mot
-        and "dci" not in mot  # DCi = diesel, pas concerné
-    )
-    if is_tce12:
-        if age <= 3 and km <= 70_000:
-            return fragile_recent, f"1.2 TCe récent (≤3 ans, ≤70k km) → {fragile_recent:.0%}"
-        return fragile, f"1.2 TCe (chaîne distribution) → {fragile:.0%}"
-
-    # EcoBoost 1.0 / 1.5 — Ford
-    is_ecoboost = (
-        marque_up == "FORD"
-        and "ecoboost" in mot
-        and ("1.0" in mot or "1.5" in mot)
-    )
-    if is_ecoboost:
-        return fragile, f"EcoBoost 1.0/1.5 (joint culasse) → {fragile:.0%}"
-
+            return fragile_recent, f"{nom} récent (≤3 ans, ≤70k km){raison} → {fragile_recent:.0%}"
+        return fragile, f"{nom}{raison} → {fragile:.0%}"
     return None
 
 
