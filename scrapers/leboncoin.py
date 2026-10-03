@@ -1327,16 +1327,30 @@ class LeboncoinScraper(BaseScraper):
                                  carburant=None, boite=None, type_vehicule=None,
                                  target_hp=None, finition=None, carrosserie=None,
                                  return_details: bool = False, km_margin: int = 10_000):
-        ua, impersonate, headers = _mobile_ua()
         base = _build_camoufox_payload(marque, modele, annee, km, boite=boite,
                                         type_vehicule=type_vehicule, target_hp=target_hp,
                                         km_margin=km_margin)
         payload = {**base, "offset": 35 * (page - 1),
                    "listing_source": "direct-search" if page == 1 else "pagination"}
-        proxies = _webshare_proxies()
-        async with AsyncSession(impersonate=impersonate, proxies=proxies) as s:
-            await s.get(HOMEPAGE, headers=headers, timeout=15)
-            r = await s.post(API_URL, json=payload, headers=headers, timeout=30)
+        # Même pratique que la récupération du catalogue : si Leboncoin bloque (403), on réessaie
+        # avec un nouvel appareil simulé et une nouvelle adresse IP (proxy), après une courte pause.
+        r = None
+        for tentative in range(3):
+            ua, impersonate, headers = _mobile_ua()
+            proxies = _webshare_proxies()
+            try:
+                async with AsyncSession(impersonate=impersonate, proxies=proxies) as s:
+                    await s.get(HOMEPAGE, headers=headers, timeout=15)
+                    r = await s.post(API_URL, json=payload, headers=headers, timeout=30)
+                if r.status_code != 403:
+                    break
+                logger.info(f"[leboncoin] API mobile bloquée (403), nouvel essai {tentative + 2}/3")
+            except Exception as e:
+                logger.info(f"[leboncoin] API mobile erreur ({e}), nouvel essai {tentative + 2}/3")
+                r = None
+            await asyncio.sleep(random.uniform(0.8, 2.0))
+        if r is None:
+            raise Exception("API mobile injoignable")
         if r.status_code == 403:
             raise Exception("DataDome 403")
         if not r.ok:
@@ -1687,6 +1701,16 @@ class LeboncoinScraper(BaseScraper):
                     logger.debug(f"[leboncoin] _mobile_pages erreur pg{pg}: {e}")
                     break
             return prix
+
+        # ── 0. Cote des bonnes affaires : API mobile d'abord (rapide, même méthode que le catalogue) ─
+        if min_resultats > 1:
+            logger.info("[leboncoin] Mobile API en premier (cote)")
+            try:
+                prix = await asyncio.wait_for(_mobile_pages(modele_api, kilometrage, target_hp), timeout=35)
+            except Exception:
+                prix = []
+            if assez(prix):
+                return prix
 
         # ── 1. URL search via Playwright (URL identique à LBC — toujours en premier) ─
         logger.info("[leboncoin] URL search (Playwright)")
