@@ -9,6 +9,8 @@ puis build_vm_ab_catalog.py reconstruit vm_ab_catalog.json.
 
 Usage : python scrape_catalogue_complet.py            (reprend où il s'était arrêté)
         python scrape_catalogue_complet.py --nouveau  (repart de zéro)
+En parallèle : python scrape_catalogue_complet.py --part 1/4  (… jusqu'à 4/4, un script par quart des modèles)
+               puis python scrape_catalogue_complet.py --fusionner  (réunit les parts dans le catalogue)
 """
 import asyncio, json, os, random, sys, time
 from curl_cffi.requests import AsyncSession
@@ -112,6 +114,49 @@ def fusionner(ancien: dict, nouveau: dict) -> dict:
     return ancien
 
 
+def part_files(i: int) -> tuple[str, str]:
+    return os.path.join(HERE, f"catalogue_part_{i}.json"), os.path.join(HERE, f"catalogue_part_{i}_progres.json")
+
+
+async def main_part(i: int, n: int):
+    """Un des n scripts parallèles : traite un modèle sur n, écrit ses résultats dans son propre fichier."""
+    liste = json.load(open(MODELES_FILE))
+    codes = [(m, o["value"]) for m, d in liste.items() for o in d.get("modelObjects", []) if not o["value"].endswith("_Autre")]
+    deja = json.load(open(PROGRES_FILE)) if os.path.exists(PROGRES_FILE) else {}
+    sortie, prog_f = part_files(i)
+    resultats = json.load(open(sortie)) if os.path.exists(sortie) else {}
+    progres = json.load(open(prog_f)) if os.path.exists(prog_f) else {}
+    mes_codes = [(m, c) for k, (m, c) in enumerate(codes) if k % n == i - 1 and c not in deja]
+    debut = time.time()
+    for j, (marque, code) in enumerate(mes_codes, 1):
+        if code in progres:
+            continue
+        res = await modele(marque, code)
+        resultats[code] = res
+        progres[code] = {"versions": len(res["versions"]), "annonces": res["total_ads"]}
+        json.dump(resultats, open(sortie, "w"), ensure_ascii=False)
+        json.dump(progres, open(prog_f, "w"), ensure_ascii=False)
+        print(f"[part {i}/{n}] [{j}/{len(mes_codes)}] {code} : {res['total_ads']} annonces, {len(res['versions'])} versions "
+              f"({(time.time() - debut) / 60:.0f} min)", flush=True)
+    print(f"[part {i}/{n}] terminé", flush=True)
+
+
+def fusionner_parts():
+    catalogue = json.load(open(CATALOGUE_FILE)) if os.path.exists(CATALOGUE_FILE) else {}
+    progres = json.load(open(PROGRES_FILE)) if os.path.exists(PROGRES_FILE) else {}
+    nb_av = sum(len(v.get("versions", [])) for v in catalogue.values())
+    k = 1
+    while os.path.exists(part_files(k)[0]):
+        for code, res in json.load(open(part_files(k)[0])).items():
+            catalogue[code] = fusionner(catalogue.get(code, {}), res)
+            progres[code] = {"versions": len(res["versions"]), "annonces": res["total_ads"]}
+        k += 1
+    json.dump(catalogue, open(CATALOGUE_FILE, "w"), ensure_ascii=False)
+    json.dump(progres, open(PROGRES_FILE, "w"), ensure_ascii=False)
+    nb_ap = sum(len(v.get("versions", [])) for v in catalogue.values())
+    print(f"Fusion de {k - 1} parts : {nb_av} → {nb_ap} versions, {len(progres)} modèles faits", flush=True)
+
+
 async def main():
     liste = json.load(open(MODELES_FILE))
     a_faire = [(marque, o["value"]) for marque, d in liste.items() for o in d.get("modelObjects", [])
@@ -135,4 +180,10 @@ async def main():
 
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    if "--part" in sys.argv:
+        i, n = map(int, sys.argv[sys.argv.index("--part") + 1].split("/"))
+        asyncio.run(main_part(i, n))
+    elif "--fusionner" in sys.argv:
+        fusionner_parts()
+    else:
+        asyncio.run(main())
