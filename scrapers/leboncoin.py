@@ -1292,6 +1292,7 @@ def _extract_annonces(ads: list, modele: str, marque: str = None, carburant: str
                 "age_jours": age_jours,
                 "cote_min": cote_min,
                 "cote_max": cote_max,
+                "version": attrs.get("u_car_version") or "",  # version exacte Leboncoin (tri par version dans l'app)
             })
 
     if not structured:
