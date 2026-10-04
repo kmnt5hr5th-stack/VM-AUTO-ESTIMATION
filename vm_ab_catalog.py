@@ -129,6 +129,25 @@ def fiche_modele(marque: str, modele: str) -> list:
     return sorted(found.values(), key=lambda e: (-e["a"], e["version"]))
 
 
+def carburants(marque: str, modele: str, annee: int = 0) -> list:
+    """Carburants existants pour ce modèle (et cette année si donnée) ; un hybride léger compte aussi en essence / diesel."""
+    models = _find_brand(marque)
+    if not models:
+        return []
+    vus = set()
+    for name, must in _models_with_filter(models, modele):
+        for v in models[name]:
+            if must and must not in _key(v["v"]):
+                continue
+            if annee and not (v["de"] - 1 <= annee <= v["a"] + 1):
+                continue
+            vus.add(v["c"])
+            if v["c"] == "hybride" and _MILD.search(v["v"]):
+                vus.add("diesel" if _DIESEL.search(v["v"]) else "essence")
+    ordre = ["essence", "diesel", "hybride", "electrique", "gpl"]
+    return [c for c in ordre if c in vus]
+
+
 def stats() -> dict:
     return {"marques": len(_CATALOG), "modeles": sum(len(m) for m in _CATALOG.values()),
             "versions": sum(len(vs) for m in _CATALOG.values() for vs in m.values())}

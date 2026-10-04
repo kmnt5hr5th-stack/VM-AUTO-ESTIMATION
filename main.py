@@ -177,6 +177,12 @@ async def catalog_modeles(marque: str = ""):
     return {"modeles": vm_ab_catalog.list_modeles(marque)}
 
 
+@app.get("/catalog/carburants")
+@limiter.limit("60/minute")
+async def catalog_carburants(request: Request, marque: str = "", modele: str = "", annee: int = 0):
+    return {"carburants": vm_ab_catalog.carburants(marque, modele, annee)}
+
+
 @app.get("/catalog/fiche")
 @limiter.limit("60/minute")
 async def catalog_fiche(request: Request, marque: str = "", modele: str = ""):
