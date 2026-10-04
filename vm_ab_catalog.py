@@ -64,11 +64,24 @@ def _find_models(models: dict, k: str) -> list:
     return []
 
 
+# Même voiture sous deux noms dans le catalogue Leboncoin : on lit les deux
+_MEME_MODELE = [{"crossland", "crosslandx"}, {"grandland", "grandlandx"}, {"scross", "sx4scross"},
+                {"evoque", "rangeroverevoque"}, {"velar", "rangerovervelar"}, {"glc", "classeglc"}]
+
+
+def _avec_jumeaux(models: dict, found: list) -> list:
+    keys = {_key(f) for f in found}
+    for groupe in _MEME_MODELE:
+        if keys & groupe:
+            found = found + [n for n in models if _key(n) in groupe and n not in found]
+    return found
+
+
 def _models_with_filter(models: dict, modele: str) -> list:
     """Modèles à lire + mots que doit contenir la version (« Série 2 Active Tourer » → « Série 2 » + « active tourer »)."""
     found = _find_models(models, _key(modele))
     if found:
-        return [(n, "") for n in found]
+        return [(n, "") for n in _avec_jumeaux(models, found)]
     words = modele.split()
     for cut in range(len(words) - 1, 0, -1):
         base = _find_models(models, _key(" ".join(words[:cut])))
