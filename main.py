@@ -474,11 +474,11 @@ async def estimation(req: EstimationRequest):
         raise HTTPException(status_code=500, detail=str(e))
 
 
-@app.post("/estimation/details")
 def cote_version_stricte_ok(version: str) -> bool:
     return bool(version) and version.strip().lower() not in ("autre", "je ne sais pas")
 
 
+@app.post("/estimation/details")
 async def estimation_details(req: EstimationRequest):
     """Comme /estimation mais retourne aussi la liste brute des annonces LBC (prix, km, titre, url)."""
     async def _run():
