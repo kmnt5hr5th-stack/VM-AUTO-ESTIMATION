@@ -116,7 +116,14 @@ def _detect_type_vehicule(modele: str) -> str:
             return "utilitaire"
     return "voiture"
 
-limiter = Limiter(key_func=get_remote_address)
+def _ip_visiteur(request: Request) -> str:
+    """Vraie adresse du visiteur : derrière Render, request.client est le proxy (le même pour tout le monde).
+    Render ajoute l'adresse réelle en DERNIER dans X-Forwarded-For (les valeurs envoyées par le visiteur sont avant)."""
+    xff = request.headers.get("x-forwarded-for", "")
+    return xff.split(",")[-1].strip() if xff.strip() else get_remote_address(request)
+
+
+limiter = Limiter(key_func=_ip_visiteur)
 app = FastAPI(
     title="VM Auto Estimation API",
     description="API de rachat de véhicules d'occasion — VM Auto Business (Seine-et-Marne)",
@@ -167,25 +174,27 @@ async def health():
 
 
 @app.get("/catalog/marques")
-async def catalog_marques():
+@limiter.limit("30/minute")
+async def catalog_marques(request: Request):
     """Marques du catalogue VM Auto Business (listes déroulantes de l'app)."""
     return {"marques": vm_ab_catalog.list_marques()}
 
 
 @app.get("/catalog/modeles")
-async def catalog_modeles(marque: str = ""):
+@limiter.limit("30/minute")
+async def catalog_modeles(request: Request, marque: str = ""):
     return {"modeles": vm_ab_catalog.list_modeles(marque)}
 
 
 @app.get("/catalog/carrosseries")
-@limiter.limit("60/minute")
+@limiter.limit("20/minute")
 async def catalog_carrosseries(request: Request, marque: str = "", modele: str = "", annee: int = 0):
     """Carrosseries existantes pour ce modèle (types Leboncoin), la plus courante d'abord ; vide pour un utilitaire."""
     return {"carrosseries": vm_ab_catalog.carrosseries(marque, modele, annee)}
 
 
 @app.get("/catalog/carburants")
-@limiter.limit("60/minute")
+@limiter.limit("20/minute")
 async def catalog_carburants(request: Request, marque: str = "", modele: str = "", annee: int = 0):
     return {"carburants": vm_ab_catalog.carburants(marque, modele, annee)}
 
@@ -193,7 +202,11 @@ async def catalog_carburants(request: Request, marque: str = "", modele: str = "
 @app.get("/catalog/fiche")
 @limiter.limit("60/minute")
 async def catalog_fiche(request: Request, marque: str = "", modele: str = ""):
-    """Toutes les versions d'un modèle (années, carburant, annonces vues) : page Catalogue de l'app VM."""
+    """Toutes les versions d'un modèle (années, carburant, annonces vues) : page Catalogue de l'app VM.
+    Réservée à l'app (clé CATALOG_SECRET envoyée par la fonction Supabase « catalogue », après connexion)."""
+    secret = os.getenv("CATALOG_SECRET", "")
+    if secret and request.headers.get("x-catalog-key", "") != secret:
+        raise HTTPException(status_code=403, detail="Accès réservé")
     versions = vm_ab_catalog.fiche_modele(marque, modele)
     return {"versions": versions, "count": len(versions), "catalogue": vm_ab_catalog.stats()}
 
