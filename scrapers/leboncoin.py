@@ -623,6 +623,9 @@ def _code_officiel(marque: str, modele: str) -> Optional[tuple[str, str]]:
     if not m:
         return None
     code_modele = m[1].get(_cle_code(modele))
+    if not code_modele and not modele.lower().startswith("classe"):
+        # « A », « GLC » → « Classe A », « Classe GLC » (noms Leboncoin chez Mercedes)
+        code_modele = m[1].get(_cle_code("Classe " + modele))
     return (m[0], code_modele) if code_modele else None
 
 
