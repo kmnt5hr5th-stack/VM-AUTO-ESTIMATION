@@ -117,10 +117,13 @@ def _detect_type_vehicule(modele: str) -> str:
     return "voiture"
 
 def _ip_visiteur(request: Request) -> str:
-    """Vraie adresse du visiteur : derrière Render, request.client est le proxy (le même pour tout le monde).
-    Render ajoute l'adresse réelle en DERNIER dans X-Forwarded-For (les valeurs envoyées par le visiteur sont avant)."""
+    """Vraie adresse du visiteur : derrière Render (et son relais Cloudflare), request.client change à chaque demande.
+    Cloudflare transmet l'adresse réelle dans CF-Connecting-IP / True-Client-IP (il écrase ce que le visiteur envoie)."""
+    for entete in ("cf-connecting-ip", "true-client-ip"):
+        if request.headers.get(entete):
+            return request.headers[entete].strip()
     xff = request.headers.get("x-forwarded-for", "")
-    return xff.split(",")[-1].strip() if xff.strip() else get_remote_address(request)
+    return xff.split(",")[0].strip() if xff.strip() else get_remote_address(request)
 
 
 limiter = Limiter(key_func=_ip_visiteur)
