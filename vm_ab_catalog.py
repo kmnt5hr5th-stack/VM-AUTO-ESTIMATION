@@ -93,23 +93,46 @@ _MEME_VOITURE = {
 }
 
 
-def _intrus(models: dict, name: str, label: str) -> bool:
-    """Version mal rangée par le vendeur Leboncoin : elle porte le nom d'un AUTRE modèle (« Classe C 300 e » sous GLC)."""
+def _intrus(models: dict, name: str, label: str):
+    """Version mal rangée par le vendeur Leboncoin : renvoie le BON modèle (« Classe C 300 e » sous GLC → « Classe C »), sinon None."""
     lab = label.lower()
     propres = {name.lower(), name.lower().removeprefix("classe ")} | set(_MEME_VOITURE.get(name.lower(), []))
     if any(lab.startswith(p + " ") for p in propres):
-        return False
+        return None
     # Le nom du modèle figure dans les premiers mots (« Transit Custom » sous Custom, « NP300 Navara » sous Navara)
     debut = re.sub(r"[^a-z0-9 ]", "", lab).split()[:4]
     if any(len(p) >= 3 and any(m.startswith(re.sub(r"[^a-z0-9]", "", p)) for m in debut) for p in propres):
-        return False
+        return None
+    bon, long_max = None, 0
     for autre in models:
         if autre == name:
             continue
         for nom in {autre.lower(), autre.lower().removeprefix("classe ")}:
-            if len(nom) >= 2 and lab.startswith(nom + " ") and not any(p.startswith(nom) for p in propres):
-                return True
-    return False
+            if len(nom) >= 2 and lab.startswith(nom + " ") and not any(p.startswith(nom) for p in propres) and len(nom) > long_max:
+                bon, long_max = autre, len(nom)
+    return bon
+
+
+def _reranger() -> int:
+    """Déplace (en mémoire, le fichier n'est pas modifié) chaque version mal rangée vers son bon modèle."""
+    deplacees = 0
+    for models in _CATALOG.values():
+        a_deplacer = []
+        for name, vs in models.items():
+            for v in vs:
+                bon = _intrus(models, name, v["v"])
+                if bon:
+                    a_deplacer.append((name, bon, v))
+        for name, bon, v in a_deplacer:
+            models[name] = [x for x in models[name] if x is not v]
+            existant = next((x for x in models[bon] if x["v"] == v["v"] and x["c"] == v["c"]), None)
+            if existant:
+                existant["de"], existant["a"] = min(existant["de"], v["de"]), max(existant["a"], v["a"])
+                existant["n"] += v["n"]
+            else:
+                models[bon].append(v)
+            deplacees += 1
+    return deplacees
 
 
 def _fuel_ok(v: dict, fuel: str) -> bool:
@@ -133,8 +156,6 @@ def get_versions(marque: str, modele: str, annee: int, carburant: str) -> list:
                 continue
             if must and must not in _key(v["v"]):
                 continue
-            if _intrus(models, name, v["v"]):
-                continue
             # Une voiture immatriculée en début d'année peut être du millésime précédent : 1 an de tolérance
             if v["de"] - 1 <= annee <= v["a"] + 1:
                 found[v["v"]] = max(found.get(v["v"], 0), v["n"])
@@ -151,8 +172,6 @@ def fiche_modele(marque: str, modele: str) -> list:
         for v in models[name]:
             if must and must not in _key(v["v"]):
                 continue
-            if _intrus(models, name, v["v"]):
-                continue
             e = found.setdefault(v["v"], {"version": v["v"], "carburant": v["c"], "de": v["de"], "a": v["a"], "annonces": 0})
             e["de"], e["a"] = min(e["de"], v["de"]), max(e["a"], v["a"])
             e["annonces"] += v["n"]
@@ -168,8 +187,6 @@ def carburants(marque: str, modele: str, annee: int = 0) -> list:
     for name, must in _models_with_filter(models, modele):
         for v in models[name]:
             if must and must not in _key(v["v"]):
-                continue
-            if _intrus(models, name, v["v"]):
                 continue
             if annee and not (v["de"] - 1 <= annee <= v["a"] + 1):
                 continue
@@ -192,3 +209,6 @@ def list_marques() -> list:
 def list_modeles(marque: str) -> list:
     models = _find_brand(marque)
     return sorted(models) if models else []
+
+
+REVERSIONS_DEPLACEES = _reranger()
