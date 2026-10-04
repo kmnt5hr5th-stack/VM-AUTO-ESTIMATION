@@ -110,7 +110,13 @@ def _intrus(models: dict, name: str, label: str):
     """Version mal rangée par le vendeur Leboncoin : renvoie le BON modèle (« Classe C 300 e » sous GLC → « Classe C »), sinon None."""
     lab = label.lower()
     propres = {name.lower(), name.lower().removeprefix("classe ")} | set(_MEME_VOITURE.get(name.lower(), []))
-    if any(lab.startswith(p + " ") for p in propres):
+    # Un modèle plus précis de la même marque (« Tiguan Allspace » rangée sous « Tiguan ») l'emporte
+    plus_long = max((len(p) for p in propres if lab.startswith(p + " ")), default=0)
+    if plus_long:
+        for autre in models:
+            if autre != name and len(autre) > plus_long and lab.startswith(autre.lower() + " ") \
+                    and _key(autre) not in {_key(p) for p in propres}:
+                return autre
         return None
     # Le nom du modèle figure dans les premiers mots (« Transit Custom » sous Custom, « NP300 Navara » sous Navara)
     debut = re.sub(r"[^a-z0-9 ]", "", lab).split()[:4]
