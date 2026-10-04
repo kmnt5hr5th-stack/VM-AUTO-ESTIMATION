@@ -276,8 +276,24 @@ COTE_DEFAUTS = {"cible": 10, "minimum": 4, "fenetre_km": 10_000, "elargissement_
                 # Méthode « voiture identique » : même version / boîte / année, cotes Leboncoin, droite prix-km (1 = oui, 0 = non)
                 "version_identique": 1, "base_lbc": 1, "droite_km": 1,
                 # 1 = uniquement des voitures de la même version (jamais « même puissance » ni « toutes versions »)
-                "version_stricte": 1}
+                "version_stricte": 1,
+                # % ajouté à la cote des SUV coupés (GLC Coupé, Cayenne Coupé, Q3 Sportback…) : Leboncoin les cote comme le SUV
+                "bonus_suv_coupe": 10}
 COTE_OUI_NON = {"version_identique", "base_lbc", "droite_km", "version_stricte"}
+
+
+def _bonus_suv_coupe(ident: dict, marque: str, modele: str, version: str, cote: dict) -> dict:
+    """Exception SUV coupés : Leboncoin donne au Coupé la même cote que le SUV, alors qu'il se vend plus cher."""
+    if not ident or not version or not cote.get("bonus_suv_coupe"):
+        return ident
+    nom = vm_ab_catalog.nom_catalogue(marque, modele)
+    if nom.lower() in ("range rover evoque", "evoque"):
+        return ident  # Evoque « Coupé » = 3 portes, pas plus cher
+    if vm_ab_catalog._type_de_base(nom) != "SUV / 4x4" or vm_ab_catalog.carrosserie_version(version, nom) != "Coupé":
+        return ident
+    f = 1 + cote["bonus_suv_coupe"] / 100
+    return {**ident, "valeur": ident["valeur"] * f, "basse": ident["basse"] * f, "haute": ident["haute"] * f,
+            "niveau": f"{ident['niveau']} · SUV coupé +{cote['bonus_suv_coupe']} %"}
 
 
 async def _cote_params() -> dict:
@@ -288,6 +304,8 @@ async def _cote_params() -> dict:
             v = float(reg.get(f"cote.{k}", ""))
             if k in COTE_OUI_NON:
                 p[k] = 1 if v >= 1 else 0
+            elif k == "bonus_suv_coupe":
+                p[k] = max(0, min(50, int(v)))  # 0 = pas de bonus
             elif v > 0:
                 p[k] = int(v)
         except (TypeError, ValueError):
@@ -326,6 +344,7 @@ async def _run_estimation(req: EstimationRequest) -> dict:
         except Exception as e:
             logger.warning(f"[cote identique] erreur : {e}")
             ident = None
+        ident = _bonus_suv_coupe(ident, req.marque, req.modele, req.motorisation, cote)
         if ident:
             calc = calculate_estimation([ident["valeur"]], req.marque, req.modele, req.motorisation, req.finition, req.boite,
                                         req.annee, req.kilometrage, await _estimation_params())
@@ -1442,6 +1461,7 @@ async def cote_annonce(req: CoteAnnonceRequest):
                 base_lbc=bool(cote["base_lbc"]), droite_km=bool(cote["droite_km"]), stricte=bool(cote["version_stricte"])), timeout=60)
         except Exception as e:
             logger.warning(f"[cote identique] erreur : {e}")
+    ident = _bonus_suv_coupe(ident, req.marque, req.modele, req.version, cote)
     # Cote identique trouvée : déjà calculée, répétée pour passer les contrôles de nombre d'annonces
     prices = [ident["valeur"]] * MIN_COMPARABLES if ident else []
     if not prices and cote["version_stricte"] and req.version and cote["version_identique"]:

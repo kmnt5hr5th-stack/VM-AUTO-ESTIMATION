@@ -777,6 +777,11 @@ def _build_structured_payload(marque: str, modele: str, annee: int,
         _VT = {"break": "break", "coupé": "coupe", "cabriolet": "cabriolet",
                "suv / 4x4": "4x4", "monospace": "monospace", "berline": "berline"}
         vt = _VT.get(carrosserie.lower().strip())
+        if vt == "coupe":
+            # Leboncoin range les SUV coupés (GLC Coupé, Cayenne Coupé…) en « 4x4 » : le filtre « coupe » ne trouverait rien
+            import vm_ab_catalog
+            if vm_ab_catalog._type_de_base(vm_ab_catalog.nom_catalogue(marque, modele)) == "SUV / 4x4":
+                vt = "4x4"
         if vt:
             enums["vehicle_type"] = [vt]
 

@@ -295,6 +295,13 @@ def carrosserie_version(label: str, modele: str) -> str:
     return base
 
 
+def nom_catalogue(marque: str, modele: str) -> str:
+    """Nom du modèle dans le catalogue (« GLC » → « Classe GLC »), sinon le nom donné."""
+    models = _find_brand(marque)
+    found = _find_models(models, _key(modele)) if models else []
+    return found[0] if found else modele
+
+
 def est_utilitaire(modele: str) -> bool:
     return modele.lower().strip() in _UTILITAIRES
 
