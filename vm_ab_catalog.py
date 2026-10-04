@@ -113,6 +113,27 @@ def get_versions(marque: str, modele: str, annee: int, carburant: str) -> list:
     return sorted(found, key=lambda label: -found[label])
 
 
+def fiche_modele(marque: str, modele: str) -> list:
+    """Toutes les versions d'un modèle avec carburant, années et nombre d'annonces vues (page Catalogue de l'app)."""
+    models = _find_brand(marque)
+    if not models:
+        return []
+    found: dict = {}
+    for name, must in _models_with_filter(models, modele):
+        for v in models[name]:
+            if must and must not in _key(v["v"]):
+                continue
+            e = found.setdefault(v["v"], {"version": v["v"], "carburant": v["c"], "de": v["de"], "a": v["a"], "annonces": 0})
+            e["de"], e["a"] = min(e["de"], v["de"]), max(e["a"], v["a"])
+            e["annonces"] += v["n"]
+    return sorted(found.values(), key=lambda e: (-e["a"], e["version"]))
+
+
+def stats() -> dict:
+    return {"marques": len(_CATALOG), "modeles": sum(len(m) for m in _CATALOG.values()),
+            "versions": sum(len(vs) for m in _CATALOG.values() for vs in m.values())}
+
+
 def list_marques() -> list:
     return sorted(_CATALOG)
 

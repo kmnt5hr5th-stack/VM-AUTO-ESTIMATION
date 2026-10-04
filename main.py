@@ -177,6 +177,14 @@ async def catalog_modeles(marque: str = ""):
     return {"modeles": vm_ab_catalog.list_modeles(marque)}
 
 
+@app.get("/catalog/fiche")
+@limiter.limit("60/minute")
+async def catalog_fiche(request: Request, marque: str = "", modele: str = ""):
+    """Toutes les versions d'un modèle (années, carburant, annonces vues) : page Catalogue de l'app VM."""
+    versions = vm_ab_catalog.fiche_modele(marque, modele)
+    return {"versions": versions, "count": len(versions), "catalogue": vm_ab_catalog.stats()}
+
+
 @app.get("/catalog/versions")
 @limiter.limit("10/minute")
 async def catalog_versions(request: Request, marque: str = "", modele: str = "", annee: int = 0, carburant: str = ""):
