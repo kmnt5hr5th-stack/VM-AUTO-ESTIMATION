@@ -162,7 +162,7 @@ def _fuel_ok(v: dict, fuel: str) -> bool:
     return False
 
 
-def get_versions(marque: str, modele: str, annee: int, carburant: str) -> list:
+def get_versions(marque: str, modele: str, annee: int, carburant: str, carrosserie: str = "") -> list:
     """Versions du catalogue pour ce véhicule, les plus courantes en premier."""
     models = _find_brand(marque)
     if not models or not annee:
@@ -172,6 +172,8 @@ def get_versions(marque: str, modele: str, annee: int, carburant: str) -> list:
     for name, must in _models_with_filter(models, modele):
         for v in models[name]:
             if not _fuel_ok(v, fuel):
+                continue
+            if carrosserie and not est_utilitaire(modele) and carrosserie_version(v["v"], name).lower() != carrosserie.lower().strip():
                 continue
             if must and must not in _key(v["v"]):
                 continue
@@ -191,7 +193,8 @@ def fiche_modele(marque: str, modele: str) -> list:
         for v in models[name]:
             if must and must not in _key(v["v"]):
                 continue
-            e = found.setdefault(v["v"], {"version": v["v"], "carburant": v["c"], "de": v["de"], "a": v["a"], "annonces": 0})
+            e = found.setdefault(v["v"], {"version": v["v"], "carburant": v["c"], "de": v["de"], "a": v["a"], "annonces": 0,
+                                          "carrosserie": "" if est_utilitaire(modele) else carrosserie_version(v["v"], name)})
             e["de"], e["a"] = min(e["de"], v["de"]), max(e["a"], v["a"])
             e["annonces"] += v["n"]
     return sorted(found.values(), key=lambda e: (-e["a"], e["version"]))
@@ -228,6 +231,94 @@ def list_marques() -> list:
 def list_modeles(marque: str) -> list:
     models = _find_brand(marque)
     return sorted(models) if models else []
+
+
+# ── Carrosseries (mêmes types que le filtre Leboncoin du moteur) ──────────────────────────────
+_SUV = {
+    "2008", "3008", "5008", "4008", "408", "captur", "kadjar", "koleos", "arkana", "austral", "rafale", "symbioz", "scenic e-tech",
+    "c3 aircross", "c5 aircross", "c4 aircross", "c5 x", "berlingo", "t-roc", "t-cross", "tiguan", "tiguan allspace", "touareg", "taigo",
+    "id.4", "id.5", "id.6", "atlas", "q2", "q3", "q4", "q5", "q6", "q7", "q8", "e-tron", "sq5", "sq7", "sq8", "rs q3", "rs q8",
+    "kuga", "puma", "ecosport", "edge", "explorer", "mustang mach-e", "bronco", "mokka", "mokka x", "crossland", "crossland x",
+    "grandland", "grandland x", "frontera", "antara", "tucson", "kona", "santa fe", "bayon", "ix35", "ix55", "nexo", "ioniq 5",
+    "ioniq 9", "inster", "sportage", "stonic", "niro", "sorento", "ev3", "ev5", "ev6", "ev9", "soul", "xceed", "qashqai", "qashqai+2",
+    "juke", "ariya", "x-trail", "murano", "pathfinder", "navara", "rav4", "c-hr", "c-hr+", "yaris cross", "bz4x", "land cruiser",
+    "highlander", "hilux", "aygo x", "corolla cross", "urban cruiser", "cx-3", "cx-30", "cx-5", "cx-60", "cx-80", "mx-30", "cx-7",
+    "xc40", "xc60", "xc70", "xc90", "c40", "ex30", "ex40", "ex90", "ec40", "asx", "outlander", "eclipse cross", "pajero", "l200",
+    "vitara", "grand vitara", "s-cross", "sx4 s-cross", "jimny", "ignis", "across", "ds 3 crossback", "ds 7 crossback", "ds 7",
+    "ds 3", "stelvio", "tonale", "junior", "ateca", "arona", "tarraco", "formentor", "terramar", "born", "karoq", "kodiaq",
+    "kamiq", "yeti", "enyaq", "elroq", "macan", "cayenne", "renegade", "compass", "cherokee", "grand cherokee", "wrangler",
+    "avenger", "defender", "discovery", "discovery sport", "range rover", "range rover sport", "range rover evoque",
+    "range rover velar", "evoque", "velar", "duster", "bigster", "spring", "jogger", "forester", "outback", "xv", "crosstrek",
+    "solterra", "nx", "rx", "ux", "lbx", "rz", "f-pace", "e-pace", "i-pace", "zs", "hs", "ehs", "marvel r", "cr-v", "hr-v",
+    "zr-v", "e:ny1", "countryman", "paceman", "model x", "model y", "x1", "x2", "x3", "x4", "x5", "x6", "x7", "xm", "ix", "ix1",
+    "ix2", "ix3", "classe gla", "classe glb", "classe glc", "classe gle", "classe gls", "classe glk", "classe gl", "classe ml",
+    "classe m/ml", "classe g", "eqa", "eqb", "eqc", "eqe suv", "eqs suv", "classe eqa", "classe eqb", "classe eqc", "urus",
+    "bentayga", "cullinan", "dbx", "purosangue", "levante", "grecale", "atto 3", "seal u", "tang", "kodiaq rs", "xpeng g6",
+}
+_MONOSPACE = {"grand scenic", "scenic", "c4 picasso", "grand c4 picasso", "c4 spacetourer", "grand c4 spacetourer", "touran",
+              "sharan", "zafira", "zafira tourer", "meriva", "lodgy", "dokker", "c-max", "grand c-max", "s-max", "galaxy",
+              "classe b", "classe v", "alhambra", "5008 i", "espace", "picasso", "carens", "verso", "corolla verso", "prius+",
+              "multipla", "500l", "kangoo", "partner", "rifter", "traveller", "spacetourer", "caddy", "touran", "combo life"}
+_UTILITAIRES = {"boxer", "master", "trafic", "jumper", "jumpy", "vito", "sprinter", "ducato", "scudo", "talento", "vivaro",
+                "movano", "nv200", "nv300", "nv400", "primastar", "interstar", "townstar", "citan", "combi", "transit",
+                "transit custom", "custom", "crafter", "transporter", "daily", "proace", "proace city", "expert", "doblo",
+                "fiorino", "nemo", "bipper", "berlingo van", "partner van", "kangoo express", "master iii", "e-transit"}
+_MOTS_CARROSSERIE = [
+    ("Monospace", re.compile(r"active tourer|gran tourer", re.I)),
+    ("Cabriolet", re.compile(r"\b(cabriolet|cabrio|roadster|spider|spyder|convertible|décapotable)\b", re.I)),
+    ("Coupé", re.compile(r"\b(coup[ée]|gran coup[ée]|fastback)\b", re.I)),
+    ("Break", re.compile(r"\b(sw|break|estate|touring|avant|sports? tourer|sportwagon|variant|combi|shooting brake|tourer|allroad|cross country)\b", re.I)),
+    ("Sportback", re.compile(r"\bsportback\b", re.I)),
+]
+
+
+def _type_de_base(modele: str) -> str:
+    m = modele.lower().strip()
+    if m in _SUV:
+        return "SUV / 4x4"
+    if m in _MONOSPACE:
+        return "Monospace"
+    return "Berline"
+
+
+def carrosserie_version(label: str, modele: str) -> str:
+    """Carrosserie d'une version d'après son nom (types Leboncoin : Berline, Break, Coupé, Cabriolet, SUV / 4x4, Monospace)."""
+    base = _type_de_base(modele)
+    for nom, rx in _MOTS_CARROSSERIE:
+        if rx.search(label):
+            if nom == "Sportback":
+                # Q3 Sportback = SUV coupé ; A3 / A5 Sportback = berline (comme sur Leboncoin)
+                return "Coupé" if base == "SUV / 4x4" else "Berline"
+            if nom == "Break" and base == "SUV / 4x4":
+                return base
+            return nom
+    return base
+
+
+def est_utilitaire(modele: str) -> bool:
+    return modele.lower().strip() in _UTILITAIRES
+
+
+def carrosseries(marque: str, modele: str, annee: int = 0) -> list:
+    """Carrosseries qui existent pour ce modèle (et cette année si donnée), la plus courante d'abord. Aucune pour un utilitaire."""
+    if est_utilitaire(modele):
+        return []
+    models = _find_brand(marque)
+    if not models:
+        return []
+    compte: dict = {}
+    for name, must in _models_with_filter(models, modele):
+        for v in models[name]:
+            if must and must not in _key(v["v"]):
+                continue
+            if annee and not (v["de"] - 1 <= annee <= v["a"] + 1):
+                continue
+            t = carrosserie_version(v["v"], name)
+            compte[t] = compte.get(t, 0) + max(v["n"], 1)
+    total = sum(compte.values()) or 1
+    # Une carrosserie vue sur moins de 2 % des annonces est une erreur de vendeur, sauf si c'est la seule
+    garde = [t for t, n in compte.items() if n / total >= 0.02 or len(compte) == 1]
+    return sorted(garde, key=lambda t: -compte[t])
 
 
 REVERSIONS_DEPLACEES = _reranger()

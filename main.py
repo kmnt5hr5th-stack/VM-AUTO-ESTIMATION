@@ -177,6 +177,13 @@ async def catalog_modeles(marque: str = ""):
     return {"modeles": vm_ab_catalog.list_modeles(marque)}
 
 
+@app.get("/catalog/carrosseries")
+@limiter.limit("60/minute")
+async def catalog_carrosseries(request: Request, marque: str = "", modele: str = "", annee: int = 0):
+    """Carrosseries existantes pour ce modèle (types Leboncoin), la plus courante d'abord ; vide pour un utilitaire."""
+    return {"carrosseries": vm_ab_catalog.carrosseries(marque, modele, annee)}
+
+
 @app.get("/catalog/carburants")
 @limiter.limit("60/minute")
 async def catalog_carburants(request: Request, marque: str = "", modele: str = "", annee: int = 0):
@@ -193,8 +200,8 @@ async def catalog_fiche(request: Request, marque: str = "", modele: str = ""):
 
 @app.get("/catalog/versions")
 @limiter.limit("10/minute")
-async def catalog_versions(request: Request, marque: str = "", modele: str = "", annee: int = 0, carburant: str = ""):
-    versions = _get_vm_catalog_versions(marque, modele, annee, carburant)
+async def catalog_versions(request: Request, marque: str = "", modele: str = "", annee: int = 0, carburant: str = "", carrosserie: str = ""):
+    versions = _get_vm_catalog_versions(marque, modele, annee, carburant, carrosserie)
     return {"versions": versions, "count": len(versions)}
 
 
@@ -916,13 +923,15 @@ def _lookup_versions_in_brand(brand_data: dict, m_norm: str, year_str: str, fuel
         versions.extend(year_entry.get(fuel_key, []))
     return versions
 
-def _get_vm_catalog_versions(brand: str, model: str, annee: int, carburant: str) -> list[str]:
+def _get_vm_catalog_versions(brand: str, model: str, annee: int, carburant: str, carrosserie: str = "") -> list[str]:
     """Versions du catalogue VM Auto Business ; l'ancien catalogue ne sert que si le véhicule y manque."""
     if not brand or not model or not annee:
         return []
-    versions = vm_ab_catalog.get_versions(brand, model, annee, carburant)
+    versions = vm_ab_catalog.get_versions(brand, model, annee, carburant, carrosserie)
     if versions:
         return versions
+    if carrosserie and vm_ab_catalog.get_versions(brand, model, annee, carburant):
+        return []  # le modèle existe mais pas dans cette carrosserie
     return _get_old_catalog_versions(brand, model, annee, carburant)
 
 
