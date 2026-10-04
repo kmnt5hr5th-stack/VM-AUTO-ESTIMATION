@@ -280,6 +280,17 @@ COTE_DEFAUTS = {"cible": 10, "minimum": 4, "fenetre_km": 10_000, "elargissement_
 COTE_OUI_NON = {"version_identique", "base_lbc", "droite_km", "version_stricte"}
 
 
+def _suv_coupe(marque: str, modele: str, version: str) -> bool:
+    """SUV coupé (GLC Coupé, GLE Coupé, Cayenne Coupé, Q3 / Q5 Sportback…) : Leboncoin lui donne la même cote que le SUV,
+    alors que les vendeurs l'affichent plus cher → sa cote se calcule sur les prix affichés, pas sur la cote Leboncoin."""
+    if not version:
+        return False
+    nom = vm_ab_catalog.nom_catalogue(marque, modele)
+    if nom.lower() in ("range rover evoque", "evoque"):
+        return False  # Evoque « Coupé » = 3 portes, pas plus cher
+    return vm_ab_catalog._type_de_base(nom) == "SUV / 4x4" and vm_ab_catalog.carrosserie_version(version, nom) == "Coupé"
+
+
 async def _cote_params() -> dict:
     reg = await _get_reglages()
     p = dict(COTE_DEFAUTS)
@@ -322,7 +333,8 @@ async def _run_estimation(req: EstimationRequest) -> dict:
             ident = await asyncio.wait_for(cote_voiture_identique(
                 marque_search, req.modele, req.annee, req.kilometrage, version=req.motorisation, boite=req.boite,
                 carburant=req.carburant, minimum=cote["minimum"], elargissement_pct=cote["elargissement_pct"],
-                base_lbc=bool(cote["base_lbc"]), droite_km=bool(cote["droite_km"]), stricte=bool(cote["version_stricte"])), timeout=60)
+                base_lbc=bool(cote["base_lbc"]) and not _suv_coupe(req.marque, req.modele, req.motorisation),
+                droite_km=bool(cote["droite_km"]), stricte=bool(cote["version_stricte"])), timeout=60)
         except Exception as e:
             logger.warning(f"[cote identique] erreur : {e}")
             ident = None
@@ -1439,7 +1451,8 @@ async def cote_annonce(req: CoteAnnonceRequest):
             ident = await asyncio.wait_for(cote_voiture_identique(
                 _resolve_brand(req.marque, req.modele, req.annee), req.modele, req.annee, req.kilometrage, version=req.version,
                 boite=req.boite, carburant=req.energie, minimum=MIN_COMPARABLES, elargissement_pct=cote["elargissement_pct"],
-                base_lbc=bool(cote["base_lbc"]), droite_km=bool(cote["droite_km"]), stricte=bool(cote["version_stricte"])), timeout=60)
+                base_lbc=bool(cote["base_lbc"]) and not _suv_coupe(req.marque, req.modele, req.version),
+                droite_km=bool(cote["droite_km"]), stricte=bool(cote["version_stricte"])), timeout=60)
         except Exception as e:
             logger.warning(f"[cote identique] erreur : {e}")
     # Cote identique trouvée : déjà calculée, répétée pour passer les contrôles de nombre d'annonces
