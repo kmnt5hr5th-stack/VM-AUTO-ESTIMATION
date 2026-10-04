@@ -81,6 +81,19 @@ def has_brand(marque: str) -> bool:
     return _find_brand(marque) is not None
 
 
+# Hybrides légers (48V) : la voiture roule à l'essence ou au gazole, et le vendeur la déclare souvent ainsi
+_MILD = re.compile(r"48\s?v|mhev|mild|eq\s?boost|shvs|smart\s?hybrid|\betsi\b|e-tsi|\bmht\b", re.I)
+_DIESEL = re.compile(r"\b(tdi|hdi|bluehdi|dci|crdi|cdi|tdci|multijet|jtd|jtdm|ecoblue|ddis|i-dtec|dtec|d4|d5|sd4|td4|ed4|bluetec)\b|\d{2,3}d\b|\bd\s?\d{3}\b|\bdiesel\b", re.I)
+
+
+def _fuel_ok(v: dict, fuel: str) -> bool:
+    if not fuel or v["c"] == fuel:
+        return True
+    if v["c"] == "hybride" and fuel in ("essence", "diesel") and _MILD.search(v["v"]):
+        return ("diesel" if _DIESEL.search(v["v"]) else "essence") == fuel
+    return False
+
+
 def get_versions(marque: str, modele: str, annee: int, carburant: str) -> list:
     """Versions du catalogue pour ce véhicule, les plus courantes en premier."""
     models = _find_brand(marque)
@@ -90,7 +103,7 @@ def get_versions(marque: str, modele: str, annee: int, carburant: str) -> list:
     found: dict = {}
     for name, must in _models_with_filter(models, modele):
         for v in models[name]:
-            if fuel and v["c"] != fuel:
+            if not _fuel_ok(v, fuel):
                 continue
             if must and must not in _key(v["v"]):
                 continue
