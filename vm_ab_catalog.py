@@ -86,6 +86,32 @@ _MILD = re.compile(r"48\s?v|mhev|mild|eq\s?boost|shvs|smart\s?hybrid|\betsi\b|e-
 _DIESEL = re.compile(r"\b(tdi|hdi|bluehdi|dci|crdi|cdi|tdci|multijet|jtd|jtdm|ecoblue|ddis|i-dtec|dtec|d4|d5|sd4|td4|ed4|bluetec)\b|\d{2,3}d\b|\bd\s?\d{3}\b|\bdiesel\b", re.I)
 
 
+# Même voiture vendue sous un autre nom (successeur direct, variante)
+_MEME_VOITURE = {
+    "c4 picasso": ["c4 spacetourer"], "grand c4 picasso": ["grand c4 spacetourer"], "expert": ["traveller"],
+    "grande punto": ["punto evo", "punto"], "c-max": ["grand c-max"], "sx4 s-cross": ["s-cross"], "ix1": ["x1"],
+}
+
+
+def _intrus(models: dict, name: str, label: str) -> bool:
+    """Version mal rangée par le vendeur Leboncoin : elle porte le nom d'un AUTRE modèle (« Classe C 300 e » sous GLC)."""
+    lab = label.lower()
+    propres = {name.lower(), name.lower().removeprefix("classe ")} | set(_MEME_VOITURE.get(name.lower(), []))
+    if any(lab.startswith(p + " ") for p in propres):
+        return False
+    # Le nom du modèle figure dans les premiers mots (« Transit Custom » sous Custom, « NP300 Navara » sous Navara)
+    debut = re.sub(r"[^a-z0-9 ]", "", lab).split()[:4]
+    if any(len(p) >= 3 and any(m.startswith(re.sub(r"[^a-z0-9]", "", p)) for m in debut) for p in propres):
+        return False
+    for autre in models:
+        if autre == name:
+            continue
+        for nom in {autre.lower(), autre.lower().removeprefix("classe ")}:
+            if len(nom) >= 2 and lab.startswith(nom + " ") and not any(p.startswith(nom) for p in propres):
+                return True
+    return False
+
+
 def _fuel_ok(v: dict, fuel: str) -> bool:
     if not fuel or v["c"] == fuel:
         return True
@@ -107,6 +133,8 @@ def get_versions(marque: str, modele: str, annee: int, carburant: str) -> list:
                 continue
             if must and must not in _key(v["v"]):
                 continue
+            if _intrus(models, name, v["v"]):
+                continue
             # Une voiture immatriculée en début d'année peut être du millésime précédent : 1 an de tolérance
             if v["de"] - 1 <= annee <= v["a"] + 1:
                 found[v["v"]] = max(found.get(v["v"], 0), v["n"])
@@ -123,6 +151,8 @@ def fiche_modele(marque: str, modele: str) -> list:
         for v in models[name]:
             if must and must not in _key(v["v"]):
                 continue
+            if _intrus(models, name, v["v"]):
+                continue
             e = found.setdefault(v["v"], {"version": v["v"], "carburant": v["c"], "de": v["de"], "a": v["a"], "annonces": 0})
             e["de"], e["a"] = min(e["de"], v["de"]), max(e["a"], v["a"])
             e["annonces"] += v["n"]
@@ -138,6 +168,8 @@ def carburants(marque: str, modele: str, annee: int = 0) -> list:
     for name, must in _models_with_filter(models, modele):
         for v in models[name]:
             if must and must not in _key(v["v"]):
+                continue
+            if _intrus(models, name, v["v"]):
                 continue
             if annee and not (v["de"] - 1 <= annee <= v["a"] + 1):
                 continue
