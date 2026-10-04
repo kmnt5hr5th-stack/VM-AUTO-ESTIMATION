@@ -1481,10 +1481,12 @@ async def cote_voiture_identique(marque, modele, annee, km, version=None, boite=
                 continue
         else:
             continue
-        valeur = _droite(points, km) if droite_km else statistics.median(y for _, y in points)
+        # Droite prix / km à partir de 4 voitures ; en dessous, la valeur du milieu (pas d'extrapolation hasardeuse)
+        avec_droite = droite_km and len(points) >= 4
+        valeur = _droite(points, km) if avec_droite else statistics.median(y for _, y in points)
         if not valeur or valeur <= 0:
             continue
-        ecarts = sorted(abs(y - (_droite(points, x) if droite_km else valeur)) for x, y in points)
+        ecarts = sorted(abs(y - (_droite(points, x) if avec_droite else valeur)) for x, y in points)
         dispersion = ecarts[len(ecarts) // 2] if ecarts else 0
         logger.info(f"[cote identique] {marque} {modele} {annee} {km} km « {version} » → {valeur:.0f} € "
                     f"({len(points)} annonces, {niveau}, {base})")

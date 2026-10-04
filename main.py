@@ -297,6 +297,8 @@ COTE_DEFAUTS = {"cible": 10, "minimum": 4, "fenetre_km": 10_000, "elargissement_
                 "version_identique": 1, "base_lbc": 1, "droite_km": 1,
                 # 1 = uniquement des voitures de la même version (jamais « même puissance » ni « toutes versions »)
                 "version_stricte": 1,
+                # voitures identiques minimum pour donner un prix (1 = une seule suffit, sur sa cote Leboncoin)
+                "minimum_identique": 1,
                 # 1 = la même version de l'année d'avant / d'après est acceptée quand l'année exacte manque
                 "annee_elargie": 1,
                 # 1 = SUV coupés (GLC Coupé, Cayenne Coupé, Q3 Sportback…) cotés sur les prix affichés
@@ -371,7 +373,7 @@ async def _run_estimation(req: EstimationRequest) -> dict:
         try:
             ident = await asyncio.wait_for(cote_voiture_identique(
                 marque_search, req.modele, req.annee, req.kilometrage, version=req.motorisation, boite=req.boite,
-                carburant=req.carburant, minimum=cote["minimum"], elargissement_pct=cote["elargissement_pct"],
+                carburant=req.carburant, minimum=cote["minimum_identique"], elargissement_pct=cote["elargissement_pct"],
                 base_lbc=bool(cote["base_lbc"]) and not (cote["suv_coupe_prix_affiches"] and _suv_coupe(req.marque, req.modele, req.motorisation)),
                 annee_elargie=bool(cote["annee_elargie"]),
                 droite_km=bool(cote["droite_km"]), stricte=bool(cote["version_stricte"])), timeout=60)
@@ -393,7 +395,7 @@ async def _run_estimation(req: EstimationRequest) -> dict:
                     "fourchette_basse": round(ident["basse"] / 100) * 100, "fourchette_haute": round(ident["haute"] / 100) * 100,
                 },
                 "estimation_rachat": {"prix_suggere": calc["prix_rachat"], "methode": calc["methode"]},
-                "sources": {"leboncoin": {"annonces": ident["n"], "methode": f"{ident['niveau']} · {ident['base']} · droite prix/km"}},
+                "sources": {"leboncoin": {"annonces": ident["n"], "methode": f"{ident['niveau']} · {ident['base']} · " + ("droite prix/km" if ident["n"] >= 4 else f"{ident['n']} voiture(s) identique(s)")}},
             }
 
         if cote["version_stricte"] and req.motorisation and req.motorisation.strip().lower() not in ("autre", "je ne sais pas"):
@@ -1508,7 +1510,7 @@ async def cote_annonce(req: CoteAnnonceRequest):
         try:
             ident = await asyncio.wait_for(cote_voiture_identique(
                 _resolve_brand(req.marque, req.modele, req.annee), req.modele, req.annee, req.kilometrage, version=req.version,
-                boite=req.boite, carburant=req.energie, minimum=MIN_COMPARABLES, elargissement_pct=cote["elargissement_pct"],
+                boite=req.boite, carburant=req.energie, minimum=cote["minimum_identique"], elargissement_pct=cote["elargissement_pct"],
                 base_lbc=bool(cote["base_lbc"]) and not (cote["suv_coupe_prix_affiches"] and _suv_coupe(req.marque, req.modele, req.version)),
                 annee_elargie=bool(cote["annee_elargie"]),
                 droite_km=bool(cote["droite_km"]), stricte=bool(cote["version_stricte"])), timeout=60)
