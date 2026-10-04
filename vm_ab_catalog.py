@@ -154,10 +154,14 @@ def _reranger() -> int:
     return deplacees
 
 
+# Réglages de l'app (rubrique Catalogue), mis à jour par main.py : seuil des erreurs de vendeur, hybrides légers
+REGLAGES = {"seuil": 0.02, "hybrides_legers": True}
+
+
 def _fuel_ok(v: dict, fuel: str) -> bool:
     if not fuel or v["c"] == fuel:
         return True
-    if v["c"] == "hybride" and fuel in ("essence", "diesel") and _MILD.search(v["v"]):
+    if REGLAGES["hybrides_legers"] and v["c"] == "hybride" and fuel in ("essence", "diesel") and _MILD.search(v["v"]):
         return ("diesel" if _DIESEL.search(v["v"]) else "essence") == fuel
     return False
 
@@ -215,12 +219,12 @@ def carburants(marque: str, modele: str, annee: int = 0) -> list:
                 continue
             n = max(v["n"], 1)
             compte[v["c"]] = compte.get(v["c"], 0) + n
-            if v["c"] == "hybride" and _MILD.search(v["v"]):
+            if REGLAGES["hybrides_legers"] and v["c"] == "hybride" and _MILD.search(v["v"]):
                 c = "diesel" if _DIESEL.search(v["v"]) else "essence"
                 compte[c] = compte.get(c, 0) + n
     total = sum(compte.values()) or 1
     ordre = ["essence", "diesel", "hybride", "hybride rechargeable", "electrique", "gpl"]
-    return [c for c in ordre if c in compte and (compte[c] / total >= 0.02 or len(compte) == 1)]
+    return [c for c in ordre if c in compte and (compte[c] / total >= REGLAGES["seuil"] or len(compte) == 1)]
 
 
 def stats() -> dict:
@@ -328,7 +332,7 @@ def carrosseries(marque: str, modele: str, annee: int = 0) -> list:
             compte[t] = compte.get(t, 0) + max(v["n"], 1)
     total = sum(compte.values()) or 1
     # Une carrosserie vue sur moins de 2 % des annonces est une erreur de vendeur, sauf si c'est la seule
-    garde = [t for t, n in compte.items() if n / total >= 0.02 or len(compte) == 1]
+    garde = [t for t, n in compte.items() if n / total >= REGLAGES["seuil"] or len(compte) == 1]
     return sorted(garde, key=lambda t: -compte[t])
 
 

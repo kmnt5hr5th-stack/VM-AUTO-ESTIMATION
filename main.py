@@ -192,6 +192,7 @@ async def catalog_modeles(request: Request, marque: str = ""):
 @app.get("/catalog/carrosseries")
 @limiter.limit("20/minute")
 async def catalog_carrosseries(request: Request, marque: str = "", modele: str = "", annee: int = 0):
+    await _maj_reglages_catalogue()
     """Carrosseries existantes pour ce modèle (types Leboncoin), la plus courante d'abord ; vide pour un utilitaire."""
     return {"carrosseries": vm_ab_catalog.carrosseries(marque, modele, annee)}
 
@@ -199,6 +200,7 @@ async def catalog_carrosseries(request: Request, marque: str = "", modele: str =
 @app.get("/catalog/carburants")
 @limiter.limit("20/minute")
 async def catalog_carburants(request: Request, marque: str = "", modele: str = "", annee: int = 0):
+    await _maj_reglages_catalogue()
     return {"carburants": vm_ab_catalog.carburants(marque, modele, annee)}
 
 
@@ -217,6 +219,7 @@ async def catalog_fiche(request: Request, marque: str = "", modele: str = ""):
 @app.get("/catalog/versions")
 @limiter.limit("10/minute")
 async def catalog_versions(request: Request, marque: str = "", modele: str = "", annee: int = 0, carburant: str = "", carrosserie: str = ""):
+    await _maj_reglages_catalogue()
     versions = _get_vm_catalog_versions(marque, modele, annee, carburant, carrosserie)
     return {"versions": versions, "count": len(versions)}
 
@@ -251,6 +254,7 @@ async def _get_reglages() -> dict:
                 _reglages_time = time.time()
     except Exception as e:
         logger.warning(f"[reglages] lecture impossible : {e}")
+        _reglages_time = time.time()  # pas de nouvel essai avant 60 s (les listes du site restent rapides)
     return _reglages_cache
 
 
@@ -292,8 +296,27 @@ COTE_DEFAUTS = {"cible": 10, "minimum": 4, "fenetre_km": 10_000, "elargissement_
                 # Méthode « voiture identique » : même version / boîte / année, cotes Leboncoin, droite prix-km (1 = oui, 0 = non)
                 "version_identique": 1, "base_lbc": 1, "droite_km": 1,
                 # 1 = uniquement des voitures de la même version (jamais « même puissance » ni « toutes versions »)
-                "version_stricte": 1}
-COTE_OUI_NON = {"version_identique", "base_lbc", "droite_km", "version_stricte"}
+                "version_stricte": 1,
+                # 1 = la même version de l'année d'avant / d'après est acceptée quand l'année exacte manque
+                "annee_elargie": 1,
+                # 1 = SUV coupés (GLC Coupé, Cayenne Coupé, Q3 Sportback…) cotés sur les prix affichés
+                "suv_coupe_prix_affiches": 1}
+COTE_OUI_NON = {"version_identique", "base_lbc", "droite_km", "version_stricte", "annee_elargie", "suv_coupe_prix_affiches"}
+CATALOGUE_DEFAUTS = {"seuil_pct": 2, "hybrides_legers_essence": 1}
+
+
+async def _maj_reglages_catalogue() -> None:
+    """Applique au catalogue les réglages de l'app (rubrique Catalogue)."""
+    reg = await _get_reglages()
+    try:
+        seuil = float(reg.get("catalogue.seuil_pct", CATALOGUE_DEFAUTS["seuil_pct"]))
+    except (TypeError, ValueError):
+        seuil = CATALOGUE_DEFAUTS["seuil_pct"]
+    try:
+        legers = float(reg.get("catalogue.hybrides_legers_essence", 1)) >= 1
+    except (TypeError, ValueError):
+        legers = True
+    vm_ab_catalog.REGLAGES.update(seuil=max(0.0, min(20.0, seuil)) / 100, hybrides_legers=legers)
 
 
 def _suv_coupe(marque: str, modele: str, version: str) -> bool:
@@ -349,7 +372,8 @@ async def _run_estimation(req: EstimationRequest) -> dict:
             ident = await asyncio.wait_for(cote_voiture_identique(
                 marque_search, req.modele, req.annee, req.kilometrage, version=req.motorisation, boite=req.boite,
                 carburant=req.carburant, minimum=cote["minimum"], elargissement_pct=cote["elargissement_pct"],
-                base_lbc=bool(cote["base_lbc"]) and not _suv_coupe(req.marque, req.modele, req.motorisation),
+                base_lbc=bool(cote["base_lbc"]) and not (cote["suv_coupe_prix_affiches"] and _suv_coupe(req.marque, req.modele, req.motorisation)),
+                annee_elargie=bool(cote["annee_elargie"]),
                 droite_km=bool(cote["droite_km"]), stricte=bool(cote["version_stricte"])), timeout=60)
         except Exception as e:
             logger.warning(f"[cote identique] erreur : {e}")
@@ -1467,7 +1491,8 @@ async def cote_annonce(req: CoteAnnonceRequest):
             ident = await asyncio.wait_for(cote_voiture_identique(
                 _resolve_brand(req.marque, req.modele, req.annee), req.modele, req.annee, req.kilometrage, version=req.version,
                 boite=req.boite, carburant=req.energie, minimum=MIN_COMPARABLES, elargissement_pct=cote["elargissement_pct"],
-                base_lbc=bool(cote["base_lbc"]) and not _suv_coupe(req.marque, req.modele, req.version),
+                base_lbc=bool(cote["base_lbc"]) and not (cote["suv_coupe_prix_affiches"] and _suv_coupe(req.marque, req.modele, req.version)),
+                annee_elargie=bool(cote["annee_elargie"]),
                 droite_km=bool(cote["droite_km"]), stricte=bool(cote["version_stricte"])), timeout=60)
         except Exception as e:
             logger.warning(f"[cote identique] erreur : {e}")

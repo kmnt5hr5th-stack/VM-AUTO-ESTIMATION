@@ -1450,7 +1450,8 @@ async def _annonces_structurees(marque, modele, annee, carburant, km, km_margin,
 
 
 async def cote_voiture_identique(marque, modele, annee, km, version=None, boite=None, carburant=None,
-                                 minimum=4, elargissement_pct=40, base_lbc=True, droite_km=True, stricte=False) -> Optional[dict]:
+                                 minimum=4, elargissement_pct=40, base_lbc=True, droite_km=True, stricte=False,
+                                 annee_elargie=True) -> Optional[dict]:
     """Cote d'une voiture précise. Renvoie {valeur, n, niveau, base, basse, haute} ou None (pas assez d'annonces)."""
     km = km or 100_000
     v, b, cv = _norm_version(version), _boite_cle(boite), _cv_version(version)
@@ -1463,7 +1464,8 @@ async def cote_voiture_identique(marque, modele, annee, km, version=None, boite=
     niveaux = []
     if v:
         niveaux.append(("version identique", lambda d: _norm_version(d["version"]) == v and meme_boite(d) and d["an"] == annee))
-        niveaux.append(("version identique, année ±1", lambda d: _norm_version(d["version"]) == v and meme_boite(d) and d["an"] is not None and abs(d["an"] - annee) <= 1))
+        if annee_elargie:
+            niveaux.append(("version identique, année ±1", lambda d: _norm_version(d["version"]) == v and meme_boite(d) and d["an"] is not None and abs(d["an"] - annee) <= 1))
     if cv and not stricte:  # stricte : jamais une autre version, même de puissance égale
         niveaux.append(("même puissance", lambda d: _cv_version(d["version"]) == cv and meme_boite(d) and d["an"] == annee))
     for niveau, garder in niveaux:
