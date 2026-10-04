@@ -274,8 +274,10 @@ async def _site_offer(prices: list[int], marque: str, modele: str, annee: Option
 # Bonnes affaires : au-delà de ±`ecart_max_lbc` % de la cote Leboncoin de l'annonce, la cote est suspecte.
 COTE_DEFAUTS = {"cible": 10, "minimum": 4, "fenetre_km": 10_000, "elargissement_pct": 40, "ecart_max_lbc": 25,
                 # Méthode « voiture identique » : même version / boîte / année, cotes Leboncoin, droite prix-km (1 = oui, 0 = non)
-                "version_identique": 1, "base_lbc": 1, "droite_km": 1}
-COTE_OUI_NON = {"version_identique", "base_lbc", "droite_km"}
+                "version_identique": 1, "base_lbc": 1, "droite_km": 1,
+                # 1 = uniquement des voitures de la même version (jamais « même puissance » ni « toutes versions »)
+                "version_stricte": 1}
+COTE_OUI_NON = {"version_identique", "base_lbc", "droite_km", "version_stricte"}
 
 
 async def _cote_params() -> dict:
@@ -320,7 +322,7 @@ async def _run_estimation(req: EstimationRequest) -> dict:
             ident = await asyncio.wait_for(cote_voiture_identique(
                 marque_search, req.modele, req.annee, req.kilometrage, version=req.motorisation, boite=req.boite,
                 carburant=req.carburant, minimum=cote["minimum"], elargissement_pct=cote["elargissement_pct"],
-                base_lbc=bool(cote["base_lbc"]), droite_km=bool(cote["droite_km"])), timeout=60)
+                base_lbc=bool(cote["base_lbc"]), droite_km=bool(cote["droite_km"]), stricte=bool(cote["version_stricte"])), timeout=60)
         except Exception as e:
             logger.warning(f"[cote identique] erreur : {e}")
             ident = None
@@ -341,6 +343,10 @@ async def _run_estimation(req: EstimationRequest) -> dict:
                 "estimation_rachat": {"prix_suggere": calc["prix_rachat"], "methode": calc["methode"]},
                 "sources": {"leboncoin": {"annonces": ident["n"], "methode": f"{ident['niveau']} · {ident['base']} · droite prix/km"}},
             }
+
+        if cote["version_stricte"] and req.motorisation and req.motorisation.strip().lower() not in ("autre", "je ne sais pas"):
+            # Réglage « uniquement la même version » : pas de repli sur d'autres versions
+            raise HTTPException(status_code=404, detail="Pas assez de voitures de la même version : estimation à confirmer par téléphone.")
 
     # 2. Sinon : annonces proches en kilométrage (méthode précédente)
     try:
@@ -1433,11 +1439,13 @@ async def cote_annonce(req: CoteAnnonceRequest):
             ident = await asyncio.wait_for(cote_voiture_identique(
                 _resolve_brand(req.marque, req.modele, req.annee), req.modele, req.annee, req.kilometrage, version=req.version,
                 boite=req.boite, carburant=req.energie, minimum=MIN_COMPARABLES, elargissement_pct=cote["elargissement_pct"],
-                base_lbc=bool(cote["base_lbc"]), droite_km=bool(cote["droite_km"])), timeout=60)
+                base_lbc=bool(cote["base_lbc"]), droite_km=bool(cote["droite_km"]), stricte=bool(cote["version_stricte"])), timeout=60)
         except Exception as e:
             logger.warning(f"[cote identique] erreur : {e}")
     # Cote identique trouvée : déjà calculée, répétée pour passer les contrôles de nombre d'annonces
     prices = [ident["valeur"]] * MIN_COMPARABLES if ident else []
+    if not prices and cote["version_stricte"] and req.version and cote["version_identique"]:
+        raise HTTPException(status_code=404, detail="Pas assez de voitures de la même version pour une cote fiable")
     if not prices:
         prices = await _estimate_market_lbc(**args, carburant=req.energie, boite=req.boite, timeout=55, motorisation=req.version)
     if len(prices) < MIN_COMPARABLES and req.version:
