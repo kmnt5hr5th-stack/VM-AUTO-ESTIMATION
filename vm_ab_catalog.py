@@ -18,7 +18,7 @@ except FileNotFoundError:
     _CATALOG = {}
 
 _FUELS = {
-    "essence": "essence", "diesel": "diesel", "hybride": "hybride", "hybride rechargeable": "hybride",
+    "essence": "essence", "diesel": "diesel", "hybride": "hybride", "hybride rechargeable": "hybride rechargeable",
     "électrique": "electrique", "electrique": "electrique", "gpl": "gpl", "gnv": "gpl",
 }
 _BRAND_ALIASES = {"mercedesbenz": "mercedes", "mgmotor": "mg"}
@@ -95,7 +95,7 @@ def has_brand(marque: str) -> bool:
 
 
 # Hybrides légers (48V) : la voiture roule à l'essence ou au gazole, et le vendeur la déclare souvent ainsi
-_MILD = re.compile(r"48\s?v|mhev|mild|eq\s?boost|shvs|smart\s?hybrid|\betsi\b|e-tsi|\bmht\b", re.I)
+_MILD = re.compile(r"48\s?v|mhev|mild|eq\s?boost|shvs|smart\s?hybrid|\betsi\b|e-tsi|\bmht\b|\bb[3-6]\b", re.I)  # B3-B6 : Volvo hybride léger
 _DIESEL = re.compile(r"\b(tdi|hdi|bluehdi|dci|crdi|cdi|tdci|multijet|jtd|jtdm|ecoblue|ddis|i-dtec|dtec|d4|d5|sd4|td4|ed4|bluetec)\b|\d{2,3}d\b|\bd\s?\d{3}\b|\bdiesel\b", re.I)
 
 
@@ -201,22 +201,26 @@ def fiche_modele(marque: str, modele: str) -> list:
 
 
 def carburants(marque: str, modele: str, annee: int = 0) -> list:
-    """Carburants existants pour ce modèle (et cette année si donnée) ; un hybride léger compte aussi en essence / diesel."""
+    """Carburants existants pour ce modèle (et cette année si donnée) ; un hybride léger compte aussi en essence / diesel.
+    Un carburant vu sur moins de 2 % des annonces (erreur de vendeur) n'est pas proposé."""
     models = _find_brand(marque)
     if not models:
         return []
-    vus = set()
+    compte: dict = {}
     for name, must in _models_with_filter(models, modele):
         for v in models[name]:
             if must and must not in _key(v["v"]):
                 continue
             if annee and not (v["de"] - 1 <= annee <= v["a"] + 1):
                 continue
-            vus.add(v["c"])
+            n = max(v["n"], 1)
+            compte[v["c"]] = compte.get(v["c"], 0) + n
             if v["c"] == "hybride" and _MILD.search(v["v"]):
-                vus.add("diesel" if _DIESEL.search(v["v"]) else "essence")
-    ordre = ["essence", "diesel", "hybride", "electrique", "gpl"]
-    return [c for c in ordre if c in vus]
+                c = "diesel" if _DIESEL.search(v["v"]) else "essence"
+                compte[c] = compte.get(c, 0) + n
+    total = sum(compte.values()) or 1
+    ordre = ["essence", "diesel", "hybride", "hybride rechargeable", "electrique", "gpl"]
+    return [c for c in ordre if c in compte and (compte[c] / total >= 0.02 or len(compte) == 1)]
 
 
 def stats() -> dict:
@@ -328,4 +332,42 @@ def carrosseries(marque: str, modele: str, annee: int = 0) -> list:
     return sorted(garde, key=lambda t: -compte[t])
 
 
+
+# ── Hybride simple / rechargeable / électrique (le catalogue Leboncoin les avait rangés ensemble en « hybride ») ──
+_ELEC_MODELES = {
+    "e-golf", "ev3", "ev4", "ev5", "ev6", "ev9", "enyaq", "elroq", "c40", "ex30", "ex40", "ex60", "ex90", "ec40", "es90", "taycan",
+    "ami", "my ami", "rz", "bz4x", "capri", "mustang mach-e", "zoe", "spring", "4", "5", "megane e-tech", "scenic e-tech", "id.3",
+    "id.4", "id.5", "id.7", "id. buzz", "e-up!", "leaf", "ariya", "model 3", "model s", "model x", "model y", "e-tron gt", "q8 e-tron",
+    "eqa", "eqb", "eqc", "eqe", "eqs", "eqv", "classe eqa", "classe eqb", "ix", "ix1", "ix2", "ix3", "i3", "i4", "i5", "i7", "ioniq 5",
+    "ioniq 6", "ioniq 9", "inster", "e-208", "e-2008", "e-308", "e-3008", "e-5008", "ë-c3", "ë-c4", "e-c4", "ë-c4 x", "mii", "born",
+    "e-niro", "polestar 2", "atto 3", "dolphin", "seal", "mg4", "marvel r", "twingo e-tech", "500e", "corsa-e", "mokka-e", "tavascan",
+    "#1", "#3", "fortwo", "forfour",
+}
+_ELEC = re.compile(r"[ée]lectri|\d+ ?kwh\b|\bkwh\b|\bev\b|\be-?golf\b|standard range|long range|extended range|autonomie", re.I)
+_PHEV = re.compile(r"rechargeable|plug-?in|\bphev\b|e:phev|e-?hybrid\b|hybrid ?4|\bgte\b|\b4xe\b|\bp\d{3}e\b|\btfsi ?e\b|\btsi ?e\b|"
+                   r"\bt[5-8]\b.*(recharge|awd|twin)|\brecharge\b.*\bt[5-8]\b|twin engine|\b\d{3} ?d?e\b|\b(x?drive)?\d{2,3}x?ea?\b|"
+                   r"\b450h\+|e-?tense|eq ?power|\bse all4\b|hybrid (180|186|195|200|210|225|230|300|360)(ch)?\b|"
+                   r"e-tech (plug|rechargeable|phev)|\biv\b", re.I)
+
+
+def _reclasser_hybrides() -> None:
+    for models in _CATALOG.values():
+        for name, vs in models.items():
+            for v in vs:
+                # Modèle 100 % électrique déclaré « essence » / « diesel » par le vendeur
+                if v["c"] in ("essence", "diesel") and name.lower() in _ELEC_MODELES and not _PHEV.search(v["v"]) \
+                        and not re.search(r"\b(tce|tsi|tfsi|hdi|dci|tdi|puretech|vti|thp|gdi|t-gdi|crdi|cdi)\b", v["v"], re.I):
+                    v["c"] = "electrique"
+                    continue
+                if v["c"] != "hybride" or _MILD.search(v["v"]):
+                    continue
+                # « 105ch + électrique 43.5ch » = hybride (moteur thermique + électrique), pas une électrique
+                electrique = _ELEC.search(v["v"]) and not re.search(r"\+\s*[ée]lectri|hybrid|\bgdi\b|\btsi\b|\bvvt", v["v"], re.I)
+                if electrique or (name.lower() in _ELEC_MODELES and not _PHEV.search(v["v"])):
+                    v["c"] = "electrique"
+                elif _PHEV.search(v["v"]):
+                    v["c"] = "hybride rechargeable"
+
+
 REVERSIONS_DEPLACEES = _reranger()
+_reclasser_hybrides()
