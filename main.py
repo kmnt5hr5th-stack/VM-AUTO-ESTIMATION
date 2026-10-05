@@ -445,7 +445,7 @@ async def _run_estimation(req: EstimationRequest) -> dict:
                     "fourchette_basse": round(ident["basse"] / 100) * 100, "fourchette_haute": round(ident["haute"] / 100) * 100,
                 },
                 "estimation_rachat": {"prix_suggere": calc["prix_rachat"], "methode": calc["methode"]},
-                "sources": {"leboncoin": {"annonces": ident["n"], "methode": f"{ident['niveau']} · {ident['base']} · " + ("droite prix/km" if ident["n"] >= 4 else f"{ident['n']} voiture(s) identique(s)")}},
+                "sources": {"leboncoin": {"annonces": ident["n"], "methode": f"{ident['niveau']} · {ident['base']} · " + (f"{ident['n']} voiture(s) identique(s)" if ident["n"] < 4 or "ajusté" in ident["niveau"] else "droite prix/km")}},
             }
 
         if cote["version_stricte"] and req.motorisation and req.motorisation.strip().lower() not in ("autre", "je ne sais pas"):
