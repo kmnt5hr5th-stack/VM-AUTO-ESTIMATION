@@ -119,7 +119,12 @@ TRAVAUX_M2 = 900          # rénovation complète moyenne (€/m²)
 AMENAGEMENT_CHAMBRE = 4000  # meubles + petits travaux par chambre en colocation
 
 
+REGIONS = {"idf": "12", "ile-de-france": "12", "île-de-france": "12"}
+
+
 def _lieu(ville: str, code_postal: str, departement: str) -> dict:
+    if departement.lower() in REGIONS:
+        return {"locations": [{"locationType": "region", "region_id": REGIONS[departement.lower()]}]}
     if departement:
         return {"locations": [{"locationType": "department", "department_id": departement}]}
     l = {"locationType": "city", "city": ville}
@@ -187,7 +192,7 @@ async def chasser(strategie: str, ville: str = "", code_postal: str = "", depart
     if strategie == "colocation":
         base["ranges"]["bedrooms"] = {"min": chambres_min or 4}
     requetes = [{**base, "keywords": {"text": m, "type": "all"}} for m in s["mots"]] or [base]
-    reponses = await asyncio.gather(*[_requete({"filters": f, "limit": 60, "sort_by": "time", "sort_order": "desc"}) for f in requetes])
+    reponses = await asyncio.gather(*[_requete({"filters": f, "limit": 100, "sort_by": "time", "sort_order": "desc"}) for f in requetes])
     biens, vus = [], set()
     for d in reponses:
         for a in (d or {}).get("ads", []):
@@ -204,11 +209,11 @@ async def chasser(strategie: str, ville: str = "", code_postal: str = "", depart
             if strategie == "immeuble" and not ("immeuble" in titre or x["type"] == "Autre"):
                 continue
             vus.add(x["id"]); biens.append(x)
-    # Références de marché pour les villes les plus représentées (6 au plus, pour rester rapide)
+    # Références de marché pour les villes les plus représentées (20 au plus, pour rester rapide)
     villes = {}
     for b in biens:
         villes.setdefault((b["ville"], b["code_postal"]), []).append(b)
-    principales = sorted(villes, key=lambda k: -len(villes[k]))[:6]
+    principales = sorted(villes, key=lambda k: -len(villes[k]))[:20]
     refs = dict(zip(principales, await asyncio.gather(*[_references(v or "", cp or "") for v, cp in principales])))
     notes = [_noter(b, refs[(b["ville"], b["code_postal"])], strategie) for b in biens if (b["ville"], b["code_postal"]) in refs]
     notes.sort(key=lambda b: -b["note"])
