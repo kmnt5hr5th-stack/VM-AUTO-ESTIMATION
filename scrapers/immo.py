@@ -152,6 +152,7 @@ async def _references(ville: str, code_postal: str) -> dict:
         "prix_m2": statistics.median(m2) if len(m2) >= 5 else None,
         "loyer_m2": (loc or {}).get("loyer_m2"),
         "loyer_chambre": statistics.median(loyers_ch) if len(loyers_ch) >= 4 else None,
+        "nb_chambres_louer": len(loyers_ch),
     }
 
 
@@ -176,6 +177,9 @@ def _noter(b: dict, ref: dict, strategie: str) -> dict:
     if decote:
         note += min(30, max(0, decote))
     verdict = "hyper intéressant" if note >= 70 else "intéressant" if note >= 50 else "à étudier" if note >= 35 else "moyen"
+    # Prix anormalement bas (plus de 60 % sous la ville) : part de bien, cave, erreur d'annonce… → à vérifier, pas une affaire
+    if decote is not None and decote > 60:
+        note, verdict = min(note, 40), "à vérifier (prix anormalement bas)"
     return {**b, "chambres": chambres or None, "travaux_estimes": round(travaux) or None,
             "loyer_estime": round(loyer) if loyer else None, "rentabilite_brute": round(rendement, 1) if rendement else None,
             "decote_vs_ville": round(decote) if decote is not None else None, "note": round(note), "verdict": verdict}
@@ -216,6 +220,19 @@ async def chasser(strategie: str, ville: str = "", code_postal: str = "", depart
     principales = sorted(villes, key=lambda k: -len(villes[k]))[:20]
     refs = dict(zip(principales, await asyncio.gather(*[_references(v or "", cp or "") for v, cp in principales])))
     notes = [_noter(b, refs[(b["ville"], b["code_postal"])], strategie) for b in biens if (b["ville"], b["code_postal"]) in refs]
+    # Colocation : la ville doit s'y prêter (étudiants, écoles, transports, demande) → note finale pondérée
+    if strategie == "colocation" and notes:
+        from scrapers import ville as villes_mod
+        cles = list(refs)
+        analyses = dict(zip(cles, await asyncio.gather(*[
+            villes_mod.analyser(v or "", cp or "", refs[(v, cp)].get("loyer_chambre"), refs[(v, cp)].get("nb_chambres_louer", 0))
+            for v, cp in cles])))
+        for b in notes:
+            a = analyses.get((b["ville"], b["code_postal"])) or {}
+            if "note_colocation" in a:
+                b["ville_colocation"] = {"note": a["note_colocation"], "avis": a["avis"], **a["detail"]}
+                b["note"] = round(0.6 * b["note"] + 0.4 * a["note_colocation"])
+                b["verdict"] = "hyper intéressant" if b["note"] >= 70 else "intéressant" if b["note"] >= 50 else "à étudier" if b["note"] >= 35 else "moyen"
     notes.sort(key=lambda b: -b["note"])
     return {"strategie": strategie, "biens_analyses": len(notes), "total_trouves": len(biens),
             "references": {f"{v} {cp or ''}".strip(): r for (v, cp), r in refs.items()}, "meilleurs": notes[:limite]}

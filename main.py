@@ -218,6 +218,17 @@ async def immo_chasse(request: Request, strategie: str = "travaux", ville: str =
     return await immo.chasser(strategie, ville, code_postal, departement, prix_max, chambres_min, limite)
 
 
+@app.get("/immo/ville")
+@limiter.limit("20/minute")
+async def immo_ville(request: Request, ville: str, code_postal: str = ""):
+    """La ville se prête-t-elle à la colocation ? (étudiants, écoles, transports, demande locative). Réservé à l'app."""
+    if not _cle_ok(request):
+        raise HTTPException(status_code=403, detail="Accès réservé")
+    from scrapers import immo, ville as villes_mod
+    ref = await immo._references(ville, code_postal)
+    return await villes_mod.analyser(ville, code_postal, ref.get("loyer_chambre"), ref.get("nb_chambres_louer", 0))
+
+
 @app.get("/immo/loyer")
 @limiter.limit("20/minute")
 async def immo_loyer(request: Request, ville: str, code_postal: str = "", type_bien: str = "appartement", surface: int = 0):
