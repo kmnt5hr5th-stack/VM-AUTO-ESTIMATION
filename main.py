@@ -205,6 +205,19 @@ async def immo_recherche(request: Request, ville: str, code_postal: str = "", ty
     return await immo.rechercher(ville, code_postal, type_bien, prix_max, surface_min, pieces_min, limite)
 
 
+@app.get("/immo/chasse")
+@limiter.limit("10/minute")
+async def immo_chasse(request: Request, strategie: str = "travaux", ville: str = "", code_postal: str = "", departement: str = "",
+                      prix_max: int = 0, chambres_min: int = 0, limite: int = 12):
+    """Biens à rénover, immeubles de rapport ou biens pour la colocation, comparés au marché de leur ville et notés. Réservé à l'app."""
+    if not _cle_ok(request):
+        raise HTTPException(status_code=403, detail="Accès réservé")
+    if not ville and not departement:
+        raise HTTPException(status_code=400, detail="ville ou departement requis")
+    from scrapers import immo
+    return await immo.chasser(strategie, ville, code_postal, departement, prix_max, chambres_min, limite)
+
+
 @app.get("/immo/loyer")
 @limiter.limit("20/minute")
 async def immo_loyer(request: Request, ville: str, code_postal: str = "", type_bien: str = "appartement", surface: int = 0):

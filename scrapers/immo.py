@@ -107,3 +107,110 @@ async def loyer_m2(ville: str, code_postal: str = "", type_bien: str = "appartem
         return {"loyer_m2": None, "nb_annonces": len(valeurs)}
     return {"loyer_m2": round(statistics.median(valeurs), 1), "nb_annonces": len(valeurs),
             "fourchette": [round(sorted(valeurs)[len(valeurs) // 4], 1), round(sorted(valeurs)[3 * len(valeurs) // 4], 1)]}
+
+
+# ── Chasse aux bonnes affaires : travaux, immeubles de rapport, colocation ─────────────────────────────
+STRATEGIES = {
+    "travaux": {"mots": ["travaux", "à rénover", "a renover", "à rafraîchir", "rénovation"], "type": ""},
+    "immeuble": {"mots": ["immeuble de rapport", "immeuble"], "type": ""},
+    "colocation": {"mots": [], "type": ""},
+}
+TRAVAUX_M2 = 900          # rénovation complète moyenne (€/m²)
+AMENAGEMENT_CHAMBRE = 4000  # meubles + petits travaux par chambre en colocation
+
+
+def _lieu(ville: str, code_postal: str, departement: str) -> dict:
+    if departement:
+        return {"locations": [{"locationType": "department", "department_id": departement}]}
+    l = {"locationType": "city", "city": ville}
+    if code_postal:
+        l["zipcode"] = code_postal
+    return {"locations": [l]}
+
+
+async def _references(ville: str, code_postal: str) -> dict:
+    """Prix de vente médian au m², loyer médian au m² et loyer d'une chambre dans la ville."""
+    vente, loc, chambre = await asyncio.gather(
+        _requete({"filters": {"category": {"id": "9"}, "enums": {"ad_type": ["offer"]}, "location": _lieu(ville, code_postal, "")}, "limit": 100}),
+        loyer_m2(ville, code_postal, ""),
+        _requete({"filters": {"category": {"id": "10"}, "enums": {"ad_type": ["offer"]}, "ranges": {"square": {"min": 9, "max": 25}},
+                              "location": _lieu(ville, code_postal, "")}, "limit": 100}),
+    )
+    m2 = []
+    for a in (vente or {}).get("ads", []):
+        x = _annonce(a)
+        if x["prix_m2"] and 500 <= x["prix_m2"] <= 15000 and x["type"] in ("Appartement", "Maison"):
+            m2.append(x["prix_m2"])
+    loyers_ch = [(_annonce(a)["prix"] or 0) for a in (chambre or {}).get("ads", [])]
+    loyers_ch = [p for p in loyers_ch if 250 <= p <= 1100]
+    return {
+        "prix_m2": statistics.median(m2) if len(m2) >= 5 else None,
+        "loyer_m2": (loc or {}).get("loyer_m2"),
+        "loyer_chambre": statistics.median(loyers_ch) if len(loyers_ch) >= 4 else None,
+    }
+
+
+def _noter(b: dict, ref: dict, strategie: str) -> dict:
+    prix, surface = b["prix"] or 0, b["surface"] or 0
+    chambres = int(b.get("chambres") or max(0, (b["pieces"] or 1) - 1))
+    travaux = surface * TRAVAUX_M2 if strategie == "travaux" else (surface * 300 if strategie == "immeuble" else 0)
+    decote = (1 - b["prix_m2"] / ref["prix_m2"]) * 100 if b.get("prix_m2") and ref.get("prix_m2") else None
+    if strategie == "colocation" and ref.get("loyer_chambre") and chambres >= 2:
+        loyer = ref["loyer_chambre"] * chambres
+        cout = prix * 1.08 + chambres * AMENAGEMENT_CHAMBRE
+    elif ref.get("loyer_m2") and surface:
+        loyer = ref["loyer_m2"] * surface * (0.9 if strategie == "immeuble" else 1)
+        cout = prix * 1.08 + travaux
+    else:
+        loyer, cout = None, prix * 1.08 + travaux
+    rendement = loyer * 12 / cout * 100 if loyer and cout else None
+    # Note sur 100 : rentabilité d'abord, décote sur le marché ensuite (affaire à travaux)
+    note = 0
+    if rendement:
+        note += min(70, max(0, (rendement - 4) * 10))
+    if decote:
+        note += min(30, max(0, decote))
+    verdict = "hyper intéressant" if note >= 70 else "intéressant" if note >= 50 else "à étudier" if note >= 35 else "moyen"
+    return {**b, "chambres": chambres or None, "travaux_estimes": round(travaux) or None,
+            "loyer_estime": round(loyer) if loyer else None, "rentabilite_brute": round(rendement, 1) if rendement else None,
+            "decote_vs_ville": round(decote) if decote is not None else None, "note": round(note), "verdict": verdict}
+
+
+async def chasser(strategie: str, ville: str = "", code_postal: str = "", departement: str = "", prix_max: int = 0,
+                  chambres_min: int = 0, limite: int = 12) -> dict:
+    """Cherche les biens d'une stratégie dans une ville ou un département, les compare au marché de leur ville
+    et renvoie les mieux notés."""
+    s = STRATEGIES.get(strategie, STRATEGIES["travaux"])
+    base = {"category": {"id": "9"}, "enums": {"ad_type": ["offer"]}, "ranges": {}, "location": _lieu(ville, code_postal, departement)}
+    if prix_max:
+        base["ranges"]["price"] = {"max": prix_max}
+    if strategie == "colocation":
+        base["ranges"]["bedrooms"] = {"min": chambres_min or 4}
+    requetes = [{**base, "keywords": {"text": m, "type": "all"}} for m in s["mots"]] or [base]
+    reponses = await asyncio.gather(*[_requete({"filters": f, "limit": 60, "sort_by": "time", "sort_order": "desc"}) for f in requetes])
+    biens, vus = [], set()
+    for d in reponses:
+        for a in (d or {}).get("ads", []):
+            x = _annonce(a)
+            brut = {k.get("key"): k.get("value") for k in a.get("attributes", [])}
+            x["chambres"] = _nombre(brut.get("bedrooms"))
+            if x["id"] in vus or not x["prix"] or not x["surface"] or x["prix"] < 20000:
+                continue
+            titre = (x["titre"] or "").lower()
+            # Viager / nue-propriété : le prix affiché n'est pas le vrai coût → rentabilité faussée
+            if any(m in titre for m in ("viager", "nue-propri", "nue propri", "usufruit", "parking", "garage", "terrain")):
+                continue
+            # Immeuble de rapport : un immeuble entier, pas un appartement « dans un immeuble »
+            if strategie == "immeuble" and not ("immeuble" in titre or x["type"] == "Autre"):
+                continue
+            vus.add(x["id"]); biens.append(x)
+    # Références de marché pour les villes les plus représentées (6 au plus, pour rester rapide)
+    villes = {}
+    for b in biens:
+        villes.setdefault((b["ville"], b["code_postal"]), []).append(b)
+    principales = sorted(villes, key=lambda k: -len(villes[k]))[:6]
+    refs = dict(zip(principales, await asyncio.gather(*[_references(v or "", cp or "") for v, cp in principales])))
+    notes = [_noter(b, refs[(b["ville"], b["code_postal"])], strategie) for b in biens if (b["ville"], b["code_postal"]) in refs]
+    notes.sort(key=lambda b: -b["note"])
+    return {"strategie": strategie, "biens_analyses": len(notes), "total_trouves": len(biens),
+            "references": {f"{v} {cp or ''}".strip(): r for (v, cp), r in refs.items()}, "meilleurs": notes[:limite]}
