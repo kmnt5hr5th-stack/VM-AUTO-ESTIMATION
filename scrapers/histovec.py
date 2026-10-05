@@ -20,6 +20,26 @@ _HISTOVEC_LOGIN = "histovec_frontend"
 _HISTOVEC_PWD = "rpupxm1e8PN7GnQKav"
 
 
+def _variantes_nom(nom: str, prenom: str) -> list[tuple[str, str]]:
+    """Découpages possibles du titulaire (« DUPONT JEAN PIERRE » → DUPONT / JEAN PIERRE, DUPONT / JEAN…)."""
+    nom, prenom = " ".join(nom.split()), " ".join(prenom.split()) or " "
+    vus, out = set(), []
+    def ajout(n, p):
+        p = p.strip() or " "
+        if n and (n, p) not in vus:
+            vus.add((n, p)); out.append((n, p))
+    ajout(nom, prenom)
+    if prenom.strip():
+        ajout(nom, prenom.split()[0])                       # premier prénom seul
+    mots = nom.split()
+    if len(mots) >= 2 and not prenom.strip():
+        ajout(mots[0], " ".join(mots[1:]))                  # NOM PRÉNOMS
+        ajout(mots[0], mots[1])                             # NOM PREMIER-PRÉNOM
+        if len(mots) >= 3:
+            ajout(" ".join(mots[:2]), " ".join(mots[2:]))   # nom composé
+    return out[:5]
+
+
 def _format_immat_siv(immat: str) -> str:
     """Formate l'immatriculation en format SIV (AA-123-BB)."""
     clean = immat.upper().replace(" ", "").replace("-", "")
@@ -43,14 +63,18 @@ async def get_histovec_pdf(nom: str, prenom: str, formule: str, immatriculation:
     prenom_api = prenom.strip() if prenom and prenom.strip() else " "
 
     # ── Stratégie 1 : API directe + téléchargement CSA officiel ──────────
+    # HistoVec exige nom et prénom(s) exactement comme sur la carte grise : la case C.1 contient les deux,
+    # et le scan les découpe parfois mal → on essaie quelques découpages (≈ 1 s chacun)
     logger.info(f"[histovec] API directe — immat={immat_siv}")
     try:
-        result = await _call_api_and_get_csa(nom, prenom_api, formule_clean, immat_siv)
-        if result is not None:
-            return result
-        else:
-            logger.warning("[histovec] Véhicule non trouvé ou données incorrectes")
-            return None
+        for n, p in _variantes_nom(nom, prenom_api):
+            result = await _call_api_and_get_csa(n, p, formule_clean, immat_siv)
+            if result is not None:
+                if (n, p) != (nom, prenom_api):
+                    logger.info(f"[histovec] trouvé avec le découpage nom={n!r} prénom={p!r}")
+                return result
+        logger.warning("[histovec] Véhicule non trouvé ou données incorrectes (tous les découpages essayés)")
+        return None
     except Exception as e:
         logger.warning(f"[histovec] API directe échouée ({e}) — fallback Playwright")
 
