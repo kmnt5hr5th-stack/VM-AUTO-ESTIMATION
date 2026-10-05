@@ -1494,7 +1494,46 @@ async def cote_voiture_identique(marque, modele, annee, km, version=None, boite=
                     f"({len(points)} annonces, {niveau}, {base})")
         return {"valeur": round(valeur), "n": len(points), "niveau": niveau, "base": base,
                 "basse": round(valeur - dispersion), "haute": round(valeur + dispersion)}
+    # Aucune voiture identique dans la fourchette de km (ex. Micra de 2019 à 21 000 km) : on élargit le kilométrage
+    # et on ramène chaque voiture identique au km du client avec la perte au km mesurée sur le modèle et l'année
+    if v:
+        res = await _identique_km_ajuste(marque, modele, annee, km, v, meme_boite, carburant, base_lbc, annee_elargie)
+        if res:
+            logger.info(f"[cote identique] {marque} {modele} {annee} {km} km « {version} » → {res['valeur']} € ({res['n']} annonces, {res['niveau']})")
+            return res
     logger.info(f"[cote identique] {marque} {modele} {annee} « {version} » : pas assez d'annonces identiques")
+    return None
+
+
+async def _identique_km_ajuste(marque, modele, annee, km, v, meme_boite, carburant, base_lbc, annee_elargie) -> Optional[dict]:
+    marge = max(60_000, km)
+    pool = [d for d in await _annonces_structurees(marque, modele, annee, carburant, km, marge) if d["km"] is not None]
+    if not pool:
+        return None
+    # Perte de valeur au km (en part du prix), mesurée sur toutes les annonces du modèle et de l'année
+    valeur = (lambda d: d["cote"] if base_lbc and d["cote"] else d["prix"])
+    pts = [(d["km"], valeur(d)) for d in pool if d["an"] is not None and abs(d["an"] - annee) <= 1 and valeur(d)]
+    pct = -0.0000018                                   # ≈ −1,8 % par 10 000 km si on ne peut pas mesurer
+    if len(pts) >= 6:
+        mx, my = statistics.mean(x for x, _ in pts), statistics.mean(y for _, y in pts)
+        vx = sum((x - mx) ** 2 for x, _ in pts)
+        if vx > 0 and my > 0:
+            pct = max(-0.000004, min(-0.0000005, sum((x - mx) * (y - my) for x, y in pts) / vx / my))
+    niveaux = [("version identique, kilométrage ajusté", lambda d: d["an"] == annee)]
+    if annee_elargie:
+        niveaux.append(("version identique, année ±1, kilométrage ajusté", lambda d: d["an"] is not None and abs(d["an"] - annee) <= 1))
+    for niveau, bonne_annee in niveaux:
+        lot = [d for d in pool if _norm_version(d["version"]) == v and meme_boite(d) and bonne_annee(d) and valeur(d)]
+        if not lot:
+            continue
+        ajustees = [valeur(d) * (1 + pct * (km - d["km"])) for d in lot]
+        val = statistics.median(ajustees)
+        if val <= 0:
+            continue
+        ecart = statistics.median(abs(x - val) for x in ajustees) if len(ajustees) > 1 else val * 0.05
+        base = "cotes Leboncoin" if base_lbc and all(d["cote"] for d in lot) else "prix affichés"
+        return {"valeur": round(val), "n": len(lot), "niveau": niveau, "base": base,
+                "basse": round(val - ecart), "haute": round(val + ecart)}
     return None
 
 
