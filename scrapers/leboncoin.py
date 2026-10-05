@@ -1384,7 +1384,9 @@ async def _fetch_structured_api_pages(marque, modele, annee, kilometrage,
 # 3. lecture du prix au kilométrage exact. Élargissement pas à pas si trop peu d'annonces identiques.
 
 def _norm_version(v) -> str:
-    return re.sub(r"\s+", " ", str(v or "")).strip().lower()
+    # Même nettoyage que le catalogue (année, norme Euro, CO2 retirés) : « … Acenta 2019 Euro6c » = « … Acenta »
+    from vm_ab_catalog import nettoyer_version
+    return re.sub(r"\s+", " ", nettoyer_version(str(v or ""))).strip().lower()
 
 
 def _boite_cle(b) -> str:

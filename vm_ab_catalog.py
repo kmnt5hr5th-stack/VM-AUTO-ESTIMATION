@@ -158,6 +158,22 @@ def _reranger() -> int:
 REGLAGES = {"seuil": 0.02, "hybrides_legers": True}
 
 
+# Nom de version lisible : sans année, millésime, norme Euro ni CO2 (« Micra 1.0 IG-T 100ch Acenta 2019 Euro6c »
+# → « Micra 1.0 IG-T 100ch Acenta »). Même nettoyage côté annonces Leboncoin (_norm_version) : la cote reste juste.
+_BRUIT = re.compile(r"\s+(euro\s?\d[a-z]?(-[a-z0-9]+)*|evap(-isc)?|isc|e6[a-z]?|\d{2,3}\s?g|my\s?\d{2}|mc\s?\d{2}|ng\s?\d{2}|rc\s?\d{2}"
+                    r"|(19|20)\d{2}|-\s?\d{2}[a-z]?|\d{2}[a-z]?\s?-?\s?\d{2}[a-z]?)$", re.I)
+
+
+def nettoyer_version(label: str) -> str:
+    l = " ".join(str(label or "").split())
+    for _ in range(6):          # plusieurs marqueurs à la suite (« 2019 Euro6-EVAP »)
+        n = _BRUIT.sub("", l).rstrip(" -")
+        if n == l:
+            break
+        l = n
+    return l if len(l) >= 3 else " ".join(str(label or "").split())
+
+
 def _fuel_ok(v: dict, fuel: str) -> bool:
     if not fuel or v["c"] == fuel:
         return True
@@ -183,7 +199,8 @@ def get_versions(marque: str, modele: str, annee: int, carburant: str, carrosser
                 continue
             # Une voiture immatriculée en début d'année peut être du millésime précédent : 1 an de tolérance
             if v["de"] - 1 <= annee <= v["a"] + 1:
-                found[v["v"]] = max(found.get(v["v"], 0), v["n"])
+                propre = nettoyer_version(v["v"])
+                found[propre] = found.get(propre, 0) + v["n"]
     return sorted(found, key=lambda label: -found[label])
 
 
@@ -197,7 +214,8 @@ def fiche_modele(marque: str, modele: str) -> list:
         for v in models[name]:
             if must and must not in _key(v["v"]):
                 continue
-            e = found.setdefault(v["v"], {"version": v["v"], "carburant": v["c"], "de": v["de"], "a": v["a"], "annonces": 0,
+            propre = nettoyer_version(v["v"])
+            e = found.setdefault(propre, {"version": propre, "carburant": v["c"], "de": v["de"], "a": v["a"], "annonces": 0,
                                           "carrosserie": "" if est_utilitaire(modele) else carrosserie_version(v["v"], name)})
             e["de"], e["a"] = min(e["de"], v["de"]), max(e["a"], v["a"])
             e["annonces"] += v["n"]
