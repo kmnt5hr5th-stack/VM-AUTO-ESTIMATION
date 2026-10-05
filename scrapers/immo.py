@@ -232,6 +232,8 @@ async def chasser(strategie: str, ville: str = "", code_postal: str = "", depart
             if "note_colocation" in a:
                 b["ville_colocation"] = {"note": a["note_colocation"], "avis": a["avis"], **a["detail"]}
                 b["note"] = round(0.6 * b["note"] + 0.4 * a["note_colocation"])
+                if a["note_colocation"] < 35:   # ville peu adaptée : jamais mieux que « à étudier »
+                    b["note"] = min(b["note"], 49)
                 b["verdict"] = "hyper intéressant" if b["note"] >= 70 else "intéressant" if b["note"] >= 50 else "à étudier" if b["note"] >= 35 else "moyen"
     notes.sort(key=lambda b: -b["note"])
     return {"strategie": strategie, "biens_analyses": len(notes), "total_trouves": len(biens),
