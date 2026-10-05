@@ -189,6 +189,32 @@ async def catalog_modeles(request: Request, marque: str = ""):
     return {"modeles": vm_ab_catalog.list_modeles(marque)}
 
 
+def _cle_ok(request: Request) -> bool:
+    secret = os.getenv("CATALOG_SECRET", "")
+    return not secret or request.headers.get("x-catalog-key", "") == secret
+
+
+@app.get("/immo/recherche")
+@limiter.limit("20/minute")
+async def immo_recherche(request: Request, ville: str, code_postal: str = "", type_bien: str = "appartement",
+                         prix_max: int = 0, surface_min: int = 0, pieces_min: int = 0, limite: int = 35):
+    """Biens immobiliers à vendre sur Leboncoin (alertes et recherches de Valma). Réservé à l'app (clé secrète)."""
+    if not _cle_ok(request):
+        raise HTTPException(status_code=403, detail="Accès réservé")
+    from scrapers import immo
+    return await immo.rechercher(ville, code_postal, type_bien, prix_max, surface_min, pieces_min, limite)
+
+
+@app.get("/immo/loyer")
+@limiter.limit("20/minute")
+async def immo_loyer(request: Request, ville: str, code_postal: str = "", type_bien: str = "appartement", surface: int = 0):
+    """Loyer médian au m² des locations en ligne de la ville (estimation de rentabilité). Réservé à l'app."""
+    if not _cle_ok(request):
+        raise HTTPException(status_code=403, detail="Accès réservé")
+    from scrapers import immo
+    return await immo.loyer_m2(ville, code_postal, type_bien, surface)
+
+
 @app.get("/catalog/carrosseries")
 @limiter.limit("20/minute")
 async def catalog_carrosseries(request: Request, marque: str = "", modele: str = "", annee: int = 0):
