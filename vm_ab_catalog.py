@@ -193,7 +193,7 @@ def get_versions(marque: str, modele: str, annee: int, carburant: str, carrosser
         for v in models[name]:
             if not _fuel_ok(v, fuel):
                 continue
-            if carrosserie and not est_utilitaire(modele) and carrosserie_version(v["v"], name).lower() != carrosserie.lower().strip():
+            if carrosserie and not est_utilitaire(modele) and carrosserie_version(v["v"], name, v["de"]).lower() != carrosserie.lower().strip():
                 continue
             if must and must not in _key(v["v"]):
                 continue
@@ -216,7 +216,7 @@ def fiche_modele(marque: str, modele: str) -> list:
                 continue
             propre = nettoyer_version(v["v"])
             e = found.setdefault(propre, {"version": propre, "carburant": v["c"], "de": v["de"], "a": v["a"], "annonces": 0,
-                                          "carrosserie": "" if est_utilitaire(modele) else carrosserie_version(v["v"], name)})
+                                          "carrosserie": "" if est_utilitaire(modele) else carrosserie_version(v["v"], name, v["de"])})
             e["de"], e["a"] = min(e["de"], v["de"]), max(e["a"], v["a"])
             e["annonces"] += v["n"]
     return sorted(found.values(), key=lambda e: (-e["a"], e["version"]))
@@ -271,7 +271,7 @@ _SUV = {
     "highlander", "hilux", "aygo x", "corolla cross", "urban cruiser", "cx-3", "cx-30", "cx-5", "cx-60", "cx-80", "mx-30", "cx-7",
     "xc40", "xc60", "xc70", "xc90", "c40", "ex30", "ex40", "ex90", "ec40", "asx", "outlander", "eclipse cross", "pajero", "l200",
     "vitara", "grand vitara", "s-cross", "sx4 s-cross", "jimny", "ignis", "across", "ds 3 crossback", "ds 7 crossback", "ds 7",
-    "ds 3", "stelvio", "tonale", "junior", "ateca", "arona", "tarraco", "formentor", "terramar", "born", "karoq", "kodiaq",
+    "stelvio", "tonale", "junior", "ateca", "arona", "tarraco", "formentor", "terramar", "born", "karoq", "kodiaq",
     "kamiq", "yeti", "enyaq", "elroq", "macan", "cayenne", "renegade", "compass", "cherokee", "grand cherokee", "wrangler",
     "avenger", "defender", "discovery", "discovery sport", "range rover", "range rover sport", "range rover evoque",
     "range rover velar", "evoque", "velar", "duster", "bigster", "spring", "jogger", "forester", "outback", "xv", "crosstrek",
@@ -307,9 +307,17 @@ def _type_de_base(modele: str) -> str:
     return "Berline"
 
 
-def carrosserie_version(label: str, modele: str) -> str:
-    """Carrosserie d'une version d'après son nom (types Leboncoin : Berline, Break, Coupé, Cabriolet, SUV / 4x4, Monospace)."""
+def _ds3_suv(label: str, annee: int) -> bool:
+    """DS 3 : citadine (berline / cabrio) jusqu'en 2019 ; la DS 3 Crossback (SUV) arrive en 2019 et garde le nom DS 3 en 2022."""
+    return bool(re.search(r"crossback|e-tense", label, re.I)) or annee >= 2020
+
+
+def carrosserie_version(label: str, modele: str, annee: int = 0) -> str:
+    """Carrosserie d'une version d'après son nom (types Leboncoin : Berline, Break, Coupé, Cabriolet, SUV / 4x4, Monospace).
+    annee : première année de la version (catalogue) ou année de la voiture, pour les modèles qui ont changé de carrosserie."""
     base = _type_de_base(modele)
+    if modele.lower().strip() == "ds 3" and _ds3_suv(label, annee):
+        return "SUV / 4x4"
     for nom, rx in _MOTS_CARROSSERIE:
         if rx.search(label):
             if nom == "Sportback":
@@ -346,11 +354,14 @@ def carrosseries(marque: str, modele: str, annee: int = 0) -> list:
                 continue
             if annee and not (v["de"] - 1 <= annee <= v["a"] + 1):
                 continue
-            t = carrosserie_version(v["v"], name)
+            t = carrosserie_version(v["v"], name, v["de"])
             compte[t] = compte.get(t, 0) + max(v["n"], 1)
     total = sum(compte.values()) or 1
     # Une carrosserie vue sur moins de 2 % des annonces est une erreur de vendeur, sauf si c'est la seule
     garde = [t for t, n in compte.items() if n / total >= REGLAGES["seuil"] or len(compte) == 1]
+    if modele.lower().strip() == "ds 3" and annee:
+        # Annonces mal datées : pas de Crossback avant 2019, plus de DS 3 citadine après 2019
+        garde = [t for t in garde if (t == "SUV / 4x4" and annee >= 2019) or (t != "SUV / 4x4" and annee <= 2019)] or garde
     return sorted(garde, key=lambda t: -compte[t])
 
 

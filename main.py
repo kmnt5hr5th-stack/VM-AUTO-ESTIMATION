@@ -560,10 +560,11 @@ async def estimation_details(req: EstimationRequest):
                 listings = memes
             elif any(a.get("version") for a in listings):
                 # Pas d'annonce de cette version exacte : on garde au moins la même carrosserie
-                car = vm_ab_catalog.carrosserie_version(req.motorisation, vm_ab_catalog.nom_catalogue(req.marque, req.modele))
                 nom = vm_ab_catalog.nom_catalogue(req.marque, req.modele)
+                an = int(getattr(req, "annee", 0) or 0)
+                car = vm_ab_catalog.carrosserie_version(req.motorisation, nom, an)
                 listings = [a for a in listings if not a.get("version")
-                            or vm_ab_catalog.carrosserie_version(a["version"], nom) == car] or listings
+                            or vm_ab_catalog.carrosserie_version(a["version"], nom, an) == car] or listings
 
         prices = [a["prix"] for a in listings]
         # Mêmes pourcentages que le site (Réglages de l'app) et même ajustement global
