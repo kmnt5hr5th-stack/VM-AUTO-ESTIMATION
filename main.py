@@ -161,7 +161,7 @@ class EstimationRequest(BaseModel):
     boite: Optional[str] = Field(None, example="mecanique")
     carburant: Optional[str] = Field(None, example="diesel")
     type_vehicule: Optional[str] = Field(None, example="utilitaire")  # "voiture" ou "utilitaire"
-    carrosserie: Optional[str] = Field(None, example="Coupé")  # Berline, Break, Coupé, Cabriolet, SUV / 4x4, Monospace
+    carrosserie: Optional[str] = Field(None, example="Coupé")  # Berline, Break, Coupé, Cabriolet, SUV / 4x4, Monospace, Utilitaire, Pick-up
 
 
 @app.get("/")
@@ -399,7 +399,7 @@ async def _cote_params() -> dict:
 
 
 async def _run_estimation(req: EstimationRequest) -> dict:
-    type_vehicule = req.type_vehicule or _detect_type_vehicule(req.modele)
+    type_vehicule = req.type_vehicule or ("utilitaire" if (getattr(req, "carrosserie", None) or "").lower() == "utilitaire" else _detect_type_vehicule(req.modele))
     marque_search = _resolve_brand(req.marque, req.modele, req.annee)
     if marque_search != req.marque:
         logger.info(f"Marque résolue : {req.marque} → {marque_search} pour {req.modele}")
@@ -534,7 +534,7 @@ def cote_version_stricte_ok(version: str) -> bool:
 async def estimation_details(req: EstimationRequest):
     """Comme /estimation mais retourne aussi la liste brute des annonces LBC (prix, km, titre, url)."""
     async def _run():
-        type_vehicule = req.type_vehicule or _detect_type_vehicule(req.modele)
+        type_vehicule = req.type_vehicule or ("utilitaire" if (getattr(req, "carrosserie", None) or "").lower() == "utilitaire" else _detect_type_vehicule(req.modele))
         marque_search = _resolve_brand(req.marque, req.modele, req.annee)
         lbc_args = dict(
             finition=req.finition, carburant=req.carburant,

@@ -216,7 +216,7 @@ def fiche_modele(marque: str, modele: str) -> list:
                 continue
             propre = nettoyer_version(v["v"])
             e = found.setdefault(propre, {"version": propre, "carburant": v["c"], "de": v["de"], "a": v["a"], "annonces": 0,
-                                          "carrosserie": "" if est_utilitaire(modele) else carrosserie_version(v["v"], name, v["de"])})
+                                          "carrosserie": carrosserie_version(v["v"], name, v["de"])})
             e["de"], e["a"] = min(e["de"], v["de"]), max(e["a"], v["a"])
             e["annonces"] += v["n"]
     return sorted(found.values(), key=lambda e: (-e["a"], e["version"]))
@@ -289,6 +289,10 @@ _UTILITAIRES = {"boxer", "master", "trafic", "jumper", "jumpy", "vito", "sprinte
                 "movano", "nv200", "nv300", "nv400", "primastar", "interstar", "townstar", "citan", "combi", "transit",
                 "transit custom", "custom", "crafter", "transporter", "daily", "proace", "proace city", "expert", "doblo",
                 "fiorino", "nemo", "bipper", "berlingo van", "partner van", "kangoo express", "master iii", "e-transit"}
+_PICKUP = {"hilux", "navara", "l200", "ranger", "amarok", "d-max", "classe x", "fullback", "gladiator", "musso", "frontier",
+           "triton", "np300 navara", "ranger raptor", "f-150", "ram"}
+# Version fourgon d'un ludospace (Berlingo Van, Kangoo Express…) : rangée en utilitaire
+_UTIL_VERSION = re.compile(r"\b(van|fourgon|fourgonnette|utilitaire|t[ôo]l[ée]|cabine approfondie|2 places|3 places|express)\b", re.I)
 _MOTS_CARROSSERIE = [
     ("Monospace", re.compile(r"active tourer|gran tourer", re.I)),
     ("Cabriolet", re.compile(r"\b(cabriolet|cabrio|roadster|spider|spyder|convertible|décapotable)\b", re.I)),
@@ -315,8 +319,15 @@ def _ds3_suv(label: str, annee: int) -> bool:
 def carrosserie_version(label: str, modele: str, annee: int = 0) -> str:
     """Carrosserie d'une version d'après son nom (types Leboncoin : Berline, Break, Coupé, Cabriolet, SUV / 4x4, Monospace).
     annee : première année de la version (catalogue) ou année de la voiture, pour les modèles qui ont changé de carrosserie."""
+    m = modele.lower().strip()
+    if m in _UTILITAIRES:
+        return "Utilitaire"
+    if m in _PICKUP:
+        return "Pick-up"
     base = _type_de_base(modele)
-    if modele.lower().strip() == "ds 3" and _ds3_suv(label, annee):
+    if base == "Monospace" and _UTIL_VERSION.search(label):
+        return "Utilitaire"
+    if m == "ds 3" and _ds3_suv(label, annee):
         return "SUV / 4x4"
     for nom, rx in _MOTS_CARROSSERIE:
         if rx.search(label):
@@ -341,9 +352,9 @@ def est_utilitaire(modele: str) -> bool:
 
 
 def carrosseries(marque: str, modele: str, annee: int = 0) -> list:
-    """Carrosseries qui existent pour ce modèle (et cette année si donnée), la plus courante d'abord. Aucune pour un utilitaire."""
+    """Carrosseries qui existent pour ce modèle (et cette année si donnée), la plus courante d'abord."""
     if est_utilitaire(modele):
-        return []
+        return ["Utilitaire"]
     models = _find_brand(marque)
     if not models:
         return []

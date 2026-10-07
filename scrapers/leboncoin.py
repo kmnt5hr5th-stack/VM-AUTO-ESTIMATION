@@ -712,7 +712,7 @@ def _build_search_url(marque: str, modele: str, annee: int, carburant: str = Non
 
     if carrosserie:
         _VT = {"break": "break", "coupé": "coupe", "cabriolet": "cabriolet",
-               "suv / 4x4": "4x4", "monospace": "monospace", "berline": "berline"}
+               "suv / 4x4": "4x4", "pick-up": "4x4", "monospace": "monospace", "berline": "berline"}
         vt = _VT.get(carrosserie.lower().strip())
         if vt:
             params["vehicle_type"] = vt
@@ -775,7 +775,7 @@ def _build_structured_payload(marque: str, modele: str, annee: int,
             enums["gearbox"] = [gear]
     if carrosserie:
         _VT = {"break": "break", "coupé": "coupe", "cabriolet": "cabriolet",
-               "suv / 4x4": "4x4", "monospace": "monospace", "berline": "berline"}
+               "suv / 4x4": "4x4", "pick-up": "4x4", "monospace": "monospace", "berline": "berline"}
         vt = _VT.get(carrosserie.lower().strip())
         if vt == "coupe":
             # Leboncoin range les SUV coupés (GLC Coupé, Cayenne Coupé…) en « 4x4 » : le filtre « coupe » ne trouverait rien
