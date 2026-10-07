@@ -262,7 +262,7 @@ def list_modeles(marque: str) -> list:
 # ── Carrosseries (mêmes types que le filtre Leboncoin du moteur) ──────────────────────────────
 _SUV = {
     "2008", "3008", "5008", "4008", "408", "captur", "kadjar", "koleos", "arkana", "austral", "rafale", "symbioz", "scenic e-tech",
-    "c3 aircross", "c5 aircross", "c4 aircross", "c5 x", "berlingo", "t-roc", "t-cross", "tiguan", "tiguan allspace", "touareg", "taigo",
+    "c3 aircross", "c5 aircross", "c4 aircross", "c5 x", "t-roc", "t-cross", "tiguan", "tiguan allspace", "touareg", "taigo",
     "id.4", "id.5", "id.6", "atlas", "q2", "q3", "q4", "q5", "q6", "q7", "q8", "e-tron", "sq5", "sq7", "sq8", "rs q3", "rs q8",
     "kuga", "puma", "ecosport", "edge", "explorer", "mustang mach-e", "bronco", "mokka", "mokka x", "crossland", "crossland x",
     "grandland", "grandland x", "frontera", "antara", "tucson", "kona", "santa fe", "bayon", "ix35", "ix55", "nexo", "ioniq 5",
@@ -284,7 +284,7 @@ _SUV = {
 _MONOSPACE = {"grand scenic", "scenic", "c4 picasso", "grand c4 picasso", "c4 spacetourer", "grand c4 spacetourer", "touran",
               "sharan", "zafira", "zafira tourer", "meriva", "lodgy", "dokker", "c-max", "grand c-max", "s-max", "galaxy",
               "classe b", "classe v", "alhambra", "5008 i", "espace", "picasso", "carens", "verso", "corolla verso", "prius+",
-              "multipla", "500l", "kangoo", "partner", "rifter", "traveller", "spacetourer", "caddy", "touran", "combo life"}
+              "multipla", "500l", "kangoo", "berlingo", "partner", "rifter", "traveller", "spacetourer", "caddy", "touran", "combo life"}
 _UTILITAIRES = {"boxer", "master", "trafic", "jumper", "jumpy", "vito", "sprinter", "ducato", "scudo", "talento", "vivaro",
                 "movano", "nv200", "nv300", "nv400", "primastar", "interstar", "townstar", "citan", "combi", "transit",
                 "transit custom", "custom", "crafter", "transporter", "daily", "proace", "proace city", "expert", "doblo",
