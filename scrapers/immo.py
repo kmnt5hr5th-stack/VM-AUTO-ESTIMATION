@@ -238,3 +238,42 @@ async def chasser(strategie: str, ville: str = "", code_postal: str = "", depart
     notes.sort(key=lambda b: -b["note"])
     return {"strategie": strategie, "biens_analyses": len(notes), "total_trouves": len(biens),
             "references": {f"{v} {cp or ''}".strip(): r for (v, cp), r in refs.items()}, "meilleurs": notes[:limite]}
+
+
+def _strategie_du_bien(b: dict) -> str:
+    """Stratégie la plus probable d'un bien venu d'ailleurs (alerte e-mail) : immeuble, colocation (4 chambres +) ou travaux."""
+    t = (b.get("titre") or "").lower()
+    if "immeuble" in t:
+        return "immeuble"
+    ch = b.get("chambres") or max(0, (b.get("pieces") or 1) - 1)
+    if ch >= 4:
+        return "colocation"
+    return "travaux"
+
+
+async def noter(biens: list) -> list:
+    """Note des biens trouvés hors Leboncoin (SeLoger, PAP, Bien'ici… via leurs alertes e-mail) avec les mêmes règles que la chasse."""
+    propres = []
+    for b in biens[:40]:
+        prix, surface = _nombre(b.get("prix")), _nombre(b.get("surface"))
+        if not prix or not surface or not b.get("ville"):
+            continue
+        x = {**b, "prix": prix, "surface": surface, "pieces": _nombre(b.get("pieces")), "chambres": _nombre(b.get("chambres")),
+             "prix_m2": round(prix / surface)}
+        propres.append(x)
+    villes = {}
+    for b in propres:
+        villes.setdefault((b["ville"], b.get("code_postal") or ""), []).append(b)
+    cles = list(villes)[:15]
+    refs = dict(zip(cles, await asyncio.gather(*[_references(v, cp) for v, cp in cles])))
+    notes = []
+    for b in propres:
+        cle = (b["ville"], b.get("code_postal") or "")
+        if cle not in refs:
+            continue
+        strat = b.get("strategie") or _strategie_du_bien(b)
+        n = _noter(b, refs[cle], strat)
+        n["strategie"] = strat
+        notes.append(n)
+    notes.sort(key=lambda b: -b["note"])
+    return notes

@@ -218,6 +218,19 @@ async def immo_chasse(request: Request, strategie: str = "travaux", ville: str =
     return await immo.chasser(strategie, ville, code_postal, departement, prix_max, chambres_min, limite)
 
 
+@app.post("/immo/noter")
+@limiter.limit("10/minute")
+async def immo_noter(request: Request, payload: dict):
+    """Note des biens venus des alertes e-mail (SeLoger, PAP, Bien'ici…) comme la chasse Leboncoin. Réservé à l'app."""
+    if not _cle_ok(request):
+        raise HTTPException(status_code=403, detail="Accès réservé")
+    from scrapers import immo
+    biens = payload.get("biens") if isinstance(payload, dict) else None
+    if not isinstance(biens, list):
+        raise HTTPException(status_code=400, detail="biens requis")
+    return {"biens": await immo.noter(biens)}
+
+
 @app.get("/immo/ville")
 @limiter.limit("20/minute")
 async def immo_ville(request: Request, ville: str, code_postal: str = ""):
