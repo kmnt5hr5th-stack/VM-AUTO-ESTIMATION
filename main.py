@@ -231,6 +231,18 @@ async def immo_noter(request: Request, payload: dict):
     return {"biens": await immo.noter(biens)}
 
 
+@app.get("/immo/ventes-adresse")
+@limiter.limit("20/minute")
+async def immo_ventes_adresse(request: Request, adresse: str):
+    """Ventes réelles (DVF) dans l'immeuble exact d'une adresse et dans un rayon de 300 m. Réservé à l'app."""
+    if not _cle_ok(request):
+        raise HTTPException(status_code=403, detail="Accès réservé")
+    if len(adresse.strip()) < 5:
+        raise HTTPException(status_code=400, detail="adresse requise")
+    from scrapers import dvf
+    return await dvf.par_adresse(adresse.strip()[:200])
+
+
 @app.get("/immo/ville")
 @limiter.limit("20/minute")
 async def immo_ville(request: Request, ville: str, code_postal: str = ""):

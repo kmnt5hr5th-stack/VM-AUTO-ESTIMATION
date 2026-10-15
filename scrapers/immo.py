@@ -66,6 +66,8 @@ def _annonce(a: dict) -> dict:
         "type": at.get("real_estate_type"),
         "ville": (a.get("location") or {}).get("city"),
         "code_postal": (a.get("location") or {}).get("zipcode"),
+        "lat": (a.get("location") or {}).get("lat"),
+        "lng": (a.get("location") or {}).get("lng"),
         "dpe": at.get("energy_rate") or at.get("energy"),
         "etage": at.get("floor_number"),
         "annee_construction": at.get("building_year"),
@@ -156,11 +158,28 @@ async def _references(ville: str, code_postal: str) -> dict:
     }
 
 
-def _noter(b: dict, ref: dict, strategie: str) -> dict:
+async def _reels(biens: list) -> list:
+    """Prix réellement payés autour de chaque bien (ventes DVF de l'État : 300 m, 600 m ou commune)."""
+    from scrapers import dvf
+
+    async def un(b):
+        t = b.get("type") if b.get("type") in ("Appartement", "Maison") else ""
+        try:
+            return await dvf.autour(b.get("ville") or "", b.get("code_postal") or "", t, _nombre(b.get("lat")), _nombre(b.get("lng")))
+        except Exception:
+            return {}
+    return await asyncio.gather(*[un(b) for b in biens])
+
+
+def _noter(b: dict, ref: dict, strategie: str, reel: Optional[dict] = None) -> dict:
     prix, surface = b["prix"] or 0, b["surface"] or 0
     chambres = int(b.get("chambres") or max(0, (b["pieces"] or 1) - 1))
     travaux = surface * TRAVAUX_M2 if strategie == "travaux" else (surface * 300 if strategie == "immeuble" else 0)
-    decote = (1 - b["prix_m2"] / ref["prix_m2"]) * 100 if b.get("prix_m2") and ref.get("prix_m2") else None
+    decote_annonces = (1 - b["prix_m2"] / ref["prix_m2"]) * 100 if b.get("prix_m2") and ref.get("prix_m2") else None
+    reel = reel or {}
+    decote_reelle = (1 - b["prix_m2"] / reel["prix_m2"]) * 100 if b.get("prix_m2") and reel.get("prix_m2") else None
+    # La note se base sur les ventes réelles autour du bien quand on les connaît, sinon sur les annonces de la ville
+    decote = decote_reelle if decote_reelle is not None else decote_annonces
     if strategie == "colocation" and ref.get("loyer_chambre") and chambres >= 2:
         loyer = ref["loyer_chambre"] * chambres
         cout = prix * 1.08 + chambres * AMENAGEMENT_CHAMBRE
@@ -177,12 +196,15 @@ def _noter(b: dict, ref: dict, strategie: str) -> dict:
     if decote:
         note += min(30, max(0, decote))
     verdict = "hyper intéressant" if note >= 70 else "intéressant" if note >= 50 else "à étudier" if note >= 35 else "moyen"
-    # Prix anormalement bas (plus de 60 % sous la ville) : part de bien, cave, erreur d'annonce… → à vérifier, pas une affaire
+    # Prix anormalement bas (plus de 60 % sous le marché) : part de bien, cave, erreur d'annonce… → à vérifier, pas une affaire
     if decote is not None and decote > 60:
         note, verdict = min(note, 40), "à vérifier (prix anormalement bas)"
     return {**b, "chambres": chambres or None, "travaux_estimes": round(travaux) or None,
             "loyer_estime": round(loyer) if loyer else None, "rentabilite_brute": round(rendement, 1) if rendement else None,
-            "decote_vs_ville": round(decote) if decote is not None else None, "note": round(note), "verdict": verdict}
+            "decote_vs_ville": round(decote_annonces) if decote_annonces is not None else None,
+            "prix_m2_reel": reel.get("prix_m2"), "ventes_reelles": reel.get("nb"), "zone_reelle": reel.get("zone"),
+            "decote_reelle": round(decote_reelle) if decote_reelle is not None else None,
+            "note": round(note), "verdict": verdict}
 
 
 async def chasser(strategie: str, ville: str = "", code_postal: str = "", departement: str = "", prix_max: int = 0,
@@ -219,7 +241,9 @@ async def chasser(strategie: str, ville: str = "", code_postal: str = "", depart
         villes.setdefault((b["ville"], b["code_postal"]), []).append(b)
     principales = sorted(villes, key=lambda k: -len(villes[k]))[:20]
     refs = dict(zip(principales, await asyncio.gather(*[_references(v or "", cp or "") for v, cp in principales])))
-    notes = [_noter(b, refs[(b["ville"], b["code_postal"])], strategie) for b in biens if (b["ville"], b["code_postal"]) in refs]
+    gardes = [b for b in biens if (b["ville"], b["code_postal"]) in refs]
+    reels = await _reels(gardes)
+    notes = [_noter(b, refs[(b["ville"], b["code_postal"])], strategie, r) for b, r in zip(gardes, reels)]
     # Colocation : la ville doit s'y prêter (étudiants, écoles, transports, demande) → note finale pondérée
     if strategie == "colocation" and notes:
         from scrapers import ville as villes_mod
@@ -266,13 +290,13 @@ async def noter(biens: list) -> list:
         villes.setdefault((b["ville"], b.get("code_postal") or ""), []).append(b)
     cles = list(villes)[:15]
     refs = dict(zip(cles, await asyncio.gather(*[_references(v, cp) for v, cp in cles])))
+    propres = [b for b in propres if (b["ville"], b.get("code_postal") or "") in refs]
+    reels = await _reels(propres)
     notes = []
-    for b in propres:
+    for b, reel in zip(propres, reels):
         cle = (b["ville"], b.get("code_postal") or "")
-        if cle not in refs:
-            continue
         strat = b.get("strategie") or _strategie_du_bien(b)
-        n = _noter(b, refs[cle], strat)
+        n = _noter(b, refs[cle], strat, reel)
         n["strategie"] = strat
         notes.append(n)
     notes.sort(key=lambda b: -b["note"])
