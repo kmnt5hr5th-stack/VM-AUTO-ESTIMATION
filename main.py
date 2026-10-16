@@ -1190,6 +1190,8 @@ _BOITE_MAP: dict[str, str] = {
 
 @app.get("/lookup-plate")
 async def lookup_plate(plate: str):
+    # Recherche par plaque désactivée le 2026-10-17 (API payante immatriculationapi.com) : plus aucun appel
+    raise HTTPException(status_code=410, detail="Recherche par immatriculation désactivée")
     if not IMMAT_API_KEY:
         raise HTTPException(status_code=503, detail="API immatriculation non configurée (clé manquante)")
 
