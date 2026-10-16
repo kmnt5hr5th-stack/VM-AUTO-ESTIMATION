@@ -30,7 +30,7 @@ SUPABASE_ANON_KEY = os.getenv("SUPABASE_ANON_KEY", "")
 SUPABASE_SERVICE_KEY = os.getenv("SUPABASE_SERVICE_KEY", "")
 
 # ── Telegram ────────────────────────────────────────────────────────────────────
-TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "8303548439:AAHipFPA6R6dgqoLn-RR9Aw-r_Hgy9wZ1Yo")
+TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "")  # secret : uniquement dans les variables de Render
 TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "538022992")
 
 _settings_cache: dict = {}
@@ -733,6 +733,9 @@ _GEAR_LABELS_FR = {"1": "Manuelle", "2": "Automatique"}
 
 
 async def _send_telegram(text: str) -> None:
+    if not TELEGRAM_BOT_TOKEN:
+        logger.warning("[telegram] TELEGRAM_BOT_TOKEN absent : message non envoyé")
+        return
     url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
     try:
         async with httpx.AsyncClient(timeout=10) as client:
